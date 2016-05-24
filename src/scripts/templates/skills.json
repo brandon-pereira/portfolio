@@ -1,0 +1,111 @@
+{
+	"skills": [
+		{
+			"name": "Front End Web Development",
+			"isOpen": true,
+			"skills": [
+				{
+					"id": "css",
+					"name": "CSS/LESS/Sass",
+					"description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+					"skillLevel": 0
+				},
+				{
+					"id": "javascript",
+					"name": "Javascript",
+					"description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and stand design patterns, and have experience with lots of javascript libraries.",
+					"skillLevel": 0
+				},
+				{
+					"id": "html",
+					"name": "HTML",
+					"description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I'm also experienced with HTML5 and HAML.",
+					"skillLevel": 0
+				}
+			]
+		},
+		{
+			"name": "Back End Web Development",
+			"skills": [
+				{
+					"id": "php",
+					"name": "PHP",
+					"description": "I have experience with PHP, I'm cable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well. ",
+					"skillLevel": 1
+				},
+				{
+					"id": "java",
+					"name": "JavaServer / Groovy",
+					"description": "I've built a handful of Java based applications, as well as modified/expanded upon the functionality of existing projects.",
+					"skillLevel": 1
+				}
+			]
+		},
+		{
+			"name": "Build/Team Tools",
+			"skills": [
+				{
+					"id": "gulp",
+					"name": "Gulp",
+					"description": "Gulp is a hot one right now. I've had lots of experience with Gulp and understand how to do most tasks. From compressing/mapping CSS/JS, compressing/resizing images, enabling livereload/webservers, expanding HTML, etc.",
+					"skillLevel": 0
+				},
+				{
+					"id": "git",
+					"name": "Git",
+					"description": "I've had tons of experience with Git, both in big projects and small. I have worked under both Agile and Waterfall enviroments.",
+					"skillLevel": 0
+				},
+				{
+					"id": "svn",
+					"name": "Subversion",
+					"description": "I've used subversion for a couple projects.",
+					"skillLevel": 2
+				}
+			]
+		},
+		{
+			"name": "Database",
+			"skills": [
+				{
+					"id": "mysql",
+					"name": "MySQL",
+					"description": "I've built a handful of applications which reply on a MySQL database. I understand everything from the basics to using procedures and inner/outter joins.",
+					"skillLevel": 1
+				},
+				{
+					"id": "plsql",
+					"name": "P/L SQL",
+					"description": "I've used P/L SQL in a couple projects, and am able to modify existing code.",
+					"skillLevel": 2
+				}
+			]
+		},
+		{
+			"name": "Native",
+			"skills": [
+				{
+					"id": "java",
+					"name": "Java",
+					"description": "I'm experienced with Java, and am able to jump into existing code bases or start from scratch. I've built GUI interfaces, back-end algorithms, and used Java EE for server-side distributions.",
+					"skillLevel": 1
+				},
+				{
+					"id": "Ruby",
+					"name": "ruby",
+					"description": "I've done a couple projects with Ruby. I also built an automation suite using Ruby/Selenium/Jenkins.",
+					"skillLevel": 1
+				}, 
+				{
+					"id": "c",
+					"name": "C",
+					"description": "I've done some basic C programming and understand how to avoid memory leaks (MALOC).",
+					"skillLevel": 2
+				}
+			]
+		}
+	],
+	"skillLevels": [
+		"pro", "intermediate", "novice"
+	]
+}

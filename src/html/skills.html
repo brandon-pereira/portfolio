@@ -1,0 +1,39 @@
+<div class="container skills" ng-controller="SkillsController">
+	<div class="content">
+		<header class="main">
+			<h2>&lt;Technical<span></span>Skills/&gt;</h2>
+			<p>A list of skills I've acumulated over the years, click a category to see skills and click a skill to see a little description about my experience.</p>
+		</header>
+		<div class="loading" ng-hide="init">
+			<div class="plus-loader">
+				Loading…
+			</div>
+		</div>
+		<div class="init" ng-class="{true:init}">
+			<div class="accordian category" ng-repeat="category in skills | orderBy: 'skillLevel'" ng-class="{'open': category.isOpen}" ng-cloak>
+				<header ng-click="openTab(skills, category)">
+					<div class="title">{{category.name}}</div>
+					<div class="caret">
+						  <!-- @@include ../static/icons/caret.svg -->
+					</div>
+				</header>
+				<article>
+					<div class="accordian skill" ng-repeat="skill in category.skills" ng-class="{'open': skill.isOpen}">
+						<header ng-click="openTab(category.skills, skill)">
+							<div class="title">{{skill.name}}</div>
+							<div class="skillLevel" ng-class="skill.skillLevel">{{skill.skillLevel}}</div>
+							<div class="caret">
+								  <!-- @@include ../static/icons/caret.svg -->
+							</div>
+						</header>
+						<article>
+							{{skill.description}}<br>
+							<button ng-click="searchProjects({language: skill.id})">Projects</button>
+							<a href="#contact" class="button" target="_self">Contact Me</a>
+						</article>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container contact" id="contact" ng-controller="ContactController">
+	<div class="content">
+		<h1>Contact</h1>
+		<div class="init" ng-class="{true: init}">
+			<h2>Let's Talk</h2>
+			<div class="grid">
+				<a ng-cloak ng-repeat="contact in contactLinks" class="item {{contact.class}}" href="{{contact.link}}" target="{{contact.isSameTab ? '_self' : '_blank'}}">{{contact.text}}</a>
+			</div>
+			<h2>Social</h2>
+			<div class="grid">
+				<a ng-cloak ng-repeat="contact in socialLinks" class="item {{contact.class}}" href="{{contact.link}}" target="{{contact.isSameTab ? '_self' : '_blank'}}">{{contact.text}}</a>
+			</div>
+		</div>
+	</div>
+	<div class="loading" ng-hide="init">
+		<div class="plus-loader">
+			Loading…
+		</div>
+	</div>
+</div>

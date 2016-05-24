@@ -1,0 +1,41 @@
+<div class="container projects" id="projects">
+	<div class="content">
+		<header class="main">
+			<h1 data-text="Projects">Projects</h1>
+			<h2>A showcase of my<span></span> past, present, and future.</h2>
+		</header>
+		
+		<div class="projects" ng-controller="ProjectController" in-view>
+			<div class="loading" ng-hide="init">
+				<div class="plus-loader">
+				  Loading…
+				</div>
+			</div>
+			<div class="init" ng-class="{true:init}">
+				<div class="sort">
+					<span class="title">Sort By</span> 
+					<select ng-model="sortBy.status" ng-options="status.class as status.title for status in status"></select>
+					<select ng-model="sortBy.date" ng-options="(date?'Date / Descending':'Date / Ascending') for date in [true, false]"></select>
+					<select ng-model="sortBy.lang" ng-options="lang.class as lang.title for lang in languages"></select>
+				</div>
+				<div ng-cloak class="project" ng-repeat="project in list = (projects | filter: {status: {class: sortBy.status}, languages: sortBy.lang} : true | orderBy: 'date' : sortBy.date) | limitTo: visibleProjects">
+					<header>
+						<span class="date" ng-bind="project.date | date:'fullDate'"></span>
+						<span class="type {{project.status.class}}" data-text={{project.status.title}}></span>
+						<h2 ng-show="project.link"><a ng-show="project.link" href="{{project.link}}" target="_blank">{{project.title}}</a></h2>
+						<h2 ng-show="!project.link">{{project.title}}</h2>
+					</header>
+					<p ng-bind-html="project.description"></p>
+					<div class="photos" ng-show="project.images">
+						<img ng-repeat="image in project.images" ng-src="{{image.src}}" ng-class="image.styling" title="{{image.title}}">
+					</div>
+					<div class="languages">
+						<span ng-repeat="language in project.languages">{{language}}</span>
+					</div>
+				</div>
+				<div class="project loadMore" ng-click="visibleProjects=visibleProjects+visibleProjects" ng-hide="visibleProjects>=list.length">Load More</div>
+				<div class="project noResults" ng-show="!list.length" ng-click="searchProjects({})"><div class="smiley">:(</div><span>No Results.</span><button>Reset Filters</button></div>
+			</div>
+		</div>
+	</div>
+</div>

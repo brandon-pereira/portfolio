@@ -1,0 +1,140 @@
+.container.skills{
+	background:@app_css_bg;
+	background: linear-gradient(@app_css_bg, darken(@app_css_bg, 10%)), url('backgrounds/diamond.png');
+	background-blend-mode: multiply;
+	header.main{
+		color:#fff;
+		text-align:center;
+		padding: 50px 0;
+		h2{
+			margin-bottom:20px;
+			font: 20px 'Press Start 2P';
+			text-shadow:2px 2px darken(@app_css_bg, 40%);
+			.clear();
+			span{
+				display:block;
+			}
+		}
+		p{
+			font-size:16px;
+			width:80%;
+			margin:0 auto;
+			max-width:400px;
+		}
+	}
+	
+	.content{
+		padding-bottom:50px;
+		
+		.accordian{
+			// GENERIC STYLES FOR ALL ACCORDIANS
+			 header{
+				font-weight:700;
+				cursor:pointer;
+				border-bottom:3px solid #fff;
+				.flex-parent;
+				.user-select(none);
+				.caret{
+					.flex-parent;
+					.flex-center;
+					svg{
+						margin:0 10px;
+						height:14px;
+						fill: #fff;
+						transition:transform .2s;
+					}
+				}	
+				.title{
+					.flex-child;
+					text-overflow:ellipsis;
+					white-space:nowrap;
+					overflow:hidden;
+					text-transform:uppercase;
+				}
+			}
+			article{
+				transition:max-height .4s;
+				opacity:0;
+				max-height:0;
+				pointer-events: none;
+			}
+			// GENERIC OPEN STYLES FOR ALL ACCORDIANS
+			&.open{
+				> article{
+					opacity:1;
+					max-height:1000px;
+					pointer-events: all;
+				}
+				> header{
+					.caret svg{
+						.transform(rotate(180deg))
+					}
+				}
+			}
+			// CATEGORY SPECIFIC STYLES
+			&.category{
+				margin-bottom:10px;
+				> article{
+					padding:10px 5px; // TODO: Fix jank here
+					margin:0;
+					overflow:hidden;
+					background:rgba(255,255,255,.3);
+					box-shadow:0 1px 2px rgba(0,0,0,.8);
+					border-radius: 0 0 3px 3px;
+				}
+				&.open{
+					> article{
+						
+					}
+				}
+				> header{
+					.title{
+						color:#fff;
+						padding:10px;	
+					}
+				}
+			}
+			// SKILL SPECIFIC STYLES
+			&.skill{
+				background:#fff;
+				margin:5px;
+				border-radius:3px;
+				overflow:hidden;
+				box-shadow:0 1px 2px rgba(0,0,0,.7);
+				header{
+					font-weight:700;
+					.title{
+						padding:10px;
+					}
+					.caret svg{ 
+						fill: #b0b0b0;
+					}
+					.skillLevel{
+						font-weight:400;
+						.align-self(center);
+						&.pro{
+							color:#005522;
+						}
+						&.intermediate{
+							color:#e28000;
+						}
+						&.novice{
+							color:#f00;
+						}
+					}
+				}
+				> article{
+					padding:0 10px 0px 10px;	
+					button{
+						margin:10px 0;
+					}
+				}
+				&.open{
+					> article{
+						transition:max-height .1s, all 0s;
+					}
+				}
+			}
+		}
+	}
+}

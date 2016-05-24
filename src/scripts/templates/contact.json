@@ -1,0 +1,48 @@
+{
+	"contactLinks": [
+		{
+			"class": "email",
+			"link": "mailto:brandonpereiras@gmail.com",
+			"text": "Email",
+			"isSameTab": true
+		},
+		{
+			"class": "twitter",
+			"link": "http://www.twitter.com/Branclon_",
+			"text": "Twitter",
+			"isSameTab": false
+		}
+	],
+	"socialLinks": [
+		{
+			"class": "fb",
+			"link": "http://www.facebook.com/bpereira",
+			"text": "Facebook",
+			"isSameTab": false
+		},
+		{
+			"class": "twitter",
+			"link": "http://www.twitter.com/Branclon_",
+			"text": "Twitter",
+			"isSameTab": false
+		},
+		{
+			"class": "instagram",
+			"link": "http://www.instagram.com/brandonpereira_",
+			"text": "Instagram",
+			"isSameTab": false
+		},
+		{
+			"class": "git",
+			"link": "https://github.com/brandon-pereira",
+			"text": "GitHub",
+			"isSameTab": false
+		},
+		{
+			"class": "linkedin",
+			"link": "https://ca.linkedin.com/in/brandonpereira",
+			"text": "linkedIn",
+			"isSameTab": false
+		}
+	]
+}

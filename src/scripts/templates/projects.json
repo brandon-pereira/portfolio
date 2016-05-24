@@ -1,0 +1,288 @@
+{
+	"projects": [
+		{
+			"title": "Nissan: Natinal Signing Day Promotion",
+			"date": "2016-02-01",
+			"languages": ["html"],
+			"description": "Nissan wanted to add an animated homepage promotion to their website for national signing day. To do this I created an HTML5 video element which played a background video with links to the promotion.",
+			"type": 2,
+			"status": "unavailable",
+			"images": [
+				{
+					"title": "What the video looked like (static)",
+					"src": "./projects/national-signing-day-pfa.png",
+					"styling": "shadow"
+				}
+			],
+			"link": "http://www.nissanusa.com/"
+		},
+		{
+			"title": "Nissan: Cube Interstital Page",
+			"date": "2016-01-28",
+			"languages": ["html", "css"],
+			"description": "Built the intersitital page for the Nissan Cube to be fully responsive, fire proper analytics, follow suggested SEO guidelines, and work with our existing responsive codebase.",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "Initial page load on desktop",
+					"src": "./projects/nissan-cube-1.png"
+				},
+				{
+					"title": "Initial page load on mobile",
+					"src": "./projects/nissan-cube-2.png"
+				},
+				{
+					"title": "Gallery area on tablet",
+					"src": "./projects/nissan-cube-3.png"
+				}
+			],
+			"link": "http://www.nissanusa.com/cars/cube"
+		},
+		{
+			"title": "Nissan: 2016 Titan XD Endurance V8 Gas Launch",
+			"date": "2016-01-21",
+			"languages": ["javascript", "html", "css", "git"],
+			"description": "Built the 2016 Titan XD Endurance V8 Gas Engine teaser page from scratch to be fully responsive, optimized for speed, and used Javascript to enable deeplinking and enabled analytics.",
+			"type": 2,
+			"status": "unavailable",
+			"images": [
+				{
+					"title": "Desktop Gas Engine Section",
+					"src": "./projects/titan-v8-gas-1.png",
+					"styling": "shadow"
+				},
+				{
+					"title": "Responsive Header Example",
+					"src": "./projects/titan-v8-gas-2.png",
+					"styling": "shadow"
+				},
+				{
+					"title": "Desktop Header Example",
+					"src": "./projects/titan-v8-gas-3.png",
+					"styling": "shadow"
+				}
+			],
+			"link": "http://www.nissanusa.com/trucks/2016-titan-xd-endurance-gas-v8/"
+		},
+		{
+			"title": "Nissan: Maxima SR Midnight",
+			"date": "2015-08-04",
+			"languages": ["slickjs", "javascript", "html", "sass"],
+			"description": "Added carousel at the top of the website. Updated page layout and structure, and did some optimization for mobile.",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "Desktop Carousel",
+					"src": "./projects/midnight-1.png"
+				},
+				{
+					"title": "Responsive Carousel Example",
+					"src": "./projects/midnight-2.png"
+				}
+			],
+			"link": "http://www.nissanusa.com/cars/maxima/2016-maxima-sr-midnight/"
+		},
+		{
+			"title": "BetterDo. v3",
+			"date": "2016-03-01",
+			"languages": ["angularjs", "javascript", "html", "php", "mysql", "gulp", "less", "git"],
+			"description": "Version 3 of BetterDo was a front-end rewrite. It utilizes AngularJS and localStorage, as well as a spice of Flexbox. I also built a build tool on top of <a href='http://gulpjs.com/' target='_blank'>GulpJS</a>, providing code compression, SVG spritesheet generator, concatenation of files, and more.<p></p>We plan on open sourcing BetterDo once this rewrite is complete, and have already began moving everything to Git.<p>",
+			"type": 1,
+			"status": "beta",
+			"images": null,
+			"link": "/BetterDo/3/"
+		},
+		{
+			"title": "Infiniti: Drivers Seat App",
+			"date": "2015-08-17",
+			"languages": ["javascript", "html", "css"],
+			"description": "Added responsive functionality, video modal, and marketing science tracking for video playback percentages. Also improved codebase throughout.",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "Desktop Experience",
+					"src": "./projects/cardboard-2.png"
+				},
+				{
+					"title": "Tablet/Mobile Experience",
+					"src": "./projects/cardboard-1.png"
+				},
+				{
+					"title": "",
+					"src": "./projects/cardboard-3.png"
+				}
+			],
+			"link": "http://www.infinitiusa.com/drivers-seat-app/"
+		},
+		{
+			"title": "Portfolio",
+			"date": "2015-11-30",
+			"languages": ["angularjs", "json", "ajax", "html", "less", "gulp", "git"],
+			"description": "Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies. <p></p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordian), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also uses contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.<p></p>Make sure you're on an up-to-date browser for best results.",
+			"type": 1,
+			"status": "live",
+			"images": [
+				{
+					"title": "Header Area",
+					"src": "./projects/portfolio-1.png"
+				},
+				{
+					"title": "Projects View Area",
+					"src": "./projects/portfolio-2.png"
+				},
+				{
+					"title": "Skills Accordian Area",
+					"src": "./projects/portfolio-3.png"
+				}
+			],
+			"link": "/"
+		},
+		{
+			"title": "BetterDo. v2",
+			"date": "2015-04-20",
+			"languages": ["javascript", "html", "less", "php", "mysql", "ajax"],
+			"description": "Version 2 of my Todo app was a complete rewrite. Moved to Ajax based communication and LESS for styling. This project is in beta, so feel free to try.",
+			"type": 1,
+			"status": "live",
+			"images": [
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-1.png",
+					"styling": "shadow"
+				},
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-2.png",
+					"styling": "shadow"
+				},
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-3.png",
+					"styling": "shadow"
+				}
+			],
+			"link": "/BetterDo/2/"
+		},
+		{
+			"title": "Fusion",
+			"date": "2013-06-20",
+			"languages": ["javascript", "html", "css"],
+			"description": "Developed the interface and user experience for the login panel of an online operating system. Unfortunately the project was discontinued.",
+			"type": 1,
+			"status": "unavailable",
+			"images": [
+				{
+					"title": "Tablet Interface",
+					"src": "./projects/fusion.png",
+					"styling": "shadow"
+				},
+				{
+					"title": "Desktop Experience",
+					"src": "./projects/fusion2.png",
+					"styling": "shadow"
+				}
+			],
+			"link": ""
+		},
+		{
+			"title": "Broken City: Point of sale system",
+			"date": "2015-04-14",
+			"languages": ["javascript", "css", "java", "mysql"],
+			"description": "For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphisis on speed, ease of use, and modern design. Wrote the front-end using JSPs and the back-end using Java and MySQL.",
+			"type": 1,
+			"status": "live",
+			"images": [
+				{
+					"title": "Login Screen",
+					"src": "./projects/bc.png",
+					"styling": "shadow"
+				},
+				{
+					"title": "Server Place Order Screen",
+					"src": "./projects/bc2.png",
+					"styling": "shadow"
+				},
+				{
+					"title": "Admin Panel",
+					"src": "./projects/bc3.png",
+					"styling": "shadow"
+				}
+			],
+			"link": "http://www.brokencity.ca/"
+		},
+		{
+			"title": "CSS3: Stack Loading Animation",
+			"date": "2015-03-28",
+			"languages": ["css"],
+			"description": "Developed a stack loading effect using CSS3 animations.",
+			"type": 1,
+			"status": "live",
+			"images": [
+				{
+					"title": "Better to see live version",
+					"src": "./projects/building.png",
+					"styling": "shadow"
+				}
+			],
+			"link": "/showcase/stack-loading"
+		},
+		{
+			"title": "CSS3: USB/Lightening Connector",
+			"date": "2015-01-12",
+			"languages": ["css"],
+			"description": "Developed an Apple lightning cable and USB connector in pure CSS3.",
+			"type": 1,
+			"status": "live",
+			"images": [
+				{
+					"title": "Better to see live version",
+					"src": "./projects/usb.png"
+				}
+			],
+			"link": "/showcase/usb"
+		},
+		{
+			"title": "Classic Kennels",
+			"date": "2014-08-12",
+			"languages": ["php", "css"],
+			"description": "Developed a web form for a local company called KlassicKennels for their grand opening. Got over 1k votes an hour, with a grand total of over 30k in the 14 day campaign.",
+			"type": 1,
+			"status": "unavailable",
+			"images": null,
+			"link": "http://www.klassickennels.com/"
+		},
+		{
+			"title": "MyBobba",
+			"date": "2013-08-01",
+			"languages": ["php", "css"],
+			"description": "<a href='http://habbo.com/' target='_blank'>Habbo</a> is a popular online world for teenagers. During my younger teens I built a fansite for the game which allowed users to upload pictures of themselves and have unmoderated chat. It got very popular with about 1k hits a day. Unfortunately, I couldn't afford bandwidth and had to close its doors. ",
+			"type": 1,
+			"status": "unavailable",
+			"images": null,
+			"link": ""
+		},
+		{
+			"title": "MyPereira",
+			"date": "2013-04-01",
+			"languages": ["php", "css"],
+			"description": "One of the first websites I built. This project was an advanced take on a family website. It had features like messaging, profiles, photo uploads, video sharing, etc.",
+			"type": 1,
+			"status": "unavailable",
+			"images": null,
+			"link": ""
+		}
+	],
+	"types": {
+		"1": "Personal",
+		"2": "External"
+	},
+	"status": [
+		{"title": "Live", "class": "live"},
+		{"title": "Beta", "class": "beta"},
+		{"title": "Coming Soon", "class": "comingSoon"},
+		{"title": "Unavailable", "class": "unavailable"}	
+	]
+}
