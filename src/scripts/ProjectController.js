@@ -50,4 +50,11 @@ app.controller('ProjectController', function($filter, $scope, $http, $sce, $root
 		$scope.searchProjects(data);
 		$anchorScroll('projects');
 	});
+	$scope.showModal = function(url, title, imgClasses) {
+		console.log(url, imgClasses);
+		$scope.modalImg = url;
+		$scope.modalImgTitle = title;
+		$scope.modalImgClasses = imgClasses;
+		$scope.modalVisible = true;
+	}
 });
