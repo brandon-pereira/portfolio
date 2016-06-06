@@ -4,13 +4,16 @@
   right: 0;
   left: 0;
   bottom: 0;
+  z-index: 10;  
   background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.9));
-  visibility: hidden;
-  pointer-events: none;
-  z-index: 10;
-  opacity:0;
   padding-top:3rem; // add margin for x button
   
+  // Hide it by default
+  visibility: hidden;
+  pointer-events: none;
+  opacity:0;
+  
+  // Do visible styles here
   &.visible {
     opacity:1;
     visibility: visible;
@@ -36,7 +39,7 @@
     width:80%;
     max-width:800px;
     margin:0 auto;
-    perspective: 900px;
+    .perspective;
   }
   img {
     transform: rotateX(50deg) scale(0.8);
@@ -54,13 +57,7 @@
   .description {
     color: #fff;
     text-align: center;
-    max-width:80%;
     text-shadow: 0 1px 2px #000;
-    margin: 0 auto;
     font-size:1rem;
-    user-select: all;
-    //padding:1rem;
-    //line-height:1rem;
-    //background: red;
   }
 }
