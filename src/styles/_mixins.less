@@ -104,10 +104,9 @@
 	-webkit-transform-origin: @string;
 					transform-origin: @string;
 }
-// TODO: Inner/Outter margins
 .grid(@col: 3, @margin: 5px, @height: auto){
 	.flex-parent();
-	flex-wrap:wrap; // TODO: Prefix
+	flex-wrap:wrap;
 	padding:@margin 0 0 @margin;
 	.item {
 		display:inline-block;
