@@ -131,7 +131,7 @@ gulp.task('scripts:templates', function(){
 
 gulp.task('images', function(){
   return gulp.src(paths.src.img)
-     .pipe(imageResize({width:300, quality: 0.8}))
+     .pipe(imageResize({width:800, quality: 0.8}))
      .pipe(gulp.dest(paths.dist.img))
      .pipe(livereload());
 });

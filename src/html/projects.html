@@ -27,7 +27,7 @@
 					</header>
 					<p ng-bind-html="project.description"></p>
 					<div class="photos" ng-show="project.images">
-						<img ng-repeat="image in project.images" ng-src="{{image.src}}" ng-class="image.styling" title="{{image.title}}">
+						<img ng-repeat="image in project.images" ng-src="{{image.src}}" ng-class="image.styling" title="{{image.title}}" ng-click="showModal(image.src, image.title, image.styling)">
 					</div>
 					<div class="languages">
 						<span ng-repeat="language in project.languages">{{language}}</span>
@@ -35,6 +35,15 @@
 				</div>
 				<div class="project loadMore" ng-click="visibleProjects=visibleProjects+visibleProjects" ng-hide="visibleProjects>=list.length">Load More</div>
 				<div class="project noResults" ng-show="!list.length" ng-click="searchProjects({})"><div class="smiley">:(</div><span>No Results.</span><button>Reset Filters</button></div>
+				<div class="lightbox" ng-class="{'visible': modalVisible}" ng-click="modalVisible = false">
+					<a class="close-button">&times;</a>
+					<div class="modal-content">
+						<img src="{{modalImg}}" title="{{modalImgTitle}}" alt="{{modalImgTitle}}" ng-class="modalImgClasses">
+						<div class="description">
+							{{modalImgTitle}}
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
