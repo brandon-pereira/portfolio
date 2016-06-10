@@ -1,4 +1,4 @@
-<div class="container skills" ng-controller="SkillsController">
+<div class="container skills" id="skills" ng-controller="SkillsController">
 	<div class="content">
 		<header class="main">
 			<h2>&lt;Technical<span></span>Skills/&gt;</h2>
@@ -18,7 +18,7 @@
 					</div>
 				</header>
 				<article>
-					<div class="accordian skill" ng-repeat="skill in category.skills" ng-class="{'open': skill.isOpen}">
+					<div class="accordian skill" ng-repeat="skill in category.skills" ng-class="{'open': skill.isOpen}" id="{{skill.id}}">
 						<header ng-click="openTab(category.skills, skill)">
 							<div class="title">{{skill.name}}</div>
 							<div class="skillLevel" ng-class="skill.skillLevel">{{skill.skillLevel}}</div>
