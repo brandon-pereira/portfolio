@@ -34,7 +34,7 @@
 					"skillLevel": 1
 				},
 				{
-					"id": "java",
+					"id": "jsp",
 					"name": "JavaServer / Groovy",
 					"description": "I've built a handful of Java based applications, as well as modified/expanded upon the functionality of existing projects.",
 					"skillLevel": 1
@@ -67,6 +67,12 @@
 		{
 			"name": "Database",
 			"skills": [
+				{
+					"id": "json",
+					"name": "JSON",
+					"description": "",
+					"skillLevel": 0
+				},
 				{
 					"id": "mysql",
 					"name": "MySQL",

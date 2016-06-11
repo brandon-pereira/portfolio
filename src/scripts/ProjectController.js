@@ -55,7 +55,7 @@ app.controller('ProjectController', function($filter, $scope, $http, $sce, $root
 		$scope.modalImgTitle = title;
 		$scope.modalImgClasses = imgClasses;
 		$scope.modalVisible = true;
-	}
+	};
 	$scope.goToLanguage = function(lang) {
 		$rootScope.$emit('goToLanguage', lang);
 	};
