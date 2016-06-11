@@ -1,4 +1,4 @@
-app.controller('SkillsController', function($scope, $http, $rootScope){
+app.controller('SkillsController', function($scope, $http, $rootScope, $anchorScroll){
 	$http({
 		method: 'GET',
 		url: './templates/skills.json'
@@ -25,8 +25,26 @@ app.controller('SkillsController', function($scope, $http, $rootScope){
 			if(!angular.equals(sibling, child)){
 				sibling.isOpen = false;
 			} else {
-				child.isOpen = !child.isOpen;
+				child.isOpen = true;
 			}
 		}
 	};
+	$scope.goToLanguage = function(lang) {
+		var categories = $scope.skills;
+		for(var i = 0; i < categories.length; i++) {
+			var skills = categories[i].skills;
+			for(var j = 0; j < skills.length; j++) {
+				if(skills[j].id === lang) {
+					$scope.openTab(categories, categories[i]);
+					$scope.openTab(skills, skills[j]);
+					return true;
+				}
+			}
+		}
+		return false;
+	};
+	$rootScope.$on('goToLanguage', function (event, data) {
+		$scope.goToLanguage(data);
+		$anchorScroll('skills');
+	});
 });

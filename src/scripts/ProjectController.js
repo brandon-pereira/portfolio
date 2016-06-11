@@ -51,10 +51,12 @@ app.controller('ProjectController', function($filter, $scope, $http, $sce, $root
 		$anchorScroll('projects');
 	});
 	$scope.showModal = function(url, title, imgClasses) {
-		console.log(url, imgClasses);
 		$scope.modalImg = url;
 		$scope.modalImgTitle = title;
 		$scope.modalImgClasses = imgClasses;
 		$scope.modalVisible = true;
-	}
+	};
+	$scope.goToLanguage = function(lang) {
+		$rootScope.$emit('goToLanguage', lang);
+	};
 });

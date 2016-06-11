@@ -1,6 +1,29 @@
 {
 	"projects": [
 		{
+			"title": "Nissan: Responsive website redesign",
+			"date": "2016-05-05",
+			"languages": ["html", "css", "javascript", "gulp", "jsp", "git", "json"],
+			"description": "<p>We had 4 months to rebuild the Nissan USA website. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.</p><p>We built the system using a style guide, which allowed us to easily reuse components throughout the website. My team of 3 and I took on the configurator and applications. My main contributions involved building page controllers for managing conflicts and state, and building responsive components. Nearly all components in the configurator were built or modified by me.</p><p><a href='http://nissanusa.com/buildyournissan/' target='_blank'>Check out the configurator here</a> <i>(you currently can only access on mobile)</i></p>",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "Packages screen, demonstrating conflict manager.",
+					"src": "./projects/nissan-mobile-solutions-2.png"
+				},
+				{
+					"title": "Mobile navigation and versions page.",
+					"src": "./projects/nissan-mobile-solutions-1.png"
+				},
+				{
+					"title": "Desktop navigation and versions page.",
+					"src": "./projects/nissan-mobile-solutions-3.png"
+				}
+			],
+			"link": "http://nissanusa.com/buildyournissan"
+		},
+		{
 			"title": "Nissan: Natinal Signing Day Promotion",
 			"date": "2016-02-01",
 			"languages": ["html"],
@@ -68,8 +91,8 @@
 		{
 			"title": "Nissan: Maxima SR Midnight",
 			"date": "2015-08-04",
-			"languages": ["slickjs", "javascript", "html", "sass"],
-			"description": "Added carousel at the top of the website. Updated page layout and structure, and did some optimization for mobile.",
+			"languages": ["javascript", "html", "css"],
+			"description": "Added carousel at the top of the website using SlickJS. Updated page layout and structure, and did some optimization for mobile.",
 			"type": 2,
 			"status": "live",
 			"images": [
@@ -87,11 +110,24 @@
 		{
 			"title": "BetterDo. v3",
 			"date": "2016-03-01",
-			"languages": ["angularjs", "javascript", "html", "php", "mysql", "gulp", "less", "git"],
-			"description": "Version 3 of BetterDo was a front-end rewrite. It utilizes AngularJS and localStorage, as well as a spice of Flexbox. I also built a build tool on top of <a href='http://gulpjs.com/' target='_blank'>GulpJS</a>, providing code compression, SVG spritesheet generator, concatenation of files, and more.<p></p>We plan on open sourcing BetterDo once this rewrite is complete, and have already began moving everything to Git.<p>",
+			"languages": ["javascript", "html", "gulp", "css", "git"],
+			"description": "Version 3 of BetterDo was a front-end rewrite. It utilizes AngularJS and localStorage, as well as a spice of Flexbox. I also built a build tool on top of <a href='http://gulpjs.com/' target='_blank'>GulpJS</a>, providing code compression, SVG spritesheet generator, concatenation of files, and more.<p></p>We plan on open sourcing BetterDo once this rewrite is complete, and have already begun moving everything to Git.<p>",
 			"type": 1,
 			"status": "beta",
-			"images": null,
+			"images": [
+				{
+					"title": "Standard list view",
+					"src": "./projects/betterdo-3-1.png"
+				},
+				{
+					"title": "New list modal",
+					"src": "./projects/betterdo-3-2.png"
+				},
+				{
+					"title": "Inbox list view",
+					"src": "./projects/betterdo-3-3.png"
+				}
+			],
 			"link": "/BetterDo/3/"
 		},
 		{
@@ -120,7 +156,7 @@
 		{
 			"title": "Portfolio",
 			"date": "2015-11-30",
-			"languages": ["angularjs", "json", "ajax", "html", "less", "gulp", "git"],
+			"languages": ["json", "html", "less", "gulp", "git"],
 			"description": "Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies. <p></p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordian), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.<p></p>Make sure you're on an up-to-date browser for best results.<p></p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.",
 			"type": 1,
 			"status": "live",
@@ -143,7 +179,7 @@
 		{
 			"title": "BetterDo. v2",
 			"date": "2015-04-20",
-			"languages": ["javascript", "html", "less", "php", "mysql", "ajax"],
+			"languages": ["javascript", "html", "css", "php", "mysql"],
 			"description": "Version 2 of my Todo app was a complete rewrite. Moved to Ajax based communication and LESS for styling. This project is in beta, so feel free to try.",
 			"type": 1,
 			"status": "live",
