@@ -1,4 +1,4 @@
-app.controller('SkillsController', function($scope, $http, $rootScope, $anchorScroll){
+app.controller('SkillsController', function($scope, $http, $rootScope, $document){
 	$http({
 		method: 'GET',
 		url: './templates/skills.json'
@@ -45,6 +45,6 @@ app.controller('SkillsController', function($scope, $http, $rootScope, $anchorSc
 	};
 	$rootScope.$on('goToLanguage', function (event, data) {
 		$scope.goToLanguage(data);
-		$anchorScroll('skills');
+		$document.scrollToElementAnimated(angular.element(document.getElementById('skills')));
 	});
 });

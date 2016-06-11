@@ -1,4 +1,4 @@
-app.controller('ProjectController', function($filter, $scope, $http, $sce, $rootScope, $anchorScroll){
+app.controller('ProjectController', function($filter, $scope, $http, $sce, $rootScope, $document){
 	$http({
 		method: 'GET',
 		url: './templates/projects.json'
@@ -48,7 +48,7 @@ app.controller('ProjectController', function($filter, $scope, $http, $sce, $root
 	$scope.searchProjects({});
 	$rootScope.$on('searchProjects', function (event, data) {
 		$scope.searchProjects(data);
-		$anchorScroll('projects');
+		$document.scrollToElementAnimated(angular.element(document.getElementById('projects')));
 	});
 	$scope.showModal = function(url, title, imgClasses) {
 		$scope.modalImg = url;
