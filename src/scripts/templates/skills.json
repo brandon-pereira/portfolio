@@ -70,7 +70,7 @@
 				{
 					"id": "json",
 					"name": "JSON",
-					"description": "",
+					"description": "I use JSON (Javascript object notation) to pass and synchronize data almost daily. I have experience with JSON being generated and returned from a server, as well as data stored in JSON files (like this portfolio).",
 					"skillLevel": 0
 				},
 				{
