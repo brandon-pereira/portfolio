@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var less = require('gulp-less');
+var sass = require('gulp-sass');
 var livereload = require('gulp-livereload');
 var cleanCSS = require('gulp-clean-css');
 var sourcemaps = require('gulp-sourcemaps');
@@ -11,16 +11,17 @@ var gutil = require('gulp-util');
 var uglify = require('gulp-uglify');
 var gulpif = require('gulp-if');
 var mainBowerFiles = require('main-bower-files');
+var autoprefixer = require('gulp-autoprefixer');
+var svgstore = require('gulp-svgstore');
+var svgmin = require('gulp-svgmin');
+var argv = require('yargs').argv;
 var imageResize = require('gulp-image-resize');
-
-var config = {
-  'development': true
-};
 
 var paths = {
   // Files to transfer directly to dist
   'transfer': [
                 './src/static/**/*'
+                // ,'./path/to/folder.orFile'
               ],
   // distribution paths
   'dist': {
@@ -31,17 +32,17 @@ var paths = {
   },
   // source files
   'src': {
-    'css': './src/style.less',
+    'css': './src/styles/style.scss',
     'html': './src/index.html',
-    'js': ['./src/app.js', './src/scripts/*.js'],
+    'js': ['./src/scripts/app.js', './src/scripts/**/*.js'],
     'templates': './src/scripts/templates/**/*',
     'img': './src/projects/**/*'
   },
   // watch paths
   'watch': {
     'html': ['./src/index.html', './src/html/**/*.html'],
-    'js': ['./src/**/*.js'],
-    'css': './src/**/*.less',
+    'js': './src/scripts/**/*.js',
+    'css': './src/**/*.scss',
     'templates': './src/scripts/templates/**/*',
     'img': './src/projects/**/*'
   }
@@ -49,7 +50,7 @@ var paths = {
 
 gulp.task('default', ['serve']);
 gulp.task('serve', ['build', 'webserver']);
-gulp.task('build', ['transfer', 'extend', 'style', 'script', 'images']);
+gulp.task('build', ['transfer', 'extend', 'images', 'style', 'script']);
 
 /**
   This function will remove all files and folders from the
@@ -75,7 +76,7 @@ gulp.task('transfer', function(){
 **/
 gulp.task('extend', function () {
   return gulp.src(paths.src.html)
-    .pipe(extender({annotations:true,verbose:true}))
+    .pipe(extender({annotations:false,verbose:false}))
     .pipe(gulp.dest(paths.dist.root))
     .pipe(livereload());
 });
@@ -88,35 +89,42 @@ gulp.task('extend', function () {
 gulp.task('style', function() {
   return gulp.src(paths.src.css)
     .pipe(sourcemaps.init())
-    .pipe(less().on('error', function(err){
-      gutil.log(gutil.colors.red('------ERROR------\n'+err.message));
-      gutil.beep();
-      this.emit('end');
-    }))
+    .pipe(sass().on('error', errorCallback))
+    .pipe(autoprefixer())
     .pipe(cleanCSS())
-    .pipe(gulpif(config.development, sourcemaps.write()))
+    .pipe(gulpif(!argv.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.dist.root))
     .pipe(livereload());
 });
+
+gulp.task('images', function(){
+  return gulp.src(paths.src.img)
+     .pipe(imageResize({width:800, quality: 0.5}))
+     .pipe(gulp.dest(paths.dist.img))
+     .pipe(livereload());
+});
  
 /**
-  This function will concatenate src JS files (in order of 
-  array), and output to dist folder. Will 
+  This function will concatenate srcJS files (in order of 
+  array), add sourcemaps, and output to dist folder. Will 
   also trigger a live reload.
 **/
 gulp.task('script', ['scripts:internal', 'scripts:external', 'scripts:templates']);
 
 gulp.task('scripts:internal', function() {
   return gulp.src(paths.src.js)
-    .pipe(concat('app.js'))
+    .pipe(sourcemaps.init())
+    .pipe(concat('app.min.js'))
+    .pipe(uglify({mangle: false}).on('error', errorCallback))
+    .pipe(gulpif(!argv.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.dist.root))
     .pipe(livereload());
 });
 
 gulp.task('scripts:external', function(){
-  return gulp.src(mainBowerFiles())
-    .pipe(concat('vendor.js'))
-    .pipe(gulpif(!config.development, uglify()))
+  return gulp.src(mainBowerFiles('**/*.js'))
+    .pipe(concat('vendor.min.js'))
+    .pipe(gulpif(argv.production, uglify()))
     .pipe(gulp.dest(paths.dist.root));
 });
 
@@ -126,13 +134,6 @@ gulp.task('scripts:external', function(){
 gulp.task('scripts:templates', function(){
   return gulp.src(paths.src.templates)
      .pipe(gulp.dest(paths.dist.templates))
-     .pipe(livereload());
-});
-
-gulp.task('images', function(){
-  return gulp.src(paths.src.img)
-     .pipe(imageResize({width:800, quality: 0.8}))
-     .pipe(gulp.dest(paths.dist.img))
      .pipe(livereload());
 });
 
@@ -148,6 +149,7 @@ gulp.task('watch', function(){
   gulp.watch(paths.watch.js, ['scripts:internal']);
   gulp.watch(paths.watch.templates, ['scripts:templates']);
   gulp.watch(paths.transfer, ['transfer']);
+  gulp.watch(paths.watch.graphics, ['graphics']);
 });
 
 /**
@@ -162,3 +164,9 @@ gulp.task('webserver', ['watch'], function() {
       open: true
     }));
 });
+
+var errorCallback = function(err){
+    gutil.log(gutil.colors.red('------ERROR------\n'+err.message));
+    gutil.beep();
+    this.emit('end');
+};

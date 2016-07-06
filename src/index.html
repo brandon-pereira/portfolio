@@ -1,48 +1,48 @@
 <!DOCTYPE html>
-<html ng-app="portfolio">
-    <head>
-        <meta charset="UTF-8">
-        <title>Brandon Pereira's Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <!-- @@include html/head.html -->
-    </head>
-    <body>
-      <!--[if lt IE 11]>
-        <p class="browsehappy-container"></div>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-      <![endif]-->
-      <!-- @@include html/header.html -->
-      <section class="body">
-        <!-- @@include html/about.html -->
-        <!-- @@include html/projects.html -->
-        <!-- @@include html/skills.html -->
-        <!-- @@include html/contact.html -->
-      </section>
-      <!-- @@include html/footer.html -->
-      <!-- JS Libraries -->
-      <script src="vendor.js"></script>
-      <script src="app.js"></script>
-      <!-- Font Loader -->
-      <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-      <script>
-        WebFont.load({
-          google: {
-            families: [
-              'Open Sans:300,400',
-              'Press Start 2P:400'
-            ]
-          }
-        });
-      </script>
-      <!-- Google Analytics -->
-      <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <title>Brandon Pereira's Portfolio</title>
+      <link rel="stylesheet" href="style.css">
+      <!-- @@include html/head.html -->
+  </head>
+  <body>
+    <!--[if lt IE 11]>
+      <p class="browsehappy-container"></div>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- @@include html/header.html -->
+    <section class="body">
+      <!-- @@include html/about.html -->
+      <!-- @@include html/projects.html -->
+      <!-- @@include html/skills.html -->
+      <!-- @@include html/contact.html -->
+    </section>
+    <!-- @@include html/footer.html -->
+    <!-- JS Scripts -->
+    <script src="vendor.min.js"></script>
+    <script src="app.min.js"></script>
+    <!-- Font Loader -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <script>
+      WebFont.load({
+        google: {
+          families: [
+            'Open Sans:300,400',
+            'Press Start 2P:400'
+          ]
+        }
+      });
+    </script>
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-55983139-2', 'auto');
-        ga('send', 'pageview');
-      </script>
-    </body>
+      ga('create', 'UA-55983139-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
 </html>

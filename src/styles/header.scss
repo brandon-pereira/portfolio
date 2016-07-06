@@ -8,24 +8,28 @@ section.header{
 		margin:40px auto;
 		color:#fff;
 		text-align:center;
-		text-shadow:0 1px 2px rgba(0,0,0,.9);
+		text-shadow: 0 1px 2px rgba(0,0,0,.9);
 		font-size:16px;
 		.pp{
-			@size: 100px;
+			$size: 100px;
 			border-radius:50%;
 			overflow:hidden;
 			box-shadow:0 2px 4px rgba(0,0,0,.5);
-			margin:0 auto 5px auto;
-			height:@size;
-			width:@size;
+			margin:0 auto 20px auto;
+			height:$size;
+			width:$size;
 			img{
-				height: @size;
-				width: @size;
+				height: $size;
+				width: $size;
 			}
 		}
-		h3{
+		h1 {
+			margin:0;
+		}
+		h2{
 			margin-top:5px;
 			font-weight:100;
+			font-size:16px;
 		}
 		.cta{
 			margin-top:25px;
@@ -46,15 +50,14 @@ section.header{
 		right:0;
 		bottom:6px;
 		left:0;
-		background: @app_css_bg;
-		background: linear-gradient(45deg, lighten(@app_css_bg, 20%), darken(@app_css_bg, 20%)), url('backgrounds/diamond.png');
-		// background: linear-gradient(45deg, @app_css_bg, darken(@app_css_bg, 30%)), url('backgrounds/diamond.png');
+		background: map-get($config, accent);
+		background: linear-gradient(45deg, lighten(map-get($config, accent), 20%), darken(map-get($config, accent), 20%)), url('backgrounds/diamond.png');
 		background-blend-mode: multiply;
-		box-shadow: inset 0 -1px lighten(@app_css_bg, 10%);
-		.animation(@name: hue, @duration: 10s, @ease: linear);
+		box-shadow: inset 0 -1px lighten(map-get($config, accent), 10%);
+		animation: hue 10s linear infinite;
 	}
 }
-.keyframe(hue, {
-	0% { .filter(hue-rotate(0deg)) }
-	100% { .filter(hue-rotate(360deg)) }
-});
+@keyframes hue {
+	0% { filter: hue-rotate(0deg) }
+	100% { filter: hue-rotate(360deg) }
+};

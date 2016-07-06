@@ -1,6 +1,7 @@
 .container.skills{
-	background:@app_css_bg;
-	background: linear-gradient(@app_css_bg, darken(@app_css_bg, 10%)), url('backgrounds/diamond.png');
+	$background: map-deep-get($config, skills, background);
+	background: $background;
+	background: linear-gradient($background, darken($background, 10%)), url('backgrounds/diamond.png');
 	background-blend-mode: multiply;
 	header.main{
 		color:#fff;
@@ -8,9 +9,13 @@
 		padding: 50px 0;
 		h2{
 			margin-bottom:20px;
-			font: 20px 'Press Start 2P';
-			text-shadow:2px 2px darken(@app_css_bg, 40%);
-			.clear();
+			font: 20px 'Press Start 2P', monospace;
+			text-shadow:2px 2px darken($background, 40%);
+			// Autoprefixer doesn't support font smoothing
+			// TODO: @clear-text();
+			@include medium() {
+				font-size: 38px;
+			}
 			span{
 				display:block;
 			}
@@ -26,17 +31,17 @@
 	.content{
 		padding-bottom:50px;
 		
-		.accordian{
+		.accordion{
 			// GENERIC STYLES FOR ALL ACCORDIANS
 			 header{
 				font-weight:700;
 				cursor:pointer;
 				border-bottom:3px solid #fff;
-				.flex-parent;
-				.user-select(none);
+				display: flex;
+				user-select: none;
 				.caret{
-					.flex-parent;
-					.flex-center;
+					display: flex;
+					align-items: center;
 					svg{
 						margin:0 10px;
 						height:14px;
@@ -45,7 +50,7 @@
 					}
 				}	
 				.title{
-					.flex-child;
+					flex: 1;
 					text-overflow:ellipsis;
 					white-space:nowrap;
 					overflow:hidden;
@@ -67,7 +72,7 @@
 				}
 				> header{
 					.caret svg{
-						.transform(rotate(180deg))
+						transform: rotate(180deg);
 					}
 				}
 			}
@@ -111,7 +116,7 @@
 					}
 					.skillLevel{
 						font-weight:400;
-						.align-self(center);
+						align-self: center;
 						&.pro{
 							color:#005522;
 						}
@@ -125,7 +130,7 @@
 				}
 				> article{
 					padding:0 10px 0px 10px;	
-					button{
+					.button{
 						margin:10px 0;
 					}
 				}
