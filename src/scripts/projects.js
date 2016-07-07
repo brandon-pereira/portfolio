@@ -26,13 +26,14 @@
 	};
 	
 	Projects.prototype._onSelectChange = function (val) {
-		console.log(this.view.selectedStatus())
-		console.log(this.view.selectedDate());
-		console.log(this.view.selectedLanguage());
+		var status = this.view.selectedStatus() ? this.view.selectedStatus()[0].class : false;
+		var date = this.view.selectedDate() ? this.view.selectedDate()[0].val : false;
+		var language = this.view.selectedLanguage() ? this.view.selectedLanguage()[0] : false;
+		this._sortProjects(status, date, language);
 	};
 	
-	Projects.prototype._sort = function () {
-		
+	Projects.prototype._sortProjects = function (status, date, language) {
+		console.log("Hello World");
 	};
 	
 	Projects.prototype._fetch = function() {
