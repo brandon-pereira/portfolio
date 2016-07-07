@@ -193,13 +193,13 @@
 						content: attr(data-text);
 					}
 					&.live{
-						background: map-deep-get($config, projects, headerColor);
+						background: map-deep-get($config, projects, live);
 					}
 					&.beta{
-						background: #ee3838;
+						background: map-deep-get($config, projects, beta);
 					}
 					&.comingSoon{
-						background:#ee7711;
+						background: map-deep-get($config, projects, comingSoon);
 					}
 				}
 			}

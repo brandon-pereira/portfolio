@@ -338,10 +338,10 @@
 		"1": "Personal",
 		"2": "External"
 	},
-	"status": [
-		{"title": "Live", "class": "live"},
-		{"title": "Beta", "class": "beta"},
-		{"title": "Coming Soon", "class": "comingSoon"},
-		{"title": "Unavailable", "class": "unavailable"}	
-	]
+	"statuses": {
+		"live": {"title": "Live", "class": "live"},
+		"beta": {"title": "Beta", "class": "beta"},
+		"comingSoon": {"title": "Coming Soon", "class": "comingSoon"},
+		"unavailable": {"title": "Unavailable", "class": "unavailable"}		
+	}
 }

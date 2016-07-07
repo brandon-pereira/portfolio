@@ -24,9 +24,8 @@
 	};
 	
 	Projects.prototype._process = function(response) {
-		// console.log(response);
+		console.log(response);
 		response = this._parse(response);
-		// response = this._setSkillLevels(response);
 		this._updateView(response);
 		// this._events();
 		this.$loader.addClass('loaded');
@@ -44,6 +43,13 @@
 		if(data.status) {
 			this.view.status(data.status);
 		}
+		if(data.languages) {
+			this.view.languages(data.languages);
+		}
+		if(data.statuses) {
+			this.view.statuses(data.statuses);
+		}
+		
 	};
 	
 	/**
@@ -52,34 +58,56 @@
 	 * @return {[type]}          [description]
 	 */
 	Projects.prototype._parse = function(data) {
-		var status = data.status;
+		var statuses = data.statuses;
 		var projects = data.projects;
 		var languages = [];
+
 		for(var i = 0; i < projects.length; i++) {
-			console.log(projects[i]);
-			projects[i].type = status[parseInt(projects[i].status)];
+			projects[i].status = statuses[projects[i].status];
 			projects[i].date = this._getFormatedDate(new Date(projects[i].date));
-			console.log(projects[i].type);
+			languages = languages.concat(projects[i].languages);
 		}
+		
+		data.languages = this._uniq(languages);
+		data.statuses = Object.keys(data.statuses).map(function (key) {return data.statuses[key]});
+		console.log(data);
+		
 		return data;
+	};
+	
+	/**
+	 * Function which returns only unique elements
+	 * @param  {array} array Array to sort
+	 * @return {array} pruned array
+	 */
+	Projects.prototype._uniq = function(array) {
+		return array.sort().filter(function(el,i,a) {
+        return (i == a.indexOf(el));
+    });
 	};
 	
 	Projects.prototype._getFormatedDate = function(date) {
 		var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 		var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 		return days[date.getDay()] + ', ' + months[date.getMonth()] + ' ' + date.getDate(0) + ', ' + date.getFullYear();
-	}
+	};
 
 	/**
 	 * Function to initialize the view model using
 	 * knockout. Uses observables.
 	 */
 	Projects.prototype._initView = function () {
+		var sortByDate = [
+			{title: 'Decending', val: false},
+			{title: 'Ascending', val: true},
+		];
 		this.view = {
 			projects: ko.observable([]),
-			status: ko.observable([]),
+			statuses: ko.observable([]),
 			languages: ko.observable([]),
-			selectedLanguage: ko.observable()
+			dates: sortByDate,
+			maxVisible: 1,
+			inView: 1
 		};
 		ko.applyBindings(this.view, this.$element[0]);
 	};

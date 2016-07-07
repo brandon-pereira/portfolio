@@ -13,24 +13,22 @@
 		<div class="init">
 			<div class="sort">
 				<span class="title">Sort By</span> 
-				<select ng-model="sortBy.status" ng-options="status.class as status.title for status in status"></select>
-				<select id="date">
-					<option>Date / Descending</option>
-					<option>Date / Ascending</option>
-				</select>
-				<!-- <select data-bind="foreach: languages"> -->
-					<!-- <option data-bind="text: $data.language"></option> -->
-				<!-- </select> -->
+				<select data-bind=" options: statuses,
+														optionsText: 'title',
+		                        value: $data.class,
+													 	optionsCaption: 'Status'"></select>
+				<select data-bind=" options: dates,
+														optionsText: 'title',
+		                        value: $data.val,
+													 	optionsCaption: 'Date'"></select>
 				<select data-bind="options: languages,
-                       optionsText: 'countryName',
-                       value: selectedLanguage,
-											 optionsCaption: 'placeholderLang'"></select>
+											 		 optionsCaption: 'Language'"></select>
 			</div>
 			<div class="projects" data-bind="foreach: projects">
 				<div class="project">
 					<header>
 						<span class="date" data-bind="text: date"></span>
-						<span class="type" data-bind="text: type.title, css: type.class"></span>
+						<span class="type" data-bind="text: status.title, css: status.class"></span>
 						<h2 data-bind="visible: link"><a data-bind="text: title, attr: {href: link}" target="_blank"></a></h2>
 						<h2 data-bind="visible: !link, text: title"></h2>
 					</header>
@@ -43,7 +41,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="project loadMore" ng-click="visibleProjects=visibleProjects+visibleProjects" ng-hide="visibleProjects>=list.length">Load More</div>
+			<div class="project loadMore" data-bind="visible: inView <= maxVisible">Load More</div>
 			<div class="project noResults" ng-show="!list.length" ng-click="searchProjects({})"><div class="smiley">:(</div><span>No Results.</span><button>Reset Filters</button></div>
 			<!-- 
 			<div class="lightbox" ng-class="{'visible': modalVisible}" ng-click="modalVisible = false">
