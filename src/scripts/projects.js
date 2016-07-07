@@ -10,7 +10,29 @@
 		
 		this._initView();
 		this._fetch();
-		// this._events();
+		this.events();
+	};
+	
+	Projects.prototype.events = function() {
+		var self = this;
+		
+		var triggerSelectChange = function(val) {
+			return self._onSelectChange(val);
+		};
+		
+	 	this.view.selectedStatus.subscribe(triggerSelectChange);
+	 	this.view.selectedDate.subscribe(triggerSelectChange);
+	 	this.view.selectedLanguage.subscribe(triggerSelectChange);
+	};
+	
+	Projects.prototype._onSelectChange = function (val) {
+		console.log(this.view.selectedStatus())
+		console.log(this.view.selectedDate());
+		console.log(this.view.selectedLanguage());
+	};
+	
+	Projects.prototype._sort = function () {
+		
 	};
 	
 	Projects.prototype._fetch = function() {
@@ -24,12 +46,11 @@
 	};
 	
 	Projects.prototype._process = function(response) {
-		console.log(response);
 		response = this._parse(response);
 		this._updateView(response);
-		// this._events();
 		this.$loader.addClass('loaded');
 		this.$content.addClass('true');
+		console.log("proccessed", response);
 	};
 
 	/**
@@ -69,8 +90,7 @@
 		}
 		
 		data.languages = this._uniq(languages);
-		data.statuses = Object.keys(data.statuses).map(function (key) {return data.statuses[key]});
-		console.log(data);
+		data.statuses = Object.keys(data.statuses).map(function (key) {return data.statuses[key];});
 		
 		return data;
 	};
@@ -106,6 +126,9 @@
 			statuses: ko.observable([]),
 			languages: ko.observable([]),
 			dates: sortByDate,
+			selectedStatus: ko.observable(),
+			selectedDate: ko.observable(),
+			selectedLanguage: ko.observable(),
 			maxVisible: 1,
 			inView: 1
 		};

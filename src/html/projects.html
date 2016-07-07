@@ -16,13 +16,16 @@
 				<select data-bind=" options: statuses,
 														optionsText: 'title',
 		                        value: $data.class,
-													 	optionsCaption: 'Status'"></select>
+													 	optionsCaption: 'Status',
+														selectedOptions: selectedStatus"></select>
 				<select data-bind=" options: dates,
 														optionsText: 'title',
 		                        value: $data.val,
-													 	optionsCaption: 'Date'"></select>
+													 	optionsCaption: 'Date',
+														selectedOptions: selectedDate"></select>
 				<select data-bind="options: languages,
-											 		 optionsCaption: 'Language'"></select>
+											 		 optionsCaption: 'Language',
+													 selectedOptions: selectedLanguage"></select>
 			</div>
 			<div class="projects" data-bind="foreach: projects">
 				<div class="project">
