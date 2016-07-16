@@ -1,7 +1,7 @@
 <section class="container projects" id="projects">
 	<header class="main">
-		<h1 data-text="Projects">Projects</h1>
-		<h2>A showcase of my<span></span> past, present, and future.</h2>
+		<h2 data-text="Projects">Projects</h2>
+		<h3>A showcase of my<span></span> past, present, and future.</h3>
 	</header>
 		
 	<div class="content">
@@ -30,8 +30,8 @@
 					<header>
 						<span class="date" data-bind="text: formattedDate"></span>
 						<span class="type" data-bind="text: status.title, css: status.class"></span>
-						<h2 data-bind="visible: link"><a data-bind="text: title, attr: {href: link}" target="_blank"></a></h2>
-						<h2 data-bind="visible: !link, text: title"></h2>
+						<h4 data-bind="visible: link"><a data-bind="text: title, attr: {href: link}" target="_blank"></a></h2>
+						<h4 data-bind="visible: !link, text: title"></h2>
 					</header>
 					<p data-bind="html: description"></p>
 					<div class="photos" data-bind="visible: images, foreach: images">

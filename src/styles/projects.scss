@@ -11,7 +11,7 @@
 		height:110px;
 		transition: all .5s;
 		user-select: none;
-		h1{
+		h2{
 			font:70px Lily Script One;
 			color: map-get($config, accent);
 			text-shadow:2px 5px #000;
@@ -31,7 +31,7 @@
 				}	
 			}
 		}
-		h2{
+		h3{
 			font-size:14px;
 			position:absolute;
 			bottom:0;
@@ -48,10 +48,10 @@
 			width: 500px;
 			height:195px;
 			left:0;
-			h1 {
+			h2 {
 				font-size: 135px;
 			}
-			h2 {
+			h3 {
 				font-size: 20px;
 				position: absolute;
 				left:10px;
@@ -167,7 +167,7 @@
 					color:grey;
 					font-size:12px;
 				}
-				h2{
+				h4{
 					font-weight:400;
 					letter-spacing:-2px;
 					font-size:40px;
