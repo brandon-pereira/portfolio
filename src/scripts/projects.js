@@ -17,10 +17,16 @@
 	Projects.prototype.events = function() {
 		var self = this;
 		
+		// Deep link to language (from skills)
+		$(this.$element).on('sortBy:language', function(e, lang) {
+			self.view.selectedLanguage(lang);
+		});
+		
+		
+		// Watch for filtering changes
 		var triggerSelectChange = function(val) {
 			return self._onSelectChange(val);
 		};
-		
 	 	this.view.selectedStatus.subscribe(triggerSelectChange);
 	 	this.view.selectedDate.subscribe(triggerSelectChange);
 	 	this.view.selectedLanguage.subscribe(triggerSelectChange);

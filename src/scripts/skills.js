@@ -50,7 +50,10 @@
 	 */
 	Skills.prototype._initView = function () {
 		this.view = {
-			categories: ko.observable([])
+			categories: ko.observable([]),
+			sortByProject: function(id) {
+				$('#projects').trigger('sortBy:language', id);
+			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
 	};
