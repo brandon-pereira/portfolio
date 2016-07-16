@@ -30,24 +30,56 @@
 	 * Callback when sort by criteria is changed.
 	 */
 	Projects.prototype._onSelectChange = function () {
-		var projects = this.projects.slice();
-		var status = this.view.selectedStatus();
-		var date = this.view.selectedDate();
-		var language = this.view.selectedLanguage();
-		status = status && status.class ? status.class : false;
-		date = date && date.val ? date.val : false;
-		language = language || false;
+		var projects = this.projects;
+		var filters = this._getFilters();
 		var response = {};
-		response.projects = this._sortProjects(projects, date);
-		response.projects = this._filterProjects(response.projects , status, language);
+		
+		response.projects = this._sortProjects(projects, filters.date);
+		response.projects = this._filterProjects(response.projects , filters.status, filters.language);
 		if(response.projects.length > 3) {
 			response.projects = response.projects.slice(0, 3);
 			response.hasMore = true;
 		} else {
 			response.hasMore = false;
 		}
-		console.log(this.projects.length);
+
 		this._updateView(response);
+	};
+	
+	Projects.prototype._loadMore = function(amount) {
+		var projects = this.projects;
+		var filters = this._getFilters();
+		var response = {};
+		
+		response.projects = this._sortProjects(projects, filters.date);
+		response.projects = this._filterProjects(response.projects , filters.status, filters.language);
+		if(response.projects.length > amount) {
+			response.projects = response.projects.slice(0, amount);
+			response.hasMore = true;
+		} else {
+			response.hasMore = false;
+		}
+		
+		this._updateView(response);
+	};
+	
+	Projects.prototype._getFilters = function() {
+		// Get Values
+		var status = this.view.selectedStatus();
+		var date = this.view.selectedDate();
+		var language = this.view.selectedLanguage();
+		
+		// Sanitize
+		status = status && status.class ? status.class : false;
+		date = date && date.val ? date.val : false;
+		language = language || false;
+		
+		// Return
+		return {
+			status: status,
+			date: date,
+			language: language
+		};
 	};
 	
 	/**
@@ -208,10 +240,12 @@
 			selectedLanguage: ko.observable(),
 			hasMore: ko.observable(false),
 			resetFilters: function() {
-				console.log("EH");
 				this.selectedStatus(null);
 				this.selectedLanguage(null);
 				this.selectedDate(null);
+			},
+			loadMore: function() {
+				self._loadMore(this.visibleProjects().length + 3);
 			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
