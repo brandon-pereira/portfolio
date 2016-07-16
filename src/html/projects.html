@@ -15,22 +15,20 @@
 				<span class="title">Sort By</span> 
 				<select data-bind=" options: statuses,
 														optionsText: 'title',
-		                        value: $data.class,
-													 	optionsCaption: 'Status',
-														selectedOptions: selectedStatus"></select>
+		                        value: selectedStatus,
+													 	optionsCaption: 'Status'"></select>
 				<select data-bind=" options: dates,
 														optionsText: 'title',
-		                        value: $data.val,
-													 	optionsCaption: 'Date',
-														selectedOptions: selectedDate"></select>
+		                        value: selectedDate,
+													 	optionsCaption: 'Date'"></select>
 				<select data-bind="options: languages,
 											 		 optionsCaption: 'Language',
-													 selectedOptions: selectedLanguage"></select>
+													 value: selectedLanguage"></select>
 			</div>
-			<div class="projects" data-bind="foreach: projects">
+			<div class="projects" data-bind="foreach: visibleProjects">
 				<div class="project">
 					<header>
-						<span class="date" data-bind="text: date"></span>
+						<span class="date" data-bind="text: formattedDate"></span>
 						<span class="type" data-bind="text: status.title, css: status.class"></span>
 						<h2 data-bind="visible: link"><a data-bind="text: title, attr: {href: link}" target="_blank"></a></h2>
 						<h2 data-bind="visible: !link, text: title"></h2>
@@ -44,8 +42,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="project loadMore" data-bind="visible: inView <= maxVisible">Load More</div>
-			<div class="project noResults" ng-show="!list.length" ng-click="searchProjects({})"><div class="smiley">:(</div><span>No Results.</span><button>Reset Filters</button></div>
+			<div class="project loadMore" data-bind="visible: hasMore">Load More</div>
+			<div class="project noResults" data-bind="visible: visibleProjects().length <= 0">
+				<div class="smiley">:(</div>
+				<span>No Results.</span>
+				<button data-bind="click: resetFilters">Reset Filters</button>
+			</div>
 			<!-- 
 			<div class="lightbox" ng-class="{'visible': modalVisible}" ng-click="modalVisible = false">
 				<a class="close-button">&times;</a>

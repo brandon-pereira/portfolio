@@ -1,6 +1,29 @@
 {
 	"projects": [
 		{
+			"title": "Infiniti: Drivers Seat App",
+			"date": "2015-08-17",
+			"languages": ["javascript", "html", "css"],
+			"description": "Added responsive functionality, video modal, and marketing science tracking for video playback percentages. Also improved codebase throughout.",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "Desktop Experience",
+					"src": "./projects/cardboard-2.png"
+				},
+				{
+					"title": "Tablet/Mobile Experience",
+					"src": "./projects/cardboard-1.png"
+				},
+				{
+					"title": "",
+					"src": "./projects/cardboard-3.png"
+				}
+			],
+			"link": "http://www.infinitiusa.com/drivers-seat-app/"
+		},
+		{
 			"title": "CSS3 Icons",
 			"date": "2016-06-13",
 			"languages": ["html", "css", "gulp", "git"],
@@ -152,29 +175,6 @@
 				}
 			],
 			"link": "/BetterDo/3/"
-		},
-		{
-			"title": "Infiniti: Drivers Seat App",
-			"date": "2015-08-17",
-			"languages": ["javascript", "html", "css"],
-			"description": "Added responsive functionality, video modal, and marketing science tracking for video playback percentages. Also improved codebase throughout.",
-			"type": 2,
-			"status": "live",
-			"images": [
-				{
-					"title": "Desktop Experience",
-					"src": "./projects/cardboard-2.png"
-				},
-				{
-					"title": "Tablet/Mobile Experience",
-					"src": "./projects/cardboard-1.png"
-				},
-				{
-					"title": "",
-					"src": "./projects/cardboard-3.png"
-				}
-			],
-			"link": "http://www.infinitiusa.com/drivers-seat-app/"
 		},
 		{
 			"title": "Portfolio",

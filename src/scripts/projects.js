@@ -7,6 +7,7 @@
 	Projects.prototype.init = function() {
 		this.$loader = this.$element.find('.loading');
 		this.$content = this.$element.find('.init');
+		this.projects = [];
 		
 		this._initView();
 		this._fetch();
@@ -25,17 +26,91 @@
 	 	this.view.selectedLanguage.subscribe(triggerSelectChange);
 	};
 	
-	Projects.prototype._onSelectChange = function (val) {
-		var status = this.view.selectedStatus() ? this.view.selectedStatus()[0].class : false;
-		var date = this.view.selectedDate() ? this.view.selectedDate()[0].val : false;
-		var language = this.view.selectedLanguage() ? this.view.selectedLanguage()[0] : false;
-		this._sortProjects(status, date, language);
+	/**
+	 * Callback when sort by criteria is changed.
+	 */
+	Projects.prototype._onSelectChange = function () {
+		var projects = this.projects.slice();
+		var status = this.view.selectedStatus();
+		var date = this.view.selectedDate();
+		var language = this.view.selectedLanguage();
+		status = status && status.class ? status.class : false;
+		date = date && date.val ? date.val : false;
+		language = language || false;
+		var response = {};
+		response.projects = this._sortProjects(projects, date);
+		response.projects = this._filterProjects(response.projects , status, language);
+		if(response.projects.length > 3) {
+			response.projects = response.projects.slice(0, 3);
+			response.hasMore = true;
+		} else {
+			response.hasMore = false;
+		}
+		console.log(this.projects.length);
+		this._updateView(response);
 	};
 	
-	Projects.prototype._sortProjects = function (status, date, language) {
-		console.log("Hello World");
+	/**
+	 * Function to process a response from server. 
+	 * @param  {object} response Respnse from server
+	 */
+	Projects.prototype._process = function(data) {
+		var response = {};
+		response = this._parse(data);
+		this.projects = response.projects;
+		response.projects = this._sortProjects(response.projects);
+		if(response.projects.length > 3) {
+			response.projects = response.projects.slice(0, 3);
+			response.hasMore = true;
+		} else {
+			response.hasMore = false;
+		}
+		this._updateView(response);
+		this.$loader.addClass('loaded');
+		this.$content.addClass('true');
+	};
+
+	
+	/**
+	 * Function to sort projects by date
+	 * @param  {Array} projects Array of projects to sort
+	 * @param  {Boolean} asc    To sort ascendng or descending {falsy for desc}
+	 * @return {Array}          Sorted array of projects
+	 */
+	Projects.prototype._sortProjects = function (projects, asc) {
+		if(projects) {
+			projects.sort(function(a, b) {
+				return (a.date - b.date) * ((asc) ? 1 : -1);
+			});
+			return projects;	
+		} else {
+			return [];
+		}
 	};
 	
+	/**
+	 * Function to filter projects down
+	 * @param  {Array} projects  Array of projects to filter
+	 * @param  {string} status   Status to filter by (or falsy to ignore)
+	 * @param  {string} language Language to filter by (or falsy to ignore)
+	 * @return {Array}           Array of filtered projects
+	 */
+	Projects.prototype._filterProjects = function (projects, status, language) {
+		if(projects) {
+			projects = projects.filter(function(val) {
+				var statusFilter = status ? val.status.class === status : true;
+				var languageFilter = language ? val.languages.indexOf(language) >= 0 : true;
+				return statusFilter && languageFilter;
+			});
+			return projects;
+		} else {
+			return [];
+		}
+	};
+	
+	/**
+	 * Function to fetch projects and call process function 
+	 */
 	Projects.prototype._fetch = function() {
 		var self = this;
 		$.ajax({
@@ -46,24 +121,19 @@
 		});
 	};
 	
-	Projects.prototype._process = function(response) {
-		response = this._parse(response);
-		this._updateView(response);
-		this.$loader.addClass('loaded');
-		this.$content.addClass('true');
-		console.log("proccessed", response);
-	};
-
 	/**
 	 * Function which delegates updating view
 	 * @param  {Object} data.categories New cateories object to applu
 	 */
 	Projects.prototype._updateView = function (data) {
 		if(data.projects) {
-			this.view.projects(data.projects);
+			this.view.visibleProjects(data.projects);
 		}
 		if(data.status) {
 			this.view.status(data.status);
+		}
+		if(typeof data.hasMore !== 'undefined') {
+			this.view.hasMore(data.hasMore);
 		}
 		if(data.languages) {
 			this.view.languages(data.languages);
@@ -71,7 +141,6 @@
 		if(data.statuses) {
 			this.view.statuses(data.statuses);
 		}
-		
 	};
 	
 	/**
@@ -86,7 +155,8 @@
 
 		for(var i = 0; i < projects.length; i++) {
 			projects[i].status = statuses[projects[i].status];
-			projects[i].date = this._getFormatedDate(new Date(projects[i].date));
+			projects[i].date = new Date(projects[i].date);
+			projects[i].formattedDate = this._getFormatedDate(projects[i].date);
 			languages = languages.concat(projects[i].languages);
 		}
 		
@@ -107,6 +177,11 @@
     });
 	};
 	
+	/**
+	 * Function to format a date into format Weekday, Month Day, Year
+	 * @param {date} date Date to format
+	 * @return {string} Formatted string
+	 */
 	Projects.prototype._getFormatedDate = function(date) {
 		var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 		var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -118,20 +193,26 @@
 	 * knockout. Uses observables.
 	 */
 	Projects.prototype._initView = function () {
+		var self = this;
 		var sortByDate = [
 			{title: 'Decending', val: false},
 			{title: 'Ascending', val: true},
 		];
 		this.view = {
-			projects: ko.observable([]),
+			visibleProjects: ko.observable([]),
 			statuses: ko.observable([]),
 			languages: ko.observable([]),
 			dates: sortByDate,
 			selectedStatus: ko.observable(),
 			selectedDate: ko.observable(),
 			selectedLanguage: ko.observable(),
-			maxVisible: 1,
-			inView: 1
+			hasMore: ko.observable(false),
+			resetFilters: function() {
+				console.log("EH");
+				this.selectedStatus(null);
+				this.selectedLanguage(null);
+				this.selectedDate(null);
+			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
 	};
