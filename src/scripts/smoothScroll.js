@@ -15,7 +15,6 @@
 		
 		$(element).find('.smoothScroll').off().on('click', function(e) {
 	    e.preventDefault();
-			console.log("EH");
 	    self._scroll($(window), $($(e.currentTarget).attr('href')).offset().top, 200, $(e.currentTarget).attr('href'));
 		});
 	};
