@@ -19,7 +19,7 @@
 				</header>
 				<article>
 					<div data-bind="foreach: skills">
-						<section class="accordion skill">
+						<section class="accordion skill" data-bind="attr: {'data-id': id}">
 							<header data-accordion-handler>
 								<div class="title" data-bind="text: name"></div>
 								<div class="skillLevel" data-bind="{css: skillLevel, text: skillLevel}"></div>

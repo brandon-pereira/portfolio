@@ -82,20 +82,14 @@
 	};
 	
 	Skills.prototype._deeplink = function (id) {
-		var categorys = this.view.categories();
-		for(var i = 0; i < categorys.length; i++) {
-			var skills = categorys[i].skills;
-			for(var j = 0; j < skills.length; j++) {
-				var skill = skills[j];
-				if(skill.id === id) {
-					console.log("found:", id);
-					this.smoothScroll.scrollTo($('#skills'));
-					// this._open(categorys[i]);
-					return true;
-				}
-			}
+		var skill = $(this.$element).find('[data-id='+id+']');
+		var category = $(skill).closest('.accordion.category');
+		if(skill.length >= 1) {
+			if(!category.hasClass('open')) this._open(category);
+			if(!skill.hasClass('open')) this._open(skill);
+			this.smoothScroll.scrollTo($('#skills'));
 		}
-		return false;
+		
 	};
 	
 	Skills.prototype._open = function($element) {
