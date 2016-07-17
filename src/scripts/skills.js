@@ -11,7 +11,6 @@
 		// this.$smoothScroll = new SmoothScroll();
 		this._initView();
 		this._fetch();
-		this._events();
 	};
 	
 	Skills.prototype._fetch = function() {
@@ -76,6 +75,7 @@
 		
 		this.$element.on('goToSkill', function(e, skill) {
 			console.log(skill);
+			
 		})
 	};
 	
