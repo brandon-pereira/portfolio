@@ -11,8 +11,6 @@
 			margin-bottom:20px;
 			font: 20px 'Press Start 2P', monospace;
 			text-shadow:2px 2px darken($background, 40%);
-			// Autoprefixer doesn't support font smoothing
-			// TODO: @clear-text();
 			@include medium() {
 				font-size: 38px;
 			}
