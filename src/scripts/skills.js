@@ -8,7 +8,7 @@
 	Skills.prototype.init = function() {
 		this.$loader = this.$element.find('.loading');
 		this.$content = this.$element.find('.init');
-		
+		this.smoothScroll = new SmoothScroll();
 		this._initView();
 		this._fetch();
 	};
@@ -30,9 +30,6 @@
 		this._events();
 		this.$loader.addClass('loaded');
 		this.$content.addClass('true');
-		
-		//TODO: deeplink
-		this._deeplink('css');
 	};
 	
 	Skills.prototype._setSkillLevels = function(data) {
@@ -78,10 +75,10 @@
 		});
 		
 		this.$element.on('goToSkill', function(e, skill) {
-			console.log(skill);
-			
-			
+			self._deeplink(skill);
 		});
+		
+		this.smoothScroll.events(this.$element);
 	};
 	
 	Skills.prototype._deeplink = function (id) {
@@ -92,6 +89,7 @@
 				var skill = skills[j];
 				if(skill.id === id) {
 					console.log("found:", id);
+					this.smoothScroll.scrollTo($('#skills'));
 					// this._open(categorys[i]);
 					return true;
 				}

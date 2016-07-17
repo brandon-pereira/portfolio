@@ -5,7 +5,7 @@
 		new Skills($('#skills'));		
 		new Projects($('#projects'));		
 		new Contact($('#contact'));		
-		new SmoothScroll({bind: true});		
+		new SmoothScroll().events($('section.header'));		
 	});
 	
 })(window);

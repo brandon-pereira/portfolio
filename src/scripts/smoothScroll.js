@@ -3,23 +3,24 @@
  * @author https://gist.github.com/austinpray/5994652
  */
 (function(window) {
-	function SmoothScroll(options) {
-		if(!options) options = {};
-		if(options.bind && options.bind === true) {
-			this.events();				
-		}
-	}
 	
-	SmoothScroll.prototype.events = function() {
+	function SmoothScroll() {}
+	
+	SmoothScroll.prototype.scrollTo = function(element) {
+		this._scroll($(window), $($(element)).offset().top, 200, $(element).attr('id'));
+	};
+	
+	SmoothScroll.prototype.events = function(element) {
 		var self = this;
-		$('.smoothScroll').on('click', function(e) {
+		
+		$(element).find('.smoothScroll').off().on('click', function(e) {
 	    e.preventDefault();
-	    self.scroll($(window), $($(e.currentTarget).attr('href')).offset().top, 200);
+			console.log("EH");
+	    self._scroll($(window), $($(e.currentTarget).attr('href')).offset().top, 200, $(e.currentTarget).attr('href'));
 		});
 	};
 	
-	SmoothScroll.prototype.scroll = function(el, to, duration) {
-		console.log(to);
+	SmoothScroll.prototype._scroll = function(el, to, duration, hash) {
 		if (duration < 0) {
 			return;
 		}
@@ -28,7 +29,10 @@
 		this.scrollToTimerCache = setTimeout(function() {
 			if (!isNaN(parseInt(perTick, 10))) {
 				window.scrollTo(0, $(window).scrollTop() + perTick);
-				this.scroll(el, to, duration - 10);
+				this._scroll(el, to, duration - 10);
+			}
+			if(hash) {
+				location.hash = hash;
 			}
 		}.bind(this), 10);
 	};
