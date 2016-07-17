@@ -73,15 +73,16 @@
 		this.$element.find('[data-accordion-handler]').on('click', function() {
 			self._open($(this).closest('.accordion'));
 		});
+		
+		this.$element.on('goToSkill', function(e, skill) {
+			console.log(skill);
+		})
 	};
 	
 	Skills.prototype._open = function($element) {
 		var self = this;
 		$element.siblings().removeClass('open');
 		$element.toggleClass('open');
-		// setTimeout(function() {
-		// 	self.$smoothScroll.scroll($(window), $element.offset().top, 10);
-		// }, 400);
 	};
 	
 	window.Skills = Skills;

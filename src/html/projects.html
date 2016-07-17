@@ -38,7 +38,7 @@
 						<img data-bind="attr: {src: src, title: title}">
 					</div>
 					<div class="languages" data-bind="foreach: languages">
-						<span data-bind="text: $data" ng-click="goToLanguage(language)"></span>
+						<span data-bind="text: $data, click: $root.goToSkill.bind($data, $data)"></span>
 					</div>
 				</div>
 			</div>

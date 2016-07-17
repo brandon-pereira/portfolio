@@ -252,6 +252,9 @@
 			},
 			loadMore: function() {
 				self._loadMore(this.visibleProjects().length + 3);
+			},
+			goToSkill: function(skill) {
+				$('#skills').trigger('goToSkill', skill);
 			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
