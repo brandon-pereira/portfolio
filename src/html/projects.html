@@ -35,7 +35,7 @@
 					</header>
 					<p data-bind="html: description"></p>
 					<div class="photos" data-bind="visible: images, foreach: images">
-						<img data-bind="attr: {src: src, title: title}">
+						<img data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling">
 					</div>
 					<div class="languages" data-bind="foreach: languages">
 						<span data-bind="text: $data, click: $root.goToSkill.bind($data)"></span>
@@ -48,16 +48,14 @@
 				<span>No Results.</span>
 				<button data-bind="click: resetFilters">Reset Filters</button>
 			</div>
-			<!-- 
-			<div class="lightbox" ng-class="{'visible': modalVisible}" ng-click="modalVisible = false">
+			
+			<div class="lightbox" data-bind="css: lightbox.open() ? 'visible' : '', click: closeImage">
 				<a class="close-button">&times;</a>
 				<div class="modal-content">
-					<img src="{{modalImg}}" title="{{modalImgTitle}}" alt="{{modalImgTitle}}" ng-class="modalImgClasses">
-					<div class="description">
-						{{modalImgTitle}}
-					</div>
+					<img data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" />
+					<div class="description" data-bind="text: lightbox.desc"></div>
 				</div>
-			</div> -->
+			</div>
 		</div>
 	</div>
 </section>

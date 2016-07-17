@@ -241,6 +241,12 @@
 			statuses: ko.observable([]),
 			languages: ko.observable([]),
 			dates: sortByDate,
+			lightbox: {
+				open: ko.observable(false),
+				img: ko.observable(''),
+				desc: ko.observable(''),
+				style: ko.observable('')
+			},
 			selectedStatus: ko.observable(),
 			selectedDate: ko.observable(),
 			selectedLanguage: ko.observable(),
@@ -255,6 +261,17 @@
 			},
 			goToSkill: function(skill) {
 				$('#skills').trigger('goToSkill', skill);
+			},
+			openImage: function() {
+				var view = self.view.lightbox;
+				view.open(true);
+				view.img(this.src);
+				view.desc(this.title);
+				view.style(this.styling ? this.styling : '');
+			
+			},
+			closeImage: function() {
+				this.lightbox.open(false);
 			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
