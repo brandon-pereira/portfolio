@@ -253,10 +253,14 @@
 			selectedDate: ko.observable(),
 			selectedLanguage: ko.observable(),
 			hasMore: ko.observable(false),
+			filtersVisible: ko.observable(false),
 			resetFilters: function() {
 				this.selectedStatus(null);
 				this.selectedLanguage(null);
 				this.selectedDate(null);
+			},
+			toggleFiltersVisible: function() {
+				this.filtersVisible(!this.filtersVisible());
 			},
 			loadMore: function() {
 				self._loadMore(this.visibleProjects().length + 3);

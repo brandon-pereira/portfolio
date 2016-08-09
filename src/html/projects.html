@@ -11,8 +11,11 @@
 			</div>
 		</div>
 		<div class="init">
-			<div class="sort">
-				<span class="title">Sort By</span> 
+			<div class="sort" data-bind="css: {'visible': filtersVisible}">
+				<span class="title" data-bind="click: toggleFiltersVisible">
+					Filter Projects
+					<!-- @@include ../static/icons/caret.svg -->
+				</span> 
 				<select data-bind=" options: statuses,
 														optionsText: 'title',
 		                        value: selectedStatus,

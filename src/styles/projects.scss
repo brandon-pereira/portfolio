@@ -12,7 +12,7 @@
 		transition: all .5s;
 		user-select: none;
 		h2{
-			font:70px Lily Script One;
+			font:70px 'Lily Script One', cursive;
 			color: map-get($config, accent);
 			text-shadow:2px 5px #000;
 			position:absolute;
@@ -71,38 +71,68 @@
 			background:#fff;
 			box-shadow:0 1px 2px rgba(0,0,0,.2);
 			margin:0 auto 10px auto;
-			height: $height;
-			display:block;
 			display: flex;
+			flex-direction: column;
+			max-height: $height;
+			transition: max-height .1s;
 			span.title{
 				line-height: $height;
 				display:inline-block;
-				background:lighten(map-get($config, accent), 15%);
 				padding:0 20px;
 				color:#fff;
 				font-size:12px;
 				box-shadow:inset 0 -2px map-get($config, accent);
 				float:left;
+				background: lighten(map-get($config, accent), 5%);
+				background-size:20px;
+				svg {
+					transition: transform .2s;
+					float: right;
+					fill: #fff;
+					height: 10px;
+					padding:20px 0;
+				} 
+			}
+			&.visible {
+				max-height: 1000px;
+				transition: max-height .5s;
+				span.title {
+					svg {
+						transform: rotate(180deg);
+					}
+				}
 			}
 			select{
 				cursor:pointer;
 				appearance: none;
 				line-height:$height;
 				height:$height;
-				border:0;
-				border-right:1px dashed #e2e2e2;
 				border-radius:0;
 				padding:0 25px 0 10px;
 				font-family:inherit;
-				float:left;
 				flex: 1;
 				outline:none;
-				transition:box-shadow .3s;
-				background:url('./icons/caret.svg') no-repeat 95%, #f6f6f6;
+				border-width: 0 0 1px 0;
+				border-style: solid;
+				border-color: #e6e6e6;
+				&:last-of-type {
+					border: none;
+				}
+				background:url('./icons/caret.svg') no-repeat center right 1rem, #f6f6f6;
 				background-size:20px;
 				margin:0; // Safari Fix
 				&::-ms-expand {
 			    display: none;
+				}
+			}
+			@include medium() {
+				flex-direction: row;
+				height: $height !important;
+				select {
+					border-width: 0 1px 0 0;
+				}
+				span.title svg {
+					display: none;
 				}
 			}
 		}
