@@ -17,6 +17,12 @@
 			span{
 				display:block;
 			}
+			&:before {
+				content: "<";
+			}
+			&:after {
+				content: "/>";
+			}
 		}
 		p{
 			font-size:16px;
