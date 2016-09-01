@@ -63,6 +63,7 @@
 			flex-direction: column;
 			max-height: $height;
 			transition: max-height .1s;
+			overflow:hidden;
 			span.title{
 				line-height: $height;
 				display:inline-block;
@@ -78,6 +79,7 @@
 					float: right;
 					fill: #fff;
 					height: 10px;
+					width: 10px;
 					padding:20px 0;
 				} 
 			}
@@ -98,7 +100,6 @@
 				border-radius:0;
 				padding:0 25px 0 10px;
 				font-family:inherit;
-				flex: 1;
 				outline:none;
 				border-width: 0 0 1px 0;
 				border-style: solid;
@@ -117,6 +118,7 @@
 				flex-direction: row;
 				height: $height !important;
 				select {
+					flex: 1;
 					border-width: 0 1px 0 0;
 				}
 				span.title svg {
