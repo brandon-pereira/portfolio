@@ -1,6 +1,25 @@
 {
 	"projects": [
 		{
+			"title": "Nissan: Xterra Interstital Page",
+			"date": "2016-07-21",
+			"languages": ["javascript", "html", "css"],
+			"description": "Built the Nissan Xterra interstitial page using our responsive styleguide. Built a template which will standardize future responsive pages. Implemented layout, content, SEO and analytic requests.",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "PFA Experience",
+					"src": "./projects/xterra-2.png"
+				},
+				{
+					"title": "Gallary Modal Experience",
+					"src": "./projects/xterra-1.png"
+				}
+			],
+			"link": "http://www.nissanusa.com/xterra/"
+		},
+		{
 			"title": "Infiniti: Drivers Seat App",
 			"date": "2015-08-17",
 			"languages": ["javascript", "html", "css"],
