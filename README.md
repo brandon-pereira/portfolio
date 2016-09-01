@@ -38,10 +38,4 @@ TODO: Generating contact icons (IcoMoon & manifest.json)
 To build a development build you need to do three things.
 1. Set isDev to false in gulpfile.js (near beginning of file)
 2. Run `gulp clean` to purge /dist folder
-3. Run `gulp build` to generate /dist folder (without development things like livereload)
-
-## Roadmap
-* Make building a distribution build easier (Move isDev stuff to arg in cmd line)
-* Remove Angular Dependencies
-* SEO
-
+3. Run `gulp build --production` to generate /dist folder (without development things like livereload and sourcemaps)
