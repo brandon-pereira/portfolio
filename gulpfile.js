@@ -42,7 +42,7 @@ var paths = {
   'watch': {
     'html': ['./src/index.html', './src/html/**/*.html'],
     'js': './src/scripts/**/*.js',
-    'css': './src/**/*.scss',
+    'css': ['./src/**/*.scss', './src/**/*.css'],
     'templates': './src/scripts/templates/**/*',
     'img': './src/projects/**/*'
   }
