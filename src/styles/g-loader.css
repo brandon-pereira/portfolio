@@ -77,7 +77,6 @@
     animation-timing-function: step-start;
   }
 }
-.aa{}
 @keyframes plus-loader-bottom {
   0% {
     background: #fc6;
@@ -139,6 +138,7 @@
   overflow: hidden;
   position: relative;
   text-indent: -9999px;
+  direction: ltr;
   display: inline-block;
   width: 48px;
   height: 48px;
