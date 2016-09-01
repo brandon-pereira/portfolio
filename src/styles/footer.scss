@@ -1,0 +1,21 @@
+footer{
+	background:#000;
+	text-align:center;
+	padding:50px 20px;
+	.content{
+		color: #0f0;
+		font:400 14px monospace;	
+		line-height:150%;
+		span{
+			animation: blink 1s infinite step-end;
+			&:before{
+				content:"_";
+			}
+		}
+	}
+}
+
+@keyframes blink {
+	from, to { color: #000 }
+	50% { color:#0f0; }
+};

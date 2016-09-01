@@ -1,20 +1,20 @@
-<div class="container contact" id="contact" ng-controller="ContactController">
+<section class="container contact" id="contact">
 	<div class="content">
-		<h1>Contact</h1>
-		<div class="init" ng-class="{true: init}">
-			<h2>Let's Talk</h2>
-			<div class="grid">
-				<a ng-cloak ng-repeat="contact in contactLinks" class="item {{contact.class}}" href="{{contact.link}}" target="{{contact.isSameTab ? '_self' : '_blank'}}">{{contact.text}}</a>
+		<h2>Contact</h2>
+		<div class="init">
+			<h3>Let's Talk</h3>
+			<div class="grid" data-bind="foreach: contactLinks">
+				<a class="item smoothText" data-bind="text: text, css: $data.class, attr: {href: link, target: isSameTab ? '_self' : '_blank'}"></a>
 			</div>
-			<h2>Social</h2>
-			<div class="grid">
-				<a ng-cloak ng-repeat="contact in socialLinks" class="item {{contact.class}}" href="{{contact.link}}" target="{{contact.isSameTab ? '_self' : '_blank'}}">{{contact.text}}</a>
+			<h3>Social</h3>
+			<div class="grid" data-bind="foreach: socialLinks">
+				<a class="item smoothText" data-bind="text: text, css: $data.class, attr: {href: link, target: isSameTab ? '_self' : '_blank'}"></a>
 			</div>
 		</div>
 	</div>
-	<div class="loading" ng-hide="init">
+	<div class="loading">
 		<div class="plus-loader">
 			Loading…
 		</div>
 	</div>
-</div>
+</section>

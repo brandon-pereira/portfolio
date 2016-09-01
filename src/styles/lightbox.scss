@@ -39,7 +39,7 @@
     width:80%;
     max-width:800px;
     margin:0 auto;
-    .perspective;
+    perspective: 1000px;
   }
   img {
     transform: rotateX(50deg) scale(0.8);

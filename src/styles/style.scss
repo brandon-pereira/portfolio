@@ -1,0 +1,156 @@
+@import 'mixins';
+@import 'config';
+
+body {
+  font:16px sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff
+}
+
+/**
+ * Internet Explorer Depreciated Alert
+ */
+.browsehappy-container{
+		height:50px;
+}
+.browsehappy{
+	text-align:center;
+	position:fixed;
+	z-index:3;
+	top:0;
+	left:0;
+	right:0;
+	background:#c90000;
+	border-bottom:1px solid darken(#c90000, 10%);
+	color:#fff;
+	margin:0;
+	line-height:100px;
+	a{
+		color:#fff;
+	}
+}
+
+/**
+ * Main layout setup. Instatiates the containers and
+ * basic typography/links.
+ */
+.content{
+	margin:0 auto;
+	max-width:1000px;
+	padding:0 10px;
+	h2{
+		margin-top:30px;
+	}
+	h3{
+		font-weight:100;
+		margin:10px 0;
+	}
+	a{
+		color: map-get($config, accent)
+	}
+}
+
+/**
+ * Button Styling
+ */
+button, a.button {
+ background-color: map-get($config, accent);
+ text-decoration: none;
+ appearance: none;
+ outline: none;
+ cursor: pointer;
+ border-radius: 3px;
+ border: none;
+ padding:10px;
+ font-size:16px;
+ font-family:inherit;
+ color: #fff;
+ margin-right: 5px;
+ box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2), inset 0 2px rgba(255, 255, 255, .2), inset 0 -3px rgba(0, 0, 0, .1);
+ text-shadow: 1px 1px rgba(0, 0, 0, .3);
+ background-image: linear-gradient(transparent, rgba(0, 0, 0, .2));
+ &:hover{
+   background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3))
+ }
+ &:active{
+   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .4));
+ }
+}
+
+/**
+ * Loading classes. 
+ */
+.loading{
+	text-align:center;
+	padding: 50px 0;
+  &.loaded {
+    display: none;
+  }
+}
+.init{
+	display:none;
+	&.true{
+		display:block;
+	}
+}
+
+/**
+ * Webfont Initialzed (helps solve FOIT)
+ */
+html{
+	&.wf-active{
+		body{
+			font:1.2em "Open Sans", sans-serif;
+		}
+    footer .content, .container.skills header.main h2 {
+      font-family: 'Press Start 2P';
+    }
+	}
+}
+
+/**
+ * Font smoothing for Mac OS.
+ */
+.smoothText {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.uglyText {
+  -webkit-font-smoothing:none;
+  -moz-osx-font-smoothing:auto;
+}
+
+
+/**
+ * Make "Projects" text animated and pretty on webkit/blink browsers.
+ * NOTE: Depends on JS to add .webkit class to HTML.
+ */
+html.webkit .container.projects header.main .maintext:before{
+	text-shadow: none;
+	animation: hue 6s linear infinite;
+	content:attr(data-text);
+	position:absolute;
+	background: linear-gradient(map-get($config, accent), darken(map-get($config, accent), 20%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/**
+ * Animations
+ */
+@keyframes hue {
+	0% { filter: hue-rotate(0deg) }
+	100% { filter: hue-rotate(360deg) }
+};
+
+@import 'header';
+@import 'skills';
+@import 'projects';
+@import 'contact';
+@import 'footer';
+@import 'lightbox';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lily+Script+One&text=Projects');
+@import 'g-loader.css';
