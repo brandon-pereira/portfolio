@@ -1,6 +1,21 @@
 {
 	"projects": [
 		{
+			"title": "Splash Loader",
+			"date": "Aug 12 2016",
+			"languages": ["javascript"],
+			"description": "<p>Built a little splash loading animation while I was bored one rainy afternoon. Uses the prototype methodology and supports reopening and closing.</p><p><a href='https://github.com/brandon-pereira/splash-screen' target='_blank'>See source code on GitHub</a></p>",
+			"type": 1,
+			"status": "live",
+			"images": [
+				{
+					"title": "",
+					"src": "./projects/splash-loader-1.png"
+				}
+			],
+			"link": "https://branclon.com/showcase/splash-loader/"
+		},
+		{
 			"title": "Infiniti: Tertiary Nav",
 			"date": "July 29 2016",
 			"languages": ["javascript", "css", "jsp"],
