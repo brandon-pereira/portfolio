@@ -15,7 +15,7 @@
 	Contact.prototype._fetch = function() {
 		var self = this;
 		$.ajax({
-				url: '/templates/contact.json',
+				url: 'templates/contact.json',
 				success: function(response) {
 					self._process(response);
 				}

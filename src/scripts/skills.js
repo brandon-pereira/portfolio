@@ -16,7 +16,7 @@
 	Skills.prototype._fetch = function() {
 		var self = this;
 		$.ajax({
-				url: '/templates/skills.json',
+				url: 'templates/skills.json',
  				success: function(response) {
 					self._process(response);
 				}

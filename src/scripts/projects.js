@@ -154,7 +154,7 @@
 	Projects.prototype._fetch = function() {
 		var self = this;
 		$.ajax({
-				url: '/templates/projects.json',
+				url: 'templates/projects.json',
 				success: function(response) {
 					self._process(response);
 				}
