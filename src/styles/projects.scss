@@ -144,23 +144,6 @@
 			margin:0 auto 10px auto;
 			overflow:hidden;
 			box-sizing:border-box;
-			&.ng-move,
-			&.ng-enter,
-			&.ng-leave {
-			  transition:all linear .5s;
-			}
-			&.ng-leave.ng-leave-active,
-			&.ng-move,
-			&.ng-enter {
-			  opacity:0;
-			  max-height:0px;
-			}
-			&.ng-leave,
-			&.ng-move.ng-move-active,
-			&.ng-enter.ng-enter-active {
-			  opacity:1;
-			  max-height:500px;
-			}
 			&.noResults{
 				background:transparent;
 				box-shadow:none;
