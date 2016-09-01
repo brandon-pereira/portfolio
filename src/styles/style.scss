@@ -2,21 +2,14 @@
 @import 'config';
 
 body {
+  font:16px sans-serif;
+  margin: 0;
+  overflow-x: hidden;
   background: #fff
 }
 
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Lily+Script+One&text=Projects');
-@import 'g-loader.css';
-
-
-body{
-	font:16px sans-serif;
-  margin: 0;
-}
-
 /**
- * Internet Exploder Failsafe 
+ * Internet Explorer Depreciated Alert
  */
 .browsehappy-container{
 		height:50px;
@@ -39,7 +32,8 @@ body{
 }
 
 /**
- * Main content containers
+ * Main layout setup. Instatiates the containers and
+ * basic typography/links.
  */
 .content{
 	margin:0 auto;
@@ -58,7 +52,7 @@ body{
 }
 
 /**
- * Buttons
+ * Button Styling
  */
 button, a.button {
  background-color: map-get($config, accent);
@@ -85,7 +79,7 @@ button, a.button {
 }
 
 /**
- * Loading classes
+ * Loading classes. 
  */
 .loading{
 	text-align:center;
@@ -102,18 +96,21 @@ button, a.button {
 }
 
 /**
- * Webfonts initialzed
+ * Webfont Initialzed (helps solve FOIT)
  */
 html{
 	&.wf-active{
 		body{
 			font:1.2em "Open Sans", sans-serif;
 		}
+    footer .content, .container.skills header.main h2 {
+      font-family: 'Press Start 2P';
+    }
 	}
 }
 
 /**
- * Font Smoothing 
+ * Font smoothing for Mac OS.
  */
 .smoothText {
   -webkit-font-smoothing: antialiased;
@@ -124,9 +121,36 @@ html{
   -moz-osx-font-smoothing:auto;
 }
 
+
+/**
+ * Make "Projects" text animated and pretty on webkit/blink browsers.
+ * NOTE: Depends on JS to add .webkit class to HTML.
+ */
+html.webkit .container.projects header.main .maintext:before{
+	text-shadow: none;
+	animation: hue 6s linear infinite;
+	content:attr(data-text);
+	position:absolute;
+	background: linear-gradient(map-get($config, accent), darken(map-get($config, accent), 20%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+/**
+ * Animations
+ */
+@keyframes hue {
+	0% { filter: hue-rotate(0deg) }
+	100% { filter: hue-rotate(360deg) }
+};
+
 @import 'header';
 @import 'skills';
 @import 'projects';
 @import 'contact';
 @import 'footer';
 @import 'lightbox';
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lily+Script+One&text=Projects');
+@import 'g-loader.css';
