@@ -63,16 +63,16 @@
 				}
 			}
 			article{
-				transition:max-height .4s;
+				transition: opacity 0s;
 				opacity:0;
-				max-height:0;
 				pointer-events: none;
 			}
 			// GENERIC OPEN STYLES FOR ALL ACCORDIANS
 			&.open{
+				height: auto !important;
 				> article{
+					transition: opacity .2s;
 					opacity:1;
-					max-height:1000px;
 					pointer-events: all;
 				}
 				> header{
@@ -84,6 +84,8 @@
 			// CATEGORY SPECIFIC STYLES
 			&.category{
 				margin-bottom:10px;
+				height:50px;
+				overflow:hidden;
 				> article{
 					padding:10px 5px;
 					margin:0;
@@ -91,11 +93,6 @@
 					background:rgba(255,255,255,.3);
 					box-shadow:0 1px 2px rgba(0,0,0,.8);
 					border-radius: 0 0 3px 3px;
-				}
-				&.open{
-					> article{
-						
-					}
 				}
 				> header{
 					.title{
@@ -106,6 +103,7 @@
 			}
 			// SKILL SPECIFIC STYLES
 			&.skill{
+				height:40px;
 				background:#fff;
 				margin:5px;
 				border-radius:3px;
@@ -137,11 +135,6 @@
 					padding:0 10px 0px 10px;	
 					.button{
 						margin:10px 0;
-					}
-				}
-				&.open{
-					> article{
-						transition:max-height .1s, all 0s;
 					}
 				}
 			}
