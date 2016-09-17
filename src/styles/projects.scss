@@ -11,7 +11,7 @@
 		transition: all .5s;
 		user-select: none;
 		.maintext {
-			font:70px 'Lily Script One', cursive;
+			font:70px cursive;
 			color: map-get($config, accent);
 			text-shadow:2px 5px #000;
 			position:absolute;
@@ -59,8 +59,7 @@
 			box-shadow:0 1px 2px rgba(0,0,0,.2);
 			margin:0 auto 10px auto;
 			display: block;
-			max-height: $height;
-			transition: max-height .1s;
+			height: $height;
 			overflow:hidden;
 			span.title{
 				line-height: $height;
@@ -84,7 +83,7 @@
 				} 
 			}
 			&.visible {
-				max-height: $height * 4; // show 4 blocks
+				height: $height * 4; // show 4 blocks
 				transition: max-height .1s;
 				span.title {
 					svg {

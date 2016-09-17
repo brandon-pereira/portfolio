@@ -237,29 +237,6 @@
 			"link": "http://www.nissanusa.com/cars/maxima/2016-maxima-sr-midnight/"
 		},
 		{
-			"title": "BetterDo. v3",
-			"date": "2016-03-01",
-			"languages": ["javascript", "html", "gulp", "css", "git"],
-			"description": "Version 3 of BetterDo was a front-end rewrite. It utilizes AngularJS and localStorage, as well as a spice of Flexbox. I also built a build tool on top of <a href='http://gulpjs.com/' target='_blank'>GulpJS</a>, providing code compression, SVG spritesheet generator, concatenation of files, and more.<p></p>We plan on open sourcing BetterDo once this rewrite is complete, and have already begun moving everything to Git.<p>",
-			"type": 1,
-			"status": "beta",
-			"images": [
-				{
-					"title": "Standard list view",
-					"src": "./projects/betterdo-3-1.png"
-				},
-				{
-					"title": "New list modal",
-					"src": "./projects/betterdo-3-2.png"
-				},
-				{
-					"title": "Inbox list view",
-					"src": "./projects/betterdo-3-3.png"
-				}
-			],
-			"link": "/BetterDo/3/"
-		},
-		{
 			"title": "Portfolio v1",
 			"date": "2015-11-30",
 			"languages": ["json", "html", "less", "gulp", "git"],
@@ -283,12 +260,12 @@
 			"link": "/"
 		},
 		{
-			"title": "BetterDo. v2",
+			"title": "BetterDo.",
 			"date": "2015-04-20",
 			"languages": ["javascript", "html", "css", "php", "mysql"],
-			"description": "Version 2 of my Todo app was a complete rewrite. Moved to Ajax based communication and LESS for styling. This project is in beta, so feel free to try.",
+			"description": "Version 2 of my Todo app was a complete rewrite. Moved to Ajax based communication and LESS for styling.",
 			"type": 1,
-			"status": "live",
+			"status": "beta",
 			"images": [
 				{
 					"title": "",
@@ -306,7 +283,7 @@
 					"styling": "shadow"
 				}
 			],
-			"link": "/BetterDo/2/"
+			"link": "/BetterDo/"
 		},
 		{
 			"title": "Fusion",

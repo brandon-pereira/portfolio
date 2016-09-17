@@ -96,7 +96,7 @@ button, a.button {
 }
 
 /**
- * Webfont Initialzed (helps solve FOIT)
+ * Webfont Initialzed (helps solve FOUT)
  */
 html{
 	&.wf-active{
@@ -104,7 +104,10 @@ html{
 			font:1.2em "Open Sans", sans-serif;
 		}
     footer .content, .container.skills header.main h2 {
-      font-family: 'Press Start 2P';
+      font-family: 'Press Start 2P', sans-serif;
+    }
+    .container.projects header.main .maintext {
+      font-family: 'Lily Script One', sans-serif;
     }
 	}
 }
@@ -150,7 +153,4 @@ html.webkit .container.projects header.main .maintext:before{
 @import 'contact';
 @import 'footer';
 @import 'lightbox';
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Lily+Script+One&text=Projects');
 @import 'g-loader.css';
