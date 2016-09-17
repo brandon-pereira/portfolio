@@ -11,7 +11,7 @@
 		transition: all .5s;
 		user-select: none;
 		.maintext {
-			font:70px 'Lily Script One', cursive;
+			font:70px cursive;
 			color: map-get($config, accent);
 			text-shadow:2px 5px #000;
 			position:absolute;

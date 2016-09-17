@@ -12,5 +12,21 @@
 			$('html').addClass('webkit');
 		}	
 	});
-	
-})(window);
+	})(window);
+
+// Load Webfonts (Generic)
+WebFont.load({
+	google: {
+		families: [
+			'Open Sans:300,400',
+			'Press Start 2P:400'
+		]
+	}
+});
+// Load Projects webfont (subset only) 
+WebFont.load({
+	google: {
+		families: ['Lily Script One:400'],
+		text: 'Projects'
+	}
+});
