@@ -83,7 +83,7 @@
 				} 
 			}
 			&.visible {
-				height: $height * 4; // show 4 blocks
+				height: $height * 5; // show 4 blocks
 				transition: max-height .1s;
 				span.title {
 					svg {

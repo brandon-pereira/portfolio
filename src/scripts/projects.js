@@ -32,6 +32,7 @@
 	 	this.view.selectedStatus.subscribe(triggerSelectChange);
 	 	this.view.selectedDate.subscribe(triggerSelectChange);
 	 	this.view.selectedLanguage.subscribe(triggerSelectChange);
+	 	this.view.selectedType.subscribe(triggerSelectChange);
 	};
 	
 	/**
@@ -43,7 +44,7 @@
 		var response = {};
 		
 		response.projects = this._sortProjects(projects, filters.date);
-		response.projects = this._filterProjects(response.projects , filters.status, filters.language);
+		response.projects = this._filterProjects(response.projects , filters.status, filters.language, filters.type);
 		if(response.projects.length > 3) {
 			response.projects = response.projects.slice(0, 3);
 			response.hasMore = true;
@@ -60,7 +61,7 @@
 		var response = {};
 		
 		response.projects = this._sortProjects(projects, filters.date);
-		response.projects = this._filterProjects(response.projects , filters.status, filters.language);
+		response.projects = this._filterProjects(response.projects , filters.status, filters.language, filters.type);
 		if(response.projects.length > amount) {
 			response.projects = response.projects.slice(0, amount);
 			response.hasMore = true;
@@ -76,17 +77,20 @@
 		var status = this.view.selectedStatus();
 		var date = this.view.selectedDate();
 		var language = this.view.selectedLanguage();
+		var type = this.view.selectedType();
 		
 		// Sanitize
 		status = status && status.class ? status.class : false;
 		date = date && date.val ? date.val : false;
 		language = language || false;
+		type = type || false;
 		
 		// Return
 		return {
 			status: status,
 			date: date,
-			language: language
+			language: language,
+			type: type
 		};
 	};
 	
@@ -134,13 +138,16 @@
 	 * @param  {string} status   Status to filter by (or falsy to ignore)
 	 * @param  {string} language Language to filter by (or falsy to ignore)
 	 * @return {Array}           Array of filtered projects
+   * @param  {string} status   Type to filter by (or falsy to ignore)
 	 */
-	Projects.prototype._filterProjects = function (projects, status, language) {
+	Projects.prototype._filterProjects = function (projects, status, language, type) {
 		if(projects) {
 			projects = projects.filter(function(val) {
 				var statusFilter = status ? val.status.class === status : true;
 				var languageFilter = language ? val.languages.indexOf(language) >= 0 : true;
-				return statusFilter && languageFilter;
+				var typeFilter = type ? val.type === type : true;
+				
+				return statusFilter && languageFilter && typeFilter;
 			});
 			return projects;
 		} else {
@@ -172,6 +179,9 @@
 		if(data.status) {
 			this.view.status(data.status);
 		}
+		if(data.types) {
+			this.view.types(data.types);
+		}
 		if(typeof data.hasMore !== 'undefined') {
 			this.view.hasMore(data.hasMore);
 		}
@@ -191,9 +201,11 @@
 	Projects.prototype._parse = function(data) {
 		var statuses = data.statuses;
 		var projects = data.projects;
+		var types = data.types;
 		var languages = [];
 
 		for(var i = 0; i < projects.length; i++) {
+			projects[i].type = types[projects[i].type];
 			projects[i].status = statuses[projects[i].status];
 			projects[i].date = new Date(projects[i].date);
 			projects[i].formattedDate = this._getFormatedDate(projects[i].date);
@@ -202,7 +214,8 @@
 		
 		data.languages = this._uniq(languages);
 		data.statuses = Object.keys(data.statuses).map(function (key) {return data.statuses[key];});
-		
+		data.types = Object.keys(data.types).map(function (key) {return data.types[key];});
+	
 		return data;
 	};
 	
@@ -242,6 +255,7 @@
 			visibleProjects: ko.observable([]),
 			statuses: ko.observable([]),
 			languages: ko.observable([]),
+			types: ko.observable([]),
 			dates: sortByDate,
 			lightbox: {
 				open: ko.observable(false),
@@ -251,6 +265,7 @@
 			},
 			selectedStatus: ko.observable(),
 			selectedDate: ko.observable(),
+			selectedType: ko.observable(),
 			selectedLanguage: ko.observable(),
 			hasMore: ko.observable(false),
 			filtersVisible: ko.observable(false),
