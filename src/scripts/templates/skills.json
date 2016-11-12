@@ -21,6 +21,12 @@
 					"name": "HTML",
 					"description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I'm also experienced with HTML5 and HAML.",
 					"skillLevel": 0
+				},
+				{
+					"id": "svg",
+					"name": "SVG",
+					"description": "I've had tons of exposure to SVG, including animations. I know how to build icon sprite sheets, animate them, optimize them, and much more.",
+					"skillLevel": 0
 				}
 			]
 		},
