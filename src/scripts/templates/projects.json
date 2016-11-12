@@ -1,6 +1,25 @@
 {
 	"projects": [
 		{
+			"title": "Blueshield: Content Build System",
+			"date": "Oct 3 2016",
+			"languages": ["gulp"],
+			"description": "<p>Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that.</p><p>Blueshield uses a unique CMS which requires each page to be built with custom elements. Rather than us manually coding in these elements, we thought it would be a smart to automate some of the tedious work. We built a templating system which allowed us to both QA our pages with dummy content, as well as deliver the pages with these transformed elements.</p><p>On top of this, I also flew to California a couple of times to help their team build their pages. This required me to mentor some of their web developers, communicate/strategize with their tech leads, and help solve some problems they were facing.</p>",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "An example of the landing screen (after animation).",
+					"src": "./projects/bsca-1.png"
+				},
+				{
+					"title": "Demonstration of how the animation behaves.",
+					"src": "./projects/bsca-2.png"
+				}
+			],
+			"link": "http://infinitiusa.com/now/newtradition/"
+		},
+		{
 			"title": "Infiniti: Tree Drive",
 			"date": "Nov 4 2016",
 			"languages": ["javascript", "svg", "css"],
