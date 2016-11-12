@@ -1,6 +1,33 @@
 {
 	"projects": [
 		{
+			"title": "Infiniti: Tree Drive",
+			"date": "Nov 4 2016",
+			"languages": ["javascript", "svg", "css"],
+			"description": "<p>Built a reveal page for Infiniti's winter sales event. For each test drive, they will plant a tree in America.</p><p>This project was very creative heavy, and required me to work closely with designers. I took their PSD and built the page around it. As a bonus, we built an SVG of the states, converted it into several polygons, and then animated the individual polygons. The result is a beautiful animation when navigating the page.</p>",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "An example of the landing screen (after animation).",
+					"src": "./projects/tree-drive-1.png",
+					"styling": "shadow"
+				},
+				{
+					"title": "Demonstration of how the animation behaves.",
+					"src": "./projects/tree-drive-2.mp4",
+					"styling": "shadow",
+					"type": "video"
+				},
+				{
+					"title": "An example of a region (after you fill out form/click map).",
+					"src": "./projects/tree-drive-3.png",
+					"styling": "shadow"
+				}
+			],
+			"link": "http://infinitiusa.com/now/newtradition/"
+		},
+		{
 			"title": "Splash Loader",
 			"date": "Aug 12 2016",
 			"languages": ["javascript"],
