@@ -28,7 +28,8 @@ var paths = {
     'root': './dist',
     'all': './dist/**/*',
     'templates': './dist/templates',
-    'img': './dist/projects'
+    'img': './dist/projects',
+    'video': './dist/projects'
   },
   // source files
   'src': {
@@ -36,7 +37,8 @@ var paths = {
     'html': './src/index.html',
     'js': ['./src/scripts/app.js', './src/scripts/**/*.js'],
     'templates': './src/scripts/templates/**/*',
-    'img': './src/projects/**/*'
+    'img': './src/projects/**/*.{png,jpeg,gif}',
+    'video': './src/projects/**/*.mp4'
   },
   // watch paths
   'watch': {
@@ -50,7 +52,7 @@ var paths = {
 
 gulp.task('default', ['serve']);
 gulp.task('serve', ['build', 'webserver']);
-gulp.task('build', ['transfer', 'extend', 'images', 'style', 'script']);
+gulp.task('build', ['transfer', 'extend', 'images', 'video', 'style', 'script']);
 
 /**
   This function will remove all files and folders from the
@@ -101,6 +103,12 @@ gulp.task('images', function(){
   return gulp.src(paths.src.img)
      .pipe(imageResize({width:800, quality: 0.5}))
      .pipe(gulp.dest(paths.dist.img))
+     .pipe(livereload());
+});
+
+gulp.task('video', function(){
+  return gulp.src(paths.src.video)
+     .pipe(gulp.dest(paths.dist.video))
      .pipe(livereload());
 });
  

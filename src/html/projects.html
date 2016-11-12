@@ -41,7 +41,12 @@
 					</header>
 					<p data-bind="html: description"></p>
 					<div class="photos" data-bind="visible: images, foreach: images">
-						<img data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling">
+						<span data-bind="if: $data.type === 'video'">
+							<video data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling" autoplay loop></video>
+						</span>
+						<span data-bind="if: $data.type !== 'video'">
+							<img data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling">
+						</span>
 					</div>
 					<div class="languages" data-bind="foreach: languages">
 						<a href="#skills" data-bind="text: $data, click: $root.goToSkill.bind($data)"></a>
@@ -58,7 +63,12 @@
 			<div class="lightbox" data-bind="css: lightbox.open() ? 'visible' : '', click: closeImage">
 				<a class="close-button">&times;</a>
 				<div class="modal-content">
-					<img data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" />
+					<span data-bind="if: lightbox.isVideo()">
+						<video data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" autoplay loop></video>
+					</span>
+					<span data-bind="if: !lightbox.isVideo()">
+						<img data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" />
+					</span>
 					<div class="description" data-bind="text: lightbox.desc"></div>
 				</div>
 			</div>

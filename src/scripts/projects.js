@@ -261,6 +261,7 @@
 				open: ko.observable(false),
 				img: ko.observable(''),
 				desc: ko.observable(''),
+				isVideo: ko.observable(false),
 				style: ko.observable('')
 			},
 			selectedStatus: ko.observable(),
@@ -288,6 +289,7 @@
 				view.open(true);
 				view.img(this.src);
 				view.desc(this.title);
+				view.isVideo(this.type === 'video');
 				view.style(this.styling ? this.styling : '');
 			
 			},

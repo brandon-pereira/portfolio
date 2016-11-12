@@ -19,7 +19,7 @@
     visibility: visible;
     pointer-events: all;
     transition: opacity .2s;
-    img {
+    img, video {
       transition: transform .2s .1s;
       transform: none;
     }
@@ -41,7 +41,7 @@
     margin:0 auto;
     perspective: 1000px;
   }
-  img {
+  img, video {
     transform: rotateX(50deg) scale(0.8);
     transform-origin:bottom center;
     max-width: 100%;
