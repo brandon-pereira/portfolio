@@ -42,7 +42,9 @@
 					<p data-bind="html: description"></p>
 					<div class="photos" data-bind="visible: images, foreach: images">
 						<span data-bind="if: $data.type === 'video'">
-							<video data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling" autoplay loop playsinline></video>
+							<video data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling" autoplay loop playsinline  muted>
+								<source data-bind="attr: {src: src}" type="video/mp4">
+							</video>
 						</span>
 						<span data-bind="if: $data.type !== 'video'">
 							<img data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling">
@@ -64,7 +66,9 @@
 				<a class="close-button">&times;</a>
 				<div class="modal-content">
 					<span data-bind="if: lightbox.isVideo()">
-						<video data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" autoplay loop playsinline></video>
+						<video data-bind="attr: {title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" autoplay loop playsinline muted>
+							<source data-bind="attr: {src: lightbox.img}" type="video/mp4">
+						</video>
 					</span>
 					<span data-bind="if: !lightbox.isVideo()">
 						<img data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" />
