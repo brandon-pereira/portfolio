@@ -37,7 +37,7 @@
 							</video>
 						</span>
 						<span data-bind="if: $data.type !== 'video'">
-							<img data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling">
+							<img data-bind="attr: {src: $data.preview ? preview : src, title: title}, click: $root.openImage, css: $data.styling">
 						</span>
 					</div>
 					<div class="languages" data-bind="foreach: languages">

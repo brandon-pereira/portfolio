@@ -38,7 +38,7 @@ var paths = {
     'html': './src/index.html',
     'js': ['./src/scripts/app.js', './src/scripts/**/*.js'],
     'templates': './src/scripts/templates/**/*',
-    'img': './src/projects/**/*.{png,jpeg,gif}',
+    'img': './src/projects/**/*.{png,jpeg,jpg,gif}',
     'video': './src/projects/**/*.mp4'
   },
   // watch paths
