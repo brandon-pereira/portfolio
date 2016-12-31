@@ -10,11 +10,13 @@
 			"images": [
 				{
 					"title": "An example of the landing screen (after animation).",
-					"src": "./projects/bsca-1.png"
+					"src": "./projects/bsca-1.png",
+					"preview": "./projects/bsca-1-preview.jpg"
 				},
 				{
 					"title": "Demonstration of how the animation behaves.",
-					"src": "./projects/bsca-2.png"
+					"src": "./projects/bsca-2.png",
+					"preview": "./projects/bsca-2-preview.jpg"
 				}
 			],
 			"link": "http://infinitiusa.com/now/newtradition/"
@@ -30,6 +32,7 @@
 				{
 					"title": "An example of the landing screen (after animation).",
 					"src": "./projects/tree-drive-1.png",
+					"preview": "./projects/tree-drive-1-preview.jpg",
 					"styling": "shadow"
 				},
 				{
@@ -41,6 +44,7 @@
 				{
 					"title": "An example of a region (after you fill out form/click map).",
 					"src": "./projects/tree-drive-3.png",
+					"preview": "./projects/tree-drive-3-preview.jpg",
 					"styling": "shadow"
 				}
 			],
@@ -56,7 +60,8 @@
 			"images": [
 				{
 					"title": "",
-					"src": "./projects/splash-loader-1.png"
+					"src": "./projects/splash-loader-1.png",
+					"preview": "./projects/splash-loader-1-preview.jpg"
 				}
 			],
 			"link": "https://branclon.com/showcase/splash-loader/"
@@ -72,16 +77,19 @@
 				{
 					"title": "What it looks like on medium/large screen size",
 					"src": "./projects/tertiary-nav-1.png",
+					"preview": "./projects/tertiary-nav-1-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "Open hamburger on small",
 					"src": "./projects/tertiary-nav-3.png",
+					"preview": "./projects/tertiary-nav-3-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "Closed hamburger on small",
 					"src": "./projects/tertiary-nav-2.png",
+					"preview": "./projects/tertiary-nav-2-preview.jpg",
 					"styling": "shadow"
 				}
 			],
@@ -97,15 +105,18 @@
 			"images": [
 				{
 					"title": "Header Area",
-					"src": "./projects/portfolio-1.png"
+					"src": "./projects/portfolio-1.png",
+					"preview": "./projects/portfolio-1-preview.jpg"
 				},
 				{
 					"title": "Projects View Area",
-					"src": "./projects/portfolio-2.png"
+					"src": "./projects/portfolio-2.png",
+					"preview": "./projects/portfolio-2-preview.jpg"
 				},
 				{
 					"title": "Skills Accordian Area",
-					"src": "./projects/portfolio-3.png"
+					"src": "./projects/portfolio-3.png",
+					"preview": "./projects/portfolio-3-preview.jpg"
 				}
 			],
 			"link": "/"
@@ -120,11 +131,13 @@
 			"images": [
 				{
 					"title": "PFA Experience",
-					"src": "./projects/xterra-2.png"
+					"src": "./projects/xterra-2.png",
+					"preview": "./projects/xterra-2-preview.jpg"
 				},
 				{
 					"title": "Gallary Modal Experience",
-					"src": "./projects/xterra-1.png"
+					"src": "./projects/xterra-1.png",
+					"preview": "./projects/xterra-1-preview.jpg"
 				}
 			],
 			"link": "http://www.nissanusa.com/xterra/"
@@ -139,15 +152,18 @@
 			"images": [
 				{
 					"title": "Desktop Experience",
-					"src": "./projects/cardboard-2.png"
+					"src": "./projects/cardboard-2.png",
+					"preview": "./projects/cardboard-2-preview.jpg"
 				},
 				{
 					"title": "Tablet/Mobile Experience",
-					"src": "./projects/cardboard-1.png"
+					"src": "./projects/cardboard-1.png",
+					"preview": "./projects/cardboard-1-preview.jpg"
 				},
 				{
 					"title": "",
-					"src": "./projects/cardboard-3.png"
+					"src": "./projects/cardboard-3.png",
+					"preview": "./projects/cardboard-3-preview.jpg"
 				}
 			],
 			"link": "http://www.infinitiusa.com/drivers-seat-app/"
@@ -162,15 +178,18 @@
 			"images": [
 				{
 					"title": "Google Chrome icon made with pure CSS",
-					"src": "./projects/css3-icons-1.png"
+					"src": "./projects/css3-icons-1.png",
+					"preview": "./projects/css3-icons-1-preview.jpg"
 				},
 				{
 					"title": "Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
-					"src": "./projects/css3-icons-2.png"
+					"src": "./projects/css3-icons-2.png",
+					"preview": "./projects/css3-icons-2-preview.jpg"
 				},
 				{
 					"title": "Side project app icon in pure CSS.",
-					"src": "./projects/css3-icons-3.png"
+					"src": "./projects/css3-icons-3.png",
+					"preview": "./projects/css3-icons-3-preview.jpg"
 				}
 			],
 			"link": "https://branclon.com/showcase/icons/"
@@ -185,15 +204,18 @@
 			"images": [
 				{
 					"title": "Packages screen, demonstrating conflict manager.",
-					"src": "./projects/nissan-mobile-solutions-2.png"
+					"src": "./projects/nissan-mobile-solutions-2.png",
+					"preview": "./projects/nissan-mobile-solutions-2-preview.jpg"
 				},
 				{
 					"title": "Mobile navigation and versions page.",
-					"src": "./projects/nissan-mobile-solutions-1.png"
+					"src": "./projects/nissan-mobile-solutions-1.png",
+					"preview": "./projects/nissan-mobile-solutions-1-preview.jpg"
 				},
 				{
 					"title": "Desktop navigation and versions page.",
-					"src": "./projects/nissan-mobile-solutions-3.png"
+					"src": "./projects/nissan-mobile-solutions-3.png",
+					"preview": "./projects/nissan-mobile-solutions-3-preview.jpg"
 				}
 			],
 			"link": "http://nissanusa.com/buildyournissan"
@@ -209,6 +231,7 @@
 				{
 					"title": "What the video looked like (static)",
 					"src": "./projects/national-signing-day-pfa.png",
+					"preview": "./projects/national-signing-day-pfa-preview.jpg",
 					"styling": "shadow"
 				}
 			],
@@ -224,15 +247,18 @@
 			"images": [
 				{
 					"title": "Initial page load on desktop",
-					"src": "./projects/nissan-cube-1.png"
+					"src": "./projects/nissan-cube-1.png",
+					"preview": "./projects/nissan-cube-1-preview.jpg"
 				},
 				{
 					"title": "Initial page load on mobile",
-					"src": "./projects/nissan-cube-2.png"
+					"src": "./projects/nissan-cube-2.png",
+					"preview": "./projects/nissan-cube-2-preview.jpg"
 				},
 				{
 					"title": "Gallery area on tablet",
-					"src": "./projects/nissan-cube-3.png"
+					"src": "./projects/nissan-cube-3.png",
+					"preview": "./projects/nissan-cube-3-preview.jpg"
 				}
 			],
 			"link": "http://www.nissanusa.com/cars/cube"
@@ -248,16 +274,19 @@
 				{
 					"title": "Desktop Gas Engine Section",
 					"src": "./projects/titan-v8-gas-1.png",
+					"preview": "./projects/titan-v8-gas-1-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "Responsive Header Example",
 					"src": "./projects/titan-v8-gas-2.png",
+					"preview": "./projects/titan-v8-gas-2-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "Desktop Header Example",
 					"src": "./projects/titan-v8-gas-3.png",
+					"preview": "./projects/titan-v8-gas-3-preview.jpg",
 					"styling": "shadow"
 				}
 			],
@@ -273,11 +302,13 @@
 			"images": [
 				{
 					"title": "Desktop Carousel",
-					"src": "./projects/midnight-1.png"
+					"src": "./projects/midnight-1.png",
+					"preview": "./projects/midnight-1-preview.jpg"
 				},
 				{
 					"title": "Responsive Carousel Example",
-					"src": "./projects/midnight-2.png"
+					"src": "./projects/midnight-2.png",
+					"preview": "./projects/midnight-2-preview.jpg"
 				}
 			],
 			"link": "http://www.nissanusa.com/cars/maxima/2016-maxima-sr-midnight/"
@@ -292,15 +323,18 @@
 			"images": [
 				{
 					"title": "Header Area",
-					"src": "./projects/portfolio-1.png"
+					"src": "./projects/portfolio-1.png",
+					"preview": "./projects/portfolio-1-preview.jpg"
 				},
 				{
 					"title": "Projects View Area",
-					"src": "./projects/portfolio-2.png"
+					"src": "./projects/portfolio-2.png",
+					"preview": "./projects/portfolio-2-preview.jpg"
 				},
 				{
 					"title": "Skills Accordian Area",
-					"src": "./projects/portfolio-3.png"
+					"src": "./projects/portfolio-3.png",
+					"preview": "./projects/portfolio-3-preview.jpg"
 				}
 			],
 			"link": "/"
@@ -316,16 +350,19 @@
 				{
 					"title": "",
 					"src": "./projects/betterdo-2-1.png",
+					"preview": "./projects/betterdo-2-1-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "",
 					"src": "./projects/betterdo-2-2.png",
+					"preview": "./projects/betterdo-2-2-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "",
 					"src": "./projects/betterdo-2-3.png",
+					"preview": "./projects/betterdo-2-3-preview.jpg",
 					"styling": "shadow"
 				}
 			],
@@ -342,11 +379,13 @@
 				{
 					"title": "Tablet Interface",
 					"src": "./projects/fusion.png",
+					"preview": "./projects/fusion-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "Desktop Experience",
 					"src": "./projects/fusion2.png",
+					"preview": "./projects/fusion2-preview.jpg",
 					"styling": "shadow"
 				}
 			],
@@ -363,16 +402,19 @@
 				{
 					"title": "Login Screen",
 					"src": "./projects/bc.png",
+					"preview": "./projects/bc-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "Server Place Order Screen",
 					"src": "./projects/bc2.png",
+					"preview": "./projects/bc2-preview.jpg",
 					"styling": "shadow"
 				},
 				{
 					"title": "Admin Panel",
 					"src": "./projects/bc3.png",
+					"preview": "./projects/bc3-preview.jpg",
 					"styling": "shadow"
 				}
 			],
@@ -389,6 +431,7 @@
 				{
 					"title": "Better to see live version",
 					"src": "./projects/building.png",
+					"preview": "./projects/building-preview.jpg",
 					"styling": "shadow"
 				}
 			],
@@ -404,7 +447,8 @@
 			"images": [
 				{
 					"title": "Better to see live version",
-					"src": "./projects/usb.png"
+					"src": "./projects/usb.png",
+					"preview": "./projects/usb-preview.jpg"
 				}
 			],
 			"link": "/showcase/usb"
