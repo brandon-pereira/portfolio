@@ -18,6 +18,7 @@ var argv = require('yargs').argv;
 var imageResize = require('gulp-image-resize');
 var htmlmin = require('gulp-htmlmin');
 var jsonminify = require('gulp-jsonminify');
+var inlinesource = require('gulp-inline-source');
 
 var paths = {
   // Files to transfer directly to dist
@@ -81,6 +82,7 @@ gulp.task('transfer', function(){
 gulp.task('extend', function () {
   return gulp.src(paths.src.html)
     .pipe(extender({annotations:false,verbose:false}))
+    .pipe(inlinesource({rootpath: './dist/'}))
 		.pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
     .pipe(gulp.dest(paths.dist.root))
     .pipe(livereload());
