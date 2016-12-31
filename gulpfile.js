@@ -17,6 +17,7 @@ var svgmin = require('gulp-svgmin');
 var argv = require('yargs').argv;
 var imageResize = require('gulp-image-resize');
 var htmlmin = require('gulp-htmlmin');
+var jsonminify = require('gulp-jsonminify');
 
 var paths = {
   // Files to transfer directly to dist
@@ -143,8 +144,9 @@ gulp.task('scripts:external', function(){
  */
 gulp.task('scripts:templates', function(){
   return gulp.src(paths.src.templates)
-     .pipe(gulp.dest(paths.dist.templates))
-     .pipe(livereload());
+		.pipe(jsonminify())
+		.pipe(gulp.dest(paths.dist.templates))
+		.pipe(livereload());
 });
 
 /**
