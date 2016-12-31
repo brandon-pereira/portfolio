@@ -16,20 +16,10 @@
 					Filter Projects
 					<!-- @@include ../static/icons/caret.svg -->
 				</span> 
-				<select data-bind=" options: statuses,
-														optionsText: 'title',
-		                        value: selectedStatus,
-													 	optionsCaption: 'Status'"></select>
-				<select data-bind=" options: dates,
-														optionsText: 'title',
-		                        value: selectedDate,
-													 	optionsCaption: 'Date'"></select>
-				<select data-bind="options: languages,
-											 		 optionsCaption: 'Language',
-													 value: selectedLanguage"></select>
-				<select data-bind="options: types,
-											 		 optionsCaption: 'Type',
-													 value: selectedType"></select>
+				<select data-bind="options: statuses, optionsText: 'title', value: selectedStatus, optionsCaption: 'Status'"></select>
+				<select data-bind="options: dates, optionsText: 'title', value: selectedDate, optionsCaption: 'Date'"></select>
+				<select data-bind="options: languages, optionsCaption: 'Language', value: selectedLanguage"></select>
+				<select data-bind="options: types, optionsCaption: 'Type', value: selectedType"></select>
 			</div>
 			<div class="projects" data-bind="foreach: visibleProjects">
 				<div class="project">
