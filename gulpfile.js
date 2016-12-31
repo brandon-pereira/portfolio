@@ -16,6 +16,7 @@ var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var argv = require('yargs').argv;
 var imageResize = require('gulp-image-resize');
+var htmlmin = require('gulp-htmlmin');
 
 var paths = {
   // Files to transfer directly to dist
@@ -33,7 +34,7 @@ var paths = {
   },
   // source files
   'src': {
-    'css': './src/styles/style.scss',
+    'css': ['./src/styles/style.scss', './src/styles/critical.scss'],
     'html': './src/index.html',
     'js': ['./src/scripts/app.js', './src/scripts/**/*.js'],
     'templates': './src/scripts/templates/**/*',
@@ -79,6 +80,7 @@ gulp.task('transfer', function(){
 gulp.task('extend', function () {
   return gulp.src(paths.src.html)
     .pipe(extender({annotations:false,verbose:false}))
+		.pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
     .pipe(gulp.dest(paths.dist.root))
     .pipe(livereload());
 });
