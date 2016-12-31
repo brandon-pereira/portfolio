@@ -33,7 +33,7 @@ var paths = {
   },
   // source files
   'src': {
-    'css': './src/styles/style.scss',
+    'css': ['./src/styles/style.scss', './src/styles/critical.scss'],
     'html': './src/index.html',
     'js': ['./src/scripts/app.js', './src/scripts/**/*.js'],
     'templates': './src/scripts/templates/**/*',
