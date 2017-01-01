@@ -35,14 +35,14 @@ var paths = {
     'css': ['./src/styles/style.scss', './src/styles/critical.scss'],
     'html': './src/index.html',
     'js': ['./src/scripts/app.js', './src/scripts/**/*.js'],
-    'templates': './src/scripts/templates/**/*'
+    'templates': './src/content/**/*'
   },
   // watch paths
   'watch': {
     'html': ['./src/index.html', './src/html/**/*.html'],
     'js': './src/scripts/**/*.js',
     'css': ['./src/**/*.scss', './src/**/*.css'],
-    'templates': './src/scripts/templates/**/*',
+    'templates': './src/content/**/*',
   }
 };
 
