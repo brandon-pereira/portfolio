@@ -12,12 +12,11 @@ var uglify = require('gulp-uglify');
 var gulpif = require('gulp-if');
 var mainBowerFiles = require('main-bower-files');
 var autoprefixer = require('gulp-autoprefixer');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
 var argv = require('yargs').argv;
-var imageResize = require('gulp-image-resize');
 var htmlmin = require('gulp-htmlmin');
 var jsonminify = require('gulp-jsonminify');
+var inlinesource = require('gulp-inline-source');
+var runSequence = require('run-sequence');
 
 var paths = {
   // Files to transfer directly to dist
@@ -29,32 +28,32 @@ var paths = {
   'dist': {
     'root': './dist',
     'all': './dist/**/*',
-    'templates': './dist/templates',
-    'img': './dist/projects',
-    'video': './dist/projects'
+    'templates': './dist/templates'
   },
   // source files
   'src': {
     'css': ['./src/styles/style.scss', './src/styles/critical.scss'],
     'html': './src/index.html',
     'js': ['./src/scripts/app.js', './src/scripts/**/*.js'],
-    'templates': './src/scripts/templates/**/*',
-    'img': './src/projects/**/*.{png,jpeg,jpg,gif}',
-    'video': './src/projects/**/*.mp4'
+    'templates': './src/content/**/*'
   },
   // watch paths
   'watch': {
     'html': ['./src/index.html', './src/html/**/*.html'],
     'js': './src/scripts/**/*.js',
     'css': ['./src/**/*.scss', './src/**/*.css'],
-    'templates': './src/scripts/templates/**/*',
-    'img': './src/projects/**/*'
+    'templates': './src/content/**/*',
   }
 };
 
 gulp.task('default', ['serve']);
-gulp.task('serve', ['build', 'webserver']);
-gulp.task('build', ['transfer', 'extend', 'images', 'video', 'style', 'script']);
+gulp.task('serve', function() {
+		return runSequence('build', 'webserver');
+});
+gulp.task('build', function(cb) {
+	// extend has a dependency on style.
+	return runSequence('clean', 'style', ['transfer', 'script', 'extend'], cb);
+});
 
 /**
   This function will remove all files and folders from the
@@ -74,21 +73,22 @@ gulp.task('transfer', function(){
 });
 
 /**
-  This function will expand the index file (srcIndex) and 
-  place the expanded source to the dist folder. Will also
-  call for a live reload.
+  This function will expand the index file (srcIndex), 
+	will insert the critical css inline, minify, and will
+	lastly place the source to the dist folder
 **/
 gulp.task('extend', function () {
   return gulp.src(paths.src.html)
     .pipe(extender({annotations:false,verbose:false}))
+    .pipe(inlinesource({rootpath: './dist/'}))
 		.pipe(htmlmin({collapseWhitespace: true, minifyJS: true}))
     .pipe(gulp.dest(paths.dist.root))
     .pipe(livereload());
 });
 
 /**
-  This function will compile any LESS files inside 
-  paths.sec.less, add sourcemaps, minify the css, and output
+  This function will compile any Sass files inside 
+  paths.src.css, add sourcemaps, minify the css, and output
   it to the /dist folder. Will also call for a live reload.
 **/
 gulp.task('style', function() {
@@ -101,26 +101,13 @@ gulp.task('style', function() {
     .pipe(gulp.dest(paths.dist.root))
     .pipe(livereload());
 });
-
-gulp.task('images', function(){
-  return gulp.src(paths.src.img)
-     .pipe(imageResize({width:800, quality: 0.5}))
-     .pipe(gulp.dest(paths.dist.img))
-     .pipe(livereload());
-});
-
-gulp.task('video', function(){
-  return gulp.src(paths.src.video)
-     .pipe(gulp.dest(paths.dist.video))
-     .pipe(livereload());
-});
  
 /**
   This function will concatenate srcJS files (in order of 
   array), add sourcemaps, and output to dist folder. Will 
   also trigger a live reload.
 **/
-gulp.task('script', ['scripts:internal', 'scripts:external', 'scripts:templates']);
+gulp.task('script', ['scripts:internal', 'scripts:external', 'scripts:json']);
 
 gulp.task('scripts:internal', function() {
   return gulp.src(paths.src.js)
@@ -142,7 +129,7 @@ gulp.task('scripts:external', function(){
 /**
  * JS templates to be transfered directly to dist folder
  */
-gulp.task('scripts:templates', function(){
+gulp.task('scripts:json', function(){
   return gulp.src(paths.src.templates)
 		.pipe(jsonminify())
 		.pipe(gulp.dest(paths.dist.templates))
