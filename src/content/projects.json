@@ -1,24 +1,65 @@
 {
 	"projects": [
 		{
+			"title": "Wings.cheap",
+			"date": "Feb 1 2017",
+			"languages": ["gulp", "javascript", "sass", "html", "git", "mongo"],
+			"description": "<p>Built a web app for finding cheap wings near you.</p>",
+			"type": 1,
+			"status": "beta",
+			"images": [
+				{
+					"title": "The landing screen.",
+					"src": "./projects/wingscheap-1.png",
+					"preview": "./projects/wingscheap-1-preview.jpg"
+				},
+				{
+					"title": "Recalls list screen.",
+					"src": "./projects/wingscheap-2.png",
+					"preview": "./projects/wingscheap-2-preview.jpg"
+				},
+				{
+					"title": "Recalls details screen.",
+					"src": "./projects/wingscheap-3.png",
+					"preview": "./projects/wingscheap-3-preview.jpg"
+				}
+			],
+			"link": "http://wings.cheap/"
+		},
+		{
+			"title": "Nissan: Recalls",
+			"date": "Dec 8 2016",
+			"languages": ["gulp", "javascript", "sass"],
+			"description": "<p>Rebuilt the Nissan/Infiniti recalls web application to be fully responsive. Had only 5 days to fully complete.</p>",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "The landing screen.",
+					"src": "./projects/recalls-1.png",
+					"preview": "./projects/recalls-1-preview.jpg"
+				},
+				{
+					"title": "Recalls list screen.",
+					"src": "./projects/recalls-2.png",
+					"preview": "./projects/recalls-2-preview.jpg"
+				},
+				{
+					"title": "Recalls details screen.",
+					"src": "./projects/recalls-3.png",
+					"preview": "./projects/recalls-3-preview.jpg"
+				}
+			],
+			"link": "https://www.nissanusa.com/recalls-vin/#/Home"
+		},
+		{
 			"title": "Blueshield: Content Build System",
 			"date": "Oct 3 2016",
 			"languages": ["gulp"],
 			"description": "<p>Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that.</p><p>Blueshield uses a unique CMS which requires each page to be built with custom elements. Rather than us manually coding in these elements, we thought it would be a smart to automate some of the tedious work. We built a templating system which allowed us to both QA our pages with dummy content, as well as deliver the pages with these transformed elements.</p><p>On top of this, I also flew to California a couple of times to help their team build their pages. This required me to mentor some of their web developers, communicate/strategize with their tech leads, and help solve some problems they were facing.</p>",
 			"type": 2,
 			"status": "live",
-			"images": [
-				{
-					"title": "An example of the landing screen (after animation).",
-					"src": "./projects/bsca-1.png",
-					"preview": "./projects/bsca-1-preview.jpg"
-				},
-				{
-					"title": "Demonstration of how the animation behaves.",
-					"src": "./projects/bsca-2.png",
-					"preview": "./projects/bsca-2-preview.jpg"
-				}
-			],
+			"images": [],
 			"link": "http://infinitiusa.com/now/newtradition/"
 		},
 		{
@@ -147,7 +188,7 @@
 			"title": "Infiniti: Drivers Seat App",
 			"date": "2015-08-17",
 			"languages": ["javascript", "html", "css"],
-			"description": "Added responsive functionality, video modal, and marketing science tracking for video playback percentages. Also improved codebase throughout.",
+			"description": "Added responsive functionality, video modal, and marketing science tracking for video playback percentages. Also, improved codebase throughout.",
 			"type": 2,
 			"status": "live",
 			"images": [
@@ -222,7 +263,7 @@
 			"link": "http://nissanusa.com/buildyournissan"
 		},
 		{
-			"title": "Nissan: Natinal Signing Day Promotion",
+			"title": "Nissan: National Signing Day Promotion",
 			"date": "2016-02-01",
 			"languages": ["html"],
 			"description": "Nissan wanted to add an animated homepage promotion to their website for national signing day. To do this I created an HTML5 video element which played a background video with links to the promotion.",
@@ -396,7 +437,7 @@
 			"title": "Broken City: Point of sale system",
 			"date": "2015-04-14",
 			"languages": ["javascript", "css", "java", "mysql"],
-			"description": "For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphisis on speed, ease of use, and modern design. Wrote the front-end using JSPs and the back-end using Java and MySQL.",
+			"description": "For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design. Wrote the front-end using JSPs and the back-end using Java and MySQL.",
 			"type": 1,
 			"status": "live",
 			"images": [
