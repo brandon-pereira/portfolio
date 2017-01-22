@@ -32,7 +32,7 @@
 					<p data-bind="html: description"></p>
 					<div class="photos" data-bind="visible: images, foreach: images">
 						<span data-bind="if: $data.type === 'video'">
-							<video data-bind="attr: {src: src, title: title}, click: $root.openImage, css: $data.styling" autoplay loop playsinline  muted>
+							<video data-bind="attr: {src: src, title: title, poster: poster}, click: $root.openImage, css: $data.styling" autoplay loop playsinline mute>
 								<source data-bind="attr: {src: src}" type="video/mp4">
 							</video>
 						</span>
@@ -55,11 +55,11 @@
 			<div class="lightbox" data-bind="css: lightbox.open() ? 'visible' : '', click: closeImage">
 				<a class="close-button">&times;</a>
 				<div class="modal-content">
-					<span data-bind="if: lightbox.isVideo()">
-						<video data-bind="attr: {title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" autoplay loop playsinline muted>
+					<span data-bind="if: lightbox.isVideo(), click: function() {}, clickBubble: false"> <!-- stop propogation -->
+						<video data-bind="attr: {title: lightbox.desc, alt: lightbox.desc, poster: lightbox.poster}, css: lightbox.style" loop muted controls autoplay>
 							<source data-bind="attr: {src: lightbox.img}" type="video/mp4">
 						</video>
-					</span>
+					</span> 
 					<span data-bind="if: !lightbox.isVideo()">
 						<img data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" />
 					</span>

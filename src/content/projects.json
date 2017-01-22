@@ -38,6 +38,7 @@
 				{
 					"title": "Demonstration of how the animation behaves.",
 					"src": "./projects/tree-drive-2.mp4",
+					"poster": "./projects/tree-drive-1.png",
 					"styling": "shadow",
 					"type": "video"
 				},
