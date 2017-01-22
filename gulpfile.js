@@ -146,7 +146,7 @@ gulp.task('watch', function(){
   gulp.watch(paths.watch.css, ['style']);
   gulp.watch(paths.watch.html, ['extend']);
   gulp.watch(paths.watch.js, ['scripts:internal']);
-  gulp.watch(paths.watch.templates, ['scripts:templates']);
+  gulp.watch(paths.watch.templates, ['scripts:json']);
   gulp.watch(paths.transfer, ['transfer']);
   gulp.watch(paths.watch.graphics, ['graphics']);
 });
@@ -159,6 +159,7 @@ gulp.task('watch', function(){
 gulp.task('webserver', ['watch'], function() {
   return gulp.src(paths.dist.root)
     .pipe(webserver({
+			host: '0.0.0.0',
       livereload: true, 
       open: true
     }));
