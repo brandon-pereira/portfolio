@@ -34,28 +34,28 @@
 			"name": "Back End Web Development",
 			"skills": [
 				{
-					"id": "php",
-					"name": "PHP",
-					"description": "I have experience with PHP, I'm cable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well. ",
-					"skillLevel": 1
+					"id": "node",
+					"name": "NodeJS",
+					"description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+					"skillLevel": 0
 				},
 				{
 					"id": "jsp",
 					"name": "JavaServer / Groovy",
 					"description": "I've built a handful of Java based applications, as well as modified/expanded upon the functionality of existing projects.",
+					"skillLevel": 0
+				},
+				{
+					"id": "php",
+					"name": "PHP",
+					"description": "I have experience with PHP, I'm cable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well. ",
 					"skillLevel": 1
 				}
 			]
 		},
 		{
-			"name": "Build/Team Tools",
+			"name": "Team Tools",
 			"skills": [
-				{
-					"id": "gulp",
-					"name": "Gulp",
-					"description": "Gulp is a hot one right now. I've had lots of experience with Gulp and understand how to do most tasks. From compressing/mapping CSS/JS, compressing/resizing images, enabling livereload/webservers, expanding HTML, etc.",
-					"skillLevel": 0
-				},
 				{
 					"id": "git",
 					"name": "Git",
@@ -63,10 +63,10 @@
 					"skillLevel": 0
 				},
 				{
-					"id": "svn",
-					"name": "Subversion",
-					"description": "I've used subversion for a couple projects.",
-					"skillLevel": 2
+					"id": "agile",
+					"name": "Agile",
+					"description": "I've had tons of experience with agile deploys on a production enviroment.",
+					"skillLevel": 0
 				}
 			]
 		},
@@ -86,10 +86,10 @@
 					"skillLevel": 1
 				},
 				{
-					"id": "plsql",
-					"name": "P/L SQL",
-					"description": "I've used P/L SQL in a couple projects, and am able to modify existing code.",
-					"skillLevel": 2
+					"id": "mongo",
+					"name": "MongoDB",
+					"description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
+					"skillLevel": 1
 				}
 			]
 		},
