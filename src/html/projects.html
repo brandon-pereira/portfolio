@@ -60,9 +60,14 @@
 							<source data-bind="attr: {src: lightbox.img}" type="video/mp4">
 						</video>
 					</span> 
-					<span data-bind="if: !lightbox.isVideo()">
+					<span data-bind="if: !lightbox.isVideo() && lightbox.isLoaded()">
 						<img data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" />
 					</span>
+					<div class="loading" data-bind="visible: !lightbox.isLoaded() && !lightbox.isVideo()">
+						<div class="plus-loader">
+							Loading…
+						</div>
+					</div>
 					<div class="description" data-bind="text: lightbox.desc"></div>
 				</div>
 			</div>

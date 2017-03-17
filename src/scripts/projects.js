@@ -5,7 +5,7 @@
 	}
 
 	Projects.prototype.init = function() {
-		this.$loader = this.$element.find('.loading');
+		this.$loader = this.$element.find('.loading').first();
 		this.$content = this.$element.find('.init');
 		this.smoothScroll = new SmoothScroll();
 		this.projects = [];
@@ -263,7 +263,8 @@
 				desc: ko.observable(''),
 				poster: ko.observable(''),
 				isVideo: ko.observable(false),
-				style: ko.observable('')
+				style: ko.observable(''),
+				isLoaded: ko.observable(false)
 			},
 			selectedStatus: ko.observable(),
 			selectedDate: ko.observable(),
@@ -287,8 +288,15 @@
 			},
 			openImage: function() {
 				var view = self.view.lightbox;
-				view.open(true);
+				// show loader till image loaded 
+				view.isLoaded(false);
+				var img = new Image();
+				img.onload = function() {
+					view.isLoaded(true);
+				};
+				img.src = this.src;
 				view.img(this.src);
+				view.open(true);
 				view.desc(this.title);
 				view.poster(this.type === 'video' ? this.poster : '');
 				view.isVideo(this.type === 'video');
