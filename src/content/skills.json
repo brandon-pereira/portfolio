@@ -101,18 +101,6 @@
 					"name": "Java",
 					"description": "I'm experienced with Java, and am able to jump into existing code bases or start from scratch. I've built GUI interfaces, back-end algorithms, and used Java EE for server-side distributions.",
 					"skillLevel": 1
-				},
-				{
-					"id": "Ruby",
-					"name": "ruby",
-					"description": "I've done a couple projects with Ruby. I also built an automation suite using Ruby/Selenium/Jenkins.",
-					"skillLevel": 1
-				}, 
-				{
-					"id": "c",
-					"name": "C",
-					"description": "I've done some basic C programming and understand how to avoid memory leaks (MALOC).",
-					"skillLevel": 2
 				}
 			]
 		}
