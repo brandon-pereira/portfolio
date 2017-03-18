@@ -1,4 +1,40 @@
 .apps {
+	header.main {
+		text-align: center;
+		// padding: 5rem 0;
+		font-family: 'Helvetica Neue';
+		font-weight: 100;
+		position: relative;
+		height: 10rem;
+		line-height: 10rem;
+		padding: 1.5rem 0 0;
+		.maintext {
+			position: absolute;
+			margin: 0 auto;
+			left:0;
+			right: 0;
+			font-size: 5.5rem;
+			margin-right: 3.2rem;
+			text-shadow: 1px 1px rgba(0,0,0,.5);
+
+		}
+		.subtext {
+			text-shadow: 1px 1px rgba(0,0,0,.3);
+			text-transform: uppercase;
+			font-size: 3rem;
+			span {
+				vertical-align: middle;
+				// background: red;
+				border: 3px solid #fff;
+				display: inline-block;
+				width: 9rem;
+				height:9rem;
+				margin: 0 2.3rem; // additional width
+				border-radius: 50%;
+				background: linear-gradient(transparent, rgba(0,0,0,.2))
+			}
+		}
+	}
 	transition: background .6s;
 	.carousel-slides {
 		position: relative;
@@ -9,6 +45,7 @@
 		transition: opacity 0s, transform 2s;
 		visibility: hidden;
 		opacity: 0;
+		font-size: 1rem;
 		&.currentSlide {
 			position: static;
 			visibility: visible;

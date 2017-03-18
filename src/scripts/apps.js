@@ -7,6 +7,7 @@
 	Apps.prototype.init = function() {
 		this.$loader = this.$element.find('.loading');
 		this.$content = this.$element.find('.init');
+		this.$slides = this.$element.find('.carousel-slides')[0];
 		
 		this._initView();
 		this._fetch();
@@ -18,9 +19,35 @@
 				url: 'templates/apps.json',
 				success: function(response) {
 					self._process(response);
+					self._events();
 				}
 		});
 	};
+	
+	Apps.prototype._events = function() {
+		var self = this;
+		var start = 0;
+		var end = 0;
+	
+		this.$slides.addEventListener('touchstart', function(event) {
+	    start = event.changedTouches[0].screenX;;
+		}, false);
+
+		this.$slides.addEventListener('touchend', function(event) {
+	    end = event.changedTouches[0].screenX;;
+		    handleGesure(start, end, 50);
+		}, false); 
+
+		
+		function handleGesure(touchstart, touchend, threshold) {
+	    if (touchend < touchstart && (touchstart - touchend) >= threshold) {
+	     	self._goToNextSlide();
+	    }
+	    else if (touchend > touchstart && (touchend - touchstart) >= threshold) {
+				self._goToPrevSlide();
+	    }
+		}
+	}
 	
 	Apps.prototype._process = function(response) {
 		this._updateView(response);
@@ -38,6 +65,24 @@
 			this.view.slides(data.applications);
 		}
 	};
+	
+	Apps.prototype._goToNextSlide = function() {
+		var currentSlide = this.view.currentSlide();
+		var maxSlide = this.view.slides().length;	
+		currentSlide++;
+		if(currentSlide >= maxSlide) {
+			currentSlide = 0;
+		}
+		this._setSlide(currentSlide);
+	}
+	
+	Apps.prototype._goToPrevSlide = function() {
+		var currentSlide = this.view.currentSlide();
+		currentSlide--;
+		if(currentSlide < 0) {
+			currentSlide = this.view.slides().length - 1;
+		}
+		this._setSlide(currentSlide);	}
 	
 	Apps.prototype._setSlide = function(index) {
 		if(this.currentSlide) {

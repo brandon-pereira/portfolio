@@ -28,6 +28,6 @@ WebFont.load({
 WebFont.load({
 	google: {
 		families: ['Lily Script One:400'],
-		text: 'Projects'
+		text: 'ProjectsApp'
 	}
 });
