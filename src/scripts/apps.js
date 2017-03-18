@@ -24,6 +24,7 @@
 	
 	Apps.prototype._process = function(response) {
 		this._updateView(response);
+		this._setSlide(0);
 		this.$loader.addClass('loaded');
 		this.$content.addClass('true');
 	};
@@ -36,20 +37,29 @@
 		if(data.applications) {
 			this.view.slides(data.applications);
 		}
-		// if(data.socialLinks) {
-		// 	this.view.socialLinks(data.socialLinks);
-		// }
 	};
+	
+	Apps.prototype._setSlide = function(index) {
+		if(this.currentSlide) {
+			this.$element.removeClass(this.currentSlide.theme);			
+		}
+		this.currentSlide = this.view.slides()[index];
+		this.view.currentSlide(index);
+		this.$element.addClass(this.currentSlide.theme);
+	}
 
 	/**
 	 * Function to initialize the view model using
 	 * knockout. Uses observables.
 	 */
 	Apps.prototype._initView = function () {
+		var self = this;
 		this.view = {
 			slides: ko.observable([]),
-			currentSlide: ko.observable(1)
-			// socialLinks: ko.observable([])
+			currentSlide: ko.observable(0),
+			goToSlide: function(index, event) {
+				self._setSlide(ko.contextFor(event.target).$index());
+			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
 	};

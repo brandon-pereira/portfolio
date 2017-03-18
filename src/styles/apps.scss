@@ -1,8 +1,9 @@
 .apps {
 	// background: re;
+	transition: background .5s;
 	.carousel-slides {
 		position: relative;
-		height: 40rem;
+		height: 28rem;
 	}
 	.carousel-slide {
 		position: absolute;
@@ -11,30 +12,101 @@
 		right: 0;
 		bottom: 0;
 		// max-width: 10rem;
-		border: 1px solid red;
-		display: none;
+		// border: 1px solid red;
+		// display: none;
+		overflow: hidden;
+		transform: translate(0, 0);
+		transition: opacity 0s, transform 2s;
+		visibility:  hidden;
+		color: #fff;
+		a {
+			color: #fff;
+		}
+		opacity: 0;
 		&.currentSlide {
-			display: block;
+			visibility: visible;
+			transform: none;
+			z-index: 1;
+			opacity: 1;
+			.app-icon, .column-info, .photos img  {
+				opacity: 1 !important;
+				transform: none !important;
+			}
+		}
+		.row {
+			display: flex;
+			margin: 1rem 5rem;
+			
+		}
+		.column-icon {
+			margin-right: 3rem;
+		}
+		.column-info {
+			opacity: 0;
+			transform: translate(0, -10px);
+			transition: all .5s .5s;
 		}
 		.photos {
 			text-align: center;
+			display: block;
+			img {
+				max-width: 25%;
+				max-height: 13rem;
+				vertical-align: middle;
+				&.shadow {
+					margin: 1rem;
+					box-shadow:0 5px 10px rgba(0,0,0,.3);
+				}
+				@for $i from 1 through 3 {
+					&:nth-of-type(#{$i}) {
+						$time: ($i + 4)/10;
+						transition: all .5s #{$time}s;
+						opacity: 0;
+						transform: translate(0, -20px);
+					}
+				}
+			}
+		}
+		.app-icon {
+			margin-top: 0.6rem;
+			height: 5rem;
+			opacity: 0;
+			transform: translate(0, -10px);
+			transition: all .5s .2s;
+		}
+		h2 {
+			margin: 0;
 		}
 	}
 	
 	
 	.carousel-dots {
 		text-align: center;
-		& .dot {
+		.dot {
 			display: inline-block;
 			height: 1.4rem;
 			width: 1.4rem;
-			background: red;
+			background: rgba(0,0,0,.3);
 			border-radius: 50%;
-			margin: 0.5rem;
+			margin: 3rem 0.5rem 2rem;
+			&.active {
+				background: #fff;
+				box-shadow:0 1px 2px rgba(0,0,0,.5);
+			}
 		}
 	}
-}
-
-.app-icon {
-	height: 8rem;
+	
+	/**
+	 * Styles for slides
+	 */
+	&.wings-cheap {
+		background: #007DFF;
+	}
+	&.betterdo {
+		background: #5754af;
+		.app-icon {
+			border-radius: 10px;
+			box-shadow: 0 1px 2px rgba(0,0,0,.5);
+		}
+	}
 }

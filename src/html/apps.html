@@ -1,8 +1,8 @@
 <section class="container apps" id="apps">
-	<!-- <header class="main">
+	<header class="main">
 		<span class="maintext">Apps</span>
-		<spna class="subtext">A showcase of my<span></span> past, present, and future.</span>
-	</header> -->
+		<spna class="subtext">I've got <span></span> for that.</span>
+	</header>
 		
 	<div class="content">
 		<div class="loading">
@@ -13,19 +13,26 @@
 		<div class="init">
 			<div class="carousel-slides" data-bind="foreach: slides">
 				<div class="carousel-slide" data-bind="css: {currentSlide: $index() === $root.currentSlide()}">
-					<img class="app-icon" data-bind="attr: {src: icon}">
-					<a href="#" target="_"><h2 data-bind="text: title"></h2></a>
-					<p data-bind="html: shortDescription"></p>
-					<div class="photos" data-bind="visible: images, foreach: images">
-						<img data-bind="attr: {src: $data.preview ? preview : src, title: title}, click: $root.openImage, css: $data.styling">
+					<div class="row">
+						<div class="column-icon">
+							<img class="app-icon" data-bind="attr: {src: icon}">
+						</div>
+						<div class="column-info">	
+							<a href="#" target="_"><h2 data-bind="text: title"></h2></a>
+							<p data-bind="html: shortDescription"></p>
+							<span>See More</span>
+						</div>
+					</div>
+					<div class="row photos" data-bind="visible: images, foreach: images">
+						<img data-bind="attr: {src: $data.preview ? src : src, title: title}, click: $root.openImage, css: $data.styling">
 					</div>
 				</div>
 			</div>
 			<div class="carousel-dots" data-bind="foreach: slides">
-				<div class="dot"></div>
+				<div class="dot" data-bind="click: $root.goToSlide.bind($data), css: {active: $index() === $root.currentSlide()}"></div>
 			</div>
-			<div class="next carousel-arrow">
-			<div class="prev carousel-arrow">
+			<div class="next carousel-arrow"></div>
+			<div class="prev carousel-arrow"></div>
 		</div>
 	</div>
 </section>
