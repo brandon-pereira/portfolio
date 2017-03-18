@@ -1,0 +1,55 @@
+{
+	"applications": [
+		{
+			"title": "Wings.cheap",
+			"shortDescription": "<p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>",
+			"longDescription": "<p>Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>",
+			"link": "https://wings.cheap/",
+			"icon": "https://img.clipartfest.com/347a39841e8d9c8c68e7b509300a3742_wsa-test-two-test-app-ios-app-clipart-template_800-800.png",
+			"images": [
+				{
+					"title": "Desktop view of landing screen",
+					"src": "./projects/wingscheap-1.png",
+					"preview": "./projects/wingscheap-1-preview.jpg"
+				},
+				{
+					"title": "Mobile view of landing screen",
+					"src": "./projects/wingscheap-2.png",
+					"preview": "./projects/wingscheap-2-preview.jpg"
+				},
+				{
+					"title": "Mobile view of results screen",
+					"src": "./projects/wingscheap-3.png",
+					"preview": "./projects/wingscheap-3-preview.jpg"
+				}
+			]
+		},
+		{
+			"title": "BetterDo.",
+			"shortDescription": "<p><p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>",
+			"longDescription": "<p>Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>",
+			"link": "https://google.ca",
+			"icon": "https://img.clipartfest.com/347a39841e8d9c8c68e7b509300a3742_wsa-test-two-test-app-ios-app-clipart-template_800-800.png",
+			"images": [
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-1.png",
+					"preview": "./projects/betterdo-2-1-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-2.png",
+					"preview": "./projects/betterdo-2-2-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-3.png",
+					"preview": "./projects/betterdo-2-3-preview.jpg",
+					"styling": "shadow"
+				}
+			]
+		}
+	]
+}

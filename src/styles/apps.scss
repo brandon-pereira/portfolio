@@ -1,0 +1,40 @@
+.apps {
+	// background: re;
+	.carousel-slides {
+		position: relative;
+		height: 40rem;
+	}
+	.carousel-slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		// max-width: 10rem;
+		border: 1px solid red;
+		display: none;
+		&.currentSlide {
+			display: block;
+		}
+		.photos {
+			text-align: center;
+		}
+	}
+	
+	
+	.carousel-dots {
+		text-align: center;
+		& .dot {
+			display: inline-block;
+			height: 1.4rem;
+			width: 1.4rem;
+			background: red;
+			border-radius: 50%;
+			margin: 0.5rem;
+		}
+	}
+}
+
+.app-icon {
+	height: 8rem;
+}

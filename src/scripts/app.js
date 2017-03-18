@@ -6,6 +6,7 @@
 		new Projects($('#projects'));		
 		new Contact($('#contact'));		
 		new SmoothScroll().events($('section.header'));
+		new Apps($('#apps'));		
 		
 		// If its a webkit browser add 'webkit' class to HTML.	
 		if('webkitTextFillColor' in document.documentElement.style) {
