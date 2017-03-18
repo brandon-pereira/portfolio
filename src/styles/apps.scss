@@ -1,32 +1,17 @@
 .apps {
-	// background: re;
-	transition: background .5s;
+	transition: background .6s;
 	.carousel-slides {
 		position: relative;
-		height: 28rem;
 	}
 	.carousel-slide {
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		// max-width: 10rem;
-		// border: 1px solid red;
-		// display: none;
-		overflow: hidden;
 		transform: translate(0, 0);
 		transition: opacity 0s, transform 2s;
-		visibility:  hidden;
-		color: #fff;
-		a {
-			color: #fff;
-		}
+		visibility: hidden;
 		opacity: 0;
 		&.currentSlide {
+			position: static;
 			visibility: visible;
-			transform: none;
-			z-index: 1;
 			opacity: 1;
 			.app-icon, .column-info, .photos img  {
 				opacity: 1 !important;
@@ -36,7 +21,9 @@
 		.row {
 			display: flex;
 			margin: 1rem 5rem;
-			
+			&.photos {
+				margin-bottom: 0;
+			}
 		}
 		.column-icon {
 			margin-right: 3rem;
@@ -54,7 +41,7 @@
 				max-height: 13rem;
 				vertical-align: middle;
 				&.shadow {
-					margin: 1rem;
+					margin: 1rem 1rem 0;
 					box-shadow:0 5px 10px rgba(0,0,0,.3);
 				}
 				@for $i from 1 through 3 {
@@ -99,6 +86,11 @@
 	/**
 	 * Styles for slides
 	 */
+	background: #4e4e4e;
+	color: #fff;
+	a {
+		color: #fff;
+	}
 	&.wings-cheap {
 		background: #007DFF;
 	}
@@ -107,6 +99,11 @@
 		.app-icon {
 			border-radius: 10px;
 			box-shadow: 0 1px 2px rgba(0,0,0,.5);
+		}
+	}
+	&.test {
+		.app-icon {
+			background: #eee;
 		}
 	}
 }
