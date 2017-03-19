@@ -18,9 +18,8 @@
 							<img class="app-icon" data-bind="attr: {src: icon}">
 						</div>
 						<div class="column-info">	
-							<a href="#" target="_"><h2 data-bind="text: title"></h2></a>
-							<p data-bind="html: shortDescription"></p>
-							<span>See More</span>
+							<a data-bind="attr: {href: link}" target="_"><h2 data-bind="text: title"></h2></a>
+							<p data-bind="html: description"></p>
 						</div>
 					</div>
 					<div class="row photos" data-bind="visible: images, foreach: images">
