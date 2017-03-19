@@ -31,8 +31,12 @@
 			<div class="carousel-dots" data-bind="foreach: slides">
 				<div class="dot" data-bind="click: $root.goToSlide.bind($data), css: {active: $index() === $root.currentSlide()}"></div>
 			</div>
-			<div class="next carousel-arrow"></div>
-			<div class="prev carousel-arrow"></div>
+			<div class="next carousel-arrow" data-bind="click: goToNextSlide">
+				<!-- @@include ../static/icons/caret.svg -->
+			</div>
+			<div class="prev carousel-arrow" data-bind="click: goToPrevSlide">
+				<!-- @@include ../static/icons/caret.svg -->
+			</div>
 		</div>
 	</div>
 </section>

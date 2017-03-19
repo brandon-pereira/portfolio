@@ -1,4 +1,5 @@
 .apps {
+	position: relative;
 	header.main {
 		text-align: center;
 		// padding: 5rem 0;
@@ -39,7 +40,7 @@
 			line-height: 10rem;
 			.maintext {
 				font-size: 4.5rem;
-				margin-right: 1.2rem;
+				margin-right: 2.4rem;
 			}
 			.subtext {
 				font-size: 2.4rem;
@@ -148,6 +149,38 @@
 		}
 	}
 	
+	.carousel-arrow {
+		display: none;
+	}
+	@include medium() {
+		.carousel-arrow {
+			display: block;
+			position: absolute;
+			top:50%;
+			transform: translate(0, -50%);
+			left: 0;
+			height: 5rem;
+			width: 3rem;
+			background: rgba(0,0,0,.2);
+			border-radius: 0 5px 5px 0;
+			svg {
+				height: 1rem;
+				transform: rotate(90deg) translate(-25%, -50%);
+				transform-origin: center;
+				position: absolute;
+				top: 50%;
+				fill: #fff;
+			}
+			&.next {
+				right: 0;
+				left: auto;
+				border-radius: 5px 0 0 5px;
+				svg {
+					transform: rotate(-90deg) translate(25%, 50%);
+				}
+			}
+		}
+	}
 	/**
 	 * Styles for slides
 	 */

@@ -104,6 +104,12 @@
 			currentSlide: ko.observable(0),
 			goToSlide: function(index, event) {
 				self._setSlide(ko.contextFor(event.target).$index());
+			},
+			goToNextSlide: function() {
+				self._goToNextSlide();
+			},
+			goToPrevSlide: function() {
+				self._goToPrevSlide();
 			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
