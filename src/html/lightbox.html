@@ -1,0 +1,19 @@
+<div class="lightbox" data-bind="css: open() ? 'visible' : '', click: close">
+	<a class="close-button">&times;</a>
+	<div class="modal-content">
+		<span data-bind="if: isVideo(), click: function() {}, clickBubble: false"> <!-- stop propogation -->
+			<video data-bind="attr: {title: title, alt: title, poster: poster}, css: styling" loop muted controls autoplay>
+				<source data-bind="attr: {src: src}" type="video/mp4">
+			</video>
+		</span> 
+		<span data-bind="if: !isVideo() && isLoaded()">
+			<img data-bind="attr: {src: src, title: title, alt: title}, css: styling" />
+		</span>
+		<div class="loading" data-bind="visible: !isLoaded() && !isVideo()">
+			<div class="plus-loader">
+				Loading…
+			</div>
+		</div>
+		<div class="description" data-bind="text: title"></div>
+	</div>
+</div>

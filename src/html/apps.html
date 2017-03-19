@@ -23,7 +23,7 @@
 						</div>
 					</div>
 					<div class="row photos" data-bind="visible: images, foreach: images">
-						<img data-bind="attr: {src: $data.preview ? src : src, title: title}, click: $root.openImage, css: $data.styling">
+						<img data-bind="attr: {src: $data.preview ? preview : src, title: title}, click: $root.openImage, css: $data.styling">
 					</div>
 				</div>
 			</div>

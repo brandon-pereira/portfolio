@@ -1,6 +1,7 @@
 (function(window, $, ko) {
-	function Apps(element) {
+	function Apps(element, lightbox) {
 		this.$element = $(element);
+		this.lightbox = lightbox;
 		this.init();
 	}
 
@@ -102,7 +103,10 @@
 		this.view = {
 			slides: ko.observable([]),
 			currentSlide: ko.observable(0),
-			goToSlide: function(index, event) {
+			openImage: function(img) {
+				self.lightbox.open(img);
+			},
+			goToSlide: function(slide, event) {
 				self._setSlide(ko.contextFor(event.target).$index());
 			},
 			goToNextSlide: function() {
