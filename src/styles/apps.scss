@@ -2,28 +2,21 @@
 	position: relative;
 	header.main {
 		text-align: center;
-		// padding: 5rem 0;
-		font-family: 'Helvetica Neue';
+		font-family: 'Helvetica Neue', Helvetica, sans-serif;
 		font-weight: 100;
-		position: relative;
-		height: 5rem;
 		line-height: 5rem;
 		padding: 1.5rem 0 2rem;
 		.maintext {
 			position: absolute;
-			margin: 0 auto;
 			z-index: 1;
 			left:0;
 			right: 0;
 			font-size: 1.6rem;
 			margin-right: 0.9rem;
-			text-shadow: 1px 1px rgba(0,0,0,.5);
-
 		}
 		.subtext {
-			text-shadow: 1px 1px rgba(0,0,0,.3);
+			text-shadow: 2px 2px rgba(0,0,0,.3);
 			text-transform: uppercase;
-			font-size: 1rem;
 			span {
 				vertical-align: middle;
 				border: 3px solid #fff;
@@ -31,8 +24,6 @@
 				width: 5rem;
 				height:5rem;
 				position: relative;
-				// left: 1rem;
-				// margin: 0 0rem 0 1rem;
 				margin: 0 0.5rem; // additional width
 				border-radius: 50%;
 				background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.2));
@@ -75,8 +66,6 @@
 	}
 	.carousel-slide {
 		position: absolute;
-		transform: translate(0, 0);
-		transition: opacity 0s, transform 2s;
 		visibility: hidden;
 		opacity: 0;
 		font-size: 1rem;
@@ -182,15 +171,11 @@
 			}
 			&.active {
 				&:after {
-					// background: ;
 					transform: scale(0.5);
 				}
 				&:before {
 					box-shadow: 0 0 0 1px #fff
-				}
-				// background: #fff;
-				// box-shadow:0 1px 2px rgba(0,0,0,.5);
-				
+				}				
 			}
 		}
 	}
