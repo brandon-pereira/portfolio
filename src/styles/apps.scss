@@ -97,6 +97,7 @@
 			text-align: center;
 			display: block;
 			img {
+				cursor: pointer;
 				max-width: calc(33% - 2rem);
 				max-height: 13rem;
 				vertical-align: middle;
@@ -147,6 +148,7 @@
 	.carousel-dots {
 		text-align: center;
 		.dot {
+			cursor: pointer;
 			display: inline-block;
 			height: 1.4rem;
 			width: 1.4rem;
@@ -186,6 +188,7 @@
 	@include medium() {
 		.carousel-arrow {
 			display: block;
+			cursor:pointer;
 			position: absolute;
 			top:50%;
 			transform: translate(0, -50%);
