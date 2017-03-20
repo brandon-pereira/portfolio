@@ -29,6 +29,12 @@ WebFont.load({
 WebFont.load({
 	google: {
 		families: ['Lily Script One:400'],
-		text: 'ProjectsApp'
+		text: 'Projects'
+	}
+});
+WebFont.load({
+	google: {
+		families: ['Bungee Shade:400'],
+		text: 'Apps'
 	}
 });

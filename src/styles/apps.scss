@@ -12,10 +12,11 @@
 		.maintext {
 			position: absolute;
 			margin: 0 auto;
+			z-index: 1;
 			left:0;
 			right: 0;
-			font-size: 2.5rem;
-			// margin-right: 1.2rem;
+			font-size: 1.6rem;
+			margin-right: 0.9rem;
 			text-shadow: 1px 1px rgba(0,0,0,.5);
 
 		}
@@ -23,19 +24,30 @@
 			text-shadow: 1px 1px rgba(0,0,0,.3);
 			text-transform: uppercase;
 			font-size: 1rem;
-			margin-left:1rem;
 			span {
 				vertical-align: middle;
 				border: 3px solid #fff;
 				display: inline-block;
 				width: 5rem;
 				height:5rem;
-				// position: relativxe;
+				position: relative;
 				// left: 1rem;
 				// margin: 0 0rem 0 1rem;
-				margin: 0 1rem; // additional width
+				margin: 0 0.5rem; // additional width
 				border-radius: 50%;
-				background: linear-gradient(transparent, rgba(0,0,0,.2))
+				background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.2));
+				&:after {
+					content:"";
+					position: absolute;
+					top:0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background: url('https://img.clipartfest.com/347a39841e8d9c8c68e7b509300a3742_wsa-test-two-test-app-ios-app-clipart-template_800-800.png');
+					background-size: 80%;
+					background-position: center;
+					border-radius: 50%;
+				}
 			}
 		}
 		@include medium() {
@@ -43,8 +55,8 @@
 			line-height: 10rem;
 			padding: 1.5rem 0 0;
 			.maintext {
-				font-size: 4.5rem;
-				margin-right: 2.4rem;
+				font-size: 3rem;
+				margin-right: 1.9rem;
 			}
 			.subtext {
 				font-size: 2.4rem;

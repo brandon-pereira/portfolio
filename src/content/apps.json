@@ -10,17 +10,20 @@
 				{
 					"title": "Desktop view of landing screen",
 					"src": "./projects/wingscheap-1.png",
-					"preview": "./projects/wingscheap-1-preview.jpg"
+					"preview": "./projects/wingscheap-1-preview.jpg",
+					"styling": "shadow"
 				},
 				{
 					"title": "Mobile view of landing screen",
 					"src": "./projects/wingscheap-2.png",
-					"preview": "./projects/wingscheap-2-preview.jpg"
+					"preview": "./projects/wingscheap-2-preview.jpg",
+					"styling": "shadow"
 				},
 				{
 					"title": "Mobile view of results screen",
 					"src": "./projects/wingscheap-3.png",
-					"preview": "./projects/wingscheap-3-preview.jpg"
+					"preview": "./projects/wingscheap-3-preview.jpg",
+					"styling": "shadow"
 				}
 			]
 		},
@@ -30,33 +33,6 @@
 			"link": "https://branclon.com/BetterDo/",
 			"icon": "https://branclon.com/BetterDo/res/img/icons/icon@3x.png",
 			"theme": "betterdo",
-			"images": [
-				{
-					"title": "",
-					"src": "./projects/betterdo-2-1.png",
-					"preview": "./projects/betterdo-2-1-preview.jpg",
-					"styling": "shadow"
-				},
-				{
-					"title": "",
-					"src": "./projects/betterdo-2-2.png",
-					"preview": "./projects/betterdo-2-2-preview.jpg",
-					"styling": "shadow"
-				},
-				{
-					"title": "",
-					"src": "./projects/betterdo-2-3.png",
-					"preview": "./projects/betterdo-2-3-preview.jpg",
-					"styling": "shadow"
-				}
-			]
-		},
-		{
-			"title": "Lorem",
-			"description": "<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>",
-			"link": "https://google.ca",
-			"icon": "https://img.clipartfest.com/347a39841e8d9c8c68e7b509300a3742_wsa-test-two-test-app-ios-app-clipart-template_800-800.png",
-			"theme": "test",
 			"images": [
 				{
 					"title": "",
