@@ -2,9 +2,11 @@
 	
 	// Function to bootstrap all page components
 	$(window).on('ready', function() {
+		var lightbox = new Lightbox($('.lightbox'))
 		new Skills($('#skills'));		
-		new Projects($('#projects'));		
+		new Projects($('#projects'), lightbox);		
 		new Contact($('#contact'));		
+		new Apps($('#apps'), lightbox);		
 		new SmoothScroll().events($('section.header'));
 		
 		// If its a webkit browser add 'webkit' class to HTML.	
@@ -28,5 +30,11 @@ WebFont.load({
 	google: {
 		families: ['Lily Script One:400'],
 		text: 'Projects'
+	}
+});
+WebFont.load({
+	google: {
+		families: ['Bungee Shade:400'],
+		text: 'Apps'
 	}
 });

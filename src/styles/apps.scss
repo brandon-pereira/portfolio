@@ -1,0 +1,241 @@
+.apps {
+	position: relative;
+	header.main {
+		text-align: center;
+		font-family: 'Helvetica Neue', Helvetica, sans-serif;
+		font-weight: 100;
+		line-height: 5rem;
+		padding: 1.5rem 0 2rem;
+		.maintext {
+			position: absolute;
+			z-index: 1;
+			left:0;
+			right: 0;
+			font-size: 1.6rem;
+			margin-right: 0.9rem;
+		}
+		.subtext {
+			text-shadow: 2px 2px rgba(0,0,0,.3);
+			text-transform: uppercase;
+			span {
+				vertical-align: middle;
+				border: 3px solid #fff;
+				display: inline-block;
+				width: 5rem;
+				height:5rem;
+				position: relative;
+				margin: 0 0.5rem; // additional width
+				border-radius: 50%;
+				background: linear-gradient(rgba(0,0,0,.1), rgba(0,0,0,.2));
+				&:after {
+					content:"";
+					position: absolute;
+					top:0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					background: url('https://img.clipartfest.com/347a39841e8d9c8c68e7b509300a3742_wsa-test-two-test-app-ios-app-clipart-template_800-800.png');
+					background-size: 80%;
+					background-position: center;
+					border-radius: 50%;
+				}
+			}
+		}
+		@include medium() {
+			height: 10rem;
+			line-height: 10rem;
+			padding: 1.5rem 0 0;
+			.maintext {
+				font-size: 3rem;
+				margin-right: 1.9rem;
+			}
+			.subtext {
+				font-size: 2.4rem;
+				margin-left: 0.2rem;
+				span {
+					margin: 0 1.5rem;
+					height: 9rem;
+					width: 9rem;
+				}
+			}
+		}
+	}
+	transition: background .6s;
+	.carousel-slides {
+		position: relative;
+	}
+	.carousel-slide {
+		position: absolute;
+		visibility: hidden;
+		opacity: 0;
+		font-size: 1rem;
+		&.currentSlide {
+			position: static;
+			visibility: visible;
+			opacity: 1;
+			.app-icon, .column-info, .photos img  {
+				opacity: 1 !important;
+				transform: none !important;
+			}
+		}
+		.row {
+			&.photos {
+				display: block;
+				margin-bottom: 0;
+			}
+		}
+		.column-icon {
+			text-align: center;
+			margin: 0;
+		}
+		.column-info {
+			opacity: 0;
+			transform: translate(0, -10px);
+			transition: all .5s .5s;
+		}
+		.photos {
+			text-align: center;
+			display: block;
+			img {
+				cursor: pointer;
+				max-width: calc(33% - 2rem);
+				max-height: 13rem;
+				vertical-align: middle;
+				&.shadow {
+					margin: 1rem 1rem 0;
+					box-shadow:0 5px 10px rgba(0,0,0,.3);
+				}
+				@for $i from 1 through 3 {
+					&:nth-of-type(#{$i}) {
+						$time: ($i + 4)/10;
+						transition: all .5s #{$time}s;
+						opacity: 0;
+						transform: translate(0, -20px);
+					}
+				}
+			}
+		}
+		.app-icon {
+			margin-top: 0.6rem;
+			height: 3rem;
+			opacity: 0;
+			transform: translate(0, -10px);
+			transition: all .5s .2s;
+			transition-property: transform, opacity;
+		}
+		h2 {
+			margin: 0;
+			text-align: center;
+		}
+		@include medium() {
+			.app-icon {
+				height: 5rem;
+			}
+			.row {
+				display: flex;
+				margin: 1rem 5rem;
+			}		
+			.column-icon {
+				margin-right: 3rem;
+			}
+			h2 {
+				text-align: left;
+			}
+		}
+	}
+	
+	
+	.carousel-dots {
+		text-align: center;
+		.dot {
+			cursor: pointer;
+			display: inline-block;
+			height: 1.4rem;
+			width: 1.4rem;
+			border-radius: 50%;
+			margin: 3rem 0.5rem 2rem;
+			position: relative;
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				border-radius: 50%;
+				transition: box-shadow .3s, transform 1s;
+			}
+			&:before {
+				box-shadow: 0 0 0 0px #fff
+			}
+			&:after {
+				background: rgba(0,0,0,.5);
+			}
+			&.active {
+				&:after {
+					transform: scale(0.5);
+				}
+				&:before {
+					box-shadow: 0 0 0 1px #fff
+				}				
+			}
+		}
+	}
+	
+	.carousel-arrow {
+		display: none;
+	}
+	@include medium() {
+		.carousel-arrow {
+			display: block;
+			cursor:pointer;
+			position: absolute;
+			top:50%;
+			transform: translate(0, -50%);
+			left: 0;
+			height: 5rem;
+			width: 3rem;
+			background: rgba(0,0,0,.2);
+			border-radius: 0 5px 5px 0;
+			svg {
+				height: 1rem;
+				transform: rotate(90deg) translate(-25%, -50%);
+				transform-origin: center;
+				position: absolute;
+				top: 50%;
+				fill: #fff;
+			}
+			&.next {
+				right: 0;
+				left: auto;
+				border-radius: 5px 0 0 5px;
+				svg {
+					transform: rotate(-90deg) translate(25%, 50%);
+				}
+			}
+		}
+	}
+	/**
+	 * Styles for slides
+	 */
+	background: #4e4e4e;
+	color: #fff;
+	a {
+		color: #fff;
+	}
+	&.wings-cheap {
+		background: #007DFF;
+	}
+	&.betterdo {
+		background: #5754af;
+		.app-icon {
+			border-radius: 10px;
+			box-shadow: 0 1px 2px rgba(0,0,0,.5);
+		}
+	}
+	&.test {
+		.app-icon {
+			background: #eee;
+		}
+	}
+}

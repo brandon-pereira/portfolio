@@ -1,6 +1,7 @@
 (function(window, $, ko) {
-	function Projects(element) {
+	function Projects(element, lightbox) {
 		this.$element = $(element);
+		this.lightbox = lightbox;
 		this.init();
 	}
 
@@ -257,15 +258,6 @@
 			languages: ko.observable([]),
 			types: ko.observable([]),
 			dates: sortByDate,
-			lightbox: {
-				open: ko.observable(false),
-				img: ko.observable(''),
-				desc: ko.observable(''),
-				poster: ko.observable(''),
-				isVideo: ko.observable(false),
-				style: ko.observable(''),
-				isLoaded: ko.observable(false)
-			},
 			selectedStatus: ko.observable(),
 			selectedDate: ko.observable(),
 			selectedType: ko.observable(),
@@ -287,24 +279,7 @@
 				$('#skills').trigger('goToSkill', skill);
 			},
 			openImage: function() {
-				var view = self.view.lightbox;
-				// show loader till image loaded 
-				view.isLoaded(false);
-				var img = new Image();
-				img.onload = function() {
-					view.isLoaded(true);
-				};
-				img.src = this.src;
-				view.img(this.src);
-				view.open(true);
-				view.desc(this.title);
-				view.poster(this.type === 'video' ? this.poster : '');
-				view.isVideo(this.type === 'video');
-				view.style(this.styling ? this.styling : '');
-			
-			},
-			closeImage: function() {
-				this.lightbox.open(false);
+				self.lightbox.open(this)
 			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);

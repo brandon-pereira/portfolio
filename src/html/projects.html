@@ -51,26 +51,6 @@
 				<span>No Results.</span>
 				<button data-bind="click: resetFilters">Reset Filters</button>
 			</div>
-			
-			<div class="lightbox" data-bind="css: lightbox.open() ? 'visible' : '', click: closeImage">
-				<a class="close-button">&times;</a>
-				<div class="modal-content">
-					<span data-bind="if: lightbox.isVideo(), click: function() {}, clickBubble: false"> <!-- stop propogation -->
-						<video data-bind="attr: {title: lightbox.desc, alt: lightbox.desc, poster: lightbox.poster}, css: lightbox.style" loop muted controls autoplay>
-							<source data-bind="attr: {src: lightbox.img}" type="video/mp4">
-						</video>
-					</span> 
-					<span data-bind="if: !lightbox.isVideo() && lightbox.isLoaded()">
-						<img data-bind="attr: {src: lightbox.img, title: lightbox.desc, alt: lightbox.desc}, css: lightbox.style" />
-					</span>
-					<div class="loading" data-bind="visible: !lightbox.isLoaded() && !lightbox.isVideo()">
-						<div class="plus-loader">
-							Loading…
-						</div>
-					</div>
-					<div class="description" data-bind="text: lightbox.desc"></div>
-				</div>
-			</div>
 		</div>
 	</div>
 </section>

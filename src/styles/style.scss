@@ -42,6 +42,9 @@ html{
     .container.projects header.main .maintext {
       font-family: 'Lily Script One', sans-serif;
     }
+    .container.apps header.main .maintext{
+      font-family: 'Bungee Shade', sans-serif;
+    }
 	}
 }
 
@@ -85,4 +88,5 @@ html.webkit .container.projects header.main .maintext:before{
 @import 'contact';
 @import 'footer';
 @import 'lightbox';
+@import 'apps';
 @import 'g-loader.css';

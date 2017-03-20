@@ -1,0 +1,58 @@
+{
+	"applications": [
+		{
+			"title": "Wings.cheap",
+			"description": "<p>Wings.cheap is a web app which allows you to quickly find wing deals in your area. Built from the ground up to be responsive, fast, and beautiful. Under the hood I'm using AngularJS, Express, and MongoDB.</p>",
+			"link": "https://wings.cheap/",
+			"icon": "https://wings.cheap/android-chrome-192x192.png",
+			"theme": "wings-cheap",
+			"images": [
+				{
+					"title": "Desktop view of landing screen",
+					"src": "./projects/wingscheap-1.png",
+					"preview": "./projects/wingscheap-1-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "Mobile view of landing screen",
+					"src": "./projects/wingscheap-2.png",
+					"preview": "./projects/wingscheap-2-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "Mobile view of results screen",
+					"src": "./projects/wingscheap-3.png",
+					"preview": "./projects/wingscheap-3-preview.jpg",
+					"styling": "shadow"
+				}
+			]
+		},
+		{
+			"title": "BetterDo.",
+			"description": "<p>This is the first web app I built. While I was studying for college and used it for keeping track of homework. It also has sharing functionality so you can share lists with others. Under the hood I'm using jQuery, PHP, and CSS3.</p>",
+			"link": "https://branclon.com/BetterDo/",
+			"icon": "https://branclon.com/BetterDo/res/img/icons/icon@3x.png",
+			"theme": "betterdo",
+			"images": [
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-1.png",
+					"preview": "./projects/betterdo-2-1-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-2.png",
+					"preview": "./projects/betterdo-2-2-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "",
+					"src": "./projects/betterdo-2-3.png",
+					"preview": "./projects/betterdo-2-3-preview.jpg",
+					"styling": "shadow"
+				}
+			]
+		}
+	]
+}

@@ -34,7 +34,7 @@ var paths = {
   'src': {
     'css': ['./src/styles/style.scss', './src/styles/critical.scss'],
     'html': './src/index.html',
-    'js': ['./src/scripts/app.js', './src/scripts/**/*.js'],
+    'js': ['./src/scripts/index.js', './src/scripts/**/*.js'],
     'templates': './src/content/**/*'
   },
   // watch paths

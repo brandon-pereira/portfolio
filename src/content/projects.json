@@ -11,17 +11,20 @@
 				{
 					"title": "Desktop view of landing screen",
 					"src": "./projects/wingscheap-1.png",
-					"preview": "./projects/wingscheap-1-preview.jpg"
+					"preview": "./projects/wingscheap-1-preview.jpg",
+					"styling": "shadow"
 				},
 				{
 					"title": "Mobile view of landing screen",
 					"src": "./projects/wingscheap-2.png",
-					"preview": "./projects/wingscheap-2-preview.jpg"
+					"preview": "./projects/wingscheap-2-preview.jpg",
+					"styling": "shadow"
 				},
 				{
 					"title": "Mobile view of results screen",
 					"src": "./projects/wingscheap-3.png",
-					"preview": "./projects/wingscheap-3-preview.jpg"
+					"preview": "./projects/wingscheap-3-preview.jpg",
+					"styling": "shadow"
 				}
 			],
 			"link": "https://wings.cheap/"
