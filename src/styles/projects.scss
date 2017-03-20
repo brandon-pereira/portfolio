@@ -239,7 +239,8 @@
 				text-align:center;
 				margin-bottom:10px;
 				img, video{
-					width:25%;
+					max-width:25%;
+					max-height: 10rem;
 					vertical-align: middle;
 					cursor:pointer;
 					&.shadow{
