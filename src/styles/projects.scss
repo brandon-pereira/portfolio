@@ -209,6 +209,10 @@
 					}
 				}
 			}
+			a:hover { // for read more button
+				cursor: pointer;
+				text-decoration: underline;
+			}
 			p{
 				margin:0 10px 10px 10px;
 			}
