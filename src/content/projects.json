@@ -90,7 +90,7 @@
 			"title": "Blueshield: Content Build System",
 			"date": "Oct 3 2016",
 			"languages": ["gulp"],
-			"shortDescription": "Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that. I helped build a static site generator as well as traveled to San San Francisco to help their developers.",
+			"shortDescription": "Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that. I helped build a static site generator as well as traveled to San Francisco to help their developers.",
 			"description": "<p>Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that.</p><p>Blueshield uses a unique CMS which requires each page to be built with custom elements. Rather than us manually coding in these elements, we thought it would be a smart to automate some of the tedious work. We built a templating system which allowed us to both QA our pages with dummy content, as well as deliver the pages with these transformed elements.</p><p>On top of this, I also flew to California a couple of times to help their team build their pages. This required me to mentor some of their web developers, communicate/strategize with their tech leads, and help solve some problems they were facing.</p>",
 			"type": 2,
 			"status": "live",
