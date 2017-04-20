@@ -29,7 +29,11 @@
 						<h4 data-bind="visible: link"><a data-bind="text: title, attr: {href: link}" target="_blank"></a></h2>
 						<h4 data-bind="visible: !link, text: title"></h2>
 					</header>
-					<p data-bind="html: description"></p>
+					<p data-bind="visible: !seeMore">
+						<span data-bind="html: $data.shortDescription"></span>
+						<span data-bind="click: $root.seeMoreDescription.bind($root)"><a>Read More</a>.</span>
+					</p>
+					<article data-bind="visible: seeMore, html: description"></article>
 					<div class="photos" data-bind="visible: images, foreach: images">
 						<span data-bind="if: $data.type === 'video'">
 							<video data-bind="attr: {src: src, title: title, poster: poster}, click: $root.openImage, css: $data.styling" autoplay loop playsinline mute>

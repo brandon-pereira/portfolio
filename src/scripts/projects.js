@@ -206,6 +206,7 @@
 		var languages = [];
 
 		for(var i = 0; i < projects.length; i++) {
+			projects[i].seeMore = projects[i].shortDescription ? false : true;
 			projects[i].type = types[projects[i].type];
 			projects[i].status = statuses[projects[i].status];
 			projects[i].date = new Date(projects[i].date);
@@ -253,7 +254,7 @@
 			{title: 'Ascending', val: true},
 		];
 		this.view = {
-			visibleProjects: ko.observable([]),
+			visibleProjects: ko.observableArray(),
 			statuses: ko.observable([]),
 			languages: ko.observable([]),
 			types: ko.observable([]),
@@ -280,6 +281,10 @@
 			},
 			openImage: function() {
 				self.lightbox.open(this)
+			},
+			seeMoreDescription: function(project) {
+				this.visibleProjects.replace(project, $.extend({}, project, {seeMore: true})); // replace virtual project
+				self.projects[self.projects.indexOf(project)].seeMore = true; // replace real project
 			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
