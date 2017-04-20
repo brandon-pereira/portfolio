@@ -5,7 +5,7 @@
 			"date": "April 10 2017",
 			"languages": ["node"],
 			"shortDescription": "Built a chat bot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.",
-			"description": "<p>Built a chat bot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.</p><p>From a technical perspective It's written in NodeJS and uses DocumentDB for storing the records. It is hosted on Azure. Asides for building atop our existing framework, I also added new features which can be used on future bots. These include:</p><ul><li>Adding an algorithm for determining the 'did you mean' values.</li><li>Added the ability to unit test user flows and application logic.</li><li>Added the ability to perform load testing on the application.</li><li>Added an analytics module.</li><li>Added a logging module which can be connected to either the console or to a database.</li></ul><p> It also got some good news coverage: <a href='https://www.carthrottle.com/post/infiniti-has-built-a-bot-to-compare-its-hottest-q60-to-other-cars-and-you-can-talk-to-it/' target='_'>CarThrottle</a> and <a href='http://www.thedrive.com/sheetmetal/9200/infinitis-facebook-chatbot-can-tell-you-the-0-to-60-mph-time-of-almost-any-car' target='_'>The Drive</a>.</p>",
+			"description": "<p>Built a chat bot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.</p><p>From a technical perspective, it's written in NodeJS and uses DocumentDB for storing the records. It is hosted on Azure. Asides for building atop our existing framework, I also added new features which can be used on future bots. These include:</p><ul><li>Adding an algorithm for determining the 'did you mean' values.</li><li>Added the ability to unit test user flows and application logic.</li><li>Added the ability to perform load testing on the application.</li><li>Added an analytics module.</li><li>Added a logging module which can be connected to either the console or to a database.</li></ul><p> It also got some good news coverage: <a href='https://www.carthrottle.com/post/infiniti-has-built-a-bot-to-compare-its-hottest-q60-to-other-cars-and-you-can-talk-to-it/' target='_'>CarThrottle</a> and <a href='http://www.thedrive.com/sheetmetal/9200/infinitis-facebook-chatbot-can-tell-you-the-0-to-60-mph-time-of-almost-any-car' target='_'>The Drive</a>.</p>",
 			"type": 2,
 			"status": "live",
 			"images": [
@@ -35,7 +35,7 @@
 			"date": "Feb 1 2017",
 			"languages": ["gulp", "javascript", "sass", "html", "git", "mongo", "node"],
 			"shortDescription": "I built a web app for finding cheap wings near you. Allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!",
-			"description": "<p>I built a web app for finding cheap wings near you. Allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!</p><p>Under the hood I'm using AngularJS and SCSS to render the front-end. It goes through GulpJS to create production (minified) files as well as enabling live reload on both front-end and back-end (running on same instance). The back-end is written in NodeJS (using Express to handle server portion) and utilizes a REST API. For a database I decided to use MongoDB.</p><p>The hosting is being provided by DigitalOcean. For this project I created a basic linux server and manually implemented NodeJS, Mongo, Git, and NGINX. This allowed me to test my bash skills and learn how a server is set up at a lower level.<p>The main objectives of this application were to learn AngularJS as well as to dabble with writing NodeJS.</p>",
+			"description": "<p>I built a web app for finding cheap wings near you. Allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!</p><p>Under the hood, I'm using AngularJS and SCSS to render the front-end. It goes through GulpJS to create production (minified) files as well as enabling live reload on both front-end and back-end (running on same instance). The back-end is written in NodeJS (using Express to handle server portion) and utilizes a REST API. For a database I decided to use MongoDB.</p><p>The hosting is being provided by DigitalOcean. For this project I created a basic linux server and manually implemented NodeJS, Mongo, Git, and NGINX. This allowed me to test my bash skills and learn how a server is set up at a lower level.<p>The main objectives of this application were to learn AngularJS as well as to dabble with writing NodeJS.</p>",
 			"type": 1,
 			"status": "beta",
 			"images": [
@@ -149,7 +149,7 @@
 			"date": "Sept 1 2016",
 			"languages": ["json", "html", "sass", "gulp", "git"],
 			"shortDescription": "Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
-			"description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p><p>This portfolio was built using KnockoutJS (try filtering these projects from the header or from a skills accordian), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p><p>Make sure you're on an up-to-date browser for best results.</p><p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.</p>",
+			"description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p><p>This portfolio was built using KnockoutJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p><p>Make sure you're on an up-to-date browser for best results.</p><p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.</p>",
 			"type": 1,
 			"status": "live",
 			"images": [
@@ -164,7 +164,7 @@
 					"preview": "./projects/portfolio-2-preview.jpg"
 				},
 				{
-					"title": "Skills Accordian Area",
+					"title": "Skills Accordion Area",
 					"src": "./projects/portfolio-3.png",
 					"preview": "./projects/portfolio-3-preview.jpg"
 				}
@@ -229,7 +229,7 @@
 			"date": "2015-11-30",
 			"languages": ["json", "html", "less", "gulp", "git"],
 			"shortDescription": "Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
-			"description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p><p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordian), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p><p>Make sure you're on an up-to-date browser for best results.</p><p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.</p>",
+			"description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p><p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p><p>Make sure you're on an up-to-date browser for best results.</p><p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.</p>",
 			"type": 1,
 			"status": "unavailable",
 			"images": [
@@ -244,7 +244,7 @@
 					"preview": "./projects/portfolio-2-preview.jpg"
 				},
 				{
-					"title": "Skills Accordian Area",
+					"title": "Skills Accordion Area",
 					"src": "./projects/portfolio-3.png",
 					"preview": "./projects/portfolio-3-preview.jpg"
 				}
