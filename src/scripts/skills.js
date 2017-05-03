@@ -78,7 +78,7 @@
 			self._deeplink(skill);
 		});
 		
-		this.scroll.events(this.$element);
+		this.scroll.reInitSmoothScroll(this.$element);
 	};
 	
 	Skills.prototype._logEvent = function(event, action) {
