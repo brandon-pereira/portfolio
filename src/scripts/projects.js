@@ -54,6 +54,7 @@
 		}
 
 		this._updateView(response);
+		this._logEvent('filter', filters);
 	};
 	
 	Projects.prototype._loadMore = function(amount) {
@@ -71,6 +72,7 @@
 		}
 		
 		this._updateView(response);
+		this._logEvent('load-more', 'load-more');
 	};
 	
 	Projects.prototype._getFilters = function() {
@@ -266,6 +268,7 @@
 			hasMore: ko.observable(false),
 			filtersVisible: ko.observable(false),
 			resetFilters: function() {
+				console.log("RESET");
 				this.selectedStatus(null);
 				this.selectedLanguage(null);
 				this.selectedDate(null);
@@ -285,11 +288,19 @@
 			seeMoreDescription: function(project) {
 				this.visibleProjects.replace(project, $.extend({}, project, {seeMore: true})); // replace virtual project
 				self.projects[self.projects.indexOf(project)].seeMore = true; // replace real project
+				self._logEvent('read-more', project.title);
 			}
 		};
 		ko.applyBindings(this.view, this.$element[0]);
 	};
-
+	
+	Projects.prototype._logEvent = function(event, action) {
+		if(ga) {
+			ga('send', 'event', 'projects', event, action);			
+		} else {
+			console.warn("Google Analytics not detected on page. Might be blocked?");
+		}
+	}
 	
 	window.Projects = Projects;
 	
