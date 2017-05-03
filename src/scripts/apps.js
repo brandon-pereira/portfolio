@@ -1,7 +1,7 @@
 (function(window, $, ko) {
-	function Apps(element, lightbox) {
+	function Apps(element, options) {
 		this.$element = $(element);
-		this.lightbox = lightbox;
+		this.lightbox = options.lightbox;
 		this.init();
 	}
 
@@ -75,6 +75,7 @@
 			currentSlide = 0;
 		}
 		this._setSlide(currentSlide);
+		this._logEvent("show-slide", currentSlide);
 	}
 	
 	Apps.prototype._goToPrevSlide = function() {
@@ -83,7 +84,17 @@
 		if(currentSlide < 0) {
 			currentSlide = this.view.slides().length - 1;
 		}
-		this._setSlide(currentSlide);	}
+		this._setSlide(currentSlide);
+		this._logEvent("show-slide", currentSlide);
+	}
+	
+	Apps.prototype._logEvent = function(event, action) {
+		if(ga) {
+			ga('send', 'event', 'apps', event, action);			
+		} else {
+			console.warn("Google Analytics not detected on page. Might be blocked?");
+		}
+	}
 	
 	Apps.prototype._setSlide = function(index) {
 		if(this.currentSlide) {

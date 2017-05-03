@@ -1,14 +1,14 @@
 (function(window, $, ko) {
 	
-	function Skills(element) {
+	function Skills(element, options) {
 		this.$element = $(element);
+		this.scroll = options.scroll;
 		this.init();
 	}
 
 	Skills.prototype.init = function() {
 		this.$loader = this.$element.find('.loading');
 		this.$content = this.$element.find('.init');
-		this.smoothScroll = new SmoothScroll();
 		this._initView();
 		this._fetch();
 	};
@@ -78,8 +78,16 @@
 			self._deeplink(skill);
 		});
 		
-		this.smoothScroll.events(this.$element);
+		this.scroll.events(this.$element);
 	};
+	
+	Skills.prototype._logEvent = function(event, action) {
+		if(ga) {
+			ga('send', 'event', 'skills', event, action);			
+		} else {
+			console.warn("Google Analytics not detected on page. Might be blocked?");
+		}
+	}
 	
 	Skills.prototype._deeplink = function (id) {
 		var skill = $(this.$element).find('[data-id='+id+']');
@@ -87,7 +95,7 @@
 		if(skill.length >= 1) {
 			if(!category.hasClass('open')) this._open(category);
 			if(!skill.hasClass('open')) this._open(skill);
-			this.smoothScroll.scrollTo($('#skills'));
+			this.scroll.scrollTo($('#skills'));
 		}
 		
 	};
@@ -96,6 +104,7 @@
 		var self = this;
 		$element.siblings().removeClass('open');
 		$element.toggleClass('open');
+		this._logEvent('open', $element.find('.title').first().text())
 	};
 	
 	window.Skills = Skills;

@@ -3,11 +3,15 @@
 	// Function to bootstrap all page components
 	$(window).on('ready', function() {
 		var lightbox = new Lightbox($('.lightbox'))
-		new Skills($('#skills'));		
-		new Projects($('#projects'), lightbox);		
+		var scroll = new Scroll();
+		var opts = {
+			lightbox: lightbox,
+			scroll: scroll
+		};
+		new Skills($('#skills'), opts);		
+		new Projects($('#projects'), opts);		
 		new Contact($('#contact'));		
-		new Apps($('#apps'), lightbox);		
-		new SmoothScroll().events($('section.header'));
+		new Apps($('#apps'), opts);		
 		
 		// If its a webkit browser add 'webkit' class to HTML.	
 		if('webkitTextFillColor' in document.documentElement.style) {

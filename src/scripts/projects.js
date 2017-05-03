@@ -1,14 +1,14 @@
 (function(window, $, ko) {
-	function Projects(element, lightbox) {
+	function Projects(element, options) {
 		this.$element = $(element);
-		this.lightbox = lightbox;
+		this.lightbox = options.lightbox;
+		this.scroll = options.scroll;
 		this.init();
 	}
 
 	Projects.prototype.init = function() {
 		this.$loader = this.$element.find('.loading').first();
 		this.$content = this.$element.find('.init');
-		this.smoothScroll = new SmoothScroll();
 		this.projects = [];
 		
 		this._initView();
@@ -22,7 +22,7 @@
 		// Deep link to language (from skills)
 		$(this.$element).on('sortBy:language', function(e, lang) {
 			self.view.selectedLanguage(lang);
-			self.smoothScroll.scrollTo('#projects');
+			self.scroll.scrollTo('#projects');
 		});
 		
 		
