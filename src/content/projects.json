@@ -1,6 +1,30 @@
 {
 	"projects": [
 		{
+			"title": "Travel Alberta: Brand Guidelines",
+			"date": "June 1 2017",
+			"languages": ["javascript", "css"],
+			"shortDescription": "I built the internal brand guidelines website for Travel Alberta. This project had a clean state so I got to choose my own tech stack. I put a lot of effort into making the website load as fast as possible as well as look pixel perfect.",
+			"description": "<p>I built the internal brand guidelines website for Travel Alberta. This project had a clean state so I got to choose my own tech stack. I put a lot of effort into making the website load as fast as possible as well as look pixel perfect.</p><p>I ended up using Gulp for CSS, assets, etc. along side Webpack for my javascript. I got to leverage tons of webpack features like code-splitting, hot-module reloading, as well as ES6 classes and syntax. From a CSS perspective I built the layout using flexbox and other CSS3 features. The experience is gated, but check out the login screen for an example of how fast the website loads.</p>",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "Example of landing page on large screen size",
+					"src": "./projects/travel-alberta-1.png",
+					"preview": "./projects/travel-alberta-preview-1.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "Example of landing page on small screen size",
+					"src": "./projects/travel-alberta-2.png",
+					"preview": "./projects/travel-alberta-preview-2.jpg",
+					"styling": "shadow"
+				}
+			],
+			"link": "http://brand.travelalberta.com/"
+		},
+		{
 			"title": "INFINITI: Q60 Speedbot",
 			"date": "April 10 2017",
 			"languages": ["node"],
