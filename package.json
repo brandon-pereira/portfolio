@@ -10,7 +10,7 @@
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-clean-css": "^2.0.3",
+    "gulp-clean-css": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-html-extend": "^1.1.6",
     "gulp-htmlmin": "^3.0.0",
