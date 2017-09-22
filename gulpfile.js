@@ -96,7 +96,9 @@ gulp.task('style', function() {
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', errorCallback))
     .pipe(autoprefixer())
-    .pipe(cleanCSS())
+    .pipe(cleanCSS({
+      inline: ['none']
+    }))
     .pipe(gulpif(!argv.production, sourcemaps.write()))
     .pipe(gulp.dest(paths.dist.root))
     .pipe(livereload());
