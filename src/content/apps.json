@@ -29,34 +29,33 @@
 		},
 		{
 			"title": "Tv Tracker",
-			"description": "<p>Lorem Ipsum</p>",
+			"description": "<p>TvTracker is an application for tracking your TV Shows. Built to work great on mobile, desktop, and even from your status bar (Mac). Under the hood we're using React, MobX, Service Workers, and Electron.</p>",
 			"link": "https://branclon.com/tv-tracker",
 			"icon": "https://branclon.com/tv-tracker/android-chrome-192x192.png",
 			"theme": "tv-tracker",
 			"images": [
 				{
-					"title": "Desktop view of landing screen",
-					"src": "./projects/wingscheap-1.png",
-					"preview": "./projects/wingscheap-1-preview.jpg",
+					"title": "Mobile Android Experience",
+					"src": "./projects/tv-tracker-1.png",
+					"preview": "./projects/tv-tracker-1-preview.jpg",
 					"styling": "shadow"
 				},
 				{
-					"title": "Mobile view of landing screen",
-					"src": "./projects/wingscheap-2.png",
-					"preview": "./projects/wingscheap-2-preview.jpg",
-					"styling": "shadow"
+					"title": "Desktop experience",
+					"src": "./projects/tv-tracker-2.png",
+					"preview": "./projects/tv-tracker-2-preview.jpg"
 				},
 				{
-					"title": "Mobile view of results screen",
-					"src": "./projects/wingscheap-3.png",
-					"preview": "./projects/wingscheap-3-preview.jpg",
+					"title": "Mac status bar experience",
+					"src": "./projects/tv-tracker-3.png",
+					"preview": "./projects/tv-tracker-3-preview.jpg",
 					"styling": "shadow"
 				}
 			]
 		},
 		{
 			"title": "BetterDo.",
-			"description": "<p>This is the first web app I built. While I was studying for college and used it for keeping track of homework. It also has sharing functionality so you can share lists with others. Under the hood I'm using jQuery, PHP, and CSS3.</p>",
+			"description": "<p><strong>Depreciated:</strong> As of October 15th, 2017, this application is no longer available. It had a good run, but server changes have made it difficult to manage. Thanks for your support!</p><p>This is the first web app I built. While I was studying for college and used it for keeping track of homework. It also has sharing functionality so you can share lists with others. Under the hood I'm using jQuery, PHP, and CSS3.</p>",
 			"link": null,
 			"icon": "./projects/betterdo-app-icon.png",
 			"theme": "betterdo",

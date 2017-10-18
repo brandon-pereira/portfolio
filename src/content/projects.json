@@ -1,6 +1,35 @@
 {
 	"projects": [
 		{
+			"title": "TvTracker",
+			"date": "October 15 2017",
+			"languages": ["javascript", "css"],
+			"shortDescription": "TvTracker is an application for tracking your TV Shows. Built to work great on mobile, desktop, and even from your status bar (Mac).",
+			"description": "<p>TvTracker is an application for tracking your TV Shows. Built to work great on mobile, desktop, and even from your status bar (Mac).</p><p>Under the hood we're using React and MobX, Webpack for compiling and code splitting, Service Workers for offline caching, and Electron for building the Mac app.</p>",
+			"type": 1,
+			"status": "live",
+			"images": [
+				{
+					"title": "Mobile Android Experience",
+					"src": "./projects/tv-tracker-1.png",
+					"preview": "./projects/tv-tracker-1-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "Desktop experience",
+					"src": "./projects/tv-tracker-2.png",
+					"preview": "./projects/tv-tracker-2-preview.jpg"
+				},
+				{
+					"title": "Mac status bar experience",
+					"src": "./projects/tv-tracker-3.png",
+					"preview": "./projects/tv-tracker-3-preview.jpg",
+					"styling": "shadow"
+				}
+			],
+			"link": "https://branclon.com/tv-tracker/"
+		},
+		{
 			"title": "Travel Alberta: Brand Guidelines",
 			"date": "June 1 2017",
 			"languages": ["javascript", "css"],
