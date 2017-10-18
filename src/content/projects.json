@@ -281,7 +281,7 @@
 			"languages": ["javascript", "html", "css", "php", "mysql"],
 			"description": "<p>Version 2 of my Todo app was a complete rewrite. Moved to Ajax based communication and LESS for styling.</p>",
 			"type": 1,
-			"status": "beta",
+			"status": "unavailable",
 			"images": [
 				{
 					"title": "",
@@ -302,7 +302,7 @@
 					"styling": "shadow"
 				}
 			],
-			"link": "/BetterDo/"
+			"link": null
 		},
 		{
 			"title": "Broken City: Point of sale system",

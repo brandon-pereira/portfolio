@@ -15,7 +15,8 @@
 				<div class="carousel-slide" data-bind="css: {currentSlide: $index() === $root.currentSlide()}">
 					<div class="row">
 						<div class="column-icon">
-							<img class="app-icon" data-bind="attr: {src: icon}">
+							<a target="_" data-bind="attr: {href: link}"><img class="app-icon" data-bind="attr: {src: icon}"></a>
+							<a class="cta" target="_" data-bind="attr: {href: link}, css: {'unavailable': !link}"></a>
 						</div>
 						<div class="column-info">	
 							<a data-bind="attr: {href: link}" target="_"><h2 data-bind="text: title"></h2></a>
