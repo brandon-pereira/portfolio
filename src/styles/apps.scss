@@ -80,7 +80,6 @@
 		}
 		.row {
 			&.photos {
-				display: block;
 				margin-bottom: 0;
 			}
 		}
@@ -95,15 +94,21 @@
 		}
 		.photos {
 			text-align: center;
-			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 			img {
 				cursor: pointer;
 				max-width: calc(33% - 2rem);
 				max-height: 13rem;
 				vertical-align: middle;
+				margin: 0rem 1rem 0;
 				&.shadow {
-					margin: 1rem 1rem 0;
 					box-shadow:0 5px 10px rgba(0,0,0,.3);
+				}
+				&:not(.shadow) {
+					position: relative;
+					top: 8px;
 				}
 				@for $i from 1 through 3 {
 					&:nth-of-type(#{$i}) {
