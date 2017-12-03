@@ -21,6 +21,9 @@ h1 span {
 h1 span:before {
   content: "_"
 }
+canvas {
+	margin-bottom: 20px;
+}
 h2 {
   margin: 16px 0 30px 0;
   font-weight: 400;
