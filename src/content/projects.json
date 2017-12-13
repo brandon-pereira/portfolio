@@ -1,6 +1,40 @@
 {
 	"projects": [
 		{
+			"title": "INFINITI: IDRIS Virtual Assistant",
+			"date": "Dec 1 2017",
+			"languages": [
+				"node",
+				"mongo"
+			],
+			"shortDescription": "I built a chat bot for INFINITI Global. It allows users to learn about their new QX80 vehicle. It uses natural language processing to figure out users intent, and is localized to Canadian English and French, as well as American English.",
+			"description": "<p>I built a chat bot for INFINITI Global. It allows users to learn about their new QX80 vehicle. It uses natural language processing to figure out users intent, and is localized to Canadian English and French, as well as American English.</p><p>From a technical perspective, it's written in NodeJS and uses MongoDB for storing records. It's hosted on Azure. Asides from building atop our existing framework, I also added new features which can be used on future bots. These include:</p><p><ul><li>Improved natural language processing service (through Dialogflow)</li><li>All content and training data provided through Excel, and can be exported into JSON through an export tool written in Node. </li><li>Built the ability to localize bots more easily</li><li>Improved load testing module to better simulate real world cases</li></ul></p><p>This bot has helped our company get insight on what kind of questions people are asking bots and has also paved the road for another chatbot to be built for more INFINITI regions.</p>",
+			"type": 2,
+			"status": "live",
+			"images": [
+				{
+					"title": "Video showing the users flow.",
+					"src": "./projects/idris-na-2.mp4",
+					"poster": "./projects/idris-na-2-preview.jpg",
+					"styling": "shadow",
+					"type": "video"
+				},
+				{
+					"title": "Example of how the suggestions work. They are based on users input.",
+					"src": "./projects/idris-na-3.png",
+					"preview": "./projects/idris-na-3-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "Example of how the suggestions work. They are based on users input.",
+					"src": "./projects/idris-na-1.png",
+					"preview": "./projects/idris-na-1-preview.jpg",
+					"styling": "shadow"
+				}
+			],
+			"link": "https://m.me/INFINITIIDRIS?ref=brandonp_portfolio"
+		},
+		{
 			"title": "TvTracker",
 			"date": "October 15 2017",
 			"languages": ["javascript", "css"],
