@@ -1,9 +1,8 @@
 export default class Base {
 
-    constructor(el, props ={}, opts = {}, defaultOpts = {}) {
+    constructor(el, props = {}) {
         this.el = el;
         this.props = props;
-        this.opts = Object.assign({}, opts, defaultOpts);
         this.init()
             .then(() => this.mount())
             .catch((err) => console.error(err));
@@ -14,16 +13,21 @@ export default class Base {
     }
 
     mount() {
+        this.events();
         return Promise.resolve();
     }
 
-    onFocus() {
-        console.log("onFocus");
+    events() {
+
     }
 
-    onBlur() {
-        console.log("onBlur");
-    }
+    // onFocus() {
+    //     console.log("onFocus");
+    // }
+
+    // onBlur() {
+    //     console.log("onBlur");
+    // }
 
 
 }

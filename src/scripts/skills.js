@@ -1,3 +1,4 @@
+// eslint-disable
 (function(window, $, ko) {
 	
 	function Skills(element, options) {

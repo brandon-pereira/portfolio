@@ -8,7 +8,7 @@
 		<div class="init true">
 			<div class="carousel-slides">
 				 {% for app in apps.applications %}
-					<div class="carousel-slide {{ "currentSlide" if loop.index === 1 }}">
+					<div class="carousel-slide {{ " currentSlide " if loop.index === 1 }}" data-styling="{{app.theme}}">
 						<div class="row">
 							<div class="column-icon">
 								<a target="_" data-bind="attr: {href: link}"><img class="app-icon" src="{{app.icon}}"></a>
@@ -29,13 +29,13 @@
 			</div>
 			<div class="carousel-dots">
 				{% for app in apps.applications %}
-					<div class="dot {{ "active" if loop.index === 1 }}"></div>
+					<div class="dot {{ "active" if loop.index === 1 }}" data-goto="{{loop.index - 1}}"></div>
 				{% endfor %}
 			</div>
-			<div class="next carousel-arrow" data-bind="click: goToNextSlide">
+			<div class="next carousel-arrow" data-goto="next">
 				<!-- @@include ../static/icons/caret.svg -->
 			</div>
-			<div class="prev carousel-arrow" data-bind="click: goToPrevSlide">
+			<div class="prev carousel-arrow" data-goto="prev">
 				<!-- @@include ../static/icons/caret.svg -->
 			</div>
 		</div>

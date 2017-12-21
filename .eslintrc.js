@@ -2,9 +2,6 @@
  * Inspired by watson-developer-cloud/node-sdk
  */
 module.exports = {
-  "ecmaFeatures": {
-    "modules": true
-  },
   "env": {
     "node": true,
     "browser": true,
