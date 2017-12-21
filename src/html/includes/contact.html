@@ -8,7 +8,7 @@
 			{% endfor %}
 		</div>
 		<h3>Social</h3>
-		<div class="grid" data-bind="foreach: contactLinks">
+		<div class="grid">
 		{% for item in contact.socialLinks %}
 			<a class="item smoothText {{item.class}}" href="{{item.link}}" aria-label="{{item.text}}" {% if item.isSameTab %}target="_blank" {% endif %}>{{item.text}}</a>
 		{% endfor %}
