@@ -1,44 +1,21 @@
-(function(window) {
-	
-	// Function to bootstrap all page components
-	$(window).on('ready', function() {
-		var lightbox = new Lightbox($('.lightbox'))
-		var scroll = new Scroll();
-		var opts = {
-			lightbox: lightbox,
-			scroll: scroll
-		};
-		new Skills($('#skills'), opts);		
-		new Projects($('#projects'), opts);		
-		new Contact($('#contact'));		
-		new Apps($('#apps'), opts);		
-		
-		// If its a webkit browser add 'webkit' class to HTML.	
-		if('webkitTextFillColor' in document.documentElement.style) {
-			$('html').addClass('webkit');
-		}	
-	});
-	})(window);
+const requiredDependencies = [ // Required Dependencies
 
-// Load Webfonts (Generic)
-WebFont.load({
-	google: {
-		families: [
-			'Open Sans:300,400',
-			'Press Start 2P:400'
-		]
-	}
-});
-// Load Projects webfont (subset only) 
-WebFont.load({
-	google: {
-		families: ['Lily Script One:400'],
-		text: 'Projects'
-	}
-});
-WebFont.load({
-	google: {
-		families: ['Bungee Shade:400'],
-		text: 'Apps'
-	}
-});
+]
+const optionalDependencies = [ // Dependencies which can be loaded async
+
+];
+
+const _dependencies = [
+    import('./app'),
+    import('../styles/style.scss'),
+    ...requiredDependencies,
+]
+Promise.all(_dependencies)
+    .then(([App, , ...dependencies]) => {
+        new App(dependencies);
+        document.body.classList.add('loaded')
+    })
+    .catch((err) => console.error("Failed to load dependencies.", err))
+
+Promise.all(optionalDependencies)
+    .catch((err) => console.error("Failed to load dependencies.", err));

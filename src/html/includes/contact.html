@@ -1,0 +1,17 @@
+<section class="container contact" id="contact" data-track-section>
+	<div class="content">
+		<h2>Contact</h2>
+		<h3>Let's Talk</h3>
+		<div class="grid">
+			{% for item in contact.contactLinks %}
+				<a class="item smoothText {{item.class}}" href="{{item.link}}" aria-label="{{item.text}}" {% if item.isSameTab %}target="_blank"{% endif %}>{{item.text}}</a>
+			{% endfor %}
+		</div>
+		<h3>Social</h3>
+		<div class="grid" data-bind="foreach: contactLinks">
+		{% for item in contact.socialLinks %}
+			<a class="item smoothText {{item.class}}" href="{{item.link}}" aria-label="{{item.text}}" {% if item.isSameTab %}target="_blank" {% endif %}>{{item.text}}</a>
+		{% endfor %}
+		</div>
+	</div>
+</section>

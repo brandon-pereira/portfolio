@@ -1,0 +1,37 @@
+<section class="container apps" id="apps" data-track-section>
+	<header class="main">
+		<span class="maintext">Apps</span>
+		<spna class="subtext">I've got<span></span>for that.</span>
+	</header>
+		
+	<div class="content">
+		<div class="init true">
+			<div class="carousel-slides" data-bind="foreach: slides">
+				<div class="carousel-slide" data-bind="css: {currentSlide: $index() === $root.currentSlide()}">
+					<div class="row">
+						<div class="column-icon">
+							<a target="_" data-bind="attr: {href: link}"><img class="app-icon" data-bind="attr: {src: icon}"></a>
+							<a class="cta" target="_" data-bind="attr: {href: link}, css: {'unavailable': !link}"></a>
+						</div>
+						<div class="column-info">	
+							<a data-bind="attr: {href: link}" target="_"><h2 data-bind="text: title"></h2></a>
+							<p data-bind="html: description"></p>
+						</div>
+					</div>
+					<div class="row photos" data-bind="visible: images, foreach: images">
+						<img data-bind="attr: {src: $data.preview ? preview : src, title: title}, click: $root.openImage, css: $data.styling">
+					</div>
+				</div>
+			</div>
+			<div class="carousel-dots" data-bind="foreach: slides">
+				<div class="dot" data-bind="click: $root.goToSlide.bind($data), css: {active: $index() === $root.currentSlide()}"></div>
+			</div>
+			<div class="next carousel-arrow" data-bind="click: goToNextSlide">
+				<!-- @@include ../static/icons/caret.svg -->
+			</div>
+			<div class="prev carousel-arrow" data-bind="click: goToPrevSlide">
+				<!-- @@include ../static/icons/caret.svg -->
+			</div>
+		</div>
+	</div>
+</section>

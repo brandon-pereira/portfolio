@@ -2,9 +2,10 @@
 node_modules/
 bower_components/
 dist/
+script.js
 .idea/
-
 # Created by https://www.gitignore.io
+npm-debug.log
 
 ### OSX ###
 .DS_Store

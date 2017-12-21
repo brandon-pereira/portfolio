@@ -75,6 +75,10 @@ html.webkit .container.projects header.main .maintext:before{
 	-webkit-text-fill-color: transparent;
 }
 
+svg { // revert what we did in critical css
+	display: block;
+}
+
 /**
  * Animations
  */
@@ -83,6 +87,7 @@ html.webkit .container.projects header.main .maintext:before{
 	100% { filter: hue-rotate(360deg) }
 };
 
+// @import 'header';
 @import 'skills';
 @import 'projects';
 @import 'contact';

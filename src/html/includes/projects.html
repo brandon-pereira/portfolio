@@ -1,0 +1,60 @@
+<section class="container projects" id="projects" data-track-section>
+	<header class="main">
+		<h2 class="maintext" data-text="Projects">Projects</h2>
+		<span class="subtext">A showcase of my<span></span> past, present, and future.</span>
+	</header>
+		
+	<div class="content">
+		<div class="loading">
+			<div class="plus-loader">
+			  Loading…
+			</div>
+		</div>
+		<div class="init">
+			<div class="sort" data-bind="css: {'visible': filtersVisible}">
+				<span class="title" data-bind="click: toggleFiltersVisible">
+					Filter Projects
+					<!-- @@include ../static/icons/caret.svg -->
+				</span> 
+				<select data-bind="options: statuses, optionsText: 'title', value: selectedStatus, optionsCaption: 'Status'"></select>
+				<select data-bind="options: dates, optionsText: 'title', value: selectedDate, optionsCaption: 'Date'"></select>
+				<select data-bind="options: languages, optionsCaption: 'Language', value: selectedLanguage"></select>
+				<select data-bind="options: types, optionsCaption: 'Type', value: selectedType"></select>
+			</div>
+			<div class="projects" data-bind="foreach: visibleProjects">
+				<div class="project">
+					<header>
+						<span class="date" data-bind="text: formattedDate"></span>
+						<span class="type" data-bind="text: status.title, css: status.class"></span>
+						<h4 data-bind="visible: link"><a data-bind="text: title, attr: {href: link}" target="_blank"></a></h2>
+						<h4 data-bind="visible: !link, text: title"></h2>
+					</header>
+					<p data-bind="visible: !seeMore">
+						<span data-bind="html: $data.shortDescription"></span>
+						<span data-bind="click: $root.seeMoreDescription.bind($root)"><a>Read More</a>.</span>
+					</p>
+					<article data-bind="visible: seeMore, html: description"></article>
+					<div class="photos" data-bind="visible: images, foreach: images">
+						<span data-bind="if: $data.type === 'video'">
+							<video data-bind="attr: {src: src, title: title, poster: poster}, click: $root.openImage, css: $data.styling" autoplay loop playsinline mute>
+								<source data-bind="attr: {src: src}" type="video/mp4">
+							</video>
+						</span>
+						<span data-bind="if: $data.type !== 'video'">
+							<img data-bind="attr: {src: $data.preview ? preview : src, title: title}, click: $root.openImage, css: $data.styling">
+						</span>
+					</div>
+					<div class="languages" data-bind="foreach: languages">
+						<a href="#skills" data-bind="text: $data, click: $root.goToSkill.bind($data)"></a>
+					</div>
+				</div>
+			</div>
+			<div class="project loadMore" data-bind="visible: hasMore, click: loadMore">Load More</div>
+			<div class="project noResults" data-bind="visible: visibleProjects().length <= 0">
+				<div class="smiley">:(</div>
+				<span>No Results.</span>
+				<button data-bind="click: resetFilters">Reset Filters</button>
+			</div>
+		</div>
+	</div>
+</section>

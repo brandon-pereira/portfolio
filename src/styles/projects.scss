@@ -106,7 +106,7 @@
 				&:last-of-type {
 					border: none;
 				}
-				background:url('./icons/caret.svg') no-repeat center right 1rem, #f6f6f6;
+				background:url('/icons/caret.svg') no-repeat center right 1rem, #f6f6f6;
 				background-size:20px;
 				margin:0; // Safari Fix
 				&::-ms-expand {
