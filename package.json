@@ -4,7 +4,9 @@
   "description": "An AngularJS Porfolio",
   "repository": "https://github.com/brandon-pereira/portfolio",
   "main": "gulpfile.js",
-  "dependencies": {},
+  "dependencies": {
+    "webfontloader": "^1.6.28"
+  },
   "devDependencies": {
     "babel-core": "^6.23.1",
     "babel-eslint": "^8.0.1",
