@@ -26,7 +26,10 @@ module.exports = function(config, gulp) {
 				console.log('\x1b[31m', 'criticalCSS error: ', err.message, '\x1b[0m');
 				this.emit('end');
 			}))
-			.pipe(htmlmin({collapseWhitespace: true}))
+			.pipe(htmlmin({collapseWhitespace: true})).on('error', function(err) {
+				console.log('\x1b[31m', 'htmlMin error: ', err.message, '\x1b[0m');
+				this.emit('end');
+			})
 			.pipe(gulp.dest(config.paths.dist))
 			.pipe(browserSync.stream())
 	);
