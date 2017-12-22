@@ -13,12 +13,11 @@
 			"status": "live",
 			"images": [
 				{
-					"title": "Video showing the users flow.",
-					"src": "./projects/idris-na-2.mp4",
-					"poster": "./projects/idris-na-2-preview.jpg",
-					"styling": "shadow",
-					"type": "video"
-				},
+					"title": "Example of how the suggestions work. They are based on users input.",
+					"src": "./projects/idris-na-1.png",
+					"preview": "./projects/idris-na-1-preview.jpg",
+					"styling": "shadow"
+				}, 
 				{
 					"title": "Example of how the suggestions work. They are based on users input.",
 					"src": "./projects/idris-na-3.png",
@@ -26,10 +25,11 @@
 					"styling": "shadow"
 				},
 				{
-					"title": "Example of how the suggestions work. They are based on users input.",
-					"src": "./projects/idris-na-1.png",
-					"preview": "./projects/idris-na-1-preview.jpg",
-					"styling": "shadow"
+					"title": "Video showing the users flow.",
+					"src": "./projects/idris-na-2.mp4",
+					"poster": "./projects/idris-na-2-preview.jpg",
+					"styling": "shadow",
+					"type": "video"
 				}
 			],
 			"link": "https://m.me/INFINITIIDRIS?ref=brandonp_portfolio"
@@ -97,6 +97,12 @@
 			"status": "live",
 			"images": [
 				{
+					"title": "Example of what happens when you hit random 0-60 time.",
+					"src": "./projects/speedbot-3.png",
+					"preview": "./projects/speedbot-3-preview.jpg",
+					"styling": "shadow"
+				},
+				{
 					"title": "Example of how the suggestions work. They are based on users input.",
 					"src": "./projects/speedbot-1.png",
 					"preview": "./projects/speedbot-1-preview.jpg"
@@ -107,12 +113,6 @@
 					"poster": "./projects/speedbot-3-preview.jpg",
 					"styling": "shadow",
 					"type": "video"
-				},
-				{
-					"title": "Example of what happens when you hit random 0-60 time.",
-					"src": "./projects/speedbot-3.png",
-					"preview": "./projects/speedbot-3-preview.jpg",
-					"styling": "shadow"
 				}
 			],
 			"link": "https://www.messenger.com/t/INFINITIQ60SpeedBot"
@@ -127,15 +127,15 @@
 			"status": "beta",
 			"images": [
 				{
-					"title": "Desktop view of landing screen",
-					"src": "./projects/wingscheap-1.png",
-					"preview": "./projects/wingscheap-1-preview.jpg",
-					"styling": "shadow"
-				},
-				{
 					"title": "Mobile view of landing screen",
 					"src": "./projects/wingscheap-2.png",
 					"preview": "./projects/wingscheap-2-preview.jpg",
+					"styling": "shadow"
+				},
+				{
+					"title": "Desktop view of landing screen",
+					"src": "./projects/wingscheap-1.png",
+					"preview": "./projects/wingscheap-1-preview.jpg",
 					"styling": "shadow"
 				},
 				{

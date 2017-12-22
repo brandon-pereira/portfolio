@@ -2,7 +2,8 @@ import("../styles/style.scss");
 import("./components/webfontloader").then(webfontloader => webfontloader());
 const components = [
     [import("./components/skills"), document.querySelector(".skills"), {}],
-    [import("./components/apps"), document.querySelector(".apps"), {}]
+    [import("./components/apps"), document.querySelector(".apps"), {}],
+    [import("./components/projects"), document.querySelector(".projects"), {}]
 ];
 
 components.forEach(component => {

@@ -51,208 +51,92 @@
 			}
 		}
 	}
-	
-	.content{
-		padding-bottom:50px;
-		.sort{
-			$height: 50px;
-			box-shadow:0 1px 2px rgba(0,0,0,.2);
-			margin:0 auto 10px auto;
-			display: block;
-			height: $height;
-			overflow:hidden;
-			span.title{
-				line-height: $height;
-				display:inline-block;
-				padding:0 20px;
-				color:#fff;
-				font-size:12px;
-				box-shadow:inset 0 -2px map-get($config, accent);
-				background: lighten(map-get($config, accent), 5%);
-				width:100%;
-				box-sizing: border-box;
-				position: relative;
-				svg {
-					transition: transform .2s;
-					position:absolute;
-					right:20px;
-					top:20px;
-					fill: #fff;
-					height: 10px;
-					width: 10px;
-				} 
-			}
-			&.visible {
-				height: $height * 5; // show 4 blocks
-				transition: max-height .1s;
-				span.title {
-					svg {
-						transform: rotate(180deg);
-					}
-				}
-			}
-			select{
+
+	.projects {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 2rem;
+		
+	}
+	.project {
+		width: calc(33.3% - 1rem);
+		color: #000;
+		margin: 0 0 1.5rem;
+		text-align: center;
+		background: #fff;
+		border-radius: 0.5rem;
+		overflow: hidden;
+		box-shadow: 0 12px 10px rgba(0,0,0,.1);
+		.image-container {
+			position: relative;
+			img {
+				max-height: 300px;
 				width: 100%;
-				appearance: none;
-				line-height:$height;
-				height:$height;
-				border-radius:0;
-				padding:0 25px 0 10px;
-				font-family:inherit;
-				outline:none;
-				border-width: 0 0 1px 0;
-				border-style: solid;
-				border-color: #e6e6e6;
-				&:last-of-type {
-					border: none;
-				}
-				background:url('/icons/caret.svg') no-repeat center right 1rem, #f6f6f6;
-				background-size:20px;
-				margin:0; // Safari Fix
-				&::-ms-expand {
-			    display: none;
-				}
+				clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0 100%);
+				margin-bottom: -40px;
+				position: relative;
+				z-index: 0;
 			}
-			@include medium() {
-				display: flex;
-				flex-direction: row;
-				height: $height !important;
-				select {
-					flex: 1;
-					border-width: 0 1px 0 0;
-				}
-				span.title {
-					width: auto;
-					svg {
-						display: none;
-					}
-				}
+
+			h3 {
+				margin: 0 2rem;
+				position: relative;
+				z-index: 1;
+				display: inline;
+				background: #292929;
+				color: #fff;
+				padding: 3px;
 			}
 		}
-		.project{
-			transform: none;
-			transform-origin: top left;
-			background:#fff;
-			box-shadow:0 1px 2px rgba(0,0,0,.2);
-			margin:0 auto 10px auto;
-			overflow:hidden;
-			box-sizing:border-box;
-			&.noResults{
-				background:transparent;
-				box-shadow:none;
-				text-align:center;
-				cursor:pointer;
-				padding-top:20px;
-				font-size:30px;
-				color:#5c5c5c;
-				.smiley{
-					transform: rotate(60deg);
-					letter-spacing:10px;
-					font-size:70px;
-				}
-				span{
-					display:block;
-					margin-bottom:20px;
-				}
-			}
-			&.loadMore{
-				padding:20px;
-				text-align: center;
-				text-transform:uppercase;
-				color:#9d9d9d;
-				font-weight:800;
-				background:#f6f6f6;
-				cursor:pointer;
-			}
-			header{
-				text-align:center;
-				margin:5px 0;
-				padding: 10px;
-				span.date {
-					display:inline-block;
-					color:grey;
-					font-size:12px;
-				}
-				h4{
-					font-weight:400;
-					letter-spacing:-2px;
-					font-size:40px;
-					margin:0;
-					margin-top:0px;
-					a{
-						color: map-deep-get($config, projects, headerColor);
-					}
-				}
-				span.type{
-					$default: #7a7a7a;
-					font-size:12px;
-					box-shadow:inset 0 0 0 1px rgba(0,0,0,.2);
-					background: lighten($default, 10%);
-					color:#fff;
-					border-radius:10px;
-					text-shadow:0 1px rgba(0,0,0,.5);
-					display:inline-block;
-					padding:2px 10px;
-					margin: 0 2px;
-					text-transform: uppercase;
-					&:before{
-						content: attr(data-text);
-					}
-					&.live{
-						background: map-deep-get($config, projects, live);
-					}
-					&.beta{
-						background: map-deep-get($config, projects, beta);
-					}
-					&.comingSoon{
-						background: map-deep-get($config, projects, comingSoon);
-					}
-				}
-			}
-			a:hover { // for read more button
-				cursor: pointer;
-				text-decoration: underline;
-			}
-			p{
-				margin:0 10px 10px 10px;
-			}
-			.languages{
-				margin:0 10px 10px 10px;
-				font-size:0;
-				&:before{
-					font-size:16px;
-					content:"Languages: ";
-					color: #7d7d7d;
-				}
-				a {
-					font-size: 16px;
-					border-radius:50px;
-					display:inline-block;
-					padding:4px 8px;
-					margin: 2px;
-					background: #ebebeb; 
-					text-decoration: none;
-					box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);
-					&:hover{
-						background: map-get($config, accent);
-						color:#fff;
-					}
-				}
-			}
-			.photos{
-				text-align:center;
-				margin-bottom:10px;
-				img, video{
-					max-width:25%;
-					max-height: 10rem;
-					vertical-align: middle;
-					cursor:pointer;
-					&.shadow{
-						box-shadow:0 5px 10px #838383;
-						margin: 0 10px;
-					}
-				}
-			}
+		p {
+			margin: 1rem 1rem;
+			font-size: 14px;
+		}
+		button {
+			margin-bottom: 1rem;
 		}
 	}
+	.project:nth-of-type(even) .image-container img {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 30px));
+	}
+
+	.noResults {
+		background: transparent;
+		box-shadow: none;
+		text-align: center;
+		cursor: pointer;
+		padding-top: 20px;
+		font-size: 30px;
+		color: #5c5c5c;
+		margin: 0 auto;
+		display: none;
+		&.visible {
+			display: block;
+		}
+		.smiley {
+			transform: rotate(60deg);
+			letter-spacing: 10px;
+			font-size: 70px;
+		}
+		span {
+			display: block;
+			margin-bottom: 20px;
+		}
+	}
+
+	.loadMore {
+		padding: 20px;
+		text-align: center;
+		text-transform: uppercase;
+		color: #9d9d9d;
+		font-weight: 800;
+		background: #f6f6f6;
+		margin: 3rem auto;
+		cursor: pointer;
+		&.hidden {
+			display: none;
+		}
+	}
+
 }
