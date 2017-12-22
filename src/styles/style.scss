@@ -77,7 +77,11 @@ html.webkit .container.projects header.main .maintext:before{
 
 svg { // revert what we did in critical css
 	display: block;
+	&.spritemap {
+		display: none;
+	}
 }
+
 
 /**
  * Animations
