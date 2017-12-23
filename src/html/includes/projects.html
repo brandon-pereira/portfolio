@@ -5,7 +5,8 @@
 	</header>
 		
 	<div class="content">
-		<div class="projects">
+		<div class="projects" data-columns>
+			{#
 			{% set arrays = [[], [], []] %}
 			{% for project in projects.projects.slice(0,6) %}
 				{% set arrays = (arrays[(loop.index - 1) % 3].push(project), arrays) %}
@@ -25,6 +26,20 @@
 					{% endfor %}
 				</div>
 			{% endfor %}
+			#}
+
+			 {% for project in projects.projects.slice(0,6) %}
+				<div class="project">
+					<div class="image-container">
+						<img src="{{project.images[0].src}}">
+					</div>
+					<h3>
+						<span>{{project.title}}</span>
+					</h3>
+					<p>{{project.shortDescription}}</p>
+					<button>Learn More</button>
+				</div>
+			 {% endfor %}
 		</div>
 			<div class="project loadMore">Load More</div>
 			<div class="project noResults">

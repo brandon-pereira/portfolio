@@ -5,6 +5,7 @@
   "repository": "https://github.com/brandon-pereira/portfolio",
   "main": "gulpfile.js",
   "dependencies": {
+    "salvattore": "^1.0.9",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {

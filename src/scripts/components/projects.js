@@ -3,19 +3,27 @@ import Base from './base';
 export default class Projects extends Base {
 
     init() {
-        this.projectsContainer = this.el.querySelector(".projects");
-        this.projects = this.projectsContainer.querySelectorAll('.project');
+        this.container = this.el.querySelector(".projects");
         this.loadMore = this.el.querySelector('.loadMore');
+        this.salvattore = import('salvattore');
         return super.init();
     }
 
-    mount() {
-
-    }
-
     events() {
-        this.loadMore.addEventListener('click', () => {
-            this.loadMore.classList.toggle('loading');
+        this.salvattore.then(salvattore => {
+            this.loadMore.addEventListener("click", () => {
+                this.loadMore.classList.add("loading");
+                const newEl = document.createElement("div");
+                salvattore.appendElements(this.container, newEl);
+                console.log(newEl);
+                this.loadMore.classList.remove("loading");
+            });
+
+              window.addEventListener("resize", () => {
+                this.salvattore.then(salvattore => {
+                  salvattore.recreateColumns(this.container);
+                });
+              });
         });
     }
 

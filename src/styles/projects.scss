@@ -56,6 +56,19 @@
 	.projects {
 		display: flex;
 		margin-top: 2rem;
+		&[data-columns]::before {
+			content: '1 .column.size1of1';
+		}
+		@include medium() {
+			&[data-columns]::before {
+				content: '2 .column.size1of2';
+			}
+		}
+		@include large() {
+			&[data-columns]::before {
+				content: '3 .column.size1of3';
+			}
+		}
 	}
 	.column {
 		flex: 1;
