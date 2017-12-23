@@ -151,6 +151,7 @@
 			"title": "Nissan: Recalls",
 			"date": "Dec 8 2016",
 			"languages": ["gulp", "javascript", "sass"],
+			"shortDescription": "Rebuilt the Nissan/Infiniti recalls web application to be fully responsive. Had only 5 days to fully complete.",
 			"description": "<p>Rebuilt the Nissan/Infiniti recalls web application to be fully responsive. Had only 5 days to fully complete.</p>",
 			"type": 2,
 			"status": "live",

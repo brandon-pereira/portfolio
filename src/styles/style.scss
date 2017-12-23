@@ -34,7 +34,7 @@
 html{
 	&.wf-active{
 		body{
-			font:1.2em "Open Sans", sans-serif;
+			font: 1.2rem "Open Sans", sans-serif;
 		}
     footer .content, .container.skills header.main h2 {
       font-family: 'Press Start 2P', sans-serif;
@@ -44,7 +44,10 @@ html{
     }
     .container.apps header.main .maintext{
       font-family: 'Bungee Shade', sans-serif;
-    }
+		}
+		.container.projects .projects .project p {
+			font-size: 12px;
+		}
 	}
 }
 
@@ -92,10 +95,10 @@ svg { // revert what we did in critical css
 };
 
 // @import 'header';
+@import 'g-loader';
 @import 'skills';
 @import 'projects';
 @import 'contact';
 @import 'footer';
 @import 'lightbox';
 @import 'apps';
-@import 'g-loader.css';

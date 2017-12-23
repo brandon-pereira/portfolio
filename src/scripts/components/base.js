@@ -9,11 +9,11 @@ export default class Base {
     }
 
     init() {
+        this.events();
         return Promise.resolve();
     }
 
     mount() {
-        this.events();
         return Promise.resolve();
     }
 

@@ -5,28 +5,32 @@
 	</header>
 		
 	<div class="content">
-		<div class="projects" data-columns>
+		<div class="projects">
+			{% set arrays = [[], [], []] %}
 			{% for project in projects.projects.slice(0,6) %}
-				<div class="project">
-					<div class="image-container">
-						<img src="{{project.images[0].src}}">
-						<h3>{{project.title}}</h3>
-					</div>
-					<p>{{project.shortDescription}}</p>
-					<button>Learn More</button>
+				{% set arrays = (arrays[(loop.index - 1) % 3].push(project), arrays) %}
+			{%endfor%}
+
+			{% for array in arrays %}
+				<div class="column">
+					 {% for project in array %}
+						<div class="project">
+							<div class="image-container">
+								<img src="{{project.images[0].src}}">
+							</div>
+							<h3><span>{{project.title}}</span></h3>
+							<p>{{project.shortDescription}}</p>
+							<button>Learn More</button>
+						</div>
+					{% endfor %}
 				</div>
 			{% endfor %}
 		</div>
-	</div>
-	<div class="project loadMore">Load More</div>
-	<div class="project noResults">
-		<div class="smiley">:(</div>
-		<span>No Results.</span>
-		<button data-bind="click: resetFilters">Reset Filters</button>
-	</div>
-	<div class="loading loaded">
-		<div class="plus-loader">
-			Loading…
-		</div>
+			<div class="project loadMore">Load More</div>
+			<div class="project noResults">
+				<div class="smiley">:(</div>
+				<span>No Results.</span>
+				<button data-bind="click: resetFilters">Reset Filters</button>
+			</div>
 	</div>
 </section>

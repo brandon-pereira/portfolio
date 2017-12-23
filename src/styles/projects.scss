@@ -2,6 +2,7 @@
 	background:#eee;
 	overflow:hidden;
 	box-shadow:0 -1px darken(#eee, 10%);
+	text-align: center;
 	header.main{
 		text-align:center;
 		margin:50px auto 20px auto;
@@ -54,39 +55,41 @@
 
 	.projects {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
 		margin-top: 2rem;
-		
+	}
+	.column {
+		flex: 1;
+		margin: 0 1rem;
 	}
 	.project {
-		width: calc(33.3% - 1rem);
-		color: #000;
-		margin: 0 0 1.5rem;
-		text-align: center;
+		margin: 0 0 2rem;
 		background: #fff;
 		border-radius: 0.5rem;
-		overflow: hidden;
 		box-shadow: 0 12px 10px rgba(0,0,0,.1);
+		overflow: hidden;
 		.image-container {
-			position: relative;
+			max-height: 200px;
+			overflow: hidden;
+			margin-bottom: -40px;
+			clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
 			img {
-				max-height: 300px;
+				position: relative;
+				top: -30px;
 				width: 100%;
-				clip-path: polygon(0 0, 100% 0, 100% calc(100% - 30px), 0 100%);
-				margin-bottom: -40px;
-				position: relative;
-				z-index: 0;
 			}
-
-			h3 {
-				margin: 0 2rem;
-				position: relative;
-				z-index: 1;
-				display: inline;
+		}
+		// https://css-tricks.com/multi-line-padded-text/
+		h3 {
+			position: relative;
+			z-index: 1;
+			display: inline;
+			span {
 				background: #292929;
 				color: #fff;
 				padding: 3px;
+				border-radius: 3px;
+				box-decoration-break: clone;
+				-webkit-box-decoration-break: clone;
 			}
 		}
 		p {
@@ -97,8 +100,8 @@
 			margin-bottom: 1rem;
 		}
 	}
-	.project:nth-of-type(even) .image-container img {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 30px));
+	.projects .column:nth-of-type(even) .project .image-container {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
 	}
 
 	.noResults {
@@ -132,10 +135,19 @@
 		color: #9d9d9d;
 		font-weight: 800;
 		background: #f6f6f6;
-		margin: 3rem auto;
+		margin: 1rem auto; 
+		width: 50%;
 		cursor: pointer;
 		&.hidden {
 			display: none;
+		}
+		&.loading {
+			transition: all .2s;
+			border-radius: 50% !important;
+			margin: 0 auto;
+			box-shadow: none;
+
+			@extend .plus-loader;
 		}
 	}
 
