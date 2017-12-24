@@ -6,37 +6,15 @@
 		
 	<div class="content">
 		<div class="projects" data-columns>
-			{#
-			{% set arrays = [[], [], []] %}
-			{% for project in projects.projects.slice(0,6) %}
-				{% set arrays = (arrays[(loop.index - 1) % 3].push(project), arrays) %}
-			{%endfor%}
-
-			{% for array in arrays %}
-				<div class="column">
-					 {% for project in array %}
-						<div class="project">
-							<div class="image-container">
-								<img src="{{project.images[0].src}}">
-							</div>
-							<h3><span>{{project.title}}</span></h3>
-							<p>{{project.shortDescription}}</p>
-							<button>Learn More</button>
-						</div>
-					{% endfor %}
-				</div>
-			{% endfor %}
-			#}
-
 			 {% for project in projects.projects.slice(0,6) %}
 				<div class="project">
 					<div class="image-container">
 						<img src="{{project.images[0].src}}">
 					</div>
 					<h3>
-						<span>{{project.title}}</span>
+						<span data-project-title>{{project.title}}</span>
 					</h3>
-					<p>{{project.shortDescription}}</p>
+					<p data-project-description>{{project.shortDescription}}</p>
 					<button>Learn More</button>
 				</div>
 			 {% endfor %}
@@ -46,6 +24,16 @@
 				<div class="smiley">:(</div>
 				<span>No Results.</span>
 				<button data-bind="click: resetFilters">Reset Filters</button>
+			</div>
+			<div class="project skeleton hidden">
+				<div class="image-container">
+					<img />
+				</div>
+				<h3>
+					<span data-project-title></span>
+				</h3>
+				<p data-project-description></p>
+				<button>Learn More</button>
 			</div>
 	</div>
 </section>

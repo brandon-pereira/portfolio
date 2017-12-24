@@ -80,8 +80,12 @@
 		border-radius: 0.5rem;
 		box-shadow: 0 12px 10px rgba(0,0,0,.1);
 		overflow: hidden;
+		&.hidden {
+			display: none;
+		}
 		.image-container {
 			max-height: 200px;
+			min-height: 60px;
 			overflow: hidden;
 			margin-bottom: -40px;
 			clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
@@ -89,6 +93,10 @@
 				position: relative;
 				top: -30px;
 				width: 100%;
+				&.shadow {
+					width: 140%;
+					left: -20%;
+				}
 			}
 		}
 		// https://css-tricks.com/multi-line-padded-text/
