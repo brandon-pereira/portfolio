@@ -1,4 +1,5 @@
 import Base from './base';
+import throttle from 'lodash.throttle';
 
 export default class Projects extends Base {
 
@@ -13,16 +14,19 @@ export default class Projects extends Base {
     }
 
     events() {
-        this.loadMore.addEventListener('click', () => {
-            this.loadMore.classList.add("loading");
-            this.showMoreProjects()
-                .then(() => setTimeout(() => this.loadMore.classList.remove("loading"), 500));
-        });
+        this.loadMore.addEventListener('click', this.onLoadMoreClick.bind(this));
 
         this.salvattore.then(salvattore =>
-              window.addEventListener("resize", () => // TODO: Debounce
-                  salvattore.recreateColumns(this.container)
-              )
+            window.addEventListener("resize", throttle(() => {
+                salvattore.recreateColumns(this.container); // redraw the grid
+            }, 1000))
+        );
+    }
+
+    onLoadMoreClick() {
+        this.loadMore.classList.add("loading");
+        this.showMoreProjects().then(() =>
+            setTimeout(() => this.loadMore.classList.remove("loading"), 500)
         );
     }
 
