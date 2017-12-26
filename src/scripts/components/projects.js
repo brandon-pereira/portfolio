@@ -1,5 +1,5 @@
 import Base from './base';
-import throttle from 'lodash.throttle';
+import throttle from '../lib/throttle';
 
 export default class Projects extends Base {
 
@@ -19,7 +19,7 @@ export default class Projects extends Base {
         this.salvattore.then(salvattore =>
             window.addEventListener("resize", throttle(() => {
                 salvattore.recreateColumns(this.container); // redraw the grid
-            }, 1000))
+            }, 500))
         );
     }
 
