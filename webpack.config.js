@@ -7,15 +7,20 @@ const getPlugins = () => {
 			minChunkSize: 10000
 		}),
 		new webpack.optimize.ModuleConcatenationPlugin(), // scope hoisting
-	]
+	];
 	
 	if(process.env.NODE_ENV === 'production') {
-		console.log("check");
-		plugins.push(
+		plugins.push(...[
 			new webpack.optimize.UglifyJsPlugin({
 				minimize: true,
 				sourceMap: true
 			})
+		]);
+	} else {
+		plugins.push(
+			...[
+				new webpack.SourceMapDevToolPlugin()
+			]
 		);
 	}
 	

@@ -33,7 +33,7 @@
     "webpack-stream": "^4.0.0"
   },
   "scripts": {
-    "build": "./node_modules/.bin/gulp build",
+    "build": "NODE_ENV='production' ./node_modules/.bin/gulp build",
     "start": "./node_modules/.bin/gulp serve",
     "test": "./node_modules/.bin/eslint test"
   },
