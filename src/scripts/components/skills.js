@@ -3,16 +3,16 @@ import Base from './base';
 export default class Skills extends Base {
 
     events() {
-        Array.from(this.el.querySelectorAll('[data-accordion-handler]')).forEach(handle =>
-            handle.addEventListener('click', this.toggleItem.bind(this))
+        this.el.querySelectorAll('[data-accordion-handler]').forEach(handle =>
+            handle.addEventListener('click', () => this.toggleItem(handle))
         );
 
         super.events();
     }
 
-    toggleItem(e) {
+    toggleItem(element) {
         // Get real element
-        const el = e.target.closest('.accordion');
+        const el = element.closest('.accordion');
 
         // Toggle current element
         el.classList.toggle("open");

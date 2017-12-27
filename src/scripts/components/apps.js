@@ -7,19 +7,19 @@ export default class Apps extends Base {
         this.slides = Array.from(this.el.querySelectorAll('.carousel-slides .carousel-slide'));
         this.currentSlide = this.slides[0];
         this.dots = Array.from(this.el.querySelectorAll('.carousel-dots .dot'));
-        return Promise.resolve();
+        return super.init();
     }
 
     events() {
-        Array.from(this.el.querySelectorAll('[data-goto]')).forEach(handle =>
-            handle.addEventListener('click', (e) => {
-                const el = e.target.closest('[data-goto]');
+        this.el.querySelectorAll('[data-goto]').forEach(el =>
+            el.addEventListener('click', () => {
+                console.log(el);
                 const goto = el.getAttribute('data-goto');
                 this.goto(goto);
             })
         );
 
-        super.events();
+        return super.events();
     }
 
     goto(slide) {
