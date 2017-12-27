@@ -43,9 +43,7 @@ export default class Projects extends Base {
                 }
                 return [toAdd, salvattore];
             })
-            .then(([toAdd, salvattore]) => {
-                return [toAdd.map((project) => this.createProjectNode(project)), salvattore];
-            })
+            .then(([toAdd, salvattore]) => [toAdd.map((project) => this.createProjectNode(project)), salvattore])
             .then(([els, salvattore]) => this.addElementsToGrid(salvattore, this.container, els))
             // .then((projects) => this.addElementsToGrid())
     }
