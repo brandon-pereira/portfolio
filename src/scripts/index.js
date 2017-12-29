@@ -7,6 +7,7 @@ const components = [
 ];
 
 components.forEach(component => {
+    console.log("here");
     component[0].then(Class => new Class(component[1], component[2] || {}));
 });
 

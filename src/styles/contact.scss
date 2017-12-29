@@ -14,7 +14,6 @@
 		display: inline-block;
 		box-sizing: border-box;
 		margin: 0 5px 5px 0;
-		// width: ~"calc("(100%*(1)) ~"- "(@margin)~")";
 		width:100%;
 		@include medium() {
 			width: calc(50% - 5px);

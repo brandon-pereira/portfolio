@@ -5,27 +5,33 @@
 	</header>
 		
 	<div class="content">
-		<div class="projects" data-columns>
-			 {% for project in projects.projects.slice(0,6) %}
-				<div class="project">
-					<div class="image-container">
-						<img src="{{project.images[0].src}}">
-					</div>
-					<h3>
-						<span data-project-title>{{project.title}}</span>
-					</h3>
-					<p data-project-description>{{project.shortDescription}}</p>
-					<button>Learn More</button>
-				</div>
-			 {% endfor %}
+		<div class="loading">
+			<div class="plus-loader">
+				Loading…
+			</div>
 		</div>
+		<div class="init">
+			<div class="projects" data-columns>
+				{% for project in projects.projects.slice(0,6) %}
+					<div class="project snippet">
+						<div class="image-container">
+							<img src="{{project.images[0].src}}">
+						</div>
+						<h3>
+							<span data-project-title>{{project.title}}</span>
+						</h3>
+						<p data-project-description>{{project.shortDescription}}</p>
+						<button data-learn-more="{{loop.index - 1}}">Learn More</button>
+					</div>
+				{% endfor %}
+			</div>
 			<div class="project loadMore">Load More</div>
 			<div class="project noResults">
 				<div class="smiley">:(</div>
 				<span>No Results.</span>
 				<button data-bind="click: resetFilters">Reset Filters</button>
 			</div>
-			<div class="project skeleton hidden">
+			<div class="project snippet hidden skeleton">
 				<div class="image-container">
 					<img />
 				</div>
@@ -33,7 +39,24 @@
 					<span data-project-title></span>
 				</h3>
 				<p data-project-description></p>
-				<button>Learn More</button>
+				<button data-learn-more>Learn More</button>
 			</div>
+			<div class="project detailed-view hidden">
+				<header>
+					<button data-back-button>
+						<svg>
+							<use xlink:href="#caret"></use>
+						</svg>
+						<span>BACK</span>
+					</button>
+					<span data-project-date>Loading...</span>
+					<span data-project-status></span>
+				</header>
+				<h3 data-project-title></h3>
+				<p data-project-description></p>
+				<div data-project-images></div>
+				<div data-project-languages></div>
+			</div>
+		</div>
 	</div>
 </section>

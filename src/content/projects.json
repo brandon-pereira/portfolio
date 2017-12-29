@@ -129,14 +129,12 @@
 				{
 					"title": "Mobile view of landing screen",
 					"src": "./projects/wingscheap-2.png",
-					"preview": "./projects/wingscheap-2-preview.jpg",
-					"styling": "shadow"
+					"preview": "./projects/wingscheap-2-preview.jpg"
 				},
 				{
 					"title": "Desktop view of landing screen",
 					"src": "./projects/wingscheap-1.png",
-					"preview": "./projects/wingscheap-1-preview.jpg",
-					"styling": "shadow"
+					"preview": "./projects/wingscheap-1-preview.jpg"
 				},
 				{
 					"title": "Mobile view of results screen",
