@@ -19,7 +19,8 @@ const getPlugins = () => {
 	} else {
 		plugins.push(
 			...[
-				new webpack.SourceMapDevToolPlugin()
+				new webpack.SourceMapDevToolPlugin(),
+				new webpack.HotModuleReplacementPlugin()
 			]
 		);
 	}
