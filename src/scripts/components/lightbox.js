@@ -24,7 +24,7 @@ class Lightbox {
         Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
         const ready = () => {
             this.el.querySelector('[data-asset]').appendChild($asset);
-            this._setLoading(false); 
+            this._setLoading(false);
         }
         if(type === 'img') {
             $asset.onload = ready;

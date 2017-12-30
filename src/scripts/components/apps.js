@@ -19,6 +19,28 @@ export default class Apps extends Base {
             })
         );
 
+        let start = 0;
+        let end = 0;
+
+        this.slides.forEach(el => el.addEventListener('touchstart', (event) => {
+            start = event.changedTouches[0].screenX;
+        }, false));
+
+        this.slides.forEach(el => el.addEventListener('touchend', (event) => {
+            end = event.changedTouches[0].screenX;
+            handleGesure(start, end, 50);
+        }, false));
+
+
+        const handleGesure = (touchstart, touchend, threshold) => {
+            if (touchend < touchstart && (touchstart - touchend) >= threshold) {
+                this.goto("next");
+            }
+            else if (touchend > touchstart && (touchend - touchstart) >= threshold) {
+                this.goto("prev");
+            }
+        }
+
         return super.events();
     }
 
