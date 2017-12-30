@@ -11,11 +11,15 @@
 					<div class="carousel-slide {{ " currentSlide " if loop.index === 1 }}" data-styling="{{app.theme}}">
 						<div class="row">
 							<div class="column-icon">
-								<a target="_" data-bind="attr: {href: link}"><img class="app-icon" src="{{app.icon}}"></a>
-								<a class="cta" target="_" data-bind="attr: {href: link}, css: {'unavailable': !link}"></a>
+								<a target="_" {% if app.link %}href="{{app.link}}"{% endif %}>
+									<img class="app-icon" src="{{app.icon}}">
+								</a>
+								<a class="cta {{ "unavailable" if not app.link }}" target="_" {% if app.link %}href="{{app.link}}"{% endif %}></a>
 							</div>
 							<div class="column-info">	
-								<a data-bind="attr: {href: link}" target="_"><h2>{{app.title}}</h2></a>
+								<a {% if app.link %}href="{{app.link}}"{% endif %} class="{{ "unavailable" if not app.link }}" target="_">
+									<h2>{{app.title}}</h2>
+								</a>
 								<p>{{app.description | safe}}</p>
 							</div>
 						</div>
