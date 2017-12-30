@@ -1,3 +1,7 @@
+if('animate' in document.body === false) {
+    import("web-animations-js");
+}
+
 import("../styles/style.scss");
 import("./components/webfontloader").then(webfontloader => webfontloader());
 import("./components/lightbox");

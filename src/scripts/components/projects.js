@@ -23,14 +23,18 @@ export default class Projects extends Base {
                 salvattore.recreateColumns(this.$projects); // redraw the grid
             }, 500))
         );
-        this.el.querySelectorAll('[data-learn-more]').forEach(el => el.addEventListener('click', () => {
-            this.onMoreDetailsClick(el.getAttribute('data-learn-more'))
+        this.el.querySelectorAll('[data-project-learn-more]').forEach(el => el.addEventListener('click', () => {
+            this.showMoreDetails(el.getAttribute('data-project-learn-more'))
         }));
 
-        this.onMoreDetailsClick(0);
     }
 
-    onMoreDetailsClick(id) {
+    /**
+     * Function to show details on a project (specified by the ID).
+     * @param {Number} id
+     */
+    showMoreDetails(id) {
+        console.log("Projects: Show more details for", id);
         this.fetchProjects()
             .then((projects) => {
                 // setTimeout(() => this.toggleDetailsView(false), 1000);
@@ -62,9 +66,15 @@ export default class Projects extends Base {
                 return [toAdd, salvattore];
             })
             .then(([toAdd, salvattore]) => [toAdd.map((project) => this._getSnippetNode(project)), salvattore])
-            .then(([els, salvattore]) => this.addElementsToGrid(salvattore, this.$projects, els))
+            .then(([els, salvattore]) => this._addElementsToGrid(salvattore, this.$projects, els))
     }
 
+    /**
+     * Function to build a snippet node from a project
+     * @param {Object} project
+     * @param {Statuses} statuses
+     * @return {Element}
+     */
     _getDetailsNode(project, statuses) {
         const $node = this.$detailed;
         // titte, description
@@ -100,15 +110,22 @@ export default class Projects extends Base {
         //     $lang.innerText = lang;
         //     $langs.appendChild($lang)
         // });
-
-
+        return $node;
     }
 
-    _getSnippetNode(project) {
+    /**
+     * Function to build a snippet node from a project
+     * @param {Object} project
+     * @return {Element}
+     */
+    _getSnippetNode(project, index) {
         const $project = this.$snippet.cloneNode(true);
         $project.classList.remove('skeleton');
         $project.querySelector('[data-project-title]').innerText = project.title;
         $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
+        $project.querySelector('[data-project-learn-more]').addEventListener('click', () => {
+            this.showMoreDetails(index);
+        })
         if(project.images && project.images.length) {
             $project.querySelector("img").src = project.images[0].src;
         }
@@ -151,8 +168,11 @@ export default class Projects extends Base {
 
     /**
      * Function to add elements to the projects grid
+     * @param salvatorre
+     * @param {Element} grid
+     * @param {Array} elements
      */
-    addElementsToGrid(salvattore, grid, elements) {
+    _addElementsToGrid(salvattore, grid, elements) {
         salvattore.appendElements(grid, elements);
         requestAnimationFrame(() => elements.forEach((el) => el.classList.remove('hidden')));
     }
