@@ -37,12 +37,7 @@ export default class Projects extends Base {
         console.log("Projects: Show more details for", id);
         this.fetchProjects()
             .then((projects) => {
-                // setTimeout(() => this.toggleDetailsView(false), 1000);
                 const project = projects.projects[id];
-                this.lightbox.then((l) => {
-                    console.log(l);
-                    l.open()
-                });
                 this._getDetailsNode(project, projects.statuses);
                 this._toggleDetailsView(true);
             })
@@ -98,6 +93,10 @@ export default class Projects extends Base {
             };
             const $asset = document.createElement(type);
             Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
+            $asset.addEventListener('click', () => this.lightbox.then((l) => {
+                l.set(asset);
+                l.open();
+            }))
             $node.querySelector('[data-project-images]').appendChild($asset);
         });
         // Date
