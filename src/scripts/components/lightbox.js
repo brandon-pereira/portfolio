@@ -47,7 +47,7 @@ class Lightbox {
     }
 
     events() {
-        this.el.querySelectorAll('[data-close]').forEach(el => el.addEventListener('click', () => this.close()));
+        this.el.addEventListener('click', () => this.close());
     }
 
     _setLoading(bool) {

@@ -7,15 +7,25 @@ export default class Apps extends Base {
         this.slides = Array.from(this.el.querySelectorAll('.carousel-slides .carousel-slide'));
         this.currentSlide = this.slides[0];
         this.dots = Array.from(this.el.querySelectorAll('.carousel-dots .dot'));
+        this.lightbox = import('./lightbox');
         return super.init();
     }
 
     events() {
         this.el.querySelectorAll('[data-goto]').forEach(el =>
             el.addEventListener('click', () => {
-                console.log(el);
                 const goto = el.getAttribute('data-goto');
                 this.goto(goto);
+            })
+        );
+
+        this.el.querySelectorAll('[data-lightbox]').forEach(el =>
+            el.addEventListener('click', () => {
+                const raw = el.getAttribute('data-lightbox');
+                this.lightbox.then((l) => {
+                    l.set(JSON.parse(raw));
+                    l.open();
+                })
             })
         );
 

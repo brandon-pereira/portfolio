@@ -25,7 +25,7 @@
 						</div>
 						<div class="row photos">
 							{% for app in app.images %}
-								<img src="{{app.preview if app.preview else app.src}}" title="{{app.title}}" class="{{app.styling}}">
+								<img src="{{app.preview if app.preview else app.src}}" title="{{app.title}}" class="{{app.styling}}" data-lightbox="{{app | dump}}">
 							{% endfor %}
 						</div>
 					</div>
