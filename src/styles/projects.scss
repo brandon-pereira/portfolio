@@ -57,6 +57,10 @@
 		display: flex;
 		margin-top: 2rem;
 		position: relative;
+		overflow: hidden;
+		&.hidden {
+			height: 0;
+		}
 		&[data-columns]::before {
 			display: none;
 			content: '1 .column.size1of1';

@@ -1,5 +1,6 @@
 import("../styles/style.scss");
 import("./components/webfontloader").then(webfontloader => webfontloader());
+import("./components/lightbox");
 const components = [
     [import("./components/skills"), document.querySelector(".skills"), {}],
     [import("./components/apps"), document.querySelector(".apps"), {}],
@@ -7,7 +8,6 @@ const components = [
 ];
 
 components.forEach(component => {
-    console.log("here");
     component[0].then(Class => new Class(component[1], component[2] || {}));
 });
 

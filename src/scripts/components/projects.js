@@ -4,22 +4,23 @@ import throttle from '../lib/throttle';
 export default class Projects extends Base {
 
     init() {
-        this.container = this.el.querySelector('.projects');
-        this.loadMore = this.el.querySelector('.loadMore');
-        this.backButton = this.el.querySelector('[data-back-button]');
-        this.skeleton = this.el.querySelector('.project.snippet.skeleton');
-        this.detailed = this.el.querySelector('.project.detailed-view');
-        this.numVisibleProjects = this.container.children.length;
+        this.$projects = this.el.querySelector('.projects');
+        this.$loadMore = this.el.querySelector('.loadMore');
+        this.$backButton = this.el.querySelector('[data-back-button]');
+        this.$snippet = this.el.querySelector('.project.snippet.skeleton');
+        this.$detailed = this.el.querySelector('.project.detailed-view');
+        this.numVisibleProjects = this.$projects.children.length;
+        this.lightbox = import('./lightbox');
         this.salvattore = import('salvattore'); // TODO: Salvattore auto-initializes when loaded, we should use a different module.
         return super.init();
     }
 
     events() {
-        this.loadMore.addEventListener('click', this.onLoadMoreClick.bind(this));
-        this.backButton.addEventListener('click', () => this._toggleDetailsView(false))
+        this.$loadMore.addEventListener('click', this.onLoadMoreClick.bind(this));
+        this.$backButton.addEventListener('click', () => this._toggleDetailsView(false))
         this.salvattore.then(salvattore =>
             window.addEventListener("resize", throttle(() => {
-                salvattore.recreateColumns(this.container); // redraw the grid
+                salvattore.recreateColumns(this.$projects); // redraw the grid
             }, 500))
         );
         this.el.querySelectorAll('[data-learn-more]').forEach(el => el.addEventListener('click', () => {
@@ -30,20 +31,24 @@ export default class Projects extends Base {
     }
 
     onMoreDetailsClick(id) {
-        this._toggleDetailsView(true);
         this.fetchProjects()
             .then((projects) => {
                 // setTimeout(() => this.toggleDetailsView(false), 1000);
                 const project = projects.projects[id];
-               return this._getDetailsNode(project, projects.statuses);
+                this.lightbox.then((l) => {
+                    console.log(l);
+                    l.open()
+                });
+                this._getDetailsNode(project, projects.statuses);
+                this._toggleDetailsView(true);
             })
 
     }
 
     onLoadMoreClick() {
-        this.loadMore.classList.add("loading");
+        this.$loadMore.classList.add("loading");
         this.showMoreProjects().then(() =>
-            setTimeout(() => this.loadMore.classList.remove("loading"), 500)
+            setTimeout(() => this.$loadMore.classList.remove("loading"), 500)
         );
     }
 
@@ -53,28 +58,25 @@ export default class Projects extends Base {
             .then(([projects, salvattore]) => {
                 const toAdd = projects.projects.slice(this.numVisibleProjects, this.numVisibleProjects + 3);
                 this.numVisibleProjects += 3;
-                if(this.numVisibleProjects >= projects.projects.length) {
-                    this.loadMore.classList.add('hidden');
-                } else {
-                    this.loadMore.classList.remove('hidden');
-                }
+                this.$loadMore.classList.toggle('hidden', this.numVisibleProjects >= projects.projects.length);
                 return [toAdd, salvattore];
             })
-            .then(([toAdd, salvattore]) => [toAdd.map((project) => this._createSnippetNode(project)), salvattore])
-            .then(([els, salvattore]) => this.addElementsToGrid(salvattore, this.container, els))
+            .then(([toAdd, salvattore]) => [toAdd.map((project) => this._getSnippetNode(project)), salvattore])
+            .then(([els, salvattore]) => this.addElementsToGrid(salvattore, this.$projects, els))
     }
 
     _getDetailsNode(project, statuses) {
+        const $node = this.$detailed;
         // titte, description
-        this.detailed.querySelector('[data-project-title]').innerText = project.title;
-        this.detailed.querySelector('[data-project-description]').innerHTML = project.description;
+        $node.querySelector('[data-project-title]').innerText = project.title;
+        $node.querySelector('[data-project-description]').innerHTML = project.description;
         // status
         const status = statuses[project.status];
-        const $status = this.detailed.querySelector('[data-project-status]');
+        const $status = $node.querySelector('[data-project-status]');
         $status.setAttribute('class', status.class);
         $status.innerText = status.title;
         // assets
-        const $images = this.detailed.querySelector('[data-project-images]');
+        const $images = $node.querySelector('[data-project-images]');
         $images.innerHTML = ''; // clear
         project.images.forEach((asset) => {
             const type = asset.type || 'img';
@@ -86,10 +88,10 @@ export default class Projects extends Base {
             };
             const $asset = document.createElement(type);
             Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
-            this.detailed.querySelector('[data-project-images]').appendChild($asset);
+            $node.querySelector('[data-project-images]').appendChild($asset);
         });
         // Date
-        this.detailed.querySelector('[data-project-date]').innerText = new Date(project.date).toString()
+        $node.querySelector('[data-project-date]').innerText = this._getFormatedDate(new Date(project.date));
         // TODO: languages
         // const $langs = this.detailed.querySelector('[data-project-languages]');
         // $langs.innerHTML = '';
@@ -103,7 +105,7 @@ export default class Projects extends Base {
     }
 
     _getSnippetNode(project) {
-        const $project = this.skeleton.cloneNode(true);
+        const $project = this.$snippet.cloneNode(true);
         $project.classList.remove('skeleton');
         $project.querySelector('[data-project-title]').innerText = project.title;
         $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
@@ -113,17 +115,38 @@ export default class Projects extends Base {
         return $project;
     }
 
+    /**
+     * Function to show/hide details view
+     * @param {Boolean} isShow
+     */
     _toggleDetailsView(isShow) {
-        this.detailed.classList.toggle("hidden", !isShow);
-        setTimeout(() => this.loadMore.classList.toggle('hidden', isShow), isShow ? 0 : 500); // TODO: this should be a callabck
-        this.detailed.animate([
-            { left: "100%", opacity: 0, height: 0 },
-            { left: 0, opacity: 1, height: "auto" }
-        ], { duration: 500, fill: "both", direction: isShow ? 'normal' : 'reverse' });
-        this.container.animate([
-            { left: 0, height: "auto", opacity: 1 },
-            { left: "-100%", height: 0, opacity: 0 }
-        ], { duration: 500, fill: "both", direction: isShow ? "normal" : "reverse" });
+        this.$loadMore.classList.add('hidden');
+        this.$detailed.animate([
+            { left: "100%", opacity: 0},
+            { left: 0, opacity: 1}
+        ], { duration: 200, fill: "both", direction: isShow ? 'normal' : 'reverse' });
+       this.$projects.animate([
+            { left: 0, opacity: 1 },
+           { left: "-100%", opacity: 0 }
+        ], { duration: 200, fill: "both", direction: isShow ? "normal" : "reverse" })
+        .onfinish = () => {
+            this.$detailed.classList.toggle('hidden');
+            this.$projects.classList.toggle('hidden');
+            if(!isShow) {
+                this.$loadMore.classList.remove('hidden');
+            }
+        }
+    }
+
+    /**
+     * Function to format a date into format Weekday, Month Day, Year
+     * @param {Date} date Date to format
+     * @return {String} Formatted string
+     */
+    _getFormatedDate(date) {
+        var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        return days[date.getDay()] + ', ' + months[date.getMonth()] + ' ' + date.getDate(0) + ', ' + date.getFullYear();
     }
 
     /**
