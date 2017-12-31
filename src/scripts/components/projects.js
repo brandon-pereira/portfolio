@@ -60,7 +60,7 @@ export default class Projects extends Base {
                 this.$loadMore.classList.toggle('hidden', this.numVisibleProjects >= projects.projects.length);
                 return [toAdd, salvattore];
             })
-            .then(([toAdd, salvattore]) => [toAdd.map((project) => this._getSnippetNode(project)), salvattore])
+            .then(([toAdd, salvattore]) => [toAdd.map((project, index) => this._getSnippetNode(project, (this.numVisibleProjects - 3) + index)), salvattore])
             .then(([els, salvattore]) => this._addElementsToGrid(salvattore, this.$projects, els))
     }
 
@@ -71,9 +71,15 @@ export default class Projects extends Base {
      * @return {Element}
      */
     _getDetailsNode(project, statuses) {
+        console.log("Set details for project", project);
         const $node = this.$detailed;
         // titte, description
         $node.querySelector('[data-project-title]').innerText = project.title;
+        if(project.link) {
+            $node.querySelector('[data-project-link]').href = project.link;
+        } else {
+            $node.querySelector('[data-project-title]').removeAttribute('href');
+        }
         $node.querySelector('[data-project-description]').innerHTML = project.description;
         // status
         const status = statuses[project.status];
@@ -121,6 +127,11 @@ export default class Projects extends Base {
         const $project = this.$snippet.cloneNode(true);
         $project.classList.remove('skeleton');
         $project.querySelector('[data-project-title]').innerText = project.title;
+        if (project.link) {
+            $project.querySelector('[data-project-link]').href = project.link;
+        } else {
+            $project.querySelector('[data-project-title]').removeAttribute('href');
+        }
         $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
         $project.querySelector('[data-project-learn-more]').addEventListener('click', () => {
             this.showMoreDetails(index);
