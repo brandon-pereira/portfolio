@@ -18,7 +18,11 @@
 							<img src="{{project.images[0].src}}">
 						</div>
 						<h3>
-							<span data-project-title>{{project.title}}</span>
+							{% if project.link %}
+								<a href="{{project.link}}" target="_" data-project-title>{{project.title}}</a>
+							{% else %}
+								<span data-project-title>{{project.title}}</span>
+							{% endif %}
 						</h3>
 						<p data-project-description>{{project.shortDescription}}</p>
 						<button data-project-learn-more="{{loop.index - 1}}">Learn More</button>

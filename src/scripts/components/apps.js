@@ -29,6 +29,7 @@ export default class Apps extends Base {
             })
         );
 
+        // Swiping (mobile)
         let start = 0;
         let end = 0;
 

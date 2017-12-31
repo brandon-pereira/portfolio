@@ -120,12 +120,13 @@
 			position: relative;
 			z-index: 1;
 			display: inline;
-			span {
+			span, a {
 				background: #292929;
 				color: #fff;
 				padding: 3px;
 				border-radius: 3px;
 				box-decoration-break: clone;
+				text-decoration: none;
 				-webkit-box-decoration-break: clone;
 			}
 		}
