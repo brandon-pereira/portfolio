@@ -9,10 +9,10 @@ module.exports = function(config, gulp) {
 	gulp.task('html', () =>
 		gulp.src(config.paths.src.html)
 			.pipe(data(() => ({
-				projects: require('../src/content/projects.json'),
-				apps: require('../src/content/apps.json'),
-				skills: require('../src/content/skills.json'),
-				contact: require('../src/content/contact.json')
+				projects: requireUncached('../src/content/projects.json'),
+				apps: requireUncached('../src/content/apps.json'),
+				skills: requireUncached('../src/content/skills.json'),
+				contact: requireUncached('../src/content/contact.json')
 			})))
 			.pipe(nunjucks({
 				path: ['./src/html', './src'],
@@ -39,3 +39,9 @@ module.exports = function(config, gulp) {
 	);
 	
 };
+
+// De-caching for Data files
+function requireUncached($module) {
+    delete require.cache[require.resolve($module)];
+    return require($module);
+}
