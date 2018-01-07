@@ -146,7 +146,7 @@ export default class Projects extends Base {
      * @param {Boolean} isShow
      */
     _toggleDetailsView(isShow) {
-        this.scroll.then((s) => s.scrollTo(this.el, 250));
+        this.scroll.then((s) => s.scrollTo(this.el));
         this.$loadMore.classList.add('hidden');
         this.$detailed.animate([
             { left: "100%", opacity: 0},

@@ -6,9 +6,10 @@ export default class Skills extends Base {
         this.el.querySelectorAll('[data-accordion-handler]').forEach(handle =>
             handle.addEventListener('click', () => this.toggleItem(handle))
         );
-        
-        this.el.addEventListener('goToSkill', (e) => this.deeplink(e.detail));
 
+        this.el.addEventListener('goToSkill', (e) => this.deeplink(e.detail));
+        // document.querySelector('#skills').dispatchEvent(new CustomEvent('goToSkill', { detail: 'git' }));
+        
         super.events();
     }
 

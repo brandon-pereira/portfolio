@@ -6,6 +6,7 @@ class Scroll {
         this.sections = Array.from(document.querySelectorAll('.container'));
         this.analytics = Array.from(document.querySelectorAll('[data-track-section]')).map(el => el.getAttribute('id'));
 
+        this._trackSmoothScrollLinks();
         this._trackSectionScrolling();
     }
 
@@ -30,8 +31,8 @@ class Scroll {
      * @param {Element} element
      * @param {Number} speed time to scroll to in ms
      */
-    scrollTo(element, speed = 500) {
-        this._scroll(element.getBoundingClientRect().top + window.scrollY, speed);
+    scrollTo(element, speed = 200, hash) {
+        this._scroll(element.getBoundingClientRect().top + window.scrollY, speed, hash);
     }
 
     /**
@@ -53,6 +54,19 @@ class Scroll {
         }, 500));
     }
 
+    /**
+     * Method which adds event listeners to all the [data-smooth-scroll] elements
+     * and enables smoothly scrolling them.
+     */
+    _trackSmoothScrollLinks() {
+        document.querySelectorAll('[data-smooth-scroll]').forEach((el) => {
+            el.addEventListener('click', (e) => {
+                e.preventDefault();
+                const hash = e.currentTarget.getAttribute('href');
+                this.scrollTo(document.querySelector(hash), 200, hash);
+            });
+        });
+    }
 
     _logEvent(event, action) {
         if (window.ga) {
@@ -62,6 +76,13 @@ class Scroll {
         }
     }
 
+    /**
+     * Method to smooth scroll page. Recursive.
+     * @private
+     * @param {Number} to where to scroll to (in px) from top of page
+     * @param {Number} duration how long animation should take
+     * @param {String} hash url location after scroll
+     */
     _scroll(to, duration, hash) {
         if (duration <= 0) {
             if(hash) {
