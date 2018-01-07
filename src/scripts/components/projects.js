@@ -10,8 +10,6 @@ export default class Projects extends Base {
         this.$snippet = this.el.querySelector('.project.snippet.skeleton');
         this.$detailed = this.el.querySelector('.project.detailed-view');
         this.numVisibleProjects = this.$projects.children.length;
-        this.lightbox = import('../services/lightbox');
-        this.scroll = import('../services/scroll');
         this.salvattore = import('salvattore'); // TODO: Salvattore auto-initializes when loaded, we should use a different module.
         return super.init();
     }

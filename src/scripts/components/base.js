@@ -3,6 +3,8 @@ export default class Base {
     constructor(el, props = {}) {
         this.el = el;
         this.props = props;
+        this.lightbox = import('../services/lightbox');
+        this.scroll = import('../services/scroll');
         this.init()
             .then(() => this.setLoading(false))
             .catch((err) => console.error(err));
