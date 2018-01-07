@@ -10,7 +10,8 @@ export default class Projects extends Base {
         this.$snippet = this.el.querySelector('.project.snippet.skeleton');
         this.$detailed = this.el.querySelector('.project.detailed-view');
         this.numVisibleProjects = this.$projects.children.length;
-        this.lightbox = import('./lightbox');
+        this.lightbox = import('../services/lightbox');
+        this.scroll = import('../services/scroll');
         this.salvattore = import('salvattore'); // TODO: Salvattore auto-initializes when loaded, we should use a different module.
         return super.init();
     }
@@ -147,6 +148,7 @@ export default class Projects extends Base {
      * @param {Boolean} isShow
      */
     _toggleDetailsView(isShow) {
+        this.scroll.then((s) => s.scrollTo(this.el, 250));
         this.$loadMore.classList.add('hidden');
         this.$detailed.animate([
             { left: "100%", opacity: 0},

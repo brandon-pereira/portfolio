@@ -1,0 +1,83 @@
+import debounce from '../lib/debounce';
+
+class Scroll {
+
+    constructor() {
+        this.sections = Array.from(document.querySelectorAll('.container'));
+        this.analytics = Array.from(document.querySelectorAll('[data-track-section]')).map(el => el.getAttribute('id'));
+
+        this._trackSectionScrolling();
+    }
+
+    /**
+     * Function to check if element is in view.
+     * Based loosely off https://github.com/camwiegert/in-view/blob/master/src/viewport.js
+     * @param {Element} element element to check against
+     * @param {Number} threshold amount of extra space above and below
+     */
+    isInView(element, threshold = 0.5) {
+        const { top, bottom, height } = element.getBoundingClientRect();
+        const intersection = {
+            t: bottom,
+            b: window.innerHeight - top
+        };
+        const _threshold = threshold * height;
+        return intersection.t > _threshold && intersection.b > _threshold;
+    }
+
+    /**
+     * Function to scroll to an element in the DOM.
+     * @param {Element} element
+     * @param {Number} speed time to scroll to in ms
+     */
+    scrollTo(element, speed = 500) {
+        this._scroll(element.getBoundingClientRect().top + window.scrollY, speed);
+    }
+
+    /**
+     * Function to track section scrolls. Being debounced by half a second
+     * Based loosely off https://github.com/camwiegert/in-view/blob/master/src/viewport.js
+     */
+    _trackSectionScrolling() {
+        document.addEventListener('scroll', debounce(() => {
+            this.sections.forEach((section, i) => {
+                if (this.isInView(section)) {
+                    const name = section.getAttribute('id');
+                    console.log("inview", name);
+                    if (this.analytics.indexOf(name) !== -1) {
+                        this.analytics.splice(i, 1);
+                        console.log("analytics", name);
+                    }
+                }
+            });
+        }, 500));
+    }
+
+
+    _logEvent(event, action) {
+        if (window.ga) {
+            window.ga('send', 'event', 'scroll', event, action);
+        } else {
+            console.warn("Google Analytics not detected on page. Might be blocked?");
+        }
+    }
+
+    _scroll(to, duration, hash) {
+        if (duration <= 0) {
+            if(hash) {
+                location.hash = hash;
+            }
+            return;
+        }
+        var difference = to - window.scrollY;
+        var perTick = difference / duration * 10;
+        requestAnimationFrame(() => {
+            if (!isNaN(parseInt(perTick, 10))) {
+                window.scrollTo(0, window.scrollY + perTick);
+                this._scroll(to, duration - 10, hash);
+            }
+        });
+    }
+}
+
+export default new Scroll();
