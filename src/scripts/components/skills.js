@@ -6,6 +6,8 @@ export default class Skills extends Base {
         this.el.querySelectorAll('[data-accordion-handler]').forEach(handle =>
             handle.addEventListener('click', () => this.toggleItem(handle))
         );
+        
+        this.el.addEventListener('goToSkill', (e) => this.deeplink(e.detail));
 
         super.events();
     }
@@ -28,7 +30,6 @@ export default class Skills extends Base {
     deeplink(id) {
         const skill = this.el.querySelector('[data-id=' + id + ']');
         const category = skill.closest('.accordion.category');
-        console.log(skill);
         if (skill) {
             if (!category.classList.contains('open')) this.toggleItem(category);
             if (!skill.classList.contains('open')) this.toggleItem(skill);
