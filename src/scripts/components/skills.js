@@ -25,4 +25,14 @@ export default class Skills extends Base {
         });
     }
 
+    // deeplink(skill) {
+        // var skill = $(this.$element).find('[data-id=' + id + ']');
+        // var category = $(skill).closest('.accordion.category');
+        // if (skill.length >= 1) {
+            // if (!category.hasClass('open')) this._open(category);
+            // if (!skill.hasClass('open')) this._open(skill);
+            // this.scroll.scrollTo($('#skills'));
+        // }
+    // }
+
 }
