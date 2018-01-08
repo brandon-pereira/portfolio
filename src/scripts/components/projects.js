@@ -107,13 +107,14 @@ export default class Projects extends Base {
         // Date
         $node.querySelector('[data-project-date]').innerText = this._getFormatedDate(new Date(project.date));
         // TODO: languages
-        // const $langs = this.detailed.querySelector('[data-project-languages]');
-        // $langs.innerHTML = '';
-        // project.languages.forEach((lang) => {
-        //     const $lang = document.createElement('span')
-        //     $lang.innerText = lang;
-        //     $langs.appendChild($lang)
-        // });
+        const $langs = $node.querySelector('[data-project-languages]');
+        $langs.innerHTML = '';
+        project.languages.forEach((lang) => {
+            const $lang = document.createElement('span');
+            $lang.addEventListener('click', () => document.querySelector('#skills').dispatchEvent(new CustomEvent('goToSkill', { detail: lang })));
+            $lang.innerText = lang;
+            $langs.appendChild($lang)
+        });
         return $node;
     }
 
