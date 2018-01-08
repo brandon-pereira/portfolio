@@ -8,7 +8,6 @@ export default class Skills extends Base {
         );
 
         this.el.addEventListener('goToSkill', (e) => this.deeplink(e.detail));
-        // document.querySelector('#skills').dispatchEvent(new CustomEvent('goToSkill', { detail: 'git' }));
         
         super.events();
     }
@@ -30,11 +29,13 @@ export default class Skills extends Base {
 
     deeplink(id) {
         const skill = this.el.querySelector('[data-id=' + id + ']');
-        const category = skill.closest('.accordion.category');
         if (skill) {
+            const category = skill.closest('.accordion.category');
             if (!category.classList.contains('open')) this.toggleItem(category);
             if (!skill.classList.contains('open')) this.toggleItem(skill);
             this.scroll.then((s) => s.scrollTo(this.el));
+        } else {
+            console.warn("No skills section found for", id);
         }
     }
 
