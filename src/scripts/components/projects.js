@@ -25,6 +25,7 @@ export default class Projects extends Base {
         this.el.querySelectorAll('[data-project-learn-more]').forEach(el => el.addEventListener('click', () => {
             this.showMoreDetails(el.getAttribute('data-project-learn-more'))
         }));
+        this.el.addEventListener('goToLang', (e) => this.deeplink(e.detail));
 
     }
 
@@ -61,6 +62,12 @@ export default class Projects extends Base {
             })
             .then(([toAdd, salvattore]) => [toAdd.map((project, index) => this._getSnippetNode(project, (this.numVisibleProjects - 3) + index)), salvattore])
             .then(([els, salvattore]) => this._addElementsToGrid(salvattore, this.$projects, els))
+    }
+
+    deeplink(language) {
+        console.info("Projects: Filtering projects by", language);
+        this.scroll.then(s => s.scrollTo(this.el));
+
     }
 
     /**

@@ -6,10 +6,18 @@ export default class Skills extends Base {
         this.el.querySelectorAll('[data-accordion-handler]').forEach(handle =>
             handle.addEventListener('click', () => this.toggleItem(handle))
         );
+        
+        this.el.querySelectorAll('[data-go-to-project]').forEach(handle =>
+            handle.addEventListener('click', () =>
+                this.goToSkill(handle.getAttribute('data-go-to-project'))))
 
         this.el.addEventListener('goToSkill', (e) => this.deeplink(e.detail));
         
         super.events();
+    }
+
+    goToSkill(lang) {
+        document.querySelector('#projects').dispatchEvent(new CustomEvent('goToLang', {detail: lang}))
     }
 
     toggleItem(element) {
