@@ -32,10 +32,11 @@ export default class Projects extends Base {
     /**
      * Function to show details on a project (specified by the ID).
      * @param {Number} id
+     * @return {Promise}
      */
     showMoreDetails(id) {
-        console.log("Projects: Show more details for", id);
-        this.fetchProjects()
+        console.info("Projects: Show more details for", id);
+        return this.fetchProjects()
             .then((projects) => {
                 const project = projects.projects[id];
                 this._getDetailsNode(project, projects.statuses);
@@ -44,113 +45,56 @@ export default class Projects extends Base {
 
     }
 
+    /**
+     * Handler for load more button click. Handles loading state and delegates.
+     * @return {Promise}
+     */
     onLoadMoreClick() {
         this.$loadMore.classList.add("loading");
-        this.showMoreProjects().then(() =>
+        return this.showMoreProjects().then(() =>
             setTimeout(() => this.$loadMore.classList.remove("loading"), 500)
         );
     }
 
-    // TODO: Refactor with async await
+    /**
+     * Function to show more projects.
+     * @return {Promise}
+     */
     showMoreProjects() {
-        return Promise.all([this.fetchProjects(), this.salvattore])
-            .then(([projects, salvattore]) => {
+        return this.fetchProjects()
+            .then(projects => {
                 const toAdd = projects.projects.slice(this.numVisibleProjects, this.numVisibleProjects + 3);
                 this.numVisibleProjects += 3;
                 this.$loadMore.classList.toggle('hidden', this.numVisibleProjects >= projects.projects.length);
-                return [toAdd, salvattore];
+                return toAdd;
             })
-            .then(([toAdd, salvattore]) => [toAdd.map((project, index) => this._getSnippetNode(project, (this.numVisibleProjects - 3) + index)), salvattore])
-            .then(([els, salvattore]) => this._addElementsToGrid(salvattore, this.$projects, els))
+            .then(toAdd => toAdd.map((project, index) =>
+                this._getSnippetNode(project, (this.numVisibleProjects - 3) + index)
+            ))
+            .then(elements => this._addElementsToGrid(this.$projects, elements))
     }
 
+    /**
+     * Function to delegate out deeplink referrals
+     * @param {String} language
+     */
     deeplink(language) {
         console.info("Projects: Filtering projects by", language);
         this.scroll.then(s => s.scrollTo(this.el));
-
+        this._removeAllElementsFromGrid(this.$projects);
     }
 
     /**
-     * Function to build a snippet node from a project
-     * @param {Object} project
-     * @param {Statuses} statuses
-     * @return {Element}
+     * Function to fetch projects bundle
+     * @return Promise
      */
-    _getDetailsNode(project, statuses) {
-        console.log("Set details for project", project);
-        const $node = this.$detailed;
-        // titte, description
-        $node.querySelector('[data-project-title]').innerText = project.title;
-        if(project.link) {
-            $node.querySelector('[data-project-link]').href = project.link;
-        } else {
-            $node.querySelector('[data-project-title]').removeAttribute('href');
-        }
-        $node.querySelector('[data-project-description]').innerHTML = project.description;
-        // status
-        const status = statuses[project.status];
-        const $status = $node.querySelector('[data-project-status]');
-        $status.setAttribute('class', status.class);
-        $status.innerText = status.title;
-        // assets
-        const $images = $node.querySelector('[data-project-images]');
-        $images.innerHTML = ''; // clear
-        project.images.forEach((asset) => {
-            const type = asset.type || 'img';
-            const config = {
-                src: asset.src,
-                autoplay: true,
-                muted: true,
-                class: asset.styling
-            };
-            const $asset = document.createElement(type);
-            Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
-            $asset.addEventListener('click', () => this.lightbox.then((l) => {
-                l.set(asset);
-                l.open();
-            }))
-            $node.querySelector('[data-project-images]').appendChild($asset);
-        });
-        // Date
-        $node.querySelector('[data-project-date]').innerText = this._getFormatedDate(new Date(project.date));
-        // TODO: languages
-        const $langs = $node.querySelector('[data-project-languages]');
-        $langs.innerHTML = '';
-        project.languages.forEach((lang) => {
-            const $lang = document.createElement('span');
-            $lang.addEventListener('click', () => document.querySelector('#skills').dispatchEvent(new CustomEvent('goToSkill', { detail: lang })));
-            $lang.innerText = lang;
-            $langs.appendChild($lang)
-        });
-        return $node;
-    }
-
-    /**
-     * Function to build a snippet node from a project
-     * @param {Object} project
-     * @return {Element}
-     */
-    _getSnippetNode(project, index) {
-        const $project = this.$snippet.cloneNode(true);
-        $project.classList.remove('skeleton');
-        $project.querySelector('[data-project-title]').innerText = project.title;
-        if (project.link) {
-            $project.querySelector('[data-project-link]').href = project.link;
-        } else {
-            $project.querySelector('[data-project-title]').removeAttribute('href');
-        }
-        $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
-        $project.querySelector('[data-project-learn-more]').addEventListener('click', () => {
-            this.showMoreDetails(index);
-        })
-        if(project.images && project.images.length) {
-            $project.querySelector("img").src = project.images[0].src;
-        }
-        return $project;
+    fetchProjects() {
+        return import ('../../content/projects.json')
     }
 
     /**
      * Function to show/hide details view
+     * TODO: Refactor to not use .animate since browser support sucks
      * @param {Boolean} isShow
      */
     _toggleDetailsView(isShow) {
@@ -186,23 +130,106 @@ export default class Projects extends Base {
 
     /**
      * Function to add elements to the projects grid
-     * @param salvatorre
      * @param {Element} grid
      * @param {Array} elements
+     * @return {Promise}
      */
-    _addElementsToGrid(salvattore, grid, elements) {
-        salvattore.appendElements(grid, elements);
-        requestAnimationFrame(() => elements.forEach((el) => el.classList.remove('hidden')));
+    _addElementsToGrid(grid, elements) {
+        return this.salvattore.then((salvattore) => {
+            salvattore.appendElements(grid, elements);
+            requestAnimationFrame(() => elements.forEach((el) => el.classList.remove('hidden')));
+        });
     }
 
     /**
-     * Function to fetch projects bundle
-     * @return Promise
+     * Function to remove all elements from grid.
+     * @param {Element} grid
+     * @return {Promise}
      */
-    fetchProjects() {
-        return import('../../content/projects.json')
+    _removeAllElementsFromGrid(grid) {
+        return this.salvattore.then((salvattore) =>
+            salvattore.removeColumns(grid)
+        );
     }
 
+    /**
+     * Function to build a snippet node from a project
+     * @param {Object} project
+     * @param {Statuses} statuses
+     * @return {Element}
+     */
+    _getDetailsNode(project, statuses) {
+        console.log("Set details for project", project);
+        const $node = this.$detailed;
+        // titte, description
+        $node.querySelector('[data-project-title]').innerText = project.title;
+        if (project.link) {
+            $node.querySelector('[data-project-link]').href = project.link;
+        } else {
+            $node.querySelector('[data-project-title]').removeAttribute('href');
+        }
+        $node.querySelector('[data-project-description]').innerHTML = project.description;
+        // status
+        const status = statuses[project.status];
+        const $status = $node.querySelector('[data-project-status]');
+        $status.setAttribute('class', status.class);
+        $status.innerText = status.title;
+        // assets
+        const $images = $node.querySelector('[data-project-images]');
+        $images.innerHTML = ''; // clear
+        project.images.forEach((asset) => {
+            const type = asset.type || 'img';
+            const config = {
+                src: asset.src,
+                autoplay: true,
+                muted: true,
+                class: asset.styling
+            };
+            const $asset = document.createElement(type);
+            Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
+            $asset.addEventListener('click', () => this.lightbox.then((l) => {
+                l.set(asset);
+                l.open();
+            }))
+            $node.querySelector('[data-project-images]').appendChild($asset);
+        });
+        // Date
+        $node.querySelector('[data-project-date]').innerText = this._getFormatedDate(new Date(project.date));
+        // languages
+        const $langs = $node.querySelector('[data-project-languages]');
+        $langs.innerHTML = '';
+        project.languages.forEach((lang) => {
+            const $lang = document.createElement('span');
+            $lang.addEventListener('click', () => document.querySelector('#skills').dispatchEvent(new CustomEvent('goToSkill', {
+                detail: lang
+            })));
+            $lang.innerText = lang;
+            $langs.appendChild($lang)
+        });
+        return $node;
+    }
 
-
+    /**
+     * Function to build a snippet node from a project
+     * @param {Object} project
+     * @return {Element}
+     */
+    _getSnippetNode(project, index) {
+        const $project = this.$snippet.cloneNode(true);
+        $project.classList.remove('skeleton');
+        $project.querySelector('[data-project-title]').innerText = project.title;
+        if (project.link) {
+            $project.querySelector('[data-project-link]').href = project.link;
+        } else {
+            $project.querySelector('[data-project-title]').removeAttribute('href');
+        }
+        $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
+        $project.querySelector('[data-project-learn-more]').addEventListener('click', () => {
+            this.showMoreDetails(index);
+        })
+        if (project.images && project.images.length) {
+            $project.querySelector("img").src = project.images[0].src;
+        }
+        return $project;
+    }
 }
