@@ -1,4 +1,5 @@
 import debounce from '../lib/debounce';
+import ga from './analytics';
 
 class Scroll {
 

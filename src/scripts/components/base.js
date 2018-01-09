@@ -1,3 +1,5 @@
+import ga from '../services/analytics';
+
 export default class Base {
 
     constructor(el, props = {}) {
@@ -5,6 +7,7 @@ export default class Base {
         this.props = props;
         this.lightbox = import('../services/lightbox');
         this.scroll = import('../services/scroll');
+        this.logEvent = ga;
         this.init()
             .then(() => this.setLoading(false))
             .catch((err) => console.error(err));

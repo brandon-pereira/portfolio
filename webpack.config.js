@@ -8,7 +8,10 @@ const getPlugins = () => {
 			minChunkSize: 10000,
 			maxChunks: 5
 		}),
-		new webpack.optimize.ModuleConcatenationPlugin()
+		new webpack.optimize.ModuleConcatenationPlugin(),
+		new webpack.DefinePlugin({
+			PRODUCTION: process.env.NODE_ENV === 'production'
+		})
 	];
 	
 	if(process.env.NODE_ENV === 'production') {

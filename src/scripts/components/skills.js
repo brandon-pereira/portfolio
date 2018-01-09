@@ -25,6 +25,10 @@ export default class Skills extends Base {
                 sibling.classList.remove("open");
             }
         });
+
+        // Analytics
+        this.logEvent('skills', 'open', el.querySelector('.title').textContent);
+
     }
 
     deeplink(id) {
