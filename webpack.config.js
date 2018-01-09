@@ -3,18 +3,20 @@ const webpack = require('webpack');
 
 const getPlugins = () => {
 	const plugins = [
-		new webpack.optimize.MinChunkSizePlugin({
-			minChunkSize: 10000
+		new webpack.optimize.LimitChunkCountPlugin({
+			minChunkSize: 10000,
+			maxChunks: 5
 		}),
-		new webpack.optimize.ModuleConcatenationPlugin(), // scope hoisting
+		new webpack.optimize.ModuleConcatenationPlugin()
 	];
 	
 	if(process.env.NODE_ENV === 'production') {
 		plugins.push(...[
 			new webpack.optimize.UglifyJsPlugin({
+				parallel: true,
 				minimize: true,
 				sourceMap: true
-			})
+			}),
 		]);
 	} else {
 		plugins.push(
