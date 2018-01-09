@@ -264,14 +264,18 @@
 		}
 		[data-project-languages] {
 			margin-top: 2rem;
-			text-align: left;
+			@include medium() {
+				text-align: left;
+			}
 			span {
 				position: relative;
 				display: inline-block;
-				background: lighten(map-get($config, accent), 20%);
-				border-bottom: 2px solid map-get($config, accent);
-				margin-right: 0.5rem;
-				padding: 0.2rem 0.5rem 0.2rem 1.1rem;
+				background-color: #eee;
+				background-image: linear-gradient(transparent, rgba(0,0,0,.1));
+				border-radius: 0 5px 5px 0;
+				margin: 1rem 0.5rem 0 0;
+				font-size: 0.9rem;
+				padding: 0.2rem 0.5rem 0.2rem 1.2rem;
 				cursor: pointer;
 				clip-path: polygon(0.6rem 0, 100% 0, 100% 100%, 0.6rem 100%, 0 50%);
 				&:before {
@@ -281,11 +285,15 @@
 					position: absolute;
 					top: calc(50% - 2px);
 					left: 8px;
-					background: #fff;
+					background: #797979;
 					border-radius: 50%;
 				}
 				&:hover {
-					background: lighten(map-get($config, accent), 10%);
+					color: #fff;
+					background-color: lighten(map-get($config, accent), 10%);
+					&:before {
+						background: #fff;
+					}
 				}
 			}
 		}
