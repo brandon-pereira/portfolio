@@ -1,5 +1,6 @@
 const config = require('./config');
 const webpack = require('webpack');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const getPlugins = () => {
 	const plugins = [
@@ -22,7 +23,8 @@ const getPlugins = () => {
 		plugins.push(
 			...[
 				new webpack.SourceMapDevToolPlugin(),
-				new webpack.HotModuleReplacementPlugin()
+				new webpack.HotModuleReplacementPlugin(),
+				// new BundleAnalyzerPlugin()
 			]
 		);
 	}
