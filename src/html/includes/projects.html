@@ -5,61 +5,54 @@
 	</header>
 		
 	<div class="content">
-		<div class="loading">
-			<div class="plus-loader">
-				Loading…
-			</div>
+		<div class="filters" data-filters>
+			<div>You're viewing projects built using "<span></span>".</div>
+			<button>RESET</button>
 		</div>
-		<div class="init">
-			<div class="filters" data-filters>
-				<div>You're viewing projects built using "<span></span>".</div>
-				<button>RESET</button>
-			</div>
-			<div class="projects" data-columns>
-				{% for project in projects.projects.slice(0,6) %}
-					<div class="project snippet">
-						<div class="image-container">
-							<img src="{{project.images[0].src}}">
-						</div>
-						<h3>
-							{% if project.link %}
-								<a href="{{project.link}}" target="_" data-project-title>{{project.title}}</a>
-							{% else %}
-								<span data-project-title>{{project.title}}</span>
-							{% endif %}
-						</h3>
-						<p data-project-description>{{project.shortDescription}}</p>
-						<button class="button" data-project-learn-more="{{loop.index - 1}}">Learn More</button>
+		<div class="projects" data-columns>
+			{% for project in projects.projects.slice(0,6) %}
+				<div class="project snippet">
+					<div class="image-container">
+						<img src="{{project.images[0].src}}">
 					</div>
-				{% endfor %}
-			</div>
-			<div class="project snippet hidden skeleton">
-				<div class="image-container">
-					<img />
+					<h3>
+						{% if project.link %}
+							<a href="{{project.link}}" target="_" data-project-title>{{project.title}}</a>
+						{% else %}
+							<span data-project-title>{{project.title}}</span>
+						{% endif %}
+					</h3>
+					<p data-project-description>{{project.shortDescription}}</p>
+					<button class="button" data-project-learn-more="{{loop.index - 1}}">Learn More</button>
 				</div>
-				<h3>
-					<a data-project-link data-project-title target="_"></a>
-				</h3>
-				<p data-project-description></p>
-				<button class="button" data-project-learn-more>Learn More</button>
-			</div>
-			<div class="project detailed-view hidden">
-				<header>
-					<button data-back-button>
-						<svg>
-							<use xlink:href="#caret"></use>
-						</svg>
-						<span>BACK</span>
-					</button>
-					<span data-project-date>Loading...</span>
-					<span data-project-status></span>
-				</header>
-				<h3><a data-project-link data-project-title target="_"></a></h3>
-				<p data-project-description></p>
-				<div data-project-images></div>
-				<div data-project-languages></div>
-			</div>
-			<div class="project loadMore">Load More</div>
+			{% endfor %}
 		</div>
+		<div class="project snippet hidden skeleton">
+			<div class="image-container">
+				<img />
+			</div>
+			<h3>
+				<a data-project-link data-project-title target="_"></a>
+			</h3>
+			<p data-project-description></p>
+			<button class="button" data-project-learn-more>Learn More</button>
+		</div>
+		<div class="project detailed-view hidden">
+			<header>
+				<button data-back-button>
+					<svg>
+						<use xlink:href="#caret"></use>
+					</svg>
+					<span>BACK</span>
+				</button>
+				<span data-project-date>Loading...</span>
+				<span data-project-status></span>
+			</header>
+			<h3><a data-project-link data-project-title target="_"></a></h3>
+			<p data-project-description></p>
+			<div data-project-images></div>
+			<div data-project-languages></div>
+		</div>
+		<div class="project loadMore">Load More</div>
 	</div>
 </section>

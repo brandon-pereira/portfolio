@@ -69,21 +69,6 @@ svg { /* we revert this once main stylesheet loaded */
   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .4));
 }
 
-.loading {
-  text-align: center;
-  padding: 50px 0;
-}
-
-.loading.loaded {
-  display: none;
-}
-
-.init {
-  display: none;
-}
-.init.true {
-  display: block;
-}
 section.header {
   background: #1d1d1d;
   position: relative;
