@@ -1,8 +1,12 @@
+import ga from './analytics';
+
 class Lightbox {
 
     constructor() {
         this.el = this._createElement();
         this._attachToDocument(this.el);
+        this.$asset = this.el.querySelector('[data-asset]');
+        this.$description = this.el.querySelector('[data-description]');
         this.events();
 
         console.info("Lightbox: Initialized");
@@ -11,9 +15,8 @@ class Lightbox {
     set(props) {
         console.info("Lightbox: Set", props);
         this._setLoading(true);
-        this.el.querySelector('[data-asset]').innerHTML = '';
+        this.$asset.innerHTML = '';
         const type = props.type || 'img';
-        console.log(type);
         const config = {
             src: props.src,
             autoplay: true,
@@ -23,7 +26,7 @@ class Lightbox {
         const $asset = document.createElement(type);
         Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
         const ready = () => {
-            this.el.querySelector('[data-asset]').appendChild($asset);
+            this.$asset.appendChild($asset);
             this._setLoading(false);
         }
         if(type === 'img') {
@@ -31,18 +34,19 @@ class Lightbox {
         } else {
             ready();
         }
-        this.el.querySelector('[data-description]').innerHTML = props.title || '';
+        this.$description.innerHTML = props.title || '';
     }
 
     open() {
         console.info("Lightbox: Open");
         this.el.classList.add('visible');
+        ga('lightbox', 'open', this.$asset.querySelector('img, video').src);
     }
 
     close() {
         console.info("Lightbox: Close");
-        this.el.querySelector('[data-asset]').innerHTML = '';
-        this.el.querySelectorAll('[data-description]').innerHTML = '';
+        this.$asset.innerHTML = '';
+        this.$description.innerHTML = '';
         this.el.classList.remove('visible');
     }
 

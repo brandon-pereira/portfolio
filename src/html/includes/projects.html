@@ -11,6 +11,10 @@
 			</div>
 		</div>
 		<div class="init">
+			<div class="filters" data-filters>
+				<div>You're viewing projects built using "<span></span>".</div>
+				<button>RESET</button>
+			</div>
 			<div class="projects" data-columns>
 				{% for project in projects.projects.slice(0,6) %}
 					<div class="project snippet">
@@ -25,7 +29,7 @@
 							{% endif %}
 						</h3>
 						<p data-project-description>{{project.shortDescription}}</p>
-						<button data-project-learn-more="{{loop.index - 1}}">Learn More</button>
+						<button class="button" data-project-learn-more="{{loop.index - 1}}">Learn More</button>
 					</div>
 				{% endfor %}
 			</div>
@@ -37,7 +41,7 @@
 					<a data-project-link data-project-title target="_"></a>
 				</h3>
 				<p data-project-description></p>
-				<button data-project-learn-more>Learn More</button>
+				<button class="button" data-project-learn-more>Learn More</button>
 			</div>
 			<div class="project detailed-view hidden">
 				<header>
@@ -56,11 +60,6 @@
 				<div data-project-languages></div>
 			</div>
 			<div class="project loadMore">Load More</div>
-			<div class="project noResults">
-				<div class="smiley">:(</div>
-				<span>No Results.</span>
-				<button data-bind="click: resetFilters">Reset Filters</button>
-			</div>
 		</div>
 	</div>
 </section>

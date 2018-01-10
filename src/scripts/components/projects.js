@@ -9,6 +9,7 @@ export default class Projects extends Base {
         this.$backButton = this.el.querySelector('[data-back-button]');
         this.$snippet = this.el.querySelector('.project.snippet.skeleton');
         this.$detailed = this.el.querySelector('.project.detailed-view');
+        this.$filters = this.el.querySelector('[data-filters]');
         this.numVisibleProjects = this.$projects.children.length;
         this.salvattore = import('salvattore'); // TODO: Salvattore auto-initializes when loaded, we should use a different module.
         return super.init();
@@ -26,7 +27,7 @@ export default class Projects extends Base {
             this.showMoreDetails(el.getAttribute('data-project-learn-more'))
         }));
         this.el.addEventListener('goToLang', (e) => this.deeplink(e.detail));
-
+        this.$filters.addEventListener('click', () => this.deeplink(null))
     }
 
     /**
@@ -41,8 +42,8 @@ export default class Projects extends Base {
                 const project = projects.projects[id];
                 this._getDetailsNode(project, projects.statuses);
                 this._toggleDetailsView(true);
+                this.logEvent('projects', 'read-more', project.title)
             })
-
     }
 
     /**
@@ -51,9 +52,11 @@ export default class Projects extends Base {
      */
     onLoadMoreClick() {
         this.$loadMore.classList.add("loading");
-        return this.showMoreProjects().then(() =>
-            setTimeout(() => this.$loadMore.classList.remove("loading"), 500)
-        );
+        return this.showMoreProjects()
+            .then(() =>
+                setTimeout(() => this.$loadMore.classList.remove("loading"), 500)
+            )
+            .then(() => this.logEvent('projects', 'load-more', 'load-more'));
     }
 
     /**
@@ -68,9 +71,7 @@ export default class Projects extends Base {
                 this.$loadMore.classList.toggle('hidden', this.numVisibleProjects >= projects.projects.length);
                 return toAdd;
             })
-            .then(toAdd => toAdd.map((project, index) =>
-                this._getSnippetNode(project, (this.numVisibleProjects - 3) + index)
-            ))
+            .then(toAdd => toAdd.map(project => this._getSnippetNode(project)))
             .then(elements => this._addElementsToGrid(this.$projects, elements))
     }
 
@@ -79,9 +80,23 @@ export default class Projects extends Base {
      * @param {String} language
      */
     deeplink(language) {
+        this.$filters.querySelector('span').innerText = language || '';
+        this.$filters.classList.toggle('visible', language);
+        this.$loadMore.classList.toggle('hidden', language);
         console.info("Projects: Filtering projects by", language);
-        this.scroll.then(s => s.scrollTo(this.el));
-        this._removeAllElementsFromGrid(this.$projects);
+        return this._removeAllElementsFromGrid(this.$projects)
+            .then(() => this.fetchProjects())
+            .then(projects => {
+                if(language) {
+                    return projects.projects.filter(p => p.languages.includes(language));
+                } else {
+                    return projects.projects.slice(0, 6);
+                }
+            })
+            .then(toAdd => toAdd.map(project => this._getSnippetNode(project)))
+            .then(elements => this._addElementsToGrid(this.$projects, elements))
+            .then(() => this.scroll.then(s => s.scrollTo(this.el)))
+            .then(() => this.logEvent('projects', 'filter', language))
     }
 
     /**
@@ -90,6 +105,13 @@ export default class Projects extends Base {
      */
     fetchProjects() {
         return import ('../../content/projects.json')
+            .then(projects => {
+                projects.projects = projects.projects.map((project, index) => {
+                    project.index = index;
+                    return project;
+                })
+                return projects;
+            });
     }
 
     /**
@@ -147,9 +169,13 @@ export default class Projects extends Base {
      * @return {Promise}
      */
     _removeAllElementsFromGrid(grid) {
-        return this.salvattore.then((salvattore) =>
-            salvattore.removeColumns(grid)
-        );
+        return this.salvattore.then((salvattore) => {
+            salvattore.recreateColumns(grid);
+            this.numVisibleProjects = 0;
+            Array.from(grid.children).forEach((c) => {
+                c.innerHTML = '';
+            })
+        });
     }
 
     /**
@@ -214,7 +240,7 @@ export default class Projects extends Base {
      * @param {Object} project
      * @return {Element}
      */
-    _getSnippetNode(project, index) {
+    _getSnippetNode(project) {
         const $project = this.$snippet.cloneNode(true);
         $project.classList.remove('skeleton');
         $project.querySelector('[data-project-title]').innerText = project.title;
@@ -224,9 +250,7 @@ export default class Projects extends Base {
             $project.querySelector('[data-project-title]').removeAttribute('href');
         }
         $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
-        $project.querySelector('[data-project-learn-more]').addEventListener('click', () => {
-            this.showMoreDetails(index);
-        })
+        $project.querySelector('[data-project-learn-more]').addEventListener('click', () => this.showMoreDetails(project.index));
         if (project.images && project.images.length) {
             $project.querySelector("img").src = project.images[0].src;
         }

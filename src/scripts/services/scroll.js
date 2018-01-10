@@ -45,10 +45,10 @@ class Scroll {
             this.sections.forEach((section, i) => {
                 if (this.isInView(section)) {
                     const name = section.getAttribute('id');
-                    console.log("inview", name);
+                    console.log("Scroll: New element inView:", name);
                     if (this.analytics.indexOf(name) !== -1) {
+                        ga('scroll', 'section', name);
                         this.analytics.splice(i, 1);
-                        console.log("analytics", name);
                     }
                 }
             });
@@ -67,14 +67,6 @@ class Scroll {
                 this.scrollTo(document.querySelector(hash), 200, hash);
             });
         });
-    }
-
-    _logEvent(event, action) {
-        if (window.ga) {
-            window.ga('send', 'event', 'scroll', event, action);
-        } else {
-            console.warn("Google Analytics not detected on page. Might be blocked?");
-        }
     }
 
     /**

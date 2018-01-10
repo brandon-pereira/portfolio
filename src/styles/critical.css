@@ -44,10 +44,9 @@ svg { /* we revert this once main stylesheet loaded */
 /**
  * Button Styling
  */
-button, a.button {
+.button, a.button, button.button {
   background-color: #1f8ac4;
   text-decoration: none;
-  appearance: none;
   outline: none;
   cursor: pointer;
   border-radius: 3px;
@@ -62,11 +61,11 @@ button, a.button {
   background-image: linear-gradient(transparent, rgba(0, 0, 0, .2));
 }
 
-button:hover, a.button:hover {
+.button:hover {
     background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3))
 }
 
-button:active, a.button:active {
+.button:active {
   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .4));
 }
 
