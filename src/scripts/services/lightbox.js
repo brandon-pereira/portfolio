@@ -8,7 +8,7 @@ class Lightbox {
         this.$asset = this.el.querySelector('[data-asset]');
         this.$description = this.el.querySelector('[data-description]');
         this.events();
-
+        import('../../styles/lightbox.scss');
         console.info("Lightbox: Initialized");
     }
 

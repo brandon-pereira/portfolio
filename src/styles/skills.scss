@@ -1,3 +1,6 @@
+@import 'mixins';
+@import 'config';
+
 .container.skills{
 	$background: map-deep-get($config, skills, background);
 	background: $background;

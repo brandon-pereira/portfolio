@@ -2,6 +2,10 @@ import Base from './base';
 
 export default class Skills extends Base {
 
+    init() {
+        return super.init(import('../../styles/skills.scss'));
+    }
+
     events() {
         this.el.querySelectorAll('[data-accordion-handler]').forEach(handle =>
             handle.addEventListener('click', () => this.toggleItem(handle))

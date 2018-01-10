@@ -20,9 +20,9 @@ export default class Base {
         }
     }
 
-    init() {
-        this.events();
-        return Promise.resolve();
+    init(dependencies = Promise.resolve()) {
+        return Promise.resolve(dependencies)
+            .then(() => this.events());
     }
 
     events() {

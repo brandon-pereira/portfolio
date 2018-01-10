@@ -1,3 +1,5 @@
+@import 'mixins';
+@import 'config';
 .container.projects{
 	background:#eee;
 	overflow:hidden;
@@ -167,29 +169,6 @@
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
 	}
 
-	.noResults {
-		background: transparent;
-		box-shadow: none;
-		text-align: center;
-		cursor: pointer;
-		padding-top: 20px;
-		font-size: 30px;
-		color: #5c5c5c;
-		margin: 0 auto;
-		display: none;
-		&.visible {
-			display: block;
-		}
-		.smiley {
-			transform: rotate(60deg);
-			letter-spacing: 10px;
-			font-size: 70px;
-		}
-		span {
-			display: block;
-			margin-bottom: 20px;
-		}
-	}
 
 	.loadMore {
 		padding: 20px;

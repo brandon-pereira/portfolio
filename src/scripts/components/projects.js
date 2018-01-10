@@ -11,8 +11,12 @@ export default class Projects extends Base {
         this.$detailed = this.el.querySelector('.project.detailed-view');
         this.$filters = this.el.querySelector('[data-filters]');
         this.numVisibleProjects = this.$projects.children.length;
-        this.salvattore = import('salvattore'); // TODO: Salvattore auto-initializes when loaded, we should use a different module.
-        return super.init();
+        return super.init(
+            import('../../styles/projects.scss')
+                .then(() => {
+                    this.salvattore = import('salvattore');// TODO: Salvattore auto-initializes when loaded, we should use a different module.
+                })
+        );
     }
 
     events() {
