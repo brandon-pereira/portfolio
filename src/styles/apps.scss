@@ -240,6 +240,7 @@
 			background: rgba(0,0,0,.2);
 			border-radius: 0 5px 5px 0;
 			svg {
+				display: block;
 				height: 1rem;
 				width: 2rem;
 				transform: rotate(90deg) translate(-25%, -50%);
