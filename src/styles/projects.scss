@@ -65,16 +65,16 @@
 		}
 		&[data-columns]::before {
 			display: none;
-			content: '1 .column.size1of1';
+			content: '1';
 		}
 		@include medium() {
 			&[data-columns]::before {
-				content: '2 .column.size1of2';
+				content: '2';
 			}
 		}
 		@include large() {
 			&[data-columns]::before {
-				content: '3 .column.size1of3';
+				content: '3';
 			}
 		}
 	}

@@ -5,7 +5,6 @@
   "repository": "https://github.com/brandon-pereira/portfolio",
   "main": "./src/scripts/index.js",
   "dependencies": {
-    "salvattore": "^1.0.9",
     "web-animations-js": "^2.3.1",
     "webfontloader": "^1.6.28"
   },

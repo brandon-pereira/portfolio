@@ -1,5 +1,6 @@
 import Base from './base';
 import throttle from '../lib/throttle';
+import Masonry from '../lib/masonry';
 
 export default class Projects extends Base {
 
@@ -10,23 +11,18 @@ export default class Projects extends Base {
         this.$snippet = this.el.querySelector('.project.snippet.skeleton');
         this.$detailed = this.el.querySelector('.project.detailed-view');
         this.$filters = this.el.querySelector('[data-filters]');
-        this.numVisibleProjects = this.$projects.children.length;
-        return super.init(
-            import('../../styles/projects.scss')
-                .then(() => {
-                    this.salvattore = import('salvattore');// TODO: Salvattore auto-initializes when loaded, we should use a different module.
-                })
-        );
+
+        this.masonry = new Masonry(this.$projects, Array.from(this.$projects.children));
+        return super.init(import('../../styles/projects.scss'))
+            .then(() => {
+                this.masonry.recreateColumns(); // Recreate once css loaded
+            });
     }
 
     events() {
         this.$loadMore.addEventListener('click', this.onLoadMoreClick.bind(this));
         this.$backButton.addEventListener('click', () => this._toggleDetailsView(false))
-        this.salvattore.then(salvattore =>
-            window.addEventListener("resize", throttle(() => {
-                salvattore.recreateColumns(this.$projects); // redraw the grid
-            }, 500))
-        );
+        window.addEventListener("resize", throttle(() => this.masonry.recreateColumns(), 500));
         this.el.querySelectorAll('[data-project-learn-more]').forEach(el => el.addEventListener('click', () => {
             this.showMoreDetails(el.getAttribute('data-project-learn-more'))
         }));
@@ -57,10 +53,10 @@ export default class Projects extends Base {
     onLoadMoreClick() {
         this.$loadMore.classList.add("loading");
         return this.showMoreProjects()
-            .then(() =>
-                setTimeout(() => this.$loadMore.classList.remove("loading"), 500)
-            )
-            .then(() => this.logEvent('projects', 'load-more', 'load-more'));
+            .then(() => {
+                this.$loadMore.classList.remove("loading");
+                this.logEvent('projects', 'load-more', 'load-more');
+            });
     }
 
     /**
@@ -71,12 +67,10 @@ export default class Projects extends Base {
         return this.fetchProjects()
             .then(projects => {
                 const toAdd = projects.projects.slice(this.numVisibleProjects, this.numVisibleProjects + 3);
-                this.numVisibleProjects += 3;
+                const elements = toAdd.map(project => this._getSnippetNode(project))
+                this._addElementsToGrid(elements);
                 this.$loadMore.classList.toggle('hidden', this.numVisibleProjects >= projects.projects.length);
-                return toAdd;
             })
-            .then(toAdd => toAdd.map(project => this._getSnippetNode(project)))
-            .then(elements => this._addElementsToGrid(this.$projects, elements))
     }
 
     /**
@@ -88,8 +82,8 @@ export default class Projects extends Base {
         this.$filters.classList.toggle('visible', language);
         this.$loadMore.classList.toggle('hidden', language);
         console.info("Projects: Filtering projects by", language);
-        return this._removeAllElementsFromGrid(this.$projects)
-            .then(() => this.fetchProjects())
+        this._clearGrid()
+        this.fetchProjects()
             .then(projects => {
                 if(language) {
                     return projects.projects.filter(p => p.languages.includes(language));
@@ -97,10 +91,12 @@ export default class Projects extends Base {
                     return projects.projects.slice(0, 6);
                 }
             })
-            .then(toAdd => toAdd.map(project => this._getSnippetNode(project)))
-            .then(elements => this._addElementsToGrid(this.$projects, elements))
-            .then(() => this.scroll.then(s => s.scrollTo(this.el)))
-            .then(() => this.logEvent('projects', 'filter', language))
+            .then(toAdd => {
+                const elements = toAdd.map(project => this._getSnippetNode(project))
+                this._addElementsToGrid(elements)
+                this.scroll.then(s => s.scrollTo(this.el));
+                this.logEvent('projects', 'filter', language)
+            })
     }
 
     /**
@@ -160,11 +156,9 @@ export default class Projects extends Base {
      * @param {Array} elements
      * @return {Promise}
      */
-    _addElementsToGrid(grid, elements) {
-        return this.salvattore.then((salvattore) => {
-            salvattore.appendElements(grid, elements);
-            requestAnimationFrame(() => elements.forEach((el) => el.classList.remove('hidden')));
-        });
+    _addElementsToGrid(elements) {
+        this.masonry.appendElements(elements);
+        requestAnimationFrame(() => elements.forEach((el) => el.classList.remove('hidden')));
     }
 
     /**
@@ -172,14 +166,8 @@ export default class Projects extends Base {
      * @param {Element} grid
      * @return {Promise}
      */
-    _removeAllElementsFromGrid(grid) {
-        return this.salvattore.then((salvattore) => {
-            salvattore.recreateColumns(grid);
-            this.numVisibleProjects = 0;
-            Array.from(grid.children).forEach((c) => {
-                c.innerHTML = '';
-            })
-        });
+    _clearGrid() {
+        this.masonry.items = [];
     }
 
     /**
@@ -259,5 +247,9 @@ export default class Projects extends Base {
             $project.querySelector("img").src = project.images[0].src;
         }
         return $project;
+    }
+
+    get numVisibleProjects() {
+        return this.masonry.items.length;
     }
 }
