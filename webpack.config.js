@@ -39,7 +39,7 @@ const getPlugins = () => {
 module.exports = {
 	entry: config.paths.src.scripts,
 	output: {
-		publicPath: '/scripts/',
+		publicPath: 'scripts/',
 		filename: config.naming.scripts
 	},
 	module: {
