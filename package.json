@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "description": "The code that hosts my portfolio. Located at https://branclon.com/",
   "repository": "https://github.com/brandon-pereira/portfolio",
-  "main": "gulpfile.js",
+  "main": "./src/scripts/index.js",
   "dependencies": {
     "salvattore": "^1.0.9",
     "web-animations-js": "^2.3.1",
