@@ -195,22 +195,24 @@ export default class Projects extends Base {
         // assets
         const $images = $node.querySelector('[data-project-images]');
         $images.innerHTML = ''; // clear
-        project.images.forEach((asset) => {
-            const type = asset.type || 'img';
-            const config = {
-                src: asset.src,
-                autoplay: true,
-                muted: true,
-                class: asset.styling
-            };
-            const $asset = document.createElement(type);
-            Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
-            $asset.addEventListener('click', () => this.lightbox.then((l) => {
-                l.set(asset);
-                l.open();
-            }))
-            $node.querySelector('[data-project-images]').appendChild($asset);
-        });
+        if (Array.isArray(project.images)) {
+          project.images.forEach((asset) => {
+                const type = asset.type || 'img';
+                const config = {
+                    src: asset.src,
+                    autoplay: true,
+                    muted: true,
+                    class: asset.styling
+                };
+                const $asset = document.createElement(type);
+                Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
+                $asset.addEventListener('click', () => this.lightbox.then((l) => {
+                    l.set(asset);
+                    l.open();
+                }))
+                $node.querySelector('[data-project-images]').appendChild($asset);
+            });
+        }
         // Date
         $node.querySelector('[data-project-date]').innerText = this._getFormatedDate(new Date(project.date));
         // languages
