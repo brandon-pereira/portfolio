@@ -64,6 +64,7 @@
 		&.hidden {
 			height: 0;
 		}
+		
 		&[data-columns]::before {
 			display: none;
 			content: '1';
@@ -81,7 +82,19 @@
 	}
 	.column {
 		flex: 1;
-		margin: 0 1rem;
+		@include medium {
+			&:first-of-type {
+				margin: 0 1rem 0 0;
+			}
+		}
+		@include large() {
+			&:first-of-type {
+				margin: 0;
+			}
+			&:nth-of-type(2) {
+				margin: 0 1rem;
+			}
+		}
 	}
 
 	.filters {
