@@ -1,5 +1,6 @@
 import Base from './base';
 import throttle from '../lib/throttle';
+import animate from '../lib/animate';
 import Masonry from '../lib/masonry';
 
 export default class Projects extends Base {
@@ -123,18 +124,17 @@ export default class Projects extends Base {
     _toggleDetailsView(isShow) {
         this.scroll.then((s) => s.scrollTo(this.el));
         this.$loadMore.classList.toggle('hidden', isShow);
-        this.$detailed.animate([
+        animate(this.$detailed, [
             { left: "100%", opacity: 0},
             { left: 0, opacity: 1}
         ], { duration: 200, fill: "both", direction: isShow ? 'normal' : 'reverse' });
-       this.$projects.animate([
+       animate(this.$projects, [
             { left: 0, opacity: 1 },
-           { left: "-100%", opacity: 0 }
-        ], { duration: 200, fill: "both", direction: isShow ? "normal" : "reverse" })
-        .onfinish = () => {
-            this.$detailed.classList.toggle('hidden', !isShow);
-            this.$projects.classList.toggle('hidden', isShow);
-        }
+            { left: "-100%", opacity: 0 }
+        ], { duration: 200, fill: "both", direction: isShow ? "normal" : "reverse" }, () => {
+               this.$detailed.classList.toggle('hidden', !isShow);
+               this.$projects.classList.toggle('hidden', isShow);
+        })
     }
 
     /**
