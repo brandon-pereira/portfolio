@@ -80,7 +80,6 @@ export default class Projects extends Base {
     deeplink(language) {
         this.$filters.querySelector('span').innerText = language || '';
         this.$filters.classList.toggle('visible', language);
-        this.$loadMore.classList.toggle('hidden', language);
         console.info("Projects: Filtering projects by", language);
         this._clearGrid()
         this.fetchProjects()
@@ -93,7 +92,9 @@ export default class Projects extends Base {
             })
             .then(toAdd => {
                 const elements = toAdd.map(project => this._getSnippetNode(project))
-                this._addElementsToGrid(elements)
+                this._addElementsToGrid(elements);
+                this._toggleDetailsView(false);
+                this.$loadMore.classList.toggle('hidden', language);
                 this.scroll.then(s => s.scrollTo(this.el));
                 this.logEvent('projects', 'filter', language)
             })
@@ -121,7 +122,7 @@ export default class Projects extends Base {
      */
     _toggleDetailsView(isShow) {
         this.scroll.then((s) => s.scrollTo(this.el));
-        this.$loadMore.classList.add('hidden');
+        this.$loadMore.classList.toggle('hidden', isShow);
         this.$detailed.animate([
             { left: "100%", opacity: 0},
             { left: 0, opacity: 1}
@@ -131,11 +132,8 @@ export default class Projects extends Base {
            { left: "-100%", opacity: 0 }
         ], { duration: 200, fill: "both", direction: isShow ? "normal" : "reverse" })
         .onfinish = () => {
-            this.$detailed.classList.toggle('hidden');
-            this.$projects.classList.toggle('hidden');
-            if(!isShow) {
-                this.$loadMore.classList.remove('hidden');
-            }
+            this.$detailed.classList.toggle('hidden', !isShow);
+            this.$projects.classList.toggle('hidden', isShow);
         }
     }
 

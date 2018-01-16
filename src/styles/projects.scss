@@ -100,7 +100,7 @@
 	.filters {
 		background: #fff;
 		border-radius: 0.5rem;
-		margin: 0 1rem 2rem;
+		margin: 0 0 2rem;
 		box-shadow: 0 12px 10px rgba(0, 0, 0, .1);
 		display: none;
 		padding: 1rem;
@@ -217,6 +217,7 @@
 			display: inline-block;
 			padding: 0.5rem 0.8rem;
 			text-transform: uppercase;
+			background: #2c2c2c;
 			&.live {
 				background: map-deep-get($config, projects, live);
 			}

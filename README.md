@@ -6,11 +6,32 @@ The landing page for [branclon.com](http://www.branclon.com). A place where I ca
 ## Installation
 #### Dependencies
 * [Node](http://nodejs.org)
-* [Gulp](http://gulpjs.com/)
+* [npm](https://npmjs.org) (bundled with Node)
+* Web Browser (see Browser Support for more details)
 
 #### Steps
-* `npm install`
-* `bower install`
+
+To run any of the below, you first need to:
+```
+nvm use
+npm install
+```
+
+To run locally:
+`npm start`
+
+To run a production build:
+`npm run build`
+
+To run tests:
+`npm test`
+
+## Technical Features
+This repo utilizes several features including:
+- Webpack (Code Splitting, Tree Shaking, Transpiling, etc.)
+- Gulp (Static site generation, minification, critical css rendering, etc.)
+- ES6 Code Architecture
+- 
 
 ## Structure
 All of the source code is stored in the "/src" folder, this includes css, javascript, and html. The logic for building the development and distribution builds is stored in the root "/" folder. When developing and building a distribution the compiled code is stored in "/dist".
@@ -30,6 +51,8 @@ In /src we have the following:
 As long as everything has been installed correctly you should simply need to run `gulp serve`.
 
 TODO: Generating contact icons (IcoMoon & manifest.json)
+
+## Browser Support
 
 ## Build
 To build a development build you need to:

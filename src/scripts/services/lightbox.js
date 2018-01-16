@@ -40,7 +40,9 @@ class Lightbox {
     open() {
         console.info("Lightbox: Open");
         this.el.classList.add('visible');
-        ga('lightbox', 'open', this.$asset.querySelector('img, video').src);
+        if (this.$asset.querySelector('img, video')) {
+            ga('lightbox', 'open', this.$asset.querySelector('img, video').src);
+        }
     }
 
     close() {
