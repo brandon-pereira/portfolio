@@ -47,7 +47,7 @@ In /src we have the following:
 * **/style**: Contains internal/external scss files to be imported.
 
 ## Browser Support
-I said **** fuck it to Internet Explorer on this project. That being said, here's a support list.
+I said f**k it to Internet Explorer on this project. That being said, here's a support list.
 
 * Latest 2 versions of Chrome, Firefox, Safari, and Edge
 
