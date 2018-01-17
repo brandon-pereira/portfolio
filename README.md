@@ -31,30 +31,27 @@ This repo utilizes several features including:
 - Webpack (Code Splitting, Tree Shaking, Transpiling, etc.)
 - Gulp (Static site generation, minification, critical css rendering, etc.)
 - ES6 Code Architecture
-- 
+- JSON controlled CMS. Add new content to the JSON files and watch the site build itself!
+- Jest Unit tests to verify content structure
 
 ## Structure
-All of the source code is stored in the "/src" folder, this includes css, javascript, and html. The logic for building the development and distribution builds is stored in the root "/" folder. When developing and building a distribution the compiled code is stored in "/dist".
+All of the source code is stored in the "/src" folder, this includes css, javascript, and html. The logic for building the development and distribution builds is stored in the root "/" folder. When developing and building a distribution the compiled code is stored in "/dist". "/test" contains all the unit tests.
 
 In /src we have the following:
 * **/html**: HTML contains HTML files which can be injected into index.html.
-* **/index.html**: The skeleton file which is actually compiled. You'll see compile commands in it. Uses gulp-html-extend.
 * **/static**: Moved directly to dist folder. Useful for static pages (ex.  404 pages, assets)
-* **/app.js**: Root JS File. Included first in /dist script file.
-* **/js**: Contains subsequent script files. These will be appended to the distribution script file.
+* **/scripts**: Contains script files. These will be appended to the distribution script file or referenced asyncronously from Webpack code splitting.
 * **/content**: contains content that drives portfolio. Simple JSON objects.
-* **/style/critical.scss**: This sass file contains above-the-fold css. It is injected directly into the <head> so be careful to keep its size to a minimal.
+* **/styles/critical.css**: This css file contains above-the-fold css. It is injected directly into the <head> so be careful to keep its size to a minimal.
 * **/style/style.scss**: The main sass file which contains below-the-fold css and progressive-enhancements on above the fold css.
 * **/style**: Contains internal/external scss files to be imported.
 
-## Development
-As long as everything has been installed correctly you should simply need to run `gulp serve`.
-
-TODO: Generating contact icons (IcoMoon & manifest.json)
-
 ## Browser Support
+I said **** fuck it to Internet Explorer on this project. That being said, here's a support list.
 
-## Build
-To build a development build you need to:
+* Latest 2 versions of Chrome, Firefox, Safari, and Edge
 
-Run `gulp build --production` to generate /dist folder (without development things like livereload and sourcemaps)
+As well as progressive enhancement on new features. For example Web Animations API will add animations if its supported by the browser.
+
+## Contribute
+This repo is used for my portfolio, so contributions aren't needed (although you still can if you want)... however feel free to fork and make your own version... just link back please!

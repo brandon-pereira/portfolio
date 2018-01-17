@@ -120,7 +120,7 @@
 		{
 			"title": "Wings.cheap",
 			"date": "Feb 1 2017",
-			"languages": ["gulp", "javascript", "sass", "html", "git", "mongo", "node"],
+			"languages": ["javascript", "css", "html", "git", "mongo", "node"],
 			"shortDescription": "I built a web app for finding cheap wings near you. Allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!",
 			"description": "<p>I built a web app for finding cheap wings near you. Allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!</p><p>Under the hood, I'm using AngularJS and SCSS to render the front-end. It goes through GulpJS to create production (minified) files as well as enabling live reload on both front-end and back-end (running on same instance). The back-end is written in NodeJS (using Express to handle server portion) and utilizes a REST API. For a database I decided to use MongoDB.</p><p>The hosting is being provided by DigitalOcean. For this project I created a basic linux server and manually implemented NodeJS, Mongo, Git, and NGINX. This allowed me to test my bash skills and learn how a server is set up at a lower level.<p>The main objectives of this application were to learn AngularJS as well as to dabble with writing NodeJS.</p>",
 			"type": 1,
@@ -148,7 +148,7 @@
 		{
 			"title": "Nissan: Recalls",
 			"date": "Dec 8 2016",
-			"languages": ["gulp", "javascript", "sass"],
+			"languages": ["javascript", "css"],
 			"shortDescription": "Rebuilt the Nissan/Infiniti recalls web application to be fully responsive. Had only 5 days to fully complete.",
 			"description": "<p>Rebuilt the Nissan/Infiniti recalls web application to be fully responsive. Had only 5 days to fully complete.</p>",
 			"type": 2,
@@ -175,7 +175,7 @@
 		{
 			"title": "Blueshield: Content Build System",
 			"date": "Oct 3 2016",
-			"languages": ["gulp"],
+			"languages": ["node"],
 			"shortDescription": "Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that. I helped build a static site generator as well as traveled to San Francisco to help their developers.",
 			"description": "<p>Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that.</p><p>Blueshield uses a unique CMS which requires each page to be built with custom elements. Rather than us manually coding in these elements, we thought it would be a smart to automate some of the tedious work. We built a templating system which allowed us to both QA our pages with dummy content, as well as deliver the pages with these transformed elements.</p><p>On top of this, I also flew to California a couple of times to help their team build their pages. This required me to mentor some of their web developers, communicate/strategize with their tech leads, and help solve some problems they were facing.</p>",
 			"type": 2,
@@ -233,7 +233,7 @@
 		{
 			"title": "Portfolio v2",
 			"date": "Sept 1 2016",
-			"languages": ["json", "html", "sass", "gulp", "git"],
+			"languages": ["json", "html", "css", "javascript", "git"],
 			"shortDescription": "Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
 			"description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p><p>This portfolio was built using KnockoutJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p><p>Make sure you're on an up-to-date browser for best results.</p><p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.</p>",
 			"type": 1,
@@ -260,7 +260,7 @@
 		{
 			"title": "CSS3 Icons",
 			"date": "2016-06-13",
-			"languages": ["html", "css", "gulp", "git"],
+			"languages": ["html", "css", "javascript", "git"],
 			"description": "<p>Wrote some icons in pure CSS3 a couple years ago, however recently updated them to use SASS, rely on variables, and be open sourced.</p><p>Check it out on <a href='https://github.com/brandon-pereira/css3-icons' target='_blank'>GitHub</a>.",
 			"type": 1,
 			"status": "live",
@@ -286,7 +286,7 @@
 		{
 			"title": "Nissan: Responsive website redesign",
 			"date": "2016-05-05",
-			"languages": ["html", "css", "javascript", "gulp", "jsp", "git", "json"],
+			"languages": ["html", "css", "javascript", "jsp", "git", "json"],
 			"shortDescription": "We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.",
 			"description": "<p>We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.</p><p>We built the system using a style guide, which allowed us to easily reuse components throughout the website. My team of 4 took on the configurator and applications. My main contributions involved building configurator. This required several technical deliverables such as building page controllers on both server and client side (Java, GSP, Javascript), modifying the styleguide internal workings (GulpJS), and building responsive components (FoundationJS, Javascript, SCSS). Nearly all components in the configurator were built or modified by me.</p><p>Check out the configurator here: <a href='http://nissanusa.com/buildyournissan/' target='_blank'>Nissan</a> | <a href='http://infinitiusa.com/buildyourinfiniti' target='_blank'>Infiniti</a> <i>(you currently can only access on mobile)</i></p>",
 			"type": 2,
@@ -313,7 +313,7 @@
 		{
 			"title": "Portfolio v1",
 			"date": "2015-11-30",
-			"languages": ["json", "html", "less", "gulp", "git"],
+			"languages": ["json", "html", "css", "javascript", "git"],
 			"shortDescription": "Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
 			"description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p><p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p><p>Make sure you're on an up-to-date browser for best results.</p><p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.</p>",
 			"type": 1,
@@ -364,7 +364,7 @@
 					"styling": "shadow"
 				}
 			],
-			"link": null
+			"link": ""
 		},
 		{
 			"title": "Broken City: Point of sale system",
@@ -435,7 +435,7 @@
 			"description": "<p>Developed a web form for a local company called KlassicKennels for their grand opening. Got over 1k votes an hour, with a grand total of over 30k in the 14 day campaign.</p>",
 			"type": 1,
 			"status": "unavailable",
-			"images": null,
+			"images": [],
 			"link": "http://www.klassickennels.com/"
 		},
 		{
@@ -445,7 +445,7 @@
 			"description": "<p><a href='http://habbo.com/' target='_blank'>Habbo</a> is a popular online world for teenagers. During my younger teens I built a fansite for the game which allowed users to upload pictures of themselves and have unmoderated chat. It got very popular with about 1k hits a day. Unfortunately, I couldn't afford bandwidth and had to close its doors.</p>",
 			"type": 1,
 			"status": "unavailable",
-			"images": null,
+			"images": [],
 			"link": ""
 		},
 		{
@@ -455,7 +455,7 @@
 			"description": "<p>One of the first websites I built. This project was an advanced take on a family website. It had features like messaging, profiles, photo uploads, video sharing, etc.</p>",
 			"type": 1,
 			"status": "unavailable",
-			"images": null,
+			"images": [],
 			"link": ""
 		}
 	],
