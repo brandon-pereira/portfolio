@@ -27,7 +27,7 @@
 				{
 					"title": "Video showing the users flow.",
 					"src": "./projects/idris-na-2.mp4",
-					"poster": "./projects/idris-na-2-preview.jpg",
+					"preview": "./projects/idris-na-2-preview.jpg",
 					"styling": "shadow",
 					"type": "video"
 				}
@@ -110,7 +110,7 @@
 				{
 					"title": "Video showing the users flow.",
 					"src": "./projects/speedbot-2.mp4",
-					"poster": "./projects/speedbot-3-preview.jpg",
+					"preview": "./projects/speedbot-3-preview.jpg",
 					"styling": "shadow",
 					"type": "video"
 				}
@@ -201,7 +201,7 @@
 				{
 					"title": "Demonstration of how the animation behaves.",
 					"src": "./projects/tree-drive-2.mp4",
-					"poster": "./projects/tree-drive-1.png",
+					"preview": "./projects/tree-drive-1.png",
 					"styling": "shadow",
 					"type": "video"
 				},
