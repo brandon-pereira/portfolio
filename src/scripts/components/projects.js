@@ -24,7 +24,7 @@ export default class Projects extends Base {
         this.$loadMore.addEventListener('click', this.onLoadMoreClick.bind(this));
         this.$backButton.addEventListener('click', () => this._toggleDetailsView(false))
         window.addEventListener("resize", throttle(() => this.masonry.recreateColumns(), 500));
-        this.el.querySelectorAll('[data-project-learn-more]').forEach(el => el.addEventListener('click', () => {
+        Array.from(this.el.querySelectorAll('[data-project-learn-more]')).forEach(el => el.addEventListener('click', () => {
             this.showMoreDetails(el.getAttribute('data-project-learn-more'))
         }));
         this.el.addEventListener('goToLang', (e) => this.deeplink(e.detail));

@@ -11,14 +11,14 @@ export default class Apps extends Base {
     }
 
     events() {
-        this.el.querySelectorAll('[data-goto]').forEach(el =>
+        Array.from(this.el.querySelectorAll('[data-goto]')).forEach(el =>
             el.addEventListener('click', () => {
                 const goto = el.getAttribute('data-goto');
                 this.goto(goto);
             })
         );
 
-        this.el.querySelectorAll('[data-lightbox]').forEach(el =>
+        Array.from(this.el.querySelectorAll('[data-lightbox]')).forEach(el =>
             el.addEventListener('click', () => {
                 const raw = el.getAttribute('data-lightbox');
                 this.lightbox.then((l) => {
