@@ -34,12 +34,12 @@ export default class Apps extends Base {
 
         this.slides.forEach(el => el.addEventListener('touchstart', (event) => {
             start = event.changedTouches[0].screenX;
-        }, false));
+        }, { passive: true }));
 
         this.slides.forEach(el => el.addEventListener('touchend', (event) => {
             end = event.changedTouches[0].screenX;
             handleGesure(start, end, 50);
-        }, false));
+        }, { passive: true }));
 
 
         const handleGesure = (touchstart, touchend, threshold) => {

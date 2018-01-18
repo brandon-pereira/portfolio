@@ -52,7 +52,7 @@ class Scroll {
                     }
                 }
             });
-        }, 500));
+        }, 500), { passive: true });
     }
 
     /**
