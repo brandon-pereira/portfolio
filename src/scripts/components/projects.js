@@ -175,7 +175,7 @@ export default class Projects extends Base {
      * @return {Element}
      */
     _getDetailsNode(project, statuses) {
-        console.log("Set details for project", project);
+        console.info("Projects: Set details for project", project);
         const $node = this.$detailed;
         // titte, description
         $node.querySelector('[data-project-title]').innerText = project.title;

@@ -6,7 +6,6 @@ module.exports = class Masonry {
     }
 
     recreateColumns() {
-        console.log(this.items);
         // Clear DOM
         this.element.innerHTML = '';
         // Create fragements for columns

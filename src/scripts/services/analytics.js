@@ -9,8 +9,8 @@ export default function sendEvent(category, action, label) {
     if (window.ga && process.env === 'production') {
         window.ga('send', 'event', category, action, label);
     } else if(window.ga) {
-        console.info('GA Fire Event:', {category, action, label});
+        console.info('GA: DEV_MODE: Fire Event', {category, action, label});
     } else {
-        console.warn("Google Analytics not detected on page. Might be blocked?");
+        console.warn("GA: not detected on page. Might be blocked?");
     }
 }
