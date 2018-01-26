@@ -7,6 +7,9 @@ module.exports = {
     "browser": true,
     "es6": true
   },
+  "globals": {
+    "PRODUCTION": true // webpack.DefinePlugin sets this
+  },
   "parser": "babel-eslint",
   "extends": "eslint:recommended",
   "rules": {
