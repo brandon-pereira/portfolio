@@ -2,6 +2,7 @@ import Base from './base';
 import throttle from '../lib/throttle';
 import animate from '../lib/animate';
 import Masonry from '../lib/masonry';
+import LazyLoad from '../services/lazyload';
 
 export default class Projects extends Base {
 
@@ -17,6 +18,7 @@ export default class Projects extends Base {
         return super.init(import('../../styles/projects.scss'))
             .then(() => {
                 this.masonry.recreateColumns(); // Recreate once css loaded
+                LazyLoad.loadImages(this.el.querySelectorAll('img[data-src]'));
             });
     }
 
@@ -244,8 +246,9 @@ export default class Projects extends Base {
         $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
         $project.querySelector('[data-project-learn-more]').addEventListener('click', () => this.showMoreDetails(project.index));
         if (project.images && project.images.length) {
-            $project.querySelector("img").src = project.images[0].src;
+            $project.querySelector("img").setAttribute('data-src', project.images[0].src);
         }
+        LazyLoad.loadImages($project.querySelectorAll("img"));
         return $project;
     }
 

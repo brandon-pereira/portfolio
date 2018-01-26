@@ -1,6 +1,7 @@
 import("../styles/style.scss");
 import("./components/webfontloader").then(webfontloader => webfontloader());
 import("./services/scroll");
+import("./services/lazyload");
 
 // Async load all components
 const components = [

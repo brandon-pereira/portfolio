@@ -13,7 +13,7 @@
 			{% for project in projects.projects.slice(0,6) %}
 				<div class="project snippet">
 					<div class="image-container">
-						<img src="{{project.images[0].preview}}">
+						<img data-src="{{project.images[0].src}}">
 					</div>
 					<h3>
 						{% if project.link %}

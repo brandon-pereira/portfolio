@@ -141,12 +141,17 @@
 			display: block;
 		}
 		.image-container {
-			max-height: 200px;
-			min-height: 60px;
+			max-height: 150px;
+			min-height: 100px;
 			overflow: hidden;
 			margin-bottom: -40px;
 			clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
+			background:map-get($config, accent);
 			img {
+				&[data-src]:not(.loaded) { // if it has a data-src attribute (lazy load) and it's not loaded yet
+					position: static;
+					height: 200px;
+				}
 				position: relative;
 				top: -30px;
 				width: 100%;
