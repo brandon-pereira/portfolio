@@ -10,7 +10,7 @@ const getPlugins = () => {
 		}),
 		new webpack.optimize.ModuleConcatenationPlugin(),
 		new webpack.DefinePlugin({
-			PRODUCTION: process.env.NODE_ENV === 'production'
+			PRODUCTION: JSON.stringify(process.env.NODE_ENV === 'production')
 		})
 	];
 	

@@ -6,7 +6,7 @@
  * @param {String} label
  */
 export default function sendEvent(category, action, label) {
-    if (window.ga && process.env === 'production') {
+    if (window.ga && PRODUCTION) {
         window.ga('send', 'event', category, action, label);
     } else if(window.ga) {
         console.info('GA: DEV_MODE: Fire Event', {category, action, label});
