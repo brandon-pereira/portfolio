@@ -213,7 +213,10 @@
 	}
 
 	.detailed-view {
-		padding: 2rem;
+		padding: 2rem 1rem;
+		@include medium() {
+			padding: 2rem;
+		}
 		[data-project-status] {
 			font-size: 0.7rem;
 			color: #fff;
@@ -269,6 +272,7 @@
 			justify-content: space-between;
 			text-shadow: none;
 			margin: 0;
+			padding: 0;
 			svg {
 				display: block;
 				fill: currentColor;
@@ -284,8 +288,12 @@
 			font-size: 0.8rem;
 			margin: 0;
 		}
-		[data-project-description] {
-			text-align: left;
+		[data-project-description],
+		[data-project-description] p,
+		[data-project-description] ul {
+			font-size: 1rem;
+			text-align: justify;
+			margin: 1rem 0;
 		}
 		[data-project-languages] {
 			margin-top: 2rem;
