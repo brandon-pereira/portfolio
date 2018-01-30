@@ -51,6 +51,15 @@ html{
 	}
 }
 
+img[data-src] {
+	transition: opacity 1s;
+	opacity: 0;
+	
+	&.loaded {
+		opacity: 1;
+	}
+}
+
 /**
  * Font smoothing for Mac OS.
  */

@@ -126,12 +126,18 @@
 		.app-icon {
 			margin-top: 0.6rem;
 			height: 3rem;
+			width: 3rem;
 			opacity: 0;
 			transform: translate(0, -10px);
 			transition: all .5s .2s;
 			transition-property: transform, opacity;
 			display: block;
 			margin: 0 auto;
+			background: url('/icon-grid.png');
+			background-size: cover;
+			&.loaded {
+				background: none;
+			}
 		}
 		.cta {
 			transform: translate(0, -10px);
@@ -172,6 +178,7 @@
 		@include medium() {
 			.app-icon {
 				height: 5rem;
+				width: 5rem;
 			}
 			.row {
 				display: flex;

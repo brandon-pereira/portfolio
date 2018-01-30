@@ -13,7 +13,7 @@
 			{% for project in projects.projects.slice(0,6) %}
 				<div class="project snippet">
 					<div class="image-container">
-						<img src="{{project.images[0].preview}}">
+						<img data-src="{{project.images[0].src}}">
 					</div>
 					<h3>
 						{% if project.link %}
@@ -49,7 +49,7 @@
 				<span data-project-status></span>
 			</header>
 			<h3><a data-project-link data-project-title target="_"></a></h3>
-			<p data-project-description></p>
+			<div data-project-description></div>
 			<div data-project-images></div>
 			<div data-project-languages></div>
 		</div>
