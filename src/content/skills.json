@@ -12,14 +12,14 @@
 				},
 				{
 					"id": "javascript",
-					"name": "Javascript",
-					"description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and stand design patterns, and have experience with lots of javascript libraries.",
+					"name": "Javascript/Typescript",
+					"description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
 					"skillLevel": 0
 				},
 				{
 					"id": "html",
 					"name": "HTML",
-					"description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I'm also experienced with HTML5 and HAML.",
+					"description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
 					"skillLevel": 0
 				},
 				{
