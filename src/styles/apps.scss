@@ -3,7 +3,12 @@
 
 .apps {
 	position: relative;
+	overflow: hidden;
+	transition: background .6s;
+	background-image: linear-gradient(transparent, rgba(0, 0, 0, .2));
 	header.main {
+		position: relative;
+		z-index: 1;
 		text-align: center;
 		font-family: 'Helvetica Neue', Helvetica, sans-serif;
 		font-weight: 100;
@@ -63,7 +68,33 @@
 			}
 		}
 	}
-	transition: background .6s;
+	.stripes {
+		margin-top: 15%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		z-index: 0;
+		display: grid;
+		grid: repeat(6, 1fr) / repeat(6, 1fr);
+		transform: skewY(-12deg);
+		transform-origin: 0;
+		div {
+			background: linear-gradient(90deg, transparent, rgba(0, 0, 0, .1));
+			&:nth-child(1) {
+				grid-column: span 6;
+			}
+			&:nth-child(2) {
+				grid-area: 5 / span 2 / auto / -1;
+			}
+			&:nth-child(3) {
+				background: linear-gradient(-90deg, transparent, rgba(0, 0, 0, .1));
+				grid-row: 3;
+				grid-column: span 2;
+			}
+		}
+	}
 	.carousel-slides {
 		position: relative;
 	}
@@ -269,27 +300,27 @@
 	/**
 	 * Styles for slides
 	 */
-	background: #4e4e4e;
+	background-color: #4e4e4e;
 	color: #fff;
 	a {
 		color: #fff;
 	}
 	&.wings-cheap {
-		background: #007DFF;
+		background-color: #007DFF;
 	}
 	&.betterdo {
-		background: #5754af;
+		background-color: #5754af;
 		.app-icon {
 			border-radius: 10px;
 			box-shadow: 0 1px 2px rgba(0,0,0,.5);
 		}
 	}
 	&.tv-tracker {
-		background: #1E9A48;
+		background-color: #1E9A48;
 	}
 	&.test {
 		.app-icon {
-			background: #eee;
+			background-color: #eee;
 		}
 	}
 }
