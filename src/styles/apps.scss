@@ -261,40 +261,40 @@
 			}
 		}
 	}
-	
+
 	.carousel-arrow {
-		display: none;
-	}
-	@include medium() {
-		.carousel-arrow {
+		display: block;
+		cursor:pointer;
+		position: absolute;
+		bottom: 0;
+		transform: translate(0, -50%);
+		left: 0;
+		height: 3rem;
+		width: 3rem;
+		background: rgba(0,0,0,.2);
+		border-radius: 0 5px 5px 0;
+		svg {
 			display: block;
-			cursor:pointer;
+			height: 1rem;
+			width: 2rem;
+			transform: rotate(90deg) translate(-25%, -50%);
+			transform-origin: center;
 			position: absolute;
-			top:50%;
-			transform: translate(0, -50%);
-			left: 0;
-			height: 5rem;
-			width: 3rem;
-			background: rgba(0,0,0,.2);
-			border-radius: 0 5px 5px 0;
+			top: 50%;
+			fill: #fff;
+		}
+		&.next {
+			right: 0;
+			left: auto;
+			border-radius: 5px 0 0 5px;
 			svg {
-				display: block;
-				height: 1rem;
-				width: 2rem;
-				transform: rotate(90deg) translate(-25%, -50%);
-				transform-origin: center;
-				position: absolute;
-				top: 50%;
-				fill: #fff;
+				transform: rotate(-90deg) translate(25%, 50%);
 			}
-			&.next {
-				right: 0;
-				left: auto;
-				border-radius: 5px 0 0 5px;
-				svg {
-					transform: rotate(-90deg) translate(25%, 50%);
-				}
-			}
+		}
+		@include medium() {
+			bottom: auto;
+			top: 50%;
+			height: 5rem;
 		}
 	}
 	/**
