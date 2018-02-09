@@ -42,6 +42,7 @@
 			"description": "<p>TvTracker is an application for tracking your TV Shows. Built to work great on mobile, desktop, and even from your status bar (Mac).</p><p>Under the hood we're using React and MobX, Webpack for compiling and code splitting, Service Workers for offline caching, and Electron for building the Mac app.</p>",
 			"type": 1,
 			"status": "live",
+			"gitUrl": "https://github.com/brandon-pereira/tv-tracker",
 			"images": [
 				{
 					"title": "Mobile Android Experience",
@@ -221,6 +222,7 @@
 			"description": "<p>Built a little splash loading animation while I was bored one rainy afternoon. Uses the prototype methodology and supports reopening and closing.</p><p><a href='https://github.com/brandon-pereira/splash-screen' target='_blank'>See source code on GitHub</a></p>",
 			"type": 1,
 			"status": "live",
+			"gitUrl": "https://github.com/brandon-pereira/splash-screen",
 			"images": [
 				{
 					"title": "",
@@ -238,6 +240,7 @@
 			"description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p><p>This portfolio was built using KnockoutJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p><p>Make sure you're on an up-to-date browser for best results.</p><p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.</p>",
 			"type": 1,
 			"status": "live",
+			"gitUrl": "https://github.com/brandon-pereira/portfolio/tree/release/v2",
 			"images": [
 				{
 					"title": "Header Area",
@@ -264,6 +267,7 @@
 			"description": "<p>Wrote some icons in pure CSS3 a couple years ago, however recently updated them to use SASS, rely on variables, and be open sourced.</p><p>Check it out on <a href='https://github.com/brandon-pereira/css3-icons' target='_blank'>GitHub</a>.",
 			"type": 1,
 			"status": "live",
+			"gitUrl": "https://github.com/brandon-pereira/css3-icons",
 			"images": [
 				{
 					"title": "Google Chrome icon made with pure CSS",
@@ -318,6 +322,7 @@
 			"description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p><p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p><p>Make sure you're on an up-to-date browser for best results.</p><p>See the <a href='https://github.com/brandon-pereira/portfolio' target='_blank'>source code on GitHub</a>.</p>",
 			"type": 1,
 			"status": "unavailable",
+			"gitUrl": "https://github.com/brandon-pereira/portfolio/tree/release/v1",
 			"images": [
 				{
 					"title": "Header Area",
@@ -373,6 +378,7 @@
 			"description": "<p>For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design. Wrote the front-end using JSPs and the back-end using Java and MySQL.</p>",
 			"type": 1,
 			"status": "live",
+			"gitUrl": "https://github.com/brandon-pereira/Broken-City-POS",
 			"images": [
 				{
 					"title": "Login Screen",

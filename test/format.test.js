@@ -10,6 +10,9 @@ describe('Formatting - Projects', () => {
             expect(el.description).toBeDefined(); // Description
             expect(projects.types[el.type]).toBeDefined(); // Type
             expect(Array.isArray(el.images)).toBeTruthy(); // Images if array
+            if(el.gitUrl) {
+                expect(el.gitUrl.startsWith('http')).toBeTruthy()
+            }
             el.images.forEach((img) => { // Image sanity checks
                 expect(typeof img.src).toBe('string');
                 expect(typeof img.title).toBe('string');
