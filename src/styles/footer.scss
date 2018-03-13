@@ -1,7 +1,7 @@
 footer{
 	background:#000;
 	text-align:center;
-	padding:50px 20px;
+	padding:50px 20px 30px;
 	.content{
 		color: #0f0;
 		font:400 14px monospace;	
@@ -11,6 +11,28 @@ footer{
 			&:before{
 				content:"_";
 			}
+		}
+	}
+	.logo {
+		display: flex;
+		justify-content: center;
+		margin-top: 1rem;
+	}
+	svg {
+		height: 50px;
+		width: 50px;
+		display: block;
+		--outer-front: #0f0;
+		--outer-right: #000;
+		--inner-back: #0f0;
+		--inner-left: #000;
+		--inner-bottom: #000;
+		&:hover {
+			--outer-front: #000;
+			--outer-right: #0f0;
+			--inner-back: #000;
+			--inner-left: #0f0;
+			--inner-bottom: #0f0;
 		}
 	}
 }
