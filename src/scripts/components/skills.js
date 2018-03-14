@@ -1,4 +1,5 @@
 import Base from './base';
+import animate from '../lib/animate';
 
 export default class Skills extends Base {
 
@@ -31,6 +32,12 @@ export default class Skills extends Base {
         // Toggle current element
         el.classList.toggle("open");
 
+        // Animate open if supported
+        if(el.classList.contains('open')) {
+            const toHeight = el.clientHeight + 'px';
+            animate(el, [{ height: 0 }, { height: toHeight }], { duration: 200 })
+        }
+        
         // Close other accordions
         Array.from(el.parentNode.childNodes).forEach(sibling => {
             if (sibling !== el) {
