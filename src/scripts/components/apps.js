@@ -79,6 +79,7 @@ export default class Apps extends Base {
         currentSlide.classList.remove('currentSlide');
         newSlide.classList.add('currentSlide');
         // Change the main carousel styling
+        this.el.setAttribute('data-current-slide', slide);
         this.el.classList.remove(currentSlide.getAttribute('data-styling'));
         this.el.classList.add(newSlide.getAttribute('data-styling'));
         // Update Dot
