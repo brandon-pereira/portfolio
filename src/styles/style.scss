@@ -31,22 +31,27 @@
 /**
  * Webfont Initialzed (helps solve FOUT)
  */
-html{
-	&.wf-active{
-		body{
-			font: 1.2rem "Open Sans", sans-serif;
-		}
-    footer .content, .container.skills header.main h2 {
-      font-family: 'Press Start 2P', sans-serif;
-    }
-    .container.projects header.main .maintext {
-      font-family: 'Lily Script One', sans-serif;
-    }
-    .container.apps header.main .maintext{
-      font-family: 'Bungee Shade', sans-serif;
-		}
-		.container.projects .projects .project p {
-			font-size: 12px;
+html.wf-active{
+	body{
+		font: 1.2rem "Open Sans", sans-serif;
+	}
+	footer .content, .container.skills header.main h2 {
+		font-family: 'Press Start 2P', sans-serif;
+	}
+	.container.projects header.main .maintext {
+		font-family: 'Lily Script One', sans-serif;
+	}
+	.container.apps header.main .maintext{
+		font-family: 'Bungee Shade', sans-serif;
+	}
+	.container.projects .projects .project p {
+		font-size: 12px;
+	}
+	.container.contact .item {
+		font-size: 0;
+		line-height: 0;
+		&:before {
+			display: block;
 		}
 	}
 }

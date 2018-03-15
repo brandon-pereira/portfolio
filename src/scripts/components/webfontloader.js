@@ -11,6 +11,7 @@ export default () => {
             ]
         }
     });
+
     // Load Projects webfont (subset only)
     WebFont.load({
         google: {
@@ -18,10 +19,19 @@ export default () => {
             text: 'Projects'
         }
     });
+
+    // Load apps webfont (subset only)
     WebFont.load({
         google: {
             families: ['Bungee Shade:400'],
             text: 'Apps'
+        }
+    });
+
+    // Load contact icons font
+    WebFont.load({
+        custom: {
+            families: ['contact'],
         }
     });
 
