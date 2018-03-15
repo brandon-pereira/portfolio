@@ -13,7 +13,8 @@ export default class Projects extends Base {
         this.$snippet = this.el.querySelector('.project.snippet.skeleton');
         this.$detailed = this.el.querySelector('.project.detailed-view');
         this.$filters = this.el.querySelector('[data-filters]');
-
+        this.numProjectsToAdd = 2; // number of projects to add when show more clicked
+        
         this.masonry = new Masonry(this.$projects, Array.from(this.$projects.children));
         return super.init(import('../../styles/projects.scss'))
             .then(() => {
@@ -69,7 +70,7 @@ export default class Projects extends Base {
     showMoreProjects() {
         return this.fetchProjects()
             .then(projects => {
-                const toAdd = projects.projects.slice(this.numVisibleProjects, this.numVisibleProjects + 3);
+                const toAdd = projects.projects.slice(this.numVisibleProjects, this.numVisibleProjects + this.numProjectsToAdd);
                 const elements = toAdd.map(project => this._getSnippetNode(project))
                 this._addElementsToGrid(elements);
                 this.$loadMore.classList.toggle('hidden', this.numVisibleProjects >= projects.projects.length);
@@ -120,7 +121,6 @@ export default class Projects extends Base {
 
     /**
      * Function to show/hide details view
-     * TODO: Refactor to not use .animate since browser support sucks
      * @param {Boolean} isShow
      */
     _toggleDetailsView(isShow) {
