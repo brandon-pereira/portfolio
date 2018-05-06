@@ -15,12 +15,15 @@ export default class Projects extends Base {
         this.$filters = this.el.querySelector('[data-filters]');
         this.numProjectsToAdd = 2; // number of projects to add when show more clicked
         
-        this.masonry = new Masonry(this.$projects, Array.from(this.$projects.children));
+        this.masonry = new Masonry({
+            container: this.$projects,
+            elements: Array.from(this.$projects.children),
+            sizes: [
+                [0, 1],
+                [600, 2] // medium breakpoint and up show 2 columns
+            ]
+        });
         return super.init(import('../../styles/projects.scss'))
-            .then(() => {
-                this.masonry.recreateColumns(); // Recreate once css loaded
-                LazyLoad.loadImages(this.el.querySelectorAll('img[data-src]'));
-            });
     }
 
     events() {
