@@ -7,12 +7,8 @@ module.exports = class Masonry {
         if (!this.items || !this.element || !this.sizes || !this.sizes.length) {
             throw new Error("Missing container, elements, or sizes on Masonry initialization.")
         }
-         this.init();
-    }
-
-    init() {
+        this.sizes = this.sizes.sort((a, b) => a[0] + b[0]); // sort the sizes
         this.recreateColumns();
-        this.sizes = this.sizes.sort((a, b) => a[0] - b[0]); // sort the sizes
     }
 
     recreateColumns() {
