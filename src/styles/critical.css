@@ -68,7 +68,7 @@ svg { /* we revert this once main stylesheet loaded */
 .button:active {
   background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .4));
 }
-
+/* 
 section.header {
   background: #1d1d1d;
   position: relative;
@@ -129,4 +129,4 @@ section.header:before {
   background-blend-mode: multiply;
   box-shadow: inset 0 -1px #518cac;
   animation: hue 10s linear infinite;
-}
+} */

@@ -1,11 +1,22 @@
-<section class="header container" id="header">
-  <header>
-    <div class="pp"><img src='profile_pic.jpg'></div>
-    <h1 class="name">Brandon Pereira</h1>
-    <h2>Developer, geek, and many other nerdy things. Canadian in YYC.</h2>
+<header class="header container" id="header">
+    <h2>Hi I'm</h2>
+    <h1 class="name">Brandon</h1>
+    <h2>and I build websites</h2>
     <div class="cta">
       <a class="button" href="#contact" data-smooth-scroll>Contact</a>
       <a class="button" target="_" href="./brandon-pereira-resume.pdf">Resume</a>
     </div>
-  </header>
-</section>
+    <div class="background">
+      <div class="blob"></div>
+      <div class="blob"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+      </defs>
+    </svg>
+</header>
