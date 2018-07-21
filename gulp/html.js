@@ -11,7 +11,7 @@ module.exports = function(config, gulp) {
 			.pipe(data(() => ({
 				projects: requireUncached('../src/content/projects.json'),
 				apps: requireUncached('../src/content/apps.json'),
-				skills: requireUncached('../src/content/skills.json'),
+				skills: requireUncached('../src/content/test.json'),
 				contact: requireUncached('../src/content/contact.json')
 			})))
 			.pipe(nunjucks({

@@ -4,7 +4,7 @@
 		<p>A list of skills I've acumulated over the years, click a category to see skills and click a skill to see a little description about my experience.</p>
 	</header>
 	<div class="content">
-		{% for category in skills.categories %}
+		{% for category in skills %}
 			<section class="accordion category {% if category.isOpen %}open{% endif %}">
 				<header data-accordion-handler>
 					<div class="title">{{category.name}}</div>

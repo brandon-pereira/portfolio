@@ -1,0 +1,28 @@
+[
+  {
+    "_id": "6X95ZVC5FuUaaO2MgymcGG",
+    "name": "Front End Web Development",
+    "skills": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "isOpen": true,
+    "isCategory": true
+  },
+  {
+    "_id": "6F7Qmvs69qi0Guasy0S84Y",
+    "name": "Back End Web Development",
+    "isCategory": true,
+    "skills": []
+  }
+]
