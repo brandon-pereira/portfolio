@@ -23,7 +23,7 @@ const importSkills = async () => {
 const importProjects = async () => {
     console.time("Getting projects");
     let skills = await client.getEntries('projects', {});
-    skills = normalizeSkills(skills);
+    skills = normalizeProjects(skills);
     await writeJson(__dirname + '/_projects.json', skills).promise;
     console.timeEnd("Getting projects");
 }
@@ -33,8 +33,9 @@ const normalizeSkills = (categories) =>
         if(!category.skills || !Array.isArray(category.skills)) {
             category.skills = [];
         }
-        // category.skills = category.skills.map(skill => skill.fields);
         return category;
     });
+
+const normalizeProjects = (projects) => projects;
 
 app();
