@@ -10,10 +10,10 @@
 			<button>RESET</button>
 		</div>
 		<div class="projects" data-columns>
-			{% for project in projects.projects.slice(0,4) %}
+			{% for project in projects.slice(0,4) %}
 				<div class="project snippet">
 					<div class="image-container">
-						<img data-src="{{project.images[0].src}}">
+						<img data-src="{{project.images[0].file.url}}">
 					</div>
 					<h3>
 						{% if project.link %}
@@ -53,6 +53,6 @@
 			<div data-project-images></div>
 			<div data-project-languages></div>
 		</div>
-		<div class="project loadMore">Load More</div>
+		<div class="project loadMore {{ "hidden" if projects.length <= 4 }}">Load More</div>
 	</div>
 </section>
