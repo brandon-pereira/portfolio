@@ -12,7 +12,9 @@
       }
     ],
     "shortDescription": "I built a chat bot for INFINITI Global. It allows users to learn about their new QX50 vehicle. It uses natural language processing to figure out users intent, and is localized to Canadian English and French, as well as American English.",
+    "description": "I built a chat bot for INFINITI Global. It allows users to learn about their new QX50 vehicle. It uses natural language processing to figure out users intent, and is localized to Canadian English and French, as well as American English.\n\nFrom a technical perspective, it's written in NodeJS and uses MongoDB for storing records. It's hosted on Azure. Asides from building atop our existing framework, I also added new features which can be used on future bots. \n\nThese include:\n\n- Improved natural language processing service (through Dialogflow)\n- All content and training data provided through Excel, and can be exported into JSON through an export tool written in Node. \n- Built the ability to localize bots more easily\n- Improved load testing module to better simulate real world cases\n\nThis bot has helped our company get insight on what kind of questions people are asking bots and has also paved the road for another chatbot to be built for more INFINITI regions.",
     "type": "External",
+    "status": "Live",
     "images": [
       {
         "_id": "3LUJnUNs1iMSmO4eG4OGWE",
@@ -44,6 +46,7 @@
           "contentType": "video/mp4"
         }
       }
-    ]
+    ],
+    "link": "https://m.me/INFINITIIDRIS?ref=brandonp_portfolio"
   }
 ]

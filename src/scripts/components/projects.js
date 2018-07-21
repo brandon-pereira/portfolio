@@ -44,7 +44,7 @@ export default class Projects extends Base {
         return this.fetchProjects()
             .then((projects) => {
                 const project = projects.projects[id];
-                this._getDetailsNode(project, projects.statuses);
+                this._getDetailsNode(project);
                 this._toggleDetailsView(true);
                 this.logEvent('projects', 'read-more', project.title)
             })
@@ -89,7 +89,10 @@ export default class Projects extends Base {
         this.fetchProjects()
             .then(projects => {
                 if(language) {
-                    return projects.projects.filter(p => p.languages.includes(language));
+                    return projects.projects.filter(p => p.languages.some(k => 
+                        // console.log()
+                         k._id === language
+                    ));
                 } else {
                     return projects.projects.slice(0, 6);
                 }
@@ -173,10 +176,9 @@ export default class Projects extends Base {
     /**
      * Function to build a snippet node from a project
      * @param {Object} project
-     * @param {Statuses} statuses
      * @return {Element}
      */
-    _getDetailsNode(project, statuses) {
+    _getDetailsNode(project) {
         console.info("Projects: Set details for project", project);
         const $node = this.$detailed;
         // titte, description
@@ -188,21 +190,21 @@ export default class Projects extends Base {
         }
         $node.querySelector('[data-project-description]').innerHTML = project.description;
         // status
-        const status = statuses[project.status];
+        const status = project.status || 'Unavailable';
         const $status = $node.querySelector('[data-project-status]');
-        $status.setAttribute('class', status.class);
-        $status.innerText = status.title;
+        $status.setAttribute('class', status.toLowerCase());
+        $status.innerText = status;
         // assets
         const $images = $node.querySelector('[data-project-images]');
         $images.innerHTML = ''; // clear
         if (Array.isArray(project.images)) {
           project.images.forEach((asset) => {
-                const type = asset.type || 'img';
+                const type = asset.file.contentType.startsWith('video') ? 'video' : 'img';
                 const config = {
-                    src: asset.src,
+                    src: asset.file.url,
                     autoplay: true,
                     muted: true,
-                    class: asset.styling
+                    class: 'shadow'
                 };
                 const $asset = document.createElement(type);
                 Object.keys(config).forEach((key) => $asset.setAttribute(key, config[key]));
@@ -221,9 +223,9 @@ export default class Projects extends Base {
         project.languages.forEach((lang) => {
             const $lang = document.createElement('span');
             $lang.addEventListener('click', () => document.querySelector('#skills').dispatchEvent(new CustomEvent('goToSkill', {
-                detail: lang
+                detail: lang._id
             })));
-            $lang.innerText = lang;
+            $lang.innerText = lang.name;
             $langs.appendChild($lang)
         });
         return $node;
