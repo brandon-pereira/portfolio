@@ -34,7 +34,7 @@ const normalizeSkills = (categories) =>
             category.skills = [];
         }
         return category;
-    });
+    }).sort((a, b) => b.skills.length - a.skills.length);
 
 const normalizeProjects = (projects) => projects;
 
