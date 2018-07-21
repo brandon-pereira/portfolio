@@ -9,7 +9,7 @@ module.exports = function(config, gulp) {
 	gulp.task('html', () =>
 		gulp.src(config.paths.src.html)
 			.pipe(data(() => ({
-				projects: requireUncached('../src/content/projects.json'),
+				projects: requireUncached('../src/content/_projects.json'),
 				apps: requireUncached('../src/content/apps.json'),
 				skills: requireUncached('../src/content/test.json'),
 				contact: requireUncached('../src/content/contact.json')
