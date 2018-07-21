@@ -51,7 +51,7 @@ export default class Skills extends Base {
     }
 
     deeplink(id) {
-        const skill = this.el.querySelector('[data-id=' + id + ']');
+        const skill = this.el.querySelector('[data-id="' + id + '"]');
         if (skill) {
             const category = skill.closest('.accordion.category');
             if (!category.classList.contains('open')) this.toggleItem(category);
