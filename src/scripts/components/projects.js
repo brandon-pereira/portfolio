@@ -89,7 +89,7 @@ export default class Projects extends Base {
         this.fetchProjects()
             .then(projects => {
                 if(language) {
-                    return projects.projects.filter(p => p.languages.some(k => 
+                    return projects.projects.filter(p => p.languages.some(k =>
                         // console.log()
                          k._id === language
                     ));
@@ -248,7 +248,7 @@ export default class Projects extends Base {
         $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
         $project.querySelector('[data-project-learn-more]').addEventListener('click', () => this.showMoreDetails(project.index));
         if (project.images && project.images.length) {
-            $project.querySelector("img").setAttribute('data-src', project.images[0].src);
+            $project.querySelector("img").setAttribute('data-src', project.images[0].file.url,);
         }
         LazyLoad.loadImages($project.querySelectorAll("img"));
         return $project;

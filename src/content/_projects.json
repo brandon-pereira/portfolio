@@ -12,7 +12,7 @@
       }
     ],
     "shortDescription": "I built a chat bot for INFINITI Global. It allows users to learn about their new QX50 vehicle. It uses natural language processing to figure out users intent, and is localized to Canadian English and French, as well as American English.",
-    "description": "I built a chat bot for INFINITI Global. It allows users to learn about their new QX50 vehicle. It uses natural language processing to figure out users intent, and is localized to Canadian English and French, as well as American English.\n\nFrom a technical perspective, it's written in NodeJS and uses MongoDB for storing records. It's hosted on Azure. Asides from building atop our existing framework, I also added new features which can be used on future bots. \n\nThese include:\n\n- Improved natural language processing service (through Dialogflow)\n- All content and training data provided through Excel, and can be exported into JSON through an export tool written in Node. \n- Built the ability to localize bots more easily\n- Improved load testing module to better simulate real world cases\n\nThis bot has helped our company get insight on what kind of questions people are asking bots and has also paved the road for another chatbot to be built for more INFINITI regions.",
+    "description": "<p>I built a chat bot for INFINITI Global. It allows users to learn about their new QX50 vehicle. It uses natural language processing to figure out users intent, and is localized to Canadian English and French, as well as American English.</p>\n<p>From a technical perspective, it&#39;s written in NodeJS and uses MongoDB for storing records. It&#39;s hosted on Azure. Asides from building atop our existing framework, I also added new features which can be used on future bots. </p>\n<p>These include:</p>\n<ul>\n<li>Improved natural language processing service (through Dialogflow)</li>\n<li>All content and training data provided through Excel, and can be exported into JSON through an export tool written in Node. </li>\n<li>Built the ability to localize bots more easily</li>\n<li>Improved load testing module to better simulate real world cases</li>\n</ul>\n<p>This bot has helped our company get insight on what kind of questions people are asking bots and has also paved the road for another chatbot to be built for more INFINITI regions.</p>\n",
     "type": "External",
     "status": "Live",
     "images": [
@@ -48,5 +48,321 @@
       }
     ],
     "link": "https://m.me/INFINITIIDRIS?ref=brandonp_portfolio"
+  },
+  {
+    "_id": "6rChKLEHuwOmAYCkQ8MMMC",
+    "title": "TvTracker",
+    "date": "2017-10-15",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "1sba8qggLqQ8Koqku6UW4g",
+        "name": "MongoDB",
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "TvTracker is an application for tracking your TV Shows. Built to work great on mobile, desktop, and even from your status bar (Mac).",
+    "description": "<p>TvTracker is an application for tracking your TV Shows. Built to work great on mobile, desktop, and even from your status bar (Mac).</p>\n<p>Under the hood we&#39;re using React and MobX, Webpack for compiling and code splitting, Service Workers for offline caching, and Electron for building the Mac app.</p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "4ikvd4yIMMsUAamUwykYE8",
+        "title": "tv-tracker-1",
+        "description": "Mobile Android Experience",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/4ikvd4yIMMsUAamUwykYE8/0eda67903e155d1f8bed8db78b55115b/tv-tracker-1.png",
+          "details": {
+            "size": 1029036,
+            "image": {
+              "width": 1440,
+              "height": 2560
+            }
+          },
+          "fileName": "tv-tracker-1.png",
+          "contentType": "image/png"
+        }
+      },
+      {
+        "_id": "30rOMLd7i00YiQW2GemacK",
+        "title": "tv-tracker-2",
+        "description": "Desktop experience",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/30rOMLd7i00YiQW2GemacK/66f980a92756617f448d42a4984e6c99/tv-tracker-2.png",
+          "details": {
+            "size": 353047,
+            "image": {
+              "width": 1728,
+              "height": 1882
+            }
+          },
+          "fileName": "tv-tracker-2.png",
+          "contentType": "image/png"
+        }
+      },
+      {
+        "_id": "4cajmluS5OUcyoyWKMqewm",
+        "title": "tv-tracker-3",
+        "description": "Mac status bar experience",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/4cajmluS5OUcyoyWKMqewm/af67a4d55cf9f1b9d1616ab0f5dc838b/tv-tracker-3.png",
+          "details": {
+            "size": 203627,
+            "image": {
+              "width": 780,
+              "height": 1044
+            }
+          },
+          "fileName": "tv-tracker-3.png",
+          "contentType": "image/png"
+        }
+      }
+    ],
+    "link": "https://branclon.com/tv-tracker/"
+  },
+  {
+    "_id": "55SiBvkViEEIew6EY4aGoG",
+    "title": " Travel Alberta: Brand Guidelines",
+    "date": "2017-06-01",
+    "languages": [
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "I built the internal brand guidelines website for Travel Alberta. This project had a clean state so I got to choose my own tech stack. I put a lot of effort into making the website load as fast as possible as well as look pixel perfect.",
+    "description": "<p>I built the internal brand guidelines website for Travel Alberta. This project had a clean state so I got to choose my own tech stack. I put a lot of effort into making the website load as fast as possible as well as look pixel perfect.</p>\n<p>I ended up using Gulp for CSS, assets, etc. along side Webpack for my javascript. I got to leverage tons of webpack features like code-splitting, hot-module reloading, as well as ES6 classes and syntax. From a CSS perspective I built the layout using flexbox and other CSS3 features. The experience is gated, but check out the login screen for an example of how fast the website loads.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "3DVvmBRIlaKcCeWUyKYwQG",
+        "title": "travel-alberta-1",
+        "description": "Example of landing page on large screen size",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/3DVvmBRIlaKcCeWUyKYwQG/6151adb6120a5936a2661654fa51669d/travel-alberta-1.png",
+          "details": {
+            "size": 308185,
+            "image": {
+              "width": 1191,
+              "height": 687
+            }
+          },
+          "fileName": "travel-alberta-1.png",
+          "contentType": "image/png"
+        }
+      },
+      {
+        "_id": "6kF8t5dR1Sg0GqmseQyScy",
+        "title": "travel-alberta-2",
+        "description": "Example of landing page on small screen size",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/6kF8t5dR1Sg0GqmseQyScy/fbd793dcdc94c05dda26a9302b8618d8/travel-alberta-2.png",
+          "details": {
+            "size": 155221,
+            "image": {
+              "width": 478,
+              "height": 668
+            }
+          },
+          "fileName": "travel-alberta-2.png",
+          "contentType": "image/png"
+        }
+      }
+    ],
+    "link": "http://brand.travelalberta.com/"
+  },
+  {
+    "_id": "20Xk51zcMwc2ci88g066Wc",
+    "title": "INFINITI: Q60 Speedbot",
+    "date": "2017-04-10",
+    "languages": [
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "Built a chat bot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.",
+    "description": "<p>Built a chat bot for INFINITI USA. It allows you to compare their Q60&#39;s 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.</p>\n<p>From a technical perspective, it&#39;s written in NodeJS and uses DocumentDB for storing the records. It is hosted on Azure. Asides for building atop our existing framework, I also added new features which can be used on future bots. These include:</p>\n<p>Adding an algorithm for determining the &#39;did you mean&#39; values.</p>\n<ul>\n<li>Added the ability to unit test user flows and application logic.</li>\n<li>Added the ability to perform load testing on the application.</li>\n<li>Added an analytics module.</li>\n<li>Added a logging module which can be connected to either the console or to a database.</li>\n</ul>\n<p>It also got some good news coverage: <a href=\"https://www.carthrottle.com/post/infiniti-has-built-a-bot-to-compare-its-hottest-q60-to-other-cars-and-you-can-talk-to-it/\">CarThrottle</a> and <a href=\"http://www.thedrive.com/sheetmetal/9200/infinitis-facebook-chatbot-can-tell-you-the-0-to-60-mph-time-of-almost-any-car\">The Drive</a>.</p>\n",
+    "type": "External",
+    "status": "Unavailable",
+    "images": [
+      {
+        "_id": "2fLYBsbwHO6sm6M0KoqIKG",
+        "title": "speedbot-3",
+        "description": "Example of what happens when you hit random 0-60 time.",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/2fLYBsbwHO6sm6M0KoqIKG/c56be708b2cc848541d4582853fd2ad9/speedbot-3.png",
+          "details": {
+            "size": 899321,
+            "image": {
+              "width": 1440,
+              "height": 2560
+            }
+          },
+          "fileName": "speedbot-3.png",
+          "contentType": "image/png"
+        }
+      },
+      {
+        "_id": "2RRnzZKo3emceCsyk44euE",
+        "title": "speedbot-1",
+        "description": "Example of how the suggestions work. They are based on users input.",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/2RRnzZKo3emceCsyk44euE/55090dbf561e333dd22e5022143b1cad/speedbot-1.png",
+          "details": {
+            "size": 896656,
+            "image": {
+              "width": 1298,
+              "height": 1980
+            }
+          },
+          "fileName": "speedbot-1.png",
+          "contentType": "image/png"
+        }
+      },
+      {
+        "_id": "7im2XnJkYMye0YWikccw0u",
+        "title": "speedbot-2",
+        "description": "Video showing the users flow.",
+        "file": {
+          "url": "//videos.ctfassets.net/clwxl9y31vqr/7im2XnJkYMye0YWikccw0u/87a48ee46c2e8f19bf48df5a972edcc5/speedbot-2.mp4",
+          "details": {
+            "size": 2154701
+          },
+          "fileName": "speedbot-2.mp4",
+          "contentType": "video/mp4"
+        }
+      }
+    ],
+    "link": "https://www.messenger.com/t/INFINITIQ60SpeedBot"
+  },
+  {
+    "_id": "48QIfbiRQ4qOa06Yi8S8us",
+    "title": "Wings.cheap",
+    "date": "2017-02-01",
+    "languages": [
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "1sba8qggLqQ8Koqku6UW4g",
+        "name": "MongoDB",
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "I built a web app for finding cheap wings near you. Allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!",
+    "description": "<p>I built a web app for finding cheap wings near you. Allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you&#39;re looking for a cheap eat!</p>\n<p>Under the hood, I&#39;m using AngularJS and SCSS to render the front-end. It goes through GulpJS to create production (minified) files as well as enabling live reload on both front-end and back-end (running on same instance). The back-end is written in NodeJS (using Express to handle server portion) and utilizes a REST API. For a database I decided to use MongoDB.</p>\n<p>The hosting is being provided by DigitalOcean. For this project I created a basic linux server and manually implemented NodeJS, Mongo, Git, and NGINX. This allowed me to test my bash skills and learn how a server is set up at a lower level.</p>\n<p>The main objectives of this application were to learn AngularJS as well as to dabble with writing NodeJS.</p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "5G7FgIiNQAmyQO0mu8yKem",
+        "title": "wingscheap-2",
+        "description": "Mobile view of landing screen",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/5G7FgIiNQAmyQO0mu8yKem/8f10160d30d467c845a314ae70d3d36f/wingscheap-2.png",
+          "details": {
+            "size": 259396,
+            "image": {
+              "width": 1024,
+              "height": 1638
+            }
+          },
+          "fileName": "wingscheap-2.png",
+          "contentType": "image/png"
+        }
+      },
+      {
+        "_id": "5fxagEO5J6ucyQ0MmQQgAE",
+        "title": "wingscheap-1",
+        "description": "Desktop view of landing screen",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/5fxagEO5J6ucyQ0MmQQgAE/be9a97278d6eb012b4320295bd5ce359/wingscheap-1.png",
+          "details": {
+            "size": 475423,
+            "image": {
+              "width": 2200,
+              "height": 1438
+            }
+          },
+          "fileName": "wingscheap-1.png",
+          "contentType": "image/png"
+        }
+      },
+      {
+        "_id": "3Eh8HFBZBKUcwummomseyA",
+        "title": "wingscheap-3",
+        "description": "Mobile view of results screen",
+        "file": {
+          "url": "//images.ctfassets.net/clwxl9y31vqr/3Eh8HFBZBKUcwummomseyA/22945af2c5ae6f29a7ebb4b94591c0ff/wingscheap-3.png",
+          "details": {
+            "size": 200746,
+            "image": {
+              "width": 1024,
+              "height": 1638
+            }
+          },
+          "fileName": "wingscheap-3.png",
+          "contentType": "image/png"
+        }
+      }
+    ],
+    "link": "https://wings.cheap/"
   }
 ]
