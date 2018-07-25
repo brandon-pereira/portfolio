@@ -1,9 +1,9 @@
-const { createClient} = require('contentful');
+import contentful from 'contentful';
 
-module.exports = class Contentful {
+export default class Contentful {
 
     constructor(auth) {
-        this.client = createClient(auth);
+        this.client = contentful.createClient(auth);
     }
 
     getAllEntries() {

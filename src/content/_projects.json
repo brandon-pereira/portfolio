@@ -20,31 +20,15 @@
         "_id": "3LUJnUNs1iMSmO4eG4OGWE",
         "title": "idris-na-1",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/3LUJnUNs1iMSmO4eG4OGWE/27c3f4044b8a47361189280db723c382/idris-na-1.png",
-          "details": {
-            "size": 91175,
-            "image": {
-              "width": 1440,
-              "height": 2560
-            }
-          },
-          "fileName": "idris-na-1.png",
-          "contentType": "image/png"
-        }
+        "url": "idris-na-1.png",
+        "contentType": "image/png"
       },
       {
         "_id": "6mhLOlQsxiiQm4a22ESKiE",
         "title": "idris-na-2",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "file": {
-          "url": "//videos.ctfassets.net/clwxl9y31vqr/6mhLOlQsxiiQm4a22ESKiE/5f7ae2fd0de6f1cfc82f2195bc600d78/idris-na-2.mp4",
-          "details": {
-            "size": 2869051
-          },
-          "fileName": "idris-na-2.mp4",
-          "contentType": "video/mp4"
-        }
+        "url": "idris-na-2.mp4",
+        "contentType": "video/mp4"
       }
     ],
     "link": "https://m.me/INFINITIIDRIS?ref=brandonp_portfolio"
@@ -88,52 +72,22 @@
         "_id": "4ikvd4yIMMsUAamUwykYE8",
         "title": "tv-tracker-1",
         "description": "Mobile Android Experience",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/4ikvd4yIMMsUAamUwykYE8/0eda67903e155d1f8bed8db78b55115b/tv-tracker-1.png",
-          "details": {
-            "size": 1029036,
-            "image": {
-              "width": 1440,
-              "height": 2560
-            }
-          },
-          "fileName": "tv-tracker-1.png",
-          "contentType": "image/png"
-        }
+        "url": "tv-tracker-1.png",
+        "contentType": "image/png"
       },
       {
         "_id": "30rOMLd7i00YiQW2GemacK",
         "title": "tv-tracker-2",
         "description": "Desktop experience",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/30rOMLd7i00YiQW2GemacK/66f980a92756617f448d42a4984e6c99/tv-tracker-2.png",
-          "details": {
-            "size": 353047,
-            "image": {
-              "width": 1728,
-              "height": 1882
-            }
-          },
-          "fileName": "tv-tracker-2.png",
-          "contentType": "image/png"
-        }
+        "url": "tv-tracker-2.png",
+        "contentType": "image/png"
       },
       {
         "_id": "4cajmluS5OUcyoyWKMqewm",
         "title": "tv-tracker-3",
         "description": "Mac status bar experience",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/4cajmluS5OUcyoyWKMqewm/af67a4d55cf9f1b9d1616ab0f5dc838b/tv-tracker-3.png",
-          "details": {
-            "size": 203627,
-            "image": {
-              "width": 780,
-              "height": 1044
-            }
-          },
-          "fileName": "tv-tracker-3.png",
-          "contentType": "image/png"
-        }
+        "url": "tv-tracker-3.png",
+        "contentType": "image/png"
       }
     ],
     "link": "https://branclon.com/tv-tracker/"
@@ -165,35 +119,15 @@
         "_id": "3DVvmBRIlaKcCeWUyKYwQG",
         "title": "travel-alberta-1",
         "description": "Example of landing page on large screen size",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/3DVvmBRIlaKcCeWUyKYwQG/6151adb6120a5936a2661654fa51669d/travel-alberta-1.png",
-          "details": {
-            "size": 308185,
-            "image": {
-              "width": 1191,
-              "height": 687
-            }
-          },
-          "fileName": "travel-alberta-1.png",
-          "contentType": "image/png"
-        }
+        "url": "travel-alberta-1.png",
+        "contentType": "image/png"
       },
       {
         "_id": "6kF8t5dR1Sg0GqmseQyScy",
         "title": "travel-alberta-2",
         "description": "Example of landing page on small screen size",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/6kF8t5dR1Sg0GqmseQyScy/fbd793dcdc94c05dda26a9302b8618d8/travel-alberta-2.png",
-          "details": {
-            "size": 155221,
-            "image": {
-              "width": 478,
-              "height": 668
-            }
-          },
-          "fileName": "travel-alberta-2.png",
-          "contentType": "image/png"
-        }
+        "url": "travel-alberta-2.png",
+        "contentType": "image/png"
       }
     ],
     "link": "http://brand.travelalberta.com/"
@@ -219,48 +153,22 @@
         "_id": "2fLYBsbwHO6sm6M0KoqIKG",
         "title": "speedbot-3",
         "description": "Example of what happens when you hit random 0-60 time.",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/2fLYBsbwHO6sm6M0KoqIKG/c56be708b2cc848541d4582853fd2ad9/speedbot-3.png",
-          "details": {
-            "size": 899321,
-            "image": {
-              "width": 1440,
-              "height": 2560
-            }
-          },
-          "fileName": "speedbot-3.png",
-          "contentType": "image/png"
-        }
+        "url": "speedbot-3.png",
+        "contentType": "image/png"
       },
       {
         "_id": "2RRnzZKo3emceCsyk44euE",
         "title": "speedbot-1",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/2RRnzZKo3emceCsyk44euE/55090dbf561e333dd22e5022143b1cad/speedbot-1.png",
-          "details": {
-            "size": 896656,
-            "image": {
-              "width": 1298,
-              "height": 1980
-            }
-          },
-          "fileName": "speedbot-1.png",
-          "contentType": "image/png"
-        }
+        "url": "speedbot-1.png",
+        "contentType": "image/png"
       },
       {
         "_id": "7im2XnJkYMye0YWikccw0u",
         "title": "speedbot-2",
         "description": "Video showing the users flow.",
-        "file": {
-          "url": "//videos.ctfassets.net/clwxl9y31vqr/7im2XnJkYMye0YWikccw0u/87a48ee46c2e8f19bf48df5a972edcc5/speedbot-2.mp4",
-          "details": {
-            "size": 2154701
-          },
-          "fileName": "speedbot-2.mp4",
-          "contentType": "video/mp4"
-        }
+        "url": "speedbot-2.mp4",
+        "contentType": "video/mp4"
       }
     ],
     "link": "https://www.messenger.com/t/INFINITIQ60SpeedBot"
@@ -315,52 +223,22 @@
         "_id": "5G7FgIiNQAmyQO0mu8yKem",
         "title": "wingscheap-2",
         "description": "Mobile view of landing screen",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/5G7FgIiNQAmyQO0mu8yKem/8f10160d30d467c845a314ae70d3d36f/wingscheap-2.png",
-          "details": {
-            "size": 259396,
-            "image": {
-              "width": 1024,
-              "height": 1638
-            }
-          },
-          "fileName": "wingscheap-2.png",
-          "contentType": "image/png"
-        }
+        "url": "wingscheap-2.png",
+        "contentType": "image/png"
       },
       {
         "_id": "5fxagEO5J6ucyQ0MmQQgAE",
         "title": "wingscheap-1",
         "description": "Desktop view of landing screen",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/5fxagEO5J6ucyQ0MmQQgAE/be9a97278d6eb012b4320295bd5ce359/wingscheap-1.png",
-          "details": {
-            "size": 475423,
-            "image": {
-              "width": 2200,
-              "height": 1438
-            }
-          },
-          "fileName": "wingscheap-1.png",
-          "contentType": "image/png"
-        }
+        "url": "wingscheap-1.png",
+        "contentType": "image/png"
       },
       {
         "_id": "3Eh8HFBZBKUcwummomseyA",
         "title": "wingscheap-3",
         "description": "Mobile view of results screen",
-        "file": {
-          "url": "//images.ctfassets.net/clwxl9y31vqr/3Eh8HFBZBKUcwummomseyA/22945af2c5ae6f29a7ebb4b94591c0ff/wingscheap-3.png",
-          "details": {
-            "size": 200746,
-            "image": {
-              "width": 1024,
-              "height": 1638
-            }
-          },
-          "fileName": "wingscheap-3.png",
-          "contentType": "image/png"
-        }
+        "url": "wingscheap-3.png",
+        "contentType": "image/png"
       }
     ],
     "link": "https://wings.cheap/"

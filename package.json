@@ -9,8 +9,7 @@
     "dotenv": "^6.0.0",
     "marked": "^0.4.0",
     "web-animations-js": "^2.3.1",
-    "webfontloader": "^1.6.28",
-    "write-json": "^3.0.1"
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "babel-core": "^6.23.1",
@@ -42,7 +41,8 @@
   "scripts": {
     "build": "NODE_ENV='production' ./node_modules/.bin/gulp build",
     "start": "./node_modules/.bin/gulp serve",
-    "test": "jest && ./node_modules/.bin/eslint test"
+    "test": "jest && ./node_modules/.bin/eslint test",
+    "get-content": "node --experimental-modules ./src/content/import"
   },
   "engines": {
     "node": ">=10.7.0"
