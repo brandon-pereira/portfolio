@@ -5,9 +5,7 @@ import path from 'path';
 //https://stackoverflow.com/a/45007624/7033335
 const downloadImage = (url, imageNamingFn) =>
     new Promise((resolve, reject) => {
-        console.log(url)
         const dest = imageNamingFn(url);
-        console.log(dest);
         const file = fs.createWriteStream(dest, { flags: "wx" });
         const request = http.get(absoluteToHttp(url), response => {
             if (response.statusCode === 200) {
@@ -20,6 +18,7 @@ const downloadImage = (url, imageNamingFn) =>
         });
 
         request.on("error", err => {
+            console.log(err);
             file.close();
             fs.unlink(dest, () => {}); // Delete temp file
             reject(err.message);
@@ -30,11 +29,12 @@ const downloadImage = (url, imageNamingFn) =>
         });
 
         file.on("error", err => {
+            console.log(err.code);
             file.close();
             if (err.code === "EEXIST") {
                 reject("File already exists");
             } else {
-                fs.unlink(dest, () => {}); // Delete temp file
+                // fs.unlink(dest, () => {}); // Delete temp file
                 reject(err.message);
             }
         });

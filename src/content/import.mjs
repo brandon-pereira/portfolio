@@ -39,7 +39,7 @@ const importProjects = async () => {
 const importAllAssets = (images = []) =>
     Promise.all(images.map(src =>
         downloadImage(src, imageNamingFn)
-            .then((e) => console.log("HERE",e))
+            // .then((e) => console.log("HERE",e))
             .catch(err => {
                 console.error(err);
             })
