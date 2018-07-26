@@ -199,9 +199,9 @@ export default class Projects extends Base {
         $images.innerHTML = ''; // clear
         if (Array.isArray(project.images)) {
           project.images.forEach((asset) => {
-                const type = asset.file.contentType.startsWith('video') ? 'video' : 'img';
+                const type = asset.contentType.startsWith('video') ? 'video' : 'img';
                 const config = {
-                    src: asset.file.url,
+                    src: asset.url,
                     autoplay: true,
                     muted: true,
                     class: 'shadow'
@@ -248,7 +248,7 @@ export default class Projects extends Base {
         $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
         $project.querySelector('[data-project-learn-more]').addEventListener('click', () => this.showMoreDetails(project.index));
         if (project.images && project.images.length) {
-            $project.querySelector("img").setAttribute('data-src', project.images[0].file.url,);
+            $project.querySelector("img").setAttribute('data-src', project.images[0].url,);
         }
         LazyLoad.loadImages($project.querySelectorAll("img"));
         return $project;
