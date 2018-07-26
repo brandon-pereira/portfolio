@@ -56,7 +56,8 @@ class LazyLoad {
         }
 
         return this.fetchImage(src)
-            .then(() => this.applyImage(image, src));
+            .then(() => this.applyImage(image, src))
+            .catch(() => console.error(`Failed to lazy load ${src}`));
     }
 
     /**
