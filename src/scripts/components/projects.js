@@ -31,7 +31,7 @@ export default class Projects extends Base {
             this.showMoreDetails(el.getAttribute('data-project-learn-more'))
         }));
         this.el.addEventListener('goToLang', (e) => this.deeplink(e.detail));
-        this.$filters.addEventListener('click', () => this.deeplink(null))
+        this.$filters.addEventListener('click', () => this.deeplink())
     }
 
     /**
@@ -81,17 +81,17 @@ export default class Projects extends Base {
      * Function to delegate out deeplink referrals
      * @param {String} language
      */
-    deeplink(language) {
-        this.$filters.querySelector('span').innerText = language || '';
-        this.$filters.classList.toggle('visible', language);
-        console.info("Projects: Filtering projects by", language);
+    deeplink({id, title} = {}) {
+        this.$filters.querySelector('span').innerText = title || '';
+        this.$filters.classList.toggle('visible', id);
+        console.info("Projects: Filtering projects by", id, title);
         this._clearGrid()
         this.fetchProjects()
             .then(projects => {
-                if(language) {
+                if(id) {
                     return projects.projects.filter(p => p.languages.some(k =>
                         // console.log()
-                         k._id === language
+                         k._id === id
                     ));
                 } else {
                     return projects.projects.slice(0, 6);
@@ -101,9 +101,9 @@ export default class Projects extends Base {
                 const elements = toAdd.map(project => this._getSnippetNode(project))
                 this._addElementsToGrid(elements);
                 this._toggleDetailsView(false);
-                this.$loadMore.classList.toggle('hidden', language);
+                this.$loadMore.classList.toggle('hidden', id);
                 this.scroll.then(s => s.scrollTo(this.el));
-                this.logEvent('projects', 'filter', language)
+                this.logEvent('projects', 'filter', title)
             })
     }
 
@@ -248,7 +248,7 @@ export default class Projects extends Base {
         $project.querySelector('[data-project-description]').innerHTML = project.shortDescription || project.description;
         $project.querySelector('[data-project-learn-more]').addEventListener('click', () => this.showMoreDetails(project.index));
         if (project.images && project.images.length) {
-            $project.querySelector("img").setAttribute('data-src', project.images[0].url,);
+            $project.querySelector("img").setAttribute('data-src', `/projects/${project.images[0].url}`);
         }
         LazyLoad.loadImages($project.querySelectorAll("img"));
         return $project;

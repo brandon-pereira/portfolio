@@ -13,16 +13,23 @@ export default class Skills extends Base {
         );
         
         Array.from(this.el.querySelectorAll('[data-go-to-project]')).forEach(handle =>
-            handle.addEventListener('click', () =>
-                this.goToSkill(handle.getAttribute('data-go-to-project'))))
+            handle.addEventListener('click', () => {
+                const id = handle.getAttribute('data-go-to-project');
+                const title = handle.closest('.accordion').querySelector('.title').textContent;
+                this.goToSkill({
+                    id,
+                    title
+                })
+            }))
+                
 
         this.el.addEventListener('goToSkill', (e) => this.deeplink(e.detail));
         
         super.events();
     }
 
-    goToSkill(lang) {
-        document.querySelector('#projects').dispatchEvent(new CustomEvent('goToLang', {detail: lang}))
+    goToSkill(detail) {
+        document.querySelector('#projects').dispatchEvent(new CustomEvent('goToLang', {detail}))
     }
 
     toggleItem(element) {
