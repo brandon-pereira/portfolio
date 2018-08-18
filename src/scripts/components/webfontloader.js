@@ -1,46 +1,41 @@
 import WebFont from 'webfontloader';
 
 export default () => {
-    
-    // Load Webfonts (Generic)
-    WebFont.load({
-        google: {
-            families: [
-                'Open Sans:300,400',
-                'Press Start 2P:400'
-            ]
-        }
-    });
+  // Load Webfonts (Generic)
+  WebFont.load({
+    google: {
+      families: ['Open Sans:300,400', 'Press Start 2P:400']
+    }
+  });
 
-    // Load Projects webfont (subset only)
-    WebFont.load({
-        google: {
-            families: ['Lily Script One:400'],
-            text: 'Projects'
-        }
-    });
+  // Load Projects webfont (subset only)
+  WebFont.load({
+    google: {
+      families: ['Lily Script One:400'],
+      text: 'Projects'
+    }
+  });
 
-    // Load Header webfont (subset only)
-    WebFont.load({
-        google: {
-            families: ['Quicksand:500'],
-            text: 'BRANDON'
-        }
-    });
+  // Load Header webfont (subset only)
+  WebFont.load({
+    google: {
+      families: ['Quicksand:500'],
+      text: 'BRANDON'
+    }
+  });
 
-    // Load apps webfont (subset only)
-    WebFont.load({
-        google: {
-            families: ['Bungee Shade:400'],
-            text: 'Apps'
-        }
-    });
+  // Load apps webfont (subset only)
+  WebFont.load({
+    google: {
+      families: ['Bungee Shade:400'],
+      text: 'Apps'
+    }
+  });
 
-    // Load contact icons font
-    WebFont.load({
-        custom: {
-            families: ['contact'],
-        }
-    });
-
-}
+  // Load contact icons font
+  WebFont.load({
+    custom: {
+      families: ['contact']
+    }
+  });
+};
