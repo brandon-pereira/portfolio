@@ -5,6 +5,13 @@
 @import 'mixins';
 @import 'config';
 
+body {
+  font: 16px sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff;
+}
+
 /**
   * Internet Explorer Depreciated Alert
   */
@@ -29,9 +36,16 @@
 }
 
 /**
+  * Hide SVG Spritemap
+  */
+svg.spritemap {
+  display: none;
+}
+
+/**
   * Webfonts Initialized (helps solve flash of unstyled text)
   */
-html.wf-opensans-n4-active .body {
+html.wf-opensans-n4-active body {
   font: 1.2rem 'Open Sans', sans-serif;
 }
 html.wf-pressstart2p-n4-active footer .content,
@@ -109,7 +123,8 @@ html.webkit .container.projects header.main .maintext:before {
   }
 }
 
-// @import 'header';
+@import 'content';
+@import 'header';
 @import 'g-loader';
 @import 'contact';
 @import 'footer';
