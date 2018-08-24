@@ -6,8 +6,8 @@
 @import 'config';
 
 /**
- * Internet Explorer Depreciated Alert
- */
+  * Internet Explorer Depreciated Alert
+  */
 .browsehappy-container {
   height: 50px;
 }
@@ -29,8 +29,8 @@
 }
 
 /**
- * Webfonts Initialized (helps solve flash of unstyled text)
- */
+  * Webfonts Initialized (helps solve flash of unstyled text)
+  */
 html.wf-opensans-n4-active .body {
   font: 1.2rem 'Open Sans', sans-serif;
 }
@@ -69,8 +69,8 @@ img[data-src] {
 }
 
 /**
- * Font smoothing for Mac OS.
- */
+  * Font smoothing for Mac OS.
+  */
 .smoothText {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -81,9 +81,9 @@ img[data-src] {
 }
 
 /**
- * Make "Projects" text animated and pretty on webkit/blink browsers.
- * NOTE: Depends on JS to add .webkit class to HTML.
- */
+  * Make "Projects" text animated and pretty on webkit/blink browsers.
+  * NOTE: Depends on JS to add .webkit class to HTML.
+  */
 html.webkit .container.projects header.main .maintext:before {
   text-shadow: none;
   animation: hue 6s linear infinite;
@@ -98,8 +98,8 @@ html.webkit .container.projects header.main .maintext:before {
 }
 
 /**
- * Animations
- */
+  * Animations
+  */
 @keyframes hue {
   0% {
     filter: hue-rotate(0deg);
