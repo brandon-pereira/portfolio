@@ -1,4 +1,4 @@
-module.exports = class Masonry {
+export default class Masonry {
   constructor({ container, elements, sizes }) {
     this.element = container;
     this.items = elements || [];
@@ -56,4 +56,4 @@ module.exports = class Masonry {
       ([minWidth]) => window.matchMedia(`(min-width: ${minWidth}px)`).matches
     )[1];
   }
-};
+}
