@@ -75,7 +75,7 @@ button.button {
 
 header.header {
   background: purple;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   display: flex;
   text-align: center;
   position: relative;

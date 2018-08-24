@@ -1,11 +1,11 @@
-@import "mixins";
+@import 'mixins';
 
 header.header {
   $bg: purple;
   $gridBg: #4087d8;
   $gridBg1: rgba(0, 0, 0, 0.2);
   $gridBg2: rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
+  // text-transform: uppercase;
   display: flex;
   text-align: center;
   position: relative;
@@ -23,13 +23,13 @@ header.header {
     overflow: hidden;
   }
   &:before {
-    content: "";
+    content: '';
     background: lighten($bg, 10%);
     animation: hue 10s infinite;
     z-index: -1;
   }
   &:after {
-    content: "";
+    content: '';
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
     z-index: 0;
     box-shadow: inset 0 -1px rgba(255, 255, 255, 0.2), 0 3px #000;
@@ -71,7 +71,7 @@ header.header {
             linear-gradient(90deg, $gridBg2 1px, transparent 1px);
           background-color: $gridBg;
           background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-          //   animation: 2s bgScroll infinite linear;
+          animation: 2s bgScroll infinite linear;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -95,7 +95,7 @@ header.header {
   }
   .background {
     bottom: 3px;
-    filter: url("#goo");
+    filter: url('#goo');
     z-index: 0;
     .blob {
       animation: hue 11s infinite;
@@ -112,11 +112,11 @@ header.header {
   }
 }
 
-// @keyframes bgScroll {
-//   from {
-//     background-position: 0 0;
-//   }
-//   to {
-//     background-position: 50px 50px;
-//   }
-// }
+@keyframes bgScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 50px 50px;
+  }
+}
