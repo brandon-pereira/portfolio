@@ -1,4 +1,4 @@
-module.exports = class Masonry {
+export default class Masonry {
   constructor({ container, elements, sizes }) {
     this.element = container;
     this.items = elements || [];
@@ -8,12 +8,8 @@ module.exports = class Masonry {
         'Missing container, elements, or sizes on Masonry initialization.'
       );
     }
-    this.init();
-  }
-
-  init() {
+    this.sizes = this.sizes.sort((a, b) => (a[0] > b[0] ? -1 : 1)); // eslint-disable-line no-confusing-arrow
     this.recreateColumns();
-    this.sizes = this.sizes.sort((a, b) => a[0] - b[0]); // sort the sizes
   }
 
   recreateColumns() {
@@ -60,4 +56,4 @@ module.exports = class Masonry {
       ([minWidth]) => window.matchMedia(`(min-width: ${minWidth}px)`).matches
     )[1];
   }
-};
+}
