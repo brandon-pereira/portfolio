@@ -8,65 +8,64 @@
 /**
  * Internet Explorer Depreciated Alert
  */
-.browsehappy-container{
-		height:50px;
+.browsehappy-container {
+  height: 50px;
 }
-.browsehappy{
-	text-align:center;
-	position:fixed;
-	z-index:3;
-	top:0;
-	left:0;
-	right:0;
-	background:#c90000;
-	border-bottom:1px solid darken(#c90000, 10%);
-	color:#fff;
-	margin:0;
-	line-height:100px;
-	a{
-		color:#fff;
-	}
+.browsehappy {
+  text-align: center;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #c90000;
+  border-bottom: 1px solid darken(#c90000, 10%);
+  color: #fff;
+  margin: 0;
+  line-height: 100px;
+  a {
+    color: #fff;
+  }
 }
 
 /**
- * Webfont Initialzed (helps solve FOUT)
+ * Webfonts Initialized (helps solve flash of unstyled text)
  */
-html.wf-active{
-	body{
-		font: 1.2rem "Open Sans", sans-serif;
-	}
-	footer .content, .container.skills header.main h2 {
-		font-family: 'Press Start 2P', sans-serif;
-	}
-	.container.projects header.main .maintext {
-		font-family: 'Lily Script One', sans-serif;
-	}
-	.container.apps header.main .maintext{
-		font-family: 'Bungee Shade', sans-serif;
-	}
-	.header h1 {
-		font-family: 'Quicksand', sans-serif;
-		font-weight: 600;
-	}
-	.container.projects .projects .project p {
-		font-size: 12px;
-	}
-	.container.contact .item {
-		font-size: 0;
-		line-height: 0;
-		&:before {
-			display: block;
-		}
-	}
+html.wf-opensans-n4-active .body {
+  font: 1.2rem 'Open Sans', sans-serif;
+}
+html.wf-pressstart2p-n4-active footer .content,
+.container.skills header.main h2 {
+  font-family: 'Press Start 2P', sans-serif;
+}
+html.wf-lilyscriptone-n4-active .container.projects header.main .maintext {
+  font-family: 'Lily Script One', sans-serif;
+}
+html.wf-bungeeshade-n4-active .container.apps header.main .maintext {
+  font-family: 'Bungee Shade', sans-serif;
+}
+html.wf-quicksand-n5-active .header h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
+}
+html.wf-opensans-n4-active .container.projects .projects .project p {
+  font-size: 12px;
+}
+html.wf-contact-n4-active .container.contact .item {
+  font-size: 0;
+  line-height: 0;
+  &:before {
+    display: block;
+  }
 }
 
 img[data-src] {
-	transition: opacity 1s;
-	opacity: 0;
-	
-	&.loaded {
-		opacity: 1;
-	}
+  transition: opacity 1s;
+  opacity: 0;
+
+  &.loaded {
+    opacity: 1;
+  }
 }
 
 /**
@@ -77,32 +76,38 @@ img[data-src] {
   -moz-osx-font-smoothing: grayscale;
 }
 .uglyText {
-  -webkit-font-smoothing:none;
-  -moz-osx-font-smoothing:auto;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: auto;
 }
-
 
 /**
  * Make "Projects" text animated and pretty on webkit/blink browsers.
  * NOTE: Depends on JS to add .webkit class to HTML.
  */
-html.webkit .container.projects header.main .maintext:before{
-	text-shadow: none;
-	animation: hue 6s linear infinite;
-	content:attr(data-text);
-	position:absolute;
-	background: linear-gradient(map-get($config, accent), darken(map-get($config, accent), 20%));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+html.webkit .container.projects header.main .maintext:before {
+  text-shadow: none;
+  animation: hue 6s linear infinite;
+  content: attr(data-text);
+  position: absolute;
+  background: linear-gradient(
+    map-get($config, accent),
+    darken(map-get($config, accent), 20%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /**
  * Animations
  */
 @keyframes hue {
-	0% { filter: hue-rotate(0deg) }
-	100% { filter: hue-rotate(360deg) }
-};
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
 
 // @import 'header';
 @import 'g-loader';
