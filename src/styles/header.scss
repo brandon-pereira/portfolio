@@ -17,7 +17,9 @@ header.header {
     right: 0;
     bottom: 0;
     overflow: hidden;
-    background: linear-gradient(lighten($bg, 10%), $bg);
+    background: url('/backgrounds/diamond.png'),
+      linear-gradient(lighten($bg, 10%), $bg);
+    background-blend-mode: multiply;
     animation: hue 10s infinite;
     z-index: -1;
   }
