@@ -1,8 +1,12 @@
 import Base from './base';
+import ScrollText from 'scroll-text';
 
 export default class Skills extends Base {
   init() {
     this.letterize(this.el.querySelector('h1.name'));
+    this.ScrollText = new ScrollText(
+      this.el.querySelector('[data-scroll-text]')
+    );
     return super.init(import('../../styles/header.scss'));
   }
 

@@ -73,8 +73,34 @@ header.header {
     .button {
       padding: 8px 20px;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.3);
-      border: 1px solid #000;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.3)
+      );
+      border: none;
+      text-shadow: none;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 0 19px rgba(0, 0, 0, 0.2);
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.2),
+        0 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  [data-scroll-text] {
+    display: inline;
+    position: relative;
+    span {
+      transition: all 0.2s;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    span.current {
+      position: relative;
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }
