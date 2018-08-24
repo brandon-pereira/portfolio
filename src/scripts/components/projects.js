@@ -1,46 +1,46 @@
-import Base from "./base";
-import throttle from "../lib/throttle";
-import animate from "../lib/animate";
-import Masonry from "../lib/masonry";
-import LazyLoad from "../services/lazyload";
+import Base from './base';
+import throttle from '../lib/throttle';
+import animate from '../lib/animate';
+import Masonry from '../lib/masonry';
+import LazyLoad from '../services/lazyload';
 
 export default class Projects extends Base {
   init() {
-    this.$projects = this.el.querySelector(".projects");
-    this.$loadMore = this.el.querySelector(".loadMore");
-    this.$backButton = this.el.querySelector("[data-back-button]");
-    this.$snippet = this.el.querySelector(".project.snippet.skeleton");
-    this.$detailed = this.el.querySelector(".project.detailed-view");
-    this.$filters = this.el.querySelector("[data-filters]");
+    this.$projects = this.el.querySelector('.projects');
+    this.$loadMore = this.el.querySelector('.loadMore');
+    this.$backButton = this.el.querySelector('[data-back-button]');
+    this.$snippet = this.el.querySelector('.project.snippet.skeleton');
+    this.$detailed = this.el.querySelector('.project.detailed-view');
+    this.$filters = this.el.querySelector('[data-filters]');
     this.numProjectsToAdd = 2; // number of projects to add when show more clicked
 
     this.masonry = new Masonry(
       this.$projects,
       Array.from(this.$projects.children)
     );
-    return super.init(import("../../styles/projects.scss")).then(() => {
+    return super.init(import('../../styles/projects.scss')).then(() => {
       this.masonry.recreateColumns(); // Recreate once css loaded
-      LazyLoad.loadImages(this.el.querySelectorAll("img[data-src]"));
+      LazyLoad.loadImages(this.el.querySelectorAll('img[data-src]'));
     });
   }
 
   events() {
-    this.$loadMore.addEventListener("click", this.onLoadMoreClick.bind(this));
-    this.$backButton.addEventListener("click", () =>
+    this.$loadMore.addEventListener('click', this.onLoadMoreClick.bind(this));
+    this.$backButton.addEventListener('click', () =>
       this._toggleDetailsView(false)
     );
     window.addEventListener(
-      "resize",
+      'resize',
       throttle(() => this.masonry.recreateColumns(), 500)
     );
-    Array.from(this.el.querySelectorAll("[data-project-learn-more]")).forEach(
+    Array.from(this.el.querySelectorAll('[data-project-learn-more]')).forEach(
       el =>
-        el.addEventListener("click", () => {
-          this.showMoreDetails(el.getAttribute("data-project-learn-more"));
+        el.addEventListener('click', () => {
+          this.showMoreDetails(el.getAttribute('data-project-learn-more'));
         })
     );
-    this.el.addEventListener("goToLang", e => this.deeplink(e.detail));
-    this.$filters.addEventListener("click", () => this.deeplink(null));
+    this.el.addEventListener('goToLang', e => this.deeplink(e.detail));
+    this.$filters.addEventListener('click', () => this.deeplink(null));
   }
 
   /**
@@ -49,12 +49,12 @@ export default class Projects extends Base {
    * @return {Promise}
    */
   showMoreDetails(id) {
-    console.info("Projects: Show more details for", id);
+    console.info('Projects: Show more details for', id);
     return this.fetchProjects().then(projects => {
       const project = projects.projects[id];
       this._getDetailsNode(project, projects.statuses);
       this._toggleDetailsView(true);
-      this.logEvent("projects", "read-more", project.title);
+      this.logEvent('projects', 'read-more', project.title);
     });
   }
 
@@ -63,10 +63,10 @@ export default class Projects extends Base {
    * @return {Promise}
    */
   onLoadMoreClick() {
-    this.$loadMore.classList.add("loading");
+    this.$loadMore.classList.add('loading');
     return this.showMoreProjects().then(() => {
-      this.$loadMore.classList.remove("loading");
-      this.logEvent("projects", "load-more", "load-more");
+      this.$loadMore.classList.remove('loading');
+      this.logEvent('projects', 'load-more', 'load-more');
     });
   }
 
@@ -83,7 +83,7 @@ export default class Projects extends Base {
       const elements = toAdd.map(project => this._getSnippetNode(project));
       this._addElementsToGrid(elements);
       this.$loadMore.classList.toggle(
-        "hidden",
+        'hidden',
         this.numVisibleProjects >= projects.projects.length
       );
     });
@@ -94,9 +94,9 @@ export default class Projects extends Base {
    * @param {String} language
    */
   deeplink(language) {
-    this.$filters.querySelector("span").innerText = language || "";
-    this.$filters.classList.toggle("visible", language);
-    console.info("Projects: Filtering projects by", language);
+    this.$filters.querySelector('span').innerText = language || '';
+    this.$filters.classList.toggle('visible', language);
+    console.info('Projects: Filtering projects by', language);
     this._clearGrid();
     this.fetchProjects()
       .then(projects => {
@@ -110,9 +110,9 @@ export default class Projects extends Base {
         const elements = toAdd.map(project => this._getSnippetNode(project));
         this._addElementsToGrid(elements);
         this._toggleDetailsView(false);
-        this.$loadMore.classList.toggle("hidden", language);
+        this.$loadMore.classList.toggle('hidden', language);
         this.scroll.then(s => s.scrollTo(this.el));
-        this.logEvent("projects", "filter", language);
+        this.logEvent('projects', 'filter', language);
       });
   }
 
@@ -121,7 +121,7 @@ export default class Projects extends Base {
    * @return Promise
    */
   fetchProjects() {
-    return import("../../content/projects.json").then(projects => {
+    return import('../../content/projects.json').then(projects => {
       projects.projects = projects.projects.map((project, index) => {
         project.index = index;
         return project;
@@ -136,19 +136,19 @@ export default class Projects extends Base {
    */
   _toggleDetailsView(isShow) {
     this.scroll.then(s => s.scrollTo(this.el));
-    this.$loadMore.classList.toggle("hidden", isShow);
+    this.$loadMore.classList.toggle('hidden', isShow);
     animate(
       this.$detailed,
-      [{ left: "100%", opacity: 0 }, { left: 0, opacity: 1 }],
-      { duration: 200, fill: "both", direction: isShow ? "normal" : "reverse" }
+      [{ left: '100%', opacity: 0 }, { left: 0, opacity: 1 }],
+      { duration: 200, fill: 'both', direction: isShow ? 'normal' : 'reverse' }
     );
     animate(
       this.$projects,
-      [{ left: 0, opacity: 1 }, { left: "-100%", opacity: 0 }],
-      { duration: 200, fill: "both", direction: isShow ? "normal" : "reverse" },
+      [{ left: 0, opacity: 1 }, { left: '-100%', opacity: 0 }],
+      { duration: 200, fill: 'both', direction: isShow ? 'normal' : 'reverse' },
       () => {
-        this.$detailed.classList.toggle("hidden", !isShow);
-        this.$projects.classList.toggle("hidden", isShow);
+        this.$detailed.classList.toggle('hidden', !isShow);
+        this.$projects.classList.toggle('hidden', isShow);
       }
     );
   }
@@ -160,35 +160,35 @@ export default class Projects extends Base {
    */
   _getFormatedDate(date) {
     var days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday'
     ];
     var months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December'
     ];
     return (
       days[date.getDay()] +
-      ", " +
+      ', ' +
       months[date.getMonth()] +
-      " " +
+      ' ' +
       date.getDate(0) +
-      ", " +
+      ', ' +
       date.getFullYear()
     );
   }
@@ -202,7 +202,7 @@ export default class Projects extends Base {
   _addElementsToGrid(elements) {
     this.masonry.appendElements(elements);
     requestAnimationFrame(() =>
-      elements.forEach(el => el.classList.remove("hidden"))
+      elements.forEach(el => el.classList.remove('hidden'))
     );
   }
 
@@ -222,28 +222,28 @@ export default class Projects extends Base {
    * @return {Element}
    */
   _getDetailsNode(project, statuses) {
-    console.info("Projects: Set details for project", project);
+    console.info('Projects: Set details for project', project);
     const $node = this.$detailed;
     // titte, description
-    $node.querySelector("[data-project-title]").innerText = project.title;
+    $node.querySelector('[data-project-title]').innerText = project.title;
     if (project.link) {
-      $node.querySelector("[data-project-link]").href = project.link;
+      $node.querySelector('[data-project-link]').href = project.link;
     } else {
-      $node.querySelector("[data-project-title]").removeAttribute("href");
+      $node.querySelector('[data-project-title]').removeAttribute('href');
     }
-    $node.querySelector("[data-project-description]").innerHTML =
+    $node.querySelector('[data-project-description]').innerHTML =
       project.description;
     // status
     const status = statuses[project.status];
-    const $status = $node.querySelector("[data-project-status]");
-    $status.setAttribute("class", status.class);
+    const $status = $node.querySelector('[data-project-status]');
+    $status.setAttribute('class', status.class);
     $status.innerText = status.title;
     // assets
-    const $images = $node.querySelector("[data-project-images]");
-    $images.innerHTML = ""; // clear
+    const $images = $node.querySelector('[data-project-images]');
+    $images.innerHTML = ''; // clear
     if (Array.isArray(project.images)) {
       project.images.forEach(asset => {
-        const type = asset.type || "img";
+        const type = asset.type || 'img';
         const config = {
           src: asset.src,
           autoplay: true,
@@ -254,27 +254,27 @@ export default class Projects extends Base {
         Object.keys(config).forEach(key =>
           $asset.setAttribute(key, config[key])
         );
-        $asset.addEventListener("click", () =>
+        $asset.addEventListener('click', () =>
           this.lightbox.then(l => {
             l.set(asset);
             l.open();
           })
         );
-        $node.querySelector("[data-project-images]").appendChild($asset);
+        $node.querySelector('[data-project-images]').appendChild($asset);
       });
     }
     // Date
     $node.querySelector(
-      "[data-project-date]"
+      '[data-project-date]'
     ).innerText = this._getFormatedDate(new Date(project.date));
     // languages
-    const $langs = $node.querySelector("[data-project-languages]");
-    $langs.innerHTML = "";
+    const $langs = $node.querySelector('[data-project-languages]');
+    $langs.innerHTML = '';
     project.languages.forEach(lang => {
-      const $lang = document.createElement("span");
-      $lang.addEventListener("click", () =>
-        document.querySelector("#skills").dispatchEvent(
-          new CustomEvent("goToSkill", {
+      const $lang = document.createElement('span');
+      $lang.addEventListener('click', () =>
+        document.querySelector('#skills').dispatchEvent(
+          new CustomEvent('goToSkill', {
             detail: lang
           })
         )
@@ -292,24 +292,24 @@ export default class Projects extends Base {
    */
   _getSnippetNode(project) {
     const $project = this.$snippet.cloneNode(true);
-    $project.classList.remove("skeleton");
-    $project.querySelector("[data-project-title]").innerText = project.title;
+    $project.classList.remove('skeleton');
+    $project.querySelector('[data-project-title]').innerText = project.title;
     if (project.link) {
-      $project.querySelector("[data-project-link]").href = project.link;
+      $project.querySelector('[data-project-link]').href = project.link;
     } else {
-      $project.querySelector("[data-project-title]").removeAttribute("href");
+      $project.querySelector('[data-project-title]').removeAttribute('href');
     }
-    $project.querySelector("[data-project-description]").innerHTML =
+    $project.querySelector('[data-project-description]').innerHTML =
       project.shortDescription || project.description;
     $project
-      .querySelector("[data-project-learn-more]")
-      .addEventListener("click", () => this.showMoreDetails(project.index));
+      .querySelector('[data-project-learn-more]')
+      .addEventListener('click', () => this.showMoreDetails(project.index));
     if (project.images && project.images.length) {
       $project
-        .querySelector("img")
-        .setAttribute("data-src", project.images[0].src);
+        .querySelector('img')
+        .setAttribute('data-src', project.images[0].src);
     }
-    LazyLoad.loadImages($project.querySelectorAll("img"));
+    LazyLoad.loadImages($project.querySelectorAll('img'));
     return $project;
   }
 

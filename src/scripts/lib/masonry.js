@@ -6,7 +6,7 @@ module.exports = class Masonry {
 
   recreateColumns() {
     // Clear DOM
-    this.element.innerHTML = "";
+    this.element.innerHTML = '';
     // Create fragements for columns
     const columns = Array.from(Array(this._numColumns)).map(() =>
       document.createDocumentFragment()
@@ -18,8 +18,8 @@ module.exports = class Masonry {
     // Append columns to a virtual dom
     const grid = document.createDocumentFragment();
     columns.forEach(items => {
-      const column = document.createElement("div");
-      column.classList.add("column");
+      const column = document.createElement('div');
+      column.classList.add('column');
       column.appendChild(items);
       grid.appendChild(column);
     });
@@ -45,8 +45,8 @@ module.exports = class Masonry {
   get _numColumns() {
     return Number(
       window
-        .getComputedStyle(this.element, ":before")
-        .getPropertyValue("content")
+        .getComputedStyle(this.element, ':before')
+        .getPropertyValue('content')
         .slice(1, -1)
     );
   }

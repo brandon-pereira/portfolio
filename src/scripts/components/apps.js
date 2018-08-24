@@ -1,27 +1,27 @@
-import Base from "./base";
+import Base from './base';
 
 export default class Apps extends Base {
   init() {
     this.currentIndex = 0;
     this.slides = Array.from(
-      this.el.querySelectorAll(".carousel-slides .carousel-slide")
+      this.el.querySelectorAll('.carousel-slides .carousel-slide')
     );
     this.currentSlide = this.slides[0];
-    this.dots = Array.from(this.el.querySelectorAll(".carousel-dots .dot"));
-    return super.init(import("../../styles/apps.scss"));
+    this.dots = Array.from(this.el.querySelectorAll('.carousel-dots .dot'));
+    return super.init(import('../../styles/apps.scss'));
   }
 
   events() {
-    Array.from(this.el.querySelectorAll("[data-goto]")).forEach(el =>
-      el.addEventListener("click", () => {
-        const goto = el.getAttribute("data-goto");
+    Array.from(this.el.querySelectorAll('[data-goto]')).forEach(el =>
+      el.addEventListener('click', () => {
+        const goto = el.getAttribute('data-goto');
         this.goto(goto);
       })
     );
 
-    Array.from(this.el.querySelectorAll("[data-lightbox]")).forEach(el =>
-      el.addEventListener("click", () => {
-        const raw = el.getAttribute("data-lightbox");
+    Array.from(this.el.querySelectorAll('[data-lightbox]')).forEach(el =>
+      el.addEventListener('click', () => {
+        const raw = el.getAttribute('data-lightbox');
         this.lightbox.then(l => {
           l.set(JSON.parse(raw));
           l.open();
@@ -35,7 +35,7 @@ export default class Apps extends Base {
 
     this.slides.forEach(el =>
       el.addEventListener(
-        "touchstart",
+        'touchstart',
         event => {
           start = event.changedTouches[0].screenX;
         },
@@ -45,7 +45,7 @@ export default class Apps extends Base {
 
     this.slides.forEach(el =>
       el.addEventListener(
-        "touchend",
+        'touchend',
         event => {
           end = event.changedTouches[0].screenX;
           handleGesure(start, end, 50);
@@ -56,9 +56,9 @@ export default class Apps extends Base {
 
     const handleGesure = (touchstart, touchend, threshold) => {
       if (touchend < touchstart && touchstart - touchend >= threshold) {
-        this.goto("next");
+        this.goto('next');
       } else if (touchend > touchstart && touchend - touchstart >= threshold) {
-        this.goto("prev");
+        this.goto('prev');
       }
     };
 
@@ -67,12 +67,12 @@ export default class Apps extends Base {
 
   goto(slide) {
     switch (slide) {
-      case "next":
+      case 'next':
         this.setCurrentSlide(
           this.currentIndex + 1 < this.slides.length ? this.currentIndex + 1 : 0
         );
         break;
-      case "prev":
+      case 'prev':
         this.setCurrentSlide(
           this.currentIndex - 1 !== -1
             ? this.currentIndex - 1
@@ -83,7 +83,7 @@ export default class Apps extends Base {
         if (!isNaN(slide)) {
           this.setCurrentSlide(Number(slide));
         } else {
-          throw new Error("Invalid slide, expected index and got:", slide);
+          throw new Error('Invalid slide, expected index and got:', slide);
         }
     }
   }
@@ -93,18 +93,18 @@ export default class Apps extends Base {
     const newSlide = this.slides[slide];
     const currentSlide = this.currentSlide;
     // Toggle classes on carousel slides
-    currentSlide.classList.remove("currentSlide");
-    newSlide.classList.add("currentSlide");
+    currentSlide.classList.remove('currentSlide');
+    newSlide.classList.add('currentSlide');
     // Change the main carousel styling
-    this.el.setAttribute("data-current-slide", slide);
-    this.el.classList.remove(currentSlide.getAttribute("data-styling"));
-    this.el.classList.add(newSlide.getAttribute("data-styling"));
+    this.el.setAttribute('data-current-slide', slide);
+    this.el.classList.remove(currentSlide.getAttribute('data-styling'));
+    this.el.classList.add(newSlide.getAttribute('data-styling'));
     // Update Dot
     this.dots.forEach((el, i) => {
       if (i !== slide) {
-        el.classList.remove("active");
+        el.classList.remove('active');
       } else {
-        el.classList.add("active");
+        el.classList.add('active');
       }
     });
     // Update References
@@ -112,6 +112,6 @@ export default class Apps extends Base {
     this.currentIndex = slide;
 
     // Analytics
-    this.logEvent("apps", "show-slide", slide);
+    this.logEvent('apps', 'show-slide', slide);
   }
 }

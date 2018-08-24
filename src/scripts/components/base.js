@@ -1,11 +1,11 @@
-import ga from "../services/analytics";
+import ga from '../services/analytics';
 
 export default class Base {
   constructor(el, props = {}) {
     this.el = el;
     this.props = props;
-    this.lightbox = import("../services/lightbox");
-    this.scroll = import("../services/scroll");
+    this.lightbox = import('../services/lightbox');
+    this.scroll = import('../services/scroll');
     this.logEvent = ga;
     this.init()
       .then(() => this.setLoading(false))
@@ -13,9 +13,9 @@ export default class Base {
   }
 
   setLoading(bool) {
-    if (this.el.querySelector(".init") && this.el.querySelector(".loading")) {
-      this.el.querySelector(".init").classList.toggle("true", !bool);
-      this.el.querySelector(".loading").classList.toggle("loaded", !bool);
+    if (this.el.querySelector('.init') && this.el.querySelector('.loading')) {
+      this.el.querySelector('.init').classList.toggle('true', !bool);
+      this.el.querySelector('.loading').classList.toggle('loaded', !bool);
     }
   }
 

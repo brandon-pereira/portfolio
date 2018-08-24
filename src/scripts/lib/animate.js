@@ -8,7 +8,7 @@
  * @return {Element}
  */
 export default (el, transition, opts, cb) => {
-  if (el && "animate" in el) {
+  if (el && 'animate' in el) {
     el.animate(transition, opts).onfinish = cb;
   } else if (cb) {
     cb(); // dont animate just call callback

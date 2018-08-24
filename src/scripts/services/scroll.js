@@ -1,12 +1,12 @@
-import debounce from "../lib/debounce";
-import ga from "./analytics";
+import debounce from '../lib/debounce';
+import ga from './analytics';
 
 class Scroll {
   constructor() {
-    this.sections = Array.from(document.querySelectorAll(".container"));
+    this.sections = Array.from(document.querySelectorAll('.container'));
     this.analytics = Array.from(
-      document.querySelectorAll("[data-track-section]")
-    ).map(el => el.getAttribute("id"));
+      document.querySelectorAll('[data-track-section]')
+    ).map(el => el.getAttribute('id'));
 
     this._trackSmoothScrollLinks();
     this._trackSectionScrolling();
@@ -47,14 +47,14 @@ class Scroll {
    */
   _trackSectionScrolling() {
     document.addEventListener(
-      "scroll",
+      'scroll',
       debounce(() => {
         this.sections.forEach((section, i) => {
           if (this.isInView(section)) {
-            const name = section.getAttribute("id");
-            console.log("Scroll: New element inView:", name);
+            const name = section.getAttribute('id');
+            console.log('Scroll: New element inView:', name);
             if (this.analytics.indexOf(name) !== -1) {
-              ga("scroll", "section", name);
+              ga('scroll', 'section', name);
               this.analytics.splice(i, 1);
             }
           }
@@ -69,10 +69,10 @@ class Scroll {
    * and enables smoothly scrolling them.
    */
   _trackSmoothScrollLinks() {
-    document.querySelectorAll("[data-smooth-scroll]").forEach(el => {
-      el.addEventListener("click", e => {
+    document.querySelectorAll('[data-smooth-scroll]').forEach(el => {
+      el.addEventListener('click', e => {
         e.preventDefault();
-        const hash = e.currentTarget.getAttribute("href");
+        const hash = e.currentTarget.getAttribute('href');
         this.scrollTo(document.querySelector(hash), 200, hash);
       });
     });
