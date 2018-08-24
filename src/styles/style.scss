@@ -5,6 +5,13 @@
 @import 'mixins';
 @import 'config';
 
+body {
+  font: 16px sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff;
+}
+
 /**
   * Internet Explorer Depreciated Alert
   */
@@ -26,6 +33,13 @@
   a {
     color: #fff;
   }
+}
+
+/**
+  * Hide SVG Spritemap
+  */
+svg.spritemap {
+  display: none;
 }
 
 /**
@@ -109,7 +123,8 @@ html.webkit .container.projects header.main .maintext:before {
   }
 }
 
-// @import 'header';
+@import 'content';
+@import 'header';
 @import 'g-loader';
 @import 'contact';
 @import 'footer';
