@@ -64,16 +64,6 @@
     &.hidden {
       height: 0;
     }
-
-    &[data-columns]::before {
-      display: none;
-      content: '1';
-    }
-    @include medium() {
-      &[data-columns]::before {
-        content: '2';
-      }
-    }
   }
   .column {
     flex: 1;
