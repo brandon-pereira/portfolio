@@ -1,323 +1,323 @@
 @import 'mixins';
 @import 'config';
 @import 'g-loader.scss';
-.container.projects{
-	background:#eee;
-	overflow:hidden;
-	box-shadow:0 -1px darken(#eee, 10%);
-	text-align: center;
-	header.main{
-		text-align:center;
-		margin:50px auto 20px auto;
-		width:260px;
-		position:relative;
-		height:110px;
-		transition: all .5s;
-		user-select: none;
-		.maintext {
-			font:70px cursive;
-			color: map-get($config, accent);
-			text-shadow:2px 5px #000;
-			position:absolute;
-			top:0;
-			left: 0;
-			transition:font-size .5s;
-			margin:0;
-		}
-		.subtext{
-			font-size:14px;
-			position:absolute;
-			bottom: 10px;
-			left:-15px;
-			white-space: nowrap;
-			transition:all .5s;
-			font-weight: 100;
-			
-			span{
-				margin:0 15px;
-				transition:all .5s;
-			}
-		}
-		@include medium() {
-			width: 500px;
-			height:195px;
-			left:0;
-			.maintext {
-				font-size: 135px;
-			}
-			.subtext {
-				font-size: 20px;
-				left:35px;
-				bottom:15px;
-				span {
-					margin: 0 24px;
-				}
-			}
-		}
-	}
+.container.projects {
+  background: #eee;
+  overflow: hidden;
+  box-shadow: 0 -1px darken(#eee, 10%);
+  text-align: center;
+  header.main {
+    text-align: center;
+    margin: 50px auto 20px auto;
+    width: 260px;
+    position: relative;
+    height: 110px;
+    transition: all 0.5s;
+    user-select: none;
+    .maintext {
+      font: 70px cursive;
+      color: map-get($config, accent);
+      text-shadow: 2px 5px #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: font-size 0.5s;
+      margin: 0;
+    }
+    .subtext {
+      font-size: 14px;
+      position: absolute;
+      bottom: 10px;
+      left: -15px;
+      white-space: nowrap;
+      transition: all 0.5s;
+      font-weight: 100;
 
-	.projects {
-		display: flex;
-		margin-top: 2rem;
-		position: relative;
-		overflow: hidden;
-		&.hidden {
-			height: 0;
-		}
-		
-	}
-	.column {
-		flex: 1;
-		@include medium {
-			&:first-of-type {
-				margin: 0 1rem 0 0;
-			}
-		}
-		@include large() {
-			&:first-of-type {
-				margin: 0;
-			}
-			&:nth-of-type(2) {
-				margin: 0 1rem;
-			}
-		}
-	}
+      span {
+        margin: 0 15px;
+        transition: all 0.5s;
+      }
+    }
+    @include medium() {
+      width: 500px;
+      height: 195px;
+      left: 0;
+      .maintext {
+        font-size: 135px;
+      }
+      .subtext {
+        font-size: 20px;
+        left: 35px;
+        bottom: 15px;
+        span {
+          margin: 0 24px;
+        }
+      }
+    }
+  }
 
-	.filters {
-		background: #383838;
-		color: #fff;
-		border-radius: 0.5rem;
-		margin: 0 0 2rem;
-		font-weight: 200;
-		box-shadow: 0 12px 10px rgba(0, 0, 0, .1);
-		display: none;
-		padding: 1rem;
-		&.visible {
-			display: flex;
-		}
-		div {
-			flex: 1;
-			text-align: left;
-		}
-		button {
-			cursor: pointer;
-			color: map-get($config, accent);
-			background: none;
-			border: none;
-			font-size: 1.1rem;
-			font-weight: 400;
-			margin-left: 1rem;
-		}
-	}
-	.project {
-		margin: 0 0 2rem;
-		background: #fff;
-		border-radius: 0.5rem;
-		box-shadow: 0 12px 10px rgba(0,0,0,.1);
-		overflow: hidden;
-		position: relative;
-		transition: all 0.5s;
-		top: 0;
-		display: block;
-		&.hidden, &.hidden.snippet.skeleton {
-			display: none;
-		}
-		&.snippet.hidden {
-			opacity: 0;
-			visibility: hidden;
-			top: -200px;
-			display: block;
-		}
-		.image-container {
-			max-height: 150px;
-			min-height: 100px;
-			overflow: hidden;
-			margin-bottom: -40px;
-			clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
-			background:map-get($config, accent);
-			img {
-				&[data-src]:not(.loaded) { // if it has a data-src attribute (lazy load) and it's not loaded yet
-					position: static;
-					height: 200px;
-				}
-				position: relative;
-				top: -30px;
-				width: 100%;
-				&.shadow {
-					width: 140%;
-					left: -20%;
-				}
-			}
-		}
-		// https://css-tricks.com/multi-line-padded-text/
-		h3 {
-			position: relative;
-			z-index: 1;
-			display: inline;
-			span, a {
-				background: #292929;
-				color: #fff;
-				padding: 3px;
-				border-radius: 3px;
-				box-decoration-break: clone;
-				text-decoration: none;
-				-webkit-box-decoration-break: clone;
-			}
-		}
-		p {
-			margin: 1rem 1rem;
-			font-size: 14px;
-		}
-		button {
-			margin-bottom: 1rem;
-		}
-	}
-	.projects .column:nth-of-type(even) .project .image-container {
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
-	}
+  .projects {
+    display: flex;
+    margin-top: 2rem;
+    position: relative;
+    overflow: hidden;
+    &.hidden {
+      height: 0;
+    }
+  }
+  .column {
+    flex: 1;
+    @include medium {
+      &:first-of-type {
+        margin: 0 1rem 0 0;
+      }
+    }
+    @include large() {
+      &:first-of-type {
+        margin: 0;
+      }
+      &:nth-of-type(2) {
+        margin: 0 1rem;
+      }
+    }
+  }
 
+  .filters {
+    background: #383838;
+    color: #fff;
+    border-radius: 0.5rem;
+    margin: 0 0 2rem;
+    font-weight: 200;
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    padding: 1rem;
+    &.visible {
+      display: flex;
+    }
+    div {
+      flex: 1;
+      text-align: left;
+    }
+    button {
+      cursor: pointer;
+      color: map-get($config, accent);
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin-left: 1rem;
+    }
+  }
+  .project {
+    margin: 0 0 2rem;
+    background: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 12px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+    top: 0;
+    display: block;
+    &.hidden,
+    &.hidden.snippet.skeleton {
+      display: none;
+    }
+    &.snippet.hidden {
+      opacity: 0;
+      visibility: hidden;
+      top: -200px;
+      display: block;
+    }
+    .image-container {
+      max-height: 150px;
+      min-height: 100px;
+      overflow: hidden;
+      margin-bottom: -40px;
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
+      background: map-get($config, accent);
+      img {
+        &[data-src]:not(.loaded) {
+          // if it has a data-src attribute (lazy load) and it's not loaded yet
+          position: static;
+          height: 200px;
+        }
+        position: relative;
+        top: -30px;
+        width: 100%;
+        &.shadow {
+          width: 140%;
+          left: -20%;
+        }
+      }
+    }
+    // https://css-tricks.com/multi-line-padded-text/
+    h3 {
+      position: relative;
+      z-index: 1;
+      display: inline;
+      span,
+      a {
+        background: #292929;
+        color: #fff;
+        padding: 3px;
+        border-radius: 3px;
+        box-decoration-break: clone;
+        text-decoration: none;
+        -webkit-box-decoration-break: clone;
+      }
+    }
+    p {
+      margin: 1rem 1rem;
+      font-size: 14px;
+    }
+    button {
+      margin-bottom: 1rem;
+    }
+  }
+  .projects .column:nth-of-type(even) .project .image-container {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
+  }
 
-	.loadMore {
-		padding: 20px;
-		text-align: center;
-		text-transform: uppercase;
-		color: #9d9d9d;
-		font-weight: 800;
-		background: #f6f6f6;
-		margin: 1rem auto; 
-		width: 50%;
-		cursor: pointer;
-		&.hidden {
-			display: none;
-		}
-		&.loading {
-			transition: all .2s;
-			border-radius: 50% !important;
-			margin: 0 auto;
-			box-shadow: none;
+  .loadMore {
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #9d9d9d;
+    font-weight: 800;
+    background: #f6f6f6;
+    margin: 1rem auto;
+    width: 50%;
+    cursor: pointer;
+    &.hidden {
+      display: none;
+    }
+    &.loading {
+      transition: all 0.2s;
+      border-radius: 50% !important;
+      margin: 0 auto;
+      box-shadow: none;
 
-			@extend .plus-loader;
-		}
-	}
+      @extend .plus-loader;
+    }
+  }
 
-	.detailed-view {
-		padding: 2rem 1rem;
-		@include medium() {
-			padding: 2rem;
-		}
-		[data-project-status] {
-			font-size: 0.7rem;
-			color: #fff;
-			border-radius: 3px;
-			text-shadow: 0 1px rgba(0, 0, 0, .5);
-			display: inline-block;
-			padding: 0.5rem 0.8rem;
-			text-transform: uppercase;
-			background: #2c2c2c;
-			&.live {
-				background: map-deep-get($config, projects, live);
-			}
-			&.beta {
-				background: map-deep-get($config, projects, beta);
-			}
-			&.comingSoon {
-				background: map-deep-get($config, projects, comingSoon);
-			}
-		}
-		h3 {
-			background: none;
-			color: #000;
-			display: block;
-			font-size: 2rem;
-		}
-		[data-project-images] {
-			text-align: center;
-			margin: 3rem 0 0;
-			img,
-			video {
-				max-width: 25%;
-				max-height: 10rem;
-				vertical-align: middle;
-				cursor: pointer;
-				&.shadow {
-					box-shadow: 0 5px 10px #838383;
-					margin: 0 10px;
-				}
-			}
-		}
-		header {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-		}
-		[data-back-button] {
-			background: none;
-			border: none;
-			box-shadow: none;
-			color: map-get($config, accent);
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			text-shadow: none;
-			margin: 0;
-			padding: 0;
-			svg {
-				display: block;
-				fill: currentColor;
-				transform: rotate(90deg);
-				height: 1rem;
-				width: 1rem;
-				margin-right: 0.2rem;
-			}
-		}
-		[data-project-date] {
-			display: block;
-			color: grey;
-			font-size: 0.8rem;
-			margin: 0;
-		}
-		[data-project-description],
-		[data-project-description] p,
-		[data-project-description] ul {
-			font-size: 1rem;
-			text-align: justify;
-			margin: 1rem 0;
-		}
-		[data-project-languages] {
-			margin-top: 2rem;
-			@include medium() {
-				text-align: left;
-			}
-			span {
-				position: relative;
-				display: inline-block;
-				background-color: #eee;
-				background-image: linear-gradient(transparent, rgba(0,0,0,.1));
-				border-radius: 0 5px 5px 0;
-				margin: 1rem 0.5rem 0 0;
-				font-size: 0.9rem;
-				padding: 0.2rem 0.5rem 0.2rem 1.2rem;
-				cursor: pointer;
-				clip-path: polygon(0.6rem 0, 100% 0, 100% 100%, 0.6rem 100%, 0 50%);
-				&:before {
-					content: "";
-					height: 6px;
-					width: 6px;
-					position: absolute;
-					top: calc(50% - 2px);
-					left: 8px;
-					background: #797979;
-					border-radius: 50%;
-				}
-				&:hover {
-					color: #fff;
-					background-color: lighten(map-get($config, accent), 10%);
-					&:before {
-						background: #fff;
-					}
-				}
-			}
-		}
-	}
-
+  .detailed-view {
+    padding: 2rem 1rem;
+    @include medium() {
+      padding: 2rem;
+    }
+    [data-project-status] {
+      font-size: 0.7rem;
+      color: #fff;
+      border-radius: 3px;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 0.5rem 0.8rem;
+      text-transform: uppercase;
+      background: #2c2c2c;
+      &.live {
+        background: map-deep-get($config, projects, live);
+      }
+      &.beta {
+        background: map-deep-get($config, projects, beta);
+      }
+      &.comingSoon {
+        background: map-deep-get($config, projects, comingSoon);
+      }
+    }
+    h3 {
+      background: none;
+      color: #000;
+      display: block;
+      font-size: 2rem;
+    }
+    [data-project-images] {
+      text-align: center;
+      margin: 3rem 0 0;
+      img,
+      video {
+        max-width: 25%;
+        max-height: 10rem;
+        vertical-align: middle;
+        cursor: pointer;
+        &.shadow {
+          box-shadow: 0 5px 10px #838383;
+          margin: 0 10px;
+        }
+      }
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    [data-back-button] {
+      background: none;
+      border: none;
+      box-shadow: none;
+      color: map-get($config, accent);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-shadow: none;
+      margin: 0;
+      padding: 0;
+      svg {
+        display: block;
+        fill: currentColor;
+        transform: rotate(90deg);
+        height: 1rem;
+        width: 1rem;
+        margin-right: 0.2rem;
+      }
+    }
+    [data-project-date] {
+      display: block;
+      color: grey;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+    [data-project-description],
+    [data-project-description] p,
+    [data-project-description] ul {
+      font-size: 1rem;
+      text-align: justify;
+      margin: 1rem 0;
+    }
+    [data-project-languages] {
+      margin-top: 2rem;
+      @include medium() {
+        text-align: left;
+      }
+      span {
+        position: relative;
+        display: inline-block;
+        background-color: #eee;
+        background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+        border-radius: 0 5px 5px 0;
+        margin: 1rem 0.5rem 0 0;
+        font-size: 0.9rem;
+        padding: 0.2rem 0.5rem 0.2rem 1.2rem;
+        cursor: pointer;
+        clip-path: polygon(0.6rem 0, 100% 0, 100% 100%, 0.6rem 100%, 0 50%);
+        &:before {
+          content: '';
+          height: 6px;
+          width: 6px;
+          position: absolute;
+          top: calc(50% - 2px);
+          left: 8px;
+          background: #797979;
+          border-radius: 50%;
+        }
+        &:hover {
+          color: #fff;
+          background-color: lighten(map-get($config, accent), 10%);
+          &:before {
+            background: #fff;
+          }
+        }
+      }
+    }
+  }
 }
