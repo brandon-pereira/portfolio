@@ -30,21 +30,21 @@
  * @return {*} - Desired value
  */
 @function map-deep-get($map, $keys...) {
-    @each $key in $keys {
-        $map: map-get($map, $key);
-    }
-    @return $map;
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
 }
 
 @mixin aspect-ratio($width, $height) {
   position: relative;
   &:before {
     display: block;
-    content: "";
+    content: '';
     width: 100%;
     padding-top: ($height / $width) * 100%;
   }
-  >.content {
+  > .content {
     position: absolute;
     top: 0;
     left: 0;

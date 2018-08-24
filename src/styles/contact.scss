@@ -1,99 +1,99 @@
 @font-face {
-	font-family: 'contact';
-	src: url('/fonts/social.woff2') format('woff2'),
-		 url('/fonts/social.woff') format('woff'),
+  font-family: 'contact';
+  src: url('/fonts/social.woff2') format('woff2'),
+    url('/fonts/social.woff') format('woff');
 }
 // wf-contact-n4-active
-.container.contact{
-	padding-bottom:50px;
+.container.contact {
+  padding-bottom: 50px;
 }
-.grid{
-	margin:0 -5px;
-	display: flex;
-	flex-wrap: wrap;
-	padding: 5px 0 0 5px;
-	.item{
-		display: inline-block;
-		box-sizing: border-box;
-		margin: 0 5px 5px 0;
-		width:100%;
-		@include medium() {
-			width: calc(50% - 5px);
-		}
-		@include large() {
-			width: calc(33% - 5px);
-		}
-		background:#222222;
-		border-radius:2px;
-		box-shadow:inset 0 -1px rgba(0,0,0,.2);
-		text-align:center;
-		color:#fff;
-		text-decoration: none;
-		font-size: 14px;
-		line-height: 80px;
-		transition:transform .2s;
-		&:before{
-			display: none;
-			font: 30px 'contact';
-			transition:font-size .4s;
-			line-height: 80px;
-			text-shadow:0 1px rgba(0,0,0,.2);
-		}
-		&:hover{
-			transform:scale(0.9);
-			background-image:linear-gradient(transparent, rgba(0,0,0,.2));
-			&:before{
-				font-size:50px;
-			}
-		}
-		&.email{
-			&:before{
-				content:"\e908";
-			}
-		}
-		&.fb{
-			background-color:#3B5998;
-			&:before{
-				content:"\e903";
-			}
-		}
-		&.instagram{
-			background-color:#4E433C;
-			&:before{
-				content:"\e900";
-			}
-		}
-		&.twitter{
-			background-color:#33CCFF;
-			&:before{
-				content:"\e902";
-			}
-		}
-		&.dribbble{
-			background-color:#ea4c89;
-			&:before{
-				content:"\e904";
-			}
-		}
-		&.git{
-			background:#6cc644;
-			&:before{
-				content:"\e907";
-			}
-		}
-		&.linkedin{
-			background-color:#007bb6;
-			&:before{
-				content:"\e906";
-			}
-		}
-		&.rdio{
-			background:linear-gradient(transparent,rgba(0,0,0,.1)), #fff;
-			box-shadow:inset 0 2px 10px rgba(0,0,0,.2);
-			&:before{
-				content:"\e901";
-				color:#007dc3;
-			}
-		}
-	}
+.grid {
+  margin: 0 -5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0 0 5px;
+  .item {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 5px 5px 0;
+    width: 100%;
+    @include medium() {
+      width: calc(50% - 5px);
+    }
+    @include large() {
+      width: calc(33% - 5px);
+    }
+    background: #222222;
+    border-radius: 2px;
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 80px;
+    transition: transform 0.2s;
+    &:before {
+      display: none;
+      font: 30px 'contact';
+      transition: font-size 0.4s;
+      line-height: 80px;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+    }
+    &:hover {
+      transform: scale(0.9);
+      background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+      &:before {
+        font-size: 50px;
+      }
+    }
+    &.email {
+      &:before {
+        content: '\e908';
+      }
+    }
+    &.fb {
+      background-color: #3b5998;
+      &:before {
+        content: '\e903';
+      }
+    }
+    &.instagram {
+      background-color: #4e433c;
+      &:before {
+        content: '\e900';
+      }
+    }
+    &.twitter {
+      background-color: #33ccff;
+      &:before {
+        content: '\e902';
+      }
+    }
+    &.dribbble {
+      background-color: #ea4c89;
+      &:before {
+        content: '\e904';
+      }
+    }
+    &.git {
+      background: #6cc644;
+      &:before {
+        content: '\e907';
+      }
+    }
+    &.linkedin {
+      background-color: #007bb6;
+      &:before {
+        content: '\e906';
+      }
+    }
+    &.rdio {
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.1)), #fff;
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);
+      &:before {
+        content: '\e901';
+        color: #007dc3;
+      }
+    }
+  }
 }
