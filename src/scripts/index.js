@@ -1,4 +1,7 @@
-import('../styles/style.scss');
+import('../styles/style.scss').then(() => {
+  // Load real stylesheet then 'eject' the critical css
+  document.querySelector('#critical-css').remove();
+});
 import('./components/webfontloader').then(webfontloader => webfontloader());
 import('./services/scroll');
 import('./services/lazyload');
