@@ -8,7 +8,7 @@ module.exports = class Masonry {
         'Missing container, elements, or sizes on Masonry initialization.'
       );
     }
-    this.sizes = this.sizes.sort((a, b) => a[0] + b[0]); // sort the sizes
+    this.sizes = this.sizes.sort((a, b) => (a[0] > b[0] ? -1 : 1)); // eslint-disable-line no-confusing-arrow
     this.recreateColumns();
   }
 
