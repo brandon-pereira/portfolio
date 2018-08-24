@@ -7,7 +7,7 @@ export default class Skills extends Base {
       this.blobs = this.generateBlobs(this.props.numberOfBlobs);
       this.randomizeBlobCoordinates(this.blobs);
       setInterval(() => {
-        this.randomizeBlobCoordinates(this.blobs);
+        requestAnimationFrame(() => this.randomizeBlobCoordinates(this.blobs));
       }, 5000);
     });
   }
