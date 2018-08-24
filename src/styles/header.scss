@@ -18,10 +18,10 @@ header.header {
     right: 0;
     bottom: 0;
     overflow: hidden;
-    background: url('/backgrounds/diamond.png'),
-      linear-gradient(lighten($bg, 10%), $bg);
+    background: linear-gradient(lighten($bg, 10%), $bg),
+      url('/backgrounds/diamond.png');
     background-blend-mode: multiply;
-    animation: hue 10s infinite;
+    animation: hue 10s infinite linear;
     z-index: -1;
   }
   .copy {
@@ -55,7 +55,7 @@ header.header {
               linear-gradient(90deg, $gridBg2 1px, transparent 1px);
             background-color: $gridBg;
             background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-            animation: 2s bgScroll infinite linear;
+            animation: 2s bgScroll infinite linear 0.01;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
