@@ -16,6 +16,14 @@ export default () => {
     }
   });
 
+  // Load Header webfont (subset only)
+  WebFont.load({
+    google: {
+      families: ['Quicksand:500'],
+      text: 'BRANDON'
+    }
+  });
+
   // Load apps webfont (subset only)
   WebFont.load({
     google: {
