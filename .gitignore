@@ -6,8 +6,6 @@ script.js
 .idea/
 # Created by https://www.gitignore.io
 npm-debug.log
-src/content/assets
-.env
 
 ### OSX ###
 .DS_Store
