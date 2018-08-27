@@ -55,7 +55,7 @@ header.header {
               linear-gradient(90deg, $gridBg2 1px, transparent 1px);
             background-color: $gridBg;
             background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-            animation: 2s bgScroll infinite linear 0.01;
+            animation: 2s bgScroll infinite linear;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
