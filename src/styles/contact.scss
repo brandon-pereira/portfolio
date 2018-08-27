@@ -25,7 +25,7 @@
     }
     background: #222222;
     border-radius: 2px;
-    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 -1px 0 2px rgba(0, 0, 0, 0.1);
     text-align: center;
     color: #fff;
     text-decoration: none;
@@ -64,9 +64,10 @@
       }
     }
     &.twitter {
-      background-color: #33ccff;
+      background-color: #fff;
       &:before {
         content: '\e902';
+        color: #1da1f2;
       }
     }
     &.dribbble {
@@ -76,7 +77,7 @@
       }
     }
     &.git {
-      background: #6cc644;
+      background-color: #6e5494;
       &:before {
         content: '\e907';
       }
@@ -85,14 +86,6 @@
       background-color: #007bb6;
       &:before {
         content: '\e906';
-      }
-    }
-    &.rdio {
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.1)), #fff;
-      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.2);
-      &:before {
-        content: '\e901';
-        color: #007dc3;
       }
     }
   }
