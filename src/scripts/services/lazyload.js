@@ -3,15 +3,15 @@
  */
 class LazyLoad {
   constructor() {
-    const elements = document.querySelectorAll("img[data-src]");
+    const elements = document.querySelectorAll('img[data-src]');
 
-    if ("IntersectionObserver" in window) {
-      console.info("LazyLoader: Supported browser... initializing.");
+    if ('IntersectionObserver' in window) {
+      console.info('LazyLoader: Supported browser... initializing.');
       this.observer = new IntersectionObserver(this.onIntersection.bind(this), {
-        rootMargin: "50px 0px"
+        rootMargin: '50px 0px'
       });
     } else {
-      console.info("LazyLoader: Unsupported browser... loading all assets.");
+      console.info('LazyLoader: Unsupported browser... loading all assets.');
     }
 
     this.loadImages(elements);
@@ -20,7 +20,7 @@ class LazyLoad {
   loadImages(elements) {
     if (this.observer) {
       Array.from(elements).forEach(image => {
-        if (!image.classList.contains("loaded")) {
+        if (!image.classList.contains('loaded')) {
           this.observer.observe(image);
         }
       });
@@ -49,7 +49,7 @@ class LazyLoad {
   preloadImage(image) {
     const src = image.dataset.src;
     if (!src) {
-      console.warn("LazyLoader: No src on img element!", image);
+      console.warn('LazyLoader: No src on img element!', image);
       return;
     }
 
@@ -91,7 +91,7 @@ class LazyLoad {
    */
   applyImage(img, src) {
     // Prevent this from being lazy loaded a second time.
-    img.classList.add("loaded");
+    img.classList.add('loaded');
     img.src = src;
   }
 }
