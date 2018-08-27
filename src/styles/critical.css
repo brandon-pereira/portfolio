@@ -10,15 +10,16 @@ body {
   font: 16px sans-serif;
   margin: 0;
   overflow-x: hidden;
-  background: #fff
+  background: #fff;
 }
 
-svg { /* we revert this once main stylesheet loaded */
+svg {
+  /* we revert this once main stylesheet loaded */
   display: none;
 }
 
 /**
- * Main layout setup. Instatiates the containers and
+ * Main layout setup. Instantiates the containers and
  * basic typography/links.
  */
 
@@ -38,95 +39,44 @@ svg { /* we revert this once main stylesheet loaded */
 }
 
 .content a {
-  color: #1f8ac4;
+  color: #1f3a93;
 }
 
 /**
  * Button Styling
  */
-.button, a.button, button.button {
+.button,
+a.button,
+button.button {
   background-color: #1f8ac4;
   text-decoration: none;
   outline: none;
-  cursor: pointer;
-  border-radius: 3px;
   border: none;
   padding: 10px;
   font-size: 16px;
   font-family: inherit;
   color: #fff;
   margin-right: 5px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2), inset 0 2px rgba(255, 255, 255, .2), inset 0 -3px rgba(0, 0, 0, .1);
-  text-shadow: 1px 1px rgba(0, 0, 0, .3);
-  background-image: linear-gradient(transparent, rgba(0, 0, 0, .2));
 }
 
-.button:hover {
-    background-image: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .3))
-}
-
-.button:active {
-  background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .4));
-}
-
-section.header {
-  background: #1d1d1d;
-  position: relative;
-  overflow: hidden;
-}
-section.header header {
-  position: relative;
-  width: 300px;
-  margin: 40px auto;
-  color: #fff;
+header.header {
+  background: purple;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, .9);
-  font-size: 16px;
-}
-section.header .pp {
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .5);
-  margin: 0 auto 20px auto;
-  height: 100px;
-  width: 100px;
-  background: #313131;
-}
-section.header .pp img {
-  height: 100%;
-  width: 100%;
-}
-
-section.header h1 {
-  margin: 0;
-}
-section.header h2 {
-  margin-top: 5px;
-  font-weight: 100;
-  font-size: 16px;
-}
-section.header .cta {
-  margin-top: 25px;
-}
-section.header a.button {
+  padding: 5rem 0;
+  color: #fff;
   text-transform: uppercase;
-  border: 1px solid #000;
-  padding: 5px 15px;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, .15);
-  margin: 0 2px;
 }
-section.header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 6px;
-  left: 0;
-  background: #285872;
-  background: linear-gradient(45deg, #285872, #672872),
-  url('/backgrounds/diamond.png');
-  background-blend-mode: multiply;
-  box-shadow: inset 0 -1px #518cac;
-  animation: hue 10s linear infinite;
+header.header .name {
+  margin: 5px 0 10px;
+  font-size: 15vw;
+  color: #4087d8;
+}
+header.header .story-copy {
+  font-size: 5vw;
+}
+header.header .cta {
+  margin-top: 5rem;
+}
+header.header .cta .button {
+  background: rgba(255, 255, 255, 0.5);
 }

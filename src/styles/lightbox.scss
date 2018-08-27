@@ -4,41 +4,42 @@
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 10;  
-  background: linear-gradient(rgba(0,0,0,.8), rgba(0,0,0,.9));
-  padding-top:3rem; // add margin for x button
-  
+  z-index: 10;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  padding-top: 3rem; // add margin for x button
+
   // Hide it by default
   visibility: hidden;
   pointer-events: none;
-  opacity:0;
-  
+  opacity: 0;
+
   // Do visible styles here
   &.visible {
-    opacity:1;
+    opacity: 1;
     visibility: visible;
     pointer-events: all;
-    transition: opacity .2s;
-    img, video {
-      transition: transform .2s .1s;
+    transition: opacity 0.2s;
+    img,
+    video {
+      transition: transform 0.2s 0.1s;
       transform: none;
     }
   }
 
   .close-button {
-    position:absolute;
+    position: absolute;
     top: 1rem;
     right: 1rem;
     cursor: pointer;
-    color:#fff;
-    font-size:3rem;
-    line-height:2rem;
+    color: #fff;
+    font-size: 3rem;
+    line-height: 2rem;
   }
   .modal-content {
-    height:100%;
-    width:80%;
-    max-width:800px;
-    margin:0 auto;
+    height: 100%;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
     perspective: 1000px;
   }
   [data-asset] {
@@ -52,15 +53,16 @@
       display: none;
     }
   }
-  img, video {
+  img,
+  video {
     transform: rotateX(50deg) scale(0.8);
-    transform-origin:bottom center;
+    transform-origin: bottom center;
     max-width: 100%;
-    max-height:80%;
-    margin:0 auto;
+    max-height: 80%;
+    margin: 0 auto;
     display: block;
     &.shadow {
-      box-shadow:0 5px 10px #000;
+      box-shadow: 0 5px 10px #000;
       margin: 1rem auto;
     }
   }
@@ -69,6 +71,6 @@
     color: #fff;
     text-align: center;
     text-shadow: 0 1px 2px #000;
-    font-size:1rem;
+    font-size: 1rem;
   }
 }
