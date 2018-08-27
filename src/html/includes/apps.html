@@ -7,38 +7,38 @@
 
 	<header class="main">
 		<span class="maintext">Apps</span>
-		<spna class="subtext">I've got<span></span>for that.</span>
+		<span class="subtext">I've got<span>&nbsp;</span>for that.</span>
 	</header>
-		
+
 	<div class="content">
 		<div class="carousel-slides">
-				{% for app in apps.applications %}
-				<div class="carousel-slide {{ " currentSlide " if loop.index === 1 }}" data-styling="{{app.theme}}">
-					<div class="row">
-						<div class="column-icon">
-							<a target="_" {% if app.link %}href="{{app.link}}"{% endif %}>
-								<img class="app-icon" data-src="{{app.icon}}">
-							</a>
-							<a class="cta {{ "unavailable" if not app.link }}" target="_" {% if app.link %}href="{{app.link}}"{% endif %}></a>
-						</div>
-						<div class="column-info">	
-							<a {% if app.link %}href="{{app.link}}"{% endif %} class="{{ "unavailable" if not app.link }}" target="_">
-								<h2>{{app.title}}</h2>
-							</a>
-							<p>{{app.description | safe}}</p>
-						</div>
+			{% for app in apps.applications %}
+			<div class="carousel-slide {{ " currentSlide " if loop.index === 1 }}" data-styling="{{app.theme}}">
+				<div class="row">
+					<div class="column-icon">
+						<a aria-label="{{app.title}}" target="_" {% if app.link %}href="{{app.link}}" {% endif %}>
+							<img class="app-icon" alt="{{app.title}}" data-src="{{app.icon}}">
+						</a>
+						<a class="cta {{ " unavailable " if not app.link }}" target="_" {% if app.link %}href="{{app.link}}" {% endif %} aria-label="{{app.title}}"></a>
 					</div>
-					<div class="row photos">
-						{% for app in app.images %}
-							<img data-src="{{app.preview if app.preview else app.src}}" title="{{app.title}}" class="{{app.styling}}" data-lightbox="{{app | dump}}">
-						{% endfor %}
+					<div class="column-info">
+						<a {% if app.link %}href="{{app.link}}" {% endif %} class="{{ " unavailable " if not app.link }}" target="_">
+							<h2>{{app.title}}</h2>
+						</a>
+						<p>{{app.description | safe}}</p>
 					</div>
 				</div>
+				<div class="row photos">
+					{% for app in app.images %}
+					<img data-src="{{app.preview if app.preview else app.src}}" title="{{app.title}}" class="{{app.styling}}" data-lightbox="{{app | dump}}">					{%
+					endfor %}
+				</div>
+			</div>
 			{% endfor %}
 		</div>
 		<div class="carousel-dots">
 			{% for app in apps.applications %}
-				<div class="dot {{ "active" if loop.index === 1 }}" data-goto="{{loop.index - 1}}"></div>
+			<div class="dot {{ " active " if loop.index === 1 }}" data-goto="{{loop.index - 1}}"></div>
 			{% endfor %}
 		</div>
 		<div class="next carousel-arrow" data-goto="next">
