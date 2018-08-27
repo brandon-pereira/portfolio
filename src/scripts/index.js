@@ -1,7 +1,4 @@
-import('../styles/style.scss').then(() => {
-  // Load real stylesheet then 'eject' the critical css
-  document.querySelector('#critical-css').remove();
-});
+const styles = import('../styles/style.scss');
 import('./components/webfontloader').then(webfontloader => webfontloader());
 import('./services/scroll');
 import('./services/lazyload');
@@ -16,6 +13,11 @@ const components = [
 components.forEach(component => {
   // Components export a class, so we instantiate
   component[0].then(Class => new Class(component[1], component[2] || {}));
+});
+
+Promise.all([styles, ...components.map(c => c[0])]).then(() => {
+  // Load real stylesheet then 'eject' the critical css
+  document.querySelector('#critical-css').remove();
 });
 
 // If its a webkit browser add 'webkit' class to HTML.
