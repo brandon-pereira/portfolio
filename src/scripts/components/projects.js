@@ -264,7 +264,6 @@ export default class Projects extends Base {
         );
         $asset.addEventListener('click', () =>
           this.lightbox.then(l => {
-            console.log(asset, config);
             l.set(config);
             l.open();
           })
