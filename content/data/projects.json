@@ -18,14 +18,14 @@
     "images": [
       {
         "_id": "3LUJnUNs1iMSmO4eG4OGWE",
-        "title": "idris-na-1",
+        "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
         "url": "idris-na-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "6mhLOlQsxiiQm4a22ESKiE",
-        "title": "idris-na-2",
+        "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
         "url": "idris-na-2.mp4",
         "contentType": "video/mp4"
@@ -70,21 +70,21 @@
     "images": [
       {
         "_id": "4ikvd4yIMMsUAamUwykYE8",
-        "title": "tv-tracker-1",
+        "title": "Mobile Android Experience",
         "description": "Mobile Android Experience",
         "url": "tv-tracker-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "30rOMLd7i00YiQW2GemacK",
-        "title": "tv-tracker-2",
+        "title": "Desktop experience",
         "description": "Desktop experience",
         "url": "tv-tracker-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "4cajmluS5OUcyoyWKMqewm",
-        "title": "tv-tracker-3",
+        "title": "Mac status bar experience",
         "description": "Mac status bar experience",
         "url": "tv-tracker-3.png",
         "contentType": "image/png"
@@ -118,14 +118,14 @@
     "images": [
       {
         "_id": "3DVvmBRIlaKcCeWUyKYwQG",
-        "title": "travel-alberta-1",
+        "title": "Example of landing page on large screen size",
         "description": "Example of landing page on large screen size",
         "url": "travel-alberta-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "6kF8t5dR1Sg0GqmseQyScy",
-        "title": "travel-alberta-2",
+        "title": "Example of landing page on small screen size",
         "description": "Example of landing page on small screen size",
         "url": "travel-alberta-2.png",
         "contentType": "image/png"
@@ -152,21 +152,21 @@
     "images": [
       {
         "_id": "2fLYBsbwHO6sm6M0KoqIKG",
-        "title": "speedbot-3",
+        "title": "Example of what happens when you hit random 0-60 time.",
         "description": "Example of what happens when you hit random 0-60 time.",
         "url": "speedbot-3.png",
         "contentType": "image/png"
       },
       {
         "_id": "2RRnzZKo3emceCsyk44euE",
-        "title": "speedbot-1",
+        "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
         "url": "speedbot-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "7im2XnJkYMye0YWikccw0u",
-        "title": "speedbot-2",
+        "title": "Video showing the users flow.",
         "description": "Video showing the users flow.",
         "url": "speedbot-2.mp4",
         "contentType": "video/mp4"
@@ -222,21 +222,21 @@
     "images": [
       {
         "_id": "5G7FgIiNQAmyQO0mu8yKem",
-        "title": "wingscheap-2",
+        "title": "Mobile view of landing screen",
         "description": "Mobile view of landing screen",
         "url": "wingscheap-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "5fxagEO5J6ucyQ0MmQQgAE",
-        "title": "wingscheap-1",
+        "title": "Desktop view of landing screen",
         "description": "Desktop view of landing screen",
         "url": "wingscheap-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "3Eh8HFBZBKUcwummomseyA",
-        "title": "wingscheap-3",
+        "title": "Mobile view of results screen",
         "description": "Mobile view of results screen",
         "url": "wingscheap-3.png",
         "contentType": "image/png"
@@ -447,6 +447,7 @@
       {
         "_id": "7rMfCncuPu0CuWMcY6CeSw",
         "title": "Example of how the loader looks",
+        "description": "Example of how the loader looks",
         "url": "splash-loader-1.png",
         "contentType": "image/png"
       }
