@@ -7,6 +7,6 @@ const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 export default (fileName, json) =>
   writeFile(
-    path.join(__dirname, '..', fileName),
+    path.join(__dirname, '..', 'data', fileName),
     JSON.stringify(json, null, '  ')
   ).promise;

@@ -14,7 +14,7 @@ const importSkills = async () => {
   console.time('Getting skills');
   let skills = await client.getEntries('skills', { 'fields.isCategory': true });
   skills = normalizeSkills(skills);
-  await writeJson('_skills.json', skills);
+  await writeJson('skills.json', skills);
   console.timeEnd('Getting skills');
 };
 
@@ -22,7 +22,7 @@ const importProjects = async () => {
   console.time('Getting projects');
   const _projects = await client.getEntries('projects', {});
   const { projects, images } = await normalizeProjects(_projects);
-  await writeJson('_projects.json', projects);
+  await writeJson('projects.json', projects);
   console.timeEnd('Getting projects');
   console.time('Getting project assets');
   await importAllAssets(images);
@@ -33,7 +33,7 @@ const importAboutYou = async () => {
   console.time('Getting information about you');
   let aboutYou = await client.getEntries('about', {});
   aboutYou = await normalizeAboutYou(aboutYou[0]);
-  await writeJson('_about.json', aboutYou);
+  await writeJson('about.json', aboutYou);
   console.timeEnd('Getting information about you');
   // if (aboutYou.resume) {
   //   console.time('Getting your resume');
