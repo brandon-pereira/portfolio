@@ -90,7 +90,8 @@
         "contentType": "image/png"
       }
     ],
-    "link": "https://branclon.com/tv-tracker/"
+    "link": "https://branclon.com/tv-tracker/",
+    "gitUrl": "https://github.com/brandon-pereira/tv-tracker"
   },
   {
     "_id": "55SiBvkViEEIew6EY4aGoG",
@@ -145,7 +146,7 @@
       }
     ],
     "shortDescription": "Built a chat bot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.",
-    "description": "<p>Built a chat bot for INFINITI USA. It allows you to compare their Q60&#39;s 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.</p>\n<p>From a technical perspective, it&#39;s written in NodeJS and uses DocumentDB for storing the records. It is hosted on Azure. Asides for building atop our existing framework, I also added new features which can be used on future bots. These include:</p>\n<p>Adding an algorithm for determining the &#39;did you mean&#39; values.</p>\n<ul>\n<li>Added the ability to unit test user flows and application logic.</li>\n<li>Added the ability to perform load testing on the application.</li>\n<li>Added an analytics module.</li>\n<li>Added a logging module which can be connected to either the console or to a database.</li>\n</ul>\n<p>It also got some good news coverage: <a href=\"https://www.carthrottle.com/post/infiniti-has-built-a-bot-to-compare-its-hottest-q60-to-other-cars-and-you-can-talk-to-it/\">CarThrottle</a> and <a href=\"http://www.thedrive.com/sheetmetal/9200/infinitis-facebook-chatbot-can-tell-you-the-0-to-60-mph-time-of-almost-any-car\">The Drive</a>.</p>\n",
+    "description": "<p>Built a chat bot for INFINITI USA. It allows you to compare their Q60&#39;s 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.</p>\n<p>From a technical perspective, it&#39;s written in NodeJS and uses DocumentDB for storing the records. It is hosted on Azure. Asides for building atop our existing framework, I also added new features which can be used on future bots. These include:</p>\n<p>Adding an algorithm for determining the &#39;did you mean&#39; values.</p>\n<ul>\n<li>Added the ability to unit test user flows and application logic.</li>\n<li>Added the ability to perform load testing on the application.</li>\n<li>Added an analytics module.</li>\n<li>Added a logging module which can be connected to either the console or to a database.</li>\n</ul>\n<p>It also got some good news coverage: <a target=\"_blank\" href=\"https://www.carthrottle.com/post/infiniti-has-built-a-bot-to-compare-its-hottest-q60-to-other-cars-and-you-can-talk-to-it/\">CarThrottle</a> and <a target=\"_blank\" href=\"http://www.thedrive.com/sheetmetal/9200/infinitis-facebook-chatbot-can-tell-you-the-0-to-60-mph-time-of-almost-any-car\">The Drive</a>.</p>\n",
     "type": "External",
     "status": "Unavailable",
     "images": [
@@ -241,6 +242,656 @@
         "contentType": "image/png"
       }
     ],
-    "link": "https://wings.cheap/"
+    "link": "https://wings.cheap/",
+    "gitUrl": "https://github.com/brandon-pereira/wings-cheap"
+  },
+  {
+    "_id": "5bEzMangkEei4YAY4y6yQS",
+    "title": "Nissan: Recalls",
+    "date": "2016-12-08",
+    "languages": [
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "Rebuilt the Nissan/Infiniti recalls web application to be fully responsive. Had only 5 days to fully complete.",
+    "description": "<p>Rebuilt the Nissan/Infiniti recalls web application to be fully responsive. Had only 5 days to fully complete.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "5bMKhNeQnKoOUWaGAS200i",
+        "title": "The landing screen.",
+        "description": "The landing screen.",
+        "url": "recalls-1.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "4pqiU2ixKMeqY02usQKMyM",
+        "title": "Recalls list screen.",
+        "description": "Recalls list screen.",
+        "url": "recalls-2.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "4NmvsVkjvqMAqSEWsQuUms",
+        "title": "Recalls details screen.",
+        "description": "Recalls details screen.",
+        "url": "recalls-3.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://www.nissanusa.com/recalls-vin/#/Home"
+  },
+  {
+    "_id": "4HsCqsY1JKOQkS8a2u8YiU",
+    "title": "INFINITI: Tree Drive",
+    "date": "2016-11-04",
+    "languages": [
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
+        "name": "SVG",
+        "description": "I've had tons of exposure to SVG, including animations. I know how to build icon sprite sheets, animate them, optimize them, and much more.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "Built a reveal page for Infiniti's winter sales event. For each test drive, they will plant a tree in America.",
+    "description": "<p>Built a reveal page for Infiniti&#39;s winter sales event. For each test drive, they will plant a tree in America.</p>\n<p>This project was very creative heavy, and required me to work closely with designers. I took their PSD and built the page around it. As a bonus, we built an SVG of the states, converted it into several polygons, and then animated the individual polygons. The result is a beautiful animation when navigating the page.</p>\n",
+    "type": "External",
+    "status": "Unavailable",
+    "images": [
+      {
+        "_id": "4He2I3nyuQSQIA6Y8oQ80O",
+        "title": "An example of the landing screen (after animation).",
+        "description": "An example of the landing screen (after animation).",
+        "url": "tree-drive-1.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "U1eOv2x60MIaqSy6kmGqO",
+        "title": "Demonstration of how the animation behaves.",
+        "description": "Demonstration of how the animation behaves.",
+        "url": "tree-drive-2.mp4",
+        "contentType": "video/mp4"
+      },
+      {
+        "_id": "1Qeb49oikIQqGKaioE0GIS",
+        "title": "An example of a region (after you fill out form/click map).",
+        "description": "An example of a region (after you fill out form/click map).",
+        "url": "tree-drive-3.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "http://infinitiusa.com/now/newtradition/"
+  },
+  {
+    "_id": "2XK6jffHPWISIOAUkEqoSu",
+    "title": "Blueshield: Content Build System",
+    "date": "2016-10-03",
+    "languages": [
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that. I helped build a static site generator as well as traveled to San Francisco to help their developers.",
+    "description": "<p>Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that.</p>\n<p>Blueshield uses a unique CMS which requires each page to be built with custom elements. Rather than us manually coding in these elements, we thought it would be a smart to automate some of the tedious work. We built a templating system which allowed us to both QA our pages with dummy content, as well as deliver the pages with these transformed elements.</p>\n<p>On top of this, I also flew to California a couple of times to help their team build their pages. This required me to mentor some of their web developers, communicate/strategize with their tech leads, and help solve some problems they were facing.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "link": "https://www.blueshieldca.com/"
+  },
+  {
+    "_id": "4T7tK8ZdlmKWYIwSemuIU6",
+    "title": "Portfolio v2",
+    "date": "2016-09-01",
+    "languages": [
+      {
+        "_id": "56jx4l7uMUaeWKeW4sgwck",
+        "name": "JSON",
+        "description": "I use JSON (Javascript object notation) to pass and synchronize data almost daily. I have experience with JSON being generated and returned from a server, as well as data stored in JSON files (like this portfolio).",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+      }
+    ],
+    "shortDescription": "I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
+    "description": "<p>I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p>\n<p>This portfolio was built using KnockoutJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p>\n<p>Make sure you&#39;re on an up-to-date browser for best results.</p>\n<p>See the source code on <a target=\"_blank\" href=\"https://github.com/brandon-pereira/portfolio\">GitHub</a>.</p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "3p92mRAAsoYY0s6kUmSAow",
+        "title": "Header Area",
+        "description": "Header Area",
+        "url": "portfolio-1.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "5PPItdLw4gc86K0ws4a28W",
+        "title": "Projects View Area",
+        "description": "Projects View Area",
+        "url": "portfolio-2.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "667gQVm9e8miaAUqWMScI4",
+        "title": "Skills Accordion Area",
+        "description": "Skills Accordion Area",
+        "url": "portfolio-3.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://branclon.com/",
+    "gitUrl": "https://github.com/brandon-pereira/portfolio/tree/release/v2"
+  },
+  {
+    "_id": "4c6PLvimSkWs6CG4QuqKo",
+    "title": "Splash Loader",
+    "date": "2016-08-12",
+    "languages": [
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "description": "<p>Built a little splash loading animation while I was bored one rainy afternoon. Uses the prototype methodology and supports reopening and closing.</p>\n<p><a target=\"_blank\" href=\"https://github.com/brandon-pereira/splash-screen\">See source code on GitHub\n</a></p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "7rMfCncuPu0CuWMcY6CeSw",
+        "title": "Example of how the loader looks",
+        "url": "splash-loader-1.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://branclon.com/showcase/splash-loader/",
+    "gitUrl": "https://github.com/brandon-pereira/splash-screen"
+  },
+  {
+    "_id": "2CPtmvajXmkwAcwAYIkwY0",
+    "title": "CSS3 Icons",
+    "date": "2016-06-13",
+    "languages": [
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+      }
+    ],
+    "description": "<p>Wrote some icons in pure CSS3 a couple years ago, however recently updated them to use SASS, rely on variables, and be open sourced.</p>\n<p>Check it out on <a target=\"_blank\" href=\"https://github.com/brandon-pereira/css3-icons\">GitHub</a></p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "5nijaX4yOcWQwWy0CG2IoO",
+        "title": "Google Chrome icon made with pure CSS",
+        "description": "Google Chrome icon made with pure CSS",
+        "url": "css3-icons-1.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "6ETLIky0c8YWWoia4k8ISQ",
+        "title": "\"Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
+        "description": "\"Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
+        "url": "css3-icons-2.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "3XUPF0wmPS8QM48wAAMoOw",
+        "title": "Side project app icon in pure CSS.",
+        "description": "Side project app icon in pure CSS.",
+        "url": "css3-icons-3.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://branclon.com/showcase/icons/",
+    "gitUrl": "https://github.com/brandon-pereira/css3-icons"
+  },
+  {
+    "_id": "58R6Sv3VQkamAMmKooWu0Q",
+    "title": "Nissan: Responsive website redesign",
+    "date": "2016-05-05",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "5AFDd2ceIw6amcqciWq0Gg",
+        "name": "JavaServer / Groovy",
+        "description": "I've built a handful of Java based applications, as well as modified/expanded upon the functionality of existing projects.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "56jx4l7uMUaeWKeW4sgwck",
+        "name": "JSON",
+        "description": "I use JSON (Javascript object notation) to pass and synchronize data almost daily. I have experience with JSON being generated and returned from a server, as well as data stored in JSON files (like this portfolio).",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.",
+    "description": "<p>We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.</p>\n<p>We built the system using a style guide, which allowed us to easily reuse components throughout the website. My team of 4 took on the configurator and applications. My main contributions involved building configurator. This required several technical deliverables such as building page controllers on both server and client side (Java, GSP, Javascript), modifying the styleguide internal workings (GulpJS), and building responsive components (FoundationJS, Javascript, SCSS). Nearly all components in the configurator were built or modified by me.</p>\n<p>Check out the configurator here: <a target=\"_blank\" href=\"http://nissanusa.com/buildyournissan/\">Nissan</a> | <a target=\"_blank\" href=\"http://infinitiusa.com/buildyourinfiniti\">Infiniti</a> <em>(you currently can only access on mobile)</em></p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "3AvIub86KIEKqMiySEIw0q",
+        "title": "Packages screen, demonstrating conflict manager.",
+        "description": "Packages screen, demonstrating conflict manager.",
+        "url": "nissan-mobile-solutions-2.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "2EfT9Xo5OUKSuWayEecosa",
+        "title": "Mobile navigation and versions page.",
+        "description": "Mobile navigation and versions page.",
+        "url": "nissan-mobile-solutions-1.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "79nHG3xiOAqOa8mm0CIgEk",
+        "title": "Desktop navigation and versions page.",
+        "description": "Desktop navigation and versions page.",
+        "url": "nissan-mobile-solutions-3.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "http://nissanusa.com/buildyournissan"
+  },
+  {
+    "_id": "6zVbf6aP1Sq266omigGGwi",
+    "title": "Portfolio v1",
+    "date": "2015-11-30",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "56jx4l7uMUaeWKeW4sgwck",
+        "name": "JSON",
+        "description": "I use JSON (Javascript object notation) to pass and synchronize data almost daily. I have experience with JSON being generated and returned from a server, as well as data stored in JSON files (like this portfolio).",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
+    "description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p>\n<p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p>\n<p>Make sure you&#39;re on an up-to-date browser for best results.</p>\n<p>See the source code on <a target=\"_blank\" href=\"https://github.com/brandon-pereira/portfolio\">GitHub</a>.</p>\n",
+    "type": "Internal",
+    "status": "Unavailable",
+    "images": [
+      {
+        "_id": "3p92mRAAsoYY0s6kUmSAow",
+        "title": "Header Area",
+        "description": "Header Area",
+        "url": "portfolio-1.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "5PPItdLw4gc86K0ws4a28W",
+        "title": "Projects View Area",
+        "description": "Projects View Area",
+        "url": "portfolio-2.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "667gQVm9e8miaAUqWMScI4",
+        "title": "Skills Accordion Area",
+        "description": "Skills Accordion Area",
+        "url": "portfolio-3.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://branclon.com",
+    "gitUrl": "https://github.com/brandon-pereira/portfolio/tree/release/v1"
+  },
+  {
+    "_id": "37grwOR6bSyIyWQGA0Qi4A",
+    "title": "BetterDo.",
+    "date": "2015-04-20",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "1lrIPRDfA4um6yQaUWI4WK",
+        "name": "MySQL",
+        "description": "I've built a handful of applications which reply on a MySQL database. I understand everything from the basics to using procedures and inner/outer joins.",
+        "skillLevel": "Intermediate"
+      },
+      {
+        "_id": "5l81U41OJaiSGYcG8k0OiK",
+        "name": "PHP",
+        "description": "I have experience with PHP, I'm cable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well.",
+        "skillLevel": "Intermediate"
+      }
+    ],
+    "shortDescription": "Version 2 of my Todo app was a complete rewrite. Moved to Ajax based communication and LESS for styling.",
+    "description": "<p>Version 2 of my Todo app was a complete rewrite. Moved to Ajax based communication and LESS for styling.</p>\n",
+    "type": "Internal",
+    "status": "Unavailable",
+    "images": [
+      {
+        "_id": "37xue73IA00i2EM0Qc8eyw",
+        "title": "Example on desktop",
+        "description": "Example on desktop",
+        "url": "betterdo-2-1.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "3zxQh7SiwMQgmOUMIMWYAO",
+        "title": "Example of editing/sharing list",
+        "description": "Example of editing/sharing list",
+        "url": "betterdo-2-2.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "3pDpW2Obd6mUYWeecowsuU",
+        "title": "Example of editing task",
+        "description": "Example of editing task",
+        "url": "betterdo-2-3.png",
+        "contentType": "image/png"
+      }
+    ]
+  },
+  {
+    "_id": "5jUiVE0CAM6848UW6YcCoY",
+    "title": "Broken City: Point of sale system",
+    "date": "2015-04-14",
+    "languages": [
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "1t9XBlAcFWiY88k4OS2UuG",
+        "name": "Java",
+        "description": "I'm experienced with Java, and am able to jump into existing code bases or start from scratch. I've built GUI interfaces, back-end algorithms, and used Java EE for server-side distributions."
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "1lrIPRDfA4um6yQaUWI4WK",
+        "name": "MySQL",
+        "description": "I've built a handful of applications which reply on a MySQL database. I understand everything from the basics to using procedures and inner/outer joins.",
+        "skillLevel": "Intermediate"
+      }
+    ],
+    "shortDescription": "For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design. Wrote the front-end using JSPs and the back-end using Java and MySQL.",
+    "description": "<p>For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design. Wrote the front-end using JSPs and the back-end using Java and MySQL.</p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "1hltOYSZ8UmQccWAoIcqMw",
+        "title": "Login Screen",
+        "description": "Login Screen",
+        "url": "bc.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "2rEsO1Fvj22gqgMKsaCGg4",
+        "title": "Server Place Order Screen",
+        "description": "Server Place Order Screen",
+        "url": "bc2.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "2BzQUF2Ou4w6O0Mc46oyGi",
+        "title": "Admin Panel",
+        "description": "Admin Panel",
+        "url": "bc3.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "http://www.brokencity.ca/"
+  },
+  {
+    "_id": "3rOGrRMYiQCW04UOCsIEmO",
+    "title": "CSS3: Stack Loading Animation",
+    "date": "2015-03-28",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "description": "<p>Developed a stack loading effect using CSS3 animations.</p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "2fesdQ37AsKOiGkgGUwq0I",
+        "title": "Better to see live version",
+        "description": "Better to see live version",
+        "url": "building.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://branclon.com/showcase/stack-loading"
+  },
+  {
+    "_id": "b9M9zKcNiwUQC0SuE4GCw",
+    "title": "CSS3: USB/Lightening Connector",
+    "date": "2015-01-12",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "description": "<p>Developed an Apple lightning cable and USB connector in pure CSS3.</p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "15ZqTUrGzEACG8Eek2sIg0",
+        "title": "Better to see live version",
+        "description": "Better to see live version",
+        "url": "usb.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://branclon.com/showcase/usb"
+  },
+  {
+    "_id": "5PoGGNnASkkm86gKO6wqSW",
+    "title": "Classic Kennels",
+    "date": "2014-08-12",
+    "languages": [
+      {
+        "_id": "5l81U41OJaiSGYcG8k0OiK",
+        "name": "PHP",
+        "description": "I have experience with PHP, I'm cable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well.",
+        "skillLevel": "Intermediate"
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "description": "<p>I was contacted by the owner to aid in a new campaign that he had. His idea was to partner with local radio stations and have them compete over the best radio station. I aided in this promotion by developing a website allowing users to vote on their favourite radio station. I also had allow administrators to view poll results in real-time.</p>\n<p>By the end of the 2 week campaign, we had received over 30,000 total votes! </p>\n",
+    "type": "External",
+    "status": "Unavailable",
+    "link": "http://www.klassickennels.com/"
+  },
+  {
+    "_id": "6oTjNFvzCEa4iUOEegMA8a",
+    "title": "MyBobba",
+    "date": "2013-08-01",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "5l81U41OJaiSGYcG8k0OiK",
+        "name": "PHP",
+        "description": "I have experience with PHP, I'm cable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well.",
+        "skillLevel": "Intermediate"
+      }
+    ],
+    "description": "<p><a target=\"_blank\" href=\"http://habbo.com/\">Habbo</a> is a popular online world for teenagers. During my younger teens I built a fansite for the game which allowed users to upload pictures of themselves and have unmoderated chat. It got very popular with about 1k hits a day. Unfortunately, I couldn&#39;t afford bandwidth and had to close its doors.</p>\n",
+    "type": "Internal",
+    "status": "Unavailable"
+  },
+  {
+    "_id": "6Yqa3F0Zd6ICaUKyYQ4kmW",
+    "title": "MyPereira",
+    "date": "2013-04-01",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS/LESS/Sass",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "5l81U41OJaiSGYcG8k0OiK",
+        "name": "PHP",
+        "description": "I have experience with PHP, I'm cable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well.",
+        "skillLevel": "Intermediate"
+      },
+      {
+        "_id": "1lrIPRDfA4um6yQaUWI4WK",
+        "name": "MySQL",
+        "description": "I've built a handful of applications which reply on a MySQL database. I understand everything from the basics to using procedures and inner/outer joins.",
+        "skillLevel": "Intermediate"
+      }
+    ],
+    "description": "<p>One of the first websites I built. This project was an advanced take on a family website. It had features like messaging, profiles, photo uploads, video sharing, etc.</p>\n",
+    "type": "Internal",
+    "status": "Unavailable"
   }
 ]
