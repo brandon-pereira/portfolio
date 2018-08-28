@@ -5,7 +5,7 @@ module.exports = {
       scripts: './src/scripts/index.js',
       html: './src/html/*.html',
       svg: './src/svgs/*.svg',
-      static: './src/static/**/*'
+      static: ['./src/static/**/*', './content/**/*.{png,jpg,gif,mp4}']
     },
     dist: './dist',
     watch: {
@@ -20,7 +20,7 @@ module.exports = {
         './content/**/*.json'
       ],
       svg: './src/svgs/*.svg',
-      static: './src/static/**/*'
+      static: ['./src/static/**/*', './content/assets/**/*']
     }
   },
   naming: {
