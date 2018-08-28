@@ -35,11 +35,11 @@ const importAboutYou = async () => {
   aboutYou = await normalizeAboutYou(aboutYou[0]);
   await writeJson('_about.json', aboutYou);
   console.timeEnd('Getting information about you');
-  if (aboutYou.resume) {
-    console.time('Getting your resume');
-    await downloadImage(aboutYou.resume, path => {});
-    console.timeEnd('Getting your resume');
-  }
+  // if (aboutYou.resume) {
+  //   console.time('Getting your resume');
+  //   await downloadImage(aboutYou.resume, path => {});
+  //   console.timeEnd('Getting your resume');
+  // }
 };
 
 const importAllAssets = (images = []) =>
@@ -93,10 +93,6 @@ const normalizeProjects = async projects => {
 
 (async () => {
   console.time('Importing content');
-  await Promise.all([
-    importSkills(),
-    importProjects()
-    //  importAboutYou()
-  ]);
+  await Promise.all([importSkills(), importProjects(), importAboutYou()]);
   console.timeEnd('Importing content');
 })();
