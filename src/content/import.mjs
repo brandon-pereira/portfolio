@@ -14,7 +14,7 @@ const importSkills = async () => {
   console.time('Getting skills');
   let skills = await client.getEntries('skills', { 'fields.isCategory': true });
   skills = normalizeSkills(skills);
-  await writeJson('test.json', skills);
+  await writeJson('_skills.json', skills);
   console.timeEnd('Getting skills');
 };
 
