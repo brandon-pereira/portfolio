@@ -12,12 +12,12 @@ module.exports = {
       scripts: [
         './src/scripts/**/*.js',
         './src/styles/**/*.scss',
-        './src/content/*.json'
+        './content/**/*.json'
       ],
       html: [
         './src/html/**/*.html',
         './src/styles/critical.css',
-        './src/content/*.json'
+        './content/**/*.json'
       ],
       svg: './src/svgs/*.svg',
       static: './src/static/**/*'

@@ -128,7 +128,7 @@ export default class Projects extends Base {
    * @return Promise
    */
   fetchProjects() {
-    return import('../../content/_projects.json').then(projects => {
+    return import('../../../content/data/projects.json').then(projects => {
       projects.projects = projects.map((project, index) => {
         project.index = index;
         return project;
