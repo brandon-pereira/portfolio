@@ -37,7 +37,7 @@ const importAboutYou = async () => {
   console.timeEnd('Getting information about you');
   if (aboutYou.resume) {
     console.time('Getting your resume');
-    await downloadImage(aboutYou.resume);
+    await downloadImage(aboutYou.resume, path => {});
     console.timeEnd('Getting your resume');
   }
 };
@@ -94,9 +94,9 @@ const normalizeProjects = async projects => {
 (async () => {
   console.time('Importing content');
   await Promise.all([
-    // importSkills(),
+    importSkills(),
     importProjects()
-    // importAboutYou()
+    //  importAboutYou()
   ]);
   console.timeEnd('Importing content');
 })();
