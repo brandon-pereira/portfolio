@@ -1,6 +1,7 @@
 import http from 'http';
 import fs from 'fs-extra';
 import path from 'path';
+import sharp from 'sharp';
 
 //https://stackoverflow.com/a/45007624/7033335
 const downloadFile = async (url, imageNamingFn) => {
@@ -28,7 +29,18 @@ const _downloadFile = (url, dest) =>
     };
     const request = http.get(absoluteToHttp(url), response => {
       if (!file.destroyed && response.statusCode === 200) {
-        response.pipe(file);
+        if (['.png', '.jpg', '.jpeg'].includes(path.extname(dest))) {
+          const optimize = sharp()
+            .resize(800, 800)
+            .withoutEnlargement()
+            .max()
+            .flatten()
+            .jpeg({ quality: 75, force: false })
+            .png({ compressionLevel: 9, force: false });
+          response.pipe(optimize).pipe(file);
+        } else {
+          response.pipe(file);
+        }
       } else {
         onError(
           `Server responded with ${response.statusCode}: ${
