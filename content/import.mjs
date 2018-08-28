@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 import writeJson from './utils/writeJson';
 import Contentful from './utils/contentful';
-import { downloadImage, imageNamingFn } from './utils/imageHandler';
+import { downloadFile, imageNamingFn } from './utils/downloadFile';
 import md2html from './utils/md2html';
 dotenv.config();
 
@@ -43,13 +43,7 @@ const importAboutYou = async () => {
 };
 
 const importAllAssets = (images = []) =>
-  Promise.all(
-    images.map(src =>
-      downloadImage(src, imageNamingFn).catch(err => {
-        console.error(err);
-      })
-    )
-  );
+  Promise.all(images.map(src => downloadFile(src, imageNamingFn)));
 
 const normalizeAboutYou = async aboutYou => {
   aboutYou.description = await md2html(aboutYou.description);
