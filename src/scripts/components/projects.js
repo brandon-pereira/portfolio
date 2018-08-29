@@ -238,7 +238,7 @@ export default class Projects extends Base {
       $node.querySelector('[data-project-title]').removeAttribute('href');
     }
     $node.querySelector('[data-project-description]').innerHTML =
-      project.description;
+      project.description || project.shortDescription;
     // status
     const status = project.status || 'Unavailable';
     const $status = $node.querySelector('[data-project-status]');
