@@ -230,7 +230,7 @@ export default class Projects extends Base {
   _getDetailsNode(project) {
     console.info('Projects: Set details for project', project);
     const $node = this.$detailed;
-    // titte, description
+    // title, description
     $node.querySelector('[data-project-title]').innerText = project.title;
     if (project.link) {
       $node.querySelector('[data-project-link]').href = project.link;
@@ -278,18 +278,20 @@ export default class Projects extends Base {
     // languages
     const $langs = $node.querySelector('[data-project-languages]');
     $langs.innerHTML = '';
-    project.languages.forEach(lang => {
-      const $lang = document.createElement('span');
-      $lang.addEventListener('click', () =>
-        document.querySelector('#skills').dispatchEvent(
-          new CustomEvent('goToSkill', {
-            detail: lang._id
-          })
-        )
-      );
-      $lang.innerText = lang.name;
-      $langs.appendChild($lang);
-    });
+    if (Array.isArray(project.languages) && project.languages.length) {
+      project.languages.forEach(lang => {
+        const $lang = document.createElement('span');
+        $lang.addEventListener('click', () =>
+          document.querySelector('#skills').dispatchEvent(
+            new CustomEvent('goToSkill', {
+              detail: lang._id
+            })
+          )
+        );
+        $lang.innerText = lang.name;
+        $langs.appendChild($lang);
+      });
+    }
     return $node;
   }
 
