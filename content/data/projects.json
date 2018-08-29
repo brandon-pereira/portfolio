@@ -32,7 +32,7 @@
         "_id": "oGdA74ceLAgaMEeygKuSI",
         "title": "Example of the UI",
         "description": "Example of the UI",
-        "url": "purrvice-workers.png",
+        "url": "/assets/purrvice-workers.png",
         "contentType": "image/png"
       }
     ],
@@ -59,7 +59,7 @@
         "_id": "5ppQMufHbOCe2Ge2KGosgw",
         "title": "Animation of how it works",
         "description": "Animation of how it works",
-        "url": "scrolltext.gif",
+        "url": "/assets/scrolltext.gif",
         "contentType": "image/gif"
       }
     ],
@@ -87,14 +87,14 @@
         "_id": "3LUJnUNs1iMSmO4eG4OGWE",
         "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "url": "idris-na-1.png",
+        "url": "/assets/idris-na-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "6mhLOlQsxiiQm4a22ESKiE",
         "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "url": "idris-na-2.mp4",
+        "url": "/assets/idris-na-2.mp4",
         "contentType": "video/mp4"
       }
     ],
@@ -139,21 +139,21 @@
         "_id": "4ikvd4yIMMsUAamUwykYE8",
         "title": "Mobile Android Experience",
         "description": "Mobile Android Experience",
-        "url": "tv-tracker-1.png",
+        "url": "/assets/tv-tracker-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "30rOMLd7i00YiQW2GemacK",
         "title": "Desktop experience",
         "description": "Desktop experience",
-        "url": "tv-tracker-2.png",
+        "url": "/assets/tv-tracker-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "4cajmluS5OUcyoyWKMqewm",
         "title": "Mac status bar experience",
         "description": "Mac status bar experience",
-        "url": "tv-tracker-3.png",
+        "url": "/assets/tv-tracker-3.png",
         "contentType": "image/png"
       }
     ],
@@ -187,14 +187,14 @@
         "_id": "3DVvmBRIlaKcCeWUyKYwQG",
         "title": "Example of landing page on large screen size",
         "description": "Example of landing page on large screen size",
-        "url": "travel-alberta-1.png",
+        "url": "/assets/travel-alberta-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "6kF8t5dR1Sg0GqmseQyScy",
         "title": "Example of landing page on small screen size",
         "description": "Example of landing page on small screen size",
-        "url": "travel-alberta-2.png",
+        "url": "/assets/travel-alberta-2.png",
         "contentType": "image/png"
       }
     ],
@@ -221,21 +221,21 @@
         "_id": "2fLYBsbwHO6sm6M0KoqIKG",
         "title": "Example of what happens when you hit random 0-60 time.",
         "description": "Example of what happens when you hit random 0-60 time.",
-        "url": "speedbot-3.png",
+        "url": "/assets/speedbot-3.png",
         "contentType": "image/png"
       },
       {
         "_id": "2RRnzZKo3emceCsyk44euE",
         "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "url": "speedbot-1.png",
+        "url": "/assets/speedbot-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "7im2XnJkYMye0YWikccw0u",
         "title": "Video showing the users flow.",
         "description": "Video showing the users flow.",
-        "url": "speedbot-2.mp4",
+        "url": "/assets/speedbot-2.mp4",
         "contentType": "video/mp4"
       }
     ],
@@ -291,21 +291,21 @@
         "_id": "5G7FgIiNQAmyQO0mu8yKem",
         "title": "Mobile view of landing screen",
         "description": "Mobile view of landing screen",
-        "url": "wingscheap-2.png",
+        "url": "/assets/wingscheap-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "5fxagEO5J6ucyQ0MmQQgAE",
         "title": "Desktop view of landing screen",
         "description": "Desktop view of landing screen",
-        "url": "wingscheap-1.png",
+        "url": "/assets/wingscheap-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "3Eh8HFBZBKUcwummomseyA",
         "title": "Mobile view of results screen",
         "description": "Mobile view of results screen",
-        "url": "wingscheap-3.png",
+        "url": "/assets/wingscheap-3.png",
         "contentType": "image/png"
       }
     ],
@@ -339,21 +339,21 @@
         "_id": "5bMKhNeQnKoOUWaGAS200i",
         "title": "The landing screen.",
         "description": "The landing screen.",
-        "url": "recalls-1.png",
+        "url": "/assets/recalls-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "4pqiU2ixKMeqY02usQKMyM",
         "title": "Recalls list screen.",
         "description": "Recalls list screen.",
-        "url": "recalls-2.png",
+        "url": "/assets/recalls-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "4NmvsVkjvqMAqSEWsQuUms",
         "title": "Recalls details screen.",
         "description": "Recalls details screen.",
-        "url": "recalls-3.png",
+        "url": "/assets/recalls-3.png",
         "contentType": "image/png"
       }
     ],
@@ -392,21 +392,21 @@
         "_id": "4He2I3nyuQSQIA6Y8oQ80O",
         "title": "An example of the landing screen (after animation).",
         "description": "An example of the landing screen (after animation).",
-        "url": "tree-drive-1.png",
+        "url": "/assets/tree-drive-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "U1eOv2x60MIaqSy6kmGqO",
         "title": "Demonstration of how the animation behaves.",
         "description": "Demonstration of how the animation behaves.",
-        "url": "tree-drive-2.mp4",
+        "url": "/assets/tree-drive-2.mp4",
         "contentType": "video/mp4"
       },
       {
         "_id": "1Qeb49oikIQqGKaioE0GIS",
         "title": "An example of a region (after you fill out form/click map).",
         "description": "An example of a region (after you fill out form/click map).",
-        "url": "tree-drive-3.png",
+        "url": "/assets/tree-drive-3.png",
         "contentType": "image/png"
       }
     ],
@@ -428,7 +428,8 @@
     "description": "<p>Blueshield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that.</p>\n<p>Blueshield uses a unique CMS which requires each page to be built with custom elements. Rather than us manually coding in these elements, we thought it would be a smart to automate some of the tedious work. We built a templating system which allowed us to both QA our pages with dummy content, as well as deliver the pages with these transformed elements.</p>\n<p>On top of this, I also flew to California a couple of times to help their team build their pages. This required me to mentor some of their web developers, communicate/strategize with their tech leads, and help solve some problems they were facing.</p>\n",
     "type": "External",
     "status": "Live",
-    "link": "https://www.blueshieldca.com/"
+    "link": "https://www.blueshieldca.com/",
+    "images": []
   },
   {
     "_id": "4T7tK8ZdlmKWYIwSemuIU6",
@@ -474,21 +475,21 @@
         "_id": "3p92mRAAsoYY0s6kUmSAow",
         "title": "Header Area",
         "description": "Header Area",
-        "url": "portfolio-1.png",
+        "url": "/assets/portfolio-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "5PPItdLw4gc86K0ws4a28W",
         "title": "Projects View Area",
         "description": "Projects View Area",
-        "url": "portfolio-2.png",
+        "url": "/assets/portfolio-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "667gQVm9e8miaAUqWMScI4",
         "title": "Skills Accordion Area",
         "description": "Skills Accordion Area",
-        "url": "portfolio-3.png",
+        "url": "/assets/portfolio-3.png",
         "contentType": "image/png"
       }
     ],
@@ -515,7 +516,7 @@
         "_id": "7rMfCncuPu0CuWMcY6CeSw",
         "title": "Example of how the loader looks",
         "description": "Example of how the loader looks",
-        "url": "splash-loader-1.png",
+        "url": "/assets/splash-loader-1.png",
         "contentType": "image/png"
       }
     ],
@@ -559,21 +560,21 @@
         "_id": "5nijaX4yOcWQwWy0CG2IoO",
         "title": "Google Chrome icon made with pure CSS",
         "description": "Google Chrome icon made with pure CSS",
-        "url": "css3-icons-1.png",
+        "url": "/assets/css3-icons-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "6ETLIky0c8YWWoia4k8ISQ",
         "title": "\"Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
         "description": "\"Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
-        "url": "css3-icons-2.png",
+        "url": "/assets/css3-icons-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "3XUPF0wmPS8QM48wAAMoOw",
         "title": "Side project app icon in pure CSS.",
         "description": "Side project app icon in pure CSS.",
-        "url": "css3-icons-3.png",
+        "url": "/assets/css3-icons-3.png",
         "contentType": "image/png"
       }
     ],
@@ -630,21 +631,21 @@
         "_id": "3AvIub86KIEKqMiySEIw0q",
         "title": "Packages screen, demonstrating conflict manager.",
         "description": "Packages screen, demonstrating conflict manager.",
-        "url": "nissan-mobile-solutions-2.png",
+        "url": "/assets/nissan-mobile-solutions-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "2EfT9Xo5OUKSuWayEecosa",
         "title": "Mobile navigation and versions page.",
         "description": "Mobile navigation and versions page.",
-        "url": "nissan-mobile-solutions-1.png",
+        "url": "/assets/nissan-mobile-solutions-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "79nHG3xiOAqOa8mm0CIgEk",
         "title": "Desktop navigation and versions page.",
         "description": "Desktop navigation and versions page.",
-        "url": "nissan-mobile-solutions-3.png",
+        "url": "/assets/nissan-mobile-solutions-3.png",
         "contentType": "image/png"
       }
     ],
@@ -694,21 +695,21 @@
         "_id": "3p92mRAAsoYY0s6kUmSAow",
         "title": "Header Area",
         "description": "Header Area",
-        "url": "portfolio-1.png",
+        "url": "/assets/portfolio-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "5PPItdLw4gc86K0ws4a28W",
         "title": "Projects View Area",
         "description": "Projects View Area",
-        "url": "portfolio-2.png",
+        "url": "/assets/portfolio-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "667gQVm9e8miaAUqWMScI4",
         "title": "Skills Accordion Area",
         "description": "Skills Accordion Area",
-        "url": "portfolio-3.png",
+        "url": "/assets/portfolio-3.png",
         "contentType": "image/png"
       }
     ],
@@ -760,21 +761,21 @@
         "_id": "37xue73IA00i2EM0Qc8eyw",
         "title": "Example on desktop",
         "description": "Example on desktop",
-        "url": "betterdo-2-1.png",
+        "url": "/assets/betterdo-2-1.png",
         "contentType": "image/png"
       },
       {
         "_id": "3zxQh7SiwMQgmOUMIMWYAO",
         "title": "Example of editing/sharing list",
         "description": "Example of editing/sharing list",
-        "url": "betterdo-2-2.png",
+        "url": "/assets/betterdo-2-2.png",
         "contentType": "image/png"
       },
       {
         "_id": "3pDpW2Obd6mUYWeecowsuU",
         "title": "Example of editing task",
         "description": "Example of editing task",
-        "url": "betterdo-2-3.png",
+        "url": "/assets/betterdo-2-3.png",
         "contentType": "image/png"
       }
     ]
@@ -817,21 +818,21 @@
         "_id": "1hltOYSZ8UmQccWAoIcqMw",
         "title": "Login Screen",
         "description": "Login Screen",
-        "url": "bc.png",
+        "url": "/assets/bc.png",
         "contentType": "image/png"
       },
       {
         "_id": "2rEsO1Fvj22gqgMKsaCGg4",
         "title": "Server Place Order Screen",
         "description": "Server Place Order Screen",
-        "url": "bc2.png",
+        "url": "/assets/bc2.png",
         "contentType": "image/png"
       },
       {
         "_id": "2BzQUF2Ou4w6O0Mc46oyGi",
         "title": "Admin Panel",
         "description": "Admin Panel",
-        "url": "bc3.png",
+        "url": "/assets/bc3.png",
         "contentType": "image/png"
       }
     ],
@@ -857,7 +858,7 @@
         "_id": "2fesdQ37AsKOiGkgGUwq0I",
         "title": "Better to see live version",
         "description": "Better to see live version",
-        "url": "building.png",
+        "url": "/assets/building.png",
         "contentType": "image/png"
       }
     ],
@@ -883,7 +884,7 @@
         "_id": "15ZqTUrGzEACG8Eek2sIg0",
         "title": "Better to see live version",
         "description": "Better to see live version",
-        "url": "usb.png",
+        "url": "/assets/usb.png",
         "contentType": "image/png"
       }
     ],
@@ -910,7 +911,8 @@
     "description": "<p>I was contacted by the owner to aid in a new campaign that he had. His idea was to partner with local radio stations and have them compete over the best radio station. I aided in this promotion by developing a website allowing users to vote on their favourite radio station. I also had allow administrators to view poll results in real-time.</p>\n<p>By the end of the 2 week campaign, we had received over 30,000 total votes! </p>\n",
     "type": "External",
     "status": "Unavailable",
-    "link": "http://www.klassickennels.com/"
+    "link": "http://www.klassickennels.com/",
+    "images": []
   },
   {
     "_id": "6oTjNFvzCEa4iUOEegMA8a",
@@ -932,7 +934,8 @@
     ],
     "description": "<p><a target=\"_blank\" href=\"http://habbo.com/\">Habbo</a> is a popular online world for teenagers. During my younger teens I built a fansite for the game which allowed users to upload pictures of themselves and have unmoderated chat. It got very popular with about 1k hits a day. Unfortunately, I couldn&#39;t afford bandwidth and had to close its doors.</p>\n",
     "type": "Internal",
-    "status": "Unavailable"
+    "status": "Unavailable",
+    "images": []
   },
   {
     "_id": "6Yqa3F0Zd6ICaUKyYQ4kmW",
@@ -960,6 +963,7 @@
     ],
     "description": "<p>One of the first websites I built. This project was an advanced take on a family website. It had features like messaging, profiles, photo uploads, video sharing, etc.</p>\n",
     "type": "Internal",
-    "status": "Unavailable"
+    "status": "Unavailable",
+    "images": []
   }
 ]

@@ -5,6 +5,8 @@
     "description": "<p>Wings.cheap is a web app which allows you to quickly find wing deals in your area. Built from the ground up to be responsive, fast, and beautiful. Under the hood I&#39;m using AngularJS, Express, and MongoDB.</p>\n",
     "link": "https://wings.cheap/",
     "icon": {
+      "title": "Wings Cheap App Icon",
+      "description": "Wings Cheap App Icon",
       "url": "/assets/app-icon-wings-cheap.png",
       "contentType": "image/png"
     },
@@ -39,6 +41,8 @@
     "description": "<p>TvTracker is an application for tracking your TV Shows. Built to work great on mobile, desktop, and even from your status bar (Mac). Under the hood we&#39;re using React, MobX, Service Workers, and Electron.</p>\n",
     "link": "https://branclon.com/tv-tracker",
     "icon": {
+      "title": "Tv Tracker App Icon",
+      "description": "Tv Tracker App Icon",
       "url": "/assets/app-icon-tv-tracker.png",
       "contentType": "image/png"
     },
@@ -72,6 +76,8 @@
     "appName": "BetterDo.",
     "description": "<p><strong>Depreciated:</strong> As of October 15th, 2017, this application is no longer available. It had a good run, but server changes have made it difficult to manage. Thanks for your support!</p>\n<p>This is the first web app I built. While I was studying for college and used it for keeping track of homework. It also has sharing functionality so you can share lists with others. Under the hood I&#39;m using jQuery, PHP, and CSS3.</p>\n",
     "icon": {
+      "title": "BetterDo. App Icon",
+      "description": "BetterDo. App Icon",
       "url": "/assets/app-icon-betterdo.png",
       "contentType": "image/png"
     },

@@ -3,12 +3,13 @@ import writeJson from './utils/writeJson';
 import Contentful from './utils/contentful';
 import { downloadFile, imageNamingFn } from './utils/downloadFile';
 import md2html from './utils/md2html';
-dotenv.config();
 
+dotenv.config();
 const client = new Contentful({
   space: process.env.CONTENTFUL_SPACE,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 });
+const images = [];
 
 const importSkills = async () => {
   console.time('Getting skills');
@@ -20,26 +21,20 @@ const importSkills = async () => {
 
 const importApps = async () => {
   console.time('Getting apps');
-  const _apps = await client.getEntries('apps', {
+  let apps = await client.getEntries('apps', {
     order: 'sys.createdAt'
   });
-  const { apps, images } = await normalizeApps(_apps);
+  apps = await normalizeApps(apps);
   await writeJson('apps.json', apps);
   console.timeEnd('Getting apps');
-  console.time('Writing app assets');
-  await importAllAssets(images);
-  console.timeEnd('Writing app assets');
 };
 
 const importProjects = async () => {
   console.time('Getting projects');
-  const _projects = await client.getEntries('projects', {});
-  const { projects, images } = await normalizeProjects(_projects);
+  let projects = await client.getEntries('projects', {});
+  projects = await normalizeProjects(projects);
   await writeJson('projects.json', projects);
   console.timeEnd('Getting projects');
-  console.time('Getting project assets');
-  await importAllAssets(images);
-  console.timeEnd('Getting project assets');
 };
 
 const importAboutYou = async () => {
@@ -48,44 +43,38 @@ const importAboutYou = async () => {
   aboutYou = await normalizeAboutYou(aboutYou[0]);
   await writeJson('about.json', aboutYou);
   console.timeEnd('Getting information about you');
-  // if (aboutYou.resume) {
-  //   console.time('Getting your resume');
-  //   await downloadImage(aboutYou.resume, path => {});
-  //   console.timeEnd('Getting your resume');
-  // }
 };
 
-const importAllAssets = (images = []) =>
+const importAllAssets = () =>
   Promise.all(images.map(src => downloadFile(src, imageNamingFn)));
 
 const normalizeAboutYou = async aboutYou => {
   aboutYou.description = await md2html(aboutYou.description);
+  aboutYou.resume = normalizeAsset(aboutYou.resume.fields);
   return aboutYou;
 };
 
-const normalizeApps = async apps => {
-  const images = [];
-  apps = await Promise.all(
+const normalizeAsset = asset => {
+  console.log(asset);
+  const output = {};
+  output._id = asset._id;
+  output.title = asset.title;
+  output.description = asset.description;
+  images.push(asset.file.url);
+  output.url = `/assets/${asset.file.fileName}`;
+  output.contentType = asset.file.contentType;
+  return output;
+};
+
+const normalizeApps = apps =>
+  Promise.all(
     apps.map(async app => {
       app.description = await md2html(app.description);
-      const _icon = app.icon.fields.file;
-      images.push(_icon.url);
-      app.icon = {
-        url: `/assets/${_icon.fileName}`,
-        contentType: _icon.contentType
-      };
-      app.images.map(img => {
-        images.push(img.file.url);
-        img.url = `/assets/${img.file.fileName}`;
-        img.contentType = img.file.contentType;
-        delete img.file;
-        return img;
-      });
+      app.icon = normalizeAsset(app.icon.fields);
+      app.images = app.images.map(img => normalizeAsset(img));
       return app;
     })
   );
-  return { apps, images };
-};
 
 const normalizeSkills = categories =>
   categories
@@ -98,37 +87,30 @@ const normalizeSkills = categories =>
     .sort((a, b) => b.skills.length - a.skills.length);
 
 const normalizeProjects = async projects => {
-  const images = [];
   projects = await Promise.all(
     projects.map(async project => {
-      project.images =
-        project.images &&
-        project.images.map(img => {
-          images.push(img.file.url);
-          img.url = img.file.fileName;
-          img.contentType = img.file.contentType;
-          delete img.file;
-          return img;
-        });
+      project.images = project.images
+        ? project.images.map(img => normalizeAsset(img))
+        : [];
       project.description =
         project.description && (await md2html(project.description));
       return project;
     })
   );
   projects = projects.sort((a, b) => new Date(b.date) - new Date(a.date));
-  return {
-    projects,
-    images
-  };
+  return projects;
 };
 
 (async () => {
   console.time('Importing content');
   await Promise.all([
-    importSkills(),
-    importProjects(),
-    importAboutYou(),
+    // importSkills(),
+    // importProjects(),
+    // importAboutYou(),
     importApps()
   ]);
   console.timeEnd('Importing content');
+  console.time('Importing Assets');
+  importAllAssets();
+  console.timeEnd('Importing Assets');
 })();
