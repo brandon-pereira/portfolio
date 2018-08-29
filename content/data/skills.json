@@ -1,5 +1,37 @@
 [
   {
+    "_id": "6X95ZVC5FuUaaO2MgymcGG",
+    "name": "Front End Web Development",
+    "skills": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
+        "name": "SVG",
+        "description": "I've had tons of exposure to SVG, including animations. I know how to build icon sprite sheets, animate them, optimize them, and much more.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "isOpen": true,
+    "isCategory": true
+  },
+  {
     "_id": "1DK44HAtqEKwi2keUgkAyO",
     "name": "Databases",
     "skills": [
@@ -30,38 +62,6 @@
         "isCategory": false
       }
     ],
-    "isCategory": true
-  },
-  {
-    "_id": "6X95ZVC5FuUaaO2MgymcGG",
-    "name": "Front End Web Development",
-    "skills": [
-      {
-        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
-        "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
-        "name": "Javascript",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "2WyFStEcdy8SWQkOQMwUsO",
-        "name": "HTML",
-        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
-        "name": "SVG",
-        "description": "I've had tons of exposure to SVG, including animations. I know how to build icon sprite sheets, animate them, optimize them, and much more.",
-        "skillLevel": "Pro"
-      }
-    ],
-    "isOpen": true,
     "isCategory": true
   },
   {

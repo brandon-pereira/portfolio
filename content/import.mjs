@@ -13,7 +13,10 @@ const images = [];
 
 const importSkills = async () => {
   console.time('Getting skills');
-  let skills = await client.getEntries('skills', { 'fields.isCategory': true });
+  let skills = await client.getEntries('skills', {
+    'fields.isCategory': true,
+    order: 'sys.createdAt'
+  });
   skills = normalizeSkills(skills);
   await writeJson('skills.json', skills);
   console.timeEnd('Getting skills');
