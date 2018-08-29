@@ -46,8 +46,9 @@ const importAboutYou = async () => {
 };
 
 const importAllAssets = () =>
-  Promise.all(images.map(src => downloadFile(src, imageNamingFn)));
-
+  Promise.all(
+    [...new Set(images)].map(src => downloadFile(src, imageNamingFn))
+  );
 const normalizeAboutYou = async aboutYou => {
   aboutYou.description = await md2html(aboutYou.description);
   aboutYou.resume = normalizeAsset(aboutYou.resume.fields);
@@ -55,7 +56,6 @@ const normalizeAboutYou = async aboutYou => {
 };
 
 const normalizeAsset = asset => {
-  console.log(asset);
   const output = {};
   output._id = asset._id;
   output.title = asset.title;
@@ -104,9 +104,9 @@ const normalizeProjects = async projects => {
 (async () => {
   console.time('Importing content');
   await Promise.all([
-    // importSkills(),
-    // importProjects(),
-    // importAboutYou(),
+    importSkills(),
+    importProjects(),
+    importAboutYou(),
     importApps()
   ]);
   console.timeEnd('Importing content');
