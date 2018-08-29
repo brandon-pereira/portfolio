@@ -31,7 +31,9 @@ const importApps = async () => {
 
 const importProjects = async () => {
   console.time('Getting projects');
-  let projects = await client.getEntries('projects', {});
+  let projects = await client.getEntries('projects', {
+    order: '-fields.date'
+  });
   projects = await normalizeProjects(projects);
   await writeJson('projects.json', projects);
   console.timeEnd('Getting projects');
@@ -86,8 +88,8 @@ const normalizeSkills = categories =>
     })
     .sort((a, b) => b.skills.length - a.skills.length);
 
-const normalizeProjects = async projects => {
-  projects = await Promise.all(
+const normalizeProjects = projects =>
+  Promise.all(
     projects.map(async project => {
       project.images = project.images
         ? project.images.map(img => normalizeAsset(img))
@@ -97,9 +99,6 @@ const normalizeProjects = async projects => {
       return project;
     })
   );
-  projects = projects.sort((a, b) => new Date(b.date) - new Date(a.date));
-  return projects;
-};
 
 (async () => {
   console.time('Importing content');
