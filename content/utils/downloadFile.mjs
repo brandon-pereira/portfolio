@@ -24,6 +24,7 @@ const _downloadFile = (url, dest) =>
   new Promise((resolve, reject) => {
     const file = fs.createWriteStream(dest, { flags: 'wx' });
     const onError = err => {
+      fs.unlink(dest, () => {});
       file.destroy();
       reject(err);
     };
@@ -34,7 +35,7 @@ const _downloadFile = (url, dest) =>
             .resize(800, 800)
             .withoutEnlargement()
             .max()
-            .flatten()
+            // .flatten()
             .jpeg({ quality: 75, force: false })
             .png({ compressionLevel: 9, force: false });
           response.pipe(optimize).pipe(file);
