@@ -252,7 +252,7 @@ export default class Projects extends Base {
         const type = asset.contentType.startsWith('video') ? 'video' : 'img';
         const config = {
           type,
-          src: `/assets/${asset.url}`,
+          src: asset.url,
           title: asset.title,
           autoplay: true,
           muted: true,
@@ -317,7 +317,7 @@ export default class Projects extends Base {
     if (project.images && project.images.length) {
       $project
         .querySelector('img')
-        .setAttribute('data-src', `/assets/${project.images[0].url}`);
+        .setAttribute('data-src', project.images[0].url);
     }
     LazyLoad.loadImages($project.querySelectorAll('img'));
     return $project;
