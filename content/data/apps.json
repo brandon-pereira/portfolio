@@ -34,39 +34,6 @@
     ]
   },
   {
-    "_id": "T9wlxXEQ0wSeyuWUcOUgM",
-    "appName": "BetterDo.",
-    "description": "<p><strong>Depreciated:</strong> As of October 15th, 2017, this application is no longer available. It had a good run, but server changes have made it difficult to manage. Thanks for your support!</p>\n<p>This is the first web app I built. While I was studying for college and used it for keeping track of homework. It also has sharing functionality so you can share lists with others. Under the hood I&#39;m using jQuery, PHP, and CSS3.</p>\n",
-    "icon": {
-      "url": "/assets/app-icon-betterdo.png",
-      "contentType": "image/png"
-    },
-    "theme": "betterdo",
-    "images": [
-      {
-        "_id": "3pDpW2Obd6mUYWeecowsuU",
-        "title": "Example of editing task",
-        "description": "Example of editing task",
-        "url": "/assets/betterdo-2-3.png",
-        "contentType": "image/png"
-      },
-      {
-        "_id": "3zxQh7SiwMQgmOUMIMWYAO",
-        "title": "Example of editing/sharing list",
-        "description": "Example of editing/sharing list",
-        "url": "/assets/betterdo-2-2.png",
-        "contentType": "image/png"
-      },
-      {
-        "_id": "37xue73IA00i2EM0Qc8eyw",
-        "title": "Example on desktop",
-        "description": "Example on desktop",
-        "url": "/assets/betterdo-2-1.png",
-        "contentType": "image/png"
-      }
-    ]
-  },
-  {
     "_id": "40CbSLFCJGAmSQ4CQQmYwO",
     "appName": "Tv Tracker",
     "description": "<p>TvTracker is an application for tracking your TV Shows. Built to work great on mobile, desktop, and even from your status bar (Mac). Under the hood we&#39;re using React, MobX, Service Workers, and Electron.</p>\n",
@@ -96,6 +63,39 @@
         "title": "Desktop experience",
         "description": "Desktop experience",
         "url": "/assets/tv-tracker-2.png",
+        "contentType": "image/png"
+      }
+    ]
+  },
+  {
+    "_id": "T9wlxXEQ0wSeyuWUcOUgM",
+    "appName": "BetterDo.",
+    "description": "<p><strong>Depreciated:</strong> As of October 15th, 2017, this application is no longer available. It had a good run, but server changes have made it difficult to manage. Thanks for your support!</p>\n<p>This is the first web app I built. While I was studying for college and used it for keeping track of homework. It also has sharing functionality so you can share lists with others. Under the hood I&#39;m using jQuery, PHP, and CSS3.</p>\n",
+    "icon": {
+      "url": "/assets/app-icon-betterdo.png",
+      "contentType": "image/png"
+    },
+    "theme": "betterdo",
+    "images": [
+      {
+        "_id": "3pDpW2Obd6mUYWeecowsuU",
+        "title": "Example of editing task",
+        "description": "Example of editing task",
+        "url": "/assets/betterdo-2-3.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "3zxQh7SiwMQgmOUMIMWYAO",
+        "title": "Example of editing/sharing list",
+        "description": "Example of editing/sharing list",
+        "url": "/assets/betterdo-2-2.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "37xue73IA00i2EM0Qc8eyw",
+        "title": "Example on desktop",
+        "description": "Example on desktop",
+        "url": "/assets/betterdo-2-1.png",
         "contentType": "image/png"
       }
     ]

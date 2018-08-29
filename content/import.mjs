@@ -20,7 +20,9 @@ const importSkills = async () => {
 
 const importApps = async () => {
   console.time('Getting apps');
-  const _apps = await client.getEntries('apps', {});
+  const _apps = await client.getEntries('apps', {
+    order: 'sys.createdAt'
+  });
   const { apps, images } = await normalizeApps(_apps);
   await writeJson('apps.json', apps);
   console.timeEnd('Getting apps');
