@@ -15,12 +15,11 @@ class Lightbox {
     console.info('Lightbox: Set', props);
     this._setLoading(true);
     this.$asset.innerHTML = '';
-    const type = props.type || 'img';
+    const type = props.contentType.startsWith('video') ? 'video' : 'img';
     const config = {
-      src: props.src,
+      src: props.url,
       autoplay: true,
-      muted: true,
-      class: props.styling
+      muted: true
     };
     const $asset = document.createElement(type);
     Object.keys(config).forEach(key => $asset.setAttribute(key, config[key]));
@@ -33,7 +32,7 @@ class Lightbox {
     } else {
       ready();
     }
-    this.$description.innerHTML = props.title || '';
+    this.$description.innerHTML = props.title || props.description || '';
   }
 
   open() {

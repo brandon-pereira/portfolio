@@ -61,10 +61,8 @@
     max-height: 80%;
     margin: 0 auto;
     display: block;
-    &.shadow {
-      box-shadow: 0 5px 10px #000;
-      margin: 1rem auto;
-    }
+    box-shadow: 0 5px 10px #000;
+    margin: 1rem auto;
   }
 
   [data-description] {

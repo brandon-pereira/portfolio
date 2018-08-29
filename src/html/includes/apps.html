@@ -30,7 +30,7 @@
 				</div>
 				<div class="row photos">
 					{% for img in app.images %}
-					<img data-src="{{img.url}}" class="shadow" title="{{app.appName}}" data-lightbox="{{img | dump}}">					{%
+					<img data-src="{{img.url}}" title="{{app.appName}}" data-lightbox="{{img | dump}}">					{%
 					endfor %}
 				</div>
 			</div>

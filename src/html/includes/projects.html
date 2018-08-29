@@ -22,7 +22,7 @@
 					<span data-project-title>{{project.title}}</span>
 					{% endif %}
 				</h3>
-				<p data-project-description>{{project.shortDescription}}</p>
+				<p data-project-description>{{project.shortDescription if project.shortDescription else project.description | safe}}</p>
 				<button class="button" data-project-learn-more="{{loop.index - 1}}">Learn More</button>
 			</div>
 			{% endfor %}

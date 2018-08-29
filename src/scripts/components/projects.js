@@ -251,12 +251,9 @@ export default class Projects extends Base {
       project.images.forEach(asset => {
         const type = asset.contentType.startsWith('video') ? 'video' : 'img';
         const config = {
-          type,
           src: asset.url,
-          title: asset.title,
           autoplay: true,
-          muted: true,
-          class: 'shadow'
+          muted: true
         };
         const $asset = document.createElement(type);
         Object.keys(config).forEach(key =>
@@ -264,7 +261,7 @@ export default class Projects extends Base {
         );
         $asset.addEventListener('click', () =>
           this.lightbox.then(l => {
-            l.set(config);
+            l.set(asset);
             l.open();
           })
         );
