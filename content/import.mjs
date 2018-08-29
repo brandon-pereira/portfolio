@@ -18,6 +18,17 @@ const importSkills = async () => {
   console.timeEnd('Getting skills');
 };
 
+const importApps = async () => {
+  console.time('Getting apps');
+  const _apps = await client.getEntries('apps', {});
+  const { apps, images } = await normalizeApps(_apps);
+  await writeJson('apps.json', apps);
+  console.timeEnd('Getting apps');
+  console.time('Writing app assets');
+  await importAllAssets(images);
+  console.timeEnd('Writing app assets');
+};
+
 const importProjects = async () => {
   console.time('Getting projects');
   const _projects = await client.getEntries('projects', {});
@@ -48,6 +59,30 @@ const importAllAssets = (images = []) =>
 const normalizeAboutYou = async aboutYou => {
   aboutYou.description = await md2html(aboutYou.description);
   return aboutYou;
+};
+
+const normalizeApps = async apps => {
+  const images = [];
+  apps = await Promise.all(
+    apps.map(async app => {
+      app.description = await md2html(app.description);
+      const _icon = app.icon.fields.file;
+      images.push(_icon.url);
+      app.icon = {
+        url: `/assets/${_icon.fileName}`,
+        contentType: _icon.contentType
+      };
+      app.images.map(img => {
+        images.push(img.file.url);
+        img.url = `/assets/${img.file.fileName}`;
+        img.contentType = img.file.contentType;
+        delete img.file;
+        return img;
+      });
+      return app;
+    })
+  );
+  return { apps, images };
 };
 
 const normalizeSkills = categories =>
@@ -87,6 +122,11 @@ const normalizeProjects = async projects => {
 
 (async () => {
   console.time('Importing content');
-  await Promise.all([importSkills(), importProjects(), importAboutYou()]);
+  await Promise.all([
+    importSkills(),
+    importProjects(),
+    importAboutYou(),
+    importApps()
+  ]);
   console.timeEnd('Importing content');
 })();
