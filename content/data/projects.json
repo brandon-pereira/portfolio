@@ -1,5 +1,72 @@
 [
   {
+    "_id": "5iEJz0WLcAIy2OQk2Cywwa",
+    "title": "Purrvice Workers",
+    "date": "2018-05-25",
+    "languages": [
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "1sba8qggLqQ8Koqku6UW4g",
+        "name": "MongoDB",
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "A web application for getting random cat pictures. Powered by service workers. It demonstrates offline caching, push notifications, and progressive enhancement. ",
+    "description": "<p>A web application for getting random cat pictures. Powered by service workers. It demonstrates offline caching, push notifications, and progressive enhancement. It was built as a tech-talk for Critical Mass. See keynote file in repo for presentation notes.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "oGdA74ceLAgaMEeygKuSI",
+        "title": "Example of the UI",
+        "description": "Example of the UI",
+        "url": "purrvice-workers.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://github.com/brandon-pereira/purrvice-workers",
+    "gitUrl": "https://github.com/brandon-pereira/purrvice-workers"
+  },
+  {
+    "_id": "21wQNPyDmUiY4EOO0kSO6Q",
+    "title": "ScrollText",
+    "date": "2018-03-20",
+    "languages": [
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": " Zero-dependency module to scroll between predefined text. Leverages Element.animate for modern browsers, and falls back on simple class based animations for legacy browsers.",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "5ppQMufHbOCe2Ge2KGosgw",
+        "title": "Animation of how it works",
+        "description": "Animation of how it works",
+        "url": "scrolltext.gif",
+        "contentType": "image/gif"
+      }
+    ],
+    "link": "https://github.com/brandon-pereira/scroll-text",
+    "gitUrl": "https://github.com/brandon-pereira/scroll-text"
+  },
+  {
     "_id": "1bKAmxVy8ImEGgiKCCUsw0",
     "title": "INFINITI: IDRIS Virtual Assistant",
     "date": "2017-12-01",
