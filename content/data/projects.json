@@ -265,7 +265,7 @@
       }
     ],
     "shortDescription": "Built a chat bot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.",
-    "description": "<p>Built a chat bot for INFINITI USA. It allows you to compare their Q60&#39;s 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.</p>\n<p>From a technical perspective, it&#39;s written in NodeJS and uses DocumentDB for storing the records. It is hosted on Azure. Asides for building atop our existing framework, I also added new features which can be used on future bots. These include:</p>\n<p>Adding an algorithm for determining the &#39;did you mean&#39; values.</p>\n<ul>\n<li>Added the ability to unit test user flows and application logic.</li>\n<li>Added the ability to perform load testing on the application.</li>\n<li>Added an analytics module.</li>\n<li>Added a logging module which can be connected to either the console or to a database.</li>\n</ul>\n<p>It also got some good news coverage: <a target=\"_blank\" href=\"https://www.carthrottle.com/post/infiniti-has-built-a-bot-to-compare-its-hottest-q60-to-other-cars-and-you-can-talk-to-it/\">CarThrottle</a> and <a target=\"_blank\" href=\"http://www.thedrive.com/sheetmetal/9200/infinitis-facebook-chatbot-can-tell-you-the-0-to-60-mph-time-of-almost-any-car\">The Drive</a>.</p>\n",
+    "description": "<p>Built a chat bot for INFINITI USA. It allows you to compare their Q60&#39;s 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.</p>\n<p>From a technical perspective, it&#39;s written in NodeJS and uses DocumentDB for storing the records. It is hosted on Azure. Asides for building atop our existing framework, I also added new features which can be used on future bots. These include:</p>\n<p>Adding an algorithm for determining the &#39;did you mean&#39; values.</p>\n<ul>\n<li>Added the ability to unit test user flows and application logic.</li>\n<li>Added the ability to perform load testing on the application.</li>\n<li>Added an analytics module.</li>\n<li>Added a logging module which can be connected to either the console or to a database.</li>\n</ul>\n<p>It also got some good news coverage: <a href=\"https://www.carthrottle.com/post/infiniti-has-built-a-bot-to-compare-its-hottest-q60-to-other-cars-and-you-can-talk-to-it/\">CarThrottle</a> and <a href=\"http://www.thedrive.com/sheetmetal/9200/infinitis-facebook-chatbot-can-tell-you-the-0-to-60-mph-time-of-almost-any-car\">The Drive</a>.</p>\n",
     "type": "External",
     "status": "Unavailable",
     "images": [
@@ -521,7 +521,7 @@
       }
     ],
     "shortDescription": "I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
-    "description": "<p>I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p>\n<p>This portfolio was built using KnockoutJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p>\n<p>Make sure you&#39;re on an up-to-date browser for best results.</p>\n<p>See the source code on <a target=\"_blank\" href=\"https://github.com/brandon-pereira/portfolio\">GitHub</a>.</p>\n",
+    "description": "<p>I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p>\n<p>This portfolio was built using KnockoutJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p>\n<p>Make sure you&#39;re on an up-to-date browser for best results.</p>\n<p>See the source code on <a href=\"https://github.com/brandon-pereira/portfolio\">GitHub</a>.</p>\n",
     "type": "Internal",
     "status": "Live",
     "images": [
@@ -562,7 +562,7 @@
         "skillLevel": "Pro"
       }
     ],
-    "description": "<p>Built a little splash loading animation while I was bored one rainy afternoon. Uses the prototype methodology and supports reopening and closing.</p>\n<p><a target=\"_blank\" href=\"https://github.com/brandon-pereira/splash-screen\">See source code on GitHub\n</a></p>\n",
+    "description": "<p>Built a little splash loading animation while I was bored one rainy afternoon. Uses the prototype methodology and supports reopening and closing.</p>\n<p><a href=\"https://github.com/brandon-pereira/splash-screen\">See source code on GitHub\n</a></p>\n",
     "type": "Internal",
     "status": "Live",
     "images": [
@@ -607,7 +607,7 @@
         "skillLevel": "Pro"
       }
     ],
-    "description": "<p>Wrote some icons in pure CSS3 a couple years ago, however recently updated them to use SASS, rely on variables, and be open sourced.</p>\n<p>Check it out on <a target=\"_blank\" href=\"https://github.com/brandon-pereira/css3-icons\">GitHub</a></p>\n",
+    "description": "<p>Wrote some icons in pure CSS3 a couple years ago, however recently updated them to use SASS, rely on variables, and be open sourced.</p>\n<p>Check it out on <a href=\"https://github.com/brandon-pereira/css3-icons\">GitHub</a></p>\n",
     "type": "Internal",
     "status": "Live",
     "images": [
@@ -679,7 +679,7 @@
       }
     ],
     "shortDescription": "We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.",
-    "description": "<p>We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.</p>\n<p>We built the system using a style guide, which allowed us to easily reuse components throughout the website. My team of 4 took on the configurator and applications. My main contributions involved building configurator. This required several technical deliverables such as building page controllers on both server and client side (Java, GSP, Javascript), modifying the styleguide internal workings (GulpJS), and building responsive components (FoundationJS, Javascript, SCSS). Nearly all components in the configurator were built or modified by me.</p>\n<p>Check out the configurator here: <a target=\"_blank\" href=\"http://nissanusa.com/buildyournissan/\">Nissan</a> | <a target=\"_blank\" href=\"http://infinitiusa.com/buildyourinfiniti\">Infiniti</a> <em>(you currently can only access on mobile)</em></p>\n",
+    "description": "<p>We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.</p>\n<p>We built the system using a style guide, which allowed us to easily reuse components throughout the website. My team of 4 took on the configurator and applications. My main contributions involved building configurator. This required several technical deliverables such as building page controllers on both server and client side (Java, GSP, Javascript), modifying the styleguide internal workings (GulpJS), and building responsive components (FoundationJS, Javascript, SCSS). Nearly all components in the configurator were built or modified by me.</p>\n<p>Check out the configurator here: <a href=\"http://nissanusa.com/buildyournissan/\">Nissan</a> | <a href=\"http://infinitiusa.com/buildyourinfiniti\">Infiniti</a> <em>(you currently can only access on mobile)</em></p>\n",
     "type": "External",
     "status": "Live",
     "images": [
@@ -744,7 +744,7 @@
       }
     ],
     "shortDescription": "Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
-    "description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p>\n<p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p>\n<p>Make sure you&#39;re on an up-to-date browser for best results.</p>\n<p>See the source code on <a target=\"_blank\" href=\"https://github.com/brandon-pereira/portfolio\">GitHub</a>.</p>\n",
+    "description": "<p>Built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.</p>\n<p>This portfolio was built using AngularJS (try filtering these projects from the header or from a skills accordion), JSON for storing content (this information and more is coming from an ajax request), Gulp for minifying code; compressing images; enabling livereload; and more. It also contains some fun front-end features. The header of this page is using filters to alter the hue and is multiplying the background-image with the background-gradient to create a unique effect.</p>\n<p>Make sure you&#39;re on an up-to-date browser for best results.</p>\n<p>See the source code on <a href=\"https://github.com/brandon-pereira/portfolio\">GitHub</a>.</p>\n",
     "type": "Internal",
     "status": "Unavailable",
     "images": [
@@ -990,7 +990,7 @@
         "skillLevel": "Intermediate"
       }
     ],
-    "description": "<p><a target=\"_blank\" href=\"http://habbo.com/\">Habbo</a> is a popular online world for teenagers. During my younger teens I built a fansite for the game which allowed users to upload pictures of themselves and have unmoderated chat. It got very popular with about 1k hits a day. Unfortunately, I couldn&#39;t afford bandwidth and had to close its doors.</p>\n",
+    "description": "<p><a href=\"http://habbo.com/\">Habbo</a> is a popular online world for teenagers. During my younger teens I built a fansite for the game which allowed users to upload pictures of themselves and have unmoderated chat. It got very popular with about 1k hits a day. Unfortunately, I couldn&#39;t afford bandwidth and had to close its doors.</p>\n",
     "type": "Internal",
     "status": "Unavailable",
     "images": []
