@@ -147,13 +147,7 @@
         max-height: 13rem;
         vertical-align: middle;
         margin: 0rem 1rem 0;
-        &.shadow {
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        }
-        &:not(.shadow) {
-          position: relative;
-          top: 8px;
-        }
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
         @for $i from 1 through 3 {
           &:nth-of-type(#{$i}) {
             $time: ($i + 4)/10;
