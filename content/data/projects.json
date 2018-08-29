@@ -1,5 +1,43 @@
 [
   {
+    "_id": "5Sz5cwXthmgI2WgyqiQAsM",
+    "title": "FirstCommand",
+    "date": "2018-08-01",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "6F55bBZ4E8o68YI06gsgEM",
+        "name": "GraphQL",
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
+        "skillLevel": "Pro",
+        "isOpen": false,
+        "isCategory": false
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "description": "<p>Lorem Ipsum</p>\n",
+    "type": "External",
+    "status": "Live",
+    "link": "https://www.firstcommand.com/",
+    "images": []
+  },
+  {
     "_id": "5iEJz0WLcAIy2OQk2Cywwa",
     "title": "Purrvice Workers",
     "date": "2018-05-25",
@@ -127,6 +165,20 @@
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
         "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "6F55bBZ4E8o68YI06gsgEM",
+        "name": "GraphQL",
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
+        "skillLevel": "Pro",
+        "isOpen": false,
+        "isCategory": false
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
         "skillLevel": "Pro"
       }
     ],
