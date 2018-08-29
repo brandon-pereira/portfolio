@@ -88,7 +88,8 @@
       {
         "_id": "4DBxgrmMvY0aQyg2K084OE",
         "name": "Git",
-        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
       }
     ],
     "isCategory": true
@@ -100,7 +101,8 @@
       {
         "_id": "1t9XBlAcFWiY88k4OS2UuG",
         "name": "Java",
-        "description": "I'm experienced with Java, and am able to jump into existing code bases or start from scratch. I've built GUI interfaces, back-end algorithms, and used Java EE for server-side distributions."
+        "description": "I'm experienced with Java, and am able to jump into existing code bases or start from scratch. I've built GUI interfaces, back-end algorithms, and used Java EE for server-side distributions.",
+        "skillLevel": "Intermediate"
       }
     ],
     "isCategory": true

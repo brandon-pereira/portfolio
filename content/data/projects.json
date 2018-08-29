@@ -51,7 +51,7 @@
         "skillLevel": "Pro"
       }
     ],
-    "shortDescription": " Zero-dependency module to scroll between predefined text. Leverages Element.animate for modern browsers, and falls back on simple class based animations for legacy browsers.",
+    "description": "<p>Zero-dependency module to scroll between predefined text. Leverages Element.animate for modern browsers, and falls back on simple class based animations for legacy browsers. Published to npm as an open-source project.</p>\n",
     "type": "Internal",
     "status": "Live",
     "images": [
@@ -273,7 +273,8 @@
       {
         "_id": "4DBxgrmMvY0aQyg2K084OE",
         "name": "Git",
-        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
@@ -463,7 +464,8 @@
       {
         "_id": "4DBxgrmMvY0aQyg2K084OE",
         "name": "Git",
-        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
       }
     ],
     "shortDescription": "I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive, and used some fun next-level technologies.",
@@ -549,7 +551,8 @@
       {
         "_id": "4DBxgrmMvY0aQyg2K084OE",
         "name": "Git",
-        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
       }
     ],
     "description": "<p>Wrote some icons in pure CSS3 a couple years ago, however recently updated them to use SASS, rely on variables, and be open sourced.</p>\n<p>Check it out on <a target=\"_blank\" href=\"https://github.com/brandon-pereira/css3-icons\">GitHub</a></p>\n",
@@ -595,7 +598,8 @@
       {
         "_id": "4DBxgrmMvY0aQyg2K084OE",
         "name": "Git",
-        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
@@ -665,7 +669,8 @@
       {
         "_id": "4DBxgrmMvY0aQyg2K084OE",
         "name": "Git",
-        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments."
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
@@ -794,7 +799,8 @@
       {
         "_id": "1t9XBlAcFWiY88k4OS2UuG",
         "name": "Java",
-        "description": "I'm experienced with Java, and am able to jump into existing code bases or start from scratch. I've built GUI interfaces, back-end algorithms, and used Java EE for server-side distributions."
+        "description": "I'm experienced with Java, and am able to jump into existing code bases or start from scratch. I've built GUI interfaces, back-end algorithms, and used Java EE for server-side distributions.",
+        "skillLevel": "Intermediate"
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
