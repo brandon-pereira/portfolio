@@ -13,6 +13,7 @@ export default class Projects extends Base {
     this.$detailed = this.el.querySelector('.project.detailed-view');
     this.$filters = this.el.querySelector('[data-filters]');
     this.numProjectsToAdd = 2; // number of projects to add when show more clicked
+    this.defaultNumProjects = 4;
 
     this.masonry = new Masonry({
       container: this.$projects,
@@ -110,14 +111,13 @@ export default class Projects extends Base {
             )
           );
         } else {
-          return projects.projects.slice(0, 6);
+          return projects.projects.slice(0, this.defaultNumProjects);
         }
       })
       .then(toAdd => {
         const elements = toAdd.map(project => this._getSnippetNode(project));
         this._addElementsToGrid(elements);
         this._toggleDetailsView(false);
-        this.$loadMore.classList.toggle('hidden', id);
         this.scroll.then(s => s.scrollTo(this.el));
         this.logEvent('projects', 'filter', title);
       });
@@ -143,7 +143,10 @@ export default class Projects extends Base {
    */
   _toggleDetailsView(isShow) {
     this.scroll.then(s => s.scrollTo(this.el));
-    this.$loadMore.classList.toggle('hidden', isShow);
+    this.$loadMore.classList.toggle(
+      'hidden',
+      isShow || this.$filters.classList.contains('visible')
+    );
     animate(
       this.$detailed,
       [{ left: '100%', opacity: 0 }, { left: 0, opacity: 1 }],
