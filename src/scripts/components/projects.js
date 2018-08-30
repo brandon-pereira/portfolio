@@ -318,8 +318,8 @@ export default class Projects extends Base {
       $project
         .querySelector('img')
         .setAttribute('data-src', project.images[0].url);
+      LazyLoad.loadImages($project.querySelectorAll('img'));
     }
-    LazyLoad.loadImages($project.querySelectorAll('img'));
     return $project;
   }
 
