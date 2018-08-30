@@ -142,9 +142,8 @@
           height: 200px;
         }
         position: relative;
-        top: -30px;
-        width: 140%;
-        left: -20%;
+        transform: translate(0, -25%);
+        width: 120%;
       }
     }
     // https://css-tricks.com/multi-line-padded-text/
