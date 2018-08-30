@@ -241,7 +241,14 @@ export default class Projects extends Base {
       $node.querySelector('[data-project-title]').removeAttribute('href');
     }
     $node.querySelector('[data-project-description]').innerHTML =
-      project.description || project.shortDescription;
+      project.description;
+    if (project.gitUrl) {
+      $node.querySelector(
+        '[data-project-description]'
+      ).innerHTML += `<p><a href="${
+        project.gitUrl
+      }">View project on GitHub</a></p>`;
+    }
     // status
     const status = project.status || 'Unavailable';
     const $status = $node.querySelector('[data-project-status]');
