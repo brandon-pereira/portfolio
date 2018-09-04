@@ -4,7 +4,7 @@
 		<p>A list of skills I've acumulated over the years, click a category to see skills and click a skill to see a little description about my experience.</p>
 	</header>
 	<div class="content">
-		{% for category in skills.categories %}
+		{% for category in skills %}
 			<section class="accordion category {% if category.isOpen %}open{% endif %}">
 				<header data-accordion-handler>
 					<div class="title">{{category.name}}</div>
@@ -14,7 +14,7 @@
 				</header>
 				<article>
 					{% for skill in category.skills %}
-						<section class="accordion skill" data-id="{{skill.id}}">
+						<section class="accordion skill" data-id="{{skill._id}}">
 							<header data-accordion-handler>
 								<div class="title">{{skill.name}}</div>
 								<div class="skillLevel {{skills.skillLevels[skill.skillLevel]}}">{{skills.skillLevels[skill.skillLevel]}}</div>
@@ -24,7 +24,7 @@
 							</header>
 							<article>
 								<span class="description">{{skill.description}}</span><br />
-								<button class="button" data-go-to-project="{{skill.id}}">Projects</button>
+								<button class="button" data-go-to-project="{{skill._id}}">Projects</button>
 								<a href="#contact" data-smooth-scroll class="button">Contact Me</a>
 							</article>
 						</section>

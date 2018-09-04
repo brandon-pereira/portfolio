@@ -1,0 +1,118 @@
+[
+  {
+    "_id": "6X95ZVC5FuUaaO2MgymcGG",
+    "name": "Front End Web Development",
+    "skills": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
+        "name": "SVG",
+        "description": "I've had tons of exposure to SVG, including animations. I know how to build icon sprite sheets, animate them, optimize them, and much more.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "isOpen": true,
+    "isCategory": true
+  },
+  {
+    "_id": "1DK44HAtqEKwi2keUgkAyO",
+    "name": "Databases",
+    "skills": [
+      {
+        "_id": "56jx4l7uMUaeWKeW4sgwck",
+        "name": "JSON",
+        "description": "I use JSON (Javascript object notation) to pass and synchronize data almost daily. I have experience with JSON being generated and returned from a server, as well as data stored in JSON files (like this portfolio).",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "1lrIPRDfA4um6yQaUWI4WK",
+        "name": "MySQL",
+        "description": "I've built a handful of applications which reply on a MySQL database. I understand everything from the basics to using procedures and inner/outer joins.",
+        "skillLevel": "Intermediate"
+      },
+      {
+        "_id": "1sba8qggLqQ8Koqku6UW4g",
+        "name": "MongoDB",
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "6F55bBZ4E8o68YI06gsgEM",
+        "name": "GraphQL",
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
+        "skillLevel": "Pro",
+        "isOpen": false,
+        "isCategory": false
+      }
+    ],
+    "isCategory": true
+  },
+  {
+    "_id": "6F7Qmvs69qi0Guasy0S84Y",
+    "name": "Back End Web Development",
+    "skills": [
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "5AFDd2ceIw6amcqciWq0Gg",
+        "name": "JavaServer / Groovy",
+        "description": "I've built a handful of Java based applications, as well as modified/expanded upon the functionality of existing projects.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "5l81U41OJaiSGYcG8k0OiK",
+        "name": "PHP",
+        "description": "I have experience with PHP, I'm cable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well.",
+        "skillLevel": "Intermediate"
+      }
+    ],
+    "isCategory": true
+  },
+  {
+    "_id": "2QG1RDRv0QMwEQaUCeEsKS",
+    "name": "Team Tools",
+    "skills": [
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "isCategory": true
+  },
+  {
+    "_id": "4eyeYC6secwkwcmkOOmQ8y",
+    "name": "Native",
+    "skills": [
+      {
+        "_id": "1t9XBlAcFWiY88k4OS2UuG",
+        "name": "Java",
+        "description": "I'm experienced with Java, and am able to jump into existing code bases or start from scratch. I've built GUI interfaces, back-end algorithms, and used Java EE for server-side distributions.",
+        "skillLevel": "Intermediate"
+      }
+    ],
+    "isCategory": true
+  }
+]
