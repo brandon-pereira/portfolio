@@ -10,10 +10,11 @@ module.exports = function(config, gulp) {
       .src(config.paths.src.html)
       .pipe(
         data(() => ({
-          projects: requireUncached('../src/content/projects.json'),
-          apps: requireUncached('../src/content/apps.json'),
-          skills: requireUncached('../src/content/skills.json'),
-          contact: requireUncached('../src/content/contact.json')
+          projects: requireUncached('../content/data/projects.json'),
+          apps: requireUncached('../content/data/apps.json'),
+          skills: requireUncached('../content/data/skills.json'),
+          contact: requireUncached('../content/data/contact.json'),
+          about: requireUncached('../content/data/about.json')
         }))
       )
       .pipe(

@@ -13,6 +13,7 @@ export default class Projects extends Base {
     this.$detailed = this.el.querySelector('.project.detailed-view');
     this.$filters = this.el.querySelector('[data-filters]');
     this.numProjectsToAdd = 2; // number of projects to add when show more clicked
+    this.defaultNumProjects = 4;
 
     this.masonry = new Masonry({
       container: this.$projects,
@@ -41,7 +42,7 @@ export default class Projects extends Base {
         })
     );
     this.el.addEventListener('goToLang', e => this.deeplink(e.detail));
-    this.$filters.addEventListener('click', () => this.deeplink(null));
+    this.$filters.addEventListener('click', () => this.deeplink());
   }
 
   /**
@@ -53,7 +54,7 @@ export default class Projects extends Base {
     console.info('Projects: Show more details for', id);
     return this.fetchProjects().then(projects => {
       const project = projects.projects[id];
-      this._getDetailsNode(project, projects.statuses);
+      this._getDetailsNode(project);
       this._toggleDetailsView(true);
       this.logEvent('projects', 'read-more', project.title);
     });
@@ -94,26 +95,31 @@ export default class Projects extends Base {
    * Function to delegate out deeplink referrals
    * @param {String} language
    */
-  deeplink(language) {
-    this.$filters.querySelector('span').innerText = language || '';
-    this.$filters.classList.toggle('visible', language);
-    console.info('Projects: Filtering projects by', language);
+  deeplink({ id, title } = {}) {
+    this.$filters.querySelector('span').innerText = title || '';
+    this.$filters.classList.toggle('visible', id);
+    console.info('Projects: Filtering projects by', id, title);
     this._clearGrid();
     this.fetchProjects()
       .then(projects => {
-        if (language) {
-          return projects.projects.filter(p => p.languages.includes(language));
+        if (id) {
+          return projects.projects.filter(p =>
+            p.languages.some(
+              k =>
+                // console.log()
+                k._id === id
+            )
+          );
         } else {
-          return projects.projects.slice(0, 6);
+          return projects.projects.slice(0, this.defaultNumProjects);
         }
       })
       .then(toAdd => {
         const elements = toAdd.map(project => this._getSnippetNode(project));
         this._addElementsToGrid(elements);
         this._toggleDetailsView(false);
-        this.$loadMore.classList.toggle('hidden', language);
         this.scroll.then(s => s.scrollTo(this.el));
-        this.logEvent('projects', 'filter', language);
+        this.logEvent('projects', 'filter', title);
       });
   }
 
@@ -122,8 +128,8 @@ export default class Projects extends Base {
    * @return Promise
    */
   fetchProjects() {
-    return import('../../content/projects.json').then(projects => {
-      projects.projects = projects.projects.map((project, index) => {
+    return import('../../../content/data/projects.json').then(projects => {
+      projects.projects = projects.map((project, index) => {
         project.index = index;
         return project;
       });
@@ -137,7 +143,10 @@ export default class Projects extends Base {
    */
   _toggleDetailsView(isShow) {
     this.scroll.then(s => s.scrollTo(this.el));
-    this.$loadMore.classList.toggle('hidden', isShow);
+    this.$loadMore.classList.toggle(
+      'hidden',
+      isShow || this.$filters.classList.contains('visible')
+    );
     animate(
       this.$detailed,
       [{ left: '100%', opacity: 0 }, { left: 0, opacity: 1 }],
@@ -219,13 +228,12 @@ export default class Projects extends Base {
   /**
    * Function to build a snippet node from a project
    * @param {Object} project
-   * @param {Statuses} statuses
    * @return {Element}
    */
-  _getDetailsNode(project, statuses) {
+  _getDetailsNode(project) {
     console.info('Projects: Set details for project', project);
     const $node = this.$detailed;
-    // titte, description
+    // title, description
     $node.querySelector('[data-project-title]').innerText = project.title;
     if (project.link) {
       $node.querySelector('[data-project-link]').href = project.link;
@@ -234,22 +242,28 @@ export default class Projects extends Base {
     }
     $node.querySelector('[data-project-description]').innerHTML =
       project.description;
+    if (project.gitUrl) {
+      $node.querySelector(
+        '[data-project-description]'
+      ).innerHTML += `<p><a href="${
+        project.gitUrl
+      }">View project on GitHub</a></p>`;
+    }
     // status
-    const status = statuses[project.status];
+    const status = project.status || 'Unavailable';
     const $status = $node.querySelector('[data-project-status]');
-    $status.setAttribute('class', status.class);
-    $status.innerText = status.title;
+    $status.setAttribute('class', status.toLowerCase());
+    $status.innerText = status;
     // assets
     const $images = $node.querySelector('[data-project-images]');
     $images.innerHTML = ''; // clear
     if (Array.isArray(project.images)) {
       project.images.forEach(asset => {
-        const type = asset.type || 'img';
+        const type = asset.contentType.startsWith('video') ? 'video' : 'img';
         const config = {
-          src: asset.src,
+          src: asset.url,
           autoplay: true,
-          muted: true,
-          class: asset.styling
+          muted: true
         };
         const $asset = document.createElement(type);
         Object.keys(config).forEach(key =>
@@ -271,18 +285,20 @@ export default class Projects extends Base {
     // languages
     const $langs = $node.querySelector('[data-project-languages]');
     $langs.innerHTML = '';
-    project.languages.forEach(lang => {
-      const $lang = document.createElement('span');
-      $lang.addEventListener('click', () =>
-        document.querySelector('#skills').dispatchEvent(
-          new CustomEvent('goToSkill', {
-            detail: lang
-          })
-        )
-      );
-      $lang.innerText = lang;
-      $langs.appendChild($lang);
-    });
+    if (Array.isArray(project.languages) && project.languages.length) {
+      project.languages.forEach(lang => {
+        const $lang = document.createElement('span');
+        $lang.addEventListener('click', () =>
+          document.querySelector('#skills').dispatchEvent(
+            new CustomEvent('goToSkill', {
+              detail: lang._id
+            })
+          )
+        );
+        $lang.innerText = lang.name;
+        $langs.appendChild($lang);
+      });
+    }
     return $node;
   }
 
@@ -308,9 +324,9 @@ export default class Projects extends Base {
     if (project.images && project.images.length) {
       $project
         .querySelector('img')
-        .setAttribute('data-src', project.images[0].src);
+        .setAttribute('data-src', project.images[0].url);
+      LazyLoad.loadImages($project.querySelectorAll('img'));
     }
-    LazyLoad.loadImages($project.querySelectorAll('img'));
     return $project;
   }
 

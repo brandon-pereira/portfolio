@@ -5,18 +5,22 @@ module.exports = {
       scripts: './src/scripts/index.js',
       html: './src/html/*.html',
       svg: './src/svgs/*.svg',
-      static: './src/static/**/*'
+      static: ['./src/static/**/*', './content/**/*.{png,jpg,gif,mp4}']
     },
     dist: './dist',
     watch: {
-      scripts: ['./src/scripts/**/*.js', './src/styles/**/*.scss'],
+      scripts: [
+        './src/scripts/**/*.js',
+        './src/styles/**/*.scss',
+        './content/**/*.json'
+      ],
       html: [
         './src/html/**/*.html',
         './src/styles/critical.css',
-        './src/content/*.json'
+        './content/**/*.json'
       ],
       svg: './src/svgs/*.svg',
-      static: './src/static/**/*'
+      static: ['./src/static/**/*', './content/assets/**/*']
     }
   },
   naming: {

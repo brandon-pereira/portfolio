@@ -13,9 +13,15 @@ export default class Skills extends Base {
 
     Array.from(this.el.querySelectorAll('[data-go-to-project]')).forEach(
       handle =>
-        handle.addEventListener('click', () =>
-          this.goToSkill(handle.getAttribute('data-go-to-project'))
-        )
+        handle.addEventListener('click', () => {
+          const id = handle.getAttribute('data-go-to-project');
+          const title = handle.closest('.accordion').querySelector('.title')
+            .textContent;
+          this.goToSkill({
+            id,
+            title
+          });
+        })
     );
 
     this.el.addEventListener('goToSkill', e => this.deeplink(e.detail));
@@ -23,10 +29,10 @@ export default class Skills extends Base {
     super.events();
   }
 
-  goToSkill(lang) {
+  goToSkill(detail) {
     document
       .querySelector('#projects')
-      .dispatchEvent(new CustomEvent('goToLang', { detail: lang }));
+      .dispatchEvent(new CustomEvent('goToLang', { detail }));
   }
 
   toggleItem(element) {
@@ -54,7 +60,7 @@ export default class Skills extends Base {
   }
 
   deeplink(id) {
-    const skill = this.el.querySelector('[data-id=' + id + ']');
+    const skill = this.el.querySelector('[data-id="' + id + '"]');
     if (skill) {
       const category = skill.closest('.accordion.category');
       if (!category.classList.contains('open')) this.toggleItem(category);

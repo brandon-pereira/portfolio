@@ -10,10 +10,12 @@
 			<button>RESET</button>
 		</div>
 		<div class="projects" data-columns>
-			{% for project in projects.projects.slice(0,4) %}
+			{% for project in projects.slice(0,4) %}
 			<div class="project snippet">
 				<div class="image-container">
-					<img alt="{{project.images[0].title}}" data-src="{{project.images[0].src}}">
+					{% if project.images[0] %}
+						<img alt="{{project.images[0].title}}" data-src="{{project.images[0].url}}">
+					{% endif %}
 				</div>
 				<h3>
 					{% if project.link %}
@@ -22,7 +24,7 @@
 					<span data-project-title>{{project.title}}</span>
 					{% endif %}
 				</h3>
-				<p data-project-description>{{project.shortDescription}}</p>
+				<p data-project-description>{{project.shortDescription if project.shortDescription else project.description | safe}}</p>
 				<button class="button" data-project-learn-more="{{loop.index - 1}}">Learn More</button>
 			</div>
 			{% endfor %}
@@ -53,6 +55,6 @@
 			<div data-project-images></div>
 			<div data-project-languages></div>
 		</div>
-		<div class="project loadMore">Load More</div>
+		<div class="project loadMore {{ " hidden " if projects.length <= 4 }}">Load More</div>
 	</div>
 </section>
