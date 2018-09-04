@@ -22,6 +22,7 @@ header.header {
       url('/backgrounds/diamond.png');
     background-blend-mode: multiply;
     animation: hue 10s infinite linear;
+    will-change: filter;
     z-index: -1;
   }
   .copy {
@@ -56,6 +57,7 @@ header.header {
             background-color: $gridBg;
             background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
             animation: 2s bgScroll infinite linear;
+            will-change: background-position;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
