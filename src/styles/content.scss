@@ -18,6 +18,13 @@
   }
 }
 
+.svg {
+  float: left;
+  svg {
+    display: block;
+  }
+}
+
 /* Button Styling */
 .button,
 a.button,

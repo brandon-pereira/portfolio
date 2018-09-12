@@ -6,6 +6,7 @@ import('./services/lazyload');
 // Async load all components
 const components = [
   [import('./components/header'), document.querySelector('.header'), {}],
+  [import('./components/about'), document.querySelector('.about'), {}],
   [import('./components/skills'), document.querySelector('.skills'), {}],
   [import('./components/apps'), document.querySelector('.apps'), {}],
   [import('./components/projects'), document.querySelector('.projects'), {}]
