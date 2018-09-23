@@ -1,5 +1,51 @@
 [
   {
+    "_id": "6E4mnHlQk0k6KkgQq8KUac",
+    "title": "Nissan: Titan AR",
+    "date": "2018-09-21",
+    "languages": [
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "1sba8qggLqQ8Koqku6UW4g",
+        "name": "MongoDB",
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. ",
+    "description": "<p>I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. </p>\n<p>In the video below you can see how the journey works. First, you&#39;re greeted by the bot to select your favourite college football team. Upon selection, you&#39;re then presented with an option to see your Titan in the camera. This is where the AR happens. Once you&#39;ve played around, you can choose to share with your friends. Lastly, you&#39;re asked to submit your information for a chance to win the customized Titan.</p>\n<p>Under the hood, we&#39;re leveraging our internal chatbot framework (developed and maintained by myself) to do a lot of the Messenger chat experience. We are also utilizing the Facebook Messenger AR Platform to build the augmented reality experience (this was especially difficult because the API isn&#39;t documented very well) and we&#39;re leveraging Azure and MongoDB for hosting/data storage.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "1c9okCtbZo4quQGkOowqyo",
+        "title": "Preview of how the AR experience works",
+        "description": "Preview of how the AR experience works",
+        "url": "/assets/titan-messenger-ar-preview.jpeg",
+        "contentType": "image/jpeg"
+      },
+      {
+        "_id": "5ptSzaYtNeW04IW88GKmoq",
+        "title": "Demo of the app journey",
+        "description": "Demo of the app journey",
+        "url": "/assets/titan-messenger-ar.mp4",
+        "contentType": "video/mp4"
+      }
+    ],
+    "link": "https://m.me/winanissantitan"
+  },
+  {
     "_id": "5Sz5cwXthmgI2WgyqiQAsM",
     "title": "FirstCommand",
     "date": "2018-08-01",
