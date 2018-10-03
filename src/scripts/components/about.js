@@ -3,8 +3,6 @@ import animate from '../lib/animate';
 
 export default class Apps extends Base {
   init() {
-    this.$svgContainer = this.el.querySelector('.svg');
-
     return super
       .init()
       .then(() => this.injectSvg())
@@ -13,15 +11,19 @@ export default class Apps extends Base {
   }
 
   injectSvg() {
+    const container = document.createElement('div');
+    container.classList.add('svg-coder');
+    const injectAfter = this.el.querySelector('p');
+    injectAfter.parentNode.insertBefore(container, injectAfter.nextSibling);
     return import('../../static/coder.svg').then(svg => {
-      this.$svgContainer.innerHTML = svg;
-      this.$svgContainer.classList.add('loaded');
+      container.innerHTML = svg;
+      container.classList.add('loaded');
     });
   }
 
   animateSvg() {
     animate(
-      document.querySelector('#coder g#arm'),
+      this.el.querySelector('#coder g#arm'),
       [
         { transform: 'translateY(-5px)' },
         { transform: 'translateX(-20px) translateY(0px)', offset: 0.2 },
@@ -38,7 +40,7 @@ export default class Apps extends Base {
     );
 
     animate(
-      document.querySelectorAll('#coder g#monitor-one-code *'),
+      this.el.querySelectorAll('#coder g#monitor-one-code *'),
       [
         {
           transform: 'translateY(-10px)',
@@ -64,7 +66,7 @@ export default class Apps extends Base {
     );
 
     animate(
-      document.querySelectorAll('#coder g#monitor-two-code *'),
+      this.el.querySelectorAll('#coder g#monitor-two-code *'),
       [
         {
           transform: 'translateY(-10px)',

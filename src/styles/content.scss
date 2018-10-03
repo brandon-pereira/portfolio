@@ -18,8 +18,16 @@
   }
 }
 
-.svg {
-  float: left;
+.svg-coder {
+  display: none;
+  margin: 0 auto;
+  &.loaded {
+    display: block;
+  }
+  @include medium() {
+    // float: left;
+    width: 30vw;
+  }
   svg {
     display: block;
   }
