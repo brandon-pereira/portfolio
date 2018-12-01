@@ -5,7 +5,7 @@ module.exports = {
       scripts: './src/scripts/index.js',
       html: './src/html/*.html',
       svg: './src/svgs/*.svg',
-      static: ['./src/static/**/*', './content/**/*.{png,jpg,gif,mp4,jpeg}']
+      static: ['./src/static/**/*', './content/**/*.{png,jpg,gif,mp4,jpeg,pdf}']
     },
     dist: './dist',
     watch: {
