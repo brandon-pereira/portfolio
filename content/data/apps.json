@@ -1,36 +1,36 @@
 [
   {
-    "_id": "3pXAMnjH3ac8IUSm64qWau",
-    "appName": "Wings.cheap",
-    "description": "<p><strong>Note:</strong> We recently shut off the wings.cheap domain name and are now using <a href=\"https://branclon.com/wings-cheap/\">branclon.com/wings-cheap/</a>. Sorry for any  inconvenience! </p>\n<p>I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you&#39;re looking for a cheap eat!</p>\n",
-    "link": "https://branclon.com/wings-cheap/",
+    "_id": "6Dwrn0CIoGgB7CoD4DjY8T",
+    "appName": "BetterDo",
+    "description": "<p>I built a web app for organizing and maintaining to-do lists and tasks. It features has offline support, shared lists, and push notifications. Give it a try if you&#39;re looking to declutter your life.</p>\n",
+    "link": "https://branclon.com/betterdo",
     "icon": {
-      "title": "Wings Cheap App Icon",
-      "description": "Wings Cheap App Icon",
-      "url": "/assets/app-icon-wings-cheap.png",
+      "title": "BetterDo App Icon",
+      "description": "BetterDo App Icon",
+      "url": "/assets/app-icon-betterdo-v3.png",
       "contentType": "image/png"
     },
-    "theme": "wings-cheap",
+    "theme": "betterdo",
     "images": [
       {
-        "_id": "5fxagEO5J6ucyQ0MmQQgAE",
-        "title": "Desktop view of landing screen",
-        "description": "Desktop view of landing screen",
-        "url": "/assets/5fxagEO5J6ucyQ0MmQQgAE.png",
+        "_id": "4loe2vKe5Bi91vAYlozgMv",
+        "title": "Example of desktop experience",
+        "description": "Example of desktop experience",
+        "url": "/assets/4loe2vKe5Bi91vAYlozgMv.png",
         "contentType": "image/png"
       },
       {
-        "_id": "3Eh8HFBZBKUcwummomseyA",
-        "title": "Mobile view of results screen",
-        "description": "Mobile view of results screen",
-        "url": "/assets/3Eh8HFBZBKUcwummomseyA.png",
+        "_id": "6m4YZBGMvJECuhu3ClSjSG",
+        "title": "Mobile Experience",
+        "description": "Mobile Experience",
+        "url": "/assets/6m4YZBGMvJECuhu3ClSjSG.png",
         "contentType": "image/png"
       },
       {
-        "_id": "5G7FgIiNQAmyQO0mu8yKem",
-        "title": "Mobile view of landing screen",
-        "description": "Mobile view of landing screen",
-        "url": "/assets/5G7FgIiNQAmyQO0mu8yKem.png",
+        "_id": "4oOeF0V2ohzKPnxU3q4fg5",
+        "title": "List Members User Interface",
+        "description": "List Members User Interface",
+        "url": "/assets/4oOeF0V2ohzKPnxU3q4fg5.png",
         "contentType": "image/png"
       }
     ]
@@ -72,36 +72,37 @@
     ]
   },
   {
-    "_id": "T9wlxXEQ0wSeyuWUcOUgM",
-    "appName": "BetterDo.",
-    "description": "<p><strong>Depreciated:</strong> As of October 15th, 2017, this application is no longer available. It had a good run, but server changes have made it difficult to manage. Thanks for your support!</p>\n<p>BetterDo was my take on a todo application. I was unhappy with the alternatives, so I decided to build my own version.</p>\n",
+    "_id": "3pXAMnjH3ac8IUSm64qWau",
+    "appName": "Wings.cheap",
+    "description": "<p><strong>Note:</strong> We recently shut off the wings.cheap domain name and are now using <a href=\"https://branclon.com/wings-cheap/\">branclon.com/wings-cheap/</a>. Sorry for any  inconvenience! </p>\n<p>I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you&#39;re looking for a cheap eat!</p>\n",
+    "link": "https://branclon.com/wings-cheap/",
     "icon": {
-      "title": "BetterDo. App Icon",
-      "description": "BetterDo. App Icon",
-      "url": "/assets/app-icon-betterdo.png",
+      "title": "Wings Cheap App Icon",
+      "description": "Wings Cheap App Icon",
+      "url": "/assets/app-icon-wings-cheap.png",
       "contentType": "image/png"
     },
-    "theme": "betterdo",
+    "theme": "wings-cheap",
     "images": [
       {
-        "_id": "3pDpW2Obd6mUYWeecowsuU",
-        "title": "Example of editing task",
-        "description": "Example of editing task",
-        "url": "/assets/3pDpW2Obd6mUYWeecowsuU.png",
+        "_id": "5fxagEO5J6ucyQ0MmQQgAE",
+        "title": "Desktop view of landing screen",
+        "description": "Desktop view of landing screen",
+        "url": "/assets/5fxagEO5J6ucyQ0MmQQgAE.png",
         "contentType": "image/png"
       },
       {
-        "_id": "3zxQh7SiwMQgmOUMIMWYAO",
-        "title": "Example of editing/sharing list",
-        "description": "Example of editing/sharing list",
-        "url": "/assets/3zxQh7SiwMQgmOUMIMWYAO.png",
+        "_id": "3Eh8HFBZBKUcwummomseyA",
+        "title": "Mobile view of results screen",
+        "description": "Mobile view of results screen",
+        "url": "/assets/3Eh8HFBZBKUcwummomseyA.png",
         "contentType": "image/png"
       },
       {
-        "_id": "37xue73IA00i2EM0Qc8eyw",
-        "title": "Example on desktop",
-        "description": "Example on desktop",
-        "url": "/assets/37xue73IA00i2EM0Qc8eyw.png",
+        "_id": "5G7FgIiNQAmyQO0mu8yKem",
+        "title": "Mobile view of landing screen",
+        "description": "Mobile view of landing screen",
+        "url": "/assets/5G7FgIiNQAmyQO0mu8yKem.png",
         "contentType": "image/png"
       }
     ]
