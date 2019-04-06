@@ -50,10 +50,20 @@ const importAboutYou = async () => {
   console.timeEnd('Getting information about you');
 };
 
-const importAllAssets = () =>
-  Promise.all(
-    [...new Set(images)].map(src => downloadFile(src, imageNamingFn))
-  );
+const importAllAssets = async () => {
+  const dedupe = [];
+  const done = images
+    .filter(img => {
+      if (!dedupe.includes(img.actualUrl)) {
+        dedupe.push(img.actualUrl);
+        return true;
+      }
+      return false;
+    })
+    .map(img => downloadFile(img, imageNamingFn));
+
+  return Promise.all(done);
+};
 const normalizeAboutYou = async aboutYou => {
   aboutYou.description = await md2html(aboutYou.description);
   aboutYou.resume = normalizeAsset(aboutYou.resume.fields);
@@ -62,12 +72,20 @@ const normalizeAboutYou = async aboutYou => {
 
 const normalizeAsset = asset => {
   const output = {};
+  const extension = asset.file.fileName.split('.').pop();
+  let displayUrl = `${asset._id}.${extension}`;
+  if (!asset._id) {
+    displayUrl = asset.file.fileName;
+  }
   output._id = asset._id;
   output.title = asset.title;
   output.description = asset.description;
-  images.push(asset.file.url);
-  output.url = `/assets/${asset.file.fileName}`;
+  output.url = `/assets/${displayUrl}`;
   output.contentType = asset.file.contentType;
+  images.push({
+    actualUrl: asset.file.url,
+    displayUrl
+  });
   return output;
 };
 

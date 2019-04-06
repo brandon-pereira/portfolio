@@ -10,7 +10,7 @@ const downloadFile = async (url, imageNamingFn) => {
     await fs.ensureDir(path.dirname(dest));
     console.log(`File "${path.basename(dest)}" doesn't exist. Creating.`);
     try {
-      await _downloadFile(url, dest);
+      await _downloadFile(url.actualUrl, dest);
     } catch (err) {
       if (err.code !== 'EEXIST') {
         throw err;
@@ -58,13 +58,15 @@ const _downloadFile = (url, dest) =>
     });
   });
 
-const imageNamingFn = url =>
-  `${path.resolve(
+const imageNamingFn = url => {
+  const base = `${path.resolve(
     new URL(import.meta.url).pathname,
     '..',
     '..',
     'assets'
-  )}/${url.split('/').pop()}`;
+  )}/${url.displayUrl}`;
+  return base;
+};
 
 const absoluteToHttp = path => path.replace('//', 'http://');
 
