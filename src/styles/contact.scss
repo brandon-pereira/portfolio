@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'contact';
+  font-display: block;
   src: url('/fonts/social.woff2') format('woff2'),
     url('/fonts/social.woff') format('woff');
 }
-// wf-contact-n4-active
 .container.contact {
   padding-bottom: 50px;
 }
@@ -29,8 +29,6 @@
     text-align: center;
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
-    line-height: 80px;
     transition: transform 0.2s;
     &:before {
       display: none;
@@ -38,6 +36,7 @@
       transition: font-size 0.4s;
       line-height: 80px;
       text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+      display: block;
     }
     &:hover {
       transform: scale(0.9);

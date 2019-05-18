@@ -6,7 +6,7 @@
 @import 'config';
 
 body {
-  font: 16px sans-serif;
+  font: 19px 'Open Sans', sans-serif;
   margin: 0;
   overflow-x: hidden;
   background: #fff;
@@ -43,35 +43,12 @@ svg.spritemap {
 }
 
 /**
-  * Webfonts Initialized (helps solve flash of unstyled text)
+  * Web fonts
   */
-html.wf-opensans-n4-active body {
-  font: 1.2rem 'Open Sans', sans-serif;
-}
-html.wf-pressstart2p-n4-active footer .content,
-html.wf-pressstart2p-n4-active .container.skills header.main h2 {
-  font-family: 'Press Start 2P', sans-serif;
-}
-html.wf-lilyscriptone-n4-active .container.projects header.main .maintext {
-  font-family: 'Lily Script One', sans-serif;
-}
-html.wf-bungeeshade-n4-active .container.apps header.main .maintext {
-  font-family: 'Bungee Shade', sans-serif;
-}
-html.wf-quicksand-n5-active .header h1 {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
-}
-html.wf-opensans-n4-active .container.projects .projects .project p {
-  font-size: 12px;
-}
-html.wf-contact-n4-active .container.contact .item {
-  font-size: 0;
-  line-height: 0;
-  &:before {
-    display: block;
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lily+Script+One&display=swap&text=Projects');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500&display=swap&text=BRANDON');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap&text=Apps');
 
 img[data-src] {
   transition: opacity 1s;

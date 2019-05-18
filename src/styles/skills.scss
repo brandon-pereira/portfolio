@@ -13,7 +13,7 @@
     padding: 50px 0;
     h2 {
       margin-bottom: 20px;
-      font: 20px monospace;
+      font: 20px 'Press Start 2P', monospace;
       text-shadow: 2px 2px darken($background, 40%);
       @include medium() {
         font-size: 38px;
@@ -40,7 +40,7 @@
     padding-bottom: 50px;
 
     .accordion {
-      // GENERIC STYLES FOR ALL ACCORDIANS
+      // GENERIC STYLES FOR ALL ACCORDIONS
       header {
         font-weight: 700;
         cursor: pointer;
@@ -72,7 +72,7 @@
         opacity: 0;
         pointer-events: none;
       }
-      // GENERIC OPEN STYLES FOR ALL ACCORDIANS
+      // GENERIC OPEN STYLES FOR ALL ACCORDIONS
       &.open {
         height: auto !important;
         > article {

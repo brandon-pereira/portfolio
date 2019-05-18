@@ -37,7 +37,8 @@ header.header {
       z-index: 1;
       margin: 5px 0 10px;
       @include fluid-type(300px, 1200px, 50px, 200px);
-      font-weight: 900;
+      font-weight: 500;
+      font-family: 'Quicksand', sans-serif;
       span {
         position: relative;
         display: inline-block;
