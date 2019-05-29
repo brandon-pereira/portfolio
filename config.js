@@ -1,4 +1,5 @@
 module.exports = {
+  production: process.env.NODE_ENV === 'production',
   paths: {
     src: {
       root: './src',

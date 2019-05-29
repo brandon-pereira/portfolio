@@ -11,7 +11,9 @@ const components = [
 ];
 components.forEach(component => {
   // Components export a class, so we instantiate
-  component[0].then(Class => new Class(component[1], component[2] || {}));
+  component[0].then(
+    Class => new Class.default(component[1], component[2] || {})
+  );
 });
 
 Promise.all([styles, ...components.map(c => c[0])]).then(() => {

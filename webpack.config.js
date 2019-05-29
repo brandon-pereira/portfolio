@@ -1,6 +1,5 @@
 const config = require('./config');
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const getPlugins = () => {
@@ -15,16 +14,7 @@ const getPlugins = () => {
     })
   ];
 
-  if (process.env.NODE_ENV === 'production') {
-    plugins.push(
-      ...[
-        new UglifyJsPlugin({
-          parallel: true,
-          sourceMap: true
-        })
-      ]
-    );
-  } else {
+  if (!config.production) {
     plugins.push(
       ...[
         new webpack.SourceMapDevToolPlugin(),
@@ -38,6 +28,8 @@ const getPlugins = () => {
 };
 
 module.exports = {
+  mode: config.isProduction ? 'production' : 'development',
+  devtool: config.isProduction ? false : 'eval-source-map',
   entry: config.paths.src.scripts,
   output: {
     publicPath: 'scripts/',
@@ -54,7 +46,7 @@ module.exports = {
             options: {
               presets: [
                 [
-                  'env',
+                  '@babel/preset-env',
                   {
                     targets: {
                       browsers: ['last 2 versions']
@@ -64,7 +56,7 @@ module.exports = {
               ],
               plugins: [
                 'add-module-exports', // export default will allow you to import without typing .default
-                'dynamic-import-webpack'
+                '@babel/plugin-syntax-dynamic-import'
               ]
             }
           }
