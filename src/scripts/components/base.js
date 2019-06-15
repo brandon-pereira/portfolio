@@ -2,10 +2,16 @@ import ga from '../services/analytics';
 
 export default class Base {
   constructor(el, props = {}) {
+    if (!el) {
+      console.warn(
+        `Can't find container for "${this.constructor.name}". Skipping Mount.`
+      );
+      return null;
+    }
     this.el = el;
     this.props = props;
-    this.lightbox = import('../services/lightbox');
-    this.scroll = import('../services/scroll');
+    this.lightbox = import('../services/lightbox').then(m => m.default);
+    this.scroll = import('../services/scroll').then(m => m.default);
     this.logEvent = ga;
     this.init()
       .then(() => this.setLoading(false))
