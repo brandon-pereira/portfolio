@@ -230,6 +230,9 @@
     text-align: center;
     .dot {
       cursor: pointer;
+      border: none;
+      background: transparent;
+      appearance: none;
       display: inline-block;
       height: 1.4rem;
       width: 1.4rem;
@@ -267,6 +270,8 @@
   .carousel-arrow {
     display: block;
     cursor: pointer;
+    border: none;
+    appearance: none;
     position: absolute;
     bottom: 0;
     transform: translate(0, -50%);

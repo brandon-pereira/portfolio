@@ -38,14 +38,14 @@
 		</div>
 		<div class="carousel-dots">
 			{% for app in apps %}
-			<div class="dot {{ " active " if loop.index === 1 }}" data-goto="{{loop.index - 1}}"></div>
+			<button class="dot {{ " active " if loop.index === 1 }}" data-goto="{{loop.index - 1}}"></button>
 			{% endfor %}
 		</div>
-		<div class="next carousel-arrow" data-goto="next">
+		<button class="next carousel-arrow" data-goto="next">
 			<svg><use xlink:href="#caret"></use></svg>
-		</div>
-		<div class="prev carousel-arrow" data-goto="prev">
+		</button>
+		<button class="prev carousel-arrow" data-goto="prev">
 			<svg><use xlink:href="#caret"></use></svg>
-		</div>
+		</button>
 	</div>
 </section>
