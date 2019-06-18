@@ -128,13 +128,15 @@ export default class Projects extends Base {
    * @return Promise
    */
   fetchProjects() {
-    return import('../../../content/data/projects.json').then(projects => {
-      projects.projects = projects.map((project, index) => {
-        project.index = index;
-        return project;
+    return import('../../../content/data/projects.json')
+      .then(m => m.default)
+      .then(projects => {
+        projects.projects = projects.map((project, index) => {
+          project.index = index;
+          return project;
+        });
+        return projects;
       });
-      return projects;
-    });
   }
 
   /**
@@ -159,8 +161,20 @@ export default class Projects extends Base {
       () => {
         this.$detailed.classList.toggle('hidden', !isShow);
         this.$projects.classList.toggle('hidden', isShow);
+        this._setAccessibility(isShow);
       }
     );
+  }
+
+  _setAccessibility(isDetailsView) {
+    const enabledTabIndex = bool => (bool ? 0 : -1);
+    this.$detailed.setAttribute('aria-hidden', !isDetailsView);
+    this.$projects.setAttribute('aria-hidden', isDetailsView);
+    this.$projects.querySelectorAll('button').forEach($button => {
+      $button.tabIndex = enabledTabIndex(!isDetailsView);
+    });
+    this.$backButton.tabIndex = enabledTabIndex(isDetailsView);
+    this.$loadMore.tabIndex = enabledTabIndex(!isDetailsView);
   }
 
   /**
@@ -287,7 +301,7 @@ export default class Projects extends Base {
     $langs.innerHTML = '';
     if (Array.isArray(project.languages) && project.languages.length) {
       project.languages.forEach(lang => {
-        const $lang = document.createElement('span');
+        const $lang = document.createElement('button');
         $lang.addEventListener('click', () =>
           document.querySelector('#skills').dispatchEvent(
             new CustomEvent('goToSkill', {
@@ -311,16 +325,12 @@ export default class Projects extends Base {
     const $project = this.$snippet.cloneNode(true);
     $project.classList.remove('skeleton');
     $project.querySelector('[data-project-title]').innerText = project.title;
-    if (project.link) {
-      $project.querySelector('[data-project-link]').href = project.link;
-    } else {
-      $project.querySelector('[data-project-title]').removeAttribute('href');
-    }
+    $project.querySelector('[data-project-title]').removeAttribute('href');
     $project.querySelector('[data-project-description]').innerHTML =
       project.shortDescription || project.description;
-    $project
-      .querySelector('[data-project-learn-more]')
-      .addEventListener('click', () => this.showMoreDetails(project.index));
+    $project.addEventListener('click', () =>
+      this.showMoreDetails(project.index)
+    );
     if (project.images && project.images.length) {
       $project
         .querySelector('img')

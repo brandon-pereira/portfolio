@@ -104,6 +104,7 @@
     }
   }
   .project {
+    cursor: pointer;
     margin: 0 0 2rem;
     background: #fff;
     border-radius: 0.5rem;
@@ -179,6 +180,10 @@
     margin: 1rem auto;
     width: 50%;
     cursor: pointer;
+    appearance: none;
+    font-size: 1.3rem;
+    font-family: inherit;
+    border: none;
     &.hidden {
       display: none;
     }
@@ -187,12 +192,16 @@
       border-radius: 50% !important;
       margin: 0 auto;
       box-shadow: none;
-
+      outline: none;
       @extend .plus-loader;
+    }
+    &:focus {
+      outline-color: grey;
     }
   }
 
   .detailed-view {
+    cursor: default;
     padding: 2rem 1rem;
     @include medium() {
       padding: 2rem;
@@ -241,6 +250,7 @@
       justify-content: space-between;
     }
     [data-back-button] {
+      cursor: pointer;
       background: none;
       border: none;
       box-shadow: none;
@@ -278,7 +288,9 @@
       @include medium() {
         text-align: left;
       }
-      span {
+      button {
+        appearance: none;
+        border: none;
         position: relative;
         display: inline-block;
         background-color: #eee;
@@ -299,7 +311,8 @@
           background: #797979;
           border-radius: 50%;
         }
-        &:hover {
+        &:hover,
+        &:focus {
           color: #fff;
           background-color: lighten(map-get($config, accent), 10%);
           &:before {
