@@ -8,7 +8,7 @@
 export default function sendEvent(category, action, label) {
   if (window.ga && PRODUCTION) {
     window.ga('send', 'event', category, action, label);
-  } else if (window.ga) {
+  } else if (window.ga && !PRODUCTION) {
     console.info('GA: DEV_MODE: Fire Event', { category, action, label });
   } else {
     console.warn('GA: not detected on page. Might be blocked?');
