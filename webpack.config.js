@@ -8,7 +8,6 @@ const getPlugins = () => {
       minChunkSize: 10000,
       maxChunks: 5
     }),
-    new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(process.env.NODE_ENV === 'production')
     })
@@ -39,21 +38,12 @@ module.exports = {
     rules: [
       {
         test: /\.js?$/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
         use: [
           {
             loader: 'babel-loader',
             options: {
-              presets: [
-                [
-                  '@babel/preset-env',
-                  {
-                    targets: {
-                      browsers: ['last 2 versions']
-                    }
-                  }
-                ]
-              ],
+              presets: ['@babel/preset-env'],
               plugins: [
                 'add-module-exports', // export default will allow you to import without typing .default
                 '@babel/plugin-syntax-dynamic-import'
@@ -64,7 +54,21 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                require('postcss-preset-env')(),
+                require('cssnano')()
+              ]
+            }
+          },
+          'sass-loader'
+        ]
       }
     ]
   },
