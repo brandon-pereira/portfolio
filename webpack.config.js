@@ -28,8 +28,8 @@ const getPlugins = () => {
 };
 
 module.exports = {
-  mode: config.isProduction ? 'production' : 'development',
-  devtool: config.isProduction ? false : 'eval-source-map',
+  mode: config.production ? 'production' : 'development',
+  devtool: config.production ? false : 'eval-source-map',
   entry: config.paths.src.scripts,
   output: {
     publicPath: 'scripts/',
