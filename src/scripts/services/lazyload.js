@@ -6,12 +6,9 @@ class LazyLoad {
     const elements = document.querySelectorAll('img[data-src]');
 
     if ('IntersectionObserver' in window) {
-      console.info('LazyLoader: Supported browser... initializing.');
       this.observer = new IntersectionObserver(this.onIntersection.bind(this), {
         rootMargin: '50px 0px'
       });
-    } else {
-      console.info('LazyLoader: Unsupported browser... loading all assets.');
     }
 
     this.loadImages(elements);
@@ -49,7 +46,9 @@ class LazyLoad {
   preloadImage(image) {
     const src = image.dataset.src;
     if (!src) {
-      console.warn('LazyLoader: No src on img element!', image);
+      if (!PRODUCTION) {
+        console.warn('LazyLoader: No src on img element!', image);
+      }
       return;
     }
 

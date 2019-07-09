@@ -8,11 +8,15 @@ class Lightbox {
     this.$description = this.el.querySelector('[data-description]');
     this.events();
     import('../../styles/lightbox.scss');
-    console.info('Lightbox: Initialized');
+    if (!PRODUCTION) {
+      console.info('Lightbox: Initialized');
+    }
   }
 
   set(props) {
-    console.info('Lightbox: Set', props);
+    if (!PRODUCTION) {
+      console.info('Lightbox: Set', props);
+    }
     this._setLoading(true);
     this.$asset.innerHTML = '';
     const type = props.contentType.startsWith('video') ? 'video' : 'img';
@@ -36,7 +40,9 @@ class Lightbox {
   }
 
   open() {
-    console.info('Lightbox: Open');
+    if (!PRODUCTION) {
+      console.info('Lightbox: Open');
+    }
     this.el.classList.add('visible');
     if (this.$asset.querySelector('img, video')) {
       ga('lightbox', 'open', this.$asset.querySelector('img, video').src);
@@ -44,7 +50,9 @@ class Lightbox {
   }
 
   close() {
-    console.info('Lightbox: Close');
+    if (!PRODUCTION) {
+      console.info('Lightbox: Close');
+    }
     this.$asset.innerHTML = '';
     this.$description.innerHTML = '';
     this.el.classList.remove('visible');

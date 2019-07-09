@@ -51,7 +51,9 @@ export default class Projects extends Base {
    * @return {Promise}
    */
   showMoreDetails(id) {
-    console.info('Projects: Show more details for', id);
+    if (!PRODUCTION) {
+      console.info('Projects: Show more details for', id);
+    }
     return this.fetchProjects().then(projects => {
       const project = projects.projects[id];
       this._getDetailsNode(project);
@@ -98,17 +100,15 @@ export default class Projects extends Base {
   deeplink({ id, title } = {}) {
     this.$filters.querySelector('span').innerText = title || '';
     this.$filters.classList.toggle('visible', id);
-    console.info('Projects: Filtering projects by', id, title);
+    if (!PRODUCTION) {
+      console.info('Projects: Filtering projects by', id, title);
+    }
     this._clearGrid();
     this.fetchProjects()
       .then(projects => {
         if (id) {
           return projects.projects.filter(p =>
-            p.languages.some(
-              k =>
-                // console.log()
-                k._id === id
-            )
+            p.languages.some(k => k._id === id)
           );
         } else {
           return projects.projects.slice(0, this.defaultNumProjects);
@@ -245,7 +245,9 @@ export default class Projects extends Base {
    * @return {Element}
    */
   _getDetailsNode(project) {
-    console.info('Projects: Set details for project', project);
+    if (!PRODUCTION) {
+      console.info('Projects: Set details for project', project);
+    }
     const $node = this.$detailed;
     // title, description
     $node.querySelector('[data-project-title]').innerText = project.title;

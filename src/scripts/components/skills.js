@@ -90,7 +90,9 @@ export default class Skills extends Base {
       if (!skill.classList.contains('open')) this.toggleItem(skill);
       this.scroll.then(s => s.scrollTo(this.el));
     } else {
-      console.warn('No skills section found for', id);
+      if (!PRODUCTION) {
+        console.warn('No skills section found for', id);
+      }
     }
   }
 }

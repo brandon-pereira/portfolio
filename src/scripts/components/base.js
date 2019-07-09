@@ -2,10 +2,8 @@ import ga from '../services/analytics';
 
 export default class Base {
   constructor(el, props = {}) {
-    if (!el) {
-      console.warn(
-        `Can't find container for "${this.constructor.name}". Skipping Mount.`
-      );
+    if (!PRODUCTION && !el) {
+      console.warn(`Can't find container for "${this.constructor.name}".`);
       return null;
     }
     this.el = el;

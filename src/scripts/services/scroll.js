@@ -52,7 +52,9 @@ class Scroll {
         this.sections.forEach((section, i) => {
           if (this.isInView(section)) {
             const name = section.getAttribute('id');
-            console.log('Scroll: New element inView:', name);
+            if (!PRODUCTION) {
+              console.log('Scroll: New element inView:', name);
+            }
             if (this.analytics.indexOf(name) !== -1) {
               ga('scroll', 'section', name);
               this.analytics.splice(i, 1);
