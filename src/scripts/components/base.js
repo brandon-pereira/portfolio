@@ -8,8 +8,9 @@ export default class Base {
     }
     this.el = el;
     this.props = props;
-    this.lightbox = import('../services/lightbox').then(m => m.default);
-    this.scroll = import('../services/scroll').then(m => m.default);
+    this.lightbox = import(
+      /* webpackChunkName: "lightbox" */ '../services/lightbox'
+    ).then(m => m.default);
     this.logEvent = ga;
     this.init()
       .then(() => this.setLoading(false))

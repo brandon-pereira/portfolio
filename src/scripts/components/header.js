@@ -7,7 +7,9 @@ export default class Skills extends Base {
     this.ScrollText = new ScrollText(
       this.el.querySelector('[data-scroll-text]')
     );
-    return super.init(import('../../styles/header.scss'));
+    return super.init(
+      import(/* webpackChunkName: "styles" */ '../../styles/header.scss')
+    );
   }
 
   letterize(el) {

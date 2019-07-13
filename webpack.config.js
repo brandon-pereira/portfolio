@@ -1,16 +1,14 @@
 const config = require('./config');
 const webpack = require('webpack');
-// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+//   .BundleAnalyzerPlugin;
 
 const getPlugins = () => {
   const plugins = [
-    new webpack.optimize.LimitChunkCountPlugin({
-      minChunkSize: 10000,
-      maxChunks: 5
-    }),
     new webpack.DefinePlugin({
       PRODUCTION: JSON.stringify(process.env.NODE_ENV === 'production')
     })
+    // new BundleAnalyzerPlugin()
   ];
 
   if (!config.production) {
@@ -18,7 +16,6 @@ const getPlugins = () => {
       ...[
         new webpack.SourceMapDevToolPlugin(),
         new webpack.HotModuleReplacementPlugin()
-        // new BundleAnalyzerPlugin()
       ]
     );
   }

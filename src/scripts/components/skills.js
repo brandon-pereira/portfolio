@@ -1,9 +1,12 @@
 import Base from './base';
 import animate from '../lib/animate';
+import Scroll from '../services/scroll';
 
 export default class Skills extends Base {
   init() {
-    return super.init(import('../../styles/skills.scss'));
+    return super.init(
+      import(/* webpackChunkName: "styles" */ '../../styles/skills.scss')
+    );
   }
 
   events() {
@@ -88,7 +91,7 @@ export default class Skills extends Base {
       const category = skill.closest('.accordion.category');
       if (!category.classList.contains('open')) this.toggleItem(category);
       if (!skill.classList.contains('open')) this.toggleItem(skill);
-      this.scroll.then(s => s.scrollTo(this.el));
+      Scroll.scrollTo(this.el);
     } else {
       if (!PRODUCTION) {
         console.warn('No skills section found for', id);

@@ -25,7 +25,7 @@ module.exports = {
     }
   },
   naming: {
-    scripts: 'bundle.min.js',
+    scripts: '[name].bundle.min.js',
     svgs: 'icons.svg'
   }
 };

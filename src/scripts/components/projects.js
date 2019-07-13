@@ -3,6 +3,7 @@ import throttle from '../lib/throttle';
 import animate from '../lib/animate';
 import Masonry from '../lib/masonry';
 import LazyLoad from '../services/lazyload';
+import Scroll from '../services/scroll';
 
 export default class Projects extends Base {
   init() {
@@ -23,7 +24,9 @@ export default class Projects extends Base {
         [600, 2] // medium breakpoint and up show 2 columns
       ]
     });
-    return super.init(import('../../styles/projects.scss'));
+    return super.init(
+      import(/* webpackChunkName: "styles" */ '../../styles/projects.scss')
+    );
   }
 
   events() {
@@ -118,7 +121,7 @@ export default class Projects extends Base {
         const elements = toAdd.map(project => this._getSnippetNode(project));
         this._addElementsToGrid(elements);
         this._toggleDetailsView(false);
-        this.scroll.then(s => s.scrollTo(this.el));
+        Scroll.scrollTo(this.el);
         this.logEvent('projects', 'filter', title);
       });
   }
@@ -128,7 +131,9 @@ export default class Projects extends Base {
    * @return Promise
    */
   fetchProjects() {
-    return import('../../../content/data/projects.json')
+    return import(
+      /* webpackChunkName: "projects" */ '../../../content/data/projects.json'
+    )
       .then(m => m.default)
       .then(projects => {
         projects.projects = projects.map((project, index) => {
@@ -144,7 +149,7 @@ export default class Projects extends Base {
    * @param {Boolean} isShow
    */
   _toggleDetailsView(isShow) {
-    this.scroll.then(s => s.scrollTo(this.el));
+    Scroll.scrollTo(this.el);
     this.$loadMore.classList.toggle(
       'hidden',
       isShow || this.$filters.classList.contains('visible')
