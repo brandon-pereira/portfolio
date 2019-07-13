@@ -1,22 +1,19 @@
-const styles = import('../styles/style.scss');
-import('./services/scroll');
-import('./services/lazyload');
+const styles = import(/* webpackChunkName: "styles" */ '../styles/style.scss');
 
-// Async load all components
-const components = [
-  [import('./components/header'), document.querySelector('.header'), {}],
-  [import('./components/skills'), document.querySelector('.skills'), {}],
-  [import('./components/apps'), document.querySelector('.apps'), {}],
-  [import('./components/projects'), document.querySelector('.projects'), {}]
-];
-components.forEach(component => {
-  // Components export a class, so we instantiate
-  component[0].then(
-    Class => new Class.default(component[1], component[2] || {})
-  );
-});
+import './services/scroll';
+import './services/lazyload';
 
-Promise.all([styles, ...components.map(c => c[0])]).then(() => {
+import Header from './components/header';
+import Skills from './components/skills';
+import Apps from './components/apps';
+import Projects from './components/projects';
+
+new Header(document.querySelector('.header'), {});
+new Skills(document.querySelector('.skills'), {});
+new Apps(document.querySelector('.apps'), {});
+new Projects(document.querySelector('.projects'), {});
+
+styles.then(() => {
   // Load real stylesheet then 'eject' the critical css
   document.querySelector('#critical-css').remove();
 });
