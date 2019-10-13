@@ -60,23 +60,42 @@ button.button {
 }
 
 header.header {
-  background: purple;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.2)), purple;
   text-align: center;
-  padding: 5rem 0;
+  padding: 5rem 0 4rem;
   color: #fff;
   text-transform: uppercase;
+  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.2), 0 3px #000;
 }
 header.header .name {
-  margin: 5px 0 10px;
-  font-size: 15vw;
+  margin: 10px 0 20px;
+  font-size: 16vw;
   color: #4087d8;
+  font-weight: 500;
+  text-shadow: 4px 4px #000;
 }
 header.header .story-copy {
-  font-size: 5vw;
+  font-size: calc(18px + 32 * (100vw - 300px) / 900);
+  font-weight: 200;
+  margin: 0;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
 }
 header.header .cta {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }
 header.header .cta .button {
-  background: rgba(255, 255, 255, 0.5);
+  padding: 8px 20px;
+  border-radius: 20px;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  text-shadow: none;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 0 19px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2),
+    0 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
