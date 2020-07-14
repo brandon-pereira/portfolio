@@ -33,7 +33,7 @@
     "gulp-svgstore": "^7.0.1",
     "jest": "^26.0.1",
     "jest-matcher-one-of": "^1.0.2",
-    "marked": "^1.0.0",
+    "marked": "^1.1.1",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
