@@ -17,7 +17,7 @@
     "babel-plugin-add-module-exports": "^1.0.2",
     "browser-sync": "^2.26.7",
     "contentful": "^7.14.4",
-    "css-loader": "^3.5.3",
+    "css-loader": "^4.0.0",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "dotenv": "^8.2.0",
