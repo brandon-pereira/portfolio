@@ -156,12 +156,18 @@ export default class Projects extends Base {
     );
     animate(
       this.$detailed,
-      [{ left: '100%', opacity: 0 }, { left: 0, opacity: 1 }],
+      [
+        { left: '100%', opacity: 0 },
+        { left: 0, opacity: 1 }
+      ],
       { duration: 200, fill: 'both', direction: isShow ? 'normal' : 'reverse' }
     );
     animate(
       this.$projects,
-      [{ left: 0, opacity: 1 }, { left: '-100%', opacity: 0 }],
+      [
+        { left: 0, opacity: 1 },
+        { left: '-100%', opacity: 0 }
+      ],
       { duration: 200, fill: 'both', direction: isShow ? 'normal' : 'reverse' },
       () => {
         this.$detailed.classList.toggle('hidden', !isShow);
@@ -266,9 +272,7 @@ export default class Projects extends Base {
     if (project.gitUrl) {
       $node.querySelector(
         '[data-project-description]'
-      ).innerHTML += `<p><a href="${
-        project.gitUrl
-      }">View project on GitHub</a></p>`;
+      ).innerHTML += `<p><a href="${project.gitUrl}">View project on GitHub</a></p>`;
     }
     // status
     const status = project.status || 'Unavailable';

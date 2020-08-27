@@ -1,4 +1,4 @@
-module.exports = function(config, gulp) {
+module.exports = function (config, gulp) {
   const browserSync = require('browser-sync').get('server');
   const webpack = require('webpack-stream');
 
@@ -8,7 +8,7 @@ module.exports = function(config, gulp) {
       .pipe(
         webpack(require('../webpack.config.js'), require('webpack')).on(
           'error',
-          function() {
+          function () {
             this.emit('end');
           }
         )

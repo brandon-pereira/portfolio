@@ -10,8 +10,9 @@ module.exports = {
   globals: {
     PRODUCTION: true // webpack.DefinePlugin sets this
   },
+  extends: ['plugin:prettier/recommended', 'eslint:recommended'],
+  plugins: ['prettier'],
   parser: 'babel-eslint',
-  extends: 'eslint:recommended',
   rules: {
     'no-console': 0,
     'accessor-pairs': 2,

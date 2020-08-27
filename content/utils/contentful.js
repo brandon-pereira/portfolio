@@ -1,4 +1,4 @@
-import contentful from 'contentful';
+const contentful = require('contentful');
 
 export default class Contentful {
   constructor(auth) {

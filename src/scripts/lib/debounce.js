@@ -5,7 +5,7 @@ export default function debounce(callback, wait, context = this) {
 
   const later = () => callback.apply(context, callbackArgs);
 
-  return function() {
+  return function () {
     callbackArgs = arguments;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);

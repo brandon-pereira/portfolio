@@ -1,4 +1,4 @@
-module.exports = function(config, gulp) {
+module.exports = function (config, gulp) {
   const browserSync = require('browser-sync').get('server');
 
   gulp.task('static', () =>

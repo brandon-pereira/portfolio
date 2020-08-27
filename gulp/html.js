@@ -1,4 +1,4 @@
-module.exports = function(config, gulp) {
+module.exports = function (config, gulp) {
   const nunjucks = require('gulp-nunjucks-render');
   const data = require('gulp-data');
   const inlinesource = require('gulp-inline-source');
@@ -22,7 +22,7 @@ module.exports = function(config, gulp) {
           path: ['./src/html', './src']
         })
       )
-      .on('error', function(err) {
+      .on('error', function (err) {
         console.log(
           '\x1b[31m',
           'nunjucksRender error: ',
@@ -34,7 +34,7 @@ module.exports = function(config, gulp) {
       .pipe(
         inlinesource({
           rootpath: config.paths.src.root
-        }).on('error', function(err) {
+        }).on('error', function (err) {
           console.log(
             '\x1b[31m',
             'criticalCSS error: ',
@@ -45,7 +45,7 @@ module.exports = function(config, gulp) {
         })
       )
       .pipe(htmlmin({ collapseWhitespace: true }))
-      .on('error', function(err) {
+      .on('error', function (err) {
         console.log('\x1b[31m', 'htmlMin error: ', err.message, '\x1b[0m');
         this.emit('end');
       })
