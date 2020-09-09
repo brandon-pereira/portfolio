@@ -14,7 +14,7 @@
     "@babel/preset-env": "^7.11.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
-    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-plugin-add-module-exports": "^1.0.4",
     "browser-sync": "^2.26.12",
     "contentful": "^7.14.6",
     "css-loader": "^4.2.2",
