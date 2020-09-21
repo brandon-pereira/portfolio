@@ -1,5 +1,147 @@
 [
   {
+    "_id": "o2OxYqEvyrHucwUbqw2mj",
+    "title": "Byte Calculator",
+    "date": "2020-08-27",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "I built a quick and simple tool to calculate the number of bytes in a given string",
+    "description": "<p>I built a quick and simple tool to calculate the number of bytes in a given string. I found myself needing to do this a lot for a different project but all the tooling available for this wasn&#39;t very good. </p>\n<p>One of the more fun things was I leveraged a web worker to offload the byte size calculation and parsing. It&#39;s not really necessary, but I found when I was pasting in gigabyte sized files it really sped up the application, so why not! </p>\n",
+    "type": "Internal",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "1vEd9RWjaAqSbr8POGxtD0",
+        "title": "Mobile View",
+        "url": "/assets/1vEd9RWjaAqSbr8POGxtD0.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "2RWdarrFL9NZddhBfmzS3j",
+        "title": "Desktop View",
+        "url": "/assets/2RWdarrFL9NZddhBfmzS3j.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://branclon.com/byte-calculator/",
+    "gitUrl": "https://github.com/brandon-pereira/byte-calculator"
+  },
+  {
+    "_id": "3s0cnjG1m0BMdNtQU3Me2J",
+    "title": "Nissan/Infiniti Shopping Tools",
+    "date": "2020-06-03",
+    "languages": [
+      {
+        "_id": "4DBxgrmMvY0aQyg2K084OE",
+        "name": "Git",
+        "description": "I've had tons of experience with Git, both in big projects and small. I have worked under both agile and waterfall environments.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "6F55bBZ4E8o68YI06gsgEM",
+        "name": "GraphQL",
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
+        "skillLevel": "Pro",
+        "isOpen": false,
+        "isCategory": false
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "We were tasked with rebuilding the Nissan and Infiniti shopping tools applications.",
+    "description": "<p>My company redesigned and built a new shopping tools experience for Nissan and Infiniti. The shopping tools experience includes the configurator (building a vehicle and choosing your colors, options, etc.), the payment estimator (calculate your lease/finance payments) and the inventory tool for finding similar inventory near you.</p>\n<p>This was my first major project with the role of Technology Lead. This meant that my main responsibilities were initially to estimate the scope and prototype and implement a proof of concept. Once these two tasks were complete, we then moved into development where I helped a team of twelve developers by assigning and delegating tickets, helping debug issues that arose, managing client expectations, working with our creative and user experience teams to build the best product possible, and much more.</p>\n<p>The project was built using React on the front-end, and GraphQL on the backend. We also used Lerna and Storybook to manage versioning and managing our internal styleguide. I was fully involved in all aspects of this project, from working with designers to debugging production issues, and everything in between. </p>\n<p>This project was massive and took about 2 years to fully complete and launch. It might seem like a lot from a glance, but there is a lot of functionality in these tools.  </p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "1GrOd8eRgf9xSDr2a7KUJL",
+        "title": "Configurator Mobile Experience",
+        "url": "/assets/1GrOd8eRgf9xSDr2a7KUJL.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "4YVTROmIWRnIdQEqpz4x39",
+        "title": "Inventory Page",
+        "url": "/assets/4YVTROmIWRnIdQEqpz4x39.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "3QJMJdpZy4Po9exxmSQsTP",
+        "title": "Configurator Desktop Experience",
+        "url": "/assets/3QJMJdpZy4Po9exxmSQsTP.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://nissanusa.com/shopping-tools/build-price"
+  },
+  {
+    "_id": "BAjfoJ0Kx3i5su6Hhi2cN",
+    "title": "Urban Dictionary Bot",
+    "date": "2019-06-12",
+    "languages": [
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have experience with NodeJS, I've built complex web applications and am comfortable writing modules.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "I built a simple Messenger bot that gives you the Urban Dictionary definition of a word.",
+    "description": "<p>I built a simple Messenger bot that gives you the Urban Dictionary definition of a word. The idea was simple, and I only gave myself 4 hours to go from creating the repository to having it running in production.</p>\n<p>I&#39;ve done several chatbots already in the past, so this one was fairly similar. However, this one was done for a personal project, whereas the others are usually done for a client.</p>\n<p>Overall, the project was a success. However, because of the Cambridge Analytica hacks on Facebook, they have recently tweaked the app-review process for Messenger apps, which has made it more difficult to keep the app live.</p>\n",
+    "type": "Internal",
+    "status": "Unavailable",
+    "images": [
+      {
+        "_id": "1P9oAk5x8uGEsBpLzb0IBp",
+        "title": "Example of how the bot listens and responds",
+        "url": "/assets/1P9oAk5x8uGEsBpLzb0IBp.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://www.messenger.com/t/urbandictionarybot",
+    "gitUrl": "https://github.com/brandon-pereira/urban-dictionary-bot"
+  },
+  {
     "_id": "4NBrvJSBAI0OvcoSZ1t7q8",
     "title": "Mitsubishi MiPulse",
     "date": "2019-03-27",

@@ -32,10 +32,9 @@ const _downloadFile = (url, dest) =>
       if (!file.destroyed && response.statusCode === 200) {
         if (['.png', '.jpg', '.jpeg'].includes(path.extname(dest))) {
           const optimize = sharp()
-            .resize(800, 800)
-            .withoutEnlargement()
-            .max()
-            // .flatten()
+            .resize(800, 800, {
+              fit: 'inside'
+            })
             .jpeg({ quality: 75, force: false })
             .png({ compressionLevel: 9, force: false });
           response.pipe(optimize).pipe(file);
@@ -44,9 +43,7 @@ const _downloadFile = (url, dest) =>
         }
       } else {
         onError(
-          `Server responded with ${response.statusCode}: ${
-            response.statusMessage
-          }`
+          `Server responded with ${response.statusCode}: ${response.statusMessage}`
         );
       }
     });
