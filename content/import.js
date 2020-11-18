@@ -35,7 +35,7 @@ const importApps = async () => {
 const importProjects = async () => {
   console.time('Getting projects');
   let projects = await client.getEntries('projects', {
-    order: '-fields.date'
+    order: 'fields.isPinned,-fields.date'
   });
   projects = await normalizeProjects(projects);
   await writeJson('projects.json', projects);
