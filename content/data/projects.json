@@ -143,6 +143,44 @@
     "isPinned": true
   },
   {
+    "_id": "3xAp8X3vid1y32jLi1hGxC",
+    "title": "Jim Stewart Mortgages",
+    "date": "2020-12-08",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML",
+        "description": "I Understand HTML and can modifying an existing codebase or starting from scratch. I have experience with accessibility and SEO as well. I'm also experienced with HTML5 and HAML.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6 and standard design patterns, and have experience with tons of javascript libraries.",
+        "skillLevel": "Pro"
+      }
+    ],
+    "shortDescription": "I built a contact form and information website for a local mortgage broker",
+    "description": "<p>I built a contact form and information website for a local mortgage broker. This one was pretty quick and easy to build, and I tried to do it quickly and affordably for my client. Overall, they loved the work. </p>\n<p>One thing I did on this project that differed from my usual implementation, is I leveraged Netlify to manage the deploys, DNS resolutions, and contact form submissions.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "4oszlf52FqIkFgfdmlinRN",
+        "title": "Example of the main form",
+        "url": "/assets/4oszlf52FqIkFgfdmlinRN.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://jimstewartmortgages.com/"
+  },
+  {
     "_id": "m0YJKQp6wcOra9E0EL9jq",
     "title": "Milliseconds Calculator",
     "date": "2020-11-15",
