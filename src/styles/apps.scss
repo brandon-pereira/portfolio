@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import 'mixins';
 @import 'config';
 
@@ -43,7 +44,7 @@
           left: 0;
           height: 100%;
           width: 100%;
-          background: url('/icon-grid.png');
+          background: url('../static/icon-grid.png');
           background-size: 80%;
           background-position: center;
           border-radius: 50%;
@@ -150,7 +151,7 @@
         transform: translate(0, -20px);
         @for $i from 1 through 3 {
           &:nth-of-type(#{$i}) {
-            $time: ($i + 4)/10;
+            $time: math.div($i + 4, 10);
             transition: all 0.5s #{$time}s;
           }
         }
@@ -166,7 +167,7 @@
       transition-property: transform, opacity;
       display: block;
       margin: 0 auto;
-      background: url('/icon-grid.png');
+      background: url('../static/icon-grid.png');
       background-size: cover;
       &.loaded {
         background: none;

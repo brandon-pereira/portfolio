@@ -8,13 +8,13 @@ class Lightbox {
     this.$description = this.el.querySelector('[data-description]');
     this.events();
     import(/* webpackChunkName: "styles" */ '../../styles/lightbox.scss');
-    if (!PRODUCTION) {
+    if (process.env.NODE_ENV !== 'production') {
       console.info('Lightbox: Initialized');
     }
   }
 
   set(props) {
-    if (!PRODUCTION) {
+    if (process.env.NODE_ENV !== 'production') {
       console.info('Lightbox: Set', props);
     }
     this._setLoading(true);
@@ -40,7 +40,7 @@ class Lightbox {
   }
 
   open() {
-    if (!PRODUCTION) {
+    if (process.env.NODE_ENV !== 'production') {
       console.info('Lightbox: Open');
     }
     this.el.classList.add('visible');
@@ -50,7 +50,7 @@ class Lightbox {
   }
 
   close() {
-    if (!PRODUCTION) {
+    if (process.env.NODE_ENV !== 'production') {
       console.info('Lightbox: Close');
     }
     this.$asset.innerHTML = '';

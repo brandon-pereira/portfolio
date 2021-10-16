@@ -24,7 +24,7 @@ npm install
 To run locally:
 `npm start`
 
-To run a production build:
+To run a process.env.NODE_ENV === 'production' build:
 `npm run build`
 
 To run tests:

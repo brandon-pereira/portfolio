@@ -66,7 +66,7 @@ const importAllAssets = async () => {
 };
 const normalizeAboutYou = async aboutYou => {
   aboutYou.description = await md2html(aboutYou.description);
-  aboutYou.resume = normalizeAsset(aboutYou.resume.fields);
+  // aboutYou.resume = normalizeAsset(aboutYou.resume.fields);
   return aboutYou;
 };
 

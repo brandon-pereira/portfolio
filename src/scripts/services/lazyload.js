@@ -46,7 +46,7 @@ class LazyLoad {
   preloadImage(image) {
     const src = image.dataset.src;
     if (!src) {
-      if (!PRODUCTION) {
+      if (process.env.NODE_ENV !== 'production') {
         console.warn('LazyLoader: No src on img element!', image);
       }
       return;

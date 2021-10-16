@@ -20,7 +20,7 @@ header.header {
     bottom: 0;
     overflow: hidden;
     background: linear-gradient(lighten($bg, 10%), $bg),
-      url('/backgrounds/diamond.png');
+      url('../static/backgrounds/diamond.png');
     background-blend-mode: multiply;
     animation: hue 10s infinite linear;
     will-change: filter;
@@ -35,6 +35,7 @@ header.header {
       text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
     }
     .name {
+      text-transform: none;
       z-index: 1;
       margin: 5px 0 10px;
       @include fluid-type(300px, 1200px, 50px, 200px);
@@ -66,6 +67,15 @@ header.header {
         }
         &:nth-of-type(even) {
           transform: skewY(-20deg);
+        }
+        &[data-title='l'] {
+          transition: all 1s;
+        }
+      }
+      &.scrolled {
+        span[data-title='l'] {
+          transform: skewY(20deg) translate(-6px, 7px);
+          margin-left: -20px;
         }
       }
     }

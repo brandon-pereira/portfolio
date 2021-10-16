@@ -2,7 +2,7 @@ import ga from '../services/analytics';
 
 export default class Base {
   constructor(el, props = {}) {
-    if (!PRODUCTION && !el) {
+    if (process.env.NODE_ENV !== 'production' && !el) {
       console.warn(`Can't find container for "${this.constructor.name}".`);
       return null;
     }

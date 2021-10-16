@@ -14,9 +14,11 @@ export default class Header extends Base {
   }
 
   letterize(el) {
-    let text = el.innerText;
+    let text = el.textContent;
+    console.log(text);
     if (text && text.length) {
       text = text.split('');
+      console.log(text);
       const nodes = text.map(letter => {
         const span = document.createElement('span');
         span.setAttribute('data-title', letter);

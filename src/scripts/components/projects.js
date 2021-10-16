@@ -54,7 +54,7 @@ export default class Projects extends Base {
    * @return {Promise}
    */
   showMoreDetails(id) {
-    if (!PRODUCTION) {
+    if (process.env.NODE_ENV !== 'production') {
       console.info('Projects: Show more details for', id);
     }
     return this.fetchProjects().then(projects => {
@@ -103,7 +103,7 @@ export default class Projects extends Base {
   deeplink({ id, title } = {}) {
     this.$filters.querySelector('span').innerText = title || '';
     this.$filters.classList.toggle('visible', id);
-    if (!PRODUCTION) {
+    if (process.env.NODE_ENV !== 'production') {
       console.info('Projects: Filtering projects by', id, title);
     }
     this._clearGrid();
@@ -256,7 +256,7 @@ export default class Projects extends Base {
    * @return {Element}
    */
   _getDetailsNode(project) {
-    if (!PRODUCTION) {
+    if (process.env.NODE_ENV !== 'production') {
       console.info('Projects: Set details for project', project);
     }
     const $node = this.$detailed;
@@ -304,9 +304,8 @@ export default class Projects extends Base {
       });
     }
     // Date
-    $node.querySelector(
-      '[data-project-date]'
-    ).innerText = this._getFormatedDate(new Date(project.date));
+    $node.querySelector('[data-project-date]').innerText =
+      this._getFormatedDate(new Date(project.date));
     // languages
     const $langs = $node.querySelector('[data-project-languages]');
     $langs.innerHTML = '';

@@ -10,18 +10,17 @@ export default class Skills extends Base {
   }
 
   events() {
-    Array.from(
-      this.el.querySelectorAll('[data-accordion-handler]')
-    ).forEach(handle =>
-      handle.addEventListener('click', () => this.toggleItem(handle))
+    Array.from(this.el.querySelectorAll('[data-accordion-handler]')).forEach(
+      handle => handle.addEventListener('click', () => this.toggleItem(handle))
     );
 
     Array.from(this.el.querySelectorAll('[data-go-to-project]')).forEach(
       handle =>
         handle.addEventListener('click', () => {
           const id = handle.getAttribute('data-go-to-project');
-          const title = handle.closest('.accordion').querySelector('.title')
-            .textContent;
+          const title = handle
+            .closest('.accordion')
+            .querySelector('.title').textContent;
           this.goToSkill({
             id,
             title
@@ -95,7 +94,7 @@ export default class Skills extends Base {
       if (!skill.classList.contains('open')) this.toggleItem(skill);
       Scroll.scrollTo(this.el);
     } else {
-      if (!PRODUCTION) {
+      if (process.env.NODE_ENV !== 'production') {
         console.warn('No skills section found for', id);
       }
     }

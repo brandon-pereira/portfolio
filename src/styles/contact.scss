@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'contact';
   font-display: block;
-  src: url('/fonts/social.woff2') format('woff2'),
-    url('/fonts/social.woff') format('woff');
+  src: url('../static/fonts/social.woff2') format('woff2'),
+    url('../static/fonts/social.woff') format('woff');
 }
 .container.contact {
   padding-bottom: 50px;

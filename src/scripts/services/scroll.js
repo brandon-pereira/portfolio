@@ -52,7 +52,7 @@ class Scroll {
         this.sections.forEach((section, i) => {
           if (this.isInView(section)) {
             const name = section.getAttribute('id');
-            if (!PRODUCTION) {
+            if (process.env.NODE_ENV !== 'production') {
               console.log('Scroll: New element inView:', name);
             }
             if (this.analytics.indexOf(name) !== -1) {
