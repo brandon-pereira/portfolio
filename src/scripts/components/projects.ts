@@ -5,16 +5,55 @@ import Masonry from '../lib/masonry';
 import LazyLoad from '../services/lazyload';
 import Scroll from '../services/scroll';
 
-export default class Projects extends Base {
-  init() {
+type Language = {
+  _id: string;
+  name: string;
+  description: string;
+  skillLevel: 'Pro' | 'Novice';
+};
+
+type Image = {
+  _id: string;
+  title: string;
+  url: string;
+  contentType: string;
+};
+
+type Project = {
+  _id: string;
+  index?: number;
+  title: string;
+  date: string;
+  languages: Language[];
+  shortDescription: string;
+  description: string;
+  type: 'Internal' | 'External';
+  status: 'Coming Soon';
+  images: Image[];
+  link: string;
+  isPinned: boolean;
+};
+
+class Projects extends Base {
+  $projects: HTMLElement;
+  $loadMore: HTMLElement;
+  $backButton: HTMLElement;
+  $snippet: HTMLElement;
+  $detailed: HTMLElement;
+  $filters: HTMLElement;
+  masonry: any;
+
+  static numProjectsToAdd: 2;
+
+  static defaultNumProjects: 2;
+
+  init(): Promise<void> {
     this.$projects = this.el.querySelector('.projects');
     this.$loadMore = this.el.querySelector('.loadMore');
     this.$backButton = this.el.querySelector('[data-back-button]');
     this.$snippet = this.el.querySelector('.project.snippet.skeleton');
     this.$detailed = this.el.querySelector('.project.detailed-view');
     this.$filters = this.el.querySelector('[data-filters]');
-    this.numProjectsToAdd = 2; // number of projects to add when show more clicked
-    this.defaultNumProjects = 4;
 
     this.masonry = new Masonry({
       container: this.$projects,
@@ -24,12 +63,10 @@ export default class Projects extends Base {
         [600, 2] // medium breakpoint and up show 2 columns
       ]
     });
-    return super.init(
-      import(/* webpackChunkName: "styles" */ '../../styles/projects.scss')
-    );
+    return super.init(import('../../styles/projects.scss'));
   }
 
-  events() {
+  events(): void {
     this.$loadMore.addEventListener('click', this.onLoadMoreClick.bind(this));
     this.$backButton.addEventListener('click', () =>
       this._toggleDetailsView(false)
@@ -44,7 +81,9 @@ export default class Projects extends Base {
           this.showMoreDetails(el.getAttribute('data-project-learn-more'));
         })
     );
-    this.el.addEventListener('goToLang', e => this.deeplink(e.detail));
+    this.el.addEventListener('goToLang', (e: CustomEvent) =>
+      this.deeplink(e.detail)
+    );
     this.$filters.addEventListener('click', () => this.deeplink());
   }
 
@@ -53,47 +92,43 @@ export default class Projects extends Base {
    * @param {Number} id
    * @return {Promise}
    */
-  showMoreDetails(id) {
+  async showMoreDetails(id: string): Promise<void> {
     if (process.env.NODE_ENV !== 'production') {
       console.info('Projects: Show more details for', id);
     }
-    return this.fetchProjects().then(projects => {
-      const project = projects.projects[id];
-      this._getDetailsNode(project);
-      this._toggleDetailsView(true);
-      this.logEvent('projects', 'read-more', project.title);
-    });
+    const project = await this.fetchProjects(id);
+    this._getDetailsNode(project);
+    this._toggleDetailsView(true);
+    this.logEvent('projects', 'read-more', project.title);
   }
 
   /**
    * Handler for load more button click. Handles loading state and delegates.
    * @return {Promise}
    */
-  onLoadMoreClick() {
+  async onLoadMoreClick(): Promise<void> {
     this.$loadMore.classList.add('loading');
-    return this.showMoreProjects().then(() => {
-      this.$loadMore.classList.remove('loading');
-      this.logEvent('projects', 'load-more', 'load-more');
-    });
+    await this.showMoreProjects();
+    this.$loadMore.classList.remove('loading');
+    this.logEvent('projects', 'load-more', 'load-more');
   }
 
   /**
    * Function to show more projects.
    * @return {Promise}
    */
-  showMoreProjects() {
-    return this.fetchProjects().then(projects => {
-      const toAdd = projects.projects.slice(
-        this.numVisibleProjects,
-        this.numVisibleProjects + this.numProjectsToAdd
-      );
-      const elements = toAdd.map(project => this._getSnippetNode(project));
-      this._addElementsToGrid(elements);
-      this.$loadMore.classList.toggle(
-        'hidden',
-        this.numVisibleProjects >= projects.projects.length
-      );
-    });
+  async showMoreProjects(): Promise<void> {
+    const projects = await this.fetchProjects();
+    const toAdd = projects.slice(
+      this.numVisibleProjects,
+      this.numVisibleProjects + Projects.numProjectsToAdd
+    );
+    const elements = toAdd.map(project => this._getSnippetNode(project));
+    this._addElementsToGrid(elements);
+    this.$loadMore.classList.toggle(
+      'hidden',
+      this.numVisibleProjects >= projects.length
+    );
   }
 
   /**
@@ -110,9 +145,7 @@ export default class Projects extends Base {
     this.fetchProjects()
       .then(projects => {
         if (id) {
-          return projects.projects.filter(p =>
-            p.languages.some(k => k._id === id)
-          );
+          return projects.filter(p => p.languages.some(k => k._id === id));
         } else {
           return projects.projects.slice(0, this.defaultNumProjects);
         }
@@ -130,18 +163,20 @@ export default class Projects extends Base {
    * Function to fetch projects bundle
    * @return Promise
    */
-  fetchProjects() {
-    return import(
-      /* webpackChunkName: "projects" */ '../../../content/data/projects.json'
-    )
-      .then(m => m.default)
-      .then(projects => {
-        projects.projects = projects.map((project, index) => {
-          project.index = index;
-          return project;
-        });
-        return projects;
-      });
+  async fetchProjects(): Promise<Project[]>;
+  async fetchProjects(id: string): Promise<Project>;
+  async fetchProjects(id?: string): Promise<Project | Projects[]> {
+    const projects = (await import(
+      '../../../content/data/projects.json'
+    )) as Project[];
+    const mappedProjects = projects.map((project, index) => {
+      project.index = index;
+      return project;
+    });
+    if (!id) {
+      return mappedProjects;
+    }
+    return mappedProjects.find(project => project._id === id);
   }
 
   /**
@@ -193,7 +228,7 @@ export default class Projects extends Base {
    * @param {Date} date Date to format
    * @return {String} Formatted string
    */
-  _getFormatedDate(date) {
+  _getFormattedDate(date) {
     var days = [
       'Sunday',
       'Monday',
@@ -255,7 +290,7 @@ export default class Projects extends Base {
    * @param {Object} project
    * @return {Element}
    */
-  _getDetailsNode(project) {
+  _getDetailsNode(project: Project): HTMLElement {
     if (process.env.NODE_ENV !== 'production') {
       console.info('Projects: Set details for project', project);
     }
@@ -305,7 +340,7 @@ export default class Projects extends Base {
     }
     // Date
     $node.querySelector('[data-project-date]').innerText =
-      this._getFormatedDate(new Date(project.date));
+      this._getFormattedDate(new Date(project.date));
     // languages
     const $langs = $node.querySelector('[data-project-languages]');
     $langs.innerHTML = '';
@@ -354,3 +389,4 @@ export default class Projects extends Base {
     return this.masonry.items.length;
   }
 }
+export default Projects;

@@ -1,13 +1,17 @@
 import ga from './analytics';
 
 class Lightbox {
+  el: HTMLElement;
+  $asset: HTMLElement;
+  $description: HTMLElement;
+
   constructor() {
     this.el = this._createElement();
     this._attachToDocument(this.el);
     this.$asset = this.el.querySelector('[data-asset]');
     this.$description = this.el.querySelector('[data-description]');
     this.events();
-    import(/* webpackChunkName: "styles" */ '../../styles/lightbox.scss');
+    import('../../styles/lightbox.scss');
     if (process.env.NODE_ENV !== 'production') {
       console.info('Lightbox: Initialized');
     }
@@ -44,8 +48,9 @@ class Lightbox {
       console.info('Lightbox: Open');
     }
     this.el.classList.add('visible');
+    const asset = this.$asset.querySelector('img, video') as HTMLImageElement;
     if (this.$asset.querySelector('img, video')) {
-      ga('lightbox', 'open', this.$asset.querySelector('img, video').src);
+      ga('lightbox', 'open', asset.src);
     }
   }
 
@@ -69,7 +74,7 @@ class Lightbox {
   _createElement() {
     const $el = document.createElement('div');
     $el.classList.add('lightbox');
-    $el.setAttribute('data-close', true);
+    $el.setAttribute('data-close', 'true');
     $el.innerHTML = `
             <a data-close class="close-button">&times;</a>
             <div class="modal-content">

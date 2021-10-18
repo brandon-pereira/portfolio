@@ -1,6 +1,5 @@
 const importFresh = require('import-fresh');
 
-console.log('HELLO!');
 module.exports = {
   root: '.',
   data() {
@@ -11,9 +10,5 @@ module.exports = {
       contact: importFresh('./content/data/contact.json'),
       about: importFresh('./content/data/about.json')
     };
-  },
-  assetType({ baseExt, dirname }) {
-    console.log(baseExt, dirname);
-    return baseExt || dirname;
   }
 };

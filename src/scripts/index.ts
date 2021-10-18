@@ -1,4 +1,4 @@
-const styles = import(/* webpackChunkName: "styles" */ '../styles/style.scss');
+const styles = import('../styles/style.scss');
 
 import './services/scroll';
 import './services/lazyload';
@@ -8,10 +8,10 @@ import Skills from './components/skills';
 import Apps from './components/apps';
 import Projects from './components/projects';
 
-new Header(document.querySelector('.header'), {});
-new Skills(document.querySelector('.skills'), {});
-new Apps(document.querySelector('.apps'), {});
-new Projects(document.querySelector('.projects'), {});
+new Header(document.querySelector('.header'));
+new Skills(document.querySelector('.skills'));
+new Apps(document.querySelector('.apps'));
+new Projects(document.querySelector('.projects'));
 
 styles.then(() => {
   // Load real stylesheet then 'eject' the critical css

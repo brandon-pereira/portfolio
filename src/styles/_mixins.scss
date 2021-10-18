@@ -1,6 +1,4 @@
-/**
- * Flash mixins to be used in your project.
- */
+@use 'sass:math';
 
 /*
  * Mixins for screen sizes.
@@ -58,7 +56,7 @@
   * https://css-tricks.com/snippets/css/fluid-typography/
   */
 @function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
+  @return math.div($value, $value * 0 + 1);
 }
 
 @mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {

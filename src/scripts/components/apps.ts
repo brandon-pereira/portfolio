@@ -1,22 +1,27 @@
 import Base from './base';
 
+type GoToValue = number | 'next' | 'prev';
+
 export default class Apps extends Base {
-  init() {
+  currentIndex: number;
+  slides: HTMLElement[];
+  currentSlide: HTMLElement;
+  dots: HTMLElement[];
+
+  init(): Promise<void> {
     this.currentIndex = 0;
     this.slides = Array.from(
       this.el.querySelectorAll('.carousel-slides .carousel-slide')
     );
     this.currentSlide = this.slides[0];
     this.dots = Array.from(this.el.querySelectorAll('.carousel-dots .dot'));
-    return super.init(
-      import(/* webpackChunkName: "styles" */ '../../styles/apps.scss')
-    );
+    return super.init(import('../../styles/apps.scss'));
   }
 
-  events() {
+  events(): void {
     Array.from(this.el.querySelectorAll('[data-goto]')).forEach(el =>
       el.addEventListener('click', () => {
-        const goto = el.getAttribute('data-goto');
+        const goto = el.getAttribute('data-goto') as GoToValue;
         this.goto(goto);
       })
     );
@@ -50,13 +55,17 @@ export default class Apps extends Base {
         'touchend',
         event => {
           end = event.changedTouches[0].screenX;
-          handleGesure(start, end, 50);
+          handleGesture(start, end, 50);
         },
         { passive: true }
       )
     );
 
-    const handleGesure = (touchstart, touchend, threshold) => {
+    const handleGesture = (
+      touchstart: number,
+      touchend: number,
+      threshold: number
+    ) => {
       if (touchend < touchstart && touchstart - touchend >= threshold) {
         this.goto('next');
       } else if (touchend > touchstart && touchend - touchstart >= threshold) {
@@ -67,7 +76,7 @@ export default class Apps extends Base {
     return super.events();
   }
 
-  goto(slide) {
+  goto(slide: GoToValue): void {
     switch (slide) {
       case 'next':
         this.setCurrentSlide(
@@ -85,12 +94,14 @@ export default class Apps extends Base {
         if (!isNaN(slide)) {
           this.setCurrentSlide(Number(slide));
         } else {
-          throw new Error('Invalid slide, expected index and got:', slide);
+          throw new Error(
+            `Invalid slide, expected index and got ${typeof slide} ${slide}`
+          );
         }
     }
   }
 
-  setCurrentSlide(slide) {
+  setCurrentSlide(slide: number): void {
     // Get Elements
     const newSlide = this.slides[slide];
     const currentSlide = this.currentSlide;
@@ -98,7 +109,7 @@ export default class Apps extends Base {
     currentSlide.classList.remove('currentSlide');
     newSlide.classList.add('currentSlide');
     // Change the main carousel styling
-    this.el.setAttribute('data-current-slide', slide);
+    this.el.setAttribute('data-current-slide', `${slide}`);
     this.el.classList.remove(currentSlide.getAttribute('data-styling'));
     this.el.classList.add(newSlide.getAttribute('data-styling'));
     // Update Dot

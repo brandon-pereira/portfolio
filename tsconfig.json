@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "baseUrl": "./",
+    "paths": {},
+    "typeRoots": ["node_modules/@types", "./types"],
+    "module": "esnext",
+    "outDir": "./dist",
+    "moduleResolution": "node",
+    "target": "es2021"
+  },
+  "include": ["src", "types"],
+  "exclude": ["node_modules", ".vscode"]
+}
