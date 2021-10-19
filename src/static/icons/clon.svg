@@ -1,5 +1,10 @@
 <symbol id="clon" class="svg-icon branclon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.9 451.5">
     <style>
+        #clon path {
+            stroke-width: 4px;
+            stroke: #000;
+        }
+        
         .outer-front {
             fill: #288FD9;
             fill: var(--outer-front, #288FD9);

@@ -26,21 +26,43 @@ header.header {
     will-change: filter;
     z-index: -1;
   }
+  .logo {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    svg {
+      filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.4));
+      height: 80%;
+      width: 80%;
+    }
+  }
   .copy {
     .story-copy {
       @include fluid-type(300px, 1200px, 18px, 50px);
       font-weight: 200;
-      margin: 0;
       color: #fff;
       text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
     }
     .name {
       text-transform: none;
       z-index: 1;
-      margin: 5px 0 10px;
-      @include fluid-type(300px, 1200px, 50px, 200px);
+      margin: 0;
+      font-size: 70px;
       font-weight: 500;
       font-family: 'Quicksand', sans-serif;
+      @include medium() {
+        margin-top: -20px;
+        font-size: 120px;
+      }
+      @include large() {
+        font-size: 200px;
+        margin-top: -50px;
+      }
       span {
         position: relative;
         display: inline-block;
@@ -75,8 +97,16 @@ header.header {
       }
       &.scrolled {
         span[data-title='l'] {
-          transform: skewY(20deg) translate(-6px, 7px);
-          margin-left: -20px;
+          transform: skewY(20deg) translate(-2px, 0px);
+          margin-left: -10px;
+          @include medium() {
+            transform: skewY(20deg) translate(-1px, 5px);
+            margin-left: -20px;
+          }
+          @include large() {
+            transform: skewY(20deg) translate(-5px, 6px);
+            margin-left: -30px;
+          }
         }
       }
     }
