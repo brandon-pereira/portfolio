@@ -27,14 +27,31 @@ header.header {
     z-index: -1;
   }
   .logo {
+    position: relative;
     width: 200px;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 50%;
     margin: 0 auto 20px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 200px;
+      $gridBg: rgba(255, 255, 255, 0.2);
+      background-color: $gridBg;
+      background-position: 20px 20px;
+      background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+      background-image: linear-gradient($gridBg1 2px, transparent 2px),
+        linear-gradient(90deg, $gridBg1 2px, transparent 2px),
+        linear-gradient($gridBg2 1px, transparent 1px),
+        linear-gradient(90deg, $gridBg2 1px, transparent 1px);
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+    }
     svg {
       filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.4));
       height: 80%;

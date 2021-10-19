@@ -4,7 +4,13 @@ import animate from '../lib/animate';
 import Masonry from '../lib/masonry';
 import LazyLoad from '../services/lazyload';
 import Scroll from '../services/scroll';
+import formatDate from '../lib/formatDate';
 
+type DeeplinkPayload = {
+  id: string;
+  title: string;
+};
+type ProjectEvent = CustomEvent<DeeplinkPayload>;
 type Language = {
   _id: string;
   name: string;
@@ -32,6 +38,7 @@ type Project = {
   images: Image[];
   link: string;
   isPinned: boolean;
+  gitUrl?: string;
 };
 
 class Projects extends Base {
@@ -41,11 +48,11 @@ class Projects extends Base {
   $snippet: HTMLElement;
   $detailed: HTMLElement;
   $filters: HTMLElement;
-  masonry: any;
+  masonry: Masonry;
 
-  static numProjectsToAdd: 2;
+  static numProjectsToAdd = 2;
 
-  static defaultNumProjects: 2;
+  static defaultNumProjects = 2;
 
   init(): Promise<void> {
     this.$projects = this.el.querySelector('.projects');
@@ -81,7 +88,7 @@ class Projects extends Base {
           this.showMoreDetails(el.getAttribute('data-project-learn-more'));
         })
     );
-    this.el.addEventListener('goToLang', (e: CustomEvent) =>
+    this.el.addEventListener('goToLang', (e: ProjectEvent) =>
       this.deeplink(e.detail)
     );
     this.$filters.addEventListener('click', () => this.deeplink());
@@ -107,6 +114,7 @@ class Projects extends Base {
    * @return {Promise}
    */
   async onLoadMoreClick(): Promise<void> {
+    console.log('HERE');
     this.$loadMore.classList.add('loading');
     await this.showMoreProjects();
     this.$loadMore.classList.remove('loading');
@@ -123,6 +131,9 @@ class Projects extends Base {
       this.numVisibleProjects,
       this.numVisibleProjects + Projects.numProjectsToAdd
     );
+    console.log(Projects);
+    console.log(this.numVisibleProjects, Projects.numProjectsToAdd);
+    console.log(toAdd);
     const elements = toAdd.map(project => this._getSnippetNode(project));
     this._addElementsToGrid(elements);
     this.$loadMore.classList.toggle(
@@ -135,28 +146,24 @@ class Projects extends Base {
    * Function to delegate out deeplink referrals
    * @param {String} language
    */
-  deeplink({ id, title } = {}) {
+  async deeplink({ id, title }: Partial<DeeplinkPayload> = {}): Promise<void> {
     this.$filters.querySelector('span').innerText = title || '';
-    this.$filters.classList.toggle('visible', id);
+    this.$filters.classList.toggle('visible', !!id);
     if (process.env.NODE_ENV !== 'production') {
       console.info('Projects: Filtering projects by', id, title);
     }
     this._clearGrid();
-    this.fetchProjects()
-      .then(projects => {
-        if (id) {
-          return projects.filter(p => p.languages.some(k => k._id === id));
-        } else {
-          return projects.projects.slice(0, this.defaultNumProjects);
-        }
-      })
-      .then(toAdd => {
-        const elements = toAdd.map(project => this._getSnippetNode(project));
-        this._addElementsToGrid(elements);
-        this._toggleDetailsView(false);
-        Scroll.scrollTo(this.el);
-        this.logEvent('projects', 'filter', title);
-      });
+    let projects = await this.fetchProjects();
+    if (id) {
+      projects = projects.filter(p => p.languages.some(k => k._id === id));
+    } else {
+      projects = projects.slice(0, Projects.defaultNumProjects);
+    }
+    const elements = projects.map(project => this._getSnippetNode(project));
+    this._addElementsToGrid(elements);
+    this._toggleDetailsView(false);
+    Scroll.scrollTo(this.el);
+    this.logEvent('projects', 'filter', title);
   }
 
   /**
@@ -164,8 +171,8 @@ class Projects extends Base {
    * @return Promise
    */
   async fetchProjects(): Promise<Project[]>;
-  async fetchProjects(id: string): Promise<Project>;
-  async fetchProjects(id?: string): Promise<Project | Projects[]> {
+  async fetchProjects(id?: string): Promise<Project>;
+  async fetchProjects(id?: string): Promise<Project | Project[]> {
     const projects = (await import(
       '../../../content/data/projects.json'
     )) as Project[];
@@ -183,7 +190,7 @@ class Projects extends Base {
    * Function to show/hide details view
    * @param {Boolean} isShow
    */
-  _toggleDetailsView(isShow) {
+  _toggleDetailsView(isShow: boolean): void {
     Scroll.scrollTo(this.el);
     this.$loadMore.classList.toggle(
       'hidden',
@@ -212,10 +219,10 @@ class Projects extends Base {
     );
   }
 
-  _setAccessibility(isDetailsView) {
+  _setAccessibility(isDetailsView: boolean): void {
     const enabledTabIndex = bool => (bool ? 0 : -1);
-    this.$detailed.setAttribute('aria-hidden', !isDetailsView);
-    this.$projects.setAttribute('aria-hidden', isDetailsView);
+    this.$detailed.setAttribute('aria-hidden', `${!isDetailsView}`);
+    this.$projects.setAttribute('aria-hidden', `${isDetailsView}`);
     this.$projects.querySelectorAll('button').forEach($button => {
       $button.tabIndex = enabledTabIndex(!isDetailsView);
     });
@@ -224,52 +231,12 @@ class Projects extends Base {
   }
 
   /**
-   * Function to format a date into format Weekday, Month Day, Year
-   * @param {Date} date Date to format
-   * @return {String} Formatted string
-   */
-  _getFormattedDate(date) {
-    var days = [
-      'Sunday',
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday'
-    ];
-    var months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December'
-    ];
-    return (
-      days[date.getDay()] +
-      ', ' +
-      months[date.getMonth()] +
-      ' ' +
-      date.getDate(0) +
-      ', ' +
-      date.getFullYear()
-    );
-  }
-
-  /**
    * Function to add elements to the projects grid
    * @param {Element} grid
    * @param {Array} elements
    * @return {Promise}
    */
-  _addElementsToGrid(elements) {
+  _addElementsToGrid(elements: HTMLElement[]): void {
     this.masonry.appendElements(elements);
     requestAnimationFrame(() =>
       elements.forEach(el => el.classList.remove('hidden'))
@@ -281,7 +248,7 @@ class Projects extends Base {
    * @param {Element} grid
    * @return {Promise}
    */
-  _clearGrid() {
+  _clearGrid(): void {
     this.masonry.items = [];
   }
 
@@ -296,9 +263,11 @@ class Projects extends Base {
     }
     const $node = this.$detailed;
     // title, description
-    $node.querySelector('[data-project-title]').innerText = project.title;
+    ($node.querySelector('[data-project-title]') as HTMLElement).innerText =
+      project.title;
     if (project.link) {
-      $node.querySelector('[data-project-link]').href = project.link;
+      ($node.querySelector('[data-project-link]') as HTMLLinkElement).href =
+        project.link;
     } else {
       $node.querySelector('[data-project-title]').removeAttribute('href');
     }
@@ -311,7 +280,7 @@ class Projects extends Base {
     }
     // status
     const status = project.status || 'Unavailable';
-    const $status = $node.querySelector('[data-project-status]');
+    const $status = $node.querySelector('[data-project-status]') as HTMLElement;
     $status.setAttribute('class', status.toLowerCase());
     $status.innerText = status;
     // assets
@@ -339,8 +308,8 @@ class Projects extends Base {
       });
     }
     // Date
-    $node.querySelector('[data-project-date]').innerText =
-      this._getFormattedDate(new Date(project.date));
+    ($node.querySelector('[data-project-date]') as HTMLElement).innerText =
+      formatDate(new Date(project.date));
     // languages
     const $langs = $node.querySelector('[data-project-languages]');
     $langs.innerHTML = '';
@@ -366,16 +335,15 @@ class Projects extends Base {
    * @param {Object} project
    * @return {Element}
    */
-  _getSnippetNode(project) {
-    const $project = this.$snippet.cloneNode(true);
+  _getSnippetNode(project: Project): HTMLElement {
+    console.log(project);
+    const $project = this.$snippet.cloneNode(true) as HTMLElement;
     $project.classList.remove('skeleton');
-    $project.querySelector('[data-project-title]').innerText = project.title;
+    $project.querySelector('[data-project-title]').innerHTML = project.title;
     $project.querySelector('[data-project-title]').removeAttribute('href');
     $project.querySelector('[data-project-description]').innerHTML =
       project.shortDescription || project.description;
-    $project.addEventListener('click', () =>
-      this.showMoreDetails(project.index)
-    );
+    $project.addEventListener('click', () => this.showMoreDetails(project._id));
     if (project.images && project.images.length) {
       $project
         .querySelector('img')
@@ -385,7 +353,7 @@ class Projects extends Base {
     return $project;
   }
 
-  get numVisibleProjects() {
+  get numVisibleProjects(): number {
     return this.masonry.items.length;
   }
 }

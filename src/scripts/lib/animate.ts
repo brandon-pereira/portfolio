@@ -7,7 +7,12 @@
  * @param  {Options} args Arguments to be sent directly to Element.animate.
  * @return {Element}
  */
-export default (el, transition, opts, cb) => {
+export default (
+  el: HTMLElement,
+  transition: Keyframe[],
+  opts?: KeyframeAnimationOptions,
+  cb?: () => void
+): void => {
   if (el && 'animate' in el) {
     el.animate(transition, opts).onfinish = cb;
   } else if (cb) {

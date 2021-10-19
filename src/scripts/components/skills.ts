@@ -3,13 +3,11 @@ import animate from '../lib/animate';
 import Scroll from '../services/scroll';
 
 export default class Skills extends Base {
-  init() {
-    return super.init(
-      import(/* webpackChunkName: "styles" */ '../../styles/skills.scss')
-    );
+  init(): Promise<void> {
+    return super.init(import('../../styles/skills.scss'));
   }
 
-  events() {
+  events(): void {
     Array.from(this.el.querySelectorAll('[data-accordion-handler]')).forEach(
       handle => handle.addEventListener('click', () => this.toggleItem(handle))
     );
@@ -33,15 +31,15 @@ export default class Skills extends Base {
     super.events();
   }
 
-  goToSkill(detail) {
+  goToSkill(detail): void {
     document
       .querySelector('#projects')
       .dispatchEvent(new CustomEvent('goToLang', { detail }));
   }
 
-  toggleItem(element) {
+  toggleItem(element: HTMLElement): void {
     // Get real element
-    const el = element.closest('.accordion');
+    const el = element.closest('.accordion') as HTMLElement;
 
     // Toggle current element
     el.classList.toggle('open');
@@ -55,7 +53,8 @@ export default class Skills extends Base {
     }
 
     // Close other accordions
-    Array.from(el.parentNode.childNodes).forEach(sibling => {
+    Array.from(el.parentNode.childNodes).forEach((sibling: HTMLElement) => {
+      console.log(sibling);
       if (sibling !== el && sibling.classList.contains('open')) {
         this.toggleTabIndex(sibling, false);
         sibling.classList.remove('open');
@@ -67,7 +66,7 @@ export default class Skills extends Base {
   }
 
   // Toggles element tab index for accessibility
-  toggleTabIndex($el, bool) {
+  toggleTabIndex($el: HTMLElement, bool: boolean): void {
     const index = bool ? 0 : -1;
     const isCategory = $el.classList.contains('category');
     let els = $el.querySelectorAll('[data-closable]');
@@ -86,7 +85,7 @@ export default class Skills extends Base {
     });
   }
 
-  deeplink(id) {
+  deeplink(id): void {
     const skill = this.el.querySelector('[data-id="' + id + '"]');
     if (skill) {
       const category = skill.closest('.accordion.category');

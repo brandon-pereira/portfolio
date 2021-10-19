@@ -1,12 +1,16 @@
 // https://gist.github.com/beaucharman/1f93fdd7c72860736643d1ab274fee1a
-export default function debounce(callback, wait, context = this) {
+export default function debounce(
+  callback: () => void,
+  wait: number,
+  context = this
+): () => void {
   let timeout = null;
   let callbackArgs = null;
 
   const later = () => callback.apply(context, callbackArgs);
 
-  return function () {
-    callbackArgs = arguments;
+  return function (...args) {
+    callbackArgs = args;
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
   };

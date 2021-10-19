@@ -1,5 +1,17 @@
-export default class Masonry {
-  constructor({ container, elements, sizes }) {
+type Size = [number, number];
+
+interface ConstructorProps {
+  container: HTMLElement;
+  elements: HTMLElement[];
+  sizes: Size[];
+}
+
+class Masonry {
+  element: HTMLElement;
+  items: HTMLElement[] | [];
+  sizes: Size[];
+
+  constructor({ container, elements, sizes }: ConstructorProps) {
     this.element = container;
     this.items = elements || [];
     this.sizes = sizes || [[0, 1]];
@@ -12,11 +24,11 @@ export default class Masonry {
     this.recreateColumns();
   }
 
-  recreateColumns() {
+  recreateColumns(): void {
     const numColumns = this._numColumns;
     // Clear DOM
     this.element.innerHTML = '';
-    // Create fragements for columns
+    // Create fragments for columns
     const columns = Array.from(Array(numColumns)).map(() =>
       document.createDocumentFragment()
     );
@@ -36,24 +48,26 @@ export default class Masonry {
     this.element.appendChild(grid);
   }
 
-  appendElements(elements) {
-    this.items = this.items.concat(...elements);
+  appendElements(elements: HTMLElement[]): void {
+    this.items = this.items.concat(...Array.from(elements));
     this.recreateColumns();
   }
 
-  clearElements() {
+  clearElements(): void {
     this.items = [];
     this.recreateColumns();
   }
 
-  setElements(elements) {
+  setElements(elements: HTMLElement[]): void {
     this.items = elements;
     this.recreateColumns();
   }
 
-  get _numColumns() {
+  get _numColumns(): number {
     return this.sizes.find(
       ([minWidth]) => window.matchMedia(`(min-width: ${minWidth}px)`).matches
     )[1];
   }
 }
+
+export default Masonry;

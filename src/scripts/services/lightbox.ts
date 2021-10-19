@@ -11,10 +11,11 @@ class Lightbox {
     this.$asset = this.el.querySelector('[data-asset]');
     this.$description = this.el.querySelector('[data-description]');
     this.events();
-    import('../../styles/lightbox.scss');
-    if (process.env.NODE_ENV !== 'production') {
-      console.info('Lightbox: Initialized');
-    }
+    import('../../styles/lightbox.scss').then(() => {
+      if (process.env.NODE_ENV !== 'production') {
+        console.info('Lightbox: Initialized');
+      }
+    });
   }
 
   set(props) {
