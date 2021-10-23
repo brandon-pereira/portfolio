@@ -9,7 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: exit 0
+      - run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+        id: nvm
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '${{ steps.nvm.outputs.NVMRC }}'
+      - run: npm install
+      - run: npm run get-content
+      - uses: stefanzweifel/git-auto-commit-action@v4
   test:
     name: Test
     runs-on: ubuntu-latest
