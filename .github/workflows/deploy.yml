@@ -6,10 +6,12 @@ on:
 jobs:
   refreshContent:
     name: Get Latest Content
+    runs-on: ubuntu-latest
     steps:
       - run: exit 0
   test:
     name: Test
+    runs-on: ubuntu-latest
     needs: refreshContent
     steps:
       # TODO: Implement this
