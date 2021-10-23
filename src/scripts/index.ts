@@ -1,4 +1,3 @@
-import './services/scroll';
 import './services/lazyload';
 
 import Header from './components/header';

@@ -32,7 +32,7 @@ html(lang='en')
         span.story-copy and I build&nbsp;
           span(data-scroll-text=about.scrollText)
       .cta 
-        a.button(href='#contact', data-smooth-scroll) Contact
+        a.button(href='#contact') Contact
         a.button(
           target='_',
           href='../../content/assets/brandon-pereira-resume.pdf'
@@ -82,7 +82,7 @@ html(lang='en')
         h3 Let&apos;s Talk
         .grid
           each item in contact.contactLinks
-            a.item.smoothText(
+            a.item(
               class=item.class,
               href=item.link,
               aria-label=item.text,
@@ -92,7 +92,7 @@ html(lang='en')
         h3 Social
         .grid
           each item in contact.socialLinks
-            a.item.smoothText(
+            a.item(
               class=item.class,
               href=item.link,
               aria-label=item.text,
