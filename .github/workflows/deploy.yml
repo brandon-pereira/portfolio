@@ -18,7 +18,6 @@ jobs:
           script: |
             cd www/portfolio
             git checkout .
-            git checkout v4
             git pull
             npm install --production=false
             npm run build
