@@ -31,12 +31,6 @@ html(lang='en')
         h1.name #{ about.firstName }
         span.story-copy and I build&nbsp;
           span(data-scroll-text=about.scrollText)
-      .cta 
-        a.button(href='#contact') Contact
-        a.button(
-          target='_',
-          href='../../content/assets/brandon-pereira-resume.pdf'
-        ) Resume
 
     #about.container.about(data-track-button='true')
       .content !{ about.description }
@@ -49,6 +43,37 @@ html(lang='en')
           span
           | past, present, and future.
       .plus-loader
+      .content 
+        .filters(data-filters='')
+          div
+            | You&apos;re viewing projects built using &quot;
+            span
+            | &quot;.
+          button RESET
+
+        .projects.hidden
+        .project.snippet.hidden.skeleton(data-project-learn-more)
+          .image-container
+            img(loading='lazy')
+          h3
+            span(data-project-title)
+          p(data-project-description)
+          button.button Learn More
+        .project.detailed-view.hidden
+          header
+            button.button(data-back-button)
+              svg
+                use(xlink:href='#caret')
+              span BACK
+            span(data-project-date) Loading...
+            span(data-project-status)
+          h3
+            a(data-project-link='', data-project-title='', target='_')
+          div(data-project-description='')
+          div(data-project-images='')
+          div(data-project-languages='')
+
+        button.project.loadMore Load More
 
     section#apps.container.apps(
       class=apps[0].theme,

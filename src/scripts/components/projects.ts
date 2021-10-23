@@ -2,8 +2,6 @@ import Base from './base';
 import throttle from '../lib/throttle';
 import animate from '../lib/animate';
 import Masonry from '../lib/masonry';
-import LazyLoad from '../services/lazyload';
-import Scroll from '../services/scroll';
 import formatDate from '../lib/formatDate';
 
 type DeeplinkPayload = {
@@ -52,24 +50,29 @@ class Projects extends Base {
 
   static numProjectsToAdd = 2;
 
-  static defaultNumProjects = 2;
+  static defaultNumProjects = 4;
 
-  init(): Promise<void> {
+  async init(): Promise<void> {
     this.$projects = this.el.querySelector('.projects');
     this.$loadMore = this.el.querySelector('.loadMore');
     this.$backButton = this.el.querySelector('[data-back-button]');
     this.$snippet = this.el.querySelector('.project.snippet.skeleton');
     this.$detailed = this.el.querySelector('.project.detailed-view');
     this.$filters = this.el.querySelector('[data-filters]');
-
+    const projects = await this.fetchProjects();
+    const toAdd = projects.slice(0, Projects.defaultNumProjects);
+    const elements = toAdd.map(project => this._getSnippetNode(project));
     this.masonry = new Masonry({
       container: this.$projects,
-      elements: Array.from(this.$projects.children),
+      elements: [],
       sizes: [
         [0, 1],
         [600, 2] // medium breakpoint and up show 2 columns
       ]
     });
+    this._addElementsToGrid(elements);
+    this.el.querySelector('.plus-loader').classList.add('hidden');
+    this.$projects.classList.remove('hidden');
     return super.init();
   }
 
@@ -81,12 +84,6 @@ class Projects extends Base {
     window.addEventListener(
       'resize',
       throttle(() => this.masonry.recreateColumns(), 500)
-    );
-    Array.from(this.el.querySelectorAll('[data-project-learn-more]')).forEach(
-      el =>
-        el.addEventListener('click', () => {
-          this.showMoreDetails(el.getAttribute('data-project-learn-more'));
-        })
     );
     this.el.addEventListener('goToLang', (e: ProjectEvent) =>
       this.deeplink(e.detail)
@@ -114,7 +111,6 @@ class Projects extends Base {
    * @return {Promise}
    */
   async onLoadMoreClick(): Promise<void> {
-    console.log('HERE');
     this.$loadMore.classList.add('loading');
     await this.showMoreProjects();
     this.$loadMore.classList.remove('loading');
@@ -162,7 +158,7 @@ class Projects extends Base {
     const elements = projects.map(project => this._getSnippetNode(project));
     this._addElementsToGrid(elements);
     this._toggleDetailsView(false);
-    Scroll.scrollTo(this.el);
+    // Scroll.scrollTo(this.el);
     this.logEvent('projects', 'filter', title);
   }
 
@@ -191,7 +187,7 @@ class Projects extends Base {
    * @param {Boolean} isShow
    */
   _toggleDetailsView(isShow: boolean): void {
-    Scroll.scrollTo(this.el);
+    // Scroll.scrollTo(this.el);
     this.$loadMore.classList.toggle(
       'hidden',
       isShow || this.$filters.classList.contains('visible')
@@ -345,10 +341,7 @@ class Projects extends Base {
       project.shortDescription || project.description;
     $project.addEventListener('click', () => this.showMoreDetails(project._id));
     if (project.images && project.images.length) {
-      $project
-        .querySelector('img')
-        .setAttribute('data-src', project.images[0].url);
-      LazyLoad.loadImages($project.querySelectorAll('img'));
+      $project.querySelector('img').setAttribute('src', project.images[0].url);
     }
     return $project;
   }
