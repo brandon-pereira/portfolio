@@ -4,7 +4,7 @@ import Scroll from '../services/scroll';
 
 export default class Skills extends Base {
   init(): Promise<void> {
-    return super.init(import('../../styles/skills.scss'));
+    return super.init();
   }
 
   events(): void {

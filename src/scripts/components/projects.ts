@@ -70,7 +70,7 @@ class Projects extends Base {
         [600, 2] // medium breakpoint and up show 2 columns
       ]
     });
-    return super.init(import('../../styles/projects.scss'));
+    return super.init();
   }
 
   events(): void {

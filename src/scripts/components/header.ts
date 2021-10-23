@@ -9,7 +9,7 @@ class Header extends Base {
   async init(): Promise<void> {
     this.$title = this.el.querySelector('h1.name');
     this.letterize(this.$title);
-    await super.init(import('../../styles/header.scss'));
+    await super.init();
     this.scrollText = new ScrollText(
       this.el.querySelector('[data-scroll-text]')
     );

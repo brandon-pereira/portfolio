@@ -1,0 +1,118 @@
+doctype html
+html(lang='en')
+  head
+    // Application Attributes
+    link(rel='stylesheet', type='text/css', href='../styles/style.scss')
+    meta(charset='UTF-8')
+    meta(
+      name='viewport',
+      content='width=device-width, initial-scale=1.0, user-scalable=0'
+    )
+
+    // SEO Attributes
+    meta(name='description', content=seo.description)
+    title #{ seo.title }
+    link(rel='canonical', href='https://branclon.com/')
+
+    // Share Attributes
+    link(
+      rel='shortcut icon',
+      type='image/x-icon',
+      href='../static/favicon.ico'
+    )
+
+  body
+    header#header.header
+      .logo 
+        svg 
+          use(xlink:href='#clon')
+      .copy 
+        span.story-copy Hi, I'm
+        h1.name #{ about.firstName }
+        span.story-copy and I build&nbsp;
+          span(data-scroll-text=about.scrollText)
+      .cta 
+        a.button(href='#contact', data-smooth-scroll) Contact
+        a.button(
+          target='_',
+          href='../../content/assets/brandon-pereira-resume.pdf'
+        ) Resume
+
+    #about.container.about(data-track-button='true')
+      .content !{ about.description }
+
+    section#projects.container.projects(data-track-section)
+      header.main
+        h2.maintext(data-text='Projects') Projects
+        span.subtext
+          | A showcase of my
+          span
+          | past, present, and future.
+      .plus-loader
+
+    section#apps.container.apps(
+      class=apps[0].theme,
+      data-current-slide='0',
+      data-track-section
+    ) 
+      .stripes
+        div
+        div 
+        div
+      header.main 
+        span.maintext Apps
+        span.subtext
+          | I've got
+          span &nbsp;
+          | for that
+
+      .plus-loader
+
+    section#skills.container.skills(data-track-section)
+      header.main
+        h2.uglyText Personal
+          span
+          | Skills
+        p A list of skills I've accumulated over the years, click a category to see skills and click a skill to see a little description about my experience.
+      .plus-loader
+
+    section#contact.container.contact(data-track-section)
+      .content
+        h2 Contact
+        h3 Let&apos;s Talk
+        .grid
+          each item in contact.contactLinks
+            a.item.smoothText(
+              class=item.class,
+              href=item.link,
+              aria-label=item.text,
+              rel='noopener',
+              target='_blank'
+            )
+        h3 Social
+        .grid
+          each item in contact.socialLinks
+            a.item.smoothText(
+              class=item.class,
+              href=item.link,
+              aria-label=item.text,
+              rel='noopener',
+              target='_blank'
+            )
+
+    footer#footer.container
+      .content.uglyText
+        | Website designed, built, and maintained by Brandon Pereira
+        span
+      .logo 
+        a(href='https://github.com/brandon-pereira', aria-label='GitHub')
+          svg
+            use(xlink:href='#clon')
+
+    svg.spritemap(xmlns='http://www.w3.org/2000/svg')
+      include ../static/icons/caret.svg
+      include ../static/icons/clon.svg
+
+    //- <!-- TODO:Google Analytics -->
+
+    script(type='module', src='../scripts/index.ts', async, defer)

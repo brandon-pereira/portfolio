@@ -47,7 +47,7 @@ svg.spritemap {
   */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lily+Script+One&display=swap&text=Projects');
-@import url('https://fonts.googleapis.com/css?family=Quicksand:500&display=swap&text=BRANDON');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500&display=swap&text=Branclon');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap&text=Apps');
 
 img[data-src] {
@@ -104,3 +104,10 @@ html.webkit .container.projects header.main .maintext:before {
 @import 'g-loader';
 @import 'contact';
 @import 'footer';
+@import 'apps';
+@import 'header';
+@import 'lightbox';
+@import 'projects';
+@import 'skills';
+
+// TODO: split to "above-the-fold" and "below-the-fold"

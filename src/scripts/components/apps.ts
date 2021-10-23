@@ -15,7 +15,7 @@ export default class Apps extends Base {
     );
     this.currentSlide = this.slides[0];
     this.dots = Array.from(this.el.querySelectorAll('.carousel-dots .dot'));
-    return super.init(import('../../styles/apps.scss'));
+    return super.init();
   }
 
   events(): void {

@@ -1,10 +1,8 @@
-/**
- * Inspired by watson-developer-cloud/node-sdk
- */
 module.exports = {
   env: {
     browser: true,
-    es6: true
+    es6: true,
+    node: true
   },
   parser: '@typescript-eslint/parser',
   extends: [
