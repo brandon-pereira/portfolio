@@ -51,26 +51,26 @@
       {
         "_id": "2eutBQ6LSWZMY1zHjm8nOu",
         "title": "Close up of the Calendar Interface",
-        "url": "/assets/2eutBQ6LSWZMY1zHjm8nOu.png",
+        "url": "../../content/assets/2eutBQ6LSWZMY1zHjm8nOu.png",
         "contentType": "image/png"
       },
       {
         "_id": "6BAVrABSALrKheWfnFVU6e",
         "title": "Example of how the calendar looks on the device",
         "description": "Typically, the tablet would be wall mounted but I didn't have the appropriate mounting brackets",
-        "url": "/assets/6BAVrABSALrKheWfnFVU6e.jpg",
+        "url": "../../content/assets/6BAVrABSALrKheWfnFVU6e.jpg",
         "contentType": "image/jpeg"
       },
       {
         "_id": "798vMHpq6zsUUEUQntbZxf",
         "title": "Example of how the Setup/Welcome screen looks",
-        "url": "/assets/798vMHpq6zsUUEUQntbZxf.jpg",
+        "url": "../../content/assets/798vMHpq6zsUUEUQntbZxf.jpg",
         "contentType": "image/jpeg"
       },
       {
         "_id": "4mq4edW3nBp4fcLaXbmnWs",
         "title": "Example of the settings screen",
-        "url": "/assets/4mq4edW3nBp4fcLaXbmnWs.png",
+        "url": "../../content/assets/4mq4edW3nBp4fcLaXbmnWs.png",
         "contentType": "image/png"
       }
     ],
@@ -123,19 +123,19 @@
       {
         "_id": "1GrOd8eRgf9xSDr2a7KUJL",
         "title": "Configurator Mobile Experience",
-        "url": "/assets/1GrOd8eRgf9xSDr2a7KUJL.png",
+        "url": "../../content/assets/1GrOd8eRgf9xSDr2a7KUJL.png",
         "contentType": "image/png"
       },
       {
         "_id": "4YVTROmIWRnIdQEqpz4x39",
         "title": "Inventory Page",
-        "url": "/assets/4YVTROmIWRnIdQEqpz4x39.png",
+        "url": "../../content/assets/4YVTROmIWRnIdQEqpz4x39.png",
         "contentType": "image/png"
       },
       {
         "_id": "3QJMJdpZy4Po9exxmSQsTP",
         "title": "Configurator Desktop Experience",
-        "url": "/assets/3QJMJdpZy4Po9exxmSQsTP.png",
+        "url": "../../content/assets/3QJMJdpZy4Po9exxmSQsTP.png",
         "contentType": "image/png"
       }
     ],
@@ -174,7 +174,7 @@
       {
         "_id": "4oszlf52FqIkFgfdmlinRN",
         "title": "Example of the main form",
-        "url": "/assets/4oszlf52FqIkFgfdmlinRN.png",
+        "url": "../../content/assets/4oszlf52FqIkFgfdmlinRN.png",
         "contentType": "image/png"
       }
     ],
@@ -212,7 +212,7 @@
       {
         "_id": "4aWiQ4292AFOVX4tOY2o85",
         "title": "Example of the interface",
-        "url": "/assets/4aWiQ4292AFOVX4tOY2o85.png",
+        "url": "../../content/assets/4aWiQ4292AFOVX4tOY2o85.png",
         "contentType": "image/png"
       }
     ],
@@ -257,13 +257,13 @@
       {
         "_id": "1vEd9RWjaAqSbr8POGxtD0",
         "title": "Mobile View",
-        "url": "/assets/1vEd9RWjaAqSbr8POGxtD0.png",
+        "url": "../../content/assets/1vEd9RWjaAqSbr8POGxtD0.png",
         "contentType": "image/png"
       },
       {
         "_id": "2RWdarrFL9NZddhBfmzS3j",
         "title": "Desktop View",
-        "url": "/assets/2RWdarrFL9NZddhBfmzS3j.png",
+        "url": "../../content/assets/2RWdarrFL9NZddhBfmzS3j.png",
         "contentType": "image/png"
       }
     ],
@@ -290,7 +290,7 @@
       {
         "_id": "1P9oAk5x8uGEsBpLzb0IBp",
         "title": "Example of how the bot listens and responds",
-        "url": "/assets/1P9oAk5x8uGEsBpLzb0IBp.png",
+        "url": "../../content/assets/1P9oAk5x8uGEsBpLzb0IBp.png",
         "contentType": "image/png"
       }
     ],
@@ -332,21 +332,21 @@
         "_id": "1z6F8ua6JH5e6m18pLXqvk",
         "title": "Example of some interactive pieces",
         "description": "Example of some interactive pieces",
-        "url": "/assets/1z6F8ua6JH5e6m18pLXqvk.png",
+        "url": "../../content/assets/1z6F8ua6JH5e6m18pLXqvk.png",
         "contentType": "image/png"
       },
       {
         "_id": "5IC3gW8weWmcjl6DVlU82i",
         "title": "Example of car preview tool",
         "description": "Example of car preview tool",
-        "url": "/assets/5IC3gW8weWmcjl6DVlU82i.png",
+        "url": "../../content/assets/5IC3gW8weWmcjl6DVlU82i.png",
         "contentType": "image/png"
       },
       {
         "_id": "2dH6Brk4xYk4ihmFfBjbfT",
         "title": "Example of mobile website",
         "description": "Example of mobile website",
-        "url": "/assets/2dH6Brk4xYk4ihmFfBjbfT.png",
+        "url": "../../content/assets/2dH6Brk4xYk4ihmFfBjbfT.png",
         "contentType": "image/png"
       }
     ],
@@ -403,21 +403,21 @@
         "_id": "4loe2vKe5Bi91vAYlozgMv",
         "title": "Example of desktop experience",
         "description": "Example of desktop experience",
-        "url": "/assets/4loe2vKe5Bi91vAYlozgMv.png",
+        "url": "../../content/assets/4loe2vKe5Bi91vAYlozgMv.png",
         "contentType": "image/png"
       },
       {
         "_id": "6m4YZBGMvJECuhu3ClSjSG",
         "title": "Mobile Experience",
         "description": "Mobile Experience",
-        "url": "/assets/6m4YZBGMvJECuhu3ClSjSG.png",
+        "url": "../../content/assets/6m4YZBGMvJECuhu3ClSjSG.png",
         "contentType": "image/png"
       },
       {
         "_id": "4oOeF0V2ohzKPnxU3q4fg5",
         "title": "List Members User Interface",
         "description": "List Members User Interface",
-        "url": "/assets/4oOeF0V2ohzKPnxU3q4fg5.png",
+        "url": "../../content/assets/4oOeF0V2ohzKPnxU3q4fg5.png",
         "contentType": "image/png"
       }
     ],
@@ -457,14 +457,14 @@
         "_id": "1c9okCtbZo4quQGkOowqyo",
         "title": "Preview of how the AR experience works",
         "description": "Preview of how the AR experience works",
-        "url": "/assets/1c9okCtbZo4quQGkOowqyo.jpeg",
+        "url": "../../content/assets/1c9okCtbZo4quQGkOowqyo.jpeg",
         "contentType": "image/jpeg"
       },
       {
         "_id": "5ptSzaYtNeW04IW88GKmoq",
         "title": "Demo of the app journey",
         "description": "Demo of the app journey",
-        "url": "/assets/5ptSzaYtNeW04IW88GKmoq.mp4",
+        "url": "../../content/assets/5ptSzaYtNeW04IW88GKmoq.mp4",
         "contentType": "video/mp4"
       }
     ],
@@ -505,20 +505,20 @@
         "_id": "6L8ca50vDOyEmA02O4coo0",
         "title": "FirstCommand desktop experience",
         "description": "FirstCommand desktop experience",
-        "url": "/assets/6L8ca50vDOyEmA02O4coo0.png",
+        "url": "../../content/assets/6L8ca50vDOyEmA02O4coo0.png",
         "contentType": "image/png"
       },
       {
         "_id": "3hHuNczYXmI4YyAekA8e2c",
         "title": "FirstCommand mobile experience",
-        "url": "/assets/3hHuNczYXmI4YyAekA8e2c.png",
+        "url": "../../content/assets/3hHuNczYXmI4YyAekA8e2c.png",
         "contentType": "image/png"
       },
       {
         "_id": "4QLJ0hudawUWqCqWaMgEK4",
         "title": "FirstCommand get started tool",
         "description": "FirstCommand get started tool",
-        "url": "/assets/4QLJ0hudawUWqCqWaMgEK4.png",
+        "url": "../../content/assets/4QLJ0hudawUWqCqWaMgEK4.png",
         "contentType": "image/png"
       }
     ],
@@ -551,21 +551,21 @@
         "_id": "1F4wQroc5aYuMEGs0sG0oQ",
         "title": "Example of the recommend a car flow",
         "description": "Example of the recommend a car flow",
-        "url": "/assets/1F4wQroc5aYuMEGs0sG0oQ.png",
+        "url": "../../content/assets/1F4wQroc5aYuMEGs0sG0oQ.png",
         "contentType": "image/png"
       },
       {
         "_id": "5ZEFH8jsacqAc2msICgqQQ",
         "title": "Example of the compare tool",
         "description": "Example of the compare tool",
-        "url": "/assets/5ZEFH8jsacqAc2msICgqQQ.png",
+        "url": "../../content/assets/5ZEFH8jsacqAc2msICgqQQ.png",
         "contentType": "image/png"
       },
       {
         "_id": "3B7cznFXywoaMCaAes2OsG",
         "title": "Find a dealer tool",
         "description": "Find a dealer tool",
-        "url": "/assets/3B7cznFXywoaMCaAes2OsG.png",
+        "url": "../../content/assets/3B7cznFXywoaMCaAes2OsG.png",
         "contentType": "image/png"
       }
     ],
@@ -604,7 +604,7 @@
         "_id": "oGdA74ceLAgaMEeygKuSI",
         "title": "Example of the UI",
         "description": "Example of the UI",
-        "url": "/assets/oGdA74ceLAgaMEeygKuSI.png",
+        "url": "../../content/assets/oGdA74ceLAgaMEeygKuSI.png",
         "contentType": "image/png"
       }
     ],
@@ -656,21 +656,21 @@
         "_id": "2giTsFWK76uQIyiweUEcYc",
         "title": "The redesigned header",
         "description": "The redesigned header",
-        "url": "/assets/2giTsFWK76uQIyiweUEcYc.png",
+        "url": "../../content/assets/2giTsFWK76uQIyiweUEcYc.png",
         "contentType": "image/png"
       },
       {
         "_id": "3qrT3DiawMIIusmuGSsouW",
         "title": "The projects redesign",
         "description": "The projects redesign",
-        "url": "/assets/3qrT3DiawMIIusmuGSsouW.png",
+        "url": "../../content/assets/3qrT3DiawMIIusmuGSsouW.png",
         "contentType": "image/png"
       },
       {
         "_id": "4I4c4lpewoMgQoYgIWMk06",
         "title": "The new apps section",
         "description": "The new apps section",
-        "url": "/assets/4I4c4lpewoMgQoYgIWMk06.png",
+        "url": "../../content/assets/4I4c4lpewoMgQoYgIWMk06.png",
         "contentType": "image/png"
       }
     ],
@@ -723,14 +723,14 @@
         "_id": "3LUJnUNs1iMSmO4eG4OGWE",
         "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "url": "/assets/3LUJnUNs1iMSmO4eG4OGWE.png",
+        "url": "../../content/assets/3LUJnUNs1iMSmO4eG4OGWE.png",
         "contentType": "image/png"
       },
       {
         "_id": "6mhLOlQsxiiQm4a22ESKiE",
         "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "url": "/assets/6mhLOlQsxiiQm4a22ESKiE.mp4",
+        "url": "../../content/assets/6mhLOlQsxiiQm4a22ESKiE.mp4",
         "contentType": "video/mp4"
       }
     ],
@@ -789,21 +789,21 @@
         "_id": "4ikvd4yIMMsUAamUwykYE8",
         "title": "Mobile Android Experience",
         "description": "Mobile Android Experience",
-        "url": "/assets/4ikvd4yIMMsUAamUwykYE8.png",
+        "url": "../../content/assets/4ikvd4yIMMsUAamUwykYE8.png",
         "contentType": "image/png"
       },
       {
         "_id": "30rOMLd7i00YiQW2GemacK",
         "title": "Desktop experience",
         "description": "Desktop experience",
-        "url": "/assets/30rOMLd7i00YiQW2GemacK.png",
+        "url": "../../content/assets/30rOMLd7i00YiQW2GemacK.png",
         "contentType": "image/png"
       },
       {
         "_id": "4cajmluS5OUcyoyWKMqewm",
         "title": "Mac status bar experience",
         "description": "Mac status bar experience",
-        "url": "/assets/4cajmluS5OUcyoyWKMqewm.png",
+        "url": "../../content/assets/4cajmluS5OUcyoyWKMqewm.png",
         "contentType": "image/png"
       }
     ],
@@ -837,14 +837,14 @@
         "_id": "3DVvmBRIlaKcCeWUyKYwQG",
         "title": "Example of landing page on large screen size",
         "description": "Example of landing page on large screen size",
-        "url": "/assets/3DVvmBRIlaKcCeWUyKYwQG.png",
+        "url": "../../content/assets/3DVvmBRIlaKcCeWUyKYwQG.png",
         "contentType": "image/png"
       },
       {
         "_id": "6kF8t5dR1Sg0GqmseQyScy",
         "title": "Example of landing page on small screen size",
         "description": "Example of landing page on small screen size",
-        "url": "/assets/6kF8t5dR1Sg0GqmseQyScy.png",
+        "url": "../../content/assets/6kF8t5dR1Sg0GqmseQyScy.png",
         "contentType": "image/png"
       }
     ],
@@ -871,21 +871,21 @@
         "_id": "2fLYBsbwHO6sm6M0KoqIKG",
         "title": "Example of what happens when you hit random 0-60 time.",
         "description": "Example of what happens when you hit random 0-60 time.",
-        "url": "/assets/2fLYBsbwHO6sm6M0KoqIKG.png",
+        "url": "../../content/assets/2fLYBsbwHO6sm6M0KoqIKG.png",
         "contentType": "image/png"
       },
       {
         "_id": "2RRnzZKo3emceCsyk44euE",
         "title": "Example of how the suggestions work. They are based on users input.",
         "description": "Example of how the suggestions work. They are based on users input.",
-        "url": "/assets/2RRnzZKo3emceCsyk44euE.png",
+        "url": "../../content/assets/2RRnzZKo3emceCsyk44euE.png",
         "contentType": "image/png"
       },
       {
         "_id": "7im2XnJkYMye0YWikccw0u",
         "title": "Video showing the users flow.",
         "description": "Video showing the users flow.",
-        "url": "/assets/7im2XnJkYMye0YWikccw0u.mp4",
+        "url": "../../content/assets/7im2XnJkYMye0YWikccw0u.mp4",
         "contentType": "video/mp4"
       }
     ],
@@ -942,21 +942,21 @@
         "_id": "5G7FgIiNQAmyQO0mu8yKem",
         "title": "Mobile view of landing screen",
         "description": "Mobile view of landing screen",
-        "url": "/assets/5G7FgIiNQAmyQO0mu8yKem.png",
+        "url": "../../content/assets/5G7FgIiNQAmyQO0mu8yKem.png",
         "contentType": "image/png"
       },
       {
         "_id": "5fxagEO5J6ucyQ0MmQQgAE",
         "title": "Desktop view of landing screen",
         "description": "Desktop view of landing screen",
-        "url": "/assets/5fxagEO5J6ucyQ0MmQQgAE.png",
+        "url": "../../content/assets/5fxagEO5J6ucyQ0MmQQgAE.png",
         "contentType": "image/png"
       },
       {
         "_id": "3Eh8HFBZBKUcwummomseyA",
         "title": "Mobile view of results screen",
         "description": "Mobile view of results screen",
-        "url": "/assets/3Eh8HFBZBKUcwummomseyA.png",
+        "url": "../../content/assets/3Eh8HFBZBKUcwummomseyA.png",
         "contentType": "image/png"
       }
     ],
@@ -990,21 +990,21 @@
         "_id": "5bMKhNeQnKoOUWaGAS200i",
         "title": "The landing screen.",
         "description": "The landing screen.",
-        "url": "/assets/5bMKhNeQnKoOUWaGAS200i.png",
+        "url": "../../content/assets/5bMKhNeQnKoOUWaGAS200i.png",
         "contentType": "image/png"
       },
       {
         "_id": "4pqiU2ixKMeqY02usQKMyM",
         "title": "Recalls list screen.",
         "description": "Recalls list screen.",
-        "url": "/assets/4pqiU2ixKMeqY02usQKMyM.png",
+        "url": "../../content/assets/4pqiU2ixKMeqY02usQKMyM.png",
         "contentType": "image/png"
       },
       {
         "_id": "4NmvsVkjvqMAqSEWsQuUms",
         "title": "Recalls details screen.",
         "description": "Recalls details screen.",
-        "url": "/assets/4NmvsVkjvqMAqSEWsQuUms.png",
+        "url": "../../content/assets/4NmvsVkjvqMAqSEWsQuUms.png",
         "contentType": "image/png"
       }
     ],
@@ -1043,21 +1043,21 @@
         "_id": "4He2I3nyuQSQIA6Y8oQ80O",
         "title": "An example of the landing screen (after animation).",
         "description": "An example of the landing screen (after animation).",
-        "url": "/assets/4He2I3nyuQSQIA6Y8oQ80O.png",
+        "url": "../../content/assets/4He2I3nyuQSQIA6Y8oQ80O.png",
         "contentType": "image/png"
       },
       {
         "_id": "U1eOv2x60MIaqSy6kmGqO",
         "title": "Demonstration of how the animation behaves.",
         "description": "Demonstration of how the animation behaves.",
-        "url": "/assets/U1eOv2x60MIaqSy6kmGqO.mp4",
+        "url": "../../content/assets/U1eOv2x60MIaqSy6kmGqO.mp4",
         "contentType": "video/mp4"
       },
       {
         "_id": "1Qeb49oikIQqGKaioE0GIS",
         "title": "An example of a region (after you fill out form/click map).",
         "description": "An example of a region (after you fill out form/click map).",
-        "url": "/assets/1Qeb49oikIQqGKaioE0GIS.png",
+        "url": "../../content/assets/1Qeb49oikIQqGKaioE0GIS.png",
         "contentType": "image/png"
       }
     ],
@@ -1127,21 +1127,21 @@
         "_id": "3p92mRAAsoYY0s6kUmSAow",
         "title": "Header Area",
         "description": "Header Area",
-        "url": "/assets/3p92mRAAsoYY0s6kUmSAow.png",
+        "url": "../../content/assets/3p92mRAAsoYY0s6kUmSAow.png",
         "contentType": "image/png"
       },
       {
         "_id": "5PPItdLw4gc86K0ws4a28W",
         "title": "Projects View Area",
         "description": "Projects View Area",
-        "url": "/assets/5PPItdLw4gc86K0ws4a28W.png",
+        "url": "../../content/assets/5PPItdLw4gc86K0ws4a28W.png",
         "contentType": "image/png"
       },
       {
         "_id": "667gQVm9e8miaAUqWMScI4",
         "title": "Skills Accordion Area",
         "description": "Skills Accordion Area",
-        "url": "/assets/667gQVm9e8miaAUqWMScI4.png",
+        "url": "../../content/assets/667gQVm9e8miaAUqWMScI4.png",
         "contentType": "image/png"
       }
     ],
@@ -1169,7 +1169,7 @@
         "_id": "7rMfCncuPu0CuWMcY6CeSw",
         "title": "Example of how the loader looks",
         "description": "Example of how the loader looks",
-        "url": "/assets/7rMfCncuPu0CuWMcY6CeSw.png",
+        "url": "../../content/assets/7rMfCncuPu0CuWMcY6CeSw.png",
         "contentType": "image/png"
       }
     ],
@@ -1197,21 +1197,21 @@
         "_id": "5nijaX4yOcWQwWy0CG2IoO",
         "title": "Google Chrome icon made with pure CSS",
         "description": "Google Chrome icon made with pure CSS",
-        "url": "/assets/5nijaX4yOcWQwWy0CG2IoO.png",
+        "url": "../../content/assets/5nijaX4yOcWQwWy0CG2IoO.png",
         "contentType": "image/png"
       },
       {
         "_id": "6ETLIky0c8YWWoia4k8ISQ",
         "title": "\"Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
         "description": "\"Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
-        "url": "/assets/6ETLIky0c8YWWoia4k8ISQ.png",
+        "url": "../../content/assets/6ETLIky0c8YWWoia4k8ISQ.png",
         "contentType": "image/png"
       },
       {
         "_id": "3XUPF0wmPS8QM48wAAMoOw",
         "title": "Side project app icon in pure CSS.",
         "description": "Side project app icon in pure CSS.",
-        "url": "/assets/3XUPF0wmPS8QM48wAAMoOw.png",
+        "url": "../../content/assets/3XUPF0wmPS8QM48wAAMoOw.png",
         "contentType": "image/png"
       }
     ],
@@ -1269,21 +1269,21 @@
         "_id": "3AvIub86KIEKqMiySEIw0q",
         "title": "Packages screen, demonstrating conflict manager.",
         "description": "Packages screen, demonstrating conflict manager.",
-        "url": "/assets/3AvIub86KIEKqMiySEIw0q.png",
+        "url": "../../content/assets/3AvIub86KIEKqMiySEIw0q.png",
         "contentType": "image/png"
       },
       {
         "_id": "2EfT9Xo5OUKSuWayEecosa",
         "title": "Mobile navigation and versions page.",
         "description": "Mobile navigation and versions page.",
-        "url": "/assets/2EfT9Xo5OUKSuWayEecosa.png",
+        "url": "../../content/assets/2EfT9Xo5OUKSuWayEecosa.png",
         "contentType": "image/png"
       },
       {
         "_id": "79nHG3xiOAqOa8mm0CIgEk",
         "title": "Desktop navigation and versions page.",
         "description": "Desktop navigation and versions page.",
-        "url": "/assets/79nHG3xiOAqOa8mm0CIgEk.png",
+        "url": "../../content/assets/79nHG3xiOAqOa8mm0CIgEk.png",
         "contentType": "image/png"
       }
     ],
@@ -1334,21 +1334,21 @@
         "_id": "3p92mRAAsoYY0s6kUmSAow",
         "title": "Header Area",
         "description": "Header Area",
-        "url": "/assets/3p92mRAAsoYY0s6kUmSAow.png",
+        "url": "../../content/assets/3p92mRAAsoYY0s6kUmSAow.png",
         "contentType": "image/png"
       },
       {
         "_id": "5PPItdLw4gc86K0ws4a28W",
         "title": "Projects View Area",
         "description": "Projects View Area",
-        "url": "/assets/5PPItdLw4gc86K0ws4a28W.png",
+        "url": "../../content/assets/5PPItdLw4gc86K0ws4a28W.png",
         "contentType": "image/png"
       },
       {
         "_id": "667gQVm9e8miaAUqWMScI4",
         "title": "Skills Accordion Area",
         "description": "Skills Accordion Area",
-        "url": "/assets/667gQVm9e8miaAUqWMScI4.png",
+        "url": "../../content/assets/667gQVm9e8miaAUqWMScI4.png",
         "contentType": "image/png"
       }
     ],
@@ -1400,21 +1400,21 @@
         "_id": "37xue73IA00i2EM0Qc8eyw",
         "title": "Example on desktop",
         "description": "Example on desktop",
-        "url": "/assets/37xue73IA00i2EM0Qc8eyw.png",
+        "url": "../../content/assets/37xue73IA00i2EM0Qc8eyw.png",
         "contentType": "image/png"
       },
       {
         "_id": "3zxQh7SiwMQgmOUMIMWYAO",
         "title": "Example of editing/sharing list",
         "description": "Example of editing/sharing list",
-        "url": "/assets/3zxQh7SiwMQgmOUMIMWYAO.png",
+        "url": "../../content/assets/3zxQh7SiwMQgmOUMIMWYAO.png",
         "contentType": "image/png"
       },
       {
         "_id": "3pDpW2Obd6mUYWeecowsuU",
         "title": "Example of editing task",
         "description": "Example of editing task",
-        "url": "/assets/3pDpW2Obd6mUYWeecowsuU.png",
+        "url": "../../content/assets/3pDpW2Obd6mUYWeecowsuU.png",
         "contentType": "image/png"
       }
     ]
@@ -1458,21 +1458,21 @@
         "_id": "1hltOYSZ8UmQccWAoIcqMw",
         "title": "Login Screen",
         "description": "Login Screen",
-        "url": "/assets/1hltOYSZ8UmQccWAoIcqMw.png",
+        "url": "../../content/assets/1hltOYSZ8UmQccWAoIcqMw.png",
         "contentType": "image/png"
       },
       {
         "_id": "2rEsO1Fvj22gqgMKsaCGg4",
         "title": "Server Place Order Screen",
         "description": "Server Place Order Screen",
-        "url": "/assets/2rEsO1Fvj22gqgMKsaCGg4.png",
+        "url": "../../content/assets/2rEsO1Fvj22gqgMKsaCGg4.png",
         "contentType": "image/png"
       },
       {
         "_id": "2BzQUF2Ou4w6O0Mc46oyGi",
         "title": "Admin Panel",
         "description": "Admin Panel",
-        "url": "/assets/2BzQUF2Ou4w6O0Mc46oyGi.png",
+        "url": "../../content/assets/2BzQUF2Ou4w6O0Mc46oyGi.png",
         "contentType": "image/png"
       }
     ],
@@ -1498,7 +1498,7 @@
         "_id": "2fesdQ37AsKOiGkgGUwq0I",
         "title": "Better to see live version",
         "description": "Better to see live version",
-        "url": "/assets/2fesdQ37AsKOiGkgGUwq0I.png",
+        "url": "../../content/assets/2fesdQ37AsKOiGkgGUwq0I.png",
         "contentType": "image/png"
       }
     ],
@@ -1524,7 +1524,7 @@
         "_id": "15ZqTUrGzEACG8Eek2sIg0",
         "title": "Better to see live version",
         "description": "Better to see live version",
-        "url": "/assets/15ZqTUrGzEACG8Eek2sIg0.png",
+        "url": "../../content/assets/15ZqTUrGzEACG8Eek2sIg0.png",
         "contentType": "image/png"
       }
     ],
