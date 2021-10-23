@@ -4,8 +4,19 @@ on:
     branches:
       - v4
 jobs:
+  refreshContent:
+    name: Get Latest Content
+    steps:
+      - run: exit 0
+  test:
+    name: Test
+    needs: refreshContent
+    steps:
+      # TODO: Implement this
+      - run: exit 0
   deploy:
     name: Deploy
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: executing remote ssh commands using password
