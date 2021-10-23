@@ -24,6 +24,7 @@ const _downloadFile = (url, dest) =>
   new Promise((resolve, reject) => {
     const file = fs.createWriteStream(dest, { flags: 'wx' });
     const onError = err => {
+      // eslint-disable-next-line @typescript-eslint/no-empty-function
       fs.unlink(dest, () => {});
       file.destroy();
       reject(err);
