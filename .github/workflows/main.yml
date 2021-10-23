@@ -1,41 +1,20 @@
 name: Deploy
 on:
-  # push:
-  #   branches:
-  #     - v4
-  repository_dispatch:
-    types: [publish-event]
+  push:
+    branches:
+      - master
 jobs:
-  refreshContent:
-    name: Get Latest Content
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-        id: nvm
-      - uses: actions/setup-node@v2
-        with:
-          cache: 'npm'
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
-      - run: npm install
-      - run: npm run get-content
-        env:
-          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-          CONTENTFUL_SPACE: ${{ secrets.CONTENTFUL_SPACE }}
-      - uses: stefanzweifel/git-auto-commit-action@v4
   test:
     name: Test
     runs-on: ubuntu-latest
-    needs: refreshContent
     steps:
       - uses: actions/checkout@v2
       - run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
         id: nvm
       - uses: actions/setup-node@v2
         with:
-          cache: 'npm'
           node-version: '${{ steps.nvm.outputs.NVMRC }}'
-      - run: npm install
+      - run: npm install --production=false
       - run: npm test
   deploy:
     name: Deploy
