@@ -1,8 +1,8 @@
 import ga from '../services/analytics';
-
+import lightbox from '../services/lightbox';
 export default class Base {
   el: HTMLElement;
-  lightbox: any;
+  lightbox: typeof lightbox;
   logEvent: any;
 
   constructor(el: HTMLElement) {
@@ -11,7 +11,7 @@ export default class Base {
       return null;
     }
     this.el = el;
-    this.lightbox = import('../services/lightbox').then(m => m.default);
+    this.lightbox = lightbox;
     this.logEvent = ga;
     this.init()
       .then(() => this.setLoading(false))

@@ -4,15 +4,17 @@
   "description": "The code that hosts my portfolio. Located at https://branclon.com/",
   "repository": "https://github.com/brandon-pereira/portfolio",
   "dependencies": {
+    "scroll-text": "^1.0.1"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.0.0",
+    "@parcel/transformer-pug": "^2.0.0",
     "import-fresh": "^3.3.0",
     "nunjucks": "^3.2.3",
     "parcel": "^2.0.0",
     "parcel-plugin-nunjucks": "^2.2.2",
-    "scroll-text": "^1.0.1"
-  },
-  "devDependencies": {
-    "@parcel/transformer-pug": "^2.0.0",
     "@parcel/transformer-sass": "^2.0.0",
+    "@parcel/transformer-webmanifest": "^2.0.0",
     "@prettier/plugin-pug": "^1.16.7",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",

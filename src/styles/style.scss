@@ -12,55 +12,14 @@ body {
   font: 19px 'Open Sans', sans-serif;
   margin: 0;
   overflow-x: hidden;
-  background: #fff;
 }
-
-/**
-  * Internet Explorer Depreciated Alert
-  */
-.browsehappy-container {
-  height: 50px;
-}
-.browsehappy {
-  text-align: center;
-  position: fixed;
-  z-index: 3;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #c90000;
-  border-bottom: 1px solid darken(#c90000, 10%);
-  color: #fff;
-  margin: 0;
-  line-height: 100px;
-  a {
-    color: #fff;
-  }
-}
-
-/**
-  * Hide SVG Spritemap
-  */
 svg.spritemap {
   display: none;
 }
-
-/**
-  * Web fonts
-  */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400|Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lily+Script+One&display=swap&text=Projects');
 @import url('https://fonts.googleapis.com/css?family=Quicksand:500&display=swap&text=Branclon');
 @import url('https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap&text=Apps');
-
-img[data-src] {
-  transition: opacity 1s;
-  opacity: 0;
-
-  &.loaded {
-    opacity: 1;
-  }
-}
 
 @import 'content';
 @import 'g-loader';

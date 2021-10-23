@@ -127,9 +127,6 @@ class Projects extends Base {
       this.numVisibleProjects,
       this.numVisibleProjects + Projects.numProjectsToAdd
     );
-    console.log(Projects);
-    console.log(this.numVisibleProjects, Projects.numProjectsToAdd);
-    console.log(toAdd);
     const elements = toAdd.map(project => this._getSnippetNode(project));
     this._addElementsToGrid(elements);
     this.$loadMore.classList.toggle(
@@ -332,7 +329,6 @@ class Projects extends Base {
    * @return {Element}
    */
   _getSnippetNode(project: Project): HTMLElement {
-    console.log(project);
     const $project = this.$snippet.cloneNode(true) as HTMLElement;
     $project.classList.remove('skeleton');
     $project.querySelector('[data-project-title]').innerHTML = project.title;

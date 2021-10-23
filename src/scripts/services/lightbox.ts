@@ -13,7 +13,12 @@ class Lightbox {
     this.events();
   }
 
-  set(props) {
+  set(props: {
+    contentType: string;
+    url: string;
+    description: string;
+    title: string;
+  }) {
     if (process.env.NODE_ENV !== 'production') {
       console.info('Lightbox: Set', props);
     }

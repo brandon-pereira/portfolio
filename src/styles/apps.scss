@@ -167,11 +167,6 @@
       transition-property: transform, opacity;
       display: block;
       margin: 0 auto;
-      background: url('../static/icon-grid.png');
-      background-size: cover;
-      &.loaded {
-        background: none;
-      }
     }
     .cta {
       transform: translate(0, -10px);

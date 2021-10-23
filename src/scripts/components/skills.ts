@@ -1,6 +1,5 @@
 import Base from './base';
 import animate from '../lib/animate';
-import Scroll from '../services/scroll';
 
 export default class Skills extends Base {
   init(): Promise<void> {
@@ -91,7 +90,7 @@ export default class Skills extends Base {
       const category = skill.closest('.accordion.category');
       if (!category.classList.contains('open')) this.toggleItem(category);
       if (!skill.classList.contains('open')) this.toggleItem(skill);
-      Scroll.scrollTo(this.el);
+      // Scroll.scrollTo(this.el);
     } else {
       if (process.env.NODE_ENV !== 'production') {
         console.warn('No skills section found for', id);

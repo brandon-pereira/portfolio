@@ -16,11 +16,23 @@ html(lang='en')
 
     // Share Attributes
     link(
-      rel='shortcut icon',
-      type='image/x-icon',
-      href='../static/favicon.ico'
+      rel='apple-touch-icon',
+      sizes='180x180',
+      href='../static/apple-touch-icon.png'
     )
-
+    link(
+      rel='icon',
+      type='image/png',
+      sizes='32x32',
+      href='../static/favicon-32x32.png'
+    )
+    link(
+      rel='icon',
+      type='image/png',
+      sizes='16x16',
+      href='../static/favicon-16x16.png'
+    )
+    link(rel='manifest', href='../static/site.webmanifest')
   body
     header#header.header
       .logo 
@@ -90,8 +102,53 @@ html(lang='en')
           | I've got
           span &nbsp;
           | for that
-
-      .plus-loader
+      .content
+        .carousel-slides
+          each app, index in apps
+            .carousel-slide(
+              class=index == 0 ? "currentSlide" : "",
+              data-styling=app.theme
+            )
+              .row
+                .column-icon
+                  a(aria-label=app.appName, target='_', href=app.link)
+                    img.app-icon(
+                      alt=app.appName,
+                      loading='lazy',
+                      src=app.icon.url
+                    )
+                  a.cta(href=app.link, target='_', aria-label=app.appName)
+                .column-info
+                  a(href=app.link)
+                    h2 !{ app.appName }
+                  p !{ app.description }
+              .row.photos
+                each img in app.images
+                  img(
+                    src=img.url,
+                    loading='lazy',
+                    title=app.appName,
+                    data-lightbox=img
+                  )
+        .carousel-dots
+          each app, index in apps
+            button.dot(
+              class=index === 0 ? "active" : "",
+              data-goto=index,
+              aria-label='Go to slide #{loop.index}'
+            )
+        button.next.carousel-arrow(
+          data-goto='next',
+          aria-label='Go to next slide'
+        )
+          svg
+            use(xlink:href='#caret')
+        button.prev.carousel-arrow(
+          data-goto='prev',
+          aria-label='Go to previous slide'
+        )
+          svg
+            use(xlink:href='#caret')
 
     section#skills.container.skills(data-track-section)
       header.main
@@ -99,7 +156,35 @@ html(lang='en')
           span
           | Skills
         p A list of skills I've accumulated over the years, click a category to see skills and click a skill to see a little description about my experience.
-      .plus-loader
+      .content
+        each category in skills
+          section.accordion.category(class=category.isOpen ? "open" : "")
+            button(data-accordion-handler)
+              .title #{ category.name }
+              .caret
+                svg
+                  use(xlink:href='#caret')
+            article
+              each skill in category.skills
+                section.accordion.skill(data-id=skill._id)
+                  button(
+                    tabindex=category.isOpen ? "0" : "1",
+                    data-closable,
+                    data-accordion-handler
+                  )
+                    .title #{ skill.name }
+                    .caret
+                      svg
+                        use(xlink:href='#caret')
+                  article
+                    span.description #{ skill.description }
+                    br
+                    button.button(
+                      data-closable,
+                      tabindex='-1',
+                      data-go-to-project=skill._id
+                    ) Projects
+                    a.button(href='#contact', data-closable, tabindex='-1') Contact Me
 
     section#contact.container.contact(data-track-section)
       .content
