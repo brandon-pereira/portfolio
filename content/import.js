@@ -80,7 +80,7 @@ const normalizeAsset = asset => {
   output._id = asset._id;
   output.title = asset.title;
   output.description = asset.description;
-  output.url = `../../content/assets/${displayUrl}`;
+  output.url = `/assets/${displayUrl}`;
   output.contentType = asset.file.contentType;
   images.push({
     actualUrl: asset.file.url,

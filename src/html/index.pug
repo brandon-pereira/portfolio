@@ -115,7 +115,7 @@ html(lang='en')
                     img.app-icon(
                       alt=app.appName,
                       loading='lazy',
-                      src=app.icon.url
+                      src="../../content" + app.icon.url
                     )
                   a.cta(href=app.link, target='_', aria-label=app.appName)
                 .column-info
@@ -125,7 +125,7 @@ html(lang='en')
               .row.photos
                 each img in app.images
                   img(
-                    src=img.url,
+                    src="../../content" + img.url,
                     loading='lazy',
                     title=app.appName,
                     data-lightbox=img
