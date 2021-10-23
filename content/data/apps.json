@@ -7,7 +7,7 @@
     "icon": {
       "title": "BetterDo App Icon",
       "description": "BetterDo App Icon",
-      "url": "../../content/assets/app-icon-betterdo-v3.png",
+      "url": "/assets/app-icon-betterdo-v3.png",
       "contentType": "image/png"
     },
     "theme": "betterdo",
@@ -16,21 +16,21 @@
         "_id": "4loe2vKe5Bi91vAYlozgMv",
         "title": "Example of desktop experience",
         "description": "Example of desktop experience",
-        "url": "../../content/assets/4loe2vKe5Bi91vAYlozgMv.png",
+        "url": "/assets/4loe2vKe5Bi91vAYlozgMv.png",
         "contentType": "image/png"
       },
       {
         "_id": "6m4YZBGMvJECuhu3ClSjSG",
         "title": "Mobile Experience",
         "description": "Mobile Experience",
-        "url": "../../content/assets/6m4YZBGMvJECuhu3ClSjSG.png",
+        "url": "/assets/6m4YZBGMvJECuhu3ClSjSG.png",
         "contentType": "image/png"
       },
       {
         "_id": "4oOeF0V2ohzKPnxU3q4fg5",
         "title": "List Members User Interface",
         "description": "List Members User Interface",
-        "url": "../../content/assets/4oOeF0V2ohzKPnxU3q4fg5.png",
+        "url": "/assets/4oOeF0V2ohzKPnxU3q4fg5.png",
         "contentType": "image/png"
       }
     ]
@@ -43,7 +43,7 @@
     "icon": {
       "title": "Tv Tracker App Icon",
       "description": "Tv Tracker App Icon",
-      "url": "../../content/assets/app-icon-tv-tracker.png",
+      "url": "/assets/app-icon-tv-tracker.png",
       "contentType": "image/png"
     },
     "theme": "tv-tracker",
@@ -52,21 +52,21 @@
         "_id": "4ikvd4yIMMsUAamUwykYE8",
         "title": "Mobile Android Experience",
         "description": "Mobile Android Experience",
-        "url": "../../content/assets/4ikvd4yIMMsUAamUwykYE8.png",
+        "url": "/assets/4ikvd4yIMMsUAamUwykYE8.png",
         "contentType": "image/png"
       },
       {
         "_id": "4cajmluS5OUcyoyWKMqewm",
         "title": "Mac status bar experience",
         "description": "Mac status bar experience",
-        "url": "../../content/assets/4cajmluS5OUcyoyWKMqewm.png",
+        "url": "/assets/4cajmluS5OUcyoyWKMqewm.png",
         "contentType": "image/png"
       },
       {
         "_id": "30rOMLd7i00YiQW2GemacK",
         "title": "Desktop experience",
         "description": "Desktop experience",
-        "url": "../../content/assets/30rOMLd7i00YiQW2GemacK.png",
+        "url": "/assets/30rOMLd7i00YiQW2GemacK.png",
         "contentType": "image/png"
       }
     ]
@@ -79,7 +79,7 @@
     "icon": {
       "title": "Wings Cheap App Icon",
       "description": "Wings Cheap App Icon",
-      "url": "../../content/assets/app-icon-wings-cheap.png",
+      "url": "/assets/app-icon-wings-cheap.png",
       "contentType": "image/png"
     },
     "theme": "wings-cheap",
@@ -88,21 +88,21 @@
         "_id": "5fxagEO5J6ucyQ0MmQQgAE",
         "title": "Desktop view of landing screen",
         "description": "Desktop view of landing screen",
-        "url": "../../content/assets/5fxagEO5J6ucyQ0MmQQgAE.png",
+        "url": "/assets/5fxagEO5J6ucyQ0MmQQgAE.png",
         "contentType": "image/png"
       },
       {
         "_id": "3Eh8HFBZBKUcwummomseyA",
         "title": "Mobile view of results screen",
         "description": "Mobile view of results screen",
-        "url": "../../content/assets/3Eh8HFBZBKUcwummomseyA.png",
+        "url": "/assets/3Eh8HFBZBKUcwummomseyA.png",
         "contentType": "image/png"
       },
       {
         "_id": "5G7FgIiNQAmyQO0mu8yKem",
         "title": "Mobile view of landing screen",
         "description": "Mobile view of landing screen",
-        "url": "../../content/assets/5G7FgIiNQAmyQO0mu8yKem.png",
+        "url": "/assets/5G7FgIiNQAmyQO0mu8yKem.png",
         "contentType": "image/png"
       }
     ]
