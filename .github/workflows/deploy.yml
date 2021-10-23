@@ -2,7 +2,7 @@ name: Deploy
 on:
   push:
     branches:
-      - master
+      - v4
 jobs:
   deploy:
     name: Deploy
@@ -14,8 +14,11 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
+          script_stop: true
           script: |
             cd www/portfolio
+            git checkout .
+            git checkout v4
             git pull
-            npm install
+            npm install --production=false
             npm run build
