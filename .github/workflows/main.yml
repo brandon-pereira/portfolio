@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - v4
+  repository_dispatch:
+    types: [publish-event]
 jobs:
   refreshContent:
     name: Get Latest Content
