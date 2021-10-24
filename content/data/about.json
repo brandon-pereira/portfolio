@@ -1,52 +1,10 @@
 {
   "_id": "21dMmPoak8O2AIMmIUGKWS",
-  "firstName": "Brandon",
+  "firstName": "Branclon",
   "lastName": "Pereira",
-  "resume": {
-    "metadata": {
-      "tags": []
-    },
-    "sys": {
-      "space": {
-        "sys": {
-          "type": "Link",
-          "linkType": "Space",
-          "id": "clwxl9y31vqr"
-        }
-      },
-      "id": "4WgPOj5DnyIGQ4MMOwesga",
-      "type": "Asset",
-      "createdAt": "2018-08-28T03:06:50.155Z",
-      "updatedAt": "2018-08-28T03:06:50.155Z",
-      "environment": {
-        "sys": {
-          "id": "master",
-          "type": "Link",
-          "linkType": "Environment"
-        }
-      },
-      "revision": 1,
-      "locale": "en-US"
-    },
-    "fields": {
-      "title": "Resume",
-      "description": "Resume",
-      "file": {
-        "url": "//assets.ctfassets.net/clwxl9y31vqr/4WgPOj5DnyIGQ4MMOwesga/e3722c318bdf96f58b42219e426e1e87/brandon-pereira-resume.pdf",
-        "details": {
-          "size": 60361
-        },
-        "fileName": "brandon-pereira-resume.pdf",
-        "contentType": "application/pdf"
-      }
-    }
-  },
   "description": "<h2 id=\"about-me\">About Me</h2>\n<h3 id=\"hi-im-brandon\">Hi, I&#39;m Brandon.</h3>\n<p>I’m a full-stack developer specializing in front-end web development. I currently live in Calgary, Alberta and am employed by <a href=\"https://www.criticalmass.com/\">Critical Mass</a>. I graduated from <a href=\"https://www.sait.ca/\">SAIT Polytechnic</a> with a diploma in object-oriented software development and achieved several awards for exceptional grades. I have a passion for programming, and have been programming since 2006.</p>\n<h3 id=\"what-im-up-to\">What I&#39;m up to</h3>\n<p>Currently I’m working full-time as a senior front-end developer. On top of this, I’m also contributing to <a href=\"https://github.com/brandon-pereira\">open source projects</a>, volunteering at the <a href=\"https://calgarylibrary.ca/\">Calgary Public Libraries</a> Coder Dojo program, and attending/hosting Meetups related to web and software development.</p>\n",
-  "scrollText": "software|websites|apps|all the things!",
+  "scrollText": "websites|apps|teams|software|all the things!",
   "email": "brandonpereiras@gmail.com",
   "githubUrl": "https://github.com/brandon-pereira",
-  "twitterUrl": "http://www.twitter.com/Branclon_",
-  "facebookUrl": "http://www.facebook.com/bpereira",
-  "instagramUrl": "http://www.instagram.com/brandonpereira_",
   "linkedInUrl": "https://ca.linkedin.com/in/brandonpereira"
 }
