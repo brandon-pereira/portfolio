@@ -291,12 +291,10 @@ class Projects extends Base {
         Object.keys(config).forEach(key =>
           $asset.setAttribute(key, config[key])
         );
-        $asset.addEventListener('click', () =>
-          this.lightbox.then(l => {
-            l.set(asset);
-            l.open();
-          })
-        );
+        $asset.addEventListener('click', () => {
+          this.lightbox.set(asset);
+          this.lightbox.open();
+        });
         $node.querySelector('[data-project-images]').appendChild($asset);
       });
     }
