@@ -155,7 +155,7 @@ class Projects extends Base {
     const elements = projects.map(project => this._getSnippetNode(project));
     this._addElementsToGrid(elements);
     this._toggleDetailsView(false);
-    // Scroll.scrollTo(this.el);
+    this.el.scrollIntoView();
     this.logEvent('projects', 'filter', title);
   }
 
@@ -184,7 +184,7 @@ class Projects extends Base {
    * @param {Boolean} isShow
    */
   _toggleDetailsView(isShow: boolean): void {
-    // Scroll.scrollTo(this.el);
+    this.el.scrollIntoView();
     this.$loadMore.classList.toggle(
       'hidden',
       isShow || this.$filters.classList.contains('visible')
