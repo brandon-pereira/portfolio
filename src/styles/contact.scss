@@ -4,8 +4,9 @@
   src: url('../static/fonts/social.woff2') format('woff2'),
     url('../static/fonts/social.woff') format('woff');
 }
+
 .container.contact {
-  padding-bottom: 50px;
+  padding-bottom: 4rem;
 }
 .grid {
   margin: 0 -5px;
@@ -17,9 +18,6 @@
     box-sizing: border-box;
     margin: 0 5px 5px 0;
     width: 100%;
-    @include medium() {
-      width: calc(50% - 5px);
-    }
     @include large() {
       width: calc(33% - 5px);
     }
@@ -48,31 +46,6 @@
     &.email {
       &:before {
         content: '\e908';
-      }
-    }
-    &.fb {
-      background-color: #3b5998;
-      &:before {
-        content: '\e903';
-      }
-    }
-    &.instagram {
-      background-color: #4e433c;
-      &:before {
-        content: '\e900';
-      }
-    }
-    &.twitter {
-      background-color: #fff;
-      &:before {
-        content: '\e902';
-        color: #1da1f2;
-      }
-    }
-    &.dribbble {
-      background-color: #ea4c89;
-      &:before {
-        content: '\e904';
       }
     }
     &.git {
