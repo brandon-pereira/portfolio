@@ -1,8 +1,0 @@
-module.exports = {
-  plugins: ['jest'],
-  extends: ['plugin:jest/recommended'],
-  rules: {
-    'jest/valid-title': 0,
-    'jest/no-conditional-expect': 0
-  }
-};

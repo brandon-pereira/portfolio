@@ -46,9 +46,6 @@
     "test": "eslint . && jest",
     "get-content": "ts-node ./content/import"
   },
-  "engines": {
-    "node": ">=10.7.0"
-  },
   "author": "Brandon Pereira",
   "license": "ISC"
 }
