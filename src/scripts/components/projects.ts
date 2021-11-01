@@ -3,41 +3,13 @@ import throttle from '../lib/throttle';
 import animate from '../lib/animate';
 import Masonry from '../lib/masonry';
 import formatDate from '../lib/formatDate';
+import { Project } from '../../../content/models/projects';
 
 type DeeplinkPayload = {
   id: string;
   title: string;
 };
 type ProjectEvent = CustomEvent<DeeplinkPayload>;
-type Language = {
-  _id: string;
-  name: string;
-  description: string;
-  skillLevel: 'Pro' | 'Novice';
-};
-
-type Image = {
-  _id: string;
-  title: string;
-  url: string;
-  contentType: string;
-};
-
-type Project = {
-  _id: string;
-  index?: number;
-  title: string;
-  date: string;
-  languages: Language[];
-  shortDescription: string;
-  description: string;
-  type: 'Internal' | 'External';
-  status: 'Coming Soon';
-  images: Image[];
-  link: string;
-  isPinned: boolean;
-  gitUrl?: string;
-};
 
 class Projects extends Base {
   $projects: HTMLElement;

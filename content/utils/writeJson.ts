@@ -3,10 +3,8 @@ const { writeFile } = fs.promises;
 
 import path from 'path';
 
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
-export default (fileName, json) =>
+export default (fileName: string, json: unknown): Promise<void> =>
   writeFile(
     path.join(__dirname, '..', 'data', fileName),
     JSON.stringify(json, null, '  ')
-  ).promise;
+  );

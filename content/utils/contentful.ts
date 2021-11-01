@@ -1,15 +1,16 @@
-const contentful = require('contentful');
+import { createClient, ContentfulClientApi } from 'contentful';
 
-export default class Contentful {
-  constructor(auth) {
-    this.client = contentful.createClient(auth);
+class Contentful {
+  client: ContentfulClientApi;
+
+  constructor(auth: { space: string; accessToken: string }) {
+    this.client = createClient(auth);
   }
 
-  getAllEntries() {
-    return this.client.getEntries();
-  }
-
-  async getEntries(contentType, query) {
+  async getEntries(
+    contentType: string,
+    query: { [key: string]: any; order?: string }
+  ): Promise<any[]> {
     const entries = await this.client.getEntries({
       content_type: contentType,
       ...query
@@ -20,7 +21,7 @@ export default class Contentful {
     throw new Error("getEntries didn't return an array!");
   }
 
-  convertItem(_item) {
+  convertItem(_item: any): any {
     const item = {
       _id: _item.sys.id,
       ..._item.fields
@@ -33,3 +34,5 @@ export default class Contentful {
     return item;
   }
 }
+
+export default Contentful;

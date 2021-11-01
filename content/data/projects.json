@@ -692,9 +692,9 @@
     "description": "<p>A zero-dependency module to scroll between predefined text. Leverages &quot;Element.animate&quot; for modern browsers, and falls back on simplistic CSS based animations for legacy browsers. Published to npm as an open-source project.</p>\n",
     "type": "Internal",
     "status": "Live",
+    "images": [],
     "link": "https://github.com/brandon-pereira/scroll-text",
-    "gitUrl": "https://github.com/brandon-pereira/scroll-text",
-    "images": []
+    "gitUrl": "https://github.com/brandon-pereira/scroll-text"
   },
   {
     "_id": "1bKAmxVy8ImEGgiKCCUsw0",
@@ -1079,8 +1079,8 @@
     "description": "<p>Blue Shield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that.</p>\n<p>Blue Shield uses a unique CMS which requires each page to be built with custom elements. Rather than us manually coding in these elements, we thought it would be smart to automate some of the tedious work. We built a templating system which allowed us to both QA our pages with dummy content, as well as deliver the pages with these transformed elements.</p>\n<p>On top of this, I also flew to California a couple of times to help their team build their pages. This required me to mentor some of their web developers, communicate/strategize with their tech leads, and help solve some problems they were facing.</p>\n",
     "type": "External",
     "status": "Live",
-    "link": "https://www.blueshieldca.com/",
-    "images": []
+    "images": [],
+    "link": "https://www.blueshieldca.com/"
   },
   {
     "_id": "4T7tK8ZdlmKWYIwSemuIU6",
@@ -1552,8 +1552,8 @@
     "description": "<p>I was contacted by the owner to aid in a new campaign that he had. His idea was to partner with local radio stations and have them compete over the best radio station. I aided in this promotion by developing a website allowing users to vote on their favourite radio station. I also had allowed administrators to view poll results in real-time.</p>\n<p>By the end of the 2-week campaign, we had received over 30,000 total votes! </p>\n",
     "type": "External",
     "status": "Unavailable",
-    "link": "http://www.klassickennels.com/",
-    "images": []
+    "images": [],
+    "link": "http://www.klassickennels.com/"
   },
   {
     "_id": "6oTjNFvzCEa4iUOEegMA8a",
