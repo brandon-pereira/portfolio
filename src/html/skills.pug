@@ -1,0 +1,35 @@
+section#skills.container.skills(data-track-section)
+  header.main
+    h2.uglyText Personal
+      span
+      | Skills
+    p A list of skills I've accumulated over the years, click a category to see skills and click a skill to see a little description about my experience.
+  .content
+    each category in skills
+      section.accordion.category(class=category.isOpen ? "open" : "")
+        button(data-accordion-handler)
+          .title #{ category.name }
+          .caret
+            svg
+              use(xlink:href='#caret')
+        article
+          each skill in category.skills
+            section.accordion.skill(data-id=skill._id)
+              button(
+                tabindex=category.isOpen ? "0" : "1",
+                data-closable,
+                data-accordion-handler
+              )
+                .title #{ skill.name }
+                .caret
+                  svg
+                    use(xlink:href='#caret')
+              article
+                span.description #{ skill.description }
+                br
+                button.button(
+                  data-closable,
+                  tabindex='-1',
+                  data-go-to-project=skill._id
+                ) Projects
+                a.button(href='#contact', data-closable, tabindex='-1') Contact Me

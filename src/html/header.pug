@@ -1,0 +1,9 @@
+header#header.header
+  .logo 
+    svg 
+      use(xlink:href='#clon')
+  .copy 
+    span.story-copy Hi, I'm
+    h1.name #{ about.firstName }
+    span.story-copy and I build&nbsp;
+      span(data-scroll-text=about.scrollText)
