@@ -1,17 +1,17 @@
-const projects = require('../content/data/projects.json');
-const skills = require('../content/data/skills.json');
+const _projects = require('../content/data/projects.json');
+const _skills = require('../content/data/skills.json');
 
-const getAllIdsFromProjects = projects => {
+const getAllIdsFromProjects = _projects => {
   const ids = [];
-  projects.forEach(project => {
+  _projects.forEach(project => {
     ids.push(...project.languages.map(lang => lang._id));
   });
   return Array.from(new Set(ids));
 };
 
-const getAllIdsFromSkills = skills => {
+const getAllIdsFromSkills = _skills => {
   const ids = [];
-  skills.forEach(category => {
+  _skills.forEach(category => {
     category.skills.forEach(skill => {
       ids.push(skill._id);
     });
@@ -20,8 +20,8 @@ const getAllIdsFromSkills = skills => {
 };
 
 describe('Valid Keys', () => {
-  const projectIds = getAllIdsFromProjects(projects);
-  const skillIds = getAllIdsFromSkills(skills);
+  const projectIds = getAllIdsFromProjects(_projects);
+  const skillIds = getAllIdsFromSkills(_skills);
   test('Project IDs', () => {
     const invalidIds = projectIds.filter(id => !skillIds.includes(id));
     if (invalidIds.length) {
