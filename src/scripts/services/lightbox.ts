@@ -77,7 +77,7 @@ class Lightbox {
     $el.classList.add('lightbox');
     $el.setAttribute('data-close', 'true');
     $el.innerHTML = `
-            <a data-close class="close-button">&times;</a>
+            <button data-close class="close-button">&times;</button>
             <div class="modal-content">
                 <div data-asset>
             
