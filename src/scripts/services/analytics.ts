@@ -1,3 +1,9 @@
+declare global {
+  interface Window {
+    ga: (a: string, b: string, c: string, d: string, e: string) => void;
+  }
+}
+
 /**
  * Safely fire GA Event
  * See: https://developers.google.com/analytics/devguides/collection/analyticsjs/events
@@ -5,7 +11,11 @@
  * @param {String} action
  * @param {String} label
  */
-export default function sendEvent(category, action, label) {
+export default function sendEvent(
+  category: string,
+  action: string,
+  label: string
+): void {
   if (window.ga && process.env.NODE_ENV === 'production') {
     window.ga('send', 'event', category, action, label);
   } else if (window.ga && process.env.NODE_ENV !== 'production') {

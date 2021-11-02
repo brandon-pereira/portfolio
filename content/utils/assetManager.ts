@@ -68,6 +68,7 @@ class AssetManager {
       );
       try {
         await this._downloadFileToDisk(sourceUrl, outputPath);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } catch (err: any) {
         if (err && err.code !== 'EEXIST') {
           throw err;
@@ -79,7 +80,7 @@ class AssetManager {
   _downloadFileToDisk(sourceUrl: string, outputPath: string): Promise<void> {
     return new Promise((resolve, reject) => {
       const file = fs.createWriteStream(outputPath, { flags: 'wx' });
-      const onError = (err: any) => {
+      const onError = (err: Error | string) => {
         // eslint-disable-next-line @typescript-eslint/no-empty-function
         fs.unlink(outputPath, () => {});
         file.destroy();

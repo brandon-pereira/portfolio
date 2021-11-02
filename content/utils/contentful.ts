@@ -9,7 +9,8 @@ class Contentful {
 
   async getEntries(
     contentType: string,
-    query: { [key: string]: any; order?: string }
+    query: { [key: string]: boolean | string }
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   ): Promise<any[]> {
     const entries = await this.client.getEntries({
       content_type: contentType,
@@ -21,6 +22,7 @@ class Contentful {
     throw new Error("getEntries didn't return an array!");
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
   convertItem(_item: any): any {
     const item = {
       _id: _item.sys.id,

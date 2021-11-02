@@ -128,6 +128,6 @@ export default class Apps extends Base {
     this.currentIndex = slide;
 
     // Analytics
-    this.logEvent('apps', 'show-slide', slide);
+    this.logEvent('apps', 'show-slide', `${slide}`);
   }
 }

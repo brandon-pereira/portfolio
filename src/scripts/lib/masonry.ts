@@ -49,7 +49,7 @@ class Masonry {
   }
 
   appendElements(elements: HTMLElement[]): void {
-    this.items = this.items.concat(...Array.from(elements));
+    this.items = this.items = [...this.items, ...Array.from(elements)];
     this.recreateColumns();
   }
 

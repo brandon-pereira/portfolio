@@ -3,7 +3,7 @@ import lightbox from '../services/lightbox';
 export default class Base {
   el: HTMLElement;
   lightbox: typeof lightbox;
-  logEvent: any;
+  logEvent: (category: string, action: string, label: string) => void;
 
   constructor(el: HTMLElement) {
     if (process.env.NODE_ENV !== 'production' && !el) {

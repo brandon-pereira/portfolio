@@ -6,6 +6,7 @@
     "typeRoots": ["node_modules/@types", "./types"],
     "module": "esnext",
     "outDir": "./dist",
+    "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
     "target": "es2021"
   },

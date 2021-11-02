@@ -1,5 +1,8 @@
 import Base from './base';
 import animate from '../lib/animate';
+import { DeeplinkPayload } from './projects';
+
+export type SkillEvent = CustomEvent<string>;
 
 export default class Skills extends Base {
   init(): Promise<void> {
@@ -8,7 +11,8 @@ export default class Skills extends Base {
 
   events(): void {
     Array.from(this.el.querySelectorAll('[data-accordion-handler]')).forEach(
-      handle => handle.addEventListener('click', () => this.toggleItem(handle))
+      (handle: HTMLElement) =>
+        handle.addEventListener('click', () => this.toggleItem(handle))
     );
 
     Array.from(this.el.querySelectorAll('[data-go-to-project]')).forEach(
@@ -25,12 +29,14 @@ export default class Skills extends Base {
         })
     );
 
-    this.el.addEventListener('goToSkill', e => this.deeplink(e.detail));
+    this.el.addEventListener('goToSkill', (e: SkillEvent) =>
+      this.deeplink(e.detail)
+    );
 
     super.events();
   }
 
-  goToSkill(detail): void {
+  goToSkill(detail: DeeplinkPayload): void {
     document
       .querySelector('#projects')
       .dispatchEvent(new CustomEvent('goToLang', { detail }));
@@ -68,7 +74,9 @@ export default class Skills extends Base {
   toggleTabIndex($el: HTMLElement, bool: boolean): void {
     const index = bool ? 0 : -1;
     const isCategory = $el.classList.contains('category');
-    let els = $el.querySelectorAll('[data-closable]');
+    let els = $el.querySelectorAll(
+      '[data-closable]'
+    ) as NodeListOf<HTMLElement>;
     if (isCategory && bool) {
       // Only add tab index to skills
       els = $el.querySelectorAll('article > section > [data-closable]');
@@ -84,10 +92,12 @@ export default class Skills extends Base {
     });
   }
 
-  deeplink(id): void {
-    const skill = this.el.querySelector('[data-id="' + id + '"]');
+  deeplink(id: string): void {
+    const skill = this.el.querySelector(
+      '[data-id="' + id + '"]'
+    ) as HTMLElement;
     if (skill) {
-      const category = skill.closest('.accordion.category');
+      const category = skill.closest('.accordion.category') as HTMLElement;
       if (!category.classList.contains('open')) this.toggleItem(category);
       if (!skill.classList.contains('open')) this.toggleItem(skill);
       console.log(this.el);

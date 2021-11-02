@@ -5,11 +5,11 @@ import Masonry from '../lib/masonry';
 import formatDate from '../lib/formatDate';
 import { Project } from '../../../content/models/projects';
 
-type DeeplinkPayload = {
+export type DeeplinkPayload = {
   id: string;
   title: string;
 };
-type ProjectEvent = CustomEvent<DeeplinkPayload>;
+export type ProjectEvent = CustomEvent<DeeplinkPayload>;
 
 class Projects extends Base {
   $projects: HTMLElement;

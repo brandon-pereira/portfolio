@@ -41,7 +41,7 @@
     "build:copy": "npm run clean && mkdir -p dist && cp -R src/static dist/static && cp -R content/assets dist/assets",
     "start": "npm run build:copy && parcel ./src/html/index.pug",
     "clean": "rm -rf dist",
-    "test": "eslint . && jest",
+    "test": "eslint . && tsc --noemit && jest",
     "get-content": "ts-node ./content/import"
   },
   "author": "Brandon Pereira",
