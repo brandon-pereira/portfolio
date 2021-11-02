@@ -1,12 +1,10 @@
-const importFresh = require('import-fresh');
-
 module.exports = {
   locals: {
-    seo: importFresh('./content/data/seo.json'),
-    projects: importFresh('./content/data/projects.json'),
-    apps: importFresh('./content/data/apps.json'),
-    skills: importFresh('./content/data/skills.json'),
-    contact: importFresh('./content/data/contact.json'),
-    about: importFresh('./content/data/about.json')
+    seo: require('./content/data/seo.json'),
+    projects: require('./content/data/projects.json'),
+    apps: require('./content/data/apps.json'),
+    skills: require('./content/data/skills.json'),
+    contact: require('./content/data/contact.json'),
+    about: require('./content/data/about.json')
   }
 };
