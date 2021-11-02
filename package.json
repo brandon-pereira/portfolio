@@ -31,7 +31,6 @@
     "marked": "^3.0.7",
     "nunjucks": "^3.2.3",
     "parcel": "^2.0.0",
-    "parcel-plugin-nunjucks": "^2.2.2",
     "prettier": "^2.4.1",
     "sharp": "^0.29.1",
     "ts-node": "^10.4.0",
