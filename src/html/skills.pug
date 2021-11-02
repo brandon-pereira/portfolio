@@ -16,7 +16,7 @@ section#skills.container.skills(data-track-section)
           each skill in category.skills
             section.accordion.skill(data-id=skill._id)
               button(
-                tabindex=category.isOpen ? "0" : "1",
+                tabindex=category.isOpen ? "0" : "-1",
                 data-closable,
                 data-accordion-handler
               )

@@ -307,7 +307,9 @@ class Projects extends Base {
       project.shortDescription || project.description;
     $project.addEventListener('click', () => this.showMoreDetails(project._id));
     if (project.images && project.images.length) {
-      $project.querySelector('img').setAttribute('src', project.images[0].url);
+      const $img = $project.querySelector('img');
+      $img.setAttribute('src', project.images[0].url);
+      $img.setAttribute('alt', project.title);
     }
     return $project;
   }
