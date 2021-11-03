@@ -26,7 +26,7 @@ section#apps.container.apps(
                 img.app-icon(
                   alt=app.appName,
                   loading='lazy',
-                  src="../../content" + app.icon.url
+                  src="../../content" + app.icon.url + "?width=80"
                 )
               a.cta(href=app.link, target='_', aria-label=app.appName)
             .column-info
@@ -36,7 +36,7 @@ section#apps.container.apps(
           .row.photos
             each img in app.images
               img(
-                src="../../content" + img.url,
+                src="../../content" + img.url + "?width=300",
                 loading='lazy',
                 title=app.appName,
                 data-lightbox=img
