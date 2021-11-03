@@ -5,7 +5,7 @@
   $background: map-deep-get($config, skills, background);
   background: $background;
   background: linear-gradient($background, darken($background, 10%)),
-    url('../static/backgrounds/diamond.png');
+    url('../assets/diamond.png');
   background-blend-mode: multiply;
   header.main {
     color: #fff;

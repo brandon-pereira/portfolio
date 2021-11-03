@@ -39,7 +39,7 @@
   },
   "scripts": {
     "build": "npm run build:copy && NODE_ENV='production' parcel build ./src/html/index.pug",
-    "build:copy": "npm run clean && mkdir -p dist && cp -R src/static dist/static && cp -R content/assets dist/assets",
+    "build:copy": "npm run clean && mkdir -p dist && cp static/* dist && cp -R content/assets dist/assets",
     "start": "npm run build:copy && parcel ./src/html/index.pug",
     "clean": "rm -rf dist",
     "test": "eslint . && tsc --noemit && jest",
