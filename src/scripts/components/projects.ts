@@ -45,6 +45,10 @@ class Projects extends Base {
     this._addElementsToGrid(elements);
     this.el.querySelector('.plus-loader').classList.add('hidden');
     this.$projects.classList.remove('hidden');
+    this.$loadMore.classList.toggle(
+      'hidden',
+      this.numVisibleProjects >= projects.length
+    );
     return super.init();
   }
 
