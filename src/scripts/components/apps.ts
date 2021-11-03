@@ -28,13 +28,9 @@ export default class Apps extends Base {
 
     Array.from(this.el.querySelectorAll('[data-lightbox]')).forEach(el =>
       el.addEventListener('click', () => {
-        const url = el.getAttribute('src');
         const raw = el.getAttribute('data-lightbox');
         const json = JSON.parse(raw);
-        this.lightbox.set({
-          ...json,
-          url // overwrite url with parcel generated url
-        });
+        this.lightbox.set(json);
         this.lightbox.open();
       })
     );
