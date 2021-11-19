@@ -63,7 +63,7 @@
   },
   {
     "_id": "VgCqOsES4aB2Stq0FgFZf",
-    "name": "Management",
+    "name": "Leadership",
     "skills": [
       {
         "_id": "5XbCK4r3gBe06kaoQiVX5d",
@@ -85,11 +85,5 @@
       }
     ],
     "isCategory": true
-  },
-  {
-    "_id": "7mhKhZGfjuPxRWmHnt7YWy",
-    "name": "Leadership",
-    "isCategory": true,
-    "skills": []
   }
 ]
