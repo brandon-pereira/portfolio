@@ -60,5 +60,11 @@
       }
     ],
     "isCategory": true
+  },
+  {
+    "_id": "VgCqOsES4aB2Stq0FgFZf",
+    "name": "Management",
+    "isCategory": true,
+    "skills": []
   }
 ]
