@@ -86,16 +86,18 @@
         "skillLevel": "Pro"
       },
       {
-        "_id": "5AFDd2ceIw6amcqciWq0Gg",
-        "name": "JavaServer / Groovy",
-        "description": "I've built a handful of Java based applications, as well as modified/expanded upon the functionality of existing projects.",
-        "skillLevel": "Pro"
+        "_id": "6F55bBZ4E8o68YI06gsgEM",
+        "name": "GraphQL",
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
+        "skillLevel": "Pro",
+        "isOpen": false,
+        "isCategory": false
       },
       {
-        "_id": "5l81U41OJaiSGYcG8k0OiK",
-        "name": "PHP",
-        "description": "I have experience with PHP, I'm capable of building complex web applications.  I have experience with tools like CakePHP and other MVC libraries as well.",
-        "skillLevel": "Intermediate"
+        "_id": "1sba8qggLqQ8Koqku6UW4g",
+        "name": "MongoDB",
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
+        "skillLevel": "Pro"
       }
     ],
     "isCategory": true
