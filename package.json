@@ -38,10 +38,10 @@
     "typescript": "^4.4.4"
   },
   "scripts": {
-    "build": "npm run build:copy && NODE_ENV='production' parcel build ./src/html/index.pug",
-    "build:copy": "npm run clean && mkdir -p dist && cp static/* dist && cp -R content/assets dist/assets",
-    "start": "npm run build:copy && parcel ./src/html/index.pug",
-    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run copy-static && NODE_ENV='production' parcel build ./src/html/index.pug",
+    "copy-static": "mkdir -p dist && cp static/* dist && cp -R content/assets dist/assets",
+    "start": "npm run clean && npm run copy-static && parcel ./src/html/index.pug",
+    "clean": "rm -rf dist && rm -rf .parcel-cache",
     "test": "eslint . && tsc --noemit && jest",
     "get-content": "ts-node ./content/import"
   },
