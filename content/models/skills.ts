@@ -13,6 +13,7 @@ type Skill = {
   _id: string;
   name: string;
   description: string;
+  disableProjectsConnection: boolean;
 };
 
 async function importSkills({ contentful }: Router): Promise<void> {

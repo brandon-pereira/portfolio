@@ -27,9 +27,10 @@ section#skills.container.skills(data-track-section)
               article
                 span.description #{ skill.description }
                 br
-                button.button(
-                  data-closable,
-                  tabindex='-1',
-                  data-go-to-project=skill._id
-                ) Projects
+                if (!skill.disableProjectsConnection)
+                  button.button(
+                    data-closable,
+                    tabindex='-1',
+                    data-go-to-project=skill._id
+                  ) Projects
                 a.button(href='#contact', data-closable, tabindex='-1') Contact Me

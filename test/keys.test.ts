@@ -13,7 +13,9 @@ const getAllIdsFromSkills = _skills => {
   const ids = [];
   _skills.forEach(category => {
     category.skills.forEach(skill => {
-      ids.push(skill._id);
+      if (!skill.disableProjectsConnection) {
+        ids.push(skill._id);
+      }
     });
   });
   return Array.from(new Set(ids));
