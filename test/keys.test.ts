@@ -25,16 +25,23 @@ describe('Valid Keys', () => {
   test('Project IDs', () => {
     const invalidIds = projectIds.filter(id => !skillIds.includes(id));
     if (invalidIds.length) {
-      console.error(invalidIds);
+      console.error(
+        'Invalid projects detected, search JSON for these keys:',
+        invalidIds
+      );
     }
-    expect(invalidIds.length).toBe(0);
+    expect(invalidIds).toHaveLength(0);
   });
 
   test('Skill IDs', () => {
     const invalidIds = skillIds.filter(id => !projectIds.includes(id));
     if (invalidIds.length) {
-      console.error(invalidIds);
+      console.error(
+        'Invlalid Skills JSON detected, search JSON for the following keys',
+        invalidIds,
+        'This is likely because no project currently references these keys.'
+      );
     }
-    expect(invalidIds.length).toBe(0);
+    expect(invalidIds).toHaveLength(0);
   });
 });

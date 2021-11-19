@@ -135,19 +135,6 @@
           .caret svg {
             fill: #b0b0b0;
           }
-          .skillLevel {
-            font-weight: 400;
-            align-self: center;
-            &.pro {
-              color: #005522;
-            }
-            &.intermediate {
-              color: #e28000;
-            }
-            &.novice {
-              color: #f00;
-            }
-          }
           &:focus .title {
             text-decoration: underline;
           }

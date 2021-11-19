@@ -13,7 +13,6 @@ type Skill = {
   _id: string;
   name: string;
   description: string;
-  skillLevel: 'Pro' | 'Intermediate' | 'Novice';
 };
 
 async function importSkills({ contentful }: Router): Promise<void> {

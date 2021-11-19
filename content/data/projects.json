@@ -7,34 +7,22 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "6F55bBZ4E8o68YI06gsgEM",
         "name": "GraphQL",
-        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
-        "skillLevel": "Pro",
-        "isOpen": false,
-        "isCategory": false
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects."
       },
       {
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
-        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
-      },
-      {
-        "_id": "1t9XBlAcFWiY88k4OS2UuG"
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
       }
     ],
     "shortDescription": "I worked with a local entrepreneur to develop a digital wall calendar. He wanted to be able to have a wall-mounted touch-screen monitor that could display current calendar events from multiple Google accounts.",
@@ -77,33 +65,24 @@
     "date": "2020-06-03",
     "languages": [
       {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
-      },
-      {
         "_id": "6F55bBZ4E8o68YI06gsgEM",
         "name": "GraphQL",
-        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
-        "skillLevel": "Pro",
-        "isOpen": false,
-        "isCategory": false
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       }
     ],
     "shortDescription": "We were tasked with rebuilding the Nissan and Infiniti shopping tools applications. This was my first major project with the role of Technology Lead.",
@@ -141,20 +120,17 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       }
     ],
     "shortDescription": "I built a contact form and information website for a local mortgage broker",
@@ -179,17 +155,12 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "shortDescription": "I built a quick and simple tool to help calculate the number of milliseconds in a given time (or vice versa).",
@@ -215,23 +186,17 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       }
     ],
     "shortDescription": "I built a quick and simple tool to calculate the number of bytes in a given string",
@@ -263,8 +228,7 @@
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       }
     ],
     "shortDescription": "I built a simple Messenger bot that gives you the Urban Dictionary definition of a word.",
@@ -290,22 +254,17 @@
       {
         "_id": "6F55bBZ4E8o68YI06gsgEM",
         "name": "GraphQL",
-        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
-        "skillLevel": "Pro",
-        "isOpen": false,
-        "isCategory": false
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       }
     ],
     "shortDescription": "Our company was tasked with building a new global website for Mitsubishi. The goal was to make it run in every market but share single source code. My goal was to focus on performance and making the application render more quickly. ",
@@ -343,37 +302,29 @@
     "date": "2019-01-04",
     "languages": [
       {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
-      },
-      {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
-        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
-        "skillLevel": "Pro"
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
       },
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       },
       {
         "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
         "name": "Animation",
-        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs.",
-        "skillLevel": "Pro"
+        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "7nfH4ACEppARTcIiFH1MBe",
@@ -383,8 +334,7 @@
       {
         "_id": "67DIl5u2EL9GkCc4Ojoyxi",
         "name": "React",
-        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next.",
-        "skillLevel": "Pro"
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
       }
     ],
     "shortDescription": "I built a web app for organizing and maintaining to-do lists and tasks.  It features has offline support, shared lists, and push notifications. Give it a try if you're looking to declutter your life.",
@@ -423,19 +373,14 @@
     "date": "2018-09-21",
     "languages": [
       {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
-      },
-      {
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
-        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
-        "skillLevel": "Pro"
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
       },
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       }
     ],
     "shortDescription": "I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. ",
@@ -468,22 +413,17 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "6F55bBZ4E8o68YI06gsgEM",
         "name": "GraphQL",
-        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
-        "skillLevel": "Pro",
-        "isOpen": false,
-        "isCategory": false
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       }
     ],
     "shortDescription": "My team and I were tasked to rebuild the FirstCommand website to be more modern. We got a blank slate, so we got to take advantage of the latest technologies.",
@@ -522,14 +462,12 @@
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       },
       {
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
-        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
-        "skillLevel": "Pro"
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
       }
     ],
     "shortDescription": "After a successful launch of our first Idris project for North America, the client asked if we could add more functionality and launch it in the European Union. ",
@@ -569,20 +507,17 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
-        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
-        "skillLevel": "Pro"
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
       },
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       }
     ],
     "shortDescription": "A web application for getting random cat pictures. Powered by service workers. It demonstrates offline caching, web push notifications, and progressive enhancement. ",
@@ -609,29 +544,22 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "56jx4l7uMUaeWKeW4sgwck"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       }
     ],
     "shortDescription": "The third version of my portfolio was a complete rewrite. The rewrite was done to drastically improve load times, improve search engine rankings, and redesign a couple sections of the site.",
@@ -672,8 +600,7 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       }
     ],
     "description": "<p>A zero-dependency module to scroll between predefined text. Leverages &quot;Element.animate&quot; for modern browsers, and falls back on simplistic CSS based animations for legacy browsers. Published to npm as an open-source project.</p>\n",
@@ -691,14 +618,12 @@
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       },
       {
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
-        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
-        "skillLevel": "Pro"
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
       }
     ],
     "shortDescription": "I built a chatbot for INFINITI Global. It allows users to learn about their new QX50 vehicle. It uses natural language processing to figure out users intent and is localized to Canadian English and French, as well as American English.",
@@ -731,40 +656,32 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
-        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
-        "skillLevel": "Pro"
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
       },
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       },
       {
         "_id": "6F55bBZ4E8o68YI06gsgEM",
         "name": "GraphQL",
-        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
-        "skillLevel": "Pro",
-        "isOpen": false,
-        "isCategory": false
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       }
     ],
     "shortDescription": "TvTracker is an application for tracking your TV Shows. It was built to work great on mobile, desktop, and even from your status bar (Mac).",
@@ -805,14 +722,12 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "shortDescription": "I built the internal brand guidelines website for Travel Alberta. This project had a clean state so I got to choose my own tech stack. I put a lot of effort into making the website load as fast as possible as well as look pixel perfect.",
@@ -845,8 +760,7 @@
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       }
     ],
     "shortDescription": "I built a chatbot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.",
@@ -886,35 +800,27 @@
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       },
       {
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
-        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)",
-        "skillLevel": "Pro"
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "shortDescription": "I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!",
@@ -955,14 +861,12 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "shortDescription": "I was tasked with rebuilding the Nissan and Infiniti Recalls tools to comply with their new brand guidelines. I took the opportunity to improve the responsiveness, appearance, and codebase.",
@@ -1002,20 +906,17 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
         "name": "Animation",
-        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs.",
-        "skillLevel": "Pro"
+        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "shortDescription": "I built a reveal page for Infinitis winter sales event. For each test drive, they planted a tree in America.",
@@ -1055,8 +956,7 @@
       {
         "_id": "65Vmh7LnxukgKwGIgu6K60",
         "name": "NodeJS",
-        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts.",
-        "skillLevel": "Pro"
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
       }
     ],
     "shortDescription": "Blue Shield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that. I helped build a static site generator as well as traveled to San Francisco to help their developers.",
@@ -1072,28 +972,19 @@
     "date": "2016-09-01",
     "languages": [
       {
-        "_id": "56jx4l7uMUaeWKeW4sgwck"
-      },
-      {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       }
     ],
     "shortDescription": "I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive and used some fun next-level technologies.",
@@ -1134,8 +1025,7 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       }
     ],
     "shortDescription": "I built a little splash loading animation while I was bored one rainy afternoon. Uses the prototype methodology and supports reopening and closing.",
@@ -1162,8 +1052,7 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "shortDescription": "When I was still in school, I loved dabbling with CSS. I would build whole applications interfaces just for fun. One day, I saw someone recreate iOS icons using CSS. I was inspired. ",
@@ -1204,29 +1093,22 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "67DIl5u2EL9GkCc4Ojoyxi",
         "name": "React",
-        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next.",
-        "skillLevel": "Pro"
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
       }
     ],
     "shortDescription": "We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.",
@@ -1266,26 +1148,17 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "4DBxgrmMvY0aQyg2K084OE"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "56jx4l7uMUaeWKeW4sgwck"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       }
     ],
     "shortDescription": "I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive and used some fun next-level technologies.",
@@ -1326,26 +1199,17 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       },
       {
         "_id": "2WyFStEcdy8SWQkOQMwUsO",
         "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks.",
-        "skillLevel": "Pro"
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
       },
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "1lrIPRDfA4um6yQaUWI4WK"
-      },
-      {
-        "_id": "5l81U41OJaiSGYcG8k0OiK"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       }
     ],
     "shortDescription": "BetterDo was my take on a todo application. I was unhappy with the alternatives, so I decided to build my own version.",
@@ -1384,20 +1248,12 @@
       {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "1t9XBlAcFWiY88k4OS2UuG"
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
       },
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "1lrIPRDfA4um6yQaUWI4WK"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "shortDescription": "For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design.",
@@ -1437,8 +1293,7 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "description": "<p>I developed a stack loading effect using CSS3 animations. This was for an internal project of mine, but I liked it enough to showcase it on its own.</p>\n",
@@ -1463,8 +1318,7 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "description": "<p>I developed an Apple lightning cable and USB connector in pure CSS3.</p>\n",
@@ -1487,13 +1341,9 @@
     "date": "2014-08-12",
     "languages": [
       {
-        "_id": "5l81U41OJaiSGYcG8k0OiK"
-      },
-      {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "shortDescription": "We partnered with local radio stations by creating a form for listeners to vote for their favourite radio stations.",
@@ -1511,11 +1361,7 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "5l81U41OJaiSGYcG8k0OiK"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "description": "<p><a href=\"http://habbo.com/\">Habbo</a> is a popular online world for teenagers. During my younger teenage years, I built a fansite for the game which allowed users to upload pictures of themselves and have unmoderated chat. It got very popular with about 1k hits a day. Unfortunately, I couldn&#39;t afford the bandwidth and had to close its doors.</p>\n",
@@ -1531,14 +1377,7 @@
       {
         "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
         "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS.",
-        "skillLevel": "Pro"
-      },
-      {
-        "_id": "5l81U41OJaiSGYcG8k0OiK"
-      },
-      {
-        "_id": "1lrIPRDfA4um6yQaUWI4WK"
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
       }
     ],
     "description": "<p>One of the first websites I built. This project was an advanced take on a family website. It had features like messaging, profiles, photo uploads, video sharing, etc.</p>\n",

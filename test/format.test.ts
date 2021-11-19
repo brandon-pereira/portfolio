@@ -38,9 +38,6 @@ describe('Formatting - Skills', () => {
           expect(typeof skill._id).toBe('string');
           expect(typeof skill.name).toBe('string');
           expect(typeof skill.description).toBe('string');
-          expect(
-            ['Pro', 'Intermediate', 'Novice'].includes(skill.skillLevel)
-          ).toBeTruthy();
         });
       });
     });

@@ -7,7 +7,6 @@ type Language = {
   _id: string;
   name: string;
   description: string;
-  skillLevel: 'Pro' | 'Novice';
 };
 
 export type Project = {
@@ -56,7 +55,15 @@ const normalizeProjects = (
       ? // convert to ISO date then stringify
         new Date(project.date as string).toISOString().split('T')[0]
       : undefined;
-    normalized.languages = project.languages || [];
+    normalized.languages = (project.languages || [])
+      // remove incorrectly formatted
+      .filter(lang => lang._id && lang.name && lang.description)
+      // normalize object
+      .map(lang => ({
+        _id: lang._id,
+        name: lang.name,
+        description: lang.description
+      }));
     normalized.shortDescription = project.shortDescription;
     normalized.description =
       (project.description && (await md2html(project.description || ''))) || '';
