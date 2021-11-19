@@ -451,7 +451,7 @@
     "shortDescription": "I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. ",
     "description": "<p>I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. </p>\n<p>In the video below you can see how the journey works. First, you&#39;re greeted by the bot to select your favourite college football team. Upon selection, you&#39;re then presented with an option to see your Titan in the camera. This is where the AR happens. Once you&#39;ve played around, you can choose to share with your friends. Lastly, you&#39;re asked to submit your information for a chance to win the customized Titan.</p>\n<p>Under the hood, we&#39;re leveraging our internal chatbot framework (developed and maintained by myself) to do a lot of the Messenger chat experience. We are also utilizing the Facebook Messenger AR Platform to build the augmented reality experience (this was especially difficult because the API isn&#39;t documented very well) and we&#39;re leveraging Azure and MongoDB for hosting/data storage.</p>\n",
     "type": "External",
-    "status": "Live",
+    "status": "Unavailable",
     "images": [
       {
         "_id": "1c9okCtbZo4quQGkOowqyo",
@@ -545,7 +545,7 @@
     "shortDescription": "After a successful launch of our first Idris project for North America, the client asked if we could add more functionality and launch it in the European Union. ",
     "description": "<p>After a successful launch of our first Idris project for North America, the client asked if we could add more functionality and launch it in the European Union. </p>\n<p>After reviewing feedback and user inputs from the North American project, we found there were several things we could improve upon. These included:</p>\n<ul>\n<li>Ability to compare models</li>\n<li>Ability to find Infiniti dealers near your location</li>\n<li>Ability to recommend a car based on your driving style</li>\n<li>Make platform GDPR compliant</li>\n</ul>\n<p>Aside from implementing the requested features, I also took the opportunity to improve our chatbot framework which we use under the hood. </p>\n<p>This project was a tremendous success for the client. We hope it will pave the way for similar projects down the road. </p>\n",
     "type": "External",
-    "status": "Live",
+    "status": "Unavailable",
     "images": [
       {
         "_id": "1F4wQroc5aYuMEGs0sG0oQ",
