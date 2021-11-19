@@ -23,8 +23,8 @@
       },
       {
         "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
-        "name": "SVG",
-        "description": "I've had tons of exposure to SVG, including animations. I know how to build icon sprite sheets, animate them, optimize them, and much more.",
+        "name": "Animation",
+        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs.",
         "skillLevel": "Pro"
       }
     ],
