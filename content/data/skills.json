@@ -45,7 +45,7 @@
         "_id": "3ctuYy42QIvvRR1T3pxI9r",
         "name": "Communication",
         "description": "Communication is a strong suit of mine. I believe that the key goal to a successful project is communication. I have experience communicating both internally and externally to clients.",
-        "disableProjectsConnection": false
+        "disableProjectsConnection": true
       },
       {
         "_id": "5XbCK4r3gBe06kaoQiVX5d",
@@ -69,7 +69,7 @@
         "_id": "6mRDQfMox9nmyvlJzAvOhw",
         "name": "Presentation Skills",
         "description": "I have always been passionate about presenting. I have experience pitching new businesses, walking clients through our progression of their applications, and presenting to broad audiences on technical and non-technical topics.",
-        "disableProjectsConnection": false
+        "disableProjectsConnection": true
       }
     ],
     "isCategory": true
