@@ -4,15 +4,26 @@
     "name": "Front End Web Development",
     "skills": [
       {
-        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
-        "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
-        "skillLevel": "Pro"
-      },
-      {
         "_id": "4sUW7iVkDKeq4KI8IKKCmy",
         "name": "Javascript (ES6+)",
         "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "7nfH4ACEppARTcIiFH1MBe",
+        "name": "TypeScript",
+        "description": "I'm very comfortable jumping into an existing TypeScript codebase or working on migrating a codebase to TypeScript. I also have a firm understanding of Generics and other more advanced features. "
+      },
+      {
+        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
+        "name": "React",
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next.",
+        "skillLevel": "Pro"
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, LESS, and SASS.",
         "skillLevel": "Pro"
       },
       {
