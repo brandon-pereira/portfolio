@@ -38,6 +38,43 @@
     "isCategory": true
   },
   {
+    "_id": "VgCqOsES4aB2Stq0FgFZf",
+    "name": "Leadership",
+    "skills": [
+      {
+        "_id": "3ctuYy42QIvvRR1T3pxI9r",
+        "name": "Communication",
+        "description": "Communication is a strong suit of mine. I believe that the key goal to a successful project is communication. I have experience communicating both internally and externally to clients.",
+        "disableProjectsConnection": false
+      },
+      {
+        "_id": "5XbCK4r3gBe06kaoQiVX5d",
+        "name": "Time Estimation",
+        "description": "I have strong experiences estimating large projects for big brands, some of which were multi-year projects with over 10 developers contributing to the codebase.",
+        "disableProjectsConnection": true
+      },
+      {
+        "_id": "14r6cvSH0gYlMeRhsufaBg",
+        "name": "Career Development",
+        "description": "I have several years of Career Development experience. My experiences range from helping Interns navigate their first professional job all the way to Technical Architects who are managing other developers under them.",
+        "disableProjectsConnection": true
+      },
+      {
+        "_id": "1xFls1mp6yOu5cV7x52CTa",
+        "name": "Client Relations",
+        "description": "I have a strong understanding of how to communicate with clients. I've had lots of experience presenting existing and future work, walking clients through issues and limitations as they arrive, as well as building relations with new clients and scaling our teams.",
+        "disableProjectsConnection": true
+      },
+      {
+        "_id": "6mRDQfMox9nmyvlJzAvOhw",
+        "name": "Presentation Skills",
+        "description": "I have always been passionate about presenting. I have experience pitching new businesses, walking clients through our progression of their applications, and presenting to broad audiences on technical and non-technical topics.",
+        "disableProjectsConnection": false
+      }
+    ],
+    "isCategory": true
+  },
+  {
     "_id": "6F7Qmvs69qi0Guasy0S84Y",
     "name": "Backend Development",
     "skills": [
@@ -57,31 +94,6 @@
         "_id": "1sba8qggLqQ8Koqku6UW4g",
         "name": "MongoDB",
         "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
-      }
-    ],
-    "isCategory": true
-  },
-  {
-    "_id": "VgCqOsES4aB2Stq0FgFZf",
-    "name": "Leadership",
-    "skills": [
-      {
-        "_id": "5XbCK4r3gBe06kaoQiVX5d",
-        "name": "Time Estimation",
-        "description": "I have strong experiences estimating large projects for big brands, some of which were multi-year projects with over 10 developers contributing to the codebase.",
-        "disableProjectsConnection": true
-      },
-      {
-        "_id": "14r6cvSH0gYlMeRhsufaBg",
-        "name": "Career Development",
-        "description": "I have several years of Career Development experience. My experiences range from helping Interns navigate their first professional job all the way to Technical Architects who are managing other developers under them.",
-        "disableProjectsConnection": true
-      },
-      {
-        "_id": "1xFls1mp6yOu5cV7x52CTa",
-        "name": "Client Relations",
-        "description": "I have a strong understanding of how to communicate with clients. I've had lots of experience presenting existing and future work, walking clients through issues and limitations as they arrive, as well as building relations with new clients and scaling our teams.",
-        "disableProjectsConnection": true
       }
     ],
     "isCategory": true
