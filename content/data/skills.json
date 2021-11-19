@@ -62,14 +62,30 @@
     "isCategory": true
   },
   {
-    "_id": "7mhKhZGfjuPxRWmHnt7YWy",
-    "name": "Leadership",
-    "isCategory": true,
-    "skills": []
-  },
-  {
     "_id": "VgCqOsES4aB2Stq0FgFZf",
     "name": "Management",
+    "skills": [
+      {
+        "_id": "5XbCK4r3gBe06kaoQiVX5d",
+        "name": "Time Estimation",
+        "description": "I have experience estimating large projects for big brands. I also have experience reviewing others estimates and providing a second opinion on things to include in the estimates."
+      },
+      {
+        "_id": "14r6cvSH0gYlMeRhsufaBg",
+        "name": "Career Development",
+        "description": "I have several years of career development experience, from helping interns all the way to Technical Leads. I enjoy meeting once a month to discuss career progression, as well as doing formal reviews twice a year."
+      },
+      {
+        "_id": "1xFls1mp6yOu5cV7x52CTa",
+        "name": "Client Relations",
+        "description": "I have a strong understanding of how to communicate with clients. I've had lots of experience presenting existing and future work, as well as walking clients through issues and limitations as they arrive."
+      }
+    ],
+    "isCategory": true
+  },
+  {
+    "_id": "7mhKhZGfjuPxRWmHnt7YWy",
+    "name": "Leadership",
     "isCategory": true,
     "skills": []
   }
