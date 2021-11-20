@@ -18,135 +18,134 @@
       @include medium() {
         font-size: 60px;
         -webkit-font-smoothing: none;
-    }
-      }
-      span {
-        display: block;
-      }
-      &:before {
-        content: '<';
-      }
-      &:after {
-        content: '/>';
       }
     }
-    p {
-      font-size: 16px;
-      width: 80%;
-      margin: 0 auto;
-      max-width: 400px;
+    span {
+      display: block;
+    }
+    &:before {
+      content: '<';
+    }
+    &:after {
+      content: '/>';
     }
   }
+  p {
+    font-size: 16px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 400px;
+  }
+}
 
-  .content {
-    padding-bottom: 50px;
+.content {
+  padding-bottom: 50px;
 
-    .accordion {
-      // GENERIC STYLES FOR ALL ACCORDIONS
-      [data-accordion-handler] {
-        appearance: none;
-        width: 100%;
-        background: none;
-        border: none;
-        border-bottom: 3px solid #fff;
-        padding: 0;
-        font: inherit;
-        text-align: left;
-        font-weight: 700;
-        cursor: pointer;
+  .accordion {
+    // GENERIC STYLES FOR ALL ACCORDIONS
+    [data-accordion-handler] {
+      appearance: none;
+      width: 100%;
+      background: none;
+      border: none;
+      border-bottom: 3px solid #fff;
+      padding: 0;
+      font: inherit;
+      text-align: left;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      user-select: none;
+      align-items: center;
+      .caret {
         display: flex;
-        user-select: none;
         align-items: center;
-        .caret {
-          display: flex;
-          align-items: center;
-          svg {
-            display: block;
-            margin: 0 10px;
-            height: 14px;
-            width: 14px;
-            fill: #fff;
-            transition: transform 0.2s;
-          }
+        svg {
+          display: block;
+          margin: 0 10px;
+          height: 14px;
+          width: 14px;
+          fill: #fff;
+          transition: transform 0.2s;
         }
+      }
+      .title {
+        flex: 1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-transform: uppercase;
+      }
+      &:focus {
+        border-radius: 5px 5px 0 0;
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+    article {
+      transition: opacity 0s;
+      opacity: 0;
+      pointer-events: none;
+    }
+    // GENERIC OPEN STYLES FOR ALL ACCORDIONS
+    &.open {
+      height: auto !important;
+      > article {
+        transition: opacity 0.2s;
+        opacity: 1;
+        pointer-events: all;
+      }
+      > [data-accordion-handler] {
+        .caret svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    // CATEGORY SPECIFIC STYLES
+    &.category {
+      margin-bottom: 10px;
+      height: 50px;
+      overflow: hidden;
+      > article {
+        padding: 10px 5px;
+        margin: 0;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        border-radius: 0 0 3px 3px;
+      }
+      > [data-accordion-handler] {
         .title {
-          flex: 1;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          overflow: hidden;
-          text-transform: uppercase;
-        }
-        &:focus {
-          border-radius: 5px 5px 0 0;
-          background: rgba(255, 255, 255, 0.1);
+          color: #fff;
+          padding: 10px;
         }
       }
-      article {
-        transition: opacity 0s;
-        opacity: 0;
-        pointer-events: none;
-      }
-      // GENERIC OPEN STYLES FOR ALL ACCORDIONS
-      &.open {
-        height: auto !important;
-        > article {
-          transition: opacity 0.2s;
-          opacity: 1;
-          pointer-events: all;
+    }
+    // SKILL SPECIFIC STYLES
+    &.skill {
+      height: 48px;
+      background: #fff;
+      margin: 5px;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+      [data-accordion-handler] {
+        color: #000;
+        font-weight: 700;
+        .title {
+          padding: 10px;
         }
-        > [data-accordion-handler] {
-          .caret svg {
-            transform: rotate(180deg);
-          }
+        .caret svg {
+          fill: #b0b0b0;
         }
-      }
-      // CATEGORY SPECIFIC STYLES
-      &.category {
-        margin-bottom: 10px;
-        height: 50px;
-        overflow: hidden;
-        > article {
-          padding: 10px 5px;
-          margin: 0;
-          overflow: hidden;
-          background: rgba(255, 255, 255, 0.3);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
-          border-radius: 0 0 3px 3px;
-        }
-        > [data-accordion-handler] {
-          .title {
-            color: #fff;
-            padding: 10px;
-          }
+        &:focus .title {
+          text-decoration: underline;
         }
       }
-      // SKILL SPECIFIC STYLES
-      &.skill {
-        height: 48px;
-        background: #fff;
-        margin: 5px;
-        border-radius: 3px;
-        overflow: hidden;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-        [data-accordion-handler] {
-          color: #000;
-          font-weight: 700;
-          .title {
-            padding: 10px;
-          }
-          .caret svg {
-            fill: #b0b0b0;
-          }
-          &:focus .title {
-            text-decoration: underline;
-          }
-        }
-        > article {
-          padding: 0 10px 0px 10px;
-          .button {
-            margin: 10px 5px 10px 0;
-            display: inline-block;
-          }
+      > article {
+        padding: 0 10px 0px 10px;
+        .button {
+          margin: 10px 5px 10px 0;
+          display: inline-block;
         }
       }
     }
