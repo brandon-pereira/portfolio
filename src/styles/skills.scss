@@ -44,6 +44,8 @@
 
     .accordion {
       // GENERIC STYLES FOR ALL ACCORDIONS
+      max-height: 100px;
+      transition: max-height 0.5s;
       [data-accordion-handler] {
         appearance: none;
         width: 100%;
@@ -89,6 +91,7 @@
       }
       // GENERIC OPEN STYLES FOR ALL ACCORDIONS
       &.open {
+        max-height: 1000px;
         height: auto !important;
         > article {
           transition: opacity 0.2s;
