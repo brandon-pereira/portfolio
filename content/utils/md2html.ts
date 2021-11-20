@@ -1,4 +1,4 @@
-import marked from 'marked';
+import { marked } from 'marked';
 
 export default (md: string): Promise<string> =>
   new Promise((resolve, reject) => {
