@@ -228,7 +228,7 @@
       &.beta {
         background: map-deep-get($config, projects, beta);
       }
-      &.comingSoon {
+      &.comingsoon {
         background: map-deep-get($config, projects, comingSoon);
       }
     }

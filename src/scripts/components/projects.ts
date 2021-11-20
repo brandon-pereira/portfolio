@@ -250,7 +250,7 @@ class Projects extends Base {
     // status
     const status = project.status || 'Unavailable';
     const $status = $node.querySelector('[data-project-status]') as HTMLElement;
-    $status.setAttribute('class', status.toLowerCase());
+    $status.setAttribute('class', status.replace(' ', '').toLowerCase());
     $status.innerText = status;
     // assets
     const $images = $node.querySelector('[data-project-images]');
