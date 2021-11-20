@@ -17,7 +17,7 @@ class Header extends Base {
 
   onScroll(): void {
     const currentScroll = window.scrollY;
-    this.$title.classList.toggle('scrolled', currentScroll > 100);
+    this.$title.classList.toggle('scrolled', currentScroll > 25);
   }
 }
 
