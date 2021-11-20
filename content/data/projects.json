@@ -118,6 +118,71 @@
     "isPinned": true
   },
   {
+    "_id": "4JIzPsZ0Iq0eI2YBHAHNlm",
+    "title": "Our Wedding",
+    "date": "2021-09-01",
+    "languages": [
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML, A11Y, & SEO",
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
+      },
+      {
+        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
+        "name": "React",
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript (ES6+)",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
+      },
+      {
+        "_id": "1sba8qggLqQ8Koqku6UW4g",
+        "name": "MongoDB",
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
+      }
+    ],
+    "shortDescription": "I built my now Wife and I's Wedding website from scratch. I wanted our guests to RSVP, list dietary restrictions, and learn about our big.",
+    "description": "<p>I built my now Wife and I&#39;s Wedding website from scratch. I wanted our guests to RSVP, list dietary restrictions, and learn about our big. I thought it might be helpful to build an admin panel to manage guests, message guests, and provide a quick, glanceable current guest list count.</p>\n<p>One fun feature I had to build was the ability to change a wedding date. We had to add this because of the COVID-19 pandemic, which forced us to re-send invitations. During re-coding this, I thought it might be helpful to build an admin panel to manage guests which led me down the building and re-building of an email feature. Originally, I built it using nodemailer through Gmail but that was going into guests&#39; spam folders frequently. I decided to then switch to using Amazon SES which worked much better.</p>\n<p>I later modularized the whole wedding backend and published it to NPM. I figured it may be helpful to share this with others who plan to get married in the future.</p>\n",
+    "type": "Internal",
+    "status": "Unavailable",
+    "images": [
+      {
+        "_id": "3nz2TbgIzEPIps9B4rYYid",
+        "title": "Our Site Logo",
+        "description": "",
+        "url": "/assets/3nz2TbgIzEPIps9B4rYYid.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "34sF8uYEH0u3lPzSA5lOQG",
+        "title": "Our Rescheduling Message",
+        "description": "",
+        "url": "/assets/34sF8uYEH0u3lPzSA5lOQG.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "thVKuAzaBmOZ6lUWQVkdB",
+        "title": "Admin Panel",
+        "description": "",
+        "url": "/assets/thVKuAzaBmOZ6lUWQVkdB.png",
+        "contentType": "image/png"
+      }
+    ],
+    "gitUrl": "https://github.com/brandon-pereira/hitched"
+  },
+  {
     "_id": "3xAp8X3vid1y32jLi1hGxC",
     "title": "Jim Stewart Mortgages",
     "date": "2020-12-08",
