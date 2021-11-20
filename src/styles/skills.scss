@@ -13,10 +13,12 @@
     padding: 50px 0;
     h2 {
       margin-bottom: 20px;
-      font: 20px 'Press Start 2P', monospace;
-      text-shadow: 2px 2px darken($background, 40%);
+      font: 30px 'Press Start 2P', monospace;
+      text-shadow: 5px 5px darken($background, 40%);
       @include medium() {
-        font-size: 38px;
+        font-size: 60px;
+        -webkit-font-smoothing: none;
+    }
       }
       span {
         display: block;
