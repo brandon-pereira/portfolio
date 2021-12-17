@@ -1,55 +1,5 @@
 [
   {
-    "_id": "3fnHYTfx20QwK1RHOUJ4cZ",
-    "title": "Nissan Pathfinder: Return to Rugged",
-    "date": "2021-07-01",
-    "languages": [
-      {
-        "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
-        "name": "Animation",
-        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs."
-      },
-      {
-        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
-        "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
-      },
-      {
-        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
-        "name": "React",
-        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
-      }
-    ],
-    "shortDescription": "Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.",
-    "description": "<p>Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.</p>\n<p>My role on the project mainly focused on architecture and leadership. </p>\n<p>My responsibilities included: </p>\n<ul>\n<li>Getting the concept debriefing from our client and creative teams</li>\n<li>Building out a solution design and architecture for the site</li>\n<li>Onboarding, problem-solving, reviewing pull requests, debugging issues as they arose, and doing minor features where I could.</li>\n<li>I also helped manage risks as they arose, which meant working with clients and other departments on workarounds and solutions to challenges.</li>\n<li>Lastly, I was responsible for demoing the experience to our client and gathering client feedback.</li>\n</ul>\n<p>We were able to launch on time with the clients very impressed. We also expanded the project scope to create a Canadian version. The Canadian site was launched a few months after the US site.</p>\n",
-    "type": "External",
-    "status": "Live",
-    "images": [
-      {
-        "_id": "2Bj9zodXC6Ks9Sa0R3kK0x",
-        "title": "Landing Section",
-        "description": "",
-        "url": "/assets/2Bj9zodXC6Ks9Sa0R3kK0x.png",
-        "contentType": "image/png"
-      },
-      {
-        "_id": "61SuLbhzSYgojRGQcUVDhz",
-        "title": "Demo of the ThreeJS animations/parallax",
-        "description": "",
-        "url": "/assets/61SuLbhzSYgojRGQcUVDhz.mp4",
-        "contentType": "video/mp4"
-      },
-      {
-        "_id": "4U9oISDygUHubPHl9YJi4p",
-        "title": "Demo of the full site experience",
-        "description": "",
-        "url": "/assets/4U9oISDygUHubPHl9YJi4p.mp4",
-        "contentType": "video/mp4"
-      }
-    ],
-    "link": "https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder/return-to-rugged/"
-  },
-  {
     "_id": "2yavuOvWb3A5eLz3eoRdiQ",
     "title": "Tetha",
     "date": "2020-10-01",
@@ -291,6 +241,56 @@
       }
     ],
     "gitUrl": "https://github.com/brandon-pereira/hitched"
+  },
+  {
+    "_id": "3fnHYTfx20QwK1RHOUJ4cZ",
+    "title": "Nissan Pathfinder: Return to Rugged",
+    "date": "2021-07-01",
+    "languages": [
+      {
+        "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
+        "name": "Animation",
+        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs."
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript (ES6+)",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
+      },
+      {
+        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
+        "name": "React",
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
+      }
+    ],
+    "shortDescription": "Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.",
+    "description": "<p>Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.</p>\n<p>My role on the project mainly focused on architecture and leadership. </p>\n<p>My responsibilities included: </p>\n<ul>\n<li>Getting the concept debriefing from our client and creative teams</li>\n<li>Building out a solution design and architecture for the site</li>\n<li>Onboarding, problem-solving, reviewing pull requests, debugging issues as they arose, and doing minor features where I could.</li>\n<li>I also helped manage risks as they arose, which meant working with clients and other departments on workarounds and solutions to challenges.</li>\n<li>Lastly, I was responsible for demoing the experience to our client and gathering client feedback.</li>\n</ul>\n<p>We were able to launch on time with the clients very impressed. We also expanded the project scope to create a Canadian version. The Canadian site was launched a few months after the US site.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "2Bj9zodXC6Ks9Sa0R3kK0x",
+        "title": "Landing Section",
+        "description": "",
+        "url": "/assets/2Bj9zodXC6Ks9Sa0R3kK0x.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "61SuLbhzSYgojRGQcUVDhz",
+        "title": "Demo of the ThreeJS animations/parallax",
+        "description": "",
+        "url": "/assets/61SuLbhzSYgojRGQcUVDhz.mp4",
+        "contentType": "video/mp4"
+      },
+      {
+        "_id": "4U9oISDygUHubPHl9YJi4p",
+        "title": "Demo of the full site experience",
+        "description": "",
+        "url": "/assets/4U9oISDygUHubPHl9YJi4p.mp4",
+        "contentType": "video/mp4"
+      }
+    ],
+    "link": "https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder/return-to-rugged/"
   },
   {
     "_id": "3xAp8X3vid1y32jLi1hGxC",
