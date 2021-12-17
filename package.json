@@ -12,7 +12,7 @@
     "@parcel/transformer-sass": "^2.0.1",
     "@parcel/transformer-webmanifest": "^2.0.1",
     "@prettier/plugin-pug": "^1.17.3",
-    "@tsconfig/node14": "^1.0.1",
+    "@tsconfig/node16": "^1.0.2",
     "@types/fs-extra": "^9.0.13",
     "@types/jest": "^27.0.3",
     "@types/marked": "^4.0.1",
