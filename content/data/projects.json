@@ -168,62 +168,6 @@
     "isPinned": true
   },
   {
-    "_id": "58R6Sv3VQkamAMmKooWu0Q",
-    "title": "Nissan: Responsive website redesign",
-    "date": "2016-05-05",
-    "languages": [
-      {
-        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
-        "name": "CSS",
-        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
-      },
-      {
-        "_id": "2WyFStEcdy8SWQkOQMwUsO",
-        "name": "HTML, A11Y, & SEO",
-        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
-      },
-      {
-        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
-        "name": "Javascript (ES6+)",
-        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
-      },
-      {
-        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
-        "name": "React",
-        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
-      }
-    ],
-    "shortDescription": "We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.",
-    "description": "<p>We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.</p>\n<p>We built the system using a style guide, which allowed us to easily reuse components throughout the website. My team of 4 took on the configurator and applications. My main contributions involved building configurator. This required several technical deliverables such as building page controllers on both server and client side (Java, GSP, Javascript), modifying the styleguide internal workings (GulpJS), and building responsive components (FoundationJS, Javascript, SCSS). Nearly all components in the configurator were built or modified by me.</p>\n<p>Check out the configurator here: <a href=\"http://nissanusa.com/buildyournissan/\">Nissan</a> | <a href=\"http://infinitiusa.com/buildyourinfiniti\">Infiniti</a> <em>(you currently can only access on mobile)</em></p>\n",
-    "type": "External",
-    "status": "Live",
-    "images": [
-      {
-        "_id": "3AvIub86KIEKqMiySEIw0q",
-        "title": "Packages screen, demonstrating conflict manager.",
-        "description": "Packages screen, demonstrating conflict manager.",
-        "url": "/assets/3AvIub86KIEKqMiySEIw0q.png",
-        "contentType": "image/png"
-      },
-      {
-        "_id": "2EfT9Xo5OUKSuWayEecosa",
-        "title": "Mobile navigation and versions page.",
-        "description": "Mobile navigation and versions page.",
-        "url": "/assets/2EfT9Xo5OUKSuWayEecosa.png",
-        "contentType": "image/png"
-      },
-      {
-        "_id": "79nHG3xiOAqOa8mm0CIgEk",
-        "title": "Desktop navigation and versions page.",
-        "description": "Desktop navigation and versions page.",
-        "url": "/assets/79nHG3xiOAqOa8mm0CIgEk.png",
-        "contentType": "image/png"
-      }
-    ],
-    "link": "http://nissanusa.com/buildyournissan",
-    "isPinned": true
-  },
-  {
     "_id": "7Km3R1SnDTIEq3ltYyUQCr",
     "title": "Wedding Photobooth",
     "date": "2021-09-03",
@@ -1340,6 +1284,61 @@
     ],
     "link": "https://branclon.com/showcase/icons/",
     "gitUrl": "https://github.com/brandon-pereira/css3-icons"
+  },
+  {
+    "_id": "58R6Sv3VQkamAMmKooWu0Q",
+    "title": "Nissan: Responsive website redesign",
+    "date": "2016-05-05",
+    "languages": [
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML, A11Y, & SEO",
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
+      },
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript (ES6+)",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
+      },
+      {
+        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
+        "name": "React",
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
+      }
+    ],
+    "shortDescription": "We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.",
+    "description": "<p>We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.</p>\n<p>We built the system using a style guide, which allowed us to easily reuse components throughout the website. My team of 4 took on the configurator and applications. My main contributions involved building configurator. This required several technical deliverables such as building page controllers on both server and client side (Java, GSP, Javascript), modifying the styleguide internal workings (GulpJS), and building responsive components (FoundationJS, Javascript, SCSS). Nearly all components in the configurator were built or modified by me.</p>\n<p>Check out the configurator here: <a href=\"http://nissanusa.com/buildyournissan/\">Nissan</a> | <a href=\"http://infinitiusa.com/buildyourinfiniti\">Infiniti</a> <em>(you currently can only access on mobile)</em></p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "3AvIub86KIEKqMiySEIw0q",
+        "title": "Packages screen, demonstrating conflict manager.",
+        "description": "Packages screen, demonstrating conflict manager.",
+        "url": "/assets/3AvIub86KIEKqMiySEIw0q.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "2EfT9Xo5OUKSuWayEecosa",
+        "title": "Mobile navigation and versions page.",
+        "description": "Mobile navigation and versions page.",
+        "url": "/assets/2EfT9Xo5OUKSuWayEecosa.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "79nHG3xiOAqOa8mm0CIgEk",
+        "title": "Desktop navigation and versions page.",
+        "description": "Desktop navigation and versions page.",
+        "url": "/assets/79nHG3xiOAqOa8mm0CIgEk.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "http://nissanusa.com/buildyournissan"
   },
   {
     "_id": "6zVbf6aP1Sq266omigGGwi",
