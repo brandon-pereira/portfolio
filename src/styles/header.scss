@@ -51,7 +51,7 @@ header.header {
         linear-gradient(90deg, $gridBg2 1px, transparent 1px);
       border-radius: 50%;
       box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
-      // animation: 2s bgScroll infinite linear;
+      animation: 2s bgScroll infinite linear;
     }
     svg {
       filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.4));
@@ -98,10 +98,11 @@ header.header {
               linear-gradient($gridBg2 1px, transparent 1px),
               linear-gradient(90deg, $gridBg2 1px, transparent 1px);
             background-color: $gridBg;
-            background-size: 30px 30px, 30px 30px, 10px 10px, 10px 10px;
+            background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: 2s bgScroll infinite linear;
           }
         }
         &:nth-of-type(even) {
