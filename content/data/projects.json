@@ -33,7 +33,7 @@
     "shortDescription": "I worked with a local entrepreneur to develop a digital wall calendar. He wanted to be able to have a wall-mounted touch-screen monitor that could display current calendar events from multiple Google accounts.",
     "description": "<p>I worked with a local entrepreneur to develop a digital wall calendar. He wanted to be able to have a wall-mounted touch-screen monitor that could display current calendar events from multiple Google accounts. </p>\n<p>From a hardware perspective, I learned a lot on this project. All I knew when I started was that it was an Android tablet. I didn&#39;t know anything about how Kiosk mode or Android Launchers. These two features are essential for taking an Android APK and locking it as the only usable application. This project was a real opportunity for me to experiment with writing native bindings for a Cordova based application. I also explored using React Native for this project, but we ran into a couple of limitations early on that have since been resolved.</p>\n<p>On the backend, I also learned a lot. I had experience with managing OAuth Tokens, but this project expanded that knowledge. I learned a lot about implementing OAuth at a lower level (rather than using a library), managing and leveraging refresh tokens, and managing user sessions on the front-end. For this project, I also leveraged Apollo Server to manage the front-end queries, which is something I&#39;ve had a ton of experience with previously, so it was an easy grab to keep the project moving quickly.</p>\n<p>On the front-end, this was a fun project to build. I&#39;ve always found calendar interfaces pretty complex. There are conflicts (multiple overlapping events), supporting multiple users and calendars, and recurring/all-day events. I felt the solution I implemented for this worked well and scaled as we added other features. Aside from the calendar itself, it was also enjoyable to build UI interfaces commonly reserved for the operating system (Wi-Fi selection, Brightness Sliders, Sleep Schedules, etc.) </p>\n<p>I took on this contracting position at the peak of COVID-19, so it was nice to have something to keep me occupied during the lockdown. I look forward to seeing how this project evolves. </p>\n",
     "type": "External",
-    "status": "Coming Soon",
+    "status": "Unavailable",
     "images": [
       {
         "_id": "2eutBQ6LSWZMY1zHjm8nOu",
@@ -61,8 +61,7 @@
         "contentType": "image/png"
       }
     ],
-    "link": "https://swiston.ca/",
-    "isPinned": true
+    "link": "https://swiston.ca/"
   },
   {
     "_id": "3s0cnjG1m0BMdNtQU3Me2J",
@@ -114,8 +113,7 @@
         "contentType": "image/png"
       }
     ],
-    "link": "https://nissanusa.com/shopping-tools/build-price",
-    "isPinned": true
+    "link": "https://nissanusa.com/shopping-tools/build-price"
   },
   {
     "_id": "3DfMXXOhKF8gooPh3uPsnc",
