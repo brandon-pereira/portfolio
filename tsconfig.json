@@ -11,6 +11,6 @@
     "moduleResolution": "node",
     "target": "es2021"
   },
-  "include": ["src", "types"],
+  "include": ["src", "test", "types"],
   "exclude": ["node_modules", ".vscode"]
 }

@@ -1,8 +1,8 @@
-const projects = require('../content/data/projects.json');
-const skills = require('../content/data/skills.json');
+import * as projects from '../content/data/projects.json';
+import * as skills from '../content/data/skills.json';
 
 describe('Formatting - Projects', () => {
-  projects.forEach((project, i) => {
+  (projects || []).forEach((project, i) => {
     test(project.title || `Project Element #${i + 1}`, () => {
       expect(typeof project.title).toBe('string'); // Title
       expect(Array.isArray(project.languages)).toBeTruthy(); // Languages\
@@ -27,7 +27,7 @@ describe('Formatting - Projects', () => {
 });
 
 describe('Formatting - Skills', () => {
-  skills.forEach((category, i) => {
+  (skills || []).forEach((category, i) => {
     describe(category.name || i, () => {
       test('Structure', () => {
         expect(typeof category.name).toBe('string');

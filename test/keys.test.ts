@@ -1,19 +1,19 @@
-const _projects = require('../content/data/projects.json');
-const _skills = require('../content/data/skills.json');
+import * as _projects from '../content/data/projects.json';
+import * as _skills from '../content/data/skills.json';
 
-const getAllIdsFromProjects = _projects => {
-  const ids = [];
+const getAllIdsFromProjects = () => {
+  const ids: string[] = [];
   _projects.forEach(project => {
     ids.push(...project.languages.map(lang => lang._id));
   });
   return Array.from(new Set(ids));
 };
 
-const getAllIdsFromSkills = _skills => {
-  const ids = [];
+const getAllIdsFromSkills = () => {
+  const ids: string[] = [];
   _skills.forEach(category => {
     category.skills.forEach(skill => {
-      if (!skill.disableProjectsConnection) {
+      if (!('disableProjectsConnection' in skill)) {
         ids.push(skill._id);
       }
     });
@@ -22,8 +22,8 @@ const getAllIdsFromSkills = _skills => {
 };
 
 describe('Valid Keys', () => {
-  const projectIds = getAllIdsFromProjects(_projects);
-  const skillIds = getAllIdsFromSkills(_skills);
+  const projectIds = getAllIdsFromProjects();
+  const skillIds = getAllIdsFromSkills();
   test('Project IDs', () => {
     const invalidIds = projectIds.filter(id => !skillIds.includes(id));
     if (invalidIds.length) {
@@ -39,7 +39,7 @@ describe('Valid Keys', () => {
     const invalidIds = skillIds.filter(id => !projectIds.includes(id));
     if (invalidIds.length) {
       console.error(
-        'Invlalid Skills JSON detected, search JSON for the following keys',
+        'Invalid Skills JSON detected, search JSON for the following keys',
         invalidIds,
         'This is likely because no project currently references these keys.'
       );
