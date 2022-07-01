@@ -1,5 +1,73 @@
 [
   {
+    "_id": "7EVx9cEJdersqFVHlMkLzm",
+    "title": "AirBnB: Design System Migration",
+    "date": "2022-02-15",
+    "languages": [
+      {
+        "_id": "1xFls1mp6yOu5cV7x52CTa",
+        "name": "Client Relations",
+        "description": "I have a strong understanding of how to communicate with clients. I've had lots of experience presenting existing and future work, walking clients through issues and limitations as they arrive, as well as building relations with new clients and scaling our teams."
+      },
+      {
+        "_id": "3ctuYy42QIvvRR1T3pxI9r",
+        "name": "Communication",
+        "description": "Communication is a strong suit of mine. I believe that the key goal to a successful project is communication. I have experience communicating both internally and externally to clients."
+      },
+      {
+        "_id": "5XbCK4r3gBe06kaoQiVX5d",
+        "name": "Time Estimation",
+        "description": "I have strong experiences estimating large projects for big brands, some of which were multi-year projects with over 10 developers contributing to the codebase."
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
+      },
+      {
+        "_id": "7nfH4ACEppARTcIiFH1MBe",
+        "name": "TypeScript",
+        "description": "I'm very comfortable jumping into an existing TypeScript codebase or working on migrating a codebase to TypeScript. I also have a firm understanding of Generics and other more advanced features. "
+      },
+      {
+        "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
+        "name": "Animation",
+        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs."
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML, A11Y, & SEO",
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
+      },
+      {
+        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
+        "name": "React",
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
+      }
+    ],
+    "shortDescription": "We won Airbnb as a client and I lead the charge on getting our engineers into their systems. I gained a ton of experience in client relations as well as working in an extremely large codebase.",
+    "description": "<p>Airbnb was migrating its website from one brand guide to a newer brand guide. They didn&#39;t have enough engineers to do this work, so they contacted my company (Critical Mass) to assist. We helped Airbnb redesign several aspects of its brand, everything from emails, website and apps.</p>\n<p>I was the first engineer to join the Airbnb team. My initial task was getting into the systems and forming a good client relationship. Once I had established some principles and scoped the work, I hired several individuals who could assist in reaching their targets.</p>\n<p>Aside from managing the team, I also got my hands dirty and refactored large parts of the Airbnb code base. I got to contribute to the core email services (including fixing a critical RTL issue across all emails),  migrate multiple user flows on the Airbnb website to their new brand guide. Lastly, I worked on an internal tool I wish I could disclose.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "1ufLqYQzdMLBoHSAlLimAc",
+        "title": "AirBnb Personal Settings Screen",
+        "description": "",
+        "url": "/assets/1ufLqYQzdMLBoHSAlLimAc.png",
+        "contentType": "image/png"
+      },
+      {
+        "_id": "4GN3CezfjmtrXaOerkMb45",
+        "title": "Example of more complex screen",
+        "description": "",
+        "url": "/assets/4GN3CezfjmtrXaOerkMb45.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://www.airbnb.ca/account-settings/personal-info"
+  },
+  {
     "_id": "3DfMXXOhKF8gooPh3uPsnc",
     "title": "Nissan: Find Your Frontier",
     "date": "2021-10-01",
