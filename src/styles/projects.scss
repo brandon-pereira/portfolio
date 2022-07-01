@@ -139,14 +139,16 @@
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
       background: map-get($config, accent);
       img {
+        max-height: 200px;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        width: 100%;
         &[data-src]:not(.loaded) {
           // if it has a data-src attribute (lazy load) and it's not loaded yet
           position: static;
           height: 200px;
         }
-        position: relative;
-        transform: translate(0, -25%);
-        width: 120%;
       }
     }
     // https://css-tricks.com/multi-line-padded-text/
