@@ -9,6 +9,10 @@ type Language = {
   description: string;
 };
 
+type RawLanguage = {
+  disableProjectsConnection?: boolean;
+} & Language;
+
 export type Project = {
   _id: string;
   index?: number;
@@ -26,8 +30,9 @@ export type Project = {
 };
 
 // Defines expected response from service
-interface RawProject extends Omit<Partial<Project>, 'images'> {
+interface RawProject extends Omit<Partial<Project>, 'languages' | 'images'> {
   images: RawAsset[];
+  languages: RawLanguage[];
 }
 
 async function importProjects({
@@ -58,6 +63,8 @@ const normalizeProjects = (
     normalized.languages = (project.languages || [])
       // remove incorrectly formatted
       .filter(lang => lang._id && lang.name && lang.description)
+      // remove where not wanted
+      .filter(lang => !lang.disableProjectsConnection)
       // normalize object
       .map(lang => ({
         _id: lang._id,
