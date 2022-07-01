@@ -1,37 +1,67 @@
 import ga from './analytics';
 
+type LightboxConfig = {
+  title: string;
+  description?: string;
+  url: string;
+  contentType: 'image/png' | 'image/jpeg' | 'video/mp4';
+};
+
 class Lightbox {
   el: HTMLElement;
   $asset: HTMLElement;
   $description: HTMLElement;
+  static dataAttribute = 'data-lightbox';
+  static dataInitAttribute = 'data-lightbox-initialized';
 
   constructor() {
     this.el = this._createElement();
     this._attachToDocument(this.el);
     this.$asset = this.el.querySelector('[data-asset]');
     this.$description = this.el.querySelector('[data-description]');
-    this.events();
+    this.listen();
+    this.el.addEventListener('click', () => this.close());
   }
 
-  set(props: {
-    contentType: string;
-    url: string;
-    description?: string;
-    title?: string;
-  }) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.info('Lightbox: Set', props);
+  open(srcElement: HTMLImageElement) {
+    this.el.classList.add('visible');
+    const config = this.getConfigFromElement(srcElement);
+    this.setLightboxFromConfig(config);
+    if (this.$asset.querySelector('img, video')) {
+      ga('lightbox', 'open', config.url);
     }
+  }
+
+  getConfigFromElement(srcElement: HTMLElement): LightboxConfig {
+    const raw = srcElement.getAttribute('data-lightbox');
+    const json = JSON.parse(raw);
+    const config: LightboxConfig = {
+      title: json.title || '',
+      description: json.description || '',
+      url: json.url || '',
+      contentType: json.contentType || 'image/png'
+    };
+    return config;
+  }
+
+  setLightboxFromConfig({
+    contentType,
+    url,
+    description,
+    title
+  }: LightboxConfig) {
     this._setLoading(true);
     this.$asset.innerHTML = '';
-    const type = props.contentType.startsWith('video') ? 'video' : 'img';
+    const type = contentType.startsWith('video') ? 'video' : 'img';
     const config = {
-      src: props.url,
+      src: url,
       autoplay: true,
       muted: true
-    };
+    } as const;
     const $asset = document.createElement(type);
-    Object.keys(config).forEach(key => $asset.setAttribute(key, config[key]));
+    Object.keys(config).forEach((key: keyof typeof config) =>
+      $asset.setAttribute(key, `${config[key]}`)
+    );
     const ready = () => {
       this.$asset.appendChild($asset);
       this._setLoading(false);
@@ -41,34 +71,26 @@ class Lightbox {
     } else {
       ready();
     }
-    this.$description.innerHTML = props.title || props.description || '';
-  }
-
-  open() {
-    if (process.env.NODE_ENV !== 'production') {
-      console.info('Lightbox: Open');
-    }
-    this.el.classList.add('visible');
-    const asset = this.$asset.querySelector('img, video') as HTMLImageElement;
-    if (this.$asset.querySelector('img, video')) {
-      ga('lightbox', 'open', asset.src);
-    }
+    this.$description.innerHTML = title || description || '';
   }
 
   close() {
-    if (process.env.NODE_ENV !== 'production') {
-      console.info('Lightbox: Close');
-    }
     this.$asset.innerHTML = '';
     this.$description.innerHTML = '';
     this.el.classList.remove('visible');
   }
 
-  events() {
-    this.el.addEventListener('click', () => this.close());
+  listen() {
+    const elements = document.querySelectorAll<HTMLImageElement>(
+      `img[${Lightbox.dataAttribute}]:not([${Lightbox.dataInitAttribute}])`
+    );
+    elements.forEach(el => {
+      el.setAttribute(Lightbox.dataInitAttribute, 'true');
+      el.addEventListener('click', () => this.open(el));
+    });
   }
 
-  _setLoading(bool) {
+  _setLoading(bool: boolean) {
     this.el.querySelector('.loading').classList.toggle('loaded', !bool);
   }
 
@@ -92,7 +114,7 @@ class Lightbox {
     return $el;
   }
 
-  _attachToDocument(el) {
+  _attachToDocument(el: HTMLElement) {
     document.body.appendChild(el);
   }
 }

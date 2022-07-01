@@ -26,15 +26,6 @@ export default class Apps extends Base {
       })
     );
 
-    Array.from(this.el.querySelectorAll('[data-lightbox]')).forEach(el =>
-      el.addEventListener('click', () => {
-        const raw = el.getAttribute('data-lightbox');
-        const json = JSON.parse(raw);
-        this.lightbox.set(json);
-        this.lightbox.open();
-      })
-    );
-
     // Swiping (mobile)
     let start = 0;
     let end = 0;

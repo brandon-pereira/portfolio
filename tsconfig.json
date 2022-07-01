@@ -5,6 +5,7 @@
     "paths": {},
     "typeRoots": ["node_modules/@types", "./types"],
     "module": "esnext",
+    "noImplicitAny": true,
     "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",

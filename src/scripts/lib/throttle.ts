@@ -4,8 +4,8 @@ export default function throttle(
   wait: number,
   context = this
 ): () => void {
-  let timeout = null;
-  let callbackArgs = null;
+  let timeout: NodeJS.Timeout = null;
+  let callbackArgs: unknown[] = null;
 
   const later = () => {
     callback.apply(context, callbackArgs);

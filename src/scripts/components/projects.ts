@@ -4,6 +4,7 @@ import animate from '../lib/animate';
 import Masonry from '../lib/masonry';
 import formatDate from '../lib/formatDate';
 import { Project } from '../../../content/models/projects';
+import Lightbox from '../services/lightbox';
 
 export type DeeplinkPayload = {
   id: string;
@@ -19,6 +20,7 @@ class Projects extends Base {
   $detailed: HTMLElement;
   $filters: HTMLElement;
   masonry: Masonry;
+  lightbox: typeof Lightbox;
 
   static numProjectsToAdd = 2;
 
@@ -189,7 +191,7 @@ class Projects extends Base {
   }
 
   _setAccessibility(isDetailsView: boolean): void {
-    const enabledTabIndex = bool => (bool ? 0 : -1);
+    const enabledTabIndex = (bool: boolean) => (bool ? 0 : -1);
     this.$detailed.setAttribute('aria-hidden', `${!isDetailsView}`);
     this.$projects.setAttribute('aria-hidden', `${isDetailsView}`);
     this.$projects.querySelectorAll('button').forEach($button => {
@@ -261,19 +263,18 @@ class Projects extends Base {
         const config = {
           src: asset.url,
           autoplay: true,
-          muted: true
-        };
+          muted: true,
+          'data-lightbox': JSON.stringify(asset)
+        } as const;
         const $asset = document.createElement(type);
-        Object.keys(config).forEach(key =>
-          $asset.setAttribute(key, config[key])
+        Object.keys(config).forEach((key: keyof typeof config) =>
+          $asset.setAttribute(key, `${config[key]}`)
         );
-        $asset.addEventListener('click', () => {
-          this.lightbox.set(asset);
-          this.lightbox.open();
-        });
         $node.querySelector('[data-project-images]').appendChild($asset);
       });
     }
+    this.lightbox.listen();
+
     // Date
     ($node.querySelector('[data-project-date]') as HTMLElement).innerText =
       formatDate(new Date(project.date));
