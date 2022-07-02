@@ -23,10 +23,13 @@ class Lightbox {
     this.el.addEventListener('click', () => this.close());
   }
 
-  open(srcElement: HTMLImageElement) {
+  async open(srcElement: HTMLImageElement) {
     this.el.classList.add('visible');
     const config = this.getConfigFromElement(srcElement);
     this.setLightboxFromConfig(config);
+    await sleep(100);
+    await animateElementOpen(srcElement);
+    this.$asset.classList.add('animation-done');
     if (this.$asset.querySelector('img, video')) {
       ga('lightbox', 'open', config.url);
     }
@@ -62,15 +65,16 @@ class Lightbox {
     Object.keys(config).forEach((key: keyof typeof config) =>
       $asset.setAttribute(key, `${config[key]}`)
     );
-    const ready = () => {
-      this.$asset.appendChild($asset);
-      this._setLoading(false);
-    };
-    if (type === 'img') {
-      $asset.onload = ready;
-    } else {
-      ready();
-    }
+    // const ready = () => {
+    this.$asset.appendChild($asset);
+    this._setLoading(false);
+    // };
+    // if (type === 'img') {
+    //   $asset.onload = ready;
+    // } else {
+    //   ready();
+    // }
+    // ready();
     this.$description.innerHTML = title || description || '';
   }
 
@@ -78,6 +82,7 @@ class Lightbox {
     this.$asset.innerHTML = '';
     this.$description.innerHTML = '';
     this.el.classList.remove('visible');
+    this.$asset.classList.remove('animation-done');
   }
 
   listen() {
@@ -117,6 +122,48 @@ class Lightbox {
   _attachToDocument(el: HTMLElement) {
     document.body.appendChild(el);
   }
+}
+
+function animateElementOpen($el: HTMLImageElement) {
+  return new Promise<void>(resolve => {
+    // Create a ghost elements
+    const ghost = document.createElement('img');
+    ghost.src = $el.src;
+    ghost.classList.add('ghost--img');
+    // Get real element coordinates
+    const rect = $el.getBoundingClientRect();
+    // Add styling to ghost element
+    Object.assign(ghost.style, {
+      top: `${rect.top}px`,
+      left: `${rect.left}px`,
+      height: `${rect.height}px`,
+      width: `${rect.width}px`
+    });
+    // Add ghost to DOM
+    document.body.appendChild(ghost);
+    // get target element
+    const target = document.querySelector('.lightbox img') as HTMLImageElement;
+
+    console.log(target);
+    requestAnimationFrame(() => {
+      const endRect = target.getBoundingClientRect();
+      console.log(endRect);
+      Object.assign(ghost.style, {
+        top: `${endRect.top}px`,
+        left: `${endRect.left}px`,
+        height: `${endRect.height}px`,
+        width: `${endRect.width}px`
+      });
+    });
+    sleep(400).finally(() => {
+      document.body.removeChild(ghost);
+      resolve();
+    });
+  });
+}
+
+function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 export default new Lightbox();
