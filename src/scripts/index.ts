@@ -8,6 +8,15 @@ new Skills(document.querySelector('.skills'));
 new Apps(document.querySelector('.apps'));
 new Projects(document.querySelector('.projects'));
 
+//https://github.com/parcel-bundler/parcel/issues/7241#issuecomment-986410024
+// @ts-expect-error for hmr
+if (module.hot) {
+  // @ts-expect-error for hmr
+  module.hot.accept(() => {
+    location.reload();
+  });
+}
+
 // If its a webkit browser add 'webkit' class to HTML.
 if ('webkitTextFillColor' in document.documentElement.style) {
   document.documentElement.classList.add('webkit');
