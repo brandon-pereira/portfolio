@@ -1,5 +1,36 @@
 [
   {
+    "_id": "16unN5KljbPh84sOedRb8s",
+    "title": "Wreno: Sign Up Flow",
+    "date": "2022-06-15",
+    "languages": [
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
+      },
+      {
+        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
+        "name": "React",
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
+      }
+    ],
+    "shortDescription": "The sign-up flow was my first contribution to Wreno after joining the company. My role included hiring, gathering business requirements, and designing the database and backend services for storing users' accounts, file uploads, and data.",
+    "description": "<p>The sign-up flow was my first contribution to Wreno after joining the company. When I joined, the company only had a simple static site. During this project, I lead the development of the sign-up flow. My role included hiring, gathering business requirements, and designing the database and backend services for storing users&#39; accounts, file uploads, and data.</p>\n<p>On top of launching this flow, we also used this opportunity to migrate a lot of the files over to Typescript, begin a migration to an internal style guide for re-usable components,  and implementing server-side rendering by moving from Create React App to NextJS.</p>\n<p>We had many more products in the roadmap, so this was only one small contribution to my overall workload.</p>\n",
+    "type": "External",
+    "status": "Live",
+    "images": [
+      {
+        "_id": "6A8fX42zxEeuLUAU6FFIBp",
+        "title": "Example of Sign Up Flow Step 1",
+        "description": "",
+        "url": "/assets/6A8fX42zxEeuLUAU6FFIBp.png",
+        "contentType": "image/png"
+      }
+    ],
+    "link": "https://www.wreno.io/become-a-partner/sign-up"
+  },
+  {
     "_id": "7EVx9cEJdersqFVHlMkLzm",
     "title": "AirBnB: Design System Migration",
     "date": "2022-02-15",
