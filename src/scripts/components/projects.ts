@@ -247,7 +247,7 @@ class Projects extends Base {
     if (project.gitUrl) {
       $node.querySelector(
         '[data-project-description]'
-      ).innerHTML += `<p><a href="${project.gitUrl}">View project on GitHub</a></p>`;
+      ).innerHTML += `<p><a href="${project.gitUrl}" target="_blank">View project on GitHub</a></p>`;
     }
     // status
     const status = project.status || 'Unavailable';
