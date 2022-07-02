@@ -273,7 +273,7 @@ class Projects extends Base {
         $node.querySelector('[data-project-images]').appendChild($asset);
       });
     }
-    this.lightbox.listen();
+    this.lightbox.findAndAttachListeners();
 
     // Date
     ($node.querySelector('[data-project-date]') as HTMLElement).innerText =

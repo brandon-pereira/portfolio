@@ -8,34 +8,76 @@ type LightboxConfig = {
 };
 
 class Lightbox {
-  el: HTMLElement;
+  $el: HTMLElement;
   $asset: HTMLElement;
   $description: HTMLElement;
+
   static dataAttribute = 'data-lightbox';
   static dataInitAttribute = 'data-lightbox-initialized';
 
   constructor() {
-    this.el = this._createElement();
-    this._attachToDocument(this.el);
-    this.$asset = this.el.querySelector('[data-asset]');
-    this.$description = this.el.querySelector('[data-description]');
-    this.listen();
-    this.el.addEventListener('click', () => this.close());
+    this.createLightBoxElements();
+    this.$asset = this.$el.querySelector('[data-asset]');
+    this.$description = this.$el.querySelector('[data-description]');
+    this.findAndAttachListeners();
+    this.events();
   }
 
   async open(srcElement: HTMLImageElement) {
-    this.el.classList.add('visible');
+    // start opening
+    this.$el.classList.add('opening');
+    // get configuration for lightbox
     const config = this.getConfigFromElement(srcElement);
-    this.setLightboxFromConfig(config);
-    await sleep(100);
+    // update lightbox ui with new data
+    await this.renderFromConfig(config);
+    // animate from src to target
     await animateElementOpen(srcElement);
-    this.$asset.classList.add('animation-done');
-    if (this.$asset.querySelector('img, video')) {
-      ga('lightbox', 'open', config.url);
-    }
+    // animation is done, update UI
+    this.$el.classList.add('open');
+    // send an event for analytics
+    ga('lightbox', 'open', config.url);
   }
 
-  getConfigFromElement(srcElement: HTMLElement): LightboxConfig {
+  close() {
+    this.$asset.innerHTML = '';
+    this.$description.innerHTML = '';
+    this.$el.classList.remove('opening', 'open');
+  }
+
+  findAndAttachListeners() {
+    const elements = document.querySelectorAll<HTMLImageElement>(
+      `img[${Lightbox.dataAttribute}]:not([${Lightbox.dataInitAttribute}])`
+    );
+    elements.forEach(el => {
+      el.setAttribute(Lightbox.dataInitAttribute, 'true');
+      el.addEventListener('click', () => this.open(el));
+    });
+  }
+
+  private createLightBoxElements() {
+    this.$el = document.createElement('div');
+    this.$el.classList.add('lightbox');
+    this.$el.setAttribute('data-close', 'true');
+    this.$el.innerHTML = `
+      <button data-close class="close-button">&times;</button>
+      <div class="modal-content">
+          <div data-asset></div>
+          <div data-description></div>
+      </div>
+    `;
+    document.body.appendChild(this.$el);
+  }
+
+  private async events() {
+    this.$el.addEventListener('click', this.close.bind(this));
+    document.addEventListener('keydown', e => {
+      if (this.$el.classList.contains('open') && e.key === 'Escape') {
+        this.close();
+      }
+    });
+  }
+
+  private getConfigFromElement(srcElement: HTMLElement): LightboxConfig {
     const raw = srcElement.getAttribute('data-lightbox');
     const json = JSON.parse(raw);
     const config: LightboxConfig = {
@@ -47,13 +89,12 @@ class Lightbox {
     return config;
   }
 
-  setLightboxFromConfig({
+  private renderFromConfig({
     contentType,
     url,
     description,
     title
   }: LightboxConfig) {
-    this._setLoading(true);
     this.$asset.innerHTML = '';
     const type = contentType.startsWith('video') ? 'video' : 'img';
     const config = {
@@ -65,62 +106,16 @@ class Lightbox {
     Object.keys(config).forEach((key: keyof typeof config) =>
       $asset.setAttribute(key, `${config[key]}`)
     );
-    // const ready = () => {
-    this.$asset.appendChild($asset);
-    this._setLoading(false);
-    // };
-    // if (type === 'img') {
-    //   $asset.onload = ready;
-    // } else {
-    //   ready();
-    // }
-    // ready();
     this.$description.innerHTML = title || description || '';
-  }
-
-  close() {
-    this.$asset.innerHTML = '';
-    this.$description.innerHTML = '';
-    this.el.classList.remove('visible');
-    this.$asset.classList.remove('animation-done');
-  }
-
-  listen() {
-    const elements = document.querySelectorAll<HTMLImageElement>(
-      `img[${Lightbox.dataAttribute}]:not([${Lightbox.dataInitAttribute}])`
-    );
-    elements.forEach(el => {
-      el.setAttribute(Lightbox.dataInitAttribute, 'true');
-      el.addEventListener('click', () => this.open(el));
+    const listenForLoad = new Promise<void>(resolve => {
+      if (type === 'img') {
+        $asset.onload = () => resolve();
+      } else {
+        resolve();
+      }
     });
-  }
-
-  _setLoading(bool: boolean) {
-    this.el.querySelector('.loading').classList.toggle('loaded', !bool);
-  }
-
-  _createElement() {
-    const $el = document.createElement('div');
-    $el.classList.add('lightbox');
-    $el.setAttribute('data-close', 'true');
-    $el.innerHTML = `
-            <button data-close class="close-button">&times;</button>
-            <div class="modal-content">
-                <div data-asset>
-            
-                </div>
-                <div class="loading visible">
-                    <div class="plus-loader">
-                        Loading…
-                    </div>
-                </div>
-                <div data-description></div>
-            </div>`;
-    return $el;
-  }
-
-  _attachToDocument(el: HTMLElement) {
-    document.body.appendChild(el);
+    this.$asset.appendChild($asset);
+    return Promise.race([listenForLoad, sleep(400)]);
   }
 }
 
@@ -143,11 +138,8 @@ function animateElementOpen($el: HTMLImageElement) {
     document.body.appendChild(ghost);
     // get target element
     const target = document.querySelector('.lightbox img') as HTMLImageElement;
-
-    console.log(target);
     requestAnimationFrame(() => {
       const endRect = target.getBoundingClientRect();
-      console.log(endRect);
       Object.assign(ghost.style, {
         top: `${endRect.top}px`,
         left: `${endRect.left}px`,
@@ -155,7 +147,7 @@ function animateElementOpen($el: HTMLImageElement) {
         width: `${endRect.width}px`
       });
     });
-    sleep(400).finally(() => {
+    sleep(350).finally(() => {
       document.body.removeChild(ghost);
       resolve();
     });
