@@ -104,6 +104,9 @@
   &[data-current-slide='2'] .stripes {
     transform: skewY(-12deg) translateX(10%);
   }
+  &[data-current-slide='3'] .stripes {
+    transform: skewY(12deg) translateY(-20%) translateX(10%);
+  }
   .carousel-slides {
     position: relative;
   }

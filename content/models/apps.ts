@@ -25,7 +25,7 @@ interface RawApp extends Omit<Partial<App>, 'images' | 'icon'> {
 async function importApps({ contentful, assetManager }: Router): Promise<void> {
   console.time('Getting apps');
   const rawData = (await contentful.getEntries('apps', {
-    order: '-sys.createdAt'
+    order: 'fields.position'
   })) as RawApp[];
   const apps = await normalizeApps(rawData, assetManager);
   await writeJson('apps.json', apps);
