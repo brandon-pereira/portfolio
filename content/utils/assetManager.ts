@@ -12,6 +12,11 @@ export interface Asset {
   contentType: string;
 }
 
+interface AssetOptions {
+  // Force convert to jpg
+  jpg?: boolean;
+}
+
 interface InternalAsset extends Asset {
   // raw url to download source from
   actualUrl: string;
@@ -30,9 +35,12 @@ class AssetManager {
     this.assets = [];
   }
 
-  add(rawAsset: RawAsset): Asset {
+  add(rawAsset: RawAsset, assetOpts?: AssetOptions): Asset {
     const asset = {} as Asset;
-    const extension = rawAsset.file.fileName.split('.').pop();
+    let extension = rawAsset.file.fileName.split('.').pop();
+    if (assetOpts?.jpg || extension === 'jpeg') {
+      extension = 'jpg';
+    }
     const actualUrl = rawAsset.file.url;
     const displayUrl = rawAsset._id
       ? `${rawAsset._id}.${extension}`
@@ -41,9 +49,14 @@ class AssetManager {
     asset.title = rawAsset.title;
     asset.description = rawAsset.description;
     asset.url = `/assets/${displayUrl}`;
+
     asset.contentType = rawAsset.file.contentType;
+    console.log(asset.contentType);
+    if (assetOpts?.jpg) {
+      asset.contentType = 'image/jpeg';
+    }
     // make sure not already queued
-    if (this.assets.find(asset => asset.actualUrl === actualUrl)) {
+    if (this.assets.find(a => a.url === asset.url)) {
       return asset;
     }
     this.assets.push({ ...asset, actualUrl });
@@ -54,6 +67,7 @@ class AssetManager {
     const promises = this.assets.map(asset => {
       const sourceUrl = asset.actualUrl;
       const outputPath = path.join(AssetManager.outputFolder, asset.url);
+      console.log(outputPath);
       return this.downloadAsset(sourceUrl, outputPath);
     });
     await Promise.all(promises);
@@ -88,14 +102,20 @@ class AssetManager {
       };
       const request = http.get(sourceUrl.replace('//', 'http://'), response => {
         if (!file.destroyed && response.statusCode === 200) {
-          if (['.png', '.jpg', '.jpeg'].includes(path.extname(outputPath))) {
-            const optimize = sharp()
+          const ext = path.extname(outputPath);
+          const isImg = ['.png', '.jpg'].includes(ext);
+          const isJpg = ext === '.jpg';
+          if (isImg) {
+            let imgCreation = sharp()
               .resize(800, 800, {
                 fit: 'inside'
               })
-              .jpeg({ quality: 75, force: false })
+              .jpeg({ quality: 75, force: isJpg })
               .png({ compressionLevel: 9, force: false });
-            response.pipe(optimize).pipe(file);
+            if (isJpg) {
+              imgCreation = imgCreation.flatten({ background: '#fff' });
+            }
+            response.pipe(imgCreation).pipe(file);
           } else {
             response.pipe(file);
           }

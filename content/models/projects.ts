@@ -19,6 +19,7 @@ export type Project = {
   title: string;
   date?: string;
   languages: Language[];
+  thumbnail?: Asset;
   shortDescription?: string;
   description: string;
   type: 'Internal' | 'External';
@@ -79,6 +80,9 @@ const normalizeProjects = (
     normalized.images = project.images
       ? project.images.map(img => assetManager.add(img))
       : [];
+    normalized.thumbnail = project.images
+      ? assetManager.add(project.images[0], { jpg: true })
+      : undefined;
     normalized.link = project.link;
     normalized.isPinned = project.isPinned || undefined;
     normalized.gitUrl = project.gitUrl;

@@ -28,6 +28,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "6A8fX42zxEeuLUAU6FFIBp",
+      "title": "Example of Sign Up Flow Step 1",
+      "description": "",
+      "url": "/assets/6A8fX42zxEeuLUAU6FFIBp.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.wreno.io/become-a-partner/sign-up"
   },
   {
@@ -81,6 +88,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "1ufLqYQzdMLBoHSAlLimAc",
+      "title": "AirBnb Personal Settings Screen",
+      "description": "",
+      "url": "/assets/1ufLqYQzdMLBoHSAlLimAc.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.airbnb.ca/account-settings/personal-info"
   },
   {
@@ -115,6 +129,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "Pfoct8pE5MU5QTBZoBRsq",
+      "title": "Example of the landing screen for the experience",
+      "description": "",
+      "url": "/assets/Pfoct8pE5MU5QTBZoBRsq.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.nissanusa.com/find-your-frontier/"
   },
   {
@@ -175,6 +196,13 @@
         "contentType": "image/jpeg"
       }
     ],
+    "thumbnail": {
+      "_id": "3SpnzqnBIUh3BIz8S6zHzU",
+      "title": " The Fullscreen Photo Viewer",
+      "description": "",
+      "url": "/assets/3SpnzqnBIUh3BIz8S6zHzU.jpg",
+      "contentType": "image/jpeg"
+    },
     "gitUrl": "https://github.com/brandon-pereira/unique-faces"
   },
   {
@@ -240,6 +268,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "3nz2TbgIzEPIps9B4rYYid",
+      "title": "Our Site Logo",
+      "description": "",
+      "url": "/assets/3nz2TbgIzEPIps9B4rYYid.jpg",
+      "contentType": "image/jpeg"
+    },
     "gitUrl": "https://github.com/brandon-pereira/hitched"
   },
   {
@@ -290,6 +325,13 @@
         "contentType": "video/mp4"
       }
     ],
+    "thumbnail": {
+      "_id": "2Bj9zodXC6Ks9Sa0R3kK0x",
+      "title": "Landing Section",
+      "description": "",
+      "url": "/assets/2Bj9zodXC6Ks9Sa0R3kK0x.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder/return-to-rugged/"
   },
   {
@@ -325,6 +367,12 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "4oszlf52FqIkFgfdmlinRN",
+      "title": "Example of the main form",
+      "url": "/assets/4oszlf52FqIkFgfdmlinRN.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://jimstewartmortgages.com/"
   },
   {
@@ -355,6 +403,12 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "4aWiQ4292AFOVX4tOY2o85",
+      "title": "Example of the interface",
+      "url": "/assets/4aWiQ4292AFOVX4tOY2o85.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/milliseconds-calculator/",
     "gitUrl": "https://github.com/brandon-pereira/milliseconds-calculator"
   },
@@ -420,6 +474,12 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "2eutBQ6LSWZMY1zHjm8nOu",
+      "title": "Close up of the Calendar Interface",
+      "url": "/assets/2eutBQ6LSWZMY1zHjm8nOu.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://swiston.ca/"
   },
   {
@@ -461,6 +521,12 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "1vEd9RWjaAqSbr8POGxtD0",
+      "title": "Mobile View",
+      "url": "/assets/1vEd9RWjaAqSbr8POGxtD0.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/byte-calculator/",
     "gitUrl": "https://github.com/brandon-pereira/byte-calculator"
   },
@@ -514,6 +580,12 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "1GrOd8eRgf9xSDr2a7KUJL",
+      "title": "Configurator Mobile Experience",
+      "url": "/assets/1GrOd8eRgf9xSDr2a7KUJL.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://nissanusa.com/shopping-tools/build-price"
   },
   {
@@ -539,6 +611,12 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "1P9oAk5x8uGEsBpLzb0IBp",
+      "title": "Example of how the bot listens and responds",
+      "url": "/assets/1P9oAk5x8uGEsBpLzb0IBp.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.messenger.com/t/urbandictionarybot",
     "gitUrl": "https://github.com/brandon-pereira/urban-dictionary-bot"
   },
@@ -605,6 +683,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "1z6F8ua6JH5e6m18pLXqvk",
+      "title": "Example of some interactive pieces",
+      "description": "Example of some interactive pieces",
+      "url": "/assets/1z6F8ua6JH5e6m18pLXqvk.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.mitsubishi-motors.nl/"
   },
   {
@@ -675,6 +760,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "4loe2vKe5Bi91vAYlozgMv",
+      "title": "Example of desktop experience",
+      "description": "Example of desktop experience",
+      "url": "/assets/4loe2vKe5Bi91vAYlozgMv.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://betterdo.app/",
     "gitUrl": "https://github.com/brandon-pereira/betterdo-ui"
   },
@@ -703,7 +795,7 @@
         "_id": "1c9okCtbZo4quQGkOowqyo",
         "title": "Preview of how the AR experience works",
         "description": "Preview of how the AR experience works",
-        "url": "/assets/1c9okCtbZo4quQGkOowqyo.jpeg",
+        "url": "/assets/1c9okCtbZo4quQGkOowqyo.jpg",
         "contentType": "image/jpeg"
       },
       {
@@ -714,6 +806,13 @@
         "contentType": "video/mp4"
       }
     ],
+    "thumbnail": {
+      "_id": "1c9okCtbZo4quQGkOowqyo",
+      "title": "Preview of how the AR experience works",
+      "description": "Preview of how the AR experience works",
+      "url": "/assets/1c9okCtbZo4quQGkOowqyo.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://m.me/winanissantitan"
   },
   {
@@ -768,6 +867,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "6L8ca50vDOyEmA02O4coo0",
+      "title": "FirstCommand desktop experience",
+      "description": "FirstCommand desktop experience",
+      "url": "/assets/6L8ca50vDOyEmA02O4coo0.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.firstcommand.com/"
   },
   {
@@ -813,6 +919,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "1F4wQroc5aYuMEGs0sG0oQ",
+      "title": "Example of the recommend a car flow",
+      "description": "Example of the recommend a car flow",
+      "url": "/assets/1F4wQroc5aYuMEGs0sG0oQ.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.messenger.com/t/infinitiidrisuk?ref=brandonp_portfolio"
   },
   {
@@ -849,6 +962,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "oGdA74ceLAgaMEeygKuSI",
+      "title": "Example of the UI",
+      "description": "Example of the UI",
+      "url": "/assets/oGdA74ceLAgaMEeygKuSI.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://github.com/brandon-pereira/purrvice-workers",
     "gitUrl": "https://github.com/brandon-pereira/purrvice-workers"
   },
@@ -905,6 +1025,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "2giTsFWK76uQIyiweUEcYc",
+      "title": "The redesigned header",
+      "description": "The redesigned header",
+      "url": "/assets/2giTsFWK76uQIyiweUEcYc.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com",
     "gitUrl": "https://github.com/brandon-pereira/portfolio/tree/release/v3"
   },
@@ -962,6 +1089,13 @@
         "contentType": "video/mp4"
       }
     ],
+    "thumbnail": {
+      "_id": "3LUJnUNs1iMSmO4eG4OGWE",
+      "title": "Example of how the suggestions work. They are based on users input.",
+      "description": "Example of how the suggestions work. They are based on users input.",
+      "url": "/assets/3LUJnUNs1iMSmO4eG4OGWE.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://m.me/INFINITIIDRIS?ref=brandonp_portfolio"
   },
   {
@@ -1027,6 +1161,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "4ikvd4yIMMsUAamUwykYE8",
+      "title": "Mobile Android Experience",
+      "description": "Mobile Android Experience",
+      "url": "/assets/4ikvd4yIMMsUAamUwykYE8.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/tv-tracker/",
     "gitUrl": "https://github.com/brandon-pereira/tv-tracker"
   },
@@ -1066,6 +1207,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "3DVvmBRIlaKcCeWUyKYwQG",
+      "title": "Example of landing page on large screen size",
+      "description": "Example of landing page on large screen size",
+      "url": "/assets/3DVvmBRIlaKcCeWUyKYwQG.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "http://brand.travelalberta.com/"
   },
   {
@@ -1106,6 +1254,13 @@
         "contentType": "video/mp4"
       }
     ],
+    "thumbnail": {
+      "_id": "2fLYBsbwHO6sm6M0KoqIKG",
+      "title": "Example of what happens when you hit random 0-60 time.",
+      "description": "Example of what happens when you hit random 0-60 time.",
+      "url": "/assets/2fLYBsbwHO6sm6M0KoqIKG.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.messenger.com/t/INFINITIQ60SpeedBot"
   },
   {
@@ -1166,6 +1321,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "5G7FgIiNQAmyQO0mu8yKem",
+      "title": "Mobile view of landing screen",
+      "description": "Mobile view of landing screen",
+      "url": "/assets/5G7FgIiNQAmyQO0mu8yKem.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/wings-cheap",
     "gitUrl": "https://github.com/brandon-pereira/wings-cheap"
   },
@@ -1212,6 +1374,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "5bMKhNeQnKoOUWaGAS200i",
+      "title": "The landing screen.",
+      "description": "The landing screen.",
+      "url": "/assets/5bMKhNeQnKoOUWaGAS200i.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://www.nissanusa.com/recalls-vin/#/Home"
   },
   {
@@ -1262,6 +1431,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "4He2I3nyuQSQIA6Y8oQ80O",
+      "title": "An example of the landing screen (after animation).",
+      "description": "An example of the landing screen (after animation).",
+      "url": "/assets/4He2I3nyuQSQIA6Y8oQ80O.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "http://infinitiusa.com/now/newtradition/"
   },
   {
@@ -1330,6 +1506,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "3p92mRAAsoYY0s6kUmSAow",
+      "title": "Header Area",
+      "description": "Header Area",
+      "url": "/assets/3p92mRAAsoYY0s6kUmSAow.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/",
     "gitUrl": "https://github.com/brandon-pereira/portfolio/tree/release/v2"
   },
@@ -1357,6 +1540,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "7rMfCncuPu0CuWMcY6CeSw",
+      "title": "Example of how the loader looks",
+      "description": "Example of how the loader looks",
+      "url": "/assets/7rMfCncuPu0CuWMcY6CeSw.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/showcase/splash-loader/",
     "gitUrl": "https://github.com/brandon-pereira/splash-screen"
   },
@@ -1398,6 +1588,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "5nijaX4yOcWQwWy0CG2IoO",
+      "title": "Google Chrome icon made with pure CSS",
+      "description": "Google Chrome icon made with pure CSS",
+      "url": "/assets/5nijaX4yOcWQwWy0CG2IoO.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/showcase/icons/",
     "gitUrl": "https://github.com/brandon-pereira/css3-icons"
   },
@@ -1454,6 +1651,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "3AvIub86KIEKqMiySEIw0q",
+      "title": "Packages screen, demonstrating conflict manager.",
+      "description": "Packages screen, demonstrating conflict manager.",
+      "url": "/assets/3AvIub86KIEKqMiySEIw0q.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "http://nissanusa.com/buildyournissan"
   },
   {
@@ -1504,6 +1708,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "3p92mRAAsoYY0s6kUmSAow",
+      "title": "Header Area",
+      "description": "Header Area",
+      "url": "/assets/3p92mRAAsoYY0s6kUmSAow.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com",
     "gitUrl": "https://github.com/brandon-pereira/portfolio/tree/release/v1"
   },
@@ -1554,7 +1765,14 @@
         "url": "/assets/3pDpW2Obd6mUYWeecowsuU.png",
         "contentType": "image/png"
       }
-    ]
+    ],
+    "thumbnail": {
+      "_id": "37xue73IA00i2EM0Qc8eyw",
+      "title": "Example on desktop",
+      "description": "Example on desktop",
+      "url": "/assets/37xue73IA00i2EM0Qc8eyw.jpg",
+      "contentType": "image/jpeg"
+    }
   },
   {
     "_id": "5jUiVE0CAM6848UW6YcCoY",
@@ -1599,6 +1817,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "1hltOYSZ8UmQccWAoIcqMw",
+      "title": "Login Screen",
+      "description": "Login Screen",
+      "url": "/assets/1hltOYSZ8UmQccWAoIcqMw.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "http://www.brokencity.ca/"
   },
   {
@@ -1624,6 +1849,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "2fesdQ37AsKOiGkgGUwq0I",
+      "title": "Better to see live version",
+      "description": "Better to see live version",
+      "url": "/assets/2fesdQ37AsKOiGkgGUwq0I.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/showcase/stack-loading"
   },
   {
@@ -1649,6 +1881,13 @@
         "contentType": "image/png"
       }
     ],
+    "thumbnail": {
+      "_id": "15ZqTUrGzEACG8Eek2sIg0",
+      "title": "Better to see live version",
+      "description": "Better to see live version",
+      "url": "/assets/15ZqTUrGzEACG8Eek2sIg0.jpg",
+      "contentType": "image/jpeg"
+    },
     "link": "https://branclon.com/showcase/usb"
   },
   {
