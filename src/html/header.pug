@@ -1,9 +1,0 @@
-header#header.header
-  .logo 
-    svg 
-      use(xlink:href='#clon')
-  .copy 
-    span.story-copy Hi, I'm
-    h1.name !{ about.firstName.split("").map(v => `<span data-title="${v}">${v}</span>`).join("") }
-    span.story-copy and I build&nbsp;
-      span(data-scroll-text=about.scrollText) #{ about.scrollText.split('|')[0] }

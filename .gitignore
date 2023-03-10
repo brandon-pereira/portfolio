@@ -1,7 +1,0 @@
-node_modules
-.env
-/src/content/assets
-.cache 
-.DS_Store
-dist
-.parcel-cache
