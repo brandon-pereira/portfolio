@@ -42,9 +42,7 @@ const normalizeApps = (
     parsedApp.appName = app.appName || '';
     parsedApp.description = await md2html(app.description || '');
     parsedApp.link = app.link;
-    parsedApp.icon = assetManager.add(app.icon.fields, {
-      jpg: true
-    });
+    parsedApp.icon = assetManager.add(app.icon.fields);
     parsedApp.theme = app.theme || 'default';
     parsedApp.images = app.images.map((img: RawAsset) =>
       assetManager.add(img, {
