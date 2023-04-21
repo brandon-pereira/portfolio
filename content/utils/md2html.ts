@@ -5,7 +5,11 @@ export default (md: string): Promise<string> =>
     if (!md) {
       return '';
     }
-    marked(md, {}, (err, html) => {
+    const renderer = new marked.Renderer();
+    renderer.link = function (href, title, text) {
+      return `<a target="_blank" href="${href}">${text}` + '</a>';
+    };
+    marked(md, { renderer }, (err, html) => {
       err ? reject(err) : resolve(html);
     });
   });
