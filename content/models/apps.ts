@@ -44,11 +44,7 @@ const normalizeApps = (
     parsedApp.link = app.link;
     parsedApp.icon = assetManager.add(app.icon.fields);
     parsedApp.theme = app.theme || 'default';
-    parsedApp.images = app.images.map((img: RawAsset) =>
-      assetManager.add(img, {
-        jpg: true
-      })
-    );
+    parsedApp.images = app.images.map((img: RawAsset) => assetManager.add(img));
     return parsedApp;
   });
   return Promise.all(parsedApps);

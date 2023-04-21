@@ -16,15 +16,15 @@
         "_id": "7HgIAynLM5K312K3Tgfn8j",
         "title": "Mac UI",
         "description": "",
-        "url": "/assets/7HgIAynLM5K312K3Tgfn8j.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/7HgIAynLM5K312K3Tgfn8j.png",
+        "contentType": "image/png"
       },
       {
         "_id": "7C47OKOg0Zilfm5ilRGGj1",
         "title": "All UI Screens",
         "description": "",
-        "url": "/assets/7C47OKOg0Zilfm5ilRGGj1.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/7C47OKOg0Zilfm5ilRGGj1.png",
+        "contentType": "image/png"
       }
     ]
   },
@@ -45,22 +45,22 @@
         "_id": "4loe2vKe5Bi91vAYlozgMv",
         "title": "Example of desktop experience",
         "description": "Example of desktop experience",
-        "url": "/assets/4loe2vKe5Bi91vAYlozgMv.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/4loe2vKe5Bi91vAYlozgMv.png",
+        "contentType": "image/png"
       },
       {
         "_id": "6m4YZBGMvJECuhu3ClSjSG",
         "title": "Mobile Experience",
         "description": "Mobile Experience",
-        "url": "/assets/6m4YZBGMvJECuhu3ClSjSG.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/6m4YZBGMvJECuhu3ClSjSG.png",
+        "contentType": "image/png"
       },
       {
         "_id": "4oOeF0V2ohzKPnxU3q4fg5",
         "title": "List Members User Interface",
         "description": "List Members User Interface",
-        "url": "/assets/4oOeF0V2ohzKPnxU3q4fg5.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/4oOeF0V2ohzKPnxU3q4fg5.png",
+        "contentType": "image/png"
       }
     ]
   },
@@ -81,22 +81,22 @@
         "_id": "5fxagEO5J6ucyQ0MmQQgAE",
         "title": "Desktop view of landing screen",
         "description": "Desktop view of landing screen",
-        "url": "/assets/5fxagEO5J6ucyQ0MmQQgAE.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/5fxagEO5J6ucyQ0MmQQgAE.png",
+        "contentType": "image/png"
       },
       {
         "_id": "3Eh8HFBZBKUcwummomseyA",
         "title": "Mobile view of results screen",
         "description": "Mobile view of results screen",
-        "url": "/assets/3Eh8HFBZBKUcwummomseyA.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/3Eh8HFBZBKUcwummomseyA.png",
+        "contentType": "image/png"
       },
       {
         "_id": "5G7FgIiNQAmyQO0mu8yKem",
         "title": "Mobile view of landing screen",
         "description": "Mobile view of landing screen",
-        "url": "/assets/5G7FgIiNQAmyQO0mu8yKem.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/5G7FgIiNQAmyQO0mu8yKem.png",
+        "contentType": "image/png"
       }
     ]
   },
@@ -117,22 +117,22 @@
         "_id": "4ikvd4yIMMsUAamUwykYE8",
         "title": "Mobile Android Experience",
         "description": "Mobile Android Experience",
-        "url": "/assets/4ikvd4yIMMsUAamUwykYE8.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/4ikvd4yIMMsUAamUwykYE8.png",
+        "contentType": "image/png"
       },
       {
         "_id": "4cajmluS5OUcyoyWKMqewm",
         "title": "Mac status bar experience",
         "description": "Mac status bar experience",
-        "url": "/assets/4cajmluS5OUcyoyWKMqewm.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/4cajmluS5OUcyoyWKMqewm.png",
+        "contentType": "image/png"
       },
       {
         "_id": "30rOMLd7i00YiQW2GemacK",
         "title": "Desktop experience",
         "description": "Desktop experience",
-        "url": "/assets/30rOMLd7i00YiQW2GemacK.jpg",
-        "contentType": "image/jpeg"
+        "url": "/assets/30rOMLd7i00YiQW2GemacK.png",
+        "contentType": "image/png"
       }
     ]
   }
