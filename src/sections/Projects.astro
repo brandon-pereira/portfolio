@@ -19,13 +19,15 @@ const posts = (await getCollection("projects"))
 
   <style>
     .container {
-      background-color: #212121;
+      background-color: #151515;
     }
     .projects {
       max-width: 1200px;
       margin: 5rem auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+      /* Barely supported, but it looks nice when it works :D */
+      grid-template-rows: masonry;
       gap: 50px;
     }
   </style>
