@@ -1,0 +1,19 @@
+---
+title: "Wings.cheap"
+description: "I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!"
+date: "2017-02-01T00:00:00.000Z"
+languages: "NodeJS, MongoDB, Javascript (ES6+), HTML, A11Y, & SEO, CSS"
+type: "Internal"
+status: "Live"
+link: "https://branclon.com/wings-cheap"
+gitUrl: "https://github.com/brandon-pereira/wings-cheap"
+primaryImage: "../../assets//5G7FgIiNQAmyQO0mu8yKem.jpg"
+color: "#0472f7"
+---
+I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!
+
+Under the hood, I'm using AngularJS and SCSS to render the front-end. It goes through GulpJS to create production (minified) files as well as enabling live reload on both front-end and back-end (running on the same instance). The back-end is written in NodeJS (using Express to handle server portion) and utilizes a REST API. For a database, I decided to use MongoDB.
+
+The hosting is being provided by DigitalOcean. For this project, I created a basic Linux server and manually implemented NodeJS, Mongo, Git, and NGINX. This allowed me to test my bash skills and learn how a server is set up at a lower level.
+
+The main objectives of this application were to learn AngularJS as well as to dabble with writing NodeJS.

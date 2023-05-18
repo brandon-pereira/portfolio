@@ -1,0 +1,49 @@
+---
+// Inspired by https://uiverse.io/namecho/slippery-moth-23
+interface Props {
+  color?: string;
+}
+const { color, href } = Astro.props;
+---
+
+<button><slot /></button>
+
+<style define:vars={{ color: color || "blue" }}>
+  button {
+    padding: 0.5rem 1.5rem;
+    border: 3px solid var(--color);
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+    z-index: 1;
+    font-family: inherit;
+    color: var(--color);
+  }
+
+  button::before {
+    content: "";
+    width: 0;
+    height: 400%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: var(--color);
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+  }
+
+  button:hover::before {
+    width: 105%;
+  }
+
+  button:hover {
+    color: #111;
+  }
+</style>
