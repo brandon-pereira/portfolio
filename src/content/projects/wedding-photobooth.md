@@ -1,13 +1,16 @@
 ---
+id: "7Km3R1SnDTIEq3ltYyUQCr"
 title: "Wedding Photobooth"
-description: "I challenged myself by building an entire photo booth solution for my wedding. The booth creates a photo strip using photos from our DLSR, prints the result automatically, and uploads them to the web leveraging Tensorflow for Facial Recognition."
 date: "2021-09-03T00:00:00.000Z"
 languages: "NodeJS, CSS, HTML, A11Y, & SEO, Javascript (ES6+), MongoDB"
+description: "I challenged myself by building an entire photo booth solution for my wedding. The booth creates a photo strip using photos from our DLSR, prints the result automatically, and uploads them to the web leveraging Tensorflow for Facial Recognition."
 type: "Internal"
 status: "Unavailable"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 gitUrl: "https://github.com/brandon-pereira/unique-faces"
-primaryImage: "../../assets//3SpnzqnBIUh3BIz8S6zHzU.jpg"
 color: "#f7c10d"
+primaryImage: "../../assets//3SpnzqnBIUh3BIz8S6zHzU.jpg"
 ---
 I challenged myself by building an entire photo booth solution for my wedding. The booth creates a photo strip using photos from our DLSR, prints the result automatically, and uploads them to the web leveraging Tensorflow for facial recognition.
 

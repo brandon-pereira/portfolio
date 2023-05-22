@@ -1,13 +1,16 @@
 ---
+id: "20Xk51zcMwc2ci88g066Wc"
 title: "INFINITI: Q60 Speedbot"
-description: "I built a chatbot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching."
 date: "2017-04-10T00:00:00.000Z"
 languages: "NodeJS"
+description: "I built a chatbot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching."
 type: "External"
 status: "Unavailable"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "https://www.messenger.com/t/INFINITIQ60SpeedBot"
-primaryImage: "../../assets//2fLYBsbwHO6sm6M0KoqIKG.jpg"
 color: "#0684f9"
+primaryImage: "../../assets//2fLYBsbwHO6sm6M0KoqIKG.jpg"
 ---
 I built a chatbot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.
 

@@ -51,7 +51,6 @@ class AssetManager {
     asset.url = `/${displayUrl}`;
 
     asset.contentType = rawAsset.file.contentType;
-    console.log(asset.contentType);
     if (assetOpts?.jpg) {
       asset.contentType = "image/jpeg";
     }

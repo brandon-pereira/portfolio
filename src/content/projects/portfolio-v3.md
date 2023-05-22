@@ -1,14 +1,17 @@
 ---
+id: "X0k8dPduGQMC2ogY8Y4uw"
 title: "Portfolio v3"
-description: "The third version of my portfolio was a complete rewrite. The rewrite was done to drastically improve load times, improve search engine rankings, and redesign a couple sections of the site."
 date: "2018-04-01T00:00:00.000Z"
 languages: "CSS, HTML, A11Y, & SEO, Javascript (ES6+), NodeJS"
+description: "The third version of my portfolio was a complete rewrite. The rewrite was done to drastically improve load times, improve search engine rankings, and redesign a couple sections of the site."
 type: "Internal"
 status: "Live"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "https://branclon.com"
 gitUrl: "https://github.com/brandon-pereira/portfolio/tree/release/v3"
-primaryImage: "../../assets//2giTsFWK76uQIyiweUEcYc.jpg"
 color: "#c5044b"
+primaryImage: "../../assets//2giTsFWK76uQIyiweUEcYc.jpg"
 ---
 The third version of my portfolio was a complete rewrite. The rewrite was done to drastically improve load times, improve search engine rankings, and redesign a couple sections of the site.
 

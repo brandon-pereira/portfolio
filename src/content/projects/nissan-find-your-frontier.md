@@ -1,12 +1,15 @@
 ---
+id: "3DfMXXOhKF8gooPh3uPsnc"
 title: "Nissan: Find Your Frontier"
-description: "Our team built and launched a very immersive campaign for our Nissan client. The project also leaped forward for my career as a Technology Director."
 date: "2021-10-01T00:00:00.000Z"
+description: "Our team built and launched a very immersive campaign for our Nissan client. The project also leaped forward for my career as a Technology Director."
 type: "External"
 status: "Live"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "https://www.nissanusa.com/find-your-frontier/"
-primaryImage: "../../assets//Pfoct8pE5MU5QTBZoBRsq.jpg"
 color: "#df351f"
+primaryImage: "../../assets//Pfoct8pE5MU5QTBZoBRsq.jpg"
 ---
 My role in the "Nissan: Find Your Frontier" project was entirely from a direction and management perspective. The client debriefed our team on the strategy and vision they wanted to see. The result of this debrief led me to work closely with our internal teams to assess what we could deliver within the timeline.
 

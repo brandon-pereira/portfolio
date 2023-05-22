@@ -1,14 +1,17 @@
 ---
+id: "6zVbf6aP1Sq266omigGGwi"
 title: "Portfolio v1"
-description: "I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive and used some fun next-level technologies."
 date: "2015-11-30T00:00:00.000Z"
 languages: "CSS, HTML, A11Y, & SEO, Javascript (ES6+)"
+description: "I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive and used some fun next-level technologies."
 type: "Internal"
 status: "Unavailable"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "https://branclon.com"
 gitUrl: "https://github.com/brandon-pereira/portfolio/tree/release/v1"
-primaryImage: "../../assets//3p92mRAAsoYY0s6kUmSAow.jpg"
 color: "#3c64c4"
+primaryImage: "../../assets//3p92mRAAsoYY0s6kUmSAow.jpg"
 ---
 I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive and used some fun next-level technologies.
 

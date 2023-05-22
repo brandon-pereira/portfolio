@@ -1,14 +1,17 @@
 ---
+id: "BAjfoJ0Kx3i5su6Hhi2cN"
 title: "Urban Dictionary Bot"
-description: "I built a simple Messenger bot that gives you the Urban Dictionary definition of a word."
 date: "2019-06-12T00:00:00.000Z"
 languages: "NodeJS"
+description: "I built a simple Messenger bot that gives you the Urban Dictionary definition of a word."
 type: "Internal"
 status: "Unavailable"
+images: "[object Object]"
+thumbnail: "[object Object]"
 link: "https://www.messenger.com/t/urbandictionarybot"
 gitUrl: "https://github.com/brandon-pereira/urban-dictionary-bot"
-primaryImage: "../../assets//1P9oAk5x8uGEsBpLzb0IBp.jpg"
 color: "#1f9ff2"
+primaryImage: "../../assets//1P9oAk5x8uGEsBpLzb0IBp.jpg"
 ---
 I built a simple Messenger bot that gives you the Urban Dictionary definition of a word. The idea was simple, and I only gave myself 4 hours to go from creating the repository to having it running in production.
 

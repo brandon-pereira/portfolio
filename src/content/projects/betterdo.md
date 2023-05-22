@@ -1,12 +1,15 @@
 ---
+id: "37grwOR6bSyIyWQGA0Qi4A"
 title: "BetterDo."
-description: "BetterDo was my take on a todo application. I was unhappy with the alternatives, so I decided to build my own version."
 date: "2015-04-20T00:00:00.000Z"
 languages: "CSS, HTML, A11Y, & SEO, Javascript (ES6+)"
+description: "BetterDo was my take on a todo application. I was unhappy with the alternatives, so I decided to build my own version."
 type: "Internal"
 status: "Unavailable"
-primaryImage: "../../assets//37xue73IA00i2EM0Qc8eyw.jpg"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 color: "#44a4bc"
+primaryImage: "../../assets//37xue73IA00i2EM0Qc8eyw.jpg"
 ---
 BetterDo was my take on a todo application. I was unhappy with the alternatives, so I decided to build my own version.
 

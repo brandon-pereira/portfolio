@@ -1,13 +1,16 @@
 ---
+id: "6E4mnHlQk0k6KkgQq8KUac"
 title: "Nissan: Titan AR"
-description: "I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. "
 date: "2018-09-21T00:00:00.000Z"
 languages: "MongoDB, NodeJS"
+description: "I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. "
 type: "External"
 status: "Unavailable"
+images: "[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "https://m.me/winanissantitan"
-primaryImage: "../../assets//1c9okCtbZo4quQGkOowqyo.jpg"
 color: "#f29a43"
+primaryImage: "../../assets//1c9okCtbZo4quQGkOowqyo.jpg"
 ---
 I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. 
 

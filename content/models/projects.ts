@@ -19,7 +19,7 @@ type RawLanguage = {
 } & Language;
 
 export type Project = {
-  _id: string;
+  id: string;
   index?: number;
   title: string;
   date?: string;
@@ -38,6 +38,7 @@ export type Project = {
 
 // Defines expected response from service
 interface RawProject extends Omit<Partial<Project>, "languages" | "images"> {
+  _id: string;
   images: RawAsset[];
   languages: RawLanguage[];
 }
@@ -61,20 +62,15 @@ async function importProjects({
         })}.md`,
         generateMarkdown(
           {
+            ...project,
             // prettier-ignore
             title: project.title.replace(":", "\:"),
             description: project.shortDescription,
-            date: project.date,
+            shortDescription: null,
             languages: project.languages.map((lang) => lang.name).join(", "),
-            type: project.type,
-            status: project.status,
-            link: project.link,
-            isPinned: project.isPinned,
-            gitUrl: project.gitUrl,
             primaryImage:
               project.images?.[0]?.url &&
               `../../assets/${project.thumbnail?.url}`,
-            color: project.color,
           },
           project.description
         )
@@ -90,7 +86,8 @@ const normalizeProjects = (
 ): Promise<Project[]> => {
   const normalizedProjects = projects.map(async (project): Promise<Project> => {
     const normalized = {} as Project;
-    normalized._id = project._id || "";
+
+    normalized.id = project._id || "";
     normalized.title = project.title || "";
     normalized.date = project.date
       ? // convert to ISO date then stringify
@@ -121,15 +118,10 @@ const normalizeProjects = (
     normalized.isPinned = project.isPinned || undefined;
     normalized.gitUrl = project.gitUrl;
     if (!normalized.thumbnail?.url) return normalized;
-    console.log(normalized.thumbnail?.url);
-    console.log(
-      join(process.cwd(), "content", "assets", normalized.thumbnail?.url)
-    );
     const colors = await Vibrant.from(
       join(process.cwd(), "src", "assets", normalized.thumbnail?.url)
     ).getPalette();
 
-    console.log(colors.Vibrant?.hex);
     normalized.color = colors.Vibrant?.hex;
     return normalized;
   });

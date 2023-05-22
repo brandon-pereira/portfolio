@@ -1,14 +1,17 @@
 ---
+id: "48QIfbiRQ4qOa06Yi8S8us"
 title: "Wings.cheap"
-description: "I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!"
 date: "2017-02-01T00:00:00.000Z"
 languages: "NodeJS, MongoDB, Javascript (ES6+), HTML, A11Y, & SEO, CSS"
+description: "I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!"
 type: "Internal"
 status: "Live"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "https://branclon.com/wings-cheap"
 gitUrl: "https://github.com/brandon-pereira/wings-cheap"
-primaryImage: "../../assets//5G7FgIiNQAmyQO0mu8yKem.jpg"
 color: "#0472f7"
+primaryImage: "../../assets//5G7FgIiNQAmyQO0mu8yKem.jpg"
 ---
 I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!
 

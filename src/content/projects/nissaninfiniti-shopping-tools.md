@@ -1,13 +1,16 @@
 ---
+id: "3s0cnjG1m0BMdNtQU3Me2J"
 title: "Nissan/Infiniti Shopping Tools"
-description: "We were tasked with rebuilding the Nissan and Infiniti shopping tools applications. This was my first major project with the role of Technology Lead."
 date: "2020-06-03T00:00:00.000Z"
 languages: "GraphQL, HTML, A11Y, & SEO, Javascript (ES6+), NodeJS"
+description: "We were tasked with rebuilding the Nissan and Infiniti shopping tools applications. This was my first major project with the role of Technology Lead."
 type: "External"
 status: "Live"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "https://nissanusa.com/shopping-tools/build-price"
-primaryImage: "../../assets//1GrOd8eRgf9xSDr2a7KUJL.jpg"
 color: "#c30931"
+primaryImage: "../../assets//1GrOd8eRgf9xSDr2a7KUJL.jpg"
 ---
 My company redesigned and built a new shopping tools experience for Nissan and Infiniti. The shopping tools experience includes the configurator (building a vehicle and choosing your colors, options, etc.), the payment estimator (calculate your lease/finance payments) and the inventory tool for finding similar inventory near you.
 

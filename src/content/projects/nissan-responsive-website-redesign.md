@@ -1,13 +1,16 @@
 ---
+id: "58R6Sv3VQkamAMmKooWu0Q"
 title: "Nissan: Responsive website redesign"
-description: "We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork."
 date: "2016-05-05T00:00:00.000Z"
 languages: "CSS, HTML, A11Y, & SEO, Javascript (ES6+), React"
+description: "We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork."
 type: "External"
 status: "Live"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "http://nissanusa.com/buildyournissan"
-primaryImage: "../../assets//3AvIub86KIEKqMiySEIw0q.jpg"
 color: "#c72f56"
+primaryImage: "../../assets//3AvIub86KIEKqMiySEIw0q.jpg"
 ---
 We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.
 

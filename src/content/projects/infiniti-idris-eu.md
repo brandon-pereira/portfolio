@@ -1,13 +1,16 @@
 ---
+id: "1LHkmPm1S4Qw0wSCcCM2cY"
 title: "INFINITI: Idris EU"
-description: "After a successful launch of our first Idris project for North America, the client asked if we could add more functionality and launch it in the European Union. "
 date: "2018-07-05T00:00:00.000Z"
 languages: "NodeJS, MongoDB"
+description: "After a successful launch of our first Idris project for North America, the client asked if we could add more functionality and launch it in the European Union. "
 type: "External"
 status: "Unavailable"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "https://www.messenger.com/t/infinitiidrisuk?ref=brandonp_portfolio"
-primaryImage: "../../assets//1F4wQroc5aYuMEGs0sG0oQ.jpg"
 color: "#0584f9"
+primaryImage: "../../assets//1F4wQroc5aYuMEGs0sG0oQ.jpg"
 ---
 After a successful launch of our first Idris project for North America, the client asked if we could add more functionality and launch it in the European Union. 
 

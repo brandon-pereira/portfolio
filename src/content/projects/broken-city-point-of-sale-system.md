@@ -1,13 +1,16 @@
 ---
+id: "5jUiVE0CAM6848UW6YcCoY"
 title: "Broken City: Point of sale system"
-description: "For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design."
 date: "2015-04-14T00:00:00.000Z"
 languages: "Javascript (ES6+), CSS"
+description: "For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design."
 type: "Internal"
 status: "Live"
+images: "[object Object],[object Object],[object Object]"
+thumbnail: "[object Object]"
 link: "http://www.brokencity.ca/"
-primaryImage: "../../assets//1hltOYSZ8UmQccWAoIcqMw.jpg"
 color: "#0404ac"
+primaryImage: "../../assets//1hltOYSZ8UmQccWAoIcqMw.jpg"
 ---
 For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design. 
 

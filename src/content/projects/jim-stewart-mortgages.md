@@ -1,13 +1,16 @@
 ---
+id: "3xAp8X3vid1y32jLi1hGxC"
 title: "Jim Stewart Mortgages"
-description: "I built a contact form and information website for a local mortgage broker"
 date: "2020-12-08T00:00:00.000Z"
 languages: "CSS, HTML, A11Y, & SEO, Javascript (ES6+)"
+description: "I built a contact form and information website for a local mortgage broker"
 type: "External"
 status: "Live"
+images: "[object Object]"
+thumbnail: "[object Object]"
 link: "https://jimstewartmortgages.com/"
-primaryImage: "../../assets//4oszlf52FqIkFgfdmlinRN.jpg"
 color: "#af4f64"
+primaryImage: "../../assets//4oszlf52FqIkFgfdmlinRN.jpg"
 ---
 I built a contact form and information website for a local mortgage broker. This one was pretty quick and easy to build, and I tried to do it quickly and affordably for my client. Overall, they loved the work. 
 

@@ -1,17 +1,13 @@
 ---
-import type { Project } from "../../../content/models/projects";
+import type { Project } from "../../../../content/models/projects";
 import { Image } from "astro:assets";
-import Button from "../atoms/Button.astro";
+import Button from "../../../components/Button.astro";
 
 interface Props extends Project {}
-const { title, description, primaryImage, color } = Astro.props;
-// const img = baseImg;
-// if (primaryImage) {
-//   let { default: img } = await import(primaryImage);
-//   console.log(img);
-// }
+const { title, description, primaryImage, color, id } = Astro.props;
 ---
 
+<!-- TODO: For some reason this can't be an <a> tag -->
 <div class="container">
   <div class="content">
     {primaryImage && <Image src={primaryImage} quality={100} alt={title} />}
@@ -23,18 +19,21 @@ const { title, description, primaryImage, color } = Astro.props;
     <div class="description">
       <p>{description || ""}</p>
     </div>
-    <Button color={color}>Learn More</Button>
+    <Button color={color!} href={"/projects/" + id} color={color}>
+      Learn More
+    </Button>
   </div>
 </div>
 
 <style define:vars={{ "primary-color": color }}>
   .container {
+    display: block;
+    position: relative;
     --gap: 10px;
     --border-radius: 20px;
     --content-gap: 20px;
     border-radius: var(--border-radius);
     color: #fff;
-    position: relative;
     &:before {
       content: "";
       position: absolute;

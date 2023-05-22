@@ -1,15 +1,19 @@
 ---
 // Inspired by https://uiverse.io/namecho/slippery-moth-23
 interface Props {
-  color?: string;
+  color: string | undefined;
+  href: string;
 }
 const { color, href } = Astro.props;
 ---
 
-<button><slot /></button>
+<div>
+  <a class="container" href={href}><slot /></a>
+</div>
 
 <style define:vars={{ color: color || "blue" }}>
-  button {
+  .container {
+    display: inline-block;
     padding: 0.5rem 1.5rem;
     border: 3px solid var(--color);
     position: relative;
@@ -25,7 +29,7 @@ const { color, href } = Astro.props;
     color: var(--color);
   }
 
-  button::before {
+  .container::before {
     content: "";
     width: 0;
     height: 400%;
@@ -39,11 +43,11 @@ const { color, href } = Astro.props;
     z-index: -1;
   }
 
-  button:hover::before {
+  .container:hover::before {
     width: 105%;
   }
 
-  button:hover {
+  .container:hover {
     color: #111;
   }
 </style>

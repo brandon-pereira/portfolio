@@ -1,13 +1,16 @@
 ---
+id: "16unN5KljbPh84sOedRb8s"
 title: "Wreno: Sign Up Flow"
-description: "The sign-up flow was my first contribution to Wreno after joining the company. My role included hiring, gathering business requirements, and designing the database and backend services for storing users' accounts, file uploads, and data."
 date: "2022-06-15T00:00:00.000Z"
 languages: "NodeJS, React"
+description: "The sign-up flow was my first contribution to Wreno after joining the company. My role included hiring, gathering business requirements, and designing the database and backend services for storing users' accounts, file uploads, and data."
 type: "External"
 status: "Live"
+images: "[object Object]"
+thumbnail: "[object Object]"
 link: "https://www.wreno.io/become-a-partner/sign-up"
-primaryImage: "../../assets//6A8fX42zxEeuLUAU6FFIBp.jpg"
 color: "#2c7541"
+primaryImage: "../../assets//6A8fX42zxEeuLUAU6FFIBp.jpg"
 ---
 The sign-up flow was my first contribution to Wreno after joining the company. When I joined, the company only had a simple static site. During this project, I lead the development of the sign-up flow. My role included hiring, gathering business requirements, and designing the database and backend services for storing users' accounts, file uploads, and data.
 

@@ -1,14 +1,17 @@
 ---
+id: "5iEJz0WLcAIy2OQk2Cywwa"
 title: "Purrvice Workers"
-description: "A web application for getting random cat pictures. Powered by service workers. It demonstrates offline caching, web push notifications, and progressive enhancement. "
 date: "2018-05-25T00:00:00.000Z"
 languages: "Javascript (ES6+), MongoDB, NodeJS"
+description: "A web application for getting random cat pictures. Powered by service workers. It demonstrates offline caching, web push notifications, and progressive enhancement. "
 type: "External"
 status: "Live"
+images: "[object Object]"
+thumbnail: "[object Object]"
 link: "https://github.com/brandon-pereira/purrvice-workers"
 gitUrl: "https://github.com/brandon-pereira/purrvice-workers"
-primaryImage: "../../assets//oGdA74ceLAgaMEeygKuSI.jpg"
 color: "#7349c0"
+primaryImage: "../../assets//oGdA74ceLAgaMEeygKuSI.jpg"
 ---
 A web application for getting random cat pictures. Powered by service workers. It demonstrates offline caching, web push notifications, and progressive enhancement. 
 

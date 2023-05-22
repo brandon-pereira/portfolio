@@ -1,10 +1,12 @@
 ---
+id: "2XK6jffHPWISIOAUkEqoSu"
 title: "Blueshield: Content Build System"
-description: "Blue Shield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that. I helped build a static site generator as well as traveled to San Francisco to help their developers."
 date: "2016-10-03T00:00:00.000Z"
 languages: "NodeJS"
+description: "Blue Shield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that. I helped build a static site generator as well as traveled to San Francisco to help their developers."
 type: "External"
 status: "Live"
+images: ""
 link: "https://www.blueshieldca.com/"
 ---
 Blue Shield California wanted to redesign their digital customer experience. Critical Mass was hired to help with that.

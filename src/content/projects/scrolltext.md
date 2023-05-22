@@ -1,9 +1,11 @@
 ---
+id: "21wQNPyDmUiY4EOO0kSO6Q"
 title: "ScrollText"
 date: "2018-03-20T00:00:00.000Z"
 languages: "Javascript (ES6+)"
 type: "Internal"
 status: "Live"
+images: ""
 link: "https://github.com/brandon-pereira/scroll-text"
 gitUrl: "https://github.com/brandon-pereira/scroll-text"
 ---
