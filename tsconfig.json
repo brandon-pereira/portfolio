@@ -3,7 +3,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "astro/*": ["./src/*"]
+      "@components/*": ["./src/components/*"]
     },
     "typeRoots": ["./types"]
   }

@@ -1,6 +1,6 @@
 ---
-import Button from "../../components/Button.astro";
-import ProjectTile from "./fragments/ProjectTile.astro";
+import Button from "@components/Button.astro";
+import ProjectTile from "@components/projects/ProjectTile.astro";
 import { getCollection } from "astro:content";
 
 const posts = (await getCollection("projects"))
