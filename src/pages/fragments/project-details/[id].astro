@@ -1,6 +1,5 @@
 ---
 import ProjectDetails from "@components/projects/ProjectDetails.astro";
-import Layout from "@layouts/Layout.astro";
 import { getEntry, getCollection } from "astro:content";
 const { id } = Astro.params;
 const entry = await getEntry("projects", id as any)!;
@@ -14,6 +13,4 @@ export async function getStaticPaths() {
 }
 ---
 
-<Layout title="Project Details">
-  <ProjectDetails project={project} />
-</Layout>
+<ProjectDetails project={project} />

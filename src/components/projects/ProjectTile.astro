@@ -1,16 +1,30 @@
 ---
-import type { Project } from "../../../../content/models/projects";
 import { Image } from "astro:assets";
-import Button from "../../../components/Button.astro";
+import Button from "@components/Button.astro";
 
-interface Props extends Project {}
-const { title, description, primaryImage, color, id } = Astro.props;
+import type { CollectionEntry } from "astro:content";
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const { data, slug } = project;
+const { title, description, primaryImage, color } = data;
 ---
 
 <!-- TODO: For some reason this can't be an <a> tag -->
-<div class="container">
+<div class="container" data-project-tile={slug}>
   <div class="content">
-    {primaryImage && <Image src={primaryImage} quality={100} alt={title} />}
+    {
+      primaryImage && (
+        <Image
+          src={primaryImage}
+          quality={100}
+          alt={title}
+          data-project-image={slug}
+        />
+      )
+    }
     <div class="title-container">
       <h2 class="title">
         {title}
@@ -19,7 +33,7 @@ const { title, description, primaryImage, color, id } = Astro.props;
     <div class="description">
       <p>{description || ""}</p>
     </div>
-    <Button color={color!} href={"/projects/" + id} color={color}>
+    <Button color={color!} href={"/projects/" + slug} color={color}>
       Learn More
     </Button>
   </div>
@@ -77,11 +91,13 @@ const { title, description, primaryImage, color, id } = Astro.props;
   }
 
   img {
+    position: relative;
     width: 100%;
     max-height: 200px;
     object-fit: cover;
     object-position: top left;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
+    contain: layout;
   }
 
   .title-container {

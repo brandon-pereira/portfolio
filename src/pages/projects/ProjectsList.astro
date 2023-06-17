@@ -12,7 +12,7 @@ const posts = (await getCollection("projects"))
   Projects
 
   <div class="projects" data-projects-content>
-    {posts.map((post) => <ProjectTile {...post.data} />)}
+    {posts.map((post) => <ProjectTile project={post} />)}
   </div>
 
   <Button>Load More</Button>
