@@ -4,37 +4,36 @@ navigation.addEventListener("navigate", (navigateEvent) => {
   if (destination.pathname.startsWith("/projects/")) {
     const [, , id] = destination.pathname.split("/");
     console.log(id);
+    const tile = document.querySelector<HTMLDivElement>(
+      `img[data-project-image='${id}']`
+    )!;
     navigateEvent.intercept({
       async handler() {
         try {
           const ProjectDetails = await fetch(
-            "/projects/fragments/ProjectDetails"
+            `/fragments/project-details/${id}`
           );
           const text = await ProjectDetails.text();
           const fragment = document
             .createRange()
             .createContextualFragment(text);
-          const tile = document.querySelector<HTMLDivElement>(
-            `div[data-project-tile='${id}']`
-          )!;
+          console.log(tile);
           tile.style.viewTransitionName = "project";
 
           // @ts-expect-error
-          const transition = document.startViewTransition(() => {
-            try {
-              console.log("HI");
-              tile.style.viewTransitionName = "";
-
-              document
-                .querySelector("[data-projects-content]")
-                ?.replaceWith(fragment);
-              console.log("BYE");
-            } catch (err) {
-              console.error(err);
-            }
+          const transition = document.startViewTransition(async () => {
+            // tile.style.viewTransitionName = "";
+            document
+              .querySelector("[data-projects-content]")
+              ?.replaceWith(fragment);
           });
 
-          return undefined;
+          transition.finished.finally(() => {
+            // Clear the temporary tag
+            tile.style.viewTransitionName = "";
+          });
+
+          // return undefined;
         } catch (err) {
           console.error(err);
         }
@@ -44,5 +43,5 @@ navigation.addEventListener("navigate", (navigateEvent) => {
 });
 
 navigation.addEventListener("navigateerror", (navigateEvent) => {
-  console.log("HEre");
+  console.log("error", navigateEvent.error);
 });

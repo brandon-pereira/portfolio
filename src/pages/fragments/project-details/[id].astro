@@ -4,6 +4,7 @@ import { getEntry, getCollection } from "astro:content";
 const { id } = Astro.params;
 const entry = await getEntry("projects", id as any)!;
 const project = entry?.data;
+const { Content } = await entry!.render();
 
 export async function getStaticPaths() {
   const entries = await getCollection("projects");
@@ -13,4 +14,4 @@ export async function getStaticPaths() {
 }
 ---
 
-<ProjectDetails project={project} />
+<ProjectDetails project={project} content={Content} />

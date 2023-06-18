@@ -39,11 +39,44 @@ const { title } = Astro.props;
   }
   html {
     font-family: var(--font-sansserif);
-    /* background: #004fff; */
+    background-color: #151515;
   }
 
   body {
     margin: 0;
+  }
+  ::view-transition-image-pair(root) {
+    /*= Styles for every instance =*/
+    position: absolute;
+    inset: 0px;
+    contain: layout;
+    isolation: isolate;
+  }
+
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+    mix-blend-mode: normal;
+  }
+
+  :root::view-transition-old(project),
+  :root::view-transition-new(project) {
+    /* Prevent the default animation,
+  so both views remain opacity:1 throughout the transition */
+    animation: none;
+    /* Use normal blending,
+  so the new view sits on top and obscures the old view */
+    mix-blend-mode: normal;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+  }
+
+  :root::view-transition {
+    position: fixed;
+    inset: 0;
+  }
+
+  :root::view-transition-image-pair(banner-img) {
+    isolation: none;
   }
 </style>
 
