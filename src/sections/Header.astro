@@ -7,51 +7,37 @@ const line2 = "and I build websites";
 <header>
   <div class="copy line1">
     <p>{line1}</p>
-    <!-- <p aria-hidden="true">{line1}</p> -->
   </div>
   <div class="name">
     {title.split("").map((l) => <span data-letter={l}>{l}</span>)}
   </div>
   <div class="copy line2">
     <p>{line2}</p>
-    <!-- <p aria-hidden="true">{line2}</p> -->
   </div>
 </header>
 
-<!-- <style>
-  /* :root {
+<style>
+  :root {
     --grid-bg: #07091f;
     --grid-bg-1: rgba(0, 0, 0, 0.2);
     --grid-bg-2: rgba(0, 0, 0, 0.1);
   }
 
   .name {
-    /* background: red; */
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    right: 0;
-    z-index: 1;
-    font-size: 150px;
+    position: relative;
+    font-size: 120px;
+    margin: 3rem 0;
   }
   .name span {
-    color: #000;
     position: relative;
-    text-shadow: 4px 4px #000;
+    text-shadow: 10px 10px #000;
   }
 
   .name span:before {
     content: attr(data-letter);
     text-shadow: none;
-    background-color: #4087d8;
-    background-image: linear-gradient(#0003 2px, #0000 2px),
-      linear-gradient(90deg, #0003 2px, #0000 2px),
-      linear-gradient(#0000001a 1px, #0000 1px),
-      linear-gradient(90deg, #0000001a 1px, #0000 1px);
-    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    -webkit-background-clip: text;
+    background-color: greenyellow;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-background-clip: text;
@@ -60,66 +46,78 @@ const line2 = "and I build websites";
     position: absolute;
     top: 0;
   }
-  h1 {
-    /* font-family: var(--font-serif); */
-    text-transform: none;
-  }
   .copy {
     position: relative;
   }
   p {
     margin: 0;
-    color: #000;
-    mix-blend-mode: color-dodge;
+    color: #fff;
   }
 
-  p[aria-hidden="true"] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: #fff;
-    mix-blend-mode: color-dodge;
-  }
-  .line2 {
-    margin-top: 200px;
-  }
   header {
+    font-family: "Press Start 2P", cursive;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    font-family: var(--font-serif);
     text-align: center;
     position: relative;
-    filter: invert(1);
-    /* clip-path: polygon(0 0, 100% 0, 100% 99%, 0% 100%); */
-    /* text-transform: uppercase; */
     padding: 4rem 0 5rem;
-    /* filter: drop-shadow(3px 3px #000); */
-    /* filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.1)); */
     height: 80vh;
-    font-size: 80px;
+    font-size: calc(3.55556vw + 7.33333px);
     text-align: center;
+    overflow: hidden;
   }
   header:before {
     content: "";
+    position: absolute;
+    top: -100rem;
+    left: -100rem;
+    right: -100rem;
+    bottom: -100rem;
+    transform: rotate(45deg);
+    overflow: hidden;
+    background-color: #1a1a1a;
+    background-image: linear-gradient(#0003 2px, #0000 2px),
+      linear-gradient(90deg, #0003 2px, #0000 2px),
+      linear-gradient(#0000001a 1px, #0000 1px),
+      linear-gradient(90deg, #0000001a 1px, #0000 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    animation: rotate 10s cubic-bezier(0.32, 1.58, 0.71, -0.78) infinite;
+  }
+
+  .name::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    content: "Branclon";
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    overflow: hidden;
-    background: #0027a2;
-    animation: path 5s infinite linear alternate;
-    /* hue 10s infinite  */
-    z-index: -1;
+
+    text-shadow: 1px 1px 0px #98e02a, 2px 2px #000, -2px -2px #000;
+    filter: blur(2px);
+    color: transparent;
+    clip-path: var(--slice-0);
+    animation: glitch 3s infinite;
+    text-shadow: 10 10px 10px black;
+    animation-timing-function: steps(2, end);
+  }
+
+  button:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
   }
 
   @keyframes bgScroll {
     from {
-      background-position: 0 0;
+      background-position: 100px 100px;
     }
     to {
       background-position: 50px 50px;
@@ -132,6 +130,15 @@ const line2 = "and I build websites";
     }
     100% {
       filter: hue-rotate(360deg);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(45deg);
+    }
+    100% {
+      transform: rotate(405deg);
     }
   }
   @keyframes path {
@@ -150,5 +157,62 @@ const line2 = "and I build websites";
     100% {
       clip-path: polygon(9% 88%, 10% 27%, 88% 3%, 88% 95%);
     }
-  } */
-</style> -->
+  }
+
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+</style>
