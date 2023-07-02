@@ -18,7 +18,7 @@ navigation.addEventListener("navigate", (navigateEvent) => {
             .createRange()
             .createContextualFragment(text);
           console.log(tile);
-          tile.style.viewTransitionName = "project";
+          tile.style.viewTransitionName = "full-size";
 
           // @ts-expect-error
           const transition = document.startViewTransition(async () => {
@@ -30,7 +30,7 @@ navigation.addEventListener("navigate", (navigateEvent) => {
 
           transition.finished.finally(() => {
             // Clear the temporary tag
-            tile.style.viewTransitionName = "";
+            // tile.style.viewTransitionName = "";
           });
 
           // return undefined;
