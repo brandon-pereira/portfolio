@@ -22,7 +22,7 @@ const posts = (await getCollection("projects"))
   .container {
   }
   .projects {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 5rem auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

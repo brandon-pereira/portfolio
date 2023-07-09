@@ -1,7 +1,8 @@
 ---
-const title = "Branclon";
+const title = "Brandon";
 const line1 = "Hi, my name is";
-const line2 = "and I build websites";
+const line2 = "and I build ";
+const words = ["websites", "apps", "teams", "software", "all the things!"];
 ---
 
 <header>
@@ -12,8 +13,13 @@ const line2 = "and I build websites";
     {title.split("").map((l) => <span data-letter={l}>{l}</span>)}
   </div>
   <div class="copy line2">
-    <p>{line2}</p>
+    <p>
+      {line2}<span data-scroll-text={words.join("|")}>
+        <span>{words[0]}</span>
+      </span>
+    </p>
   </div>
+  <div class="scroll-down-arrow"></div>
 </header>
 
 <style>
@@ -21,37 +27,6 @@ const line2 = "and I build websites";
     --grid-bg: #07091f;
     --grid-bg-1: rgba(0, 0, 0, 0.2);
     --grid-bg-2: rgba(0, 0, 0, 0.1);
-  }
-
-  .name {
-    position: relative;
-    font-size: 120px;
-    margin: 3rem 0;
-  }
-  .name span {
-    position: relative;
-    text-shadow: 10px 10px #000;
-  }
-
-  .name span:before {
-    content: attr(data-letter);
-    text-shadow: none;
-    background-color: greenyellow;
-    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: 2s linear infinite bgScroll;
-    position: absolute;
-    top: 0;
-  }
-  .copy {
-    position: relative;
-  }
-  p {
-    margin: 0;
-    color: #fff;
   }
 
   header {
@@ -64,26 +39,83 @@ const line2 = "and I build websites";
     position: relative;
     padding: 4rem 0 5rem;
     height: 80vh;
-    font-size: calc(3.55556vw + 7.33333px);
+    font-size: 3vw;
     text-align: center;
     overflow: hidden;
+    box-shadow: 0 5px #000;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -100rem;
+      left: -100rem;
+      right: -100rem;
+      bottom: -100rem;
+      transform: rotate(45deg);
+      overflow: hidden;
+      background-color: #1a1a1a;
+      background-image: linear-gradient(#0003 2px, #0000 2px),
+        linear-gradient(90deg, #0003 2px, #0000 2px),
+        linear-gradient(#0000001a 1px, #0000 1px),
+        linear-gradient(90deg, #0000001a 1px, #0000 1px);
+      background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+      animation: rotate 10s cubic-bezier(0.32, 1.58, 0.71, -0.78) infinite;
+    }
   }
-  header:before {
-    content: "";
+
+  .name {
+    max-width: var(--max-width);
+    position: relative;
+    font-size: 8vw;
+    margin: 3rem 0;
+  }
+  .name span {
+    position: relative;
+    text-shadow: 10px 10px #000;
+  }
+
+  .name span:before {
+    content: attr(data-letter);
+    text-shadow: none;
+    background-color: greenyellow;
+    background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2)),
+      linear-gradient(
+        #fff 1px,
+        transparent 15px,
+        rgba(0, 0, 0, 0.5) 160px,
+        transparent 170px
+      );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 2s linear infinite bgScroll;
     position: absolute;
-    top: -100rem;
-    left: -100rem;
-    right: -100rem;
-    bottom: -100rem;
-    transform: rotate(45deg);
-    overflow: hidden;
-    background-color: #1a1a1a;
-    background-image: linear-gradient(#0003 2px, #0000 2px),
-      linear-gradient(90deg, #0003 2px, #0000 2px),
-      linear-gradient(#0000001a 1px, #0000 1px),
-      linear-gradient(90deg, #0000001a 1px, #0000 1px);
-    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    animation: rotate 10s cubic-bezier(0.32, 1.58, 0.71, -0.78) infinite;
+    top: 0;
+  }
+  .copy {
+    max-width: var(--max-width);
+    position: relative;
+  }
+  p {
+    margin: 0;
+    color: #fff;
+  }
+
+  [data-scroll-text] {
+    display: inline;
+    position: relative;
+    & > :global(span) {
+      transition: all 0.2s;
+      position: absolute;
+      left: 0;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    & > :global(span.current) {
+      position: relative;
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .name::after {
@@ -110,9 +142,16 @@ const line2 = "and I build websites";
     animation-timing-function: steps(2, end);
   }
 
-  button:hover::after {
-    animation: 1s glitch;
-    animation-timing-function: steps(2, end);
+  .scroll-down-arrow {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    height: 2rem;
+    width: 2rem;
+    translate: -50%;
+    rotate: 45deg;
+    border-radius: 0 0 5px 0;
+    box-shadow: 3px 3px #fff;
   }
 
   @keyframes bgScroll {
@@ -216,3 +255,9 @@ const line2 = "and I build websites";
     }
   }
 </style>
+
+<script>
+  import ScrollText from "scroll-text";
+
+  new ScrollText(document.querySelector("[data-scroll-text]"));
+</script>
