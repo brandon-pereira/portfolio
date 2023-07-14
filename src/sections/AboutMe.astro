@@ -1,0 +1,41 @@
+---
+import Image from "astro/components/Image.astro";
+import * as AboutMeMd from "../content/about/about-me.md";
+import ProfilePicture from "src/assets/pp.jpg";
+---
+
+<section>
+  <div>
+    <AboutMeMd.Content />
+  </div>
+  <Image
+    src={ProfilePicture}
+    quality={100}
+    class="profile-picture"
+    width={467}
+    height={700}
+    alt="Astro Logo"
+  />
+</section>
+
+<style>
+  section {
+    display: flex;
+
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+    color: #fff;
+    align-items: center;
+  }
+
+  .profile-picture {
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* height: auto; */
+    /* height: 100px÷÷ */
+    /* width: 100%; */
+    /* width: auto; */
+    /* margin-left: 100px; */
+  }
+</style>
