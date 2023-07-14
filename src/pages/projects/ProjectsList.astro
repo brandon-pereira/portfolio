@@ -9,25 +9,120 @@ const posts = (await getCollection("projects"))
 ---
 
 <div class="container">
-  Projects
+  <header>
+    <h2 class="maintext" data-text="Projects">Projects</h2>
+    <span class="subtext">
+      A showcase of my <span></span>past, present, and future
+    </span>
+  </header>
 
   <div class="projects" data-projects-content>
     {posts.map((post) => <ProjectTile project={post} />)}
   </div>
 
-  <Button>Load More</Button>
+  <Button href="#">Load More</Button>
 </div>
 
 <style>
   .container {
+    --accent: #a1a1c5;
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 -1px #000;
+    background-image: linear-gradient(#000, transparent);
+    background-size: 100% 200px;
+    background-repeat: no-repeat;
+    background-color: #ff0000(45, 45, 45);
+    overflow: hidden;
+  }
+  header {
+    text-align: center;
+    margin: 40px auto 20px auto;
+    width: 260px;
+    position: relative;
+    height: 110px;
+    transition: all 0.5s;
+    user-select: none;
+    & .maintext {
+      font: 70px "Lily Script One", cursive;
+      color: var(--accent);
+      text-shadow: 2px 5px #000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: font-size 0.5s;
+      margin: 0;
+    }
+    & .subtext {
+      font-size: 14px;
+      position: absolute;
+      bottom: 15px;
+      left: -30px;
+      white-space: nowrap;
+      transition: all 0.5s;
+      color: #fff;
+      font-weight: 100;
+
+      & span {
+        margin: 0 15px;
+        transition: all 0.5s;
+      }
+    }
+    @media (--tablet) {
+      width: 500px;
+      height: 195px;
+      left: 0;
+      & .maintext {
+        font-size: 135px;
+      }
+      & .subtext {
+        font-size: 20px;
+        left: 12px;
+        & span {
+          margin: 0 24px;
+        }
+      }
+    }
+  }
+  /**
+  * Make "Projects" text animated and pretty on webkit/blink browsers.
+  * NOTE: Depends on JS to add .webkit class to HTML.
+  */
+  header .maintext:before {
+    text-shadow: none;
+    padding-right: 1rem;
+    animation: hue 6s linear infinite;
+    content: attr(data-text);
+    position: absolute;
+    background: linear-gradient(
+      45deg,
+      var(--accent),
+      color-mix(in srgb, var(--accent) 50%, red)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   .projects {
     max-width: var(--max-width);
     margin: 5rem auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     /* Barely supported, but it looks nice when it works :D */
     grid-template-rows: masonry;
-    gap: 50px;
+    gap: 16px;
+    @media (--tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    @media (--desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+  @keyframes hue {
+    0% {
+      filter: hue-rotate(0deg);
+    }
+    100% {
+      filter: hue-rotate(360deg);
+    }
   }
 </style>
