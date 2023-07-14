@@ -12,30 +12,36 @@ import ProfilePicture from "src/assets/pp.jpg";
     src={ProfilePicture}
     quality={100}
     class="profile-picture"
-    width={467}
-    height={700}
-    alt="Astro Logo"
+    height={400}
+    alt="Profile Picture for Brandon Pereira"
   />
 </section>
 
 <style>
   section {
     display: flex;
-
     max-width: var(--max-width);
-
-    margin: 0 auto;
     color: #fff;
     align-items: center;
+    grid-gap: 3rem;
+    margin: 3rem auto;
+    flex-direction: column;
   }
 
   .profile-picture {
     border-radius: 50px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    /* height: auto; */
-    /* height: 100px÷÷ */
-    /* width: 100%; */
-    /* width: auto; */
-    /* margin-left: 100px; */
+    width: 100%;
+    height: auto;
+  }
+
+  @media (--tablet) {
+    section {
+      flex-direction: row;
+    }
+    .profile-picture {
+      width: auto;
+      height: 400px;
+    }
   }
 </style>
