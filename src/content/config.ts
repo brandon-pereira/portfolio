@@ -12,6 +12,17 @@ const projectsCollection = defineCollection({
     }),
 });
 
+const appsCollection = defineCollection({
+  schema: ({ image }) =>
+    z.object({
+      _id: z.string(),
+      appName: z.string(),
+      icon: image(),
+      theme: z.string(),
+    }),
+});
+
 export const collections = {
   projects: projectsCollection,
+  apps: appsCollection,
 };

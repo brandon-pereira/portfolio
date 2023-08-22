@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "get-content": "ts-node ./content/import"
+    "get-content": "ts-node -T ./content/import"
   },
   "dependencies": {
     "astro": "^2.8.0",

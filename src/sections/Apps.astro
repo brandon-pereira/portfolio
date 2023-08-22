@@ -1,0 +1,84 @@
+---
+import Image from "astro/components/Image.astro";
+import { getCollection } from "astro:content";
+
+const apps = await getCollection("apps");
+---
+
+<div class:list={["container", apps[0]?.data.theme]}>
+  <h1>I've got Apps for that</h1>
+  <div class="content">
+    {
+      apps.map(async (app, index) => {
+        const { Content } = await app.render();
+        return (
+          <div
+            class:list={["app-container", { active: index === 0 }]}
+            data-active={index === 0}
+          >
+            <div class="icon-column">
+              <Image
+                src={app.data.icon}
+                alt={`${app.data.appName} App Icon`}
+                width="200"
+                height="200"
+                quality={100}
+                style="width: 100px;height: 100px;"
+              />
+            </div>
+            <div class="content-column">
+              <h2>{app.data.appName}</h2>
+              <Content />
+            </div>
+          </div>
+        );
+      })
+    }
+  </div>
+</div>
+
+<style>
+  :root {
+  }
+
+  .container {
+    background: red;
+    margin-top: -30%;
+    clip-path: polygon(0 30%, 100% 0, 100% 70%, 0 100%);
+    z-index: 0;
+    position: relative;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    margin-bottom: -30%;
+    &.betterdo {
+      background: blue;
+    }
+  }
+
+  .content {
+    max-width: calc(var(--max-width));
+    margin: 0 auto;
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    display: none;
+    &[data-active] {
+      display: flex;
+    }
+    & .icon-column {
+      width: 20%;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    & .content-column {
+      h2 {
+        margin: 0;
+      }
+      /* background: green; */
+    }
+  }
+</style>

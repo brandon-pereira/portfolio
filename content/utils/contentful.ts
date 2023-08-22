@@ -1,7 +1,7 @@
-import { createClient, ContentfulClientApi } from 'contentful';
+import { createClient, ContentfulClientApi } from "contentful";
 
 class Contentful {
-  client: ContentfulClientApi;
+  client: ContentfulClientApi<undefined>;
 
   constructor(auth: { space: string; accessToken: string }) {
     this.client = createClient(auth);
@@ -14,10 +14,10 @@ class Contentful {
   ): Promise<any[]> {
     const entries = await this.client.getEntries({
       content_type: contentType,
-      ...query
+      ...query,
     });
     if (entries && entries.items) {
-      return entries.items.map(item => this.convertItem(item));
+      return entries.items.map((item) => this.convertItem(item));
     }
     throw new Error("getEntries didn't return an array!");
   }
@@ -26,11 +26,11 @@ class Contentful {
   convertItem(_item: any): any {
     const item = {
       _id: _item.sys.id,
-      ..._item.fields
+      ..._item.fields,
     };
     Object.entries(item).forEach(([key, value]) => {
       if (value && Array.isArray(value)) {
-        item[key] = value.map(val => this.convertItem(val));
+        item[key] = value.map((val) => this.convertItem(val));
       }
     });
     return item;
