@@ -1,5 +1,7 @@
 ---
+import Button from "@components/Button.astro";
 import ProjectDetails from "@components/projects/ProjectDetails.astro";
+import ProjectsHeader from "@components/projects/ProjectsHeader.astro";
 import Layout from "@layouts/Layout.astro";
 import { getEntry, getCollection } from "astro:content";
 const { id } = Astro.params;
@@ -16,5 +18,7 @@ export async function getStaticPaths() {
 ---
 
 <Layout title="Project Details">
+  <Button href="/">Back</Button>
+  <ProjectsHeader />
   <ProjectDetails project={project} content={Content} />
 </Layout>

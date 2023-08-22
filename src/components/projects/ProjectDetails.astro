@@ -13,7 +13,12 @@ const Content = Astro.props.content;
 ---
 
 <!-- TODO: For some reason this can't be an <a> tag -->
-<div class="container" data-project-tile={slug}>
+<div
+  class="container"
+  data-project-tile={slug}
+  transition:name={`project-tile-${slug}`}
+  transition:animate="slide"
+>
   <div class="content">
     {
       primaryImage && (
@@ -96,7 +101,6 @@ const Content = Astro.props.content;
     object-position: top left;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);
     contain: paint;
-    view-transition-name: full-size;
     margin-top: var(--gap);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
   }

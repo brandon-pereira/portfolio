@@ -1,4 +1,6 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+
 export interface Props {
   title: string;
 }
@@ -21,85 +23,34 @@ const { title } = Astro.props;
 
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <slot />
+    <style is:global>
+      :root {
+        --font-sansserif: "Poppins", sans-serif;
+        --font-serif: "Merriweather", serif;
+        --max-width: min(100vw - 36px, 1200px);
+        --background-color: #151515;
+      }
+      html {
+        font-family: var(--font-sansserif);
+        background-color: var(--background-color);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      a {
+        background: #d7e7e9;
+        color: var(--background-color);
+        box-sizing: border-box;
+        padding: 1px 4px;
+      }
+    </style>
   </body>
 </html>
-<style is:global>
-  :root {
-    --font-sansserif: "Poppins", sans-serif;
-    --font-serif: "Merriweather", serif;
-    --max-width: min(100vw - 36px, 1200px);
-    --background-color: #151515;
-  }
-  html {
-    font-family: var(--font-sansserif);
-    background-color: var(--background-color);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  body {
-    margin: 0;
-  }
-
-  a {
-    background: #d7e7e9;
-    color: var(--background-color);
-    box-sizing: border-box;
-    padding: 1px 4px;
-  }
-
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-  }
-
-  @keyframes fade-out {
-    to {
-      opacity: 0;
-    }
-  }
-
-  @keyframes slide-from-right {
-    from {
-      transform: translateX(300px);
-    }
-  }
-
-  @keyframes slide-to-left {
-    to {
-      transform: translateX(-300px);
-    }
-  }
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation-duration: 5s;
-  }
-
-  ::view-transition-old(root) {
-    animation: 2000ms ease-in-out both fade-out,
-      300ms ease-in-out both slide-to-left;
-  }
-
-  ::view-transition-new(root) {
-    animation: 2000ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
-  }
-
-  ::view-transition-old(full-size),
-  ::view-transition-new(full-size) {
-    animation: none;
-    mix-blend-mode: normal;
-  }
-
-  ::view-transition-image-pair(full-size) {
-    isolation: none;
-  }
-</style>
-
-<script>
-  import "../scripts/reroute";
-</script>

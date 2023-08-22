@@ -13,7 +13,12 @@ const { title, description, primaryImage, color } = data;
 ---
 
 <!-- TODO: For some reason this can't be an <a> tag -->
-<div class="container" data-project-tile={slug}>
+<div
+  class="container"
+  data-project-tile={slug}
+  transition:name={`project-tile-${slug}`}
+  transition:animate="slide"
+>
   <div class="content">
     {
       primaryImage && (
