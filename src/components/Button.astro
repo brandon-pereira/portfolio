@@ -3,14 +3,20 @@
 interface Props {
   color: string | undefined;
   href: string;
+  isDarkColor?: boolean;
   class?: string;
 }
-const { color, href, class: className } = Astro.props;
+const { color, isDarkColor, href, class: className } = Astro.props;
 ---
 
 <a class:list={["button--container", className]} href={href}><slot /></a>
 
-<style define:vars={{ color: color || "blue" }}>
+<style
+  define:vars={{
+    color: color || "blue",
+    secondaryColor: isDarkColor ? "#eee" : "#111",
+  }}
+>
   .button--container {
     display: inline-block;
     padding: 0.5rem 1.5rem;
@@ -53,6 +59,6 @@ const { color, href, class: className } = Astro.props;
 
   .button--container:focus-visible,
   .button--container:hover {
-    color: #111;
+    color: var(--secondaryColor);
   }
 </style>
