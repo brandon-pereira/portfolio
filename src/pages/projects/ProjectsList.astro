@@ -15,7 +15,7 @@ const posts = (await getCollection("projects"))
     {posts.map((post) => <ProjectTile project={post} />)}
   </div>
 
-  <Button href="#">Load More</Button>
+  <Button class="load-more" color="#000" href="#">Load More</Button>
 </div>
 
 <style>
@@ -28,6 +28,10 @@ const posts = (await getCollection("projects"))
     overflow: hidden;
     position: relative;
     z-index: 1;
+  }
+
+  .container .load-more {
+    color: red !important;
   }
 
   .projects {

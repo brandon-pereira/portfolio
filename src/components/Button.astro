@@ -3,16 +3,15 @@
 interface Props {
   color: string | undefined;
   href: string;
+  class?: string;
 }
-const { color, href } = Astro.props;
+const { color, href, class: className } = Astro.props;
 ---
 
-<div>
-  <a class="container" href={href}><slot /></a>
-</div>
+<a class:list={["button--container", className]} href={href}><slot /></a>
 
 <style define:vars={{ color: color || "blue" }}>
-  .container {
+  .button--container {
     display: inline-block;
     padding: 0.5rem 1.5rem;
     border: 3px solid var(--color);
@@ -29,7 +28,11 @@ const { color, href } = Astro.props;
     color: var(--color);
   }
 
-  .container::before {
+  .button--container:focus {
+    outline: none;
+  }
+
+  .button--container::before {
     content: "";
     width: 0;
     height: 400%;
@@ -43,11 +46,13 @@ const { color, href } = Astro.props;
     z-index: -1;
   }
 
-  .container:hover::before {
+  .button--container:focus-visible::before,
+  .button--container:hover::before {
     width: 105%;
   }
 
-  .container:hover {
+  .button--container:focus-visible,
+  .button--container:hover {
     color: #111;
   }
 </style>

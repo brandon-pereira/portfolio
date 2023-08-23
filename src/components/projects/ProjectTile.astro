@@ -10,9 +10,9 @@ interface Props {
 const { project } = Astro.props;
 const { data, slug } = project;
 const { title, description, primaryImage, color } = data;
+const url = "/projects/" + slug;
 ---
 
-<!-- TODO: For some reason this can't be an <a> tag -->
 <div
   class="container"
   data-project-tile={slug}
@@ -32,15 +32,13 @@ const { title, description, primaryImage, color } = data;
     }
     <div class="title-container">
       <h2 class="title">
-        {title}
+        <a href={url}>{title}</a>
       </h2>
     </div>
     <div class="description">
       <p>{description || ""}</p>
     </div>
-    <Button color={color!} href={"/projects/" + slug} color={color}>
-      Learn More
-    </Button>
+    <Button color={color!} href={url} color={color}>Learn More</Button>
   </div>
 </div>
 
@@ -137,6 +135,13 @@ const { title, description, primaryImage, color } = data;
     /* requires prefix for padding on all lines */
     -webkit-box-decoration-break: clone;
     display: inline;
+    a {
+      all: unset;
+      cursor: pointer;
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
   }
   .description {
     margin: 0 30px var(--content-gap);
