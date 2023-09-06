@@ -60,7 +60,6 @@ const apps = await getCollection("apps");
       <button data-goto="prev" aria-label="Go to previous slide">Prev</button>
       <button data-goto="next" aria-label="Go to next slide">Next</button>
     </div>
-    <hr />
   </div>
 </div>
 
@@ -146,12 +145,10 @@ const apps = await getCollection("apps");
   }
   .container {
     margin-top: -30%;
-    clip-path: polygon(0 30%, 100% 0, 100% 70%, 0 100%);
+    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
     z-index: 0;
     position: relative;
     padding-top: 30%;
-    padding-bottom: 30%;
-    margin-bottom: -30%;
     color: #fff;
     &.wings-cheap {
       background-color: #ffc107;

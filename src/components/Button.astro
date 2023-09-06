@@ -1,16 +1,15 @@
 ---
+import type { HTMLAttributes } from 'astro/types';
 // Inspired by https://uiverse.io/namecho/slippery-moth-23
-interface Props {
+interface Props extends HTMLAttributes<'a'> {
   color: string | undefined;
   href: string;
-  target?: HTMLAnchorElement["target"];
   isDarkColor?: boolean;
-  class?: string;
 }
-const { color, isDarkColor, href, target, class: className } = Astro.props;
+const { color, style, isDarkColor, href, class: className, ...rest } = Astro.props;
 ---
 
-<a class:list={["button--container", className]} target={target} href={href}
+<a class:list={["button--container", className]} href={href} style={style} {...rest}
   ><slot /></a
 >
 
