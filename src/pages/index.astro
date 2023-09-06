@@ -1,18 +1,20 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Projects from "./projects/ProjectsList.astro";
+import Projects from "../components/projects/ProjectsList.astro";
 import Header from "../sections/Header.astro";
 import AboutMe from "src/sections/AboutMe.astro";
 import Apps from "src/sections/Apps.astro";
+import FeaturedProjects from "@components/projects/FeaturedProjects.astro";
+import Contact from "src/sections/Contact.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Homepage">
   <main>
     <Header />
     <AboutMe />
-    <Projects />
+    <FeaturedProjects />
     <Apps />
-    Hello World
+    <Contact />
   </main>
 </Layout>
 

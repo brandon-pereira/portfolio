@@ -1,0 +1,10 @@
+---
+import ProjectsList from "./ProjectsList.astro";
+import { getCollection } from "astro:content";
+
+const projects = (await getCollection("projects"))
+  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+  .slice(0, 6);
+---
+
+<ProjectsList projects={projects} />

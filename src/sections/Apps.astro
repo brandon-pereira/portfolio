@@ -5,44 +5,146 @@ import { getCollection } from "astro:content";
 const apps = await getCollection("apps");
 ---
 
-<div class:list={["container", apps[0]?.data.theme]}>
-  <h1>I've got Apps for that</h1>
+<div data-section="apps" class:list={["container", apps[0]?.data.theme]}>
   <div class="content">
-    {
-      apps.map(async (app, index) => {
-        const { Content } = await app.render();
-        return (
-          <div
-            class:list={["app-container", { active: index === 0 }]}
-            data-active={index === 0}
-          >
-            <div class="icon-column">
-              <Image
-                src={app.data.icon}
-                alt={`${app.data.appName} App Icon`}
-                width="200"
-                height="200"
-                quality={100}
-                style="width: 100px;height: 100px;"
-              />
+    <hr />
+    <header class="main">
+      <span class="maintext">Apps</span><span class="subtext"
+        >I've got<span>&nbsp;</span>for that</span
+      >
+    </header>
+    <div class="apps--slides-container">
+      {
+        apps.map(async (app, index) => {
+          const { Content } = await app.render();
+          return (
+            <div
+              class:list={[
+                "apps--slide app-container",
+                { active: index === 0 },
+              ]}
+              data-styling={app.data.theme}
+              data-active={index === 0}
+            >
+              <div class="icon-column">
+                <Image
+                  src={app.data.icon}
+                  alt={`${app.data.appName} App Icon`}
+                  width="200"
+                  height="200"
+                  quality={100}
+                  style="width: 100px;height: 100px;"
+                />
+              </div>
+              <div class="content-column">
+                <h2>{app.data.appName}</h2>
+                <Content />
+              </div>
             </div>
-            <div class="content-column">
-              <h2>{app.data.appName}</h2>
-              <Content />
-            </div>
-          </div>
-        );
-      })
-    }
+          );
+        })
+      }
+    </div>
+    <div class="carousel-dots">
+      {
+        apps.map((_, index) => (
+          <button
+            class:list={["dot", { active: index === 0 }]}
+            data-goto={index}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))
+      }
+    </div>
+    <div>
+      <button data-goto="prev" aria-label="Go to previous slide">Prev</button>
+      <button data-goto="next" aria-label="Go to next slide">Next</button>
+    </div>
+    <hr />
   </div>
 </div>
 
 <style>
-  :root {
+  header.main {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    transition: color 0.3s;
+    & .maintext {
+      font-family: var(--font-monospace);
+      position: absolute;
+      z-index: 1;
+      /* text-align: center; */
+      background: red;
+      left: 50%;
+      transform: translateX(-50%);
+      right: 0;
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      margin-right: 0.9rem;
+    }
+    & .subtext {
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+      text-transform: uppercase;
+      & span {
+        vertical-align: middle;
+        /* border: 3px solid; */
+        display: inline-block;
+        width: 5rem;
+        height: 5rem;
+        position: relative;
+        /* margin: 0 0.5rem; */
+        border-radius: 50%;
+        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: url("../assets/icon-grid.png");
+          background-size: 80%;
+          background-position: center;
+          border-radius: 50%;
+        }
+      }
+    }
+    @media (--tablet) {
+      height: 10rem;
+      line-height: 10rem;
+      /* padding: 1.5rem 0 0; */
+      & .maintext {
+        font-size: 2.3rem;
+        margin-right: 1.9rem;
+      }
+      .subtext {
+        font-size: 2.4rem;
+        margin-left: 0.2rem;
+        span {
+          margin: 0 1.5rem;
+          height: 9rem;
+          width: 9rem;
+        }
+      }
+    }
   }
 
+  hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.1)
+    );
+    margin: 3rem 0;
+  }
   .container {
-    background: red;
     margin-top: -30%;
     clip-path: polygon(0 30%, 100% 0, 100% 70%, 0 100%);
     z-index: 0;
@@ -50,8 +152,21 @@ const apps = await getCollection("apps");
     padding-top: 30%;
     padding-bottom: 30%;
     margin-bottom: -30%;
+    color: #fff;
+    &.wings-cheap {
+      background-color: #ffc107;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
+      color: #000;
+    }
     &.betterdo {
-      background: blue;
+      background-color: #2196f3;
+    }
+    &.tv-tracker {
+      background-color: #1e9a48;
+    }
+    &.remote {
+      background-color: #f44336;
+      color: #000;
     }
   }
 
@@ -66,7 +181,8 @@ const apps = await getCollection("apps");
     align-items: flex-start;
     justify-content: center;
     display: none;
-    &[data-active] {
+    height: 300px;
+    &:global(.active) {
       display: flex;
     }
     & .icon-column {
@@ -81,4 +197,149 @@ const apps = await getCollection("apps");
       /* background: green; */
     }
   }
+
+  .carousel-dots {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    & .dot {
+      background: rgba(255, 255, 255, 0.5);
+      display: inline-block;
+      height: 30px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50px;
+      &.active {
+        background: #fff;
+      }
+    }
+  }
 </style>
+
+<script>
+  class Apps {
+    el = document.querySelector("[data-section='apps']") as HTMLElement;
+    currentIndex: number;
+    slides: HTMLElement[];
+    currentSlide: HTMLElement;
+    dots: HTMLElement[];
+
+    constructor() {
+      this.currentIndex = 0;
+      this.slides = Array.from(
+        this.el.querySelectorAll(".apps--slides-container .apps--slide")
+      );
+      this.currentSlide = this.slides[0]!;
+      this.dots = Array.from(this.el.querySelectorAll(".carousel-dots .dot"));
+      this.events();
+    }
+
+    events(): void {
+      Array.from(this.el.querySelectorAll("[data-goto]")).forEach((el) =>
+        el.addEventListener("click", () => {
+          const goto = el.getAttribute("data-goto") as GoToValue;
+          this.goto(goto);
+        })
+      );
+
+      // Swiping (mobile)
+      let start = 0;
+      let end = 0;
+
+      this.slides.forEach((el) =>
+        el.addEventListener(
+          "touchstart",
+          (event) => {
+            start = event.changedTouches[0].screenX;
+          },
+          { passive: true }
+        )
+      );
+
+      this.slides.forEach((el) =>
+        el.addEventListener(
+          "touchend",
+          (event) => {
+            end = event.changedTouches[0].screenX;
+            handleGesture(start, end, 50);
+          },
+          { passive: true }
+        )
+      );
+
+      const handleGesture = (
+        touchstart: number,
+        touchend: number,
+        threshold: number
+      ) => {
+        if (touchend < touchstart && touchstart - touchend >= threshold) {
+          this.goto("next");
+        } else if (
+          touchend > touchstart &&
+          touchend - touchstart >= threshold
+        ) {
+          this.goto("prev");
+        }
+      };
+    }
+
+    goto(slide: GoToValue): void {
+      console.log("HERE");
+      switch (slide) {
+        case "next":
+          this.setCurrentSlide(
+            this.currentIndex + 1 < this.slides.length
+              ? this.currentIndex + 1
+              : 0
+          );
+          break;
+        case "prev":
+          this.setCurrentSlide(
+            this.currentIndex - 1 !== -1
+              ? this.currentIndex - 1
+              : this.slides.length - 1
+          );
+          break;
+        default:
+          if (!isNaN(slide)) {
+            this.setCurrentSlide(Number(slide));
+          } else {
+            throw new Error(
+              `Invalid slide, expected index and got ${typeof slide} ${slide}`
+            );
+          }
+      }
+    }
+
+    setCurrentSlide(slide: number): void {
+      // Get Elements
+      const newSlide = this.slides[slide];
+      const currentSlide = this.currentSlide;
+      console.log({ newSlide, currentSlide });
+      // Toggle classes on carousel slides
+      currentSlide.classList.remove("active");
+      newSlide.classList.add("active");
+      // Change the main carousel styling
+      this.el.setAttribute("data-current-slide", `${slide}`);
+      this.el.classList.remove(currentSlide.getAttribute("data-styling"));
+      this.el.classList.add(newSlide.getAttribute("data-styling"));
+      // Update Dot
+      this.dots.forEach((el, i) => {
+        if (i !== slide) {
+          el.classList.remove("active");
+        } else {
+          el.classList.add("active");
+        }
+      });
+      // Update References
+      this.currentSlide = newSlide;
+      this.currentIndex = slide;
+
+      // Analytics
+      // this.logEvent("apps", "show-slide", `${slide}`);
+    }
+  }
+
+  new Apps();
+</script>

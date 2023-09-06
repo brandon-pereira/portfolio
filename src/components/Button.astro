@@ -3,17 +3,20 @@
 interface Props {
   color: string | undefined;
   href: string;
+  target?: HTMLAnchorElement["target"];
   isDarkColor?: boolean;
   class?: string;
 }
-const { color, isDarkColor, href, class: className } = Astro.props;
+const { color, isDarkColor, href, target, class: className } = Astro.props;
 ---
 
-<a class:list={["button--container", className]} href={href}><slot /></a>
+<a class:list={["button--container", className]} target={target} href={href}
+  ><slot /></a
+>
 
 <style
   define:vars={{
-    color: color || "blue",
+    color: color || "#0f0",
     secondaryColor: isDarkColor ? "#eee" : "#111",
   }}
 >
@@ -41,7 +44,7 @@ const { color, isDarkColor, href, class: className } = Astro.props;
   .button--container::before {
     content: "";
     width: 0;
-    height: 400%;
+    height: 1000%;
     position: absolute;
     top: 50%;
     left: 50%;

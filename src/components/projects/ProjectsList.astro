@@ -1,21 +1,25 @@
 ---
+import type { CollectionEntry } from "astro:content";
 import Button from "@components/Button.astro";
 import ProjectTile from "@components/projects/ProjectTile.astro";
 import ProjectsHeader from "@components/projects/ProjectsHeader.astro";
-import { getCollection } from "astro:content";
 
-const posts = (await getCollection("projects"))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 6);
+interface Props {
+  projects: CollectionEntry<"projects">[];
+}
+
+const { projects } = Astro.props;
 ---
 
 <div class="container" id="projects">
   <ProjectsHeader />
   <div class="projects" data-projects-content>
-    {posts.map((post) => <ProjectTile project={post} />)}
+    {projects.map((project) => <ProjectTile project={project} />)}
   </div>
 
-  <Button class="load-more" color="#000" href="#">Load More</Button>
+  <div class="view-more-container">
+    <Button color="#000" href="/projects" isDarkColor>View More</Button>
+  </div>
 </div>
 
 <style>
@@ -30,13 +34,13 @@ const posts = (await getCollection("projects"))
     z-index: 1;
   }
 
-  .container .load-more {
-    color: red !important;
+  .view-more-container {
+    text-align: center;
   }
 
   .projects {
     max-width: var(--max-width);
-    margin: 5rem auto;
+    margin: 5rem auto 3rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     /* Barely supported, but it looks nice when it works :D */
