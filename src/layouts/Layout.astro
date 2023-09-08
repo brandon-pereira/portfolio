@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions";
+import { ViewTransitions } from 'astro:transitions';
 
 export interface Props {
   title: string;
@@ -8,7 +8,7 @@ export interface Props {
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,9 +29,9 @@ const { title } = Astro.props;
     <slot />
     <style is:global>
       :root {
-        --font-sansserif: "Poppins", sans-serif;
-        --font-serif: "Merriweather", serif;
-        --font-monospace: "Press Start 2P", monospace;
+        --font-sansserif: 'Poppins', sans-serif;
+        --font-serif: 'Merriweather', serif;
+        --font-monospace: 'Press Start 2P', monospace;
         --max-width: min(100vw - 36px, 1200px);
         --background-color: #151515;
       }
@@ -47,10 +47,7 @@ const { title } = Astro.props;
       }
 
       a {
-        background: #d7e7e9;
-        color: var(--background-color);
-        box-sizing: border-box;
-        padding: 1px 4px;
+        color: #2ea3ff;
       }
     </style>
   </body>

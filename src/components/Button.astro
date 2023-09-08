@@ -6,20 +6,31 @@ interface Props extends HTMLAttributes<'a'> {
   href: string;
   isDarkColor?: boolean;
 }
-const { color, style, isDarkColor, href, class: className, ...rest } = Astro.props;
+const {
+  color,
+  style,
+  isDarkColor,
+  href,
+  class: className,
+  ...rest
+} = Astro.props;
 ---
 
-<a class:list={["button--container", className]} href={href} style={style} {...rest}
-  ><slot /></a
+<a
+  class:list={['button--container', className]}
+  href={href}
+  style={style}
+  {...rest}><slot /></a
 >
 
 <style
   define:vars={{
-    color: color || "#0f0",
-    secondaryColor: isDarkColor ? "#eee" : "#111",
+    color: color || '#0f0',
+    secondaryColor: isDarkColor ? '#eee' : '#111'
   }}
 >
   .button--container {
+    text-decoration: none;
     display: inline-block;
     padding: 0.5rem 1.5rem;
     border: 3px solid var(--color);
@@ -41,7 +52,7 @@ const { color, style, isDarkColor, href, class: className, ...rest } = Astro.pro
   }
 
   .button--container::before {
-    content: "";
+    content: '';
     width: 0;
     height: 1000%;
     position: absolute;
