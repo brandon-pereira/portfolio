@@ -1,20 +1,20 @@
 ---
-import { Image } from "astro:assets";
-import type { Project } from "content/models/projects";
-import Button from "@components/Button.astro";
-import type { ContentEntryModule } from "astro";
+import { Image } from 'astro:assets';
+import Button from '@components/Button.astro';
+import type { CollectionEntry } from 'astro:content';
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
 interface Props {
-  project: Project;
-  Content: ContentEntryModule;
+  project: CollectionEntry<'projects'>;
+  content: AstroComponentFactory;
 }
-const { id, link, color, slug, description, gitUrl, title, primaryImage } =
-  Astro.props.project;
+const { data, slug } = Astro.props.project;
+const { link, color, gitUrl, title, primaryImage } = data;
 const Content = Astro.props.content;
 ---
 
 <div
   class="container"
-  data-project-tile={slug}
+  data-project-details={slug}
   transition:name={`project-tile-${slug}`}
   transition:animate="slide"
 >
@@ -67,7 +67,7 @@ const Content = Astro.props.content;
     }
   </div>
 
-  <style define:vars={{ "primary-color": color }}>
+  <style define:vars={{ 'primary-color': color }}>
     .container {
       display: block;
       position: relative;
@@ -79,7 +79,7 @@ const Content = Astro.props.content;
       max-width: min(1080px, calc(100vw - 2rem));
       margin: 2rem auto;
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         z-index: 0;
         top: 0;
@@ -95,7 +95,7 @@ const Content = Astro.props.content;
         border-radius: var(--border-radius);
       }
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         z-index: 0;
         top: var(--gap);
@@ -144,7 +144,7 @@ const Content = Astro.props.content;
       padding-bottom: calc(calc(var(--content-gap) / 2) + var(--pill-size));
       margin-bottom: calc(var(--content-gap) / 2);
       &:before {
-        content: "";
+        content: '';
         position: absolute;
         bottom: 0;
         height: var(--pill-size);
