@@ -1,8 +1,8 @@
 ---
-const title = "Brandon";
-const line1 = "Hi, my name is";
-const line2 = "and I build ";
-const words = ["websites", "apps", "teams", "software", "all the things!"];
+const title = 'Brandon';
+const line1 = 'Hi, my name is';
+const line2 = 'and I build ';
+const words = ['websites', 'apps', 'teams', 'software', 'all the things!'];
 ---
 
 <header>
@@ -10,11 +10,12 @@ const words = ["websites", "apps", "teams", "software", "all the things!"];
     <p>{line1}</p>
   </div>
   <div class="name">
-    {title.split("").map((l) => <span data-letter={l}>{l}</span>)}
+    {title.split('').map(l => <span data-letter={l}>{l}</span>)}
   </div>
   <div class="copy line2">
     <p>
-      {line2}<span data-scroll-text={words.join("|")}>
+      {line2}<br />
+      <span data-scroll-text={words.join('|')}>
         <span>{words[0]}</span>
       </span>
     </p>
@@ -37,26 +38,24 @@ const words = ["websites", "apps", "teams", "software", "all the things!"];
     justify-content: center;
     text-align: center;
     position: relative;
-    padding: 4rem 0 5rem;
     height: 80vh;
-    font-size: 3vw;
-    text-align: center;
     overflow: hidden;
     box-shadow: 0 5px #000;
     &:before {
-      content: "";
+      content: '';
       position: absolute;
-      top: -100rem;
-      left: -100rem;
-      right: -100rem;
-      bottom: -100rem;
+      inset: 0;
       overflow: hidden;
       background-color: var(--grid-bg);
       background-image: linear-gradient(var(--grid-bg-1) 2px, transparent 2px),
         linear-gradient(90deg, var(--grid-bg-1) 2px, transparent 2px),
         linear-gradient(var(--grid-bg-2) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid-bg-2) 1px, transparent 1px);
-      background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+      background-size:
+        50px 50px,
+        50px 50px,
+        10px 10px,
+        10px 10px;
       animation: bgScroll 2s linear infinite;
     }
   }
@@ -64,8 +63,8 @@ const words = ["websites", "apps", "teams", "software", "all the things!"];
   .name {
     max-width: var(--max-width);
     position: relative;
-    font-size: 8vw;
-    margin: 3rem 0;
+    font-size: min(12vw, 10rem);
+    margin: 3vw 0;
   }
   .name span {
     position: relative;
@@ -94,11 +93,21 @@ const words = ["websites", "apps", "teams", "software", "all the things!"];
   .copy {
     max-width: var(--max-width);
     position: relative;
-  }
-  p {
+    font-size: min(5vw, 1.5rem);
     margin: 0;
     color: #fff;
     text-shadow: 5px 5px #000;
+    @media (--tablet) {
+      br {
+        display: none;
+      }
+    }
+    @media (--desktop) {
+      font-size: min(6vw, 2rem);
+    }
+  }
+  .line2 {
+    line-height: min(8vw, 3rem);
   }
 
   [data-scroll-text] {
@@ -125,7 +134,8 @@ const words = ["websites", "apps", "teams", "software", "all the things!"];
     --slice-3: inset(10% -6px 85% 0);
     --slice-4: inset(40% -6px 43% 0);
     --slice-5: inset(80% -6px 5% 0);
-    content: "Branclon";
+    /* This is on purpose to make the glitch 'cooler' */
+    content: 'Branclon';
     display: block;
     position: absolute;
     top: 0;
@@ -133,7 +143,10 @@ const words = ["websites", "apps", "teams", "software", "all the things!"];
     right: 0;
     bottom: 0;
 
-    text-shadow: 1px 1px 0px #1e7abc, 2px 2px #000, -2px -2px #000;
+    text-shadow:
+      1px 1px 0px #1e7abc,
+      2px 2px #000,
+      -2px -2px #000;
     filter: blur(2px);
     color: transparent;
     clip-path: var(--slice-0);
@@ -240,7 +253,9 @@ const words = ["websites", "apps", "teams", "software", "all the things!"];
 </style>
 
 <script>
-  import ScrollText from "scroll-text";
+  import ScrollText from 'scroll-text';
 
-  new ScrollText(document.querySelector("[data-scroll-text]")!);
+  document.addEventListener('astro:page-load', () => {
+    new ScrollText(document.querySelector('[data-scroll-text]')!);
+  });
 </script>
