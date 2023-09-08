@@ -1,5 +1,6 @@
 ---
-import Image from "astro/components/Image.astro";
+
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 const apps = await getCollection("apps");
@@ -248,6 +249,9 @@ const apps = await getCollection("apps");
 </style>
 
 <script>
+  type GoToValue = number | 'next' | 'prev';
+
+
   class Apps {
     el = document.querySelector("[data-section='apps']") as HTMLElement;
     currentIndex: number;
@@ -281,7 +285,8 @@ const apps = await getCollection("apps");
         el.addEventListener(
           "touchstart",
           (event) => {
-            start = event.changedTouches[0].screenX;
+            if(!event.changedTouches.length) return;
+            start = event.changedTouches[0]!.screenX;
           },
           { passive: true }
         )
@@ -291,7 +296,8 @@ const apps = await getCollection("apps");
         el.addEventListener(
           "touchend",
           (event) => {
-            end = event.changedTouches[0].screenX;
+            if(!event.changedTouches.length) return;
+            end = event.changedTouches[0]!.screenX;
             handleGesture(start, end, 50);
           },
           { passive: true }
@@ -346,14 +352,13 @@ const apps = await getCollection("apps");
       // Get Elements
       const newSlide = this.slides[slide];
       const currentSlide = this.currentSlide;
-      console.log({ newSlide, currentSlide });
       // Toggle classes on carousel slides
       currentSlide.classList.remove("active");
-      newSlide.classList.add("active");
+      newSlide?.classList.add("active");
       // Change the main carousel styling
       this.el.setAttribute("data-current-slide", `${slide}`);
-      this.el.classList.remove(currentSlide.getAttribute("data-styling"));
-      this.el.classList.add(newSlide.getAttribute("data-styling"));
+      this.el.classList.remove(currentSlide.getAttribute("data-styling") || '');
+      this.el.classList.add(newSlide?.getAttribute("data-styling") || '');
       // Update Dot
       this.dots.forEach((el, i) => {
         if (i !== slide) {
@@ -363,7 +368,7 @@ const apps = await getCollection("apps");
         }
       });
       // Update References
-      this.currentSlide = newSlide;
+      this.currentSlide = newSlide!;
       this.currentIndex = slide;
 
       // Analytics

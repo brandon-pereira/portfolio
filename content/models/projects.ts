@@ -1,12 +1,12 @@
-import { Router } from "../utils/createRouter";
-import writeJson from "../utils/writeJson";
-import md2html from "../utils/md2html";
-import AssetManager, { Asset, RawAsset } from "../utils/assetManager";
-import { writeFile } from "fs-extra";
-import slugify from "slugify";
-import { join } from "path";
-import generateMarkdown from "../utils/generateMarkdown";
-import Vibrant from "node-vibrant";
+import { Router } from '../utils/createRouter';
+import writeJson from '../utils/writeJson';
+import md2html from '../utils/md2html';
+import AssetManager, { Asset, RawAsset } from '../utils/assetManager';
+import { writeFile } from 'fs-extra';
+import slugify from 'slugify';
+import { join } from 'path';
+import generateMarkdown from '../utils/generateMarkdown';
+import Vibrant from 'node-vibrant';
 
 type Language = {
   _id: string;
@@ -27,8 +27,8 @@ export type Project = {
   thumbnail?: Asset;
   shortDescription?: string;
   description: string;
-  type: "Internal" | "External";
-  status: "Live" | "Unavailable" | "Coming Soon";
+  type: 'Internal' | 'External';
+  status: 'Live' | 'Unavailable' | 'Coming Soon';
   images: Asset[];
   link?: string;
   isPinned?: boolean;
@@ -37,7 +37,7 @@ export type Project = {
 };
 
 // Defines expected response from service
-interface RawProject extends Omit<Partial<Project>, "languages" | "images"> {
+interface RawProject extends Omit<Partial<Project>, 'languages' | 'images'> {
   _id: string;
   images: RawAsset[];
   languages: RawLanguage[];
@@ -45,20 +45,20 @@ interface RawProject extends Omit<Partial<Project>, "languages" | "images"> {
 
 async function importProjects({
   assetManager,
-  contentful,
+  contentful
 }: Router): Promise<void> {
-  console.time("Getting projects");
-  const rawData = (await contentful.getEntries("projects", {
-    order: "fields.isPinned,-fields.date",
+  console.time('Getting projects');
+  const rawData = (await contentful.getEntries('projects', {
+    order: 'fields.isPinned,-fields.date'
   })) as RawProject[];
   const projects = await normalizeProjects(rawData, assetManager);
   // await writeJson("projects.json", projects);
   await Promise.all(
-    projects.map((project) =>
+    projects.map(project =>
       writeFile(
         `./src/content/projects/${slugify(project.title, {
           lower: true,
-          remove: /[*+~.()'"!/:@]/g,
+          remove: /[*+~.()'"!/:@]/g
         })}.md`,
         generateMarkdown(
           {
@@ -67,17 +67,17 @@ async function importProjects({
             title: project.title.replace(":", "\:"),
             description: project.shortDescription,
             shortDescription: null,
-            languages: project.languages.map((lang) => lang.name).join(", "),
+            languages: project.languages.map(lang => lang.name).join(', '),
             primaryImage:
               project.images?.[0]?.url &&
-              `../../assets/${project.thumbnail?.url}`,
+              `../../assets/${project.thumbnail?.url}`
           },
           project.description
         )
       )
     )
   );
-  console.timeEnd("Getting projects");
+  console.timeEnd('Getting projects');
 }
 
 const normalizeProjects = (
@@ -87,29 +87,29 @@ const normalizeProjects = (
   const normalizedProjects = projects.map(async (project): Promise<Project> => {
     const normalized = {} as Project;
 
-    normalized.id = project._id || "";
-    normalized.title = project.title || "";
+    normalized.id = project._id || '';
+    normalized.title = project.title || '';
     normalized.date = project.date
       ? // convert to ISO date then stringify
         new Date(project.date as string).toISOString()
       : undefined;
     normalized.languages = (project.languages || [])
       // remove incorrectly formatted
-      .filter((lang) => lang._id && lang.name && lang.description)
+      .filter(lang => lang._id && lang.name && lang.description)
       // remove where not wanted
-      .filter((lang) => !lang.disableProjectsConnection)
+      .filter(lang => !lang.disableProjectsConnection)
       // normalize object
-      .map((lang) => ({
+      .map(lang => ({
         _id: lang._id,
         name: lang.name,
-        description: lang.description,
+        description: lang.description
       }));
     normalized.shortDescription = project.shortDescription;
-    normalized.description = project.description || "";
-    normalized.type = project.type || "Internal";
-    normalized.status = project.status || "Unavailable";
+    normalized.description = project.description || '';
+    normalized.type = project.type || 'Internal';
+    normalized.status = project.status || 'Unavailable';
     normalized.images = project.images
-      ? project.images.map((img) => assetManager.add(img))
+      ? project.images.map(img => assetManager.add(img))
       : [];
     normalized.thumbnail = project.images
       ? assetManager.add(project.images[0], { jpg: true })
@@ -119,7 +119,7 @@ const normalizeProjects = (
     normalized.gitUrl = project.gitUrl;
     if (!normalized.thumbnail?.url) return normalized;
     const colors = await Vibrant.from(
-      join(process.cwd(), "src", "assets", normalized.thumbnail?.url)
+      join(process.cwd(), 'src', 'assets', normalized.thumbnail?.url)
     ).getPalette();
 
     normalized.color = colors.Vibrant?.hex;

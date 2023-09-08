@@ -22,7 +22,7 @@ async function importSkills({ contentful }: Router): Promise<void> {
     'fields.isCategory': true,
     order: 'sys.createdAt'
   })) as SkillCategory[];
-  const skills = await normalizeSkills(rawData);
+  const skills = normalizeSkills(rawData);
   await writeJson('skills.json', skills);
   console.timeEnd('Getting skills');
 }
