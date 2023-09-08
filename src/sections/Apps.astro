@@ -56,7 +56,7 @@ const apps = await getCollection("apps");
         ))
       }
     </div>
-    <div>
+    <div class="carousel-arrows">
       <button data-goto="prev" aria-label="Go to previous slide">Prev</button>
       <button data-goto="next" aria-label="Go to next slide">Next</button>
     </div>
@@ -64,37 +64,41 @@ const apps = await getCollection("apps");
 </div>
 
 <style>
+  :root {
+    --grid-bg: #041724;
+    --grid-bg-1: rgba(0, 0, 0, 0.05);
+    --grid-bg-2: rgba(0, 0, 0, 0.03);
+  }
+
+
   header.main {
     position: relative;
     z-index: 1;
     text-align: center;
     transition: color 0.3s;
+    margin-bottom: 3rem;
     & .maintext {
       font-family: var(--font-monospace);
       position: absolute;
       z-index: 1;
-      /* text-align: center; */
-      background: red;
       left: 50%;
-      transform: translateX(-50%);
-      right: 0;
-      width: 10rem;
-      height: 10rem;
-      border-radius: 50%;
-      font-size: 1.5rem;
-      margin-right: 0.9rem;
+      transform: translate(-50%);
+      width: 9rem;
+      height: 9rem;
+      -webkit-text-stroke: 2px black;
+      font-size: 2.5rem;
     }
     & .subtext {
       text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
       text-transform: uppercase;
       & span {
         vertical-align: middle;
-        /* border: 3px solid; */
+        border: 3px solid;
         display: inline-block;
-        width: 5rem;
-        height: 5rem;
+        width: 9rem;
+        height: 9rem;
         position: relative;
-        /* margin: 0 0.5rem; */
+        margin: 0 2rem;
         border-radius: 50%;
         background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
         &:after {
@@ -114,19 +118,12 @@ const apps = await getCollection("apps");
     @media (--tablet) {
       height: 10rem;
       line-height: 10rem;
-      /* padding: 1.5rem 0 0; */
       & .maintext {
-        font-size: 2.3rem;
-        margin-right: 1.9rem;
+        font-size: 2.7rem;
       }
-      .subtext {
+      & .subtext {
         font-size: 2.4rem;
-        margin-left: 0.2rem;
-        span {
-          margin: 0 1.5rem;
-          height: 9rem;
-          width: 9rem;
-        }
+        margin-left: 3rem;
       }
     }
   }
@@ -149,10 +146,27 @@ const apps = await getCollection("apps");
     z-index: 0;
     position: relative;
     padding-top: 30%;
+    padding-bottom: 3rem;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.5));
     color: #fff;
+    &:before {
+      content: "";
+      position: absolute;
+      top: -100rem;
+      left: -100rem;
+      right: -100rem;
+      bottom: -100rem;
+      pointer-events: none;
+      overflow: hidden;
+      background-image: linear-gradient(var(--grid-bg-1) 2px, transparent 2px),
+        linear-gradient(90deg, var(--grid-bg-1) 2px, transparent 2px),
+        linear-gradient(var(--grid-bg-2) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-bg-2) 1px, transparent 1px);
+      background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    }
     &.wings-cheap {
       background-color: #ffc107;
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent);
+      background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2));
       color: #000;
     }
     &.betterdo {
@@ -163,13 +177,15 @@ const apps = await getCollection("apps");
     }
     &.remote {
       background-color: #f44336;
-      color: #000;
+      /* color: #000; */
     }
   }
 
   .content {
     max-width: calc(var(--max-width));
     margin: 0 auto;
+    position: relative;
+    z-index: 5;
   }
 
   .app-container {
@@ -179,13 +195,14 @@ const apps = await getCollection("apps");
     justify-content: center;
     display: none;
     height: 300px;
+    gap: 3rem;
     &:global(.active) {
       display: flex;
     }
     & .icon-column {
-      width: 20%;
       flex-shrink: 0;
       text-align: center;
+      filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     }
     & .content-column {
       h2 {
@@ -200,16 +217,32 @@ const apps = await getCollection("apps");
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.8rem;
     & .dot {
       background: rgba(255, 255, 255, 0.5);
       display: inline-block;
-      height: 30px;
+      height: 1.4rem;
       aspect-ratio: 1 / 1;
-      border-radius: 50px;
+      border: none;
+      border-radius: 50%;
       &.active {
         background: #fff;
       }
+    }
+  }
+
+  .carousel-arrows {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    button {
+      background: #fff;
+      border: none;
+      padding: 0.4rem 1rem;
+      border-radius: 1rem;
     }
   }
 </style>
@@ -338,5 +371,7 @@ const apps = await getCollection("apps");
     }
   }
 
-  new Apps();
+  document.addEventListener('astro:page-load', () => {
+    new Apps();
+  });
 </script>

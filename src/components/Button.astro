@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from 'astro/types';
 // Inspired by https://uiverse.io/namecho/slippery-moth-23
 interface Props extends HTMLAttributes<'a'> {
-  color: string | undefined;
+  color?: string | undefined;
   href: string;
   isDarkColor?: boolean;
 }
