@@ -1,12 +1,13 @@
 ---
-import Button from "@components/Button.astro";
-
+import Button from '@components/Button.astro';
 ---
 
 <div class="container">
   <div class="content">
     <h1>
-      <pre aria-label="@ me" contenteditable="">
+      <pre
+        aria-label="@ me"
+        contenteditable="">
     _______                                   
    /       \_                                 
   /   $$$$$$ \         ______ ____    ______  
@@ -17,15 +18,43 @@ import Button from "@components/Button.astro";
 | $$ \$$  $$| $$      | $$ | $$ | $$ \$$     \
  \$$\ \$$$$$$$$        \$$  \$$  \$$  \$$$$$$$<span class="typewriter">_</span>
   \$$\ __/    /                                
-   \$$$    $$$        // CONTACT ME                        
+   \$$$    $$$        // CONTACT ME
     \$$$$$$ 
       </pre>
     </h1>
     <div class="buttons">
-    <Button color="#0f0" class="button" target="_" href="mailto:brandonpereiras@gmail.com">email</Button>
-    <Button color="#0f0" class="button" target="_" href="https://github.com/brandon-pereira">github</Button>
-    <Button color="#0f0" class="button" target="_" href="https://instagram.com/brandonpereira_">instagram</Button>
-    <Button color="#0f0" class="button" target="_" href="https://ca.linkedin.com/in/brandonpereira">linkedin</Button>
+      <Button
+        color="#0f0"
+        class="button"
+        target="_"
+        href="mailto:brandonpereiras@gmail.com"
+      >
+        email
+      </Button>
+      <Button
+        color="#0f0"
+        class="button"
+        target="_"
+        href="https://github.com/brandon-pereira"
+      >
+        github
+      </Button>
+      <Button
+        color="#0f0"
+        class="button"
+        target="_"
+        href="https://instagram.com/brandonpereira_"
+      >
+        instagram
+      </Button>
+      <Button
+        color="#0f0"
+        class="button"
+        target="_"
+        href="https://ca.linkedin.com/in/brandonpereira"
+      >
+        linkedin
+      </Button>
     </div>
   </div>
 </div>
@@ -38,7 +67,7 @@ import Button from "@components/Button.astro";
   }
   .button {
     width: 100%;
-    padding: 1rem  0;
+    padding: 1rem 0;
     font-family: var(--font-monospace);
     text-decoration: none;
   }
@@ -61,7 +90,6 @@ import Button from "@components/Button.astro";
     overflow-y: scroll;
     font-size: min(1.8vw, 1.3rem);
     outline: none;
-
   }
 
   .typewriter {
