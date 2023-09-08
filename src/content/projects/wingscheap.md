@@ -1,18 +1,19 @@
 ---
-id: "48QIfbiRQ4qOa06Yi8S8us"
-title: "Wings.cheap"
-date: "2017-02-01T00:00:00.000Z"
-languages: "NodeJS, MongoDB, Javascript (ES6+), HTML, A11Y, & SEO, CSS"
+id: '48QIfbiRQ4qOa06Yi8S8us'
+title: 'Wings.cheap'
+date: '2017-02-01T00:00:00.000Z'
+languages: 'NodeJS, MongoDB, Javascript (ES6+), HTML, A11Y, & SEO, CSS'
 description: "I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!"
-type: "Internal"
-status: "Live"
-images: "[object Object],[object Object],[object Object]"
-thumbnail: "[object Object]"
-link: "https://branclon.com/wings-cheap"
-gitUrl: "https://github.com/brandon-pereira/wings-cheap"
-color: "#0472f7"
-primaryImage: "../../assets//5G7FgIiNQAmyQO0mu8yKem.jpg"
+type: 'Internal'
+status: 'Live'
+images: '[object Object],[object Object],[object Object]'
+thumbnail: '[object Object]'
+link: 'https://branclon.com/wings-cheap'
+gitUrl: 'https://github.com/brandon-pereira/wings-cheap'
+color: '#0472f7'
+primaryImage: '../../assets//5G7FgIiNQAmyQO0mu8yKem.jpg'
 ---
+
 I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!
 
 Under the hood, I'm using AngularJS and SCSS to render the front-end. It goes through GulpJS to create production (minified) files as well as enabling live reload on both front-end and back-end (running on the same instance). The back-end is written in NodeJS (using Express to handle server portion) and utilizes a REST API. For a database, I decided to use MongoDB.

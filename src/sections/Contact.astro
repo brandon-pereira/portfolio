@@ -53,11 +53,12 @@ import Button from "@components/Button.astro";
   }
 
   pre {
-    width: min(86vw, var(--max-width));
-    background: red;
+    width: min(86vw, 61rem);
     margin: 0 auto;
     font-family: var(--font-monospace);
     color: #0f0;
+    text-overflow: clip;
+    overflow-y: scroll;
     font-size: min(1.8vw, 1.3rem);
     outline: none;
 

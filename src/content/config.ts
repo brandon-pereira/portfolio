@@ -1,4 +1,4 @@
-import { defineCollection, z } from "astro:content";
+import { defineCollection, z } from 'astro:content';
 
 const projectsCollection = defineCollection({
   schema: ({ image }) =>
@@ -8,10 +8,10 @@ const projectsCollection = defineCollection({
       date: z.string().datetime().pipe(z.coerce.date()),
       description: z.string().optional(),
       primaryImage: image().optional(),
-      color: z.string().default("red"),
+      color: z.string().default('red'),
       gitUrl: z.string().url().optional(),
-      link: z.string().url().optional(),
-    }),
+      link: z.string().url().optional()
+    })
 });
 
 const appsCollection = defineCollection({
@@ -20,11 +20,11 @@ const appsCollection = defineCollection({
       _id: z.string(),
       appName: z.string(),
       icon: image(),
-      theme: z.string(),
-    }),
+      theme: z.string()
+    })
 });
 
 export const collections = {
   projects: projectsCollection,
-  apps: appsCollection,
+  apps: appsCollection
 };

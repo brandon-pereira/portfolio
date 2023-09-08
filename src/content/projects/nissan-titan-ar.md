@@ -1,19 +1,19 @@
 ---
-id: "6E4mnHlQk0k6KkgQq8KUac"
-title: "Nissan: Titan AR"
-date: "2018-09-21T00:00:00.000Z"
-languages: "MongoDB, NodeJS"
-description: "I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. "
-type: "External"
-status: "Unavailable"
-images: "[object Object],[object Object]"
-thumbnail: "[object Object]"
-link: "https://m.me/winanissantitan"
-color: "#f29a43"
-primaryImage: "../../assets//1c9okCtbZo4quQGkOowqyo.jpg"
+id: '6E4mnHlQk0k6KkgQq8KUac'
+title: 'Nissan: Titan AR'
+date: '2018-09-21T00:00:00.000Z'
+languages: 'MongoDB, NodeJS'
+description: 'I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. '
+type: 'External'
+status: 'Unavailable'
+images: '[object Object],[object Object]'
+thumbnail: '[object Object]'
+link: 'https://m.me/winanissantitan'
+color: '#f29a43'
+primaryImage: '../../assets//1c9okCtbZo4quQGkOowqyo.jpg'
 ---
-I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. 
 
+I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience.
 
 In the video below you can see how the journey works. First, you're greeted by the bot to select your favourite college football team. Upon selection, you're then presented with an option to see your Titan in the camera. This is where the AR happens. Once you've played around, you can choose to share with your friends. Lastly, you're asked to submit your information for a chance to win the customized Titan.
 

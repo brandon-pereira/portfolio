@@ -1,22 +1,24 @@
 ---
-id: "3fnHYTfx20QwK1RHOUJ4cZ"
-title: "Nissan Pathfinder: Return to Rugged"
-date: "2021-07-01T00:00:00.000Z"
-languages: "Animation, Javascript (ES6+), React"
-description: "Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users."
-type: "External"
-status: "Live"
-images: "[object Object],[object Object],[object Object]"
-thumbnail: "[object Object]"
-link: "https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder/return-to-rugged/"
-color: "#9c3d39"
-primaryImage: "../../assets//2Bj9zodXC6Ks9Sa0R3kK0x.jpg"
+id: '3fnHYTfx20QwK1RHOUJ4cZ'
+title: 'Nissan Pathfinder: Return to Rugged'
+date: '2021-07-01T00:00:00.000Z'
+languages: 'Animation, Javascript (ES6+), React'
+description: 'Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.'
+type: 'External'
+status: 'Live'
+images: '[object Object],[object Object],[object Object]'
+thumbnail: '[object Object]'
+link: 'https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder/return-to-rugged/'
+color: '#9c3d39'
+primaryImage: '../../assets//2Bj9zodXC6Ks9Sa0R3kK0x.jpg'
 ---
+
 Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.
 
-My role on the project mainly focused on architecture and leadership. 
+My role on the project mainly focused on architecture and leadership.
 
-My responsibilities included: 
+My responsibilities included:
+
 - Getting the concept debriefing from our client and creative teams
 - Building out a solution design and architecture for the site
 - Onboarding, problem-solving, reviewing pull requests, debugging issues as they arose, and doing minor features where I could.

@@ -1,6 +1,6 @@
-import { Router } from "../utils/createRouter";
-import writeJson from "../utils/writeJson";
-import md2html from "../utils/md2html";
+import { Router } from '../utils/createRouter';
+import writeJson from '../utils/writeJson';
+import md2html from '../utils/md2html';
 
 type AboutObject = {
   _id: string;
@@ -14,14 +14,14 @@ type AboutObject = {
 };
 
 async function importAboutYou({ contentful }: Router): Promise<void> {
-  console.time("Getting information about you");
+  console.time('Getting information about you');
   const rawData = (await contentful.getEntries(
-    "about",
+    'about',
     {}
   )) as Partial<AboutObject>[];
   const aboutYou = await normalizeAboutYou(rawData[0]);
-  await writeJson("about.json", aboutYou);
-  console.timeEnd("Getting information about you");
+  await writeJson('about.json', aboutYou);
+  console.timeEnd('Getting information about you');
 }
 
 const normalizeAboutYou = async (
@@ -29,13 +29,13 @@ const normalizeAboutYou = async (
 ): Promise<AboutObject> => {
   const normalized = {} as AboutObject;
   normalized._id = aboutObj?._id || `${Math.random()}`;
-  normalized.firstName = aboutObj?.firstName || "";
-  normalized.lastName = aboutObj?.lastName || "";
-  normalized.description = await md2html(aboutObj?.description || "");
-  normalized.scrollText = aboutObj?.scrollText || "";
-  normalized.email = aboutObj?.email || "";
-  normalized.githubUrl = aboutObj?.githubUrl || "";
-  normalized.linkedInUrl = aboutObj?.linkedInUrl || "";
+  normalized.firstName = aboutObj?.firstName || '';
+  normalized.lastName = aboutObj?.lastName || '';
+  normalized.description = await md2html(aboutObj?.description || '');
+  normalized.scrollText = aboutObj?.scrollText || '';
+  normalized.email = aboutObj?.email || '';
+  normalized.githubUrl = aboutObj?.githubUrl || '';
+  normalized.linkedInUrl = aboutObj?.linkedInUrl || '';
   return normalized;
 };
 

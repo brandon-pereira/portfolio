@@ -7,7 +7,7 @@ ${Object.entries(frontmatter)
   // prettier-ignore
   .map(([key, value]) => value && `${key}: "${value}"`)
   .filter(Boolean)
-  .join("\n")}
+  .join('\n')}
 ---
 ${content}
 `;
