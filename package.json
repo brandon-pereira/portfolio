@@ -8,7 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "test": "astro test",
+    "test": "astro check",
     "get-content": "ts-node -T ./content/import"
   },
   "dependencies": {
