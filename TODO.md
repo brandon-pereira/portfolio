@@ -11,3 +11,5 @@
 - [ ] Add Google Analytics
 - [ ] Improve Lighthouse
 - [ ] Browser Testing
+- [ ] Svg favicon
+- [ ] Mobile Device testing
