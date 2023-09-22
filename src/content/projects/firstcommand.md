@@ -6,11 +6,29 @@ languages: 'CSS, GraphQL, Javascript (ES6+), React'
 description: 'My team and I were tasked to rebuild the FirstCommand website to be more modern. We got a blank slate, so we got to take advantage of the latest technologies.'
 type: 'External'
 status: 'Live'
-images: '[object Object],[object Object],[object Object]'
+images: [
+      {
+	"_id": "6L8ca50vDOyEmA02O4coo0",
+	"title": "FirstCommand desktop experience",
+	"description": "FirstCommand desktop experience",
+	"url": "../../assets/6L8ca50vDOyEmA02O4coo0.png",
+	"contentType": "image/png"
+},{
+	"_id": "3hHuNczYXmI4YyAekA8e2c",
+	"title": "FirstCommand mobile experience",
+	"url": "../../assets/3hHuNczYXmI4YyAekA8e2c.png",
+	"contentType": "image/png"
+},{
+	"_id": "4QLJ0hudawUWqCqWaMgEK4",
+	"title": "FirstCommand get started tool",
+	"description": "FirstCommand get started tool",
+	"url": "../../assets/4QLJ0hudawUWqCqWaMgEK4.png",
+	"contentType": "image/png"
+}]
 thumbnail: '[object Object]'
 link: 'https://www.firstcommand.com/'
 color: '#82a0c4'
-primaryImage: '../../assets//6L8ca50vDOyEmA02O4coo0.jpg'
+primaryImage: '../../assets/6L8ca50vDOyEmA02O4coo0.jpg'
 ---
 
 My team and I were tasked to rebuild the FirstCommand website to be more modern. We got a blank slate, so we got to take advantage of the latest technologies.

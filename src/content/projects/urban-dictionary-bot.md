@@ -6,12 +6,18 @@ languages: 'NodeJS'
 description: 'I built a simple Messenger bot that gives you the Urban Dictionary definition of a word.'
 type: 'Internal'
 status: 'Unavailable'
-images: '[object Object]'
+images: [
+      {
+	"_id": "1P9oAk5x8uGEsBpLzb0IBp",
+	"title": "Example of how the bot listens and responds",
+	"url": "../../assets/1P9oAk5x8uGEsBpLzb0IBp.png",
+	"contentType": "image/png"
+}]
 thumbnail: '[object Object]'
 link: 'https://www.messenger.com/t/urbandictionarybot'
 gitUrl: 'https://github.com/brandon-pereira/urban-dictionary-bot'
 color: '#1f9ff2'
-primaryImage: '../../assets//1P9oAk5x8uGEsBpLzb0IBp.jpg'
+primaryImage: '../../assets/1P9oAk5x8uGEsBpLzb0IBp.jpg'
 ---
 
 I built a simple Messenger bot that gives you the Urban Dictionary definition of a word. The idea was simple, and I only gave myself 4 hours to go from creating the repository to having it running in production.

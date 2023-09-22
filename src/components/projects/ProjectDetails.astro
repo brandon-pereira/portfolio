@@ -8,7 +8,7 @@ interface Props {
   content: AstroComponentFactory;
 }
 const { data, slug } = Astro.props.project;
-const { link, color, gitUrl, title, primaryImage } = data;
+const { link, color, images, gitUrl, title, primaryImage } = data;
 const Content = Astro.props.content;
 ---
 
@@ -72,6 +72,7 @@ const Content = Astro.props.content;
             </Button>
           )
         }
+        {images?.map(img => <div><Image src={img.url} alt="{img.title}" /></div>)}
       </div>
     </div>
   </div>

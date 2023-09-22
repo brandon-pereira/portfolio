@@ -6,7 +6,6 @@ languages: 'CSS'
 description: 'We partnered with local radio stations by creating a form for listeners to vote for their favourite radio stations.'
 type: 'External'
 status: 'Unavailable'
-images: ''
 link: 'http://www.klassickennels.com/'
 ---
 

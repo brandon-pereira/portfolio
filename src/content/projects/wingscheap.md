@@ -3,15 +3,34 @@ id: '48QIfbiRQ4qOa06Yi8S8us'
 title: 'Wings.cheap'
 date: '2017-02-01T00:00:00.000Z'
 languages: 'NodeJS, MongoDB, Javascript (ES6+), HTML, A11Y, & SEO, CSS'
-description: "I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!"
+description: 'I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you''re looking for a cheap eat!'
 type: 'Internal'
 status: 'Live'
-images: '[object Object],[object Object],[object Object]'
+images: [
+      {
+	"_id": "5G7FgIiNQAmyQO0mu8yKem",
+	"title": "Mobile view of landing screen",
+	"description": "Mobile view of landing screen",
+	"url": "../../assets/5G7FgIiNQAmyQO0mu8yKem.png",
+	"contentType": "image/png"
+},{
+	"_id": "5fxagEO5J6ucyQ0MmQQgAE",
+	"title": "Desktop view of landing screen",
+	"description": "Desktop view of landing screen",
+	"url": "../../assets/5fxagEO5J6ucyQ0MmQQgAE.png",
+	"contentType": "image/png"
+},{
+	"_id": "3Eh8HFBZBKUcwummomseyA",
+	"title": "Mobile view of results screen",
+	"description": "Mobile view of results screen",
+	"url": "../../assets/3Eh8HFBZBKUcwummomseyA.png",
+	"contentType": "image/png"
+}]
 thumbnail: '[object Object]'
 link: 'https://branclon.com/wings-cheap'
 gitUrl: 'https://github.com/brandon-pereira/wings-cheap'
 color: '#0472f7'
-primaryImage: '../../assets//5G7FgIiNQAmyQO0mu8yKem.jpg'
+primaryImage: '../../assets/5G7FgIiNQAmyQO0mu8yKem.jpg'
 ---
 
 I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!

@@ -54,8 +54,14 @@ async function importProjects({
   const projects = await normalizeProjects(rawData, assetManager);
   // await writeJson("projects.json", projects);
   await Promise.all(
-    projects.map(project =>
-      writeFile(
+    projects.map(project => {
+      project.images = project.images
+        ?.map(img => ({
+          ...img,
+          url: `../../assets${img.url}`
+        }))
+        .filter(img => !img.contentType.includes('video'));
+      return writeFile(
         `./src/content/projects/${slugify(project.title, {
           lower: true,
           remove: /[*+~.()'"!/:@]/g
@@ -69,13 +75,12 @@ async function importProjects({
             shortDescription: null,
             languages: project.languages.map(lang => lang.name).join(', '),
             primaryImage:
-              project.images?.[0]?.url &&
-              `../../assets/${project.thumbnail?.url}`
+              project.thumbnail && `../../assets${project.thumbnail?.url}`
           },
           project.description
         )
-      )
-    )
+      );
+    })
   );
   console.timeEnd('Getting projects');
 }

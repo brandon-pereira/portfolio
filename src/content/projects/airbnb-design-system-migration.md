@@ -6,15 +6,28 @@ languages: 'CSS, TypeScript, Animation, HTML, A11Y, & SEO, React'
 description: 'We won Airbnb as a client and I lead the charge on getting our engineers into their systems. I gained a ton of experience in client relations as well as working in an extremely large codebase.'
 type: 'External'
 status: 'Live'
-images: '[object Object],[object Object]'
+images: [
+      {
+	"_id": "1ufLqYQzdMLBoHSAlLimAc",
+	"title": "AirBnb Personal Settings Screen",
+	"description": "",
+	"url": "../../assets/1ufLqYQzdMLBoHSAlLimAc.png",
+	"contentType": "image/png"
+},{
+	"_id": "4GN3CezfjmtrXaOerkMb45",
+	"title": "Example of more complex screen",
+	"description": "",
+	"url": "../../assets/4GN3CezfjmtrXaOerkMb45.png",
+	"contentType": "image/png"
+}]
 thumbnail: '[object Object]'
 link: 'https://www.airbnb.ca/account-settings/personal-info'
 color: '#ce3039'
-primaryImage: '../../assets//1ufLqYQzdMLBoHSAlLimAc.jpg'
+primaryImage: '../../assets/1ufLqYQzdMLBoHSAlLimAc.jpg'
 ---
 
 Airbnb was migrating its website from one brand guide to a newer brand guide. They didn't have enough engineers to do this work, so they contacted my company (Critical Mass) to assist. We helped Airbnb redesign several aspects of its brand, everything from emails, website and apps.
 
 I was the first engineer to join the Airbnb team. My initial task was getting into the systems and forming a good client relationship. Once I had established some principles and scoped the work, I hired several individuals who could assist in reaching their targets.
 
-Aside from managing the team, I also got my hands dirty and refactored large parts of the Airbnb code base. I got to contribute to the core email services (including fixing a critical RTL issue across all emails), migrate multiple user flows on the Airbnb website to their new brand guide. Lastly, I worked on an internal tool I wish I could disclose.
+Aside from managing the team, I also got my hands dirty and refactored large parts of the Airbnb code base. I got to contribute to the core email services (including fixing a critical RTL issue across all emails),  migrate multiple user flows on the Airbnb website to their new brand guide. Lastly, I worked on an internal tool I wish I could disclose.

@@ -6,11 +6,30 @@ languages: 'Javascript (ES6+), CSS'
 description: 'I was tasked with rebuilding the Nissan and Infiniti Recalls tools to comply with their new brand guidelines. I took the opportunity to improve the responsiveness, appearance, and codebase.'
 type: 'External'
 status: 'Live'
-images: '[object Object],[object Object],[object Object]'
+images: [
+      {
+	"_id": "5bMKhNeQnKoOUWaGAS200i",
+	"title": "The landing screen.",
+	"description": "The landing screen.",
+	"url": "../../assets/5bMKhNeQnKoOUWaGAS200i.png",
+	"contentType": "image/png"
+},{
+	"_id": "4pqiU2ixKMeqY02usQKMyM",
+	"title": "Recalls list screen.",
+	"description": "Recalls list screen.",
+	"url": "../../assets/4pqiU2ixKMeqY02usQKMyM.png",
+	"contentType": "image/png"
+},{
+	"_id": "4NmvsVkjvqMAqSEWsQuUms",
+	"title": "Recalls details screen.",
+	"description": "Recalls details screen.",
+	"url": "../../assets/4NmvsVkjvqMAqSEWsQuUms.png",
+	"contentType": "image/png"
+}]
 thumbnail: '[object Object]'
 link: 'https://www.nissanusa.com/recalls-vin/#/Home'
 color: '#c3274e'
-primaryImage: '../../assets//5bMKhNeQnKoOUWaGAS200i.jpg'
+primaryImage: '../../assets/5bMKhNeQnKoOUWaGAS200i.jpg'
 ---
 
 I was tasked with rebuilding the Nissan and Infiniti Recalls tools to comply with their new brand guidelines. I took the opportunity to improve the responsiveness, appearance, and codebase.

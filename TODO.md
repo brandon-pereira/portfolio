@@ -13,3 +13,5 @@
 - [ ] Browser Testing
 - [ ] Svg favicon
 - [ ] Mobile Device testing
+- [ ] video support
+- [ ] lightbox support
