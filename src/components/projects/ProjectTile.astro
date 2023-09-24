@@ -38,7 +38,14 @@ const url = "/projects/" + slug;
     <div class="description">
       <p>{description || ""}</p>
     </div>
-    <Button color={color!} href={url} color={color}>Learn More</Button>
+    <Button
+      color={color!}
+      href={url}
+      color={color}
+      aria-label={`Details about ${title}`}
+    >
+      Details
+    </Button>
   </div>
 </div>
 
