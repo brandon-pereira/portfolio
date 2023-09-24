@@ -1,9 +1,6 @@
 # TODO
 
 - [ ] Remove `content` folder and leverage only Markdown
-- [ ] Finalize `public` folder
-- [ ] Add 404 / 500 errors
-- [ ] Fix testing and linting commands
 - [ ] Add Footer Logo
 - [ ] Add Google Analytics
 - [ ] Browser Testing
@@ -12,3 +9,5 @@
 - [ ] video support
 - [ ] lightbox support
 - [ ] Add PWA
+- [ ] Better Apps Styling
+- [ ] Logo from AI to Figma

@@ -11,9 +11,7 @@ const projectsCollection = defineCollection({
       color: z.string().default('red'),
       gitUrl: z.string().url().optional(),
       link: z.string().url().optional(),
-      images: z
-        .array(z.object({ url: image().optional(), title: z.string() }))
-        .optional()
+      images: z.array(z.object({ url: image(), title: z.string() })).optional()
     })
 });
 
