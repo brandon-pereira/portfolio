@@ -1,6 +1,6 @@
 {
   "name": "brandon-pereira-portfolio",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "The code that hosts my portfolio. Located at https://branclon.com/",
   "repository": "https://github.com/brandon-pereira/portfolio",
   "author": "Brandon Pereira",
@@ -14,12 +14,11 @@
     "get-content": "ts-node -T ./content/import"
   },
   "dependencies": {
-    "@astrojs/check": "^0.2.0",
     "astro": "^3.0.10",
-    "scroll-text": "^1.0.1",
-    "typescript": "^5.2.2"
+    "scroll-text": "^1.0.1"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.2.0",
     "@csstools/postcss-global-data": "^2.1.0",
     "@types/fs-extra": "^11.0.1",
     "@types/marked": "^5.0.1",
@@ -36,6 +35,7 @@
     "prettier-plugin-astro": "^0.12.0",
     "sharp": "^0.32.5",
     "slugify": "^1.6.6",
-    "ts-node": "^10.9.1"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
   }
 }
