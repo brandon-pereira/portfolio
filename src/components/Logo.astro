@@ -1,0 +1,33 @@
+---
+import logo from '../../public/icons/clon.svg?raw';
+
+interface Props {
+  size?: number;
+  colors?: {
+    outerFront?: string;
+    outerRight?: string;
+    innerBack?: string;
+    innerLeft?: string;
+    innerBottom?: string;
+  };
+  class?: string;
+}
+
+const { size, colors, class: className }: Props = Astro.props;
+console.log(className);
+---
+
+<div
+  class={className}
+  style={{
+    aspectRatio: '448.9 / 451.1',
+    width: size ? (typeof size === 'number' ? `${size}px` : size) : '100%',
+    '--outer-front': colors?.outerFront ?? 'unset',
+    '--outer-right': colors?.outerRight ?? 'unset',
+    '--inner-back': colors?.innerBack ?? 'unset',
+    '--inner-left': colors?.innerLeft ?? 'unset',
+    '--inner-bottom': colors?.innerBottom ?? 'unset'
+  }}
+>
+  <Fragment set:html={logo} />
+</div>

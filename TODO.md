@@ -1,11 +1,16 @@
 # TODO
 
+Pre-Launch
+
 - [ ] Remove `content` folder and leverage only Markdown
-- [ ] Add Footer Logo
+- [ ] View Transitions Improvements
 - [ ] Add Google Analytics
 - [ ] Browser Testing
-- [ ] Svg favicon
 - [ ] Mobile Device testing
+
+Post-Launch
+
+- [ ] Svg favicon
 - [ ] video support
 - [ ] lightbox support
 - [ ] Add PWA
