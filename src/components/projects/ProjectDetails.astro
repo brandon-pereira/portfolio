@@ -16,7 +16,6 @@ const Content = Astro.props.content;
   class="container"
   data-project-details={slug}
   transition:name={`project-tile-${slug}`}
-  transition:animate="slide"
 >
   <div class="content">
     {
@@ -72,7 +71,13 @@ const Content = Astro.props.content;
             </Button>
           )
         }
-        {images?.map(img => <div><Image src={img.url} alt="{img.title}" /></div>)}
+        {
+          images?.map(img => (
+            <div>
+              <Image src={img.url} alt="{img.title}" />
+            </div>
+          ))
+        }
       </div>
     </div>
   </div>

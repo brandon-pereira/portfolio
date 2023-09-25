@@ -1,23 +1,22 @@
 ---
-import { Image } from "astro:assets";
-import Button from "@components/Button.astro";
+import { Image } from 'astro:assets';
+import Button from '@components/Button.astro';
 
-import type { CollectionEntry } from "astro:content";
+import type { CollectionEntry } from 'astro:content';
 interface Props {
-  project: CollectionEntry<"projects">;
+  project: CollectionEntry<'projects'>;
 }
 
 const { project } = Astro.props;
 const { data, slug } = project;
 const { title, description, primaryImage, color } = data;
-const url = "/projects/" + slug;
+const url = '/projects/' + slug;
 ---
 
 <div
   class="container"
   data-project-tile={slug}
   transition:name={`project-tile-${slug}`}
-  transition:animate="slide"
 >
   <div class="content">
     {
@@ -36,7 +35,7 @@ const url = "/projects/" + slug;
       </h2>
     </div>
     <div class="description">
-      <p>{description || ""}</p>
+      <p>{description || ''}</p>
     </div>
     <Button
       color={color!}
@@ -49,7 +48,7 @@ const url = "/projects/" + slug;
   </div>
 </div>
 
-<style define:vars={{ "primary-color": color }}>
+<style define:vars={{ 'primary-color': color }}>
   .container {
     display: block;
     position: relative;
@@ -59,7 +58,7 @@ const url = "/projects/" + slug;
     border-radius: var(--border-radius);
     color: #fff;
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 0;
       top: 0;
@@ -75,7 +74,7 @@ const url = "/projects/" + slug;
       border-radius: var(--border-radius);
     }
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 0;
       top: var(--gap);
@@ -121,7 +120,7 @@ const url = "/projects/" + slug;
     padding-bottom: calc(calc(var(--content-gap) / 2) + var(--pill-size));
     margin-bottom: calc(var(--content-gap) / 2);
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       height: var(--pill-size);
