@@ -20,13 +20,16 @@ const url = '/projects/' + slug;
 >
   <div class="content">
     {
-      primaryImage && (
+      primaryImage ? (
         <Image
           src={primaryImage}
           quality={100}
+          class="project-image"
           alt={title}
           data-project-image={slug}
         />
+      ) : (
+        <div class="project-image" />
       )
     }
     <div class="title-container">
@@ -84,7 +87,7 @@ const url = '/projects/' + slug;
       background: #151515;
       border-radius: var(--border-radius);
     }
-    &:nth-of-type(even) img {
+    &:nth-of-type(even) .project-image {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 50px));
     }
   }
@@ -99,10 +102,12 @@ const url = '/projects/' + slug;
     padding: 0 0 var(--content-gap);
   }
 
-  img {
+  .project-image {
     position: relative;
     width: 100%;
     max-height: 200px;
+    min-height: 150px;
+    background: var(--primary-color);
     object-fit: cover;
     object-position: top left;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 0 100%);

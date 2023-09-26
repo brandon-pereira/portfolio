@@ -71,7 +71,7 @@ async function importProjects({
             ...project,
             // prettier-ignore
             title: project.title.replace(":", "\:"),
-            description: project.shortDescription,
+            description: project.shortDescription || project.description,
             shortDescription: null,
             languages: project.languages.map(lang => lang.name).join(', '),
             primaryImage:

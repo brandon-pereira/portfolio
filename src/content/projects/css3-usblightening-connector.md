@@ -3,6 +3,7 @@ id: 'b9M9zKcNiwUQC0SuE4GCw'
 title: 'CSS3: USB/Lightening Connector'
 date: '2015-01-12T00:00:00.000Z'
 languages: 'CSS'
+description: 'I developed an Apple lightning cable and USB connector in pure CSS3.'
 type: 'Internal'
 status: 'Live'
 images: [

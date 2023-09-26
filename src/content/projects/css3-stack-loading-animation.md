@@ -3,6 +3,7 @@ id: '3rOGrRMYiQCW04UOCsIEmO'
 title: 'CSS3: Stack Loading Animation'
 date: '2015-03-28T00:00:00.000Z'
 languages: 'CSS'
+description: 'I developed a stack loading effect using CSS3 animations. This was for an internal project of mine, but I liked it enough to showcase it on its own.'
 type: 'Internal'
 status: 'Live'
 images: [
