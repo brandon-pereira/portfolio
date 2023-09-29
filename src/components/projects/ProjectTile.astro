@@ -161,3 +161,27 @@ const url = '/projects/' + slug;
     }
   }
 </style>
+
+<script define:vars={{ url }}>
+// Every time the page loads, run this code
+// document.addEventListener('astro:pagxe-load', listener);
+document.addEventListener(
+  'astro:after-swap',
+  () => {
+    if (!location.pathname.includes(url)) {
+      return;
+    }
+    const $back = document.querySelector('[data-project-back-button]');
+    // Add a click event listener to the back button
+    $back?.addEventListener(
+      'click',
+      e => {
+        e.preventDefault();
+        history.back();
+      },
+      false
+    );
+  },
+  { once: true }
+);
+</script>

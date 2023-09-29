@@ -21,23 +21,3 @@ export async function getStaticPaths() {
   <ProjectsHeader />
   <ProjectDetails project={entry!} content={Content} />
 </Layout>
-
-<script>
-  // Every time the page loads, run this code
-  document.addEventListener('astro:page-load', () => {
-    const $back = document.querySelector('[data-project-back-button]');
-    // Add a click event listener to the back button
-    $back?.addEventListener(
-      'click',
-      e => {
-        // if no referrer, or referrer is the same as current URL, let the browser handle the click
-        if (!document.referrer || document.referrer === window.location.href) {
-          return;
-        }
-        e.preventDefault();
-        history.back();
-      },
-      false
-    );
-  });
-</script>
