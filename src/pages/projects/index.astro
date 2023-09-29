@@ -6,23 +6,8 @@ import { getCollection } from 'astro:content';
 const projects = (await getCollection('projects')).sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime()
 );
-const afterFeatured = projects[6]?.slug;
 ---
 
 <Layout title="Projects">
   <ProjectsList projects={projects} />
 </Layout>
-
-<script define:vars={{ afterFeatured }}>
-//  document.addEventListener('astro:after-swap', () => {
-requestAnimationFrame(() => {
-  const scrollTo = document.querySelector(
-    `[data-project-tile="${afterFeatured}"]`
-  );
-  console.log(scrollTo);
-  if (scrollTo) {
-    scrollTo.scrollIntoView(true, { behavior: 'smooth', block: 'end' });
-  }
-  //  });
-});
-</script>

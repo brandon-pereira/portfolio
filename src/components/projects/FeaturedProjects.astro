@@ -1,10 +1,35 @@
 ---
-import ProjectsList from "./ProjectsList.astro";
-import { getCollection } from "astro:content";
+import ProjectsList from './ProjectsList.astro';
+import { getCollection } from 'astro:content';
 
-const projects = (await getCollection("projects"))
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0, 6);
+const allProjects = (await getCollection('projects')).sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
+);
+const projects = allProjects.slice(0, 6);
+const nextProjectId = allProjects[6]?.slug;
 ---
 
 <ProjectsList projects={projects} />
+
+<script
+  define:vars={{
+    nextProjectId
+  }}
+>
+document.addEventListener(
+  'astro:after-swap',
+  () => {
+    if (window.location.pathname !== '/projects') {
+      return;
+    }
+    console.log('RUNNING');
+    const scrollTo = document.querySelector(
+      `[data-project-tile="${nextProjectId}"]`
+    );
+    if (scrollTo) {
+      scrollTo.scrollIntoView(true, { behavior: 'smooth', block: 'end' });
+    }
+  },
+  { once: true }
+);
+</script>
