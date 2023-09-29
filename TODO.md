@@ -2,7 +2,6 @@
 
 Pre-Launch
 
-- [ ] Fix project list page scrolling issue when going back
 - [ ] Add better back button styles
 - [ ] Remove `content` folder and leverage only Markdown
 - [ ] Add Google Analytics
