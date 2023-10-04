@@ -1,14 +1,18 @@
 # TODO
 
+Projects missing:
+
+- isPinned?: boolean;
+
 Pre-Launch
 
-- [ ] Remove `content` folder and leverage only Markdown
 - [ ] Add Google Analytics
 - [ ] Browser Testing
 - [ ] Mobile Device testing
 
 Post-Launch
 
+- [ ] isPinned feature
 - [ ] Svg favicon
 - [ ] video support
 - [ ] lightbox support
