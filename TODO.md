@@ -2,7 +2,6 @@
 
 Pre-Launch
 
-- [ ] Add better back button styles
 - [ ] Remove `content` folder and leverage only Markdown
 - [ ] Add Google Analytics
 - [ ] Browser Testing

@@ -1,20 +1,23 @@
 ---
-import type { CollectionEntry } from "astro:content";
-import Button from "@components/Button.astro";
-import ProjectTile from "@components/projects/ProjectTile.astro";
-import ProjectsHeader from "@components/projects/ProjectsHeader.astro";
+import type { CollectionEntry } from 'astro:content';
+import Button from '@components/Button.astro';
+import ProjectTile from '@components/projects/ProjectTile.astro';
+import ProjectsHeader from '@components/projects/ProjectsHeader.astro';
+import ProjectBackButton from './ProjectBackButton.astro';
 
 interface Props {
-  projects: CollectionEntry<"projects">[];
+  projects: CollectionEntry<'projects'>[];
+  withBackButton?: boolean;
 }
 
-const { projects } = Astro.props;
+const { withBackButton, projects } = Astro.props;
 ---
 
 <div class="container" id="projects">
+  {withBackButton && <ProjectBackButton />}
   <ProjectsHeader />
   <div class="projects" data-projects-content>
-    {projects.map((project) => <ProjectTile project={project} />)}
+    {projects.map(project => <ProjectTile project={project} />)}
   </div>
 
   <div class="view-more-container">
@@ -24,7 +27,9 @@ const { projects } = Astro.props;
 
 <style>
   .container {
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), 0 -1px #000;
+    box-shadow:
+      inset 0 1px rgba(255, 255, 255, 0.2),
+      0 -1px #000;
     background-image: linear-gradient(#000, transparent);
     background-size: 100% 200px;
     background-repeat: no-repeat;

@@ -9,5 +9,5 @@ const projects = (await getCollection('projects')).sort(
 ---
 
 <Layout title="Projects">
-  <ProjectsList projects={projects} />
+  <ProjectsList projects={projects} withBackButton />
 </Layout>
