@@ -1,5 +1,5 @@
 ---
-id: '7Km3R1SnDTIEq3ltYyUQCr'
+id: 'wedding-photobooth'
 title: 'Wedding Photobooth'
 date: '2021-09-03T00:00:00.000Z'
 languages: 'NodeJS, CSS, HTML, A11Y, & SEO, Javascript (ES6+), MongoDB'
@@ -11,25 +11,23 @@ images: [
 	"_id": "3SpnzqnBIUh3BIz8S6zHzU",
 	"title": " The Fullscreen Photo Viewer",
 	"description": "",
-	"url": "../../assets/3SpnzqnBIUh3BIz8S6zHzU.png",
+	"url": "../../assets/projects/wedding-photobooth/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "72tGMeKQsKizjb3JNqOFQr",
 	"title": "The Similar Faces feature",
 	"description": "",
-	"url": "../../assets/72tGMeKQsKizjb3JNqOFQr.png",
+	"url": "../../assets/projects/wedding-photobooth/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "xk6cR2O7vLLiWpcGC7lFF",
 	"title": "One of our initial prototypes in action",
 	"description": "",
-	"url": "../../assets/xk6cR2O7vLLiWpcGC7lFF.jpg",
+	"url": "../../assets/projects/wedding-photobooth/2.jpg",
 	"contentType": "image/jpeg"
 }]
-thumbnail: '[object Object]'
 gitUrl: 'https://github.com/brandon-pereira/unique-faces'
-color: '#f7c10d'
-primaryImage: '../../assets/3SpnzqnBIUh3BIz8S6zHzU.jpg'
+color: '#f5be0e'
 ---
 
 I challenged myself by building an entire photo booth solution for my wedding. The booth creates a photo strip using photos from our DLSR, prints the result automatically, and uploads them to the web leveraging Tensorflow for facial recognition.

@@ -9,7 +9,7 @@ interface Props {
 
 const { project } = Astro.props;
 const { data, slug } = project;
-const { title, description, primaryImage, color } = data;
+const { title, description, images, color } = data;
 const url = '/projects/' + slug;
 ---
 
@@ -20,12 +20,13 @@ const url = '/projects/' + slug;
 >
   <div class="content">
     {
-      primaryImage ? (
+      images.at(0) ? (
         <Image
-          src={primaryImage}
+          src={images.at(0)!.url}
+          width={650}
           quality={100}
           class="project-image"
-          alt={title}
+          alt={`Thumbnail for ${title}`}
           data-project-image={slug}
         />
       ) : (

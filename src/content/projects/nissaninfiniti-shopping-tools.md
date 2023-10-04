@@ -1,5 +1,5 @@
 ---
-id: '3s0cnjG1m0BMdNtQU3Me2J'
+id: 'nissaninfiniti-shopping-tools'
 title: 'Nissan/Infiniti Shopping Tools'
 date: '2020-06-03T00:00:00.000Z'
 languages: 'GraphQL, HTML, A11Y, & SEO, Javascript (ES6+), NodeJS'
@@ -10,23 +10,21 @@ images: [
       {
 	"_id": "1GrOd8eRgf9xSDr2a7KUJL",
 	"title": "Configurator Mobile Experience",
-	"url": "../../assets/1GrOd8eRgf9xSDr2a7KUJL.png",
+	"url": "../../assets/projects/nissaninfiniti-shopping-tools/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "4YVTROmIWRnIdQEqpz4x39",
 	"title": "Inventory Page",
-	"url": "../../assets/4YVTROmIWRnIdQEqpz4x39.png",
+	"url": "../../assets/projects/nissaninfiniti-shopping-tools/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "3QJMJdpZy4Po9exxmSQsTP",
 	"title": "Configurator Desktop Experience",
-	"url": "../../assets/3QJMJdpZy4Po9exxmSQsTP.png",
+	"url": "../../assets/projects/nissaninfiniti-shopping-tools/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://nissanusa.com/shopping-tools/build-price'
-color: '#c30931'
-primaryImage: '../../assets/1GrOd8eRgf9xSDr2a7KUJL.jpg'
+color: '#c20b33'
 ---
 
 My company redesigned and built a new shopping tools experience for Nissan and Infiniti. The shopping tools experience includes the configurator (building a vehicle and choosing your colors, options, etc.), the payment estimator (calculate your lease/finance payments) and the inventory tool for finding similar inventory near you.

@@ -1,5 +1,5 @@
 ---
-id: '1bKAmxVy8ImEGgiKCCUsw0'
+id: 'infiniti-idris'
 title: 'INFINITI: Idris'
 date: '2017-12-01T00:00:00.000Z'
 languages: 'NodeJS, MongoDB'
@@ -11,13 +11,11 @@ images: [
 	"_id": "3LUJnUNs1iMSmO4eG4OGWE",
 	"title": "Example of how the suggestions work. They are based on users input.",
 	"description": "Example of how the suggestions work. They are based on users input.",
-	"url": "../../assets/3LUJnUNs1iMSmO4eG4OGWE.png",
+	"url": "../../assets/projects/infiniti-idris/0.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://m.me/INFINITIIDRIS?ref=brandonp_portfolio'
-color: '#0b7fed'
-primaryImage: '../../assets/3LUJnUNs1iMSmO4eG4OGWE.jpg'
+color: '#087fef'
 ---
 
 I built a chatbot for INFINITI Global. It allows users to learn about their new QX50 vehicle. It uses natural language processing to figure out users intent and is localized to Canadian English and French, as well as American English.

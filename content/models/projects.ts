@@ -52,7 +52,6 @@ async function importProjects({
     order: 'fields.isPinned,-fields.date'
   })) as RawProject[];
   const projects = await normalizeProjects(rawData, assetManager);
-  // await writeJson("projects.json", projects);
   await Promise.all(
     projects.map(project => {
       project.images = project.images
@@ -62,10 +61,7 @@ async function importProjects({
         }))
         .filter(img => !img.contentType.includes('video'));
       return writeFile(
-        `./src/content/projects/${slugify(project.title, {
-          lower: true,
-          remove: /[*+~.()'"!/:@]/g
-        })}.md`,
+        `./src/content/projects/${project.id}.md`,
         generateMarkdown(
           {
             ...project,
@@ -73,9 +69,7 @@ async function importProjects({
             title: project.title.replace(":", "\:"),
             description: project.shortDescription || project.description,
             shortDescription: null,
-            languages: project.languages.map(lang => lang.name).join(', '),
-            primaryImage:
-              project.thumbnail && `../../assets${project.thumbnail?.url}`
+            languages: project.languages.map(lang => lang.name).join(', ')
           },
           project.description
         )
@@ -91,8 +85,10 @@ const normalizeProjects = (
 ): Promise<Project[]> => {
   const normalizedProjects = projects.map(async (project): Promise<Project> => {
     const normalized = {} as Project;
-
-    normalized.id = project._id || '';
+    normalized.id = slugify(project.title!, {
+      lower: true,
+      remove: /[*+~.()'"!/:@]/g
+    });
     normalized.title = project.title || '';
     normalized.date = project.date
       ? // convert to ISO date then stringify
@@ -114,18 +110,23 @@ const normalizeProjects = (
     normalized.type = project.type || 'Internal';
     normalized.status = project.status || 'Unavailable';
     normalized.images = project.images
-      ? project.images.map(img => assetManager.add(img))
+      ? project.images.map((img, idx) =>
+          assetManager.add(img, {
+            url: `projects/${normalized.id}/${idx}`
+          })
+        )
       : [];
-    normalized.thumbnail = project.images
-      ? assetManager.add(project.images[0], { jpg: true })
-      : undefined;
     normalized.link = project.link;
     normalized.isPinned = project.isPinned || undefined;
     normalized.gitUrl = project.gitUrl;
-    if (!normalized.thumbnail?.url) return normalized;
+    if (normalized.images.length === 0) {
+      return normalized;
+    }
     const colors = await Vibrant.from(
-      join(process.cwd(), 'src', 'assets', normalized.thumbnail?.url)
-    ).getPalette();
+      join(process.cwd(), 'src', 'assets', normalized.images.at(0)!.url)
+    )
+      .quality(12)
+      .getPalette();
 
     normalized.color = colors.Vibrant?.hex;
     return normalized;

@@ -1,5 +1,5 @@
 ---
-id: '37grwOR6bSyIyWQGA0Qi4A'
+id: 'betterdo'
 title: 'BetterDo.'
 date: '2015-04-20T00:00:00.000Z'
 languages: 'CSS, HTML, A11Y, & SEO, Javascript (ES6+)'
@@ -11,24 +11,22 @@ images: [
 	"_id": "37xue73IA00i2EM0Qc8eyw",
 	"title": "Example on desktop",
 	"description": "Example on desktop",
-	"url": "../../assets/37xue73IA00i2EM0Qc8eyw.png",
+	"url": "../../assets/projects/betterdo/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "3zxQh7SiwMQgmOUMIMWYAO",
 	"title": "Example of editing/sharing list",
 	"description": "Example of editing/sharing list",
-	"url": "../../assets/3zxQh7SiwMQgmOUMIMWYAO.png",
+	"url": "../../assets/projects/betterdo/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "3pDpW2Obd6mUYWeecowsuU",
 	"title": "Example of editing task",
 	"description": "Example of editing task",
-	"url": "../../assets/3pDpW2Obd6mUYWeecowsuU.png",
+	"url": "../../assets/projects/betterdo/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
-color: '#44a4bc'
-primaryImage: '../../assets/37xue73IA00i2EM0Qc8eyw.jpg'
+color: '#645ccc'
 ---
 
 BetterDo was my take on a todo application. I was unhappy with the alternatives, so I decided to build my own version.

@@ -8,7 +8,7 @@ interface Props {
   content: AstroComponentFactory;
 }
 const { data, slug } = Astro.props.project;
-const { link, color, images, gitUrl, title, primaryImage } = data;
+const { link, color, images, gitUrl, title } = data;
 const Content = Astro.props.content;
 ---
 
@@ -19,10 +19,10 @@ const Content = Astro.props.content;
 >
   <div class="content">
     {
-      primaryImage ? (
+      images.at(0) ? (
         <Image
-          src={primaryImage}
-          quality={100}
+          src={images.at(0)!.url}
+          width={1200}
           alt={title}
           class="project-image"
           data-project-image={slug}

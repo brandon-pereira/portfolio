@@ -1,5 +1,5 @@
 ---
-id: '5PoGGNnASkkm86gKO6wqSW'
+id: 'classic-kennels'
 title: 'Classic Kennels'
 date: '2014-08-12T00:00:00.000Z'
 languages: 'CSS'

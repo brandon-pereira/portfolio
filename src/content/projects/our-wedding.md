@@ -1,5 +1,5 @@
 ---
-id: '4JIzPsZ0Iq0eI2YBHAHNlm'
+id: 'our-wedding'
 title: 'Our Wedding'
 date: '2021-09-01T00:00:00.000Z'
 languages: 'NodeJS, CSS, HTML, A11Y, & SEO, React, Javascript (ES6+), MongoDB'
@@ -11,25 +11,23 @@ images: [
 	"_id": "3nz2TbgIzEPIps9B4rYYid",
 	"title": "Our Site Logo",
 	"description": "",
-	"url": "../../assets/3nz2TbgIzEPIps9B4rYYid.png",
+	"url": "../../assets/projects/our-wedding/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "34sF8uYEH0u3lPzSA5lOQG",
 	"title": "Our Rescheduling Message",
 	"description": "",
-	"url": "../../assets/34sF8uYEH0u3lPzSA5lOQG.png",
+	"url": "../../assets/projects/our-wedding/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "thVKuAzaBmOZ6lUWQVkdB",
 	"title": "Admin Panel",
 	"description": "",
-	"url": "../../assets/thVKuAzaBmOZ6lUWQVkdB.png",
+	"url": "../../assets/projects/our-wedding/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 gitUrl: 'https://github.com/brandon-pereira/hitched'
-color: '#fcc40b'
-primaryImage: '../../assets/3nz2TbgIzEPIps9B4rYYid.jpg'
+color: '#fcc510'
 ---
 
 I built my now Wife and I's Wedding website from scratch. I wanted our guests to RSVP, list dietary restrictions, and learn about our big. I thought it might be helpful to build an admin panel to manage guests, message guests, and provide a quick, glanceable current guest list count.

@@ -7,11 +7,13 @@ const projectsCollection = defineCollection({
       title: z.string(),
       date: z.string().datetime().pipe(z.coerce.date()),
       description: z.string().optional(),
-      primaryImage: image().optional(),
       color: z.string().default('#0067FF'),
       gitUrl: z.string().url().optional(),
       link: z.string().url().optional(),
-      images: z.array(z.object({ url: image(), title: z.string() })).optional()
+      images: z
+        .array(z.object({ url: image(), title: z.string() }))
+        .optional()
+        .default([])
     })
 });
 

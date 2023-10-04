@@ -1,5 +1,5 @@
 ---
-id: '4T7tK8ZdlmKWYIwSemuIU6'
+id: 'portfolio-v2'
 title: 'Portfolio v2'
 date: '2016-09-01T00:00:00.000Z'
 languages: 'HTML, A11Y, & SEO, CSS, Javascript (ES6+)'
@@ -11,26 +11,24 @@ images: [
 	"_id": "3p92mRAAsoYY0s6kUmSAow",
 	"title": "Header Area",
 	"description": "Header Area",
-	"url": "../../assets/3p92mRAAsoYY0s6kUmSAow.png",
+	"url": "../../assets/projects/portfolio-v2/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "5PPItdLw4gc86K0ws4a28W",
 	"title": "Projects View Area",
 	"description": "Projects View Area",
-	"url": "../../assets/5PPItdLw4gc86K0ws4a28W.png",
+	"url": "../../assets/projects/portfolio-v2/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "667gQVm9e8miaAUqWMScI4",
 	"title": "Skills Accordion Area",
 	"description": "Skills Accordion Area",
-	"url": "../../assets/667gQVm9e8miaAUqWMScI4.png",
+	"url": "../../assets/projects/portfolio-v2/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://branclon.com/'
 gitUrl: 'https://github.com/brandon-pereira/portfolio/tree/release/v2'
-color: '#3c64c4'
-primaryImage: '../../assets/3p92mRAAsoYY0s6kUmSAow.jpg'
+color: '#4463c7'
 ---
 
 I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive and used some fun next-level technologies.

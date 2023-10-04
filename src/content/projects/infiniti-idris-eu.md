@@ -1,5 +1,5 @@
 ---
-id: '1LHkmPm1S4Qw0wSCcCM2cY'
+id: 'infiniti-idris-eu'
 title: 'INFINITI: Idris EU'
 date: '2018-07-05T00:00:00.000Z'
 languages: 'NodeJS, MongoDB'
@@ -11,25 +11,23 @@ images: [
 	"_id": "1F4wQroc5aYuMEGs0sG0oQ",
 	"title": "Example of the recommend a car flow",
 	"description": "Example of the recommend a car flow",
-	"url": "../../assets/1F4wQroc5aYuMEGs0sG0oQ.png",
+	"url": "../../assets/projects/infiniti-idris-eu/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "5ZEFH8jsacqAc2msICgqQQ",
 	"title": "Example of the compare tool",
 	"description": "Example of the compare tool",
-	"url": "../../assets/5ZEFH8jsacqAc2msICgqQQ.png",
+	"url": "../../assets/projects/infiniti-idris-eu/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "3B7cznFXywoaMCaAes2OsG",
 	"title": "Find a dealer tool",
 	"description": "Find a dealer tool",
-	"url": "../../assets/3B7cznFXywoaMCaAes2OsG.png",
+	"url": "../../assets/projects/infiniti-idris-eu/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://www.messenger.com/t/infinitiidrisuk?ref=brandonp_portfolio'
-color: '#0584f9'
-primaryImage: '../../assets/1F4wQroc5aYuMEGs0sG0oQ.jpg'
+color: '#0484fc'
 ---
 
 After a successful launch of our first Idris project for North America, the client asked if we could add more functionality and launch it in the European Union. 

@@ -1,5 +1,5 @@
 ---
-id: '7EVx9cEJdersqFVHlMkLzm'
+id: 'airbnb-design-system-migration'
 title: 'AirBnB: Design System Migration'
 date: '2022-02-15T00:00:00.000Z'
 languages: 'CSS, TypeScript, Animation, HTML, A11Y, & SEO, React'
@@ -11,19 +11,17 @@ images: [
 	"_id": "1ufLqYQzdMLBoHSAlLimAc",
 	"title": "AirBnb Personal Settings Screen",
 	"description": "",
-	"url": "../../assets/1ufLqYQzdMLBoHSAlLimAc.png",
+	"url": "../../assets/projects/airbnb-design-system-migration/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "4GN3CezfjmtrXaOerkMb45",
 	"title": "Example of more complex screen",
 	"description": "",
-	"url": "../../assets/4GN3CezfjmtrXaOerkMb45.png",
+	"url": "../../assets/projects/airbnb-design-system-migration/1.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://www.airbnb.ca/account-settings/personal-info'
-color: '#ce3039'
-primaryImage: '../../assets/1ufLqYQzdMLBoHSAlLimAc.jpg'
+color: '#f80636'
 ---
 
 Airbnb was migrating its website from one brand guide to a newer brand guide. They didn't have enough engineers to do this work, so they contacted my company (Critical Mass) to assist. We helped Airbnb redesign several aspects of its brand, everything from emails, website and apps.

@@ -1,5 +1,5 @@
 ---
-id: '6E4mnHlQk0k6KkgQq8KUac'
+id: 'nissan-titan-ar'
 title: 'Nissan: Titan AR'
 date: '2018-09-21T00:00:00.000Z'
 languages: 'MongoDB, NodeJS'
@@ -11,13 +11,11 @@ images: [
 	"_id": "1c9okCtbZo4quQGkOowqyo",
 	"title": "Preview of how the AR experience works",
 	"description": "Preview of how the AR experience works",
-	"url": "../../assets/1c9okCtbZo4quQGkOowqyo.jpg",
+	"url": "../../assets/projects/nissan-titan-ar/0.jpg",
 	"contentType": "image/jpeg"
 }]
-thumbnail: '[object Object]'
 link: 'https://m.me/winanissantitan'
-color: '#f29a43'
-primaryImage: '../../assets/1c9okCtbZo4quQGkOowqyo.jpg'
+color: '#f29a42'
 ---
 
 I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. 

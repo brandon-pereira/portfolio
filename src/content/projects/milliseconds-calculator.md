@@ -1,5 +1,5 @@
 ---
-id: 'm0YJKQp6wcOra9E0EL9jq'
+id: 'milliseconds-calculator'
 title: 'Milliseconds Calculator'
 date: '2020-11-15T00:00:00.000Z'
 languages: 'Javascript (ES6+), CSS'
@@ -10,14 +10,12 @@ images: [
       {
 	"_id": "4aWiQ4292AFOVX4tOY2o85",
 	"title": "Example of the interface",
-	"url": "../../assets/4aWiQ4292AFOVX4tOY2o85.png",
+	"url": "../../assets/projects/milliseconds-calculator/0.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://branclon.com/milliseconds-calculator/'
 gitUrl: 'https://github.com/brandon-pereira/milliseconds-calculator'
-color: '#c53fb0'
-primaryImage: '../../assets/4aWiQ4292AFOVX4tOY2o85.jpg'
+color: '#b41ca4'
 ---
 
 I built a quick and simple tool to help calculate the number of milliseconds in a given time (or vice versa). I found myself needing to do this a lot for different projects, but all the tooling available for this wasn't very good.

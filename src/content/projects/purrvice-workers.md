@@ -1,5 +1,5 @@
 ---
-id: '5iEJz0WLcAIy2OQk2Cywwa'
+id: 'purrvice-workers'
 title: 'Purrvice Workers'
 date: '2018-05-25T00:00:00.000Z'
 languages: 'Javascript (ES6+), MongoDB, NodeJS'
@@ -11,14 +11,12 @@ images: [
 	"_id": "oGdA74ceLAgaMEeygKuSI",
 	"title": "Example of the UI",
 	"description": "Example of the UI",
-	"url": "../../assets/oGdA74ceLAgaMEeygKuSI.png",
+	"url": "../../assets/projects/purrvice-workers/0.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://github.com/brandon-pereira/purrvice-workers'
 gitUrl: 'https://github.com/brandon-pereira/purrvice-workers'
-color: '#7349c0'
-primaryImage: '../../assets/oGdA74ceLAgaMEeygKuSI.jpg'
+color: '#734bc1'
 ---
 
 A web application for getting random cat pictures. Powered by service workers. It demonstrates offline caching, web push notifications, and progressive enhancement. 

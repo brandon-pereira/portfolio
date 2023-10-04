@@ -1,5 +1,5 @@
 ---
-id: '3fnHYTfx20QwK1RHOUJ4cZ'
+id: 'nissan-pathfinder-return-to-rugged'
 title: 'Nissan Pathfinder: Return to Rugged'
 date: '2021-07-01T00:00:00.000Z'
 languages: 'Animation, Javascript (ES6+), React'
@@ -11,13 +11,11 @@ images: [
 	"_id": "2Bj9zodXC6Ks9Sa0R3kK0x",
 	"title": "Landing Section",
 	"description": "",
-	"url": "../../assets/2Bj9zodXC6Ks9Sa0R3kK0x.png",
+	"url": "../../assets/projects/nissan-pathfinder-return-to-rugged/0.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder/return-to-rugged/'
-color: '#9c3d39'
-primaryImage: '../../assets/2Bj9zodXC6Ks9Sa0R3kK0x.jpg'
+color: '#9e3c38'
 ---
 
 Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.

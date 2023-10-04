@@ -1,5 +1,5 @@
 ---
-id: 'X0k8dPduGQMC2ogY8Y4uw'
+id: 'portfolio-v3'
 title: 'Portfolio v3'
 date: '2018-04-01T00:00:00.000Z'
 languages: 'CSS, HTML, A11Y, & SEO, Javascript (ES6+), NodeJS'
@@ -11,26 +11,24 @@ images: [
 	"_id": "2giTsFWK76uQIyiweUEcYc",
 	"title": "The redesigned header",
 	"description": "The redesigned header",
-	"url": "../../assets/2giTsFWK76uQIyiweUEcYc.png",
+	"url": "../../assets/projects/portfolio-v3/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "3qrT3DiawMIIusmuGSsouW",
 	"title": "The projects redesign",
 	"description": "The projects redesign",
-	"url": "../../assets/3qrT3DiawMIIusmuGSsouW.png",
+	"url": "../../assets/projects/portfolio-v3/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "4I4c4lpewoMgQoYgIWMk06",
 	"title": "The new apps section",
 	"description": "The new apps section",
-	"url": "../../assets/4I4c4lpewoMgQoYgIWMk06.png",
+	"url": "../../assets/projects/portfolio-v3/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://branclon.com'
 gitUrl: 'https://github.com/brandon-pereira/portfolio/tree/release/v3'
-color: '#c5044b'
-primaryImage: '../../assets/2giTsFWK76uQIyiweUEcYc.jpg'
+color: '#c60b4c'
 ---
 
 The third version of my portfolio was a complete rewrite. The rewrite was done to drastically improve load times, improve search engine rankings, and redesign a couple sections of the site.

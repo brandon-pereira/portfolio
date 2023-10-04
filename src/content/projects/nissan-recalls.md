@@ -1,5 +1,5 @@
 ---
-id: '5bEzMangkEei4YAY4y6yQS'
+id: 'nissan-recalls'
 title: 'Nissan: Recalls'
 date: '2016-12-08T00:00:00.000Z'
 languages: 'Javascript (ES6+), CSS'
@@ -11,25 +11,23 @@ images: [
 	"_id": "5bMKhNeQnKoOUWaGAS200i",
 	"title": "The landing screen.",
 	"description": "The landing screen.",
-	"url": "../../assets/5bMKhNeQnKoOUWaGAS200i.png",
+	"url": "../../assets/projects/nissan-recalls/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "4pqiU2ixKMeqY02usQKMyM",
 	"title": "Recalls list screen.",
 	"description": "Recalls list screen.",
-	"url": "../../assets/4pqiU2ixKMeqY02usQKMyM.png",
+	"url": "../../assets/projects/nissan-recalls/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "4NmvsVkjvqMAqSEWsQuUms",
 	"title": "Recalls details screen.",
 	"description": "Recalls details screen.",
-	"url": "../../assets/4NmvsVkjvqMAqSEWsQuUms.png",
+	"url": "../../assets/projects/nissan-recalls/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://www.nissanusa.com/recalls-vin/#/Home'
-color: '#c3274e'
-primaryImage: '../../assets/5bMKhNeQnKoOUWaGAS200i.jpg'
+color: '#c6244a'
 ---
 
 I was tasked with rebuilding the Nissan and Infiniti Recalls tools to comply with their new brand guidelines. I took the opportunity to improve the responsiveness, appearance, and codebase.

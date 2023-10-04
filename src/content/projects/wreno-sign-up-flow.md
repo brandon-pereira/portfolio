@@ -1,5 +1,5 @@
 ---
-id: '16unN5KljbPh84sOedRb8s'
+id: 'wreno-sign-up-flow'
 title: 'Wreno: Sign Up Flow'
 date: '2022-06-15T00:00:00.000Z'
 languages: 'NodeJS, React'
@@ -11,13 +11,11 @@ images: [
 	"_id": "6A8fX42zxEeuLUAU6FFIBp",
 	"title": "Example of Sign Up Flow Step 1",
 	"description": "",
-	"url": "../../assets/6A8fX42zxEeuLUAU6FFIBp.png",
+	"url": "../../assets/projects/wreno-sign-up-flow/0.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://www.wreno.io/become-a-partner/sign-up'
-color: '#2c7541'
-primaryImage: '../../assets/6A8fX42zxEeuLUAU6FFIBp.jpg'
+color: '#397e4d'
 ---
 
 The sign-up flow was my first contribution to Wreno after joining the company. When I joined, the company only had a simple static site. During this project, I lead the development of the sign-up flow. My role included hiring, gathering business requirements, and designing the database and backend services for storing users' accounts, file uploads, and data.

@@ -1,5 +1,5 @@
 ---
-id: '3DfMXXOhKF8gooPh3uPsnc'
+id: 'nissan-find-your-frontier'
 title: 'Nissan: Find Your Frontier'
 date: '2021-10-01T00:00:00.000Z'
 description: 'Our team built and launched a very immersive campaign for our Nissan client. The project also leaped forward for my career as a Technology Director.'
@@ -10,25 +10,23 @@ images: [
 	"_id": "Pfoct8pE5MU5QTBZoBRsq",
 	"title": "Example of the landing screen for the experience",
 	"description": "",
-	"url": "../../assets/Pfoct8pE5MU5QTBZoBRsq.png",
+	"url": "../../assets/projects/nissan-find-your-frontier/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "7KdZTJX4gOY6uv7uwtj8Oc",
 	"title": "Example of the 3D Basecamp",
 	"description": "",
-	"url": "../../assets/7KdZTJX4gOY6uv7uwtj8Oc.png",
+	"url": "../../assets/projects/nissan-find-your-frontier/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "4Ffl9MNBvgaEqqwEf8IC7J",
 	"title": "Example of our custom HTML5 video player",
 	"description": "",
-	"url": "../../assets/4Ffl9MNBvgaEqqwEf8IC7J.png",
+	"url": "../../assets/projects/nissan-find-your-frontier/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://www.nissanusa.com/find-your-frontier/'
-color: '#df351f'
-primaryImage: '../../assets/Pfoct8pE5MU5QTBZoBRsq.jpg'
+color: '#e2381c'
 ---
 
 My role in the "Nissan: Find Your Frontier" project was entirely from a direction and management perspective. The client debriefed our team on the strategy and vision they wanted to see. The result of this debrief led me to work closely with our internal teams to assess what we could deliver within the timeline.

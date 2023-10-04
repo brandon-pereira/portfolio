@@ -1,5 +1,5 @@
 ---
-id: '58R6Sv3VQkamAMmKooWu0Q'
+id: 'nissan-responsive-website-redesign'
 title: 'Nissan: Responsive website redesign'
 date: '2016-05-05T00:00:00.000Z'
 languages: 'CSS, HTML, A11Y, & SEO, Javascript (ES6+), React'
@@ -11,25 +11,23 @@ images: [
 	"_id": "3AvIub86KIEKqMiySEIw0q",
 	"title": "Packages screen, demonstrating conflict manager.",
 	"description": "Packages screen, demonstrating conflict manager.",
-	"url": "../../assets/3AvIub86KIEKqMiySEIw0q.png",
+	"url": "../../assets/projects/nissan-responsive-website-redesign/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "2EfT9Xo5OUKSuWayEecosa",
 	"title": "Mobile navigation and versions page.",
 	"description": "Mobile navigation and versions page.",
-	"url": "../../assets/2EfT9Xo5OUKSuWayEecosa.png",
+	"url": "../../assets/projects/nissan-responsive-website-redesign/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "79nHG3xiOAqOa8mm0CIgEk",
 	"title": "Desktop navigation and versions page.",
 	"description": "Desktop navigation and versions page.",
-	"url": "../../assets/79nHG3xiOAqOa8mm0CIgEk.png",
+	"url": "../../assets/projects/nissan-responsive-website-redesign/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'http://nissanusa.com/buildyournissan'
-color: '#c72f56'
-primaryImage: '../../assets/3AvIub86KIEKqMiySEIw0q.jpg'
+color: '#ca2b56'
 ---
 
 We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.

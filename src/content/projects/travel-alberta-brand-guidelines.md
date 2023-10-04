@@ -1,5 +1,5 @@
 ---
-id: '55SiBvkViEEIew6EY4aGoG'
+id: 'travel-alberta-brand-guidelines'
 title: ' Travel Alberta: Brand Guidelines'
 date: '2017-06-01T00:00:00.000Z'
 languages: 'Javascript (ES6+), CSS'
@@ -11,19 +11,17 @@ images: [
 	"_id": "3DVvmBRIlaKcCeWUyKYwQG",
 	"title": "Example of landing page on large screen size",
 	"description": "Example of landing page on large screen size",
-	"url": "../../assets/3DVvmBRIlaKcCeWUyKYwQG.png",
+	"url": "../../assets/projects/travel-alberta-brand-guidelines/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "6kF8t5dR1Sg0GqmseQyScy",
 	"title": "Example of landing page on small screen size",
 	"description": "Example of landing page on small screen size",
-	"url": "../../assets/6kF8t5dR1Sg0GqmseQyScy.png",
+	"url": "../../assets/projects/travel-alberta-brand-guidelines/1.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'http://brand.travelalberta.com/'
-color: '#72b10f'
-primaryImage: '../../assets/3DVvmBRIlaKcCeWUyKYwQG.jpg'
+color: '#74b907'
 ---
 
 I built the internal brand guidelines website for Travel Alberta. This project had a clean state so I got to choose my own tech stack. I put a lot of effort into making the website load as fast as possible as well as look pixel perfect.

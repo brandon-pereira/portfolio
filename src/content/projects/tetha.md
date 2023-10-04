@@ -1,5 +1,5 @@
 ---
-id: '2yavuOvWb3A5eLz3eoRdiQ'
+id: 'tetha'
 title: 'Tetha'
 date: '2020-10-01T00:00:00.000Z'
 languages: 'Javascript (ES6+), CSS, GraphQL, MongoDB, React'
@@ -10,29 +10,27 @@ images: [
       {
 	"_id": "2eutBQ6LSWZMY1zHjm8nOu",
 	"title": "Close up of the Calendar Interface",
-	"url": "../../assets/2eutBQ6LSWZMY1zHjm8nOu.png",
+	"url": "../../assets/projects/tetha/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "6BAVrABSALrKheWfnFVU6e",
 	"title": "Example of how the calendar looks on the device",
 	"description": "Typically, the tablet would be wall mounted but I didn't have the appropriate mounting brackets",
-	"url": "../../assets/6BAVrABSALrKheWfnFVU6e.jpg",
+	"url": "../../assets/projects/tetha/1.jpg",
 	"contentType": "image/jpeg"
 },{
 	"_id": "798vMHpq6zsUUEUQntbZxf",
 	"title": "Example of how the Setup/Welcome screen looks",
-	"url": "../../assets/798vMHpq6zsUUEUQntbZxf.jpg",
+	"url": "../../assets/projects/tetha/2.jpg",
 	"contentType": "image/jpeg"
 },{
 	"_id": "4mq4edW3nBp4fcLaXbmnWs",
 	"title": "Example of the settings screen",
-	"url": "../../assets/4mq4edW3nBp4fcLaXbmnWs.png",
+	"url": "../../assets/projects/tetha/3.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://swiston.ca/'
 color: '#2a7fd4'
-primaryImage: '../../assets/2eutBQ6LSWZMY1zHjm8nOu.jpg'
 ---
 
 I worked with a local entrepreneur to develop a digital wall calendar. He wanted to be able to have a wall-mounted touch-screen monitor that could display current calendar events from multiple Google accounts. 

@@ -1,5 +1,5 @@
 ---
-id: '4HsCqsY1JKOQkS8a2u8YiU'
+id: 'infiniti-tree-drive'
 title: 'INFINITI: Tree Drive'
 date: '2016-11-04T00:00:00.000Z'
 languages: 'Javascript (ES6+), Animation, CSS'
@@ -11,19 +11,17 @@ images: [
 	"_id": "4He2I3nyuQSQIA6Y8oQ80O",
 	"title": "An example of the landing screen (after animation).",
 	"description": "An example of the landing screen (after animation).",
-	"url": "../../assets/4He2I3nyuQSQIA6Y8oQ80O.png",
+	"url": "../../assets/projects/infiniti-tree-drive/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "1Qeb49oikIQqGKaioE0GIS",
 	"title": "An example of a region (after you fill out form/click map).",
 	"description": "An example of a region (after you fill out form/click map).",
-	"url": "../../assets/1Qeb49oikIQqGKaioE0GIS.png",
+	"url": "../../assets/projects/infiniti-tree-drive/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'http://infinitiusa.com/now/newtradition/'
-color: '#337d57'
-primaryImage: '../../assets/4He2I3nyuQSQIA6Y8oQ80O.jpg'
+color: '#65997d'
 ---
 
 I built a reveal page for Infinitis winter sales event. For each test drive, they planted a tree in America.

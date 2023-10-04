@@ -1,5 +1,5 @@
 ---
-id: '1LIcPpyqIgMayahytVp6VF'
+id: 'betterdo-v3'
 title: 'BetterDo v3'
 date: '2019-01-04T00:00:00.000Z'
 languages: 'Javascript (ES6+), MongoDB, NodeJS, Animation, CSS, TypeScript, React'
@@ -11,26 +11,24 @@ images: [
 	"_id": "4loe2vKe5Bi91vAYlozgMv",
 	"title": "Example of desktop experience",
 	"description": "Example of desktop experience",
-	"url": "../../assets/4loe2vKe5Bi91vAYlozgMv.png",
+	"url": "../../assets/projects/betterdo-v3/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "6m4YZBGMvJECuhu3ClSjSG",
 	"title": "Mobile Experience",
 	"description": "Mobile Experience",
-	"url": "../../assets/6m4YZBGMvJECuhu3ClSjSG.png",
+	"url": "../../assets/projects/betterdo-v3/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "4oOeF0V2ohzKPnxU3q4fg5",
 	"title": "List Members User Interface",
 	"description": "List Members User Interface",
-	"url": "../../assets/4oOeF0V2ohzKPnxU3q4fg5.png",
+	"url": "../../assets/projects/betterdo-v3/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://betterdo.app/'
 gitUrl: 'https://github.com/brandon-pereira/betterdo-ui'
-color: '#0463e4'
-primaryImage: '../../assets/4loe2vKe5Bi91vAYlozgMv.jpg'
+color: '#055edc'
 ---
 
 I built a web app for organizing and maintaining to-do lists and tasks.  It features has offline support, shared lists, and push notifications. Give it a try if you're looking to declutter your life.

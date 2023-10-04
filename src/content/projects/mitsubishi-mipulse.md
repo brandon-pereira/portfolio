@@ -1,5 +1,5 @@
 ---
-id: '4NBrvJSBAI0OvcoSZ1t7q8'
+id: 'mitsubishi-mipulse'
 title: 'Mitsubishi MiPulse'
 date: '2019-03-27T00:00:00.000Z'
 languages: 'GraphQL, Javascript (ES6+), NodeJS, Animation, GraphQL, React'
@@ -11,25 +11,23 @@ images: [
 	"_id": "1z6F8ua6JH5e6m18pLXqvk",
 	"title": "Example of some interactive pieces",
 	"description": "Example of some interactive pieces",
-	"url": "../../assets/1z6F8ua6JH5e6m18pLXqvk.png",
+	"url": "../../assets/projects/mitsubishi-mipulse/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "5IC3gW8weWmcjl6DVlU82i",
 	"title": "Example of car preview tool",
 	"description": "Example of car preview tool",
-	"url": "../../assets/5IC3gW8weWmcjl6DVlU82i.png",
+	"url": "../../assets/projects/mitsubishi-mipulse/1.png",
 	"contentType": "image/png"
 },{
 	"_id": "2dH6Brk4xYk4ihmFfBjbfT",
 	"title": "Example of mobile website",
 	"description": "Example of mobile website",
-	"url": "../../assets/2dH6Brk4xYk4ihmFfBjbfT.png",
+	"url": "../../assets/projects/mitsubishi-mipulse/2.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://www.mitsubishi-motors.nl/'
-color: '#c4a418'
-primaryImage: '../../assets/1z6F8ua6JH5e6m18pLXqvk.jpg'
+color: '#dfc04a'
 ---
 
 Our company was tasked with building a new global website for Mitsubishi. The goal was to make it run in every market but share single source code. My goal was to focus on performance and making the application render more quickly. 

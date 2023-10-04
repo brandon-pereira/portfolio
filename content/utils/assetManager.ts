@@ -15,6 +15,8 @@ export interface Asset {
 interface AssetOptions {
   // Force convert to jpg
   jpg?: boolean;
+
+  url?: string;
 }
 
 interface InternalAsset extends Asset {
@@ -42,9 +44,11 @@ class AssetManager {
       extension = 'jpg';
     }
     const actualUrl = rawAsset.file.url;
-    const displayUrl = rawAsset._id
-      ? `${rawAsset._id}.${extension}`
-      : rawAsset.file.fileName;
+    let displayUrl = `${rawAsset.file?.fileName.split('.')[0]}.${extension}`;
+
+    if (assetOpts?.url) {
+      displayUrl = `${assetOpts.url}.${extension}`;
+    }
     asset._id = rawAsset._id;
     asset.title = rawAsset.title;
     asset.description = rawAsset.description;
@@ -105,9 +109,9 @@ class AssetManager {
           const isJpg = ext === '.jpg';
           if (isImg) {
             let imgCreation = sharp()
-              .resize(800, 800, {
-                fit: 'inside'
-              })
+              // .resize(800, 800, {
+              //   fit: 'inside'
+              // })
               .jpeg({ quality: 75, force: isJpg })
               .png({ compressionLevel: 9, force: false });
             if (isJpg) {

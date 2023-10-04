@@ -1,5 +1,5 @@
 ---
-id: '3xAp8X3vid1y32jLi1hGxC'
+id: 'jim-stewart-mortgages'
 title: 'Jim Stewart Mortgages'
 date: '2020-12-08T00:00:00.000Z'
 languages: 'CSS, HTML, A11Y, & SEO, Javascript (ES6+)'
@@ -10,13 +10,11 @@ images: [
       {
 	"_id": "4oszlf52FqIkFgfdmlinRN",
 	"title": "Example of the main form",
-	"url": "../../assets/4oszlf52FqIkFgfdmlinRN.png",
+	"url": "../../assets/projects/jim-stewart-mortgages/0.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://jimstewartmortgages.com/'
-color: '#af4f64'
-primaryImage: '../../assets/4oszlf52FqIkFgfdmlinRN.jpg'
+color: '#b04f63'
 ---
 
 I built a contact form and information website for a local mortgage broker. This one was pretty quick and easy to build, and I tried to do it quickly and affordably for my client. Overall, they loved the work. 

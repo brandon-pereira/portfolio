@@ -1,5 +1,5 @@
 ---
-id: '20Xk51zcMwc2ci88g066Wc'
+id: 'infiniti-q60-speedbot'
 title: 'INFINITI: Q60 Speedbot'
 date: '2017-04-10T00:00:00.000Z'
 languages: 'NodeJS'
@@ -11,19 +11,17 @@ images: [
 	"_id": "2fLYBsbwHO6sm6M0KoqIKG",
 	"title": "Example of what happens when you hit random 0-60 time.",
 	"description": "Example of what happens when you hit random 0-60 time.",
-	"url": "../../assets/2fLYBsbwHO6sm6M0KoqIKG.png",
+	"url": "../../assets/projects/infiniti-q60-speedbot/0.png",
 	"contentType": "image/png"
 },{
 	"_id": "2RRnzZKo3emceCsyk44euE",
 	"title": "Example of how the suggestions work. They are based on users input.",
 	"description": "Example of how the suggestions work. They are based on users input.",
-	"url": "../../assets/2RRnzZKo3emceCsyk44euE.png",
+	"url": "../../assets/projects/infiniti-q60-speedbot/1.png",
 	"contentType": "image/png"
 }]
-thumbnail: '[object Object]'
 link: 'https://www.messenger.com/t/INFINITIQ60SpeedBot'
-color: '#0684f9'
-primaryImage: '../../assets/2fLYBsbwHO6sm6M0KoqIKG.jpg'
+color: '#0684fb'
 ---
 
 I built a chatbot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching.

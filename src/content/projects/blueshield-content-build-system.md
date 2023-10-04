@@ -1,5 +1,5 @@
 ---
-id: '2XK6jffHPWISIOAUkEqoSu'
+id: 'blueshield-content-build-system'
 title: 'Blueshield: Content Build System'
 date: '2016-10-03T00:00:00.000Z'
 languages: 'NodeJS'
