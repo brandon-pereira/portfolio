@@ -8,7 +8,6 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "3LUJnUNs1iMSmO4eG4OGWE",
 	"title": "Example of how the suggestions work. They are based on users input.",
 	"description": "Example of how the suggestions work. They are based on users input.",
 	"url": "../../assets/projects/infiniti-idris/0.png",

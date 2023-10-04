@@ -8,12 +8,10 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "1vEd9RWjaAqSbr8POGxtD0",
 	"title": "Mobile View",
 	"url": "../../assets/projects/byte-calculator/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "2RWdarrFL9NZddhBfmzS3j",
 	"title": "Desktop View",
 	"url": "../../assets/projects/byte-calculator/1.png",
 	"contentType": "image/png"

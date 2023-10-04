@@ -8,7 +8,6 @@ type: 'External'
 status: 'Unavailable'
 images: [
       {
-	"_id": "1c9okCtbZo4quQGkOowqyo",
 	"title": "Preview of how the AR experience works",
 	"description": "Preview of how the AR experience works",
 	"url": "../../assets/projects/nissan-titan-ar/0.jpg",

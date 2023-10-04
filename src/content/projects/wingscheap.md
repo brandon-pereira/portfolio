@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "5G7FgIiNQAmyQO0mu8yKem",
 	"title": "Mobile view of landing screen",
 	"description": "Mobile view of landing screen",
 	"url": "../../assets/projects/wingscheap/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "5fxagEO5J6ucyQ0MmQQgAE",
 	"title": "Desktop view of landing screen",
 	"description": "Desktop view of landing screen",
 	"url": "../../assets/projects/wingscheap/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "3Eh8HFBZBKUcwummomseyA",
 	"title": "Mobile view of results screen",
 	"description": "Mobile view of results screen",
 	"url": "../../assets/projects/wingscheap/2.png",

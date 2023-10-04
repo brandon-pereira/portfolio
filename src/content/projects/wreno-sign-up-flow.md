@@ -8,7 +8,6 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "6A8fX42zxEeuLUAU6FFIBp",
 	"title": "Example of Sign Up Flow Step 1",
 	"description": "",
 	"url": "../../assets/projects/wreno-sign-up-flow/0.png",

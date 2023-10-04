@@ -8,13 +8,11 @@ type: 'External'
 status: 'Unavailable'
 images: [
       {
-	"_id": "2fLYBsbwHO6sm6M0KoqIKG",
 	"title": "Example of what happens when you hit random 0-60 time.",
 	"description": "Example of what happens when you hit random 0-60 time.",
 	"url": "../../assets/projects/infiniti-q60-speedbot/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "2RRnzZKo3emceCsyk44euE",
 	"title": "Example of how the suggestions work. They are based on users input.",
 	"description": "Example of how the suggestions work. They are based on users input.",
 	"url": "../../assets/projects/infiniti-q60-speedbot/1.png",

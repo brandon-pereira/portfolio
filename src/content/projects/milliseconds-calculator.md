@@ -8,7 +8,6 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "4aWiQ4292AFOVX4tOY2o85",
 	"title": "Example of the interface",
 	"url": "../../assets/projects/milliseconds-calculator/0.png",
 	"contentType": "image/png"

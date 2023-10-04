@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Unavailable'
 images: [
       {
-	"_id": "3p92mRAAsoYY0s6kUmSAow",
 	"title": "Header Area",
 	"description": "Header Area",
 	"url": "../../assets/projects/portfolio-v2/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "5PPItdLw4gc86K0ws4a28W",
 	"title": "Projects View Area",
 	"description": "Projects View Area",
 	"url": "../../assets/projects/portfolio-v2/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "667gQVm9e8miaAUqWMScI4",
 	"title": "Skills Accordion Area",
 	"description": "Skills Accordion Area",
 	"url": "../../assets/projects/portfolio-v2/2.png",

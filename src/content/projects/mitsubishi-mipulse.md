@@ -8,19 +8,16 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "1z6F8ua6JH5e6m18pLXqvk",
 	"title": "Example of some interactive pieces",
 	"description": "Example of some interactive pieces",
 	"url": "../../assets/projects/mitsubishi-mipulse/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "5IC3gW8weWmcjl6DVlU82i",
 	"title": "Example of car preview tool",
 	"description": "Example of car preview tool",
 	"url": "../../assets/projects/mitsubishi-mipulse/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "2dH6Brk4xYk4ihmFfBjbfT",
 	"title": "Example of mobile website",
 	"description": "Example of mobile website",
 	"url": "../../assets/projects/mitsubishi-mipulse/2.png",

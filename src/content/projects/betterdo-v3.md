@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "4loe2vKe5Bi91vAYlozgMv",
 	"title": "Example of desktop experience",
 	"description": "Example of desktop experience",
 	"url": "../../assets/projects/betterdo-v3/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "6m4YZBGMvJECuhu3ClSjSG",
 	"title": "Mobile Experience",
 	"description": "Mobile Experience",
 	"url": "../../assets/projects/betterdo-v3/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "4oOeF0V2ohzKPnxU3q4fg5",
 	"title": "List Members User Interface",
 	"description": "List Members User Interface",
 	"url": "../../assets/projects/betterdo-v3/2.png",

@@ -8,13 +8,11 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "3DVvmBRIlaKcCeWUyKYwQG",
 	"title": "Example of landing page on large screen size",
 	"description": "Example of landing page on large screen size",
 	"url": "../../assets/projects/travel-alberta-brand-guidelines/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "6kF8t5dR1Sg0GqmseQyScy",
 	"title": "Example of landing page on small screen size",
 	"description": "Example of landing page on small screen size",
 	"url": "../../assets/projects/travel-alberta-brand-guidelines/1.png",

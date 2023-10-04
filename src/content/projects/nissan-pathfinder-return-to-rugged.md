@@ -8,7 +8,6 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "2Bj9zodXC6Ks9Sa0R3kK0x",
 	"title": "Landing Section",
 	"description": "",
 	"url": "../../assets/projects/nissan-pathfinder-return-to-rugged/0.png",

@@ -8,17 +8,14 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "1GrOd8eRgf9xSDr2a7KUJL",
 	"title": "Configurator Mobile Experience",
 	"url": "../../assets/projects/nissaninfiniti-shopping-tools/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "4YVTROmIWRnIdQEqpz4x39",
 	"title": "Inventory Page",
 	"url": "../../assets/projects/nissaninfiniti-shopping-tools/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "3QJMJdpZy4Po9exxmSQsTP",
 	"title": "Configurator Desktop Experience",
 	"url": "../../assets/projects/nissaninfiniti-shopping-tools/2.png",
 	"contentType": "image/png"

@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "4ikvd4yIMMsUAamUwykYE8",
 	"title": "Mobile Android Experience",
 	"description": "Mobile Android Experience",
 	"url": "../../assets/projects/tvtracker/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "30rOMLd7i00YiQW2GemacK",
 	"title": "Desktop experience",
 	"description": "Desktop experience",
 	"url": "../../assets/projects/tvtracker/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "4cajmluS5OUcyoyWKMqewm",
 	"title": "Mac status bar experience",
 	"description": "Mac status bar experience",
 	"url": "../../assets/projects/tvtracker/2.png",

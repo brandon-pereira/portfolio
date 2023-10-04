@@ -8,7 +8,6 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "15ZqTUrGzEACG8Eek2sIg0",
 	"title": "Better to see live version",
 	"description": "Better to see live version",
 	"url": "../../assets/projects/css3-usblightening-connector/0.png",

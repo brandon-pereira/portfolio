@@ -8,19 +8,16 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "3AvIub86KIEKqMiySEIw0q",
 	"title": "Packages screen, demonstrating conflict manager.",
 	"description": "Packages screen, demonstrating conflict manager.",
 	"url": "../../assets/projects/nissan-responsive-website-redesign/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "2EfT9Xo5OUKSuWayEecosa",
 	"title": "Mobile navigation and versions page.",
 	"description": "Mobile navigation and versions page.",
 	"url": "../../assets/projects/nissan-responsive-website-redesign/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "79nHG3xiOAqOa8mm0CIgEk",
 	"title": "Desktop navigation and versions page.",
 	"description": "Desktop navigation and versions page.",
 	"url": "../../assets/projects/nissan-responsive-website-redesign/2.png",

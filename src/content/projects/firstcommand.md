@@ -8,18 +8,15 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "6L8ca50vDOyEmA02O4coo0",
 	"title": "FirstCommand desktop experience",
 	"description": "FirstCommand desktop experience",
 	"url": "../../assets/projects/firstcommand/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "3hHuNczYXmI4YyAekA8e2c",
 	"title": "FirstCommand mobile experience",
 	"url": "../../assets/projects/firstcommand/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "4QLJ0hudawUWqCqWaMgEK4",
 	"title": "FirstCommand get started tool",
 	"description": "FirstCommand get started tool",
 	"url": "../../assets/projects/firstcommand/2.png",

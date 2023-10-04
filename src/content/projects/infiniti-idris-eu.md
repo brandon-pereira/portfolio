@@ -8,19 +8,16 @@ type: 'External'
 status: 'Unavailable'
 images: [
       {
-	"_id": "1F4wQroc5aYuMEGs0sG0oQ",
 	"title": "Example of the recommend a car flow",
 	"description": "Example of the recommend a car flow",
 	"url": "../../assets/projects/infiniti-idris-eu/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "5ZEFH8jsacqAc2msICgqQQ",
 	"title": "Example of the compare tool",
 	"description": "Example of the compare tool",
 	"url": "../../assets/projects/infiniti-idris-eu/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "3B7cznFXywoaMCaAes2OsG",
 	"title": "Find a dealer tool",
 	"description": "Find a dealer tool",
 	"url": "../../assets/projects/infiniti-idris-eu/2.png",

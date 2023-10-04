@@ -8,7 +8,6 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "4oszlf52FqIkFgfdmlinRN",
 	"title": "Example of the main form",
 	"url": "../../assets/projects/jim-stewart-mortgages/0.png",
 	"contentType": "image/png"

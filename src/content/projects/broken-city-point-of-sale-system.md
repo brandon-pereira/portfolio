@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "1hltOYSZ8UmQccWAoIcqMw",
 	"title": "Login Screen",
 	"description": "Login Screen",
 	"url": "../../assets/projects/broken-city-point-of-sale-system/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "2rEsO1Fvj22gqgMKsaCGg4",
 	"title": "Server Place Order Screen",
 	"description": "Server Place Order Screen",
 	"url": "../../assets/projects/broken-city-point-of-sale-system/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "2BzQUF2Ou4w6O0Mc46oyGi",
 	"title": "Admin Panel",
 	"description": "Admin Panel",
 	"url": "../../assets/projects/broken-city-point-of-sale-system/2.png",

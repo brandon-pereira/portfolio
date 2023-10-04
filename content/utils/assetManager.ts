@@ -49,7 +49,6 @@ class AssetManager {
     if (assetOpts?.url) {
       displayUrl = `${assetOpts.url}.${extension}`;
     }
-    asset._id = rawAsset._id;
     asset.title = rawAsset.title;
     asset.description = rawAsset.description;
     asset.url = `/${displayUrl}`;

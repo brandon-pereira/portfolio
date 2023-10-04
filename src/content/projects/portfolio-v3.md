@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "2giTsFWK76uQIyiweUEcYc",
 	"title": "The redesigned header",
 	"description": "The redesigned header",
 	"url": "../../assets/projects/portfolio-v3/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "3qrT3DiawMIIusmuGSsouW",
 	"title": "The projects redesign",
 	"description": "The projects redesign",
 	"url": "../../assets/projects/portfolio-v3/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "4I4c4lpewoMgQoYgIWMk06",
 	"title": "The new apps section",
 	"description": "The new apps section",
 	"url": "../../assets/projects/portfolio-v3/2.png",

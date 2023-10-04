@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "5nijaX4yOcWQwWy0CG2IoO",
 	"title": "Google Chrome icon made with pure CSS",
 	"description": "Google Chrome icon made with pure CSS",
 	"url": "../../assets/projects/css3-icons/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "6ETLIky0c8YWWoia4k8ISQ",
 	"title": "\"Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
 	"description": "\"Rdio (you'll be missed) and Habbo Hotel icons in pure CSS",
 	"url": "../../assets/projects/css3-icons/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "3XUPF0wmPS8QM48wAAMoOw",
 	"title": "Side project app icon in pure CSS.",
 	"description": "Side project app icon in pure CSS.",
 	"url": "../../assets/projects/css3-icons/2.png",

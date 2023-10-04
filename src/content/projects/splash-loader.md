@@ -8,7 +8,6 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "7rMfCncuPu0CuWMcY6CeSw",
 	"title": "Example of how the loader looks",
 	"description": "Example of how the loader looks",
 	"url": "../../assets/projects/splash-loader/0.png",

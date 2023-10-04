@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Unavailable'
 images: [
       {
-	"_id": "3SpnzqnBIUh3BIz8S6zHzU",
 	"title": " The Fullscreen Photo Viewer",
 	"description": "",
 	"url": "../../assets/projects/wedding-photobooth/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "72tGMeKQsKizjb3JNqOFQr",
 	"title": "The Similar Faces feature",
 	"description": "",
 	"url": "../../assets/projects/wedding-photobooth/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "xk6cR2O7vLLiWpcGC7lFF",
 	"title": "One of our initial prototypes in action",
 	"description": "",
 	"url": "../../assets/projects/wedding-photobooth/2.jpg",

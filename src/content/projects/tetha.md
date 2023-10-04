@@ -8,23 +8,19 @@ type: 'External'
 status: 'Unavailable'
 images: [
       {
-	"_id": "2eutBQ6LSWZMY1zHjm8nOu",
 	"title": "Close up of the Calendar Interface",
 	"url": "../../assets/projects/tetha/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "6BAVrABSALrKheWfnFVU6e",
 	"title": "Example of how the calendar looks on the device",
 	"description": "Typically, the tablet would be wall mounted but I didn't have the appropriate mounting brackets",
 	"url": "../../assets/projects/tetha/1.jpg",
 	"contentType": "image/jpeg"
 },{
-	"_id": "798vMHpq6zsUUEUQntbZxf",
 	"title": "Example of how the Setup/Welcome screen looks",
 	"url": "../../assets/projects/tetha/2.jpg",
 	"contentType": "image/jpeg"
 },{
-	"_id": "4mq4edW3nBp4fcLaXbmnWs",
 	"title": "Example of the settings screen",
 	"url": "../../assets/projects/tetha/3.png",
 	"contentType": "image/png"

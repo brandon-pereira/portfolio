@@ -8,19 +8,16 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "5bMKhNeQnKoOUWaGAS200i",
 	"title": "The landing screen.",
 	"description": "The landing screen.",
 	"url": "../../assets/projects/nissan-recalls/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "4pqiU2ixKMeqY02usQKMyM",
 	"title": "Recalls list screen.",
 	"description": "Recalls list screen.",
 	"url": "../../assets/projects/nissan-recalls/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "4NmvsVkjvqMAqSEWsQuUms",
 	"title": "Recalls details screen.",
 	"description": "Recalls details screen.",
 	"url": "../../assets/projects/nissan-recalls/2.png",

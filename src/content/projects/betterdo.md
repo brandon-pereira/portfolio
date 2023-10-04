@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Unavailable'
 images: [
       {
-	"_id": "37xue73IA00i2EM0Qc8eyw",
 	"title": "Example on desktop",
 	"description": "Example on desktop",
 	"url": "../../assets/projects/betterdo/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "3zxQh7SiwMQgmOUMIMWYAO",
 	"title": "Example of editing/sharing list",
 	"description": "Example of editing/sharing list",
 	"url": "../../assets/projects/betterdo/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "3pDpW2Obd6mUYWeecowsuU",
 	"title": "Example of editing task",
 	"description": "Example of editing task",
 	"url": "../../assets/projects/betterdo/2.png",

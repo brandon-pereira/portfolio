@@ -8,13 +8,11 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "1ufLqYQzdMLBoHSAlLimAc",
 	"title": "AirBnb Personal Settings Screen",
 	"description": "",
 	"url": "../../assets/projects/airbnb-design-system-migration/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "4GN3CezfjmtrXaOerkMb45",
 	"title": "Example of more complex screen",
 	"description": "",
 	"url": "../../assets/projects/airbnb-design-system-migration/1.png",

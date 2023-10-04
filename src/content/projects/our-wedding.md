@@ -8,19 +8,16 @@ type: 'Internal'
 status: 'Unavailable'
 images: [
       {
-	"_id": "3nz2TbgIzEPIps9B4rYYid",
 	"title": "Our Site Logo",
 	"description": "",
 	"url": "../../assets/projects/our-wedding/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "34sF8uYEH0u3lPzSA5lOQG",
 	"title": "Our Rescheduling Message",
 	"description": "",
 	"url": "../../assets/projects/our-wedding/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "thVKuAzaBmOZ6lUWQVkdB",
 	"title": "Admin Panel",
 	"description": "",
 	"url": "../../assets/projects/our-wedding/2.png",

@@ -8,7 +8,6 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "oGdA74ceLAgaMEeygKuSI",
 	"title": "Example of the UI",
 	"description": "Example of the UI",
 	"url": "../../assets/projects/purrvice-workers/0.png",

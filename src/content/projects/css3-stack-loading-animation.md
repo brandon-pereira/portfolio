@@ -8,7 +8,6 @@ type: 'Internal'
 status: 'Live'
 images: [
       {
-	"_id": "2fesdQ37AsKOiGkgGUwq0I",
 	"title": "Better to see live version",
 	"description": "Better to see live version",
 	"url": "../../assets/projects/css3-stack-loading-animation/0.png",

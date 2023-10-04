@@ -8,13 +8,11 @@ type: 'External'
 status: 'Unavailable'
 images: [
       {
-	"_id": "4He2I3nyuQSQIA6Y8oQ80O",
 	"title": "An example of the landing screen (after animation).",
 	"description": "An example of the landing screen (after animation).",
 	"url": "../../assets/projects/infiniti-tree-drive/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "1Qeb49oikIQqGKaioE0GIS",
 	"title": "An example of a region (after you fill out form/click map).",
 	"description": "An example of a region (after you fill out form/click map).",
 	"url": "../../assets/projects/infiniti-tree-drive/2.png",

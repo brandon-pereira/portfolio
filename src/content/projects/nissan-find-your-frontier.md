@@ -7,19 +7,16 @@ type: 'External'
 status: 'Live'
 images: [
       {
-	"_id": "Pfoct8pE5MU5QTBZoBRsq",
 	"title": "Example of the landing screen for the experience",
 	"description": "",
 	"url": "../../assets/projects/nissan-find-your-frontier/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "7KdZTJX4gOY6uv7uwtj8Oc",
 	"title": "Example of the 3D Basecamp",
 	"description": "",
 	"url": "../../assets/projects/nissan-find-your-frontier/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "4Ffl9MNBvgaEqqwEf8IC7J",
 	"title": "Example of our custom HTML5 video player",
 	"description": "",
 	"url": "../../assets/projects/nissan-find-your-frontier/2.png",

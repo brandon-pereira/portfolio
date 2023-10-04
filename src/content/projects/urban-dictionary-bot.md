@@ -8,7 +8,6 @@ type: 'Internal'
 status: 'Unavailable'
 images: [
       {
-	"_id": "1P9oAk5x8uGEsBpLzb0IBp",
 	"title": "Example of how the bot listens and responds",
 	"url": "../../assets/projects/urban-dictionary-bot/0.png",
 	"contentType": "image/png"
