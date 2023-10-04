@@ -27,5 +27,8 @@ function renderFrontmatterRow(key: string, value: any) {
   if (typeof value === 'string') {
     value = value.replace("'", "''");
   }
+  if (typeof value === 'object') {
+    return `${key}: ${JSON.stringify(value, null, '\t')}`;
+  }
   return `${key}: '${value}'`;
 }
