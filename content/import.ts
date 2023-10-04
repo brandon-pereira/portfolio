@@ -2,10 +2,8 @@ import 'dotenv/config';
 
 import createRouter from './utils/createRouter';
 
-import importAboutYou from './models/aboutYou';
 import importProjects from './models/projects';
 import importSkills from './models/skills';
-import importApps from './models/apps';
 
 (async () => {
   console.time('Initializing');
@@ -13,10 +11,8 @@ import importApps from './models/apps';
   console.timeEnd('Initializing');
   console.time('Importing content');
   await Promise.all([
-    importSkills(router),
-    importProjects(router),
-    importAboutYou(router),
-    importApps(router)
+    // importSkills(router)
+    importProjects(router)
   ]);
   console.timeEnd('Importing content');
   console.time('Importing Assets');

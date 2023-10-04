@@ -1,0 +1,101 @@
+[
+  {
+    "_id": "6X95ZVC5FuUaaO2MgymcGG",
+    "name": "Frontend Web Development",
+    "skills": [
+      {
+        "_id": "4sUW7iVkDKeq4KI8IKKCmy",
+        "name": "Javascript (ES6+)",
+        "description": "Javascript is my favourite programming language. I'm able to dive into an existing codebase or start from scratch. I'm familiar with ES6, standard design patterns, architecture, and have experience with tons of Javascript libraries."
+      },
+      {
+        "_id": "7nfH4ACEppARTcIiFH1MBe",
+        "name": "TypeScript",
+        "description": "I'm very comfortable jumping into an existing TypeScript codebase or working on migrating a codebase to TypeScript. I also have a firm understanding of Generics and other more advanced features. "
+      },
+      {
+        "_id": "67DIl5u2EL9GkCc4Ojoyxi",
+        "name": "React",
+        "description": "React is definitely the framework that I'm strongest in. I'm comfortable with very advanced workflows and procedures. I can build bullet-proof components with all considerations (accessibility, testing, variations, proper documentation, etc.). I'm also comfortable with architecting new React applications from scratch (including SSR) or leveraging a framework like Next."
+      },
+      {
+        "_id": "3Vwhn8Ta5GqUEMe0II6q6g",
+        "name": "CSS",
+        "description": "I've had tons of experience with CSS would consider myself an expert. I'm capable of entering an existing code base and making modifications, or starting from scratch. This includes the CSS3 specifications, CSS-in-JS, SCSS/SASS, and LESS."
+      },
+      {
+        "_id": "2WyFStEcdy8SWQkOQMwUsO",
+        "name": "HTML, A11Y, & SEO",
+        "description": "I understand modern HTML syntaxes. I can modifying an existing codebase or starting from scratch. I also have experience with Accessibility and SEO implementation. I'm also experienced with HTML5, Pug, and Nunjucks."
+      },
+      {
+        "_id": "3R2cn9ojmgUm4wqyMMuK2Y",
+        "name": "Animation",
+        "description": "After working in an agency for several years, I've gained some valuable experience implementing animations. I'm comfortable with libraries like Framer Motion, AnimeJS, and GreenSock. I've also had tons of exposure to building and animating SVGs."
+      }
+    ],
+    "isOpen": true,
+    "isCategory": true
+  },
+  {
+    "_id": "VgCqOsES4aB2Stq0FgFZf",
+    "name": "Leadership",
+    "skills": [
+      {
+        "_id": "3ctuYy42QIvvRR1T3pxI9r",
+        "name": "Communication",
+        "description": "Communication is a strong suit of mine. I believe that the key goal to a successful project is communication. I have experience communicating both internally and externally to clients.",
+        "disableProjectsConnection": true
+      },
+      {
+        "_id": "5XbCK4r3gBe06kaoQiVX5d",
+        "name": "Time Estimation",
+        "description": "I have strong experiences estimating large projects for big brands, some of which were multi-year projects with over 10 developers contributing to the codebase.",
+        "disableProjectsConnection": true
+      },
+      {
+        "_id": "14r6cvSH0gYlMeRhsufaBg",
+        "name": "Career Development",
+        "description": "I have several years of Career Development experience. My experiences range from helping Interns navigate their first professional job all the way to Technical Architects who are managing other developers under them.",
+        "disableProjectsConnection": true
+      },
+      {
+        "_id": "1xFls1mp6yOu5cV7x52CTa",
+        "name": "Client Relations",
+        "description": "I have a strong understanding of how to communicate with clients. I've had lots of experience presenting existing and future work, walking clients through issues and limitations as they arrive, as well as building relations with new clients and scaling our teams.",
+        "disableProjectsConnection": true
+      },
+      {
+        "_id": "6mRDQfMox9nmyvlJzAvOhw",
+        "name": "Presentation Skills",
+        "description": "I have always been passionate about presenting. I have experience pitching new businesses, walking clients through our progression of their applications, and presenting to broad audiences on technical and non-technical topics.",
+        "disableProjectsConnection": true
+      }
+    ],
+    "isCategory": true
+  },
+  {
+    "_id": "6F7Qmvs69qi0Guasy0S84Y",
+    "name": "Backend Development",
+    "skills": [
+      {
+        "_id": "65Vmh7LnxukgKwGIgu6K60",
+        "name": "NodeJS",
+        "description": "I have tons of experience with NodeJS. I've built complex web servers leveraging Express, GraphQL, and others. I'm comfortable writing and maintaining private and public modules, as well as building tooling for improved DX, automation, and build scripts."
+      },
+      {
+        "_id": "6F55bBZ4E8o68YI06gsgEM",
+        "name": "GraphQL",
+        "description": "I've used GraphQL on multiple projects now. This includes both as a replacement to a REST endpoint as well as using it to build out Gatsby projects.",
+        "isOpen": false,
+        "isCategory": false
+      },
+      {
+        "_id": "1sba8qggLqQ8Koqku6UW4g",
+        "name": "MongoDB",
+        "description": "I've built applications which utilize MongoDB and are controlled through NodeJS (MongooseJS)"
+      }
+    ],
+    "isCategory": true
+  }
+]
