@@ -9,13 +9,13 @@ Pre-Launch
 - [ ] Add Google Analytics
 - [ ] Browser Testing
 - [ ] Mobile Device testing
+- [ ] Better Apps Styling
+- [ ] video support
+- [ ] lightbox support
+- [ ] isPinned feature
 
 Post-Launch
 
-- [ ] isPinned feature
 - [ ] Svg favicon
-- [ ] video support
-- [ ] lightbox support
 - [ ] Add PWA
-- [ ] Better Apps Styling
 - [ ] Logo from AI to Figma
