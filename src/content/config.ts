@@ -20,10 +20,14 @@ const projectsCollection = defineCollection({
 const appsCollection = defineCollection({
   schema: ({ image }) =>
     z.object({
-      _id: z.string(),
+      id: z.string(),
       appName: z.string(),
       icon: image(),
-      theme: z.string()
+      theme: z.string(),
+      images: z
+        .array(z.object({ url: image(), title: z.string() }))
+        .optional()
+        .default([])
     })
 });
 

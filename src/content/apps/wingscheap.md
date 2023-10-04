@@ -1,27 +1,24 @@
 ---
-_id: '3pXAMnjH3ac8IUSm64qWau'
+id: 'wingscheap'
 appName: 'Wings.cheap'
 link: 'https://branclon.com/wings-cheap/'
-icon: '../../assets//app-icon-wings-cheap.png'
+icon: '../../assets/apps/wingscheap/icon.png'
 theme: 'wings-cheap'
 images: [
       {
-	"_id": "5fxagEO5J6ucyQ0MmQQgAE",
 	"title": "Desktop view of landing screen",
 	"description": "Desktop view of landing screen",
-	"url": "/5fxagEO5J6ucyQ0MmQQgAE.png",
+	"url": "../../assets/apps/wingscheap/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "3Eh8HFBZBKUcwummomseyA",
 	"title": "Mobile view of results screen",
 	"description": "Mobile view of results screen",
-	"url": "/3Eh8HFBZBKUcwummomseyA.png",
+	"url": "../../assets/apps/wingscheap/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "5G7FgIiNQAmyQO0mu8yKem",
 	"title": "Mobile view of landing screen",
 	"description": "Mobile view of landing screen",
-	"url": "/5G7FgIiNQAmyQO0mu8yKem.png",
+	"url": "../../assets/apps/wingscheap/2.png",
 	"contentType": "image/png"
 }]
 ---

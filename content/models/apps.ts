@@ -34,22 +34,14 @@ async function importApps({ contentful, assetManager }: Router): Promise<void> {
   await Promise.all(
     apps.map(async app => {
       return writeFile(
-        `./src/content/apps/${slugify(app.appName, {
-          lower: true,
-          remove: /[*+~.()'"!/:@]/g
-        })}.md`,
+        `./src/content/apps/${app.id}.md`,
         generateMarkdown(
           {
-            // ...project,
-            // // prettier-ignore
-            // title: project.title.replace(":", "\:"),
-            // description: project.shortDescription,
-            // shortDescription: null,
-            // languages: project.languages.map((lang) => lang.name).join(", "),
-            // primaryImage:
-            //   project.images?.[0]?.url &&
-            //   `../../assets/${project.thumbnail?.url}`,
             ...app,
+            images: app.images.map(img => ({
+              ...img,
+              url: `../../assets${img.url}`
+            })),
             description: undefined
           },
           app.description
@@ -66,13 +58,22 @@ const normalizeApps = (
 ): Promise<App[]> => {
   const parsedApps = apps.map(async (app: RawApp): Promise<App> => {
     const parsedApp = {} as App;
-    parsedApp._id = app._id || `${Math.random()}`;
+    parsedApp.id = slugify(app.appName!, {
+      lower: true,
+      remove: /[*+~.()'"!/:@]/g
+    });
     parsedApp.appName = app.appName || '';
     parsedApp.description = app.description || '';
     parsedApp.link = app.link;
-    parsedApp.icon = `../../assets/${assetManager.add(app.icon.fields).url}`;
+    parsedApp.icon = `../../assets${
+      assetManager.add(app.icon.fields, {
+        url: `apps/${parsedApp.id}/icon`
+      }).url
+    }`;
     parsedApp.theme = app.theme || 'default';
-    parsedApp.images = app.images.map((img: RawAsset) => assetManager.add(img));
+    parsedApp.images = app.images.map((img: RawAsset, i) =>
+      assetManager.add(img, { url: `apps/${parsedApp.id}/${i}` })
+    );
     return parsedApp;
   });
   return Promise.all(parsedApps);

@@ -1,27 +1,24 @@
 ---
-_id: '6Dwrn0CIoGgB7CoD4DjY8T'
+id: 'betterdo'
 appName: 'BetterDo.'
 link: 'https://betterdo.app/'
-icon: '../../assets//app-icon-betterdo-v3.png'
+icon: '../../assets/apps/betterdo/icon.png'
 theme: 'betterdo'
 images: [
       {
-	"_id": "4loe2vKe5Bi91vAYlozgMv",
 	"title": "Example of desktop experience",
 	"description": "Example of desktop experience",
-	"url": "/4loe2vKe5Bi91vAYlozgMv.png",
+	"url": "../../assets/apps/betterdo/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "6m4YZBGMvJECuhu3ClSjSG",
 	"title": "Mobile Experience",
 	"description": "Mobile Experience",
-	"url": "/6m4YZBGMvJECuhu3ClSjSG.png",
+	"url": "../../assets/apps/betterdo/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "4oOeF0V2ohzKPnxU3q4fg5",
 	"title": "List Members User Interface",
 	"description": "List Members User Interface",
-	"url": "/4oOeF0V2ohzKPnxU3q4fg5.png",
+	"url": "../../assets/apps/betterdo/2.png",
 	"contentType": "image/png"
 }]
 ---

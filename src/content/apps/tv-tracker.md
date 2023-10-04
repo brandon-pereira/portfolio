@@ -1,27 +1,24 @@
 ---
-_id: '40CbSLFCJGAmSQ4CQQmYwO'
+id: 'tv-tracker'
 appName: 'Tv Tracker'
 link: 'https://branclon.com/tv-tracker'
-icon: '../../assets//app-icon-tv-tracker.png'
+icon: '../../assets/apps/tv-tracker/icon.png'
 theme: 'tv-tracker'
 images: [
       {
-	"_id": "4ikvd4yIMMsUAamUwykYE8",
 	"title": "Mobile Android Experience",
 	"description": "Mobile Android Experience",
-	"url": "/4ikvd4yIMMsUAamUwykYE8.png",
+	"url": "../../assets/apps/tv-tracker/0.png",
 	"contentType": "image/png"
 },{
-	"_id": "4cajmluS5OUcyoyWKMqewm",
 	"title": "Mac status bar experience",
 	"description": "Mac status bar experience",
-	"url": "/4cajmluS5OUcyoyWKMqewm.png",
+	"url": "../../assets/apps/tv-tracker/1.png",
 	"contentType": "image/png"
 },{
-	"_id": "30rOMLd7i00YiQW2GemacK",
 	"title": "Desktop experience",
 	"description": "Desktop experience",
-	"url": "/30rOMLd7i00YiQW2GemacK.png",
+	"url": "../../assets/apps/tv-tracker/2.png",
 	"contentType": "image/png"
 }]
 ---
