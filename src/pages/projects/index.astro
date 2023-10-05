@@ -1,11 +1,10 @@
 ---
 import ProjectsList from '@components/projects/ProjectsList.astro';
 import Layout from '@layouts/Layout.astro';
-import { getCollection } from 'astro:content';
+import { getSortedProjects } from 'src/utils/projects';
 
-const projects = (await getCollection('projects')).sort(
-  (a, b) => b.data.date.getTime() - a.data.date.getTime()
-);
+const projects = await getSortedProjects();
+console.log('a');
 ---
 
 <Layout title="Projects">

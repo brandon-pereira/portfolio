@@ -10,6 +10,7 @@ const projectsCollection = defineCollection({
       color: z.string().default('#0067FF'),
       gitUrl: z.string().url().optional(),
       link: z.string().url().optional(),
+      isPinned: z.boolean().optional(),
       images: z
         .array(z.object({ url: image(), title: z.string() }))
         .optional()

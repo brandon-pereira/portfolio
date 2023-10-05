@@ -1,9 +1,5 @@
 # TODO
 
-Projects missing:
-
-- isPinned?: boolean;
-
 Pre-Launch
 
 - [ ] Add Google Analytics
@@ -12,7 +8,6 @@ Pre-Launch
 - [ ] Better Apps Styling
 - [ ] video support
 - [ ] lightbox support
-- [ ] isPinned feature
 
 Post-Launch
 
