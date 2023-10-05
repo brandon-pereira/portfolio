@@ -1,7 +1,6 @@
 import { getCollection } from 'astro:content';
 
 export async function getSortedProjects() {
-  console.log('in');
   return (await getCollection('projects')).sort((a, b) => {
     if (a.data.isPinned) {
       return -1;
