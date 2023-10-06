@@ -5,14 +5,17 @@ import { getCollection } from 'astro:content';
 const apps = await getCollection('apps');
 ---
 
-<div data-section="apps" class:list={['container', apps[0]?.data.theme]}>
+<section data-section="apps" class:list={['container', apps[0]?.data.theme]}>
+  <div class="overhang"></div>
   <div class="content">
     <hr />
-    <header class="main">
-      <span class="maintext">Apps</span><span class="subtext"
-        >I've got<span>&nbsp;</span>for that</span
-      >
-    </header>
+    <h2>
+      <header class="main">
+        <span class="subtext">I've got</span>
+        <span class="maintext">Apps</span>
+        <span class="subtext">for that</span>
+      </header>
+    </h2>
     <div class="apps--slides-container">
       {
         apps.map(async (app, index) => {
@@ -39,6 +42,21 @@ const apps = await getCollection('apps');
               <div class="content-column">
                 <h2>{app.data.appName}</h2>
                 <Content />
+                {app.data.images?.length && (
+                  <div class="image-container">
+                    {app.data.images?.map(img => (
+                      <Image
+                        src={img.url}
+                        width={img.url.height < img.url.width ? 500 : undefined}
+                        height={
+                          img.url.height > img.url.width ? 500 : undefined
+                        }
+                        quality="max"
+                        alt={img.title}
+                      />
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           );
@@ -61,7 +79,7 @@ const apps = await getCollection('apps');
       <button data-goto="next" aria-label="Go to next slide">Next</button>
     </div>
   </div>
-</div>
+</section>
 
 <style>
   header.main {
@@ -70,56 +88,60 @@ const apps = await getCollection('apps');
     text-align: center;
     transition: color 0.3s;
     margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: min(6vw, 3rem);
+    --main-size: min(30vw, 12rem);
+
     & .maintext {
-      font-family: var(--font-monospace);
-      position: absolute;
-      z-index: 1;
-      left: 50%;
-      transform: translate(-50%);
+      /* Layout */
       display: flex;
+      flex-shrink: 0;
       align-items: center;
-      width: 9rem;
-      height: 9rem;
-      -webkit-text-stroke: 2px black;
-      font-size: 2.5rem;
+      justify-content: center;
+      border: 3px solid;
+      position: relative;
+      border-radius: 50%;
+      background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
+      width: var(--main-size);
+      height: var(--main-size);
+      /* Fonts */
+      font-family: var(--font-monospace);
+      line-height: var(--main-size);
+
+      /* Hidden for pseudo */
+      font-size: 0;
+
+      &:before {
+        content: 'Apps';
+        position: absolute;
+        /* makes the text look more centered */
+        padding-left: 1vw;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-text-stroke: 1px black;
+        top: 0;
+        z-index: 1;
+        font-size: calc(var(--main-size) / 3);
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: url('../assets/icon-grid.png');
+        background-size: 80%;
+        background-position: center;
+        border-radius: 50%;
+      }
     }
     & .subtext {
       text-shadow: 2px 2px rgba(0, 0, 0, 0.3);
       text-transform: uppercase;
-      & span {
-        vertical-align: middle;
-        border: 3px solid;
-        display: inline-block;
-        width: 9rem;
-        height: 9rem;
-        position: relative;
-        margin: 0 2rem;
-        border-radius: 50%;
-        background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2));
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-          background: url('../assets/icon-grid.png');
-          background-size: 80%;
-          background-position: center;
-          border-radius: 50%;
-        }
-      }
-    }
-    @media (--tablet) {
-      height: 10rem;
-      line-height: 10rem;
-      & .maintext {
-        font-size: 2.7rem;
-      }
-      & .subtext {
-        font-size: 2.4rem;
-        margin-left: 3rem;
-      }
+      font-size: min(5vw, 30px);
     }
   }
 
@@ -135,12 +157,13 @@ const apps = await getCollection('apps');
     );
     margin: 3rem 0;
   }
+
   .container {
-    margin-top: -30%;
-    clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+    --overhang-height: 20rem;
+    margin-top: calc(var(--overhang-height) * -1);
     z-index: 0;
     position: relative;
-    padding-top: 30%;
+    padding-top: var(--overhang-height);
     padding-bottom: 3rem;
     transition: background 0.5s;
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
@@ -148,6 +171,17 @@ const apps = await getCollection('apps');
     --grid-bg: #041724;
     --grid-bg-1: rgba(0, 0, 0, 0.05);
     --grid-bg-2: rgba(0, 0, 0, 0.03);
+
+    & .overhang {
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+      position: absolute;
+      top: -2px;
+      left: 0;
+      overflow: hidden;
+      right: 0;
+      height: var(--overhang-height);
+      background: var(--background-color);
+    }
 
     &:before {
       content: '';
@@ -195,7 +229,8 @@ const apps = await getCollection('apps');
     align-items: flex-start;
     justify-content: center;
     display: none;
-    height: 300px;
+    margin-bottom: 4rem;
+    max-width: var(--max-width);
     gap: 3rem;
     &:global(.active) {
       display: flex;
@@ -206,10 +241,33 @@ const apps = await getCollection('apps');
       filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
     }
     & .content-column {
+      flex: 1;
+      overflow: hidden;
       h2 {
         margin: 0;
       }
       /* background: green; */
+    }
+
+    & .image-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2rem;
+      gap: 1rem;
+      overflow: hidden;
+      width: 100%;
+      & img {
+        flex: 1;
+        height: auto;
+        width: auto;
+        object-fit: contain;
+        overflow: hidden;
+        border-radius: 1rem;
+        object-fit: contain;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
     }
   }
 
@@ -374,11 +432,7 @@ const apps = await getCollection('apps');
     }
   }
 
-  document.addEventListener(
-    'astro:page-load',
-    () => {
-      new Apps();
-    },
-    { once: true }
-  );
+  document.addEventListener('astro:page-load', () => {
+    new Apps();
+  });
 </script>
