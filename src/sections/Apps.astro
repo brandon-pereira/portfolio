@@ -74,10 +74,12 @@ const apps = await getCollection('apps');
         ))
       }
     </div>
-    <div class="carousel-arrows">
-      <button data-goto="prev" aria-label="Go to previous slide">Prev</button>
-      <button data-goto="next" aria-label="Go to next slide">Next</button>
-    </div>
+  </div>
+  <div class="carousel-arrows">
+    <button class="prev" data-goto="next" aria-label="Go to next slide"
+    ></button>
+    <button class="next" data-goto="prev" aria-label="Go to previous slide"
+    ></button>
   </div>
 </section>
 
@@ -292,16 +294,40 @@ const apps = await getCollection('apps');
 
   .carousel-arrows {
     position: absolute;
-    bottom: 0;
+    top: calc(var(--overhang-height) + 350px);
+    height: 100px;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between;
     button {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      color: currentColor;
+
       border: none;
       padding: 0.4rem 1rem;
-      border-radius: 1rem;
+      border-radius: 0 1rem 1rem 0;
+      &:before {
+        content: '';
+        display: block;
+        color: #fff;
+        width: 1rem;
+        height: 1rem;
+        border-style: solid;
+        border-width: 0.2rem 0.2rem 0 0;
+        transform: rotate(225deg);
+        filter: drop-shadow(-1px -1px rgba(0, 0, 0, 0.4));
+        position: relative;
+        left: 0.25rem;
+      }
+      &.next {
+        border-radius: 1rem 0 0 1rem;
+        &:before {
+          left: -0.25rem;
+          transform: rotate(45deg);
+        }
+      }
     }
   }
 </style>
