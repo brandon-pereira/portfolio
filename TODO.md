@@ -8,9 +8,12 @@ Pre-Launch
 - [ ] Better Apps Styling
 - [ ] video support
 - [ ] lightbox support
+- [ ] Project skills
+- [ ] Skills section
 
 Post-Launch
 
 - [ ] Svg favicon
 - [ ] Add PWA
 - [ ] Logo from AI to Figma
+- [ ] Astro tribute
