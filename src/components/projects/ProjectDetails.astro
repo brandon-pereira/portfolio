@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import Button from '@components/Button.astro';
 import type { CollectionEntry } from 'astro:content';
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+import Lightbox from '@components/Lightbox.astro';
 interface Props {
   project: CollectionEntry<'projects'>;
   content: AstroComponentFactory;
@@ -79,7 +80,16 @@ const Content = Astro.props.content;
         images?.length && (
           <div class="image-container">
             {images?.map(img => (
-              <Image src={img.url} alt="{img.title}" />
+              <Lightbox
+                description={img.title}
+                src={img.url}
+                alt={img.title}
+                thumbProps={{
+                  width: img.url.height < img.url.width ? 500 : undefined,
+                  height: img.url.height > img.url.width ? 500 : undefined,
+                  quality: 'max'
+                }}
+              />
             ))}
           </div>
         )

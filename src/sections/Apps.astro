@@ -1,4 +1,5 @@
 ---
+import Lightbox from '@components/Lightbox.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
@@ -45,15 +46,20 @@ const apps = await getCollection('apps');
                 {app.data.images?.length && (
                   <div class="image-container">
                     {app.data.images?.map(img => (
-                      <Image
-                        src={img.url}
-                        width={img.url.height < img.url.width ? 500 : undefined}
-                        height={
-                          img.url.height > img.url.width ? 500 : undefined
-                        }
-                        quality="max"
-                        alt={img.title}
-                      />
+                      <>
+                        <Lightbox
+                          description={img.title}
+                          src={img.url}
+                          alt={img.title}
+                          thumbProps={{
+                            width:
+                              img.url.height < img.url.width ? 500 : undefined,
+                            height:
+                              img.url.height > img.url.width ? 500 : undefined,
+                            quality: 'max'
+                          }}
+                        />
+                      </>
                     ))}
                   </div>
                 )}
@@ -268,7 +274,7 @@ const apps = await getCollection('apps');
       gap: 1rem;
       overflow: hidden;
       width: 100%;
-      & img {
+      .thumbnail {
         flex: 1;
         height: auto;
         width: auto;
