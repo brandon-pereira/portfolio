@@ -89,7 +89,6 @@ class Lightbox {
 
   private getConfigFromElement(srcElement: HTMLElement): LightboxConfig | null {
     const raw = srcElement.getAttribute('data-lightbox');
-    console.log(raw);
     if (!raw) return null;
     const json = JSON.parse(raw);
     const config: LightboxConfig = {
