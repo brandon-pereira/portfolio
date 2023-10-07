@@ -20,15 +20,12 @@ const thumb = await getImage({
   src,
   ...thumbProps
 });
-
-console.log(full);
 ---
 
 <img
   src={thumb.src}
   {...thumb.attributes}
   alt={alt}
-  class="thumbnail"
   data-lightbox={JSON.stringify({
     ...full.attributes,
     url: full.src,
@@ -39,7 +36,9 @@ console.log(full);
 <script>
   import LightboxService from '../utils/lightbox';
   // TODO: only run on current
-  LightboxService.findAndAttachListeners();
+  document.addEventListener('astro:page-load', () => {
+    LightboxService.findAndAttachListeners();
+  });
 </script>
 
 <style is:global>

@@ -46,20 +46,18 @@ const apps = await getCollection('apps');
                 {app.data.images?.length && (
                   <div class="image-container">
                     {app.data.images?.map(img => (
-                      <>
-                        <Lightbox
-                          description={img.title}
-                          src={img.url}
-                          alt={img.title}
-                          thumbProps={{
-                            width:
-                              img.url.height < img.url.width ? 500 : undefined,
-                            height:
-                              img.url.height > img.url.width ? 500 : undefined,
-                            quality: 'max'
-                          }}
-                        />
-                      </>
+                      <Lightbox
+                        description={img.title}
+                        src={img.url}
+                        alt={img.title}
+                        thumbProps={{
+                          width:
+                            img.url.height < img.url.width ? 500 : undefined,
+                          height:
+                            img.url.height > img.url.width ? 500 : undefined,
+                          quality: 'max'
+                        }}
+                      />
                     ))}
                   </div>
                 )}
@@ -262,7 +260,6 @@ const apps = await getCollection('apps');
       h2 {
         margin: 0;
       }
-      /* background: green; */
     }
 
     & .image-container {
@@ -274,7 +271,7 @@ const apps = await getCollection('apps');
       gap: 1rem;
       overflow: hidden;
       width: 100%;
-      .thumbnail {
+      & :global(img) {
         flex: 1;
         height: auto;
         width: auto;
@@ -352,12 +349,15 @@ const apps = await getCollection('apps');
 
   class Apps {
     el = document.querySelector("[data-section='apps']") as HTMLElement;
-    currentIndex: number;
-    slides: HTMLElement[];
-    currentSlide: HTMLElement;
-    dots: HTMLElement[];
+    currentIndex: number = 0;
+    slides: HTMLElement[] = [];
+    currentSlide: HTMLElement | null = null;
+    dots: HTMLElement[] = [];
 
     constructor() {
+      if (!this.el) {
+        return;
+      }
       this.currentIndex = 0;
       this.slides = Array.from(
         this.el.querySelectorAll('.apps--slides-container .apps--slide')
@@ -450,11 +450,13 @@ const apps = await getCollection('apps');
       const newSlide = this.slides[slide];
       const currentSlide = this.currentSlide;
       // Toggle classes on carousel slides
-      currentSlide.classList.remove('active');
+      currentSlide?.classList.remove('active');
       newSlide?.classList.add('active');
       // Change the main carousel styling
       this.el.setAttribute('data-current-slide', `${slide}`);
-      this.el.classList.remove(currentSlide.getAttribute('data-styling') || '');
+      this.el.classList.remove(
+        currentSlide?.getAttribute('data-styling') || ''
+      );
       this.el.classList.add(newSlide?.getAttribute('data-styling') || '');
       // Update Dot
       this.dots.forEach((el, i) => {
