@@ -34,10 +34,10 @@ const thumb = await getImage({
 />
 
 <script>
-  import LightboxService from '../utils/lightbox';
-  // TODO: only run on current
+  import Lightbox from '../utils/lightbox';
   document.addEventListener('astro:page-load', () => {
-    LightboxService.findAndAttachListeners();
+    // TODO: only run on current
+    new Lightbox();
   });
 </script>
 

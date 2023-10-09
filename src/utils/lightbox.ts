@@ -55,6 +55,10 @@ class Lightbox {
   }
 
   findAndAttachListeners() {
+    if (!this.$el) {
+      this.createLightBoxElements();
+    }
+
     const elements = document.querySelectorAll<HTMLImageElement>(
       `img[${Lightbox.dataAttribute}]:not([${Lightbox.dataInitAttribute}])`
     );
@@ -169,4 +173,4 @@ function sleep(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-export default new Lightbox();
+export default Lightbox;
