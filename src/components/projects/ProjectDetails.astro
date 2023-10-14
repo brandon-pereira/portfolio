@@ -9,7 +9,7 @@ interface Props {
   content: AstroComponentFactory;
 }
 const { data, slug } = Astro.props.project;
-const { link, color, images, gitUrl, title } = data;
+const { link, color, images, gitUrl, title, languages } = data;
 const Content = Astro.props.content;
 ---
 
@@ -75,6 +75,9 @@ const Content = Astro.props.content;
             </Button>
           )
         }
+      </div>
+      <div class="languages">
+        {languages?.map(lang => <div class="language">{lang}</div>)}
       </div>
       {
         images?.length && (
@@ -227,6 +230,40 @@ const Content = Astro.props.content;
       border-radius: 2rem;
       height: auto;
       box-shadow: 0 1px 2px #000;
+    }
+  }
+
+  .languages {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .language {
+    background: var(--primary-color);
+    color: #000;
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem 0 0.2rem;
+    box-sizing: border-box;
+    margin-left: 1rem;
+    --size: 2rem;
+    height: var(--size);
+    position: relative;
+    border-radius: 0 5px 5px 0;
+    &:before {
+      content: '';
+      position: absolute;
+      height: 1.4rem;
+      left: -0.75rem;
+      top: 50%;
+      rotate: 0.625turn;
+      translate: 0 -50%;
+      border-radius: 0 5px 0 0;
+      box-sizing: border-box;
+      width: 1.4rem;
+      background: var(--primary-color);
+      z-index: -1;
     }
   }
 </style>

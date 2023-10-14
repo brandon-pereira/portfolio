@@ -11,6 +11,15 @@ const projectsCollection = defineCollection({
       gitUrl: z.string().url().optional(),
       link: z.string().url().optional(),
       isPinned: z.boolean().optional(),
+      languages: z
+        .preprocess(val => {
+          const _val = val as string;
+          if (!_val.length) {
+            return [];
+          }
+          return _val?.split(',');
+        }, z.array(z.string()).optional())
+        .optional(),
       images: z
         .array(z.object({ url: image(), title: z.string() }))
         .optional()

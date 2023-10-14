@@ -6,9 +6,7 @@ Pre-Launch
 - [ ] Browser Testing
 - [ ] Mobile Device testing
 - [ ] video support
-- [ ] lightbox support
-- [ ] Project skills
-- [ ] Skills section
+- [ ] small vertical height bug
 
 Post-Launch
 
@@ -16,3 +14,5 @@ Post-Launch
 - [ ] Add PWA
 - [ ] Logo from AI to Figma
 - [ ] Astro tribute
+- [ ] lightbox cleanup listeners
+- [ ] Skills section
