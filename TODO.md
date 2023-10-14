@@ -6,7 +6,6 @@ Pre-Launch
 - [ ] Browser Testing
 - [ ] Mobile Device testing
 - [ ] video support
-- [ ] small vertical height bug
 
 Post-Launch
 
