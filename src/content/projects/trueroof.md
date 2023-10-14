@@ -1,7 +1,7 @@
 ---
 id: 'trueroof'
 title: 'TrueRoof'
-date: '2022-07-15T00:00:00.000Z'
+date: '2023-04-01T00:00:00.000Z'
 languages: 'CSS, TypeScript, Animation, HTML, A11Y, & SEO, React'
 description: 'I was hired to build a website for a roofing company based in Chicago. The project was very successful. It helped them drastically improve their online presence, introduced a convenient lead generator, and a way for their potential clients to get a quote within minutes.'
 type: 'External'
@@ -9,25 +9,22 @@ status: 'Live'
 images:
   [
     {
-      'title': 'AirBnb Personal Settings Screen',
-      'description': '',
+      'title': 'Screenshot of the Homepage',
       'url': '../../assets/projects/trueroof/0.png',
       'contentType': 'image/png'
     },
     {
-      'title': 'Example of more complex screen',
-      'description': '',
+      'title': 'Example of a blog entry',
       'url': '../../assets/projects/trueroof/1.png',
       'contentType': 'image/png'
     },
     {
-      'title': 'Example of more complex screen',
-      'description': '',
+      'title': 'Example of a blog entry with sticky nav',
       'url': '../../assets/projects/trueroof/2.png',
       'contentType': 'image/png'
     }
   ]
-link: 'https://www.airbnb.ca/account-settings/personal-info'
+link: 'https://trueroof.app/'
 color: '#29B7E5'
 ---
 
