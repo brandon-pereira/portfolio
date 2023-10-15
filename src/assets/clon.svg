@@ -1,0 +1,45 @@
+<svg id="clon" class="svg-icon branclon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448.9 451.5">
+    <style>
+        #clon path {
+            stroke-width: 4px;
+            stroke: #000;
+        }
+        
+        .outer-front {
+            fill: #288FD9;
+            fill: var(--outer-front, #288FD9);
+        }
+
+        .inner-back {
+            fill: #0B4C7A;
+            fill: var(--inner-back, #0B4C7A);
+        }
+
+        .inner-left {
+            fill: #165888;
+            fill: var(--inner-left, #165888);
+        }
+
+        .outer-right {
+            fill: #288FD9;
+            fill: var(--outer-right, #288FD9);
+        }
+
+        .inner-bottom {
+            fill: #166196;
+            fill: var(--inner-bottom, #166196);
+        }
+    </style>
+    <g id="front-and-top">
+        <path class="outer-front" d="M1.5 145v302.5l285 2.5V148L446.8 1.5H138zM1.5 145l285 3" />
+        <path class="inner-back" d="M268.8 111.8l68.9-74.1c-18-.5-194.1-.1-194.1-.1V112l125.2-.2z" />
+        <path class="inner-left" d="M143.5 37.5V112l-61.5-.5zM143.5 186.5H37l.5 81h106z" />
+        <path class="inner-back" d="M242.5 186.5V268l-99-.5v-81z" />
+        <path class="inner-left" d="M36.5 413.5l76.3-80H36.5z" />
+        <path class="inner-bottom" d="M240.5 334v80l-204-.5 76.3-80z" />
+    </g>
+    <g id="right">
+        <path class="outer-right" d="M332.5 403l-.2-115.2 115.1-114.9-.6-171.4L286.5 148v302z" />
+        <path class="inner-back" d="M333.5 184v46.2l64.5-60-1.3-60.1-63.2 54.9z" />
+    </g>
+</svg>

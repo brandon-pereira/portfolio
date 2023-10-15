@@ -9,7 +9,6 @@ Pre-Launch
 
 Post-Launch
 
-- [ ] Svg favicon
 - [ ] Add PWA
 - [ ] Logo from AI to Figma
 - [ ] Astro tribute
