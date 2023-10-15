@@ -6,22 +6,31 @@ languages: 'Animation, Javascript (ES6+), React'
 description: 'Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.'
 type: 'External'
 status: 'Live'
-images: [
-      {
-	"title": "Landing Section",
-	"description": "",
-	"url": "../../assets/projects/nissan-pathfinder-return-to-rugged/0.png",
-	"contentType": "image/png"
-}]
+images:
+  [
+    {
+      'title': 'Landing Section',
+      'description': '',
+      'url': '../../assets/projects/nissan-pathfinder-return-to-rugged/0.png',
+      'contentType': 'image/png'
+    },
+	{
+		title: '',
+		url: '../../assets/projects/nissan-pathfinder-return-to-rugged/0.mp4',
+		# TODO: Fix me
+		contentType: 'video/mp4'
+	}
+  ]
 link: 'https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder/return-to-rugged/'
 color: '#9e3c38'
 ---
 
 Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.
 
-My role on the project mainly focused on architecture and leadership. 
+My role on the project mainly focused on architecture and leadership.
 
-My responsibilities included: 
+My responsibilities included:
+
 - Getting the concept debriefing from our client and creative teams
 - Building out a solution design and architecture for the site
 - Onboarding, problem-solving, reviewing pull requests, debugging issues as they arose, and doing minor features where I could.

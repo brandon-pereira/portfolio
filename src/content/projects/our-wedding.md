@@ -2,27 +2,31 @@
 id: 'our-wedding'
 title: 'Our Wedding'
 date: '2021-09-01T00:00:00.000Z'
-languages: 'NodeJS, CSS, HTML, A11Y, & SEO, React, Javascript (ES6+), MongoDB'
-description: 'I built my now Wife and I''s Wedding website from scratch. I wanted our guests to RSVP, list dietary restrictions, and learn about our big. I thought it might be helpful to build an admin panel to manage guests and message guests.'
+languages: 'NodeJS, CSS, HTML, A11Y, SEO, React, Javascript (ES6+), MongoDB'
+description: "I built my now Wife and I's Wedding website from scratch. I wanted our guests to RSVP, list dietary restrictions, and learn about our big. I thought it might be helpful to build an admin panel to manage guests and message guests."
 type: 'Internal'
 status: 'Unavailable'
-images: [
-      {
-	"title": "Our Site Logo",
-	"description": "",
-	"url": "../../assets/projects/our-wedding/0.png",
-	"contentType": "image/png"
-},{
-	"title": "Our Rescheduling Message",
-	"description": "",
-	"url": "../../assets/projects/our-wedding/1.png",
-	"contentType": "image/png"
-},{
-	"title": "Admin Panel",
-	"description": "",
-	"url": "../../assets/projects/our-wedding/2.png",
-	"contentType": "image/png"
-}]
+images:
+  [
+    {
+      'title': 'Our Site Logo',
+      'description': '',
+      'url': '../../assets/projects/our-wedding/0.png',
+      'contentType': 'image/png'
+    },
+    {
+      'title': 'Our Rescheduling Message',
+      'description': '',
+      'url': '../../assets/projects/our-wedding/1.png',
+      'contentType': 'image/png'
+    },
+    {
+      'title': 'Admin Panel',
+      'description': '',
+      'url': '../../assets/projects/our-wedding/2.png',
+      'contentType': 'image/png'
+    }
+  ]
 gitUrl: 'https://github.com/brandon-pereira/hitched'
 color: '#fcc510'
 ---

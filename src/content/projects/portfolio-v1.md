@@ -2,27 +2,31 @@
 id: 'portfolio-v1'
 title: 'Portfolio v1'
 date: '2015-11-30T00:00:00.000Z'
-languages: 'CSS, HTML, A11Y, & SEO, Javascript (ES6+)'
+languages: 'CSS, HTML, A11Y, SEO, Javascript (ES6+)'
 description: 'I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive and used some fun next-level technologies.'
 type: 'Internal'
 status: 'Unavailable'
-images: [
-      {
-	"title": "Header Area",
-	"description": "Header Area",
-	"url": "../../assets/projects/portfolio-v1/0.png",
-	"contentType": "image/png"
-},{
-	"title": "Projects View Area",
-	"description": "Projects View Area",
-	"url": "../../assets/projects/portfolio-v1/1.png",
-	"contentType": "image/png"
-},{
-	"title": "Skills Accordion Area",
-	"description": "Skills Accordion Area",
-	"url": "../../assets/projects/portfolio-v1/2.png",
-	"contentType": "image/png"
-}]
+images:
+  [
+    {
+      'title': 'Header Area',
+      'description': 'Header Area',
+      'url': '../../assets/projects/portfolio-v1/0.png',
+      'contentType': 'image/png'
+    },
+    {
+      'title': 'Projects View Area',
+      'description': 'Projects View Area',
+      'url': '../../assets/projects/portfolio-v1/1.png',
+      'contentType': 'image/png'
+    },
+    {
+      'title': 'Skills Accordion Area',
+      'description': 'Skills Accordion Area',
+      'url': '../../assets/projects/portfolio-v1/2.png',
+      'contentType': 'image/png'
+    }
+  ]
 link: 'https://branclon.com'
 gitUrl: 'https://github.com/brandon-pereira/portfolio/tree/release/v1'
 color: '#4463c7'

@@ -2,7 +2,7 @@
 id: 'wreno-website-redesign'
 title: 'Wreno: Website Rebranding'
 date: '2023-06-01T00:00:00.000Z'
-languages: 'CSS, TypeScript, HTML, Performance, A11Y, & SEO, React'
+languages: 'CSS, TypeScript, HTML, Performance, A11Y, SEO, React'
 description: 'I lead the engineering efforts for the Wreno rebranding. We used this time to reduce technical debt, improve lighthouse and SEO ratings, and standardize our tech stack.'
 type: 'External'
 status: 'Live'

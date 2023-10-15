@@ -2,7 +2,7 @@
 id: 'trueroof'
 title: 'TrueRoof'
 date: '2023-04-01T00:00:00.000Z'
-languages: 'CSS, TypeScript, Animation, HTML, A11Y, & SEO, React'
+languages: 'CSS, TypeScript, Animation, HTML, A11Y, SEO, React'
 description: 'I was hired to build a website for a roofing company based in Chicago. The project was very successful. It helped them drastically improve their online presence, introduced a convenient lead generator, and a way for their potential clients to get a quote within minutes.'
 type: 'External'
 status: 'Live'
