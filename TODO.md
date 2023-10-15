@@ -2,7 +2,6 @@
 
 Pre-Launch
 
-- [ ] Add Google Analytics
 - [ ] Browser Testing
 - [ ] Mobile Device testing
 - [ ] video support
@@ -14,3 +13,4 @@ Post-Launch
 - [ ] Astro tribute
 - [ ] lightbox cleanup listeners
 - [ ] Skills section
+- [ ] apps section animations
