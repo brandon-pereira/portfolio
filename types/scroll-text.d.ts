@@ -1,5 +1,5 @@
 declare class ScrollText {
-  constructor(el: HTMLElement);
+  constructor(el: Element);
 }
 declare module 'scroll-text' {
   export = ScrollText;

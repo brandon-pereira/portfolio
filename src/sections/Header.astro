@@ -257,11 +257,10 @@ const words = ['websites', 'apps', 'teams', 'software', 'all the things!'];
 <script>
   import ScrollText from 'scroll-text';
 
-  document.addEventListener(
-    'astro:page-load',
-    () => {
-      new ScrollText(document.querySelector('[data-scroll-text]')!);
-    },
-    { once: true }
-  );
+  document.addEventListener('astro:page-load', () => {
+    const el = document.querySelector('[data-scroll-text]');
+    if (el) {
+      new ScrollText(el);
+    }
+  });
 </script>
