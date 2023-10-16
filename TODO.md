@@ -2,9 +2,8 @@
 
 Pre-Launch
 
-- [ ] Browser Testing
-- [ ] Mobile Device testing
 - [ ] video support
+- [ ] project details mobile
 
 Post-Launch
 
