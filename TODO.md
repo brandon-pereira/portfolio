@@ -3,7 +3,6 @@
 Pre-Launch
 
 - [ ] video support
-- [ ] project details mobile
 
 Post-Launch
 
