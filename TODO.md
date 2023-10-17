@@ -6,7 +6,7 @@ Pre-Launch
 
 Post-Launch
 
-- [ ] Add PWA
+- [ ] Add PWA - **https://github.com/tatethurston/astrojs-service-worker**
 - [ ] Logo from AI to Figma
 - [ ] Astro tribute
 - [ ] lightbox cleanup listeners
