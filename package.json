@@ -14,7 +14,7 @@
     "get-content": "ts-node -T ./content/import"
   },
   "dependencies": {
-    "astro": "^3.3.0",
+    "astro": "^3.3.1",
     "scroll-text": "^1.0.1"
   },
   "devDependencies": {
