@@ -34,5 +34,5 @@ jobs:
             cd www/portfolio
             git checkout .
             git pull
-            npm install --production=false
+            npm install
             npm run build
