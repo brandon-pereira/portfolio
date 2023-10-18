@@ -27,8 +27,7 @@ const thumb = await getImage({
   {...thumb.attributes}
   alt={alt}
   data-lightbox={JSON.stringify({
-    ...full.attributes,
-    url: full.src,
+    src: full.src,
     description: alt
   })}
 />

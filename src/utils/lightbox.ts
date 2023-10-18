@@ -1,9 +1,17 @@
-type LightboxConfig = {
-  title: string;
-  description?: string;
-  url: string;
-  contentType: 'image/png' | 'image/jpeg' | 'video/mp4';
-};
+type LightboxConfig =
+  | {
+      description?: string;
+      src: string;
+      video?: false;
+    }
+  | {
+      description?: string;
+      src: string;
+      video: true;
+    };
+
+type SourceElement = HTMLImageElement | HTMLVideoElement;
+type TargetElement = SourceElement;
 
 class Lightbox {
   $el: HTMLElement;
@@ -21,19 +29,19 @@ class Lightbox {
     this.events();
   }
 
-  async open(srcElement: HTMLImageElement) {
+  async open($source: SourceElement) {
     // start opening
     this.$el.classList.add('opening');
     // get configuration for lightbox
-    const config = this.getConfigFromElement(srcElement);
+    const config = this.getConfigFromElement($source);
     if (!config) {
       console.warn('Missing Configuration Object');
       return;
     }
     // update lightbox ui with new data
-    await this.renderFromConfig(config);
+    const $target = await this.renderFromConfig(config);
     // animate from src to target
-    await animateElementOpen(srcElement);
+    await animateElementOpen($source, $target);
     // animation is done, update UI
     this.$el.classList.add('open');
   }
@@ -45,7 +53,7 @@ class Lightbox {
   }
 
   findAndAttachListeners() {
-    const elements = document.querySelectorAll<HTMLImageElement>(
+    const elements = document.querySelectorAll<SourceElement>(
       `[${Lightbox.dataAttribute}]:not([${Lightbox.dataInitAttribute}])`
     );
     elements.forEach(el => {
@@ -63,58 +71,52 @@ class Lightbox {
     });
   }
 
-  private getConfigFromElement(srcElement: HTMLElement): LightboxConfig | null {
+  private getConfigFromElement(
+    srcElement: SourceElement
+  ): LightboxConfig | null {
     const raw = srcElement.getAttribute('data-lightbox');
     if (!raw) return null;
     const json = JSON.parse(raw);
     const config: LightboxConfig = {
-      title: json.title || '',
       description: json.description || '',
-      url: json.url || '',
-      contentType: json.contentType || 'image/png'
+      src: json.src || '',
+      video: srcElement.tagName === 'VIDEO'
     };
     return config;
   }
 
-  private renderFromConfig({
-    contentType,
-    url,
-    description,
-    title
-  }: LightboxConfig) {
+  private async renderFromConfig({ src, description, video }: LightboxConfig) {
     this.$asset.innerHTML = '';
-    const type = contentType.startsWith('video') ? 'video' : 'img';
+    const type = video ? 'video' : 'img';
     const config = {
-      src: url,
+      src,
       autoplay: true,
       muted: true
     } as const;
-    const $asset = document.createElement(type);
+    const $target = document.createElement(type);
+    // @ts-expect-error let this slide
     Object.keys(config).forEach((key: keyof typeof config) =>
-      $asset.setAttribute(key, `${config[key]}`)
+      $target.setAttribute(key, `${config[key]}`)
     );
-    console.log($asset);
-    this.$description.innerHTML = title || description || '';
+    this.$description.innerHTML = description || '';
     const listenForLoad = new Promise<void>(resolve => {
-      if (type === 'img') {
-        $asset.onload = () => resolve();
-      } else {
-        resolve();
-      }
+      $target.onload = () => resolve();
+      $target.onloadeddata = () => resolve();
     });
-    this.$asset.appendChild($asset);
-    return Promise.race([listenForLoad, sleep(400)]);
+    this.$asset.appendChild($target);
+    await Promise.race([listenForLoad, sleep(400)]);
+    return $target;
   }
 }
 
-function animateElementOpen($el: HTMLImageElement) {
+function animateElementOpen($source: SourceElement, $target: TargetElement) {
   return new Promise<void>(resolve => {
     // Create a ghost elements
-    const ghost = document.createElement($el.tagName);
-    ghost.src = $el.src;
+    const ghost = document.createElement($source.tagName) as SourceElement;
+    ghost.src = $source.src;
     ghost.classList.add('ghost--img');
     // Get real element coordinates
-    const rect = $el.getBoundingClientRect();
+    const rect = $source.getBoundingClientRect();
     // Add styling to ghost element
     Object.assign(ghost.style, {
       top: `${rect.top}px`,
@@ -124,13 +126,8 @@ function animateElementOpen($el: HTMLImageElement) {
     });
     // Add ghost to DOM
     document.body.appendChild(ghost);
-    // get target element
-    const target = document.querySelector(
-      '.lightbox img, video'
-    ) as HTMLImageElement;
-    console.log(target);
     requestAnimationFrame(() => {
-      const endRect = target.getBoundingClientRect();
+      const endRect = $target.getBoundingClientRect();
       Object.assign(ghost.style, {
         top: `${endRect.top}px`,
         left: `${endRect.left}px`,

@@ -11,8 +11,7 @@ const { src, description } = Astro.props;
   src={src}
   aria-describedby={description}
   data-lightbox={JSON.stringify({
-    contentType: 'video/mp4',
-    url: src,
+    src,
     description
   })}
   autoplay
