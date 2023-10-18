@@ -6,18 +6,26 @@ languages: 'Javascript (ES6+), Animation, CSS'
 description: 'I built a reveal page for Infinitis winter sales event. For each test drive, they planted a tree in America.'
 type: 'External'
 status: 'Unavailable'
-images: [
-      {
-	"title": "An example of the landing screen (after animation).",
-	"description": "An example of the landing screen (after animation).",
-	"url": "../../assets/projects/infiniti-tree-drive/0.png",
-	"contentType": "image/png"
-},{
-	"title": "An example of a region (after you fill out form/click map).",
-	"description": "An example of a region (after you fill out form/click map).",
-	"url": "../../assets/projects/infiniti-tree-drive/2.png",
-	"contentType": "image/png"
-}]
+images:
+  [
+    {
+      'title': 'An example of the landing screen (after animation).',
+      'description': 'An example of the landing screen (after animation).',
+      'url': '../../assets/projects/infiniti-tree-drive/0.png',
+      'contentType': 'image/png'
+    },
+	{
+        "title": "Demonstration of how the animation behaves.",
+        "url": "/projects/videos/infiniti-tree-drive/1.mp4",
+        "contentType": "video/mp4"
+	},
+    {
+      'title': 'An example of a region (after you fill out form/click map).',
+      'description': 'An example of a region (after you fill out form/click map).',
+      'url': '../../assets/projects/infiniti-tree-drive/2.png',
+      'contentType': 'image/png'
+    }
+  ]
 link: 'http://infinitiusa.com/now/newtradition/'
 color: '#65997d'
 ---

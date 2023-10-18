@@ -12,3 +12,9 @@ Post-Launch
 - [ ] lightbox cleanup listeners
 - [ ] Skills section
 - [ ] apps section animations
+- [ ] more fun about me
+- [ ] new screenshots for apps
+- [ ] apps get button
+- [ ] light mode?
+- [ ] add blog?
+- [ ] clean up metadata in projects markdown
