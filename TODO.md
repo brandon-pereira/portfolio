@@ -1,9 +1,5 @@
 # TODO
 
-Pre-Launch
-
-- [ ] video support
-
 Post-Launch
 
 - [ ] Add PWA - **https://github.com/tatethurston/astrojs-service-worker**
@@ -18,3 +14,5 @@ Post-Launch
 - [ ] light mode?
 - [ ] add blog?
 - [ ] clean up metadata in projects markdown
+- [ ] portfolio post in projects
+- [ ] portfolio post on linkedin
