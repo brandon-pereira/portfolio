@@ -1,0 +1,27 @@
+---
+interface Props {
+  src: string;
+  description?: string;
+}
+
+const { src, description } = Astro.props;
+---
+
+<video
+  src={src}
+  aria-describedby={description}
+  data-lightbox={JSON.stringify({
+    contentType: 'video/mp4',
+    url: src,
+    description
+  })}
+  autoplay
+  muted></video>
+
+<script>
+  import Lightbox from '../../utils/lightbox';
+  document.addEventListener('astro:page-load', () => {
+    // TODO: only run on current
+    new Lightbox();
+  });
+</script>

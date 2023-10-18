@@ -1,0 +1,42 @@
+---
+import type { ImageMetadata, ImageTransform } from 'astro';
+import { getImage } from 'astro:assets';
+
+interface Props {
+  src: ImageMetadata;
+  alt: string;
+  description?: string;
+  thumbProps?: Omit<ImageTransform, 'src'>;
+  fullProps?: Omit<ImageTransform, 'src'>;
+}
+
+const { src, alt, thumbProps, fullProps } = Astro.props;
+
+const full = await getImage({
+  src,
+  ...fullProps
+});
+const thumb = await getImage({
+  src,
+  ...thumbProps
+});
+---
+
+<img
+  src={thumb.src}
+  {...thumb.attributes}
+  alt={alt}
+  data-lightbox={JSON.stringify({
+    ...full.attributes,
+    url: full.src,
+    description: alt
+  })}
+/>
+
+<script>
+  import Lightbox from '../../utils/lightbox';
+  document.addEventListener('astro:page-load', () => {
+    // TODO: only run on current
+    new Lightbox();
+  });
+</script>

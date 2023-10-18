@@ -1,8 +1,21 @@
 import { defineCollection, z } from 'astro:content';
 
 const projectsCollection = defineCollection({
-  schema: ({ image }) =>
-    z.object({
+  schema: ({ image }) => {
+    const ImageMedia = z.object({
+      url: image(),
+      title: z.string(),
+      contentType: z.literal('image/jpeg').or(z.literal('image/png'))
+    });
+    const MediaItem = z.union([
+      ImageMedia,
+      z.object({
+        url: z.string(),
+        title: z.string(),
+        contentType: z.literal('video/mp4')
+      })
+    ]);
+    return z.object({
       id: z.string(),
       title: z.string(),
       date: z.string().datetime().pipe(z.coerce.date()),
@@ -20,11 +33,10 @@ const projectsCollection = defineCollection({
           return _val?.split(',');
         }, z.array(z.string()).optional())
         .optional(),
-      images: z
-        .array(z.object({ url: image(), title: z.string() }))
-        .optional()
-        .default([])
-    })
+      // TODO: rename to media
+      images: z.tuple([ImageMedia]).rest(MediaItem).optional()
+    });
+  }
 });
 
 const appsCollection = defineCollection({

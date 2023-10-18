@@ -14,17 +14,7 @@ class Lightbox {
   static dataInitAttribute = 'data-lightbox-initialized';
 
   constructor() {
-    this.$el = document.createElement('div');
-    this.$el.classList.add('lightbox');
-    this.$el.setAttribute('data-close', 'true');
-    this.$el.innerHTML = `
-        <button data-close class="close-button">&times;</button>
-        <div class="modal-content">
-            <div data-asset></div>
-            <div data-description></div>
-        </div>
-      `;
-    document.body.appendChild(this.$el);
+    this.$el = document.querySelector('[data-lightbox-container]')!;
     this.$asset = this.$el.querySelector('[data-asset]')!;
     this.$description = this.$el.querySelector('[data-description]')!;
     this.findAndAttachListeners();
@@ -55,31 +45,13 @@ class Lightbox {
   }
 
   findAndAttachListeners() {
-    if (!this.$el) {
-      this.createLightBoxElements();
-    }
-
     const elements = document.querySelectorAll<HTMLImageElement>(
-      `img[${Lightbox.dataAttribute}]:not([${Lightbox.dataInitAttribute}])`
+      `[${Lightbox.dataAttribute}]:not([${Lightbox.dataInitAttribute}])`
     );
     elements.forEach(el => {
       el.setAttribute(Lightbox.dataInitAttribute, 'true');
       el.addEventListener('click', () => this.open(el));
     });
-  }
-
-  private createLightBoxElements() {
-    this.$el = document.createElement('div');
-    this.$el.classList.add('lightbox');
-    this.$el.setAttribute('data-close', 'true');
-    this.$el.innerHTML = `
-        <button data-close class="close-button">&times;</button>
-        <div class="modal-content">
-            <div data-asset></div>
-            <div data-description></div>
-        </div>
-      `;
-    document.body.appendChild(this.$el);
   }
 
   private async events() {
@@ -121,6 +93,7 @@ class Lightbox {
     Object.keys(config).forEach((key: keyof typeof config) =>
       $asset.setAttribute(key, `${config[key]}`)
     );
+    console.log($asset);
     this.$description.innerHTML = title || description || '';
     const listenForLoad = new Promise<void>(resolve => {
       if (type === 'img') {
@@ -137,7 +110,7 @@ class Lightbox {
 function animateElementOpen($el: HTMLImageElement) {
   return new Promise<void>(resolve => {
     // Create a ghost elements
-    const ghost = document.createElement('img');
+    const ghost = document.createElement($el.tagName);
     ghost.src = $el.src;
     ghost.classList.add('ghost--img');
     // Get real element coordinates
@@ -152,7 +125,10 @@ function animateElementOpen($el: HTMLImageElement) {
     // Add ghost to DOM
     document.body.appendChild(ghost);
     // get target element
-    const target = document.querySelector('.lightbox img') as HTMLImageElement;
+    const target = document.querySelector(
+      '.lightbox img, video'
+    ) as HTMLImageElement;
+    console.log(target);
     requestAnimationFrame(() => {
       const endRect = target.getBoundingClientRect();
       Object.assign(ghost.style, {

@@ -3,13 +3,15 @@ import { Image } from 'astro:assets';
 import Button from '@components/Button.astro';
 import type { CollectionEntry } from 'astro:content';
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
-import Lightbox from '@components/Lightbox.astro';
+import ImageLightbox from '@components/Lightbox/ImageLightbox.astro';
+import VideoLightbox from '@components/Lightbox/VideoLightbox.astro';
 interface Props {
   project: CollectionEntry<'projects'>;
   content: AstroComponentFactory;
 }
 const { data, slug } = Astro.props.project;
 const { link, color, images, gitUrl, title, languages } = data;
+const thumbnail = images?.[0];
 const Content = Astro.props.content;
 ---
 
@@ -20,9 +22,9 @@ const Content = Astro.props.content;
 >
   <div class="content">
     {
-      images.at(0) ? (
+      thumbnail ? (
         <Image
-          src={images.at(0)!.url}
+          src={thumbnail.url}
           width={1200}
           alt={title}
           class="project-image"
@@ -82,18 +84,22 @@ const Content = Astro.props.content;
       {
         images?.length && (
           <div class="image-container">
-            {images?.map(img => (
-              <Lightbox
-                description={img.title}
-                src={img.url}
-                alt={img.title}
-                thumbProps={{
-                  width: img.url.height < img.url.width ? 500 : undefined,
-                  height: img.url.height > img.url.width ? 500 : undefined,
-                  quality: 'max'
-                }}
-              />
-            ))}
+            {images?.map(img =>
+              img.contentType !== 'video/mp4' ? (
+                <ImageLightbox
+                  description={img.title}
+                  src={img.url}
+                  alt={img.title}
+                  thumbProps={{
+                    width: img.url.height < img.url.width ? 500 : undefined,
+                    height: img.url.height > img.url.width ? 500 : undefined,
+                    quality: 'max'
+                  }}
+                />
+              ) : (
+                <VideoLightbox src={img.url} description={img.title} />
+              )
+            )}
           </div>
         )
       }

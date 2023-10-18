@@ -11,6 +11,7 @@ const { project } = Astro.props;
 const { data, slug } = project;
 const { title, description, images, color } = data;
 const url = '/projects/' + slug;
+const thumbnail = images?.[0];
 ---
 
 <div
@@ -20,9 +21,9 @@ const url = '/projects/' + slug;
 >
   <div class="content">
     {
-      images.at(0) ? (
+      thumbnail ? (
         <Image
-          src={images.at(0)!.url}
+          src={thumbnail.url}
           width={650}
           quality={100}
           class="project-image"

@@ -1,5 +1,5 @@
 ---
-import Lightbox from '@components/Lightbox.astro';
+import ImageLightbox from '@components/Lightbox/ImageLightbox.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
@@ -46,7 +46,7 @@ const apps = await getCollection('apps');
                 {app.data.images?.length && (
                   <div class="image-container">
                     {app.data.images?.map(img => (
-                      <Lightbox
+                      <ImageLightbox
                         description={img.title}
                         src={img.url}
                         alt={img.title}

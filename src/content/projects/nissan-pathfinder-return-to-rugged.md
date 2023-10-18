@@ -9,17 +9,20 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Landing Section',
-      'description': '',
-      'url': '../../assets/projects/nissan-pathfinder-return-to-rugged/0.png',
-      'contentType': 'image/png'
+      title: 'Landing Section',
+      url: '../../assets/projects/nissan-pathfinder-return-to-rugged/0.png',
+      contentType: 'image/png'
     },
-	{
-		title: '',
-		url: '../../assets/projects/nissan-pathfinder-return-to-rugged/0.mp4',
-		# TODO: Fix me
-		contentType: 'video/mp4'
-	}
+    {
+      title: 'Parallax & Time Warp Effect',
+      url: '/projects/videos/nissan-pathfinder-return-to-rugged/1.mp4',
+      contentType: 'video/mp4'
+    },
+    {
+      title: 'Example of whole experience',
+      url: '/projects/videos/nissan-pathfinder-return-to-rugged/2.mp4',
+      contentType: 'video/mp4'
+    }
   ]
 link: 'https://www.nissanusa.com/vehicles/crossovers-suvs/pathfinder/return-to-rugged/'
 color: '#9e3c38'
