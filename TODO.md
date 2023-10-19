@@ -24,3 +24,4 @@
 - [ ] light mode?
 - [ ] add blog?
 - [ ] portfolio post on linkedin
+- [ ] can move static pages to astro??
