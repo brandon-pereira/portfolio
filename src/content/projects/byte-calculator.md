@@ -9,14 +9,14 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Mobile View',
-      'url': '../../assets/projects/byte-calculator/0.png',
-      'contentType': 'image/png'
+      title: 'Mobile View',
+      url: '../../assets/projects/byte-calculator/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Desktop View',
-      'url': '../../assets/projects/byte-calculator/1.png',
-      'contentType': 'image/png'
+      title: 'Desktop View',
+      url: '../../assets/projects/byte-calculator/1.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://branclon.com/byte-calculator/'

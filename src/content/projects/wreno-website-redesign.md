@@ -9,19 +9,19 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Re-branded Homepage on Desktop',
-      'url': '../../assets/projects/wreno-website-redesign/0.png',
-      'contentType': 'image/png'
+      title: 'Re-branded Homepage on Desktop',
+      url: '../../assets/projects/wreno-website-redesign/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Re-branded  Homepage on Mobile',
-      'url': '../../assets/projects/wreno-website-redesign/1.png',
-      'contentType': 'image/png'
+      title: 'Re-branded  Homepage on Mobile',
+      url: '../../assets/projects/wreno-website-redesign/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Example of a new form we introduced',
-      'url': '../../assets/projects/wreno-website-redesign/2.png',
-      'contentType': 'image/png'
+      title: 'Example of a new form we introduced',
+      url: '../../assets/projects/wreno-website-redesign/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://wreno.io/'

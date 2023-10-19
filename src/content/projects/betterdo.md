@@ -9,22 +9,19 @@ status: 'Unavailable'
 images:
   [
     {
-      'title': 'Example on desktop',
-      'description': 'Example on desktop',
-      'url': '../../assets/projects/betterdo/0.png',
-      'contentType': 'image/png'
+      title: 'Example on desktop',
+      url: '../../assets/projects/betterdo/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Example of editing/sharing list',
-      'description': 'Example of editing/sharing list',
-      'url': '../../assets/projects/betterdo/1.png',
-      'contentType': 'image/png'
+      title: 'Example of editing/sharing list',
+      url: '../../assets/projects/betterdo/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Example of editing task',
-      'description': 'Example of editing task',
-      'url': '../../assets/projects/betterdo/2.png',
-      'contentType': 'image/png'
+      title: 'Example of editing task',
+      url: '../../assets/projects/betterdo/2.png',
+      contentType: 'image/png'
     }
   ]
 color: '#645ccc'

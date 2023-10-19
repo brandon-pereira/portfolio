@@ -9,16 +9,14 @@ status: 'Live'
 images:
   [
     {
-      'title': 'AirBnb Personal Settings Screen',
-      'description': '',
-      'url': '../../assets/projects/airbnb-design-system-migration/0.png',
-      'contentType': 'image/png'
+      title: 'AirBnb Personal Settings Screen',
+      url: '../../assets/projects/airbnb-design-system-migration/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Example of more complex screen',
-      'description': '',
-      'url': '../../assets/projects/airbnb-design-system-migration/1.png',
-      'contentType': 'image/png'
+      title: 'Example of more complex screen',
+      url: '../../assets/projects/airbnb-design-system-migration/1.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://www.airbnb.ca/account-settings/personal-info'

@@ -9,19 +9,19 @@ status: 'Live'
 images:
   [
     {
-      'title': 'App Home Screen',
-      'url': '../../assets/projects/wreno-1-dot-0/0.png',
-      'contentType': 'image/png'
+      title: 'App Home Screen',
+      url: '../../assets/projects/wreno-1-dot-0/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'App Job Details Screen',
-      'url': '../../assets/projects/wreno-1-dot-0/1.png',
-      'contentType': 'image/png'
+      title: 'App Job Details Screen',
+      url: '../../assets/projects/wreno-1-dot-0/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'App Login Screen',
-      'url': '../../assets/projects/wreno-1-dot-0/2.png',
-      'contentType': 'image/png'
+      title: 'App Login Screen',
+      url: '../../assets/projects/wreno-1-dot-0/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://wreno.io/'

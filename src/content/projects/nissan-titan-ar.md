@@ -9,15 +9,14 @@ status: 'Unavailable'
 images:
   [
     {
-      'title': 'Preview of how the AR experience works',
-      'description': 'Preview of how the AR experience works',
-      'url': '../../assets/projects/nissan-titan-ar/0.jpg',
-      'contentType': 'image/jpeg'
+      title: 'Preview of how the AR experience works',
+      url: '../../assets/projects/nissan-titan-ar/0.jpg',
+      contentType: 'image/jpeg'
     },
     {
-      'title': 'Demo of the app journey',
-      'url': '/projects/videos/nissan-titan-ar/1.mp4',
-      'contentType': 'video/mp4'
+      title: 'Demo of the app journey',
+      url: '/projects/videos/nissan-titan-ar/1.mp4',
+      contentType: 'video/mp4'
     }
   ]
 link: 'https://m.me/winanissantitan'

@@ -9,15 +9,14 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Example of how the suggestions work. They are based on users input.',
-      'description': 'Example of how the suggestions work. They are based on users input.',
-      'url': '../../assets/projects/infiniti-idris/0.png',
-      'contentType': 'image/png'
+      title: 'Example of how the suggestions work. They are based on users input.',
+      url: '../../assets/projects/infiniti-idris/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Example of how the suggestions work. They are based on users input.',
-      'url': '/projects/videos/infiniti-idris/1.mp4',
-      'contentType': 'video/mp4'
+      title: 'Example of how the suggestions work. They are based on users input.',
+      url: '/projects/videos/infiniti-idris/1.mp4',
+      contentType: 'video/mp4'
     }
   ]
 link: 'https://m.me/INFINITIIDRIS?ref=brandonp_portfolio'

@@ -9,22 +9,19 @@ status: 'Unavailable'
 images:
   [
     {
-      'title': ' The Fullscreen Photo Viewer',
-      'description': '',
-      'url': '../../assets/projects/wedding-photobooth/0.png',
-      'contentType': 'image/png'
+      title: ' The Fullscreen Photo Viewer',
+      url: '../../assets/projects/wedding-photobooth/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'The Similar Faces feature',
-      'description': '',
-      'url': '../../assets/projects/wedding-photobooth/1.png',
-      'contentType': 'image/png'
+      title: 'The Similar Faces feature',
+      url: '../../assets/projects/wedding-photobooth/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'One of our initial prototypes in action',
-      'description': '',
-      'url': '../../assets/projects/wedding-photobooth/2.jpg',
-      'contentType': 'image/jpeg'
+      title: 'One of our initial prototypes in action',
+      url: '../../assets/projects/wedding-photobooth/2.jpg',
+      contentType: 'image/jpeg'
     }
   ]
 gitUrl: 'https://github.com/brandon-pereira/unique-faces'

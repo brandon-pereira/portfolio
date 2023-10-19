@@ -9,22 +9,19 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Mobile Android Experience',
-      'description': 'Mobile Android Experience',
-      'url': '../../assets/projects/tvtracker/0.png',
-      'contentType': 'image/png'
+      title: 'Mobile Android Experience',
+      url: '../../assets/projects/tvtracker/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Desktop experience',
-      'description': 'Desktop experience',
-      'url': '../../assets/projects/tvtracker/1.png',
-      'contentType': 'image/png'
+      title: 'Desktop experience',
+      url: '../../assets/projects/tvtracker/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Mac status bar experience',
-      'description': 'Mac status bar experience',
-      'url': '../../assets/projects/tvtracker/2.png',
-      'contentType': 'image/png'
+      title: 'Mac status bar experience',
+      url: '../../assets/projects/tvtracker/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://branclon.com/tv-tracker/'

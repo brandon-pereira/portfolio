@@ -9,9 +9,9 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Example of the main form',
-      'url': '../../assets/projects/jim-stewart-mortgages/0.png',
-      'contentType': 'image/png'
+      title: 'Example of the main form',
+      url: '../../assets/projects/jim-stewart-mortgages/0.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://jimstewartmortgages.com/'

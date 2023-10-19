@@ -9,22 +9,19 @@ status: 'Live'
 images:
   [
     {
-      'title': 'The redesigned header',
-      'description': 'The redesigned header',
-      'url': '../../assets/projects/portfolio-v3/0.png',
-      'contentType': 'image/png'
+      title: 'The redesigned header',
+      url: '../../assets/projects/portfolio-v3/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'The projects redesign',
-      'description': 'The projects redesign',
-      'url': '../../assets/projects/portfolio-v3/1.png',
-      'contentType': 'image/png'
+      title: 'The projects redesign',
+      url: '../../assets/projects/portfolio-v3/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'The new apps section',
-      'description': 'The new apps section',
-      'url': '../../assets/projects/portfolio-v3/2.png',
-      'contentType': 'image/png'
+      title: 'The new apps section',
+      url: '../../assets/projects/portfolio-v3/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://branclon.com'

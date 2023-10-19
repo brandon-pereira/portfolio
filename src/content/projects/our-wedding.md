@@ -9,22 +9,19 @@ status: 'Unavailable'
 images:
   [
     {
-      'title': 'Our Site Logo',
-      'description': '',
-      'url': '../../assets/projects/our-wedding/0.png',
-      'contentType': 'image/png'
+      title: 'Our Site Logo',
+      url: '../../assets/projects/our-wedding/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Our Rescheduling Message',
-      'description': '',
-      'url': '../../assets/projects/our-wedding/1.png',
-      'contentType': 'image/png'
+      title: 'Our Rescheduling Message',
+      url: '../../assets/projects/our-wedding/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Admin Panel',
-      'description': '',
-      'url': '../../assets/projects/our-wedding/2.png',
-      'contentType': 'image/png'
+      title: 'Admin Panel',
+      url: '../../assets/projects/our-wedding/2.png',
+      contentType: 'image/png'
     }
   ]
 gitUrl: 'https://github.com/brandon-pereira/hitched'

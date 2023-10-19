@@ -6,13 +6,14 @@ languages: 'CSS'
 description: 'I developed an Apple lightning cable and USB connector in pure CSS3.'
 type: 'Internal'
 status: 'Live'
-images: [
-      {
-	"title": "Better to see live version",
-	"description": "Better to see live version",
-	"url": "../../assets/projects/css3-usblightening-connector/0.png",
-	"contentType": "image/png"
-}]
+images:
+  [
+    {
+      title: 'Better to see live version',
+      url: '../../assets/projects/css3-usblightening-connector/0.png',
+      contentType: 'image/png'
+    }
+  ]
 link: 'https://branclon.com/showcase/usb'
 color: '#b0b04e'
 ---

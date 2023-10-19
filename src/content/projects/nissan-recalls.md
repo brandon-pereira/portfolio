@@ -6,23 +6,24 @@ languages: 'Javascript (ES6+), CSS'
 description: 'I was tasked with rebuilding the Nissan and Infiniti Recalls tools to comply with their new brand guidelines. I took the opportunity to improve the responsiveness, appearance, and codebase.'
 type: 'External'
 status: 'Live'
-images: [
-      {
-	"title": "The landing screen.",
-	"description": "The landing screen.",
-	"url": "../../assets/projects/nissan-recalls/0.png",
-	"contentType": "image/png"
-},{
-	"title": "Recalls list screen.",
-	"description": "Recalls list screen.",
-	"url": "../../assets/projects/nissan-recalls/1.png",
-	"contentType": "image/png"
-},{
-	"title": "Recalls details screen.",
-	"description": "Recalls details screen.",
-	"url": "../../assets/projects/nissan-recalls/2.png",
-	"contentType": "image/png"
-}]
+images:
+  [
+    {
+      title: 'The landing screen.',
+      url: '../../assets/projects/nissan-recalls/0.png',
+      contentType: 'image/png'
+    },
+    {
+      title: 'Recalls list screen.',
+      url: '../../assets/projects/nissan-recalls/1.png',
+      contentType: 'image/png'
+    },
+    {
+      title: 'Recalls details screen.',
+      url: '../../assets/projects/nissan-recalls/2.png',
+      contentType: 'image/png'
+    }
+  ]
 link: 'https://www.nissanusa.com/recalls-vin/#/Home'
 color: '#c6244a'
 ---

@@ -9,19 +9,19 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Screenshot of the Homepage',
-      'url': '../../assets/projects/trueroof/0.png',
-      'contentType': 'image/png'
+      title: 'Screenshot of the Homepage',
+      url: '../../assets/projects/trueroof/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Example of a blog entry',
-      'url': '../../assets/projects/trueroof/1.png',
-      'contentType': 'image/png'
+      title: 'Example of a blog entry',
+      url: '../../assets/projects/trueroof/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Example of a blog entry with sticky nav',
-      'url': '../../assets/projects/trueroof/2.png',
-      'contentType': 'image/png'
+      title: 'Example of a blog entry with sticky nav',
+      url: '../../assets/projects/trueroof/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://trueroof.app/'

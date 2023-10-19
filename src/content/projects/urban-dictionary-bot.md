@@ -6,12 +6,14 @@ languages: 'NodeJS'
 description: 'I built a simple Messenger bot that gives you the Urban Dictionary definition of a word.'
 type: 'Internal'
 status: 'Unavailable'
-images: [
-      {
-	"title": "Example of how the bot listens and responds",
-	"url": "../../assets/projects/urban-dictionary-bot/0.png",
-	"contentType": "image/png"
-}]
+images:
+  [
+    {
+      title: 'Example of how the bot listens and responds',
+      url: '../../assets/projects/urban-dictionary-bot/0.png',
+      contentType: 'image/png'
+    }
+  ]
 link: 'https://www.messenger.com/t/urbandictionarybot'
 gitUrl: 'https://github.com/brandon-pereira/urban-dictionary-bot'
 color: '#0584fc'

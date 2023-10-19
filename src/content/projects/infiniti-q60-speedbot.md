@@ -9,14 +9,14 @@ status: 'Unavailable'
 images:
   [
     {
-      'title': 'Example of what happens when you hit random 0-60 time.',
-      'url': '../../assets/projects/infiniti-q60-speedbot/0.png',
-      'contentType': 'image/png'
+      title: 'Example of what happens when you hit random 0-60 time.',
+      url: '../../assets/projects/infiniti-q60-speedbot/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Example of how the suggestions work. They are based on users input.',
-      'url': '../../assets/projects/infiniti-q60-speedbot/1.png',
-      'contentType': 'image/png'
+      title: 'Example of how the suggestions work. They are based on users input.',
+      url: '../../assets/projects/infiniti-q60-speedbot/1.png',
+      contentType: 'image/png'
     },
 	{
 		title: "Video showing the users flow.",

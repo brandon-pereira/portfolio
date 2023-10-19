@@ -6,12 +6,14 @@ languages: 'Javascript (ES6+), CSS'
 description: 'I built a quick and simple tool to help calculate the number of milliseconds in a given time (or vice versa).'
 type: 'Internal'
 status: 'Live'
-images: [
-      {
-	"title": "Example of the interface",
-	"url": "../../assets/projects/milliseconds-calculator/0.png",
-	"contentType": "image/png"
-}]
+images:
+  [
+    {
+      title: 'Example of the interface',
+      url: '../../assets/projects/milliseconds-calculator/0.png',
+      contentType: 'image/png'
+    }
+  ]
 link: 'https://branclon.com/milliseconds-calculator/'
 gitUrl: 'https://github.com/brandon-pereira/milliseconds-calculator'
 color: '#b41ca4'

@@ -9,22 +9,19 @@ status: 'Unavailable'
 images:
   [
     {
-      'title': 'Header Area',
-      'description': 'Header Area',
-      'url': '../../assets/projects/portfolio-v2/0.png',
-      'contentType': 'image/png'
+      title: 'Header Area',
+      url: '../../assets/projects/portfolio-v2/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Projects View Area',
-      'description': 'Projects View Area',
-      'url': '../../assets/projects/portfolio-v2/1.png',
-      'contentType': 'image/png'
+      title: 'Projects View Area',
+      url: '../../assets/projects/portfolio-v2/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Skills Accordion Area',
-      'description': 'Skills Accordion Area',
-      'url': '../../assets/projects/portfolio-v2/2.png',
-      'contentType': 'image/png'
+      title: 'Skills Accordion Area',
+      url: '../../assets/projects/portfolio-v2/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://branclon.com/'

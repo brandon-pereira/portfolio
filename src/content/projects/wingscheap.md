@@ -9,22 +9,19 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Mobile view of landing screen',
-      'description': 'Mobile view of landing screen',
-      'url': '../../assets/projects/wingscheap/0.png',
-      'contentType': 'image/png'
+      title: 'Mobile view of landing screen',
+      url: '../../assets/projects/wingscheap/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Desktop view of landing screen',
-      'description': 'Desktop view of landing screen',
-      'url': '../../assets/projects/wingscheap/1.png',
-      'contentType': 'image/png'
+      title: 'Desktop view of landing screen',
+      url: '../../assets/projects/wingscheap/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Mobile view of results screen',
-      'description': 'Mobile view of results screen',
-      'url': '../../assets/projects/wingscheap/2.png',
-      'contentType': 'image/png'
+      title: 'Mobile view of results screen',
+      url: '../../assets/projects/wingscheap/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://branclon.com/wings-cheap'

@@ -9,19 +9,19 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Configurator Mobile Experience',
-      'url': '../../assets/projects/nissaninfiniti-shopping-tools/0.png',
-      'contentType': 'image/png'
+      title: 'Configurator Mobile Experience',
+      url: '../../assets/projects/nissaninfiniti-shopping-tools/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Inventory Page',
-      'url': '../../assets/projects/nissaninfiniti-shopping-tools/1.png',
-      'contentType': 'image/png'
+      title: 'Inventory Page',
+      url: '../../assets/projects/nissaninfiniti-shopping-tools/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Configurator Desktop Experience',
-      'url': '../../assets/projects/nissaninfiniti-shopping-tools/2.png',
-      'contentType': 'image/png'
+      title: 'Configurator Desktop Experience',
+      url: '../../assets/projects/nissaninfiniti-shopping-tools/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'https://nissanusa.com/shopping-tools/build-price'

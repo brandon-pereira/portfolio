@@ -9,22 +9,19 @@ status: 'Live'
 images:
   [
     {
-      'title': 'Packages screen, demonstrating conflict manager.',
-      'description': 'Packages screen, demonstrating conflict manager.',
-      'url': '../../assets/projects/nissan-responsive-website-redesign/0.png',
-      'contentType': 'image/png'
+      title: 'Packages screen, demonstrating conflict manager.',
+      url: '../../assets/projects/nissan-responsive-website-redesign/0.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Mobile navigation and versions page.',
-      'description': 'Mobile navigation and versions page.',
-      'url': '../../assets/projects/nissan-responsive-website-redesign/1.png',
-      'contentType': 'image/png'
+      title: 'Mobile navigation and versions page.',
+      url: '../../assets/projects/nissan-responsive-website-redesign/1.png',
+      contentType: 'image/png'
     },
     {
-      'title': 'Desktop navigation and versions page.',
-      'description': 'Desktop navigation and versions page.',
-      'url': '../../assets/projects/nissan-responsive-website-redesign/2.png',
-      'contentType': 'image/png'
+      title: 'Desktop navigation and versions page.',
+      url: '../../assets/projects/nissan-responsive-website-redesign/2.png',
+      contentType: 'image/png'
     }
   ]
 link: 'http://nissanusa.com/buildyournissan'
