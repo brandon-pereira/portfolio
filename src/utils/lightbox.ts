@@ -25,7 +25,6 @@ class Lightbox {
     this.$el = document.querySelector('[data-lightbox-container]')!;
     this.$asset = this.$el.querySelector('[data-asset]')!;
     this.$description = this.$el.querySelector('[data-description]')!;
-    this.findAndAttachListeners();
     this.events();
   }
 
@@ -50,16 +49,6 @@ class Lightbox {
     this.$asset.innerHTML = '';
     this.$description.innerHTML = '';
     this.$el.classList.remove('opening', 'open');
-  }
-
-  findAndAttachListeners() {
-    const elements = document.querySelectorAll<SourceElement>(
-      `[${Lightbox.dataAttribute}]:not([${Lightbox.dataInitAttribute}])`
-    );
-    elements.forEach(el => {
-      el.setAttribute(Lightbox.dataInitAttribute, 'true');
-      el.addEventListener('click', () => this.open(el));
-    });
   }
 
   private async events() {

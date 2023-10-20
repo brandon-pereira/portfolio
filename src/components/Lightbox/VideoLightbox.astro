@@ -19,8 +19,18 @@ const { src, description } = Astro.props;
 
 <script>
   import Lightbox from '../../utils/lightbox';
+
   document.addEventListener('astro:page-load', () => {
-    // TODO: only run on current
-    new Lightbox();
+    const videos = document.querySelectorAll<HTMLVideoElement>(
+      'video[data-lightbox]'
+    );
+
+    const lightbox = new Lightbox();
+    // Handle clicks on each button.
+    videos.forEach(video => {
+      video.addEventListener('click', () => {
+        lightbox.open(video);
+      });
+    });
   });
 </script>

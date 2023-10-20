@@ -34,8 +34,17 @@ const thumb = await getImage({
 
 <script>
   import Lightbox from '../../utils/lightbox';
+
   document.addEventListener('astro:page-load', () => {
-    // TODO: only run on current
-    new Lightbox();
+    const images =
+      document.querySelectorAll<HTMLImageElement>('img[data-lightbox]');
+
+    const lightbox = new Lightbox();
+    // Handle clicks on each button.
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        lightbox.open(image);
+      });
+    });
   });
 </script>
