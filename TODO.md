@@ -1,16 +1,7 @@
 # TODO
 
-## High
-
-- [ ] new screenshots for apps
-
-## Medium
-
-- [ ] Astro tribute
+- [ ] review indexing data https://search.google.com/search-console?resource_id=sc-domain%3Abranclon.com
 - [ ] more fun about me
-
-## Low
-
 - [ ] Add PWA - **https://github.com/tatethurston/astrojs-service-worker**
 - [ ] Logo from AI to Figma
 - [ ] Skills section
@@ -19,3 +10,4 @@
 - [ ] add blog?
 - [ ] portfolio post on linkedin
 - [ ] can move static pages to astro??
+-

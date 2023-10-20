@@ -1,6 +1,8 @@
 ---
 import Logo from '@components/Logo.astro';
 import Typewriter from '@components/Typewriter.astro';
+import AstroImage from 'src/assets/astro.png';
+import { Image } from 'astro:assets';
 ---
 
 <footer>
@@ -8,23 +10,35 @@ import Typewriter from '@components/Typewriter.astro';
     <div>
       Website designed, built, and maintained by Brandon Pereira<Typewriter />
     </div>
-    <a
-      href="https://github.com/brandon-pereira"
-      target="_blank"
-      aria-label="GitHub"
-    >
-      <Logo
-        class="footerLogo"
-        size={50}
-        colors={{
-          outerFront: '#0f0',
-          outerRight: '#000',
-          innerBack: '#0f0',
-          innerLeft: '#000',
-          innerBottom: '#000'
-        }}
-      />
-    </a>
+    <div class="logos">
+      <a
+        href="https://github.com/brandon-pereira"
+        target="_blank"
+        aria-label="GitHub"
+      >
+        <Logo
+          class="footerLogo"
+          size={75}
+          colors={{
+            outerFront: '#0f0',
+            outerRight: '#000',
+            innerBack: '#0f0',
+            innerLeft: '#000',
+            innerBottom: '#000'
+          }}
+        />
+      </a>
+      <div class="plus">+</div>
+      <a href="https://astro.build/" target="_">
+        <Image
+          src={AstroImage}
+          quality="max"
+          height={75}
+          alt="Astro Logo"
+          class="astro"
+        />
+      </a>
+    </div>
   </div>
 </footer>
 
@@ -46,8 +60,26 @@ import Typewriter from '@components/Typewriter.astro';
     text-align: center;
   }
 
-  .footerLogo {
-    margin: 0 auto;
-    background: red;
+  .logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .plus {
+    font-size: 2rem;
+    margin: 0 1rem;
+  }
+
+  .astro {
+    animation: 1s shake infinite alternate;
+  }
+  @keyframes shake {
+    from {
+      transform: rotate(13deg);
+    }
+    to {
+      transform: rotate(-13deg);
+    }
   }
 </style>
