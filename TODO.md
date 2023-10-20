@@ -6,7 +6,6 @@
 - [ ] apps section animations
 - [ ] new screenshots for apps
 - [ ] apps get button
-- [ ] fix contact me buttons broken in prod
 
 ## Medium
 
