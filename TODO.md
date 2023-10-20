@@ -2,7 +2,6 @@
 
 ## High
 
-- [ ] lightbox cleanup listeners
 - [ ] apps section animations
 - [ ] new screenshots for apps
 - [ ] apps get button
