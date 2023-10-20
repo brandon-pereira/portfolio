@@ -8,7 +8,6 @@
 
 - [ ] Astro tribute
 - [ ] more fun about me
-- [ ] portfolio post in projects
 
 ## Low
 
