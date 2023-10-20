@@ -2,9 +2,7 @@
 
 ## High
 
-- [ ] apps section animations
 - [ ] new screenshots for apps
-- [ ] apps get button
 
 ## Medium
 
