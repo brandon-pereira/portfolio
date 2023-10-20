@@ -3,7 +3,7 @@ id: 'wreno-1-dot-0'
 title: 'Wreno App'
 date: '2022-09-01T00:00:00.000Z'
 languages: 'CSS, TypeScript, React Native, React'
-description: 'I lead the engineering efforts for the Wreno rebranding. We used this time to reduce technical debt, improve lighthouse and SEO ratings, and standardize our tech stack.'
+description: "I spearheaded Wreno's app development, from MVP conception to team expansion, enhancing features, setting the foundation for growth."
 type: 'External'
 status: 'Live'
 images:
@@ -28,16 +28,16 @@ link: 'https://wreno.io/'
 color: '#C9FF01'
 ---
 
-I was the first technical hire for Wreno. I was hired as a technical lead, but quickly they felt that I was over-qualified and would be a great fit as the Director of Engineering.
+I was the inaugural technical hire for Wreno, initially brought on as a technical lead. However, it quickly became evident that my skills exceeded the role, leading to my appointment as the Director of Engineering.
 
-When I joined, they had no technical infrastructure setup. They had a website built by a contractor hosted in AWS, but otherwise they had no tech established. They were leveraging several third-party tools and connecting them together to establish a end-to-end solution, but they were increasingly running into scaling issues that were quickly eating into their margins.
+Upon joining, I found the company lacked a solid technical infrastructure. While they had a website hosted on AWS by a contractor, there was little else in terms of established tech. They relied on various third-party tools cobbled together for an end-to-end solution, but scaling issues were eroding their margins.
 
-My first immediate task was to work with the two founders and a designer and iterate on what their product would look like. This included what features were feasible for an MVP, ensuring we planned ahead and considered future feature requests, and ensuring we could launch something within 6 months (to resolve the scaling issues). The first month mainly consisted of me strategizing on a tech stack, planning the database design, and building out a detailed estimate and scope of work.
+My immediate focus was collaborating with the founders and a designer to iterate on the product's vision. This involved determining feasible MVP features, anticipating future requests, and ensuring a launch within six months to address scaling challenges. The first month was primarily spent on strategizing the tech stack, designing the database, and creating a detailed estimate and scope of work.
 
-Once we had reached a concrete set of requirements and timeline, we needed to hire. I had to hire 5 frontend Web-React engineers, 1 backend engineer, and 3 React Native engineers. This took a considerable amount of time, but with each hire, our velocity was increased significantly. Having lots of experience scaling teams, this wasn't the hardest part, as I knew how to focus the engineers to avoid overlapping and duplicating work.
+Once we had clear requirements and a timeline, it was time to hire. I brought on board five frontend Web-React engineers, one backend engineer, and three React Native engineers. This process was time-consuming, but each addition significantly boosted our velocity. Given my experience in scaling teams, this wasn't the most challenging aspect. I knew how to focus the engineers to avoid redundant work.
 
-After 6 months, as planned, we had fully finished development of the MVP, including testing and bug fixing. This alone was a huge feat, but by this time we were now onto the next challenge which was migrating all our users off the existing app onto our in house app. This consisted of several internal trials with power users to test our email campaigns, aided guides, and support to help report/resolve any gaps in the migration.
+As planned, after six months, we successfully completed the MVP's development, including testing and bug fixing. This was a monumental achievement. However, we now faced the task of migrating all users from the existing app to our in-house solution. This entailed extensive internal trials with power users, testing email campaigns, providing guides, and offering support to address any migration gaps.
 
-After another 2 months, all users of our app were successfully migrated and we had also simultaneously shipped several new features to expand the apps capabilities.
+In another two months, all app users were seamlessly transitioned, and we had also introduced several new features, expanding the app's capabilities.
 
-I am very proud of this project, as it's the largest product I single handedly managed from a technical perspective start to finish. We have since hired a few more technical leads who have helped shepard and grow the product, all building off my original plans.
+I take immense pride in this project, as it's the largest product I've managed from a technical standpoint, from inception to completion. We've since brought on additional technical leads who have contributed to the product's growth, all building upon my initial plans.
