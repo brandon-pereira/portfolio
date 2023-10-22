@@ -2,6 +2,7 @@
 
 - [ ] review indexing data https://search.google.com/search-console?resource_id=sc-domain%3Abranclon.com
 - [ ] more fun about me
+- [ ] overflow-x android
 - [ ] Add PWA - **https://github.com/tatethurston/astrojs-service-worker**
 - [ ] Logo from AI to Figma
 - [ ] Skills section
