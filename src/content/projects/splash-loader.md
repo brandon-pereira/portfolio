@@ -14,7 +14,6 @@ images:
       contentType: 'image/png'
     }
   ]
-link: 'https://branclon.com/showcase/splash-loader/'
 gitUrl: 'https://github.com/brandon-pereira/splash-screen'
 color: '#f304b3'
 ---

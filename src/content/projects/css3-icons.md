@@ -24,7 +24,6 @@ images:
       contentType: 'image/png'
     }
   ]
-link: 'https://branclon.com/showcase/icons/'
 gitUrl: 'https://github.com/brandon-pereira/css3-icons'
 color: '#fbe314'
 ---

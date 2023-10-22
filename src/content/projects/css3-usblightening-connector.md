@@ -14,7 +14,6 @@ images:
       contentType: 'image/png'
     }
   ]
-link: 'https://branclon.com/showcase/usb'
 color: '#b0b04e'
 ---
 

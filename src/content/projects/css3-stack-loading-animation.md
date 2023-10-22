@@ -14,7 +14,6 @@ images:
       contentType: 'image/png'
     }
   ]
-link: 'https://branclon.com/showcase/stack-loading'
 color: '#7f7f7f'
 ---
 

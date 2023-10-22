@@ -24,7 +24,6 @@ images:
       contentType: 'image/png'
     }
   ]
-link: 'https://branclon.com/tv-tracker/'
 gitUrl: 'https://github.com/brandon-pereira/tv-tracker'
 color: '#1c8ce3'
 ---
