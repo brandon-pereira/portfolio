@@ -1,5 +1,6 @@
 # TODO
 
+- [ ] optimize errors
 - [ ] more fun about me
 - [ ] overflow-x android
 - [ ] Add PWA - **https://github.com/tatethurston/astrojs-service-worker**
