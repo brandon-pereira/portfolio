@@ -45,8 +45,9 @@ const appsCollection = defineCollection({
       id: z.string(),
       appName: z.string(),
       icon: image(),
-      link: z.string().url(),
+      link: z.string().url().optional(),
       theme: z.string(),
+      unavailable: z.boolean().optional(),
       images: z
         .array(z.object({ url: image(), title: z.string() }))
         .optional()

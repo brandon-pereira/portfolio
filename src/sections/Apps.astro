@@ -39,9 +39,13 @@ const apps = await getCollection('apps');
                   quality={100}
                   class="icon"
                 />
-                <a class="cta" href={app.data.link} target="_">
-                  get
-                </a>
+                {app.data.link ? (
+                  <a class="cta" href={app.data.link} target="_">
+                    get
+                  </a>
+                ) : (
+                  ''
+                )}
               </div>
               <div class="content-column">
                 <h2>{app.data.appName}</h2>
