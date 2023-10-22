@@ -5,7 +5,7 @@ date: '2017-02-01T00:00:00.000Z'
 languages: 'NodeJS, MongoDB, Javascript (ES6+), HTML, A11Y, SEO, CSS'
 description: "I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!"
 type: 'Internal'
-status: 'Live'
+status: 'Unavailable'
 images:
   [
     {
@@ -24,7 +24,6 @@ images:
       contentType: 'image/png'
     }
   ]
-link: 'https://branclon.com/wings-cheap'
 gitUrl: 'https://github.com/brandon-pereira/wings-cheap'
 color: '#0572f6'
 ---
