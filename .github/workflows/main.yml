@@ -30,6 +30,7 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
           script_stop: true
+          debug: true
           script: |
             cd www/portfolio
             git checkout .
