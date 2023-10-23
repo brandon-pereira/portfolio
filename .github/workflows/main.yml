@@ -33,6 +33,7 @@ jobs:
           script_stop: true
           debug: true
           script: |
+            exec bash
             cd /home/www/portfolio
             git checkout .
             git pull
