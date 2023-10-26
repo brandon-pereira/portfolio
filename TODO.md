@@ -1,8 +1,7 @@
 # TODO
 
-- [ ] optimize errors
+- [ ] www redirects broken
 - [ ] more fun about me
-- [ ] overflow-x android
 - [ ] Add PWA - **https://github.com/tatethurston/astrojs-service-worker**
 - [ ] Logo from AI to Figma
 - [ ] Skills section
