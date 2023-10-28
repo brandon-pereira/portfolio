@@ -115,7 +115,7 @@ const Content = Astro.props.content;
     --border-radius: 20px;
     --content-gap: 20px;
     border-radius: var(--border-radius);
-    color: #fff;
+    color: var(--color);
     max-width: var(--max-width);
     margin: 0 auto 5rem;
     &:before {
@@ -199,6 +199,7 @@ const Content = Astro.props.content;
     }
   }
   .title {
+    color: #fff;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     padding: 5px 10px;

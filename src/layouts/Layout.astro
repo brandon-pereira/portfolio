@@ -47,7 +47,16 @@ import clon from 'src/assets/clon.svg';
         --font-monospace: 'Press Start 2P', monospace;
         --max-width: min(100vw - 36px, 1200px);
         --background-color: #151515;
+        --color: #fff;
+        --link-color: #2ea3ff;
       }
+      /* @media (prefers-color-scheme: light) {
+        :root {
+          --background-color: #e6f5ff;
+          --color: #000;
+          --link-color: #085188;
+        }
+      } */
       html {
         font-family: var(--font-sansserif);
         background-color: var(--background-color);
@@ -60,7 +69,7 @@ import clon from 'src/assets/clon.svg';
       }
 
       a {
-        color: #2ea3ff;
+        color: var(--link-color);
       }
     </style>
     <BootstrapLightbox />

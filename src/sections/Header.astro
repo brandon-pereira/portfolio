@@ -24,13 +24,11 @@ const words = ['websites', 'apps', 'teams', 'software', 'all the things!'];
 </header>
 
 <style>
-  :root {
+  header {
     --grid-bg: #041724;
     --grid-bg-1: rgba(255, 255, 255, 0.01);
     --grid-bg-2: rgba(255, 255, 255, 0.02);
-  }
-
-  header {
+    --text-color: #1e7abc;
     font-family: var(--font-monospace);
     display: flex;
     align-items: center;
@@ -76,7 +74,7 @@ const words = ['websites', 'apps', 'teams', 'software', 'all the things!'];
   .name span:before {
     content: attr(data-letter);
     text-shadow: none;
-    background-color: #1e7abc;
+    background-color: var(--text-color);
     background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.2)),
       linear-gradient(
         #fff 1px,
@@ -146,7 +144,7 @@ const words = ['websites', 'apps', 'teams', 'software', 'all the things!'];
     bottom: 0;
 
     text-shadow:
-      1px 1px 0px #1e7abc,
+      1px 1px 0px color-mix(in srgb, var(--text-color) 80%, #000),
       2px 2px #000,
       -2px -2px #000;
     filter: blur(2px);
@@ -166,8 +164,19 @@ const words = ['websites', 'apps', 'teams', 'software', 'all the things!'];
     translate: -50%;
     rotate: 45deg;
     border-radius: 0 0 5px 0;
-    box-shadow: 3px 3px #fff;
+    border: 0px solid #fff;
+    border-width: 0 2px 2px 0;
+    filter: drop-shadow(2px 2px #000);
   }
+
+  /* @media (prefers-color-scheme: light) {
+    header {
+      --grid-bg: #288fd9;
+      --grid-bg-1: rgba(0, 0, 0, 0.05);
+      --grid-bg-2: rgba(0, 0, 0, 0.04);
+      --text-color: #155481;
+    }
+  } */
 
   @keyframes bgScroll {
     from {
