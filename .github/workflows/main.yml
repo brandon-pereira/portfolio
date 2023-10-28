@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
+      - run: echo "NVMRC=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
       - name: Setup Environment
         uses: actions/setup-node@v3
