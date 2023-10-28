@@ -1,7 +1,17 @@
-## About Me
+# About Me
 
-I’m a full-stack developer specializing in front-end web development. I currently live in Calgary, Alberta and am employed by [Wreno](https://www.wreno.io/). With several years of experience, I have gained a very strong understanding of technical skills as well as managerial skills. I graduated from [SAIT Polytechnic](https://www.sait.ca/) with a diploma in object-oriented software development and achieved several awards for exceptional grades. I have a passion for programming and have been programming since 2006.
+Greetings! I'm Brandon Pereira, a seasoned full-stack engineer with a strong focus on front-end web development. Over the years, I've honed my skills in a range of technologies including React, React Native, TypeScript, JavaScript, CSS, HTML, and NodeJS.
 
-### What I'm up to
+## Professional Journey
 
-Currently I’m working full-time as a Director of Engineering. On top of this, I’m also contributing to [open source projects](https://github.com/brandon-pereira), volunteering at the [Calgary Public Libraries](https://calgarylibrary.ca/) Coder Dojo program, and attending/hosting Meetups related to web and software development.
+With a career spanning several years, I've not only led teams of engineers but also overseen projects from inception to completion, effectively managing technical debt, infrastructure, and documentation. Additionally, I'm well-versed in the intricacies of technical hiring, onboarding, and offboarding.
+
+I'm a proud graduate with honors from the Southern Alberta Institute of Technology (SAIT), and my journey in programming began in 2006. As a Canadian citizen, I'm currently dedicated to my role as the Director of Engineering at Wreno, where I'm instrumental in driving technical excellence.
+
+Beyond my professional pursuits, I'm deeply involved in the tech community. You'll find me contributing to open-source projects on GitHub, volunteering at the Calgary Public Libraries Coder Dojo program, and actively participating in web and software development meetups.
+
+## Personal Insights
+
+On a personal note, I'm happily married to my wife Emma. Together, we share our home with Astro, an aptly named dog inspired by my passion for software development. Our feline friend, Moomies, is a cherished rescue. We call the vibrant city of Calgary, Alberta, our home.
+
+Beyond the screen, I find joy in woodwork, gaming, hiking, skiing, pedal biking, and exploring personal finance strategies. I believe in a holistic approach to life, where professional growth and personal interests come together seamlessly.
