@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<Layout title="Project Details">
+<Layout title={`Project Details - ${entry?.data.title}`}>
   <ProjectBackButton />
   <ProjectsHeader />
   <ProjectDetails project={entry!} content={Content} />
