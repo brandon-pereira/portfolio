@@ -14,10 +14,11 @@ const url = '/projects/' + slug;
 const thumbnail = images?.[0];
 ---
 
-<div
+<a
   class="container"
   data-project-tile={slug}
   transition:name={`project-tile-${slug}`}
+  href={url}
 >
   <div class="content">
     {
@@ -36,27 +37,21 @@ const thumbnail = images?.[0];
     }
     <div class="title-container">
       <h2 class="title">
-        <a href={url}>{title}</a>
+        <span>{title}</span>
       </h2>
     </div>
     <div class="description">
       <p>{description || ''}</p>
     </div>
-    <Button
-      color={color!}
-      href={url}
-      color={color}
-      aria-label={`Details about ${title}`}
-    >
-      Details
-    </Button>
+    <Button color={color} aria-label={`Details about ${title}`}>Details</Button>
   </div>
-</div>
+</a>
 
 <style define:vars={{ 'primary-color': color }}>
   .container {
     display: block;
     position: relative;
+    text-decoration: none;
     --gap: 10px;
     --border-radius: 20px;
     --content-gap: 20px;
@@ -166,23 +161,23 @@ const thumbnail = images?.[0];
 </style>
 
 <script define:vars={{ url }}>
-document.addEventListener(
-  'astro:after-swap',
-  () => {
-    if (!location.pathname.includes(url)) {
-      return;
-    }
-    const $back = document.querySelector('[data-project-back-button]');
-    // Add a click event listener to the back button
-    $back?.addEventListener(
-      'click',
-      e => {
-        e.preventDefault();
-        history.back();
-      },
-      false
-    );
-  },
-  { once: true }
-);
+  document.addEventListener(
+    'astro:after-swap',
+    () => {
+      if (!location.pathname.includes(url)) {
+        return;
+      }
+      const $back = document.querySelector('[data-project-back-button]');
+      // Add a click event listener to the back button
+      $back?.addEventListener(
+        'click',
+        e => {
+          e.preventDefault();
+          history.back();
+        },
+        false
+      );
+    },
+    { once: true }
+  );
 </script>

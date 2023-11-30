@@ -1,27 +1,33 @@
 ---
 import type { HTMLAttributes } from 'astro/types';
 // Inspired by https://uiverse.io/namecho/slippery-moth-23
-interface Props extends HTMLAttributes<'a'> {
-  color?: string | undefined;
-  href: string;
+
+interface AdditionalProps {
   isDarkColor?: boolean;
+  color?: string | undefined;
 }
-const {
-  color,
-  style,
-  isDarkColor,
-  href,
-  class: className,
-  ...rest
-} = Astro.props;
+type Props =
+  | (AdditionalProps & { href: string } & HTMLAttributes<'a'>)
+  | (AdditionalProps & HTMLAttributes<'button'>);
+
+const { color, style, isDarkColor, class: className, ...rest } = Astro.props;
 ---
 
-<a
-  class:list={['button--container', className]}
-  href={href}
-  style={style}
-  {...rest}><slot /></a
->
+{
+  'href' in rest ? (
+    <a class:list={['button--container', className]} style={style} {...rest}>
+      <slot />
+    </a>
+  ) : (
+    <button
+      class:list={['button--container', className]}
+      style={style}
+      {...rest}
+    >
+      <slot />
+    </button>
+  )
+}
 
 <style
   define:vars={{
