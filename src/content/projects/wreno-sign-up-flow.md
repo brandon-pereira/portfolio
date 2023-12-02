@@ -2,7 +2,7 @@
 id: 'wreno-sign-up-flow'
 title: 'Wreno: Sign Up Flow'
 date: '2022-06-15T00:00:00.000Z'
-languages: 'NodeJS, React'
+languages: 'NodeJS, React, Postgres, Typescript'
 description: "The sign-up flow was my first contribution to Wreno after joining the company. My role included hiring, gathering business requirements, and designing the database and backend services for storing users' accounts, file uploads, and data."
 type: 'External'
 status: 'Live'
