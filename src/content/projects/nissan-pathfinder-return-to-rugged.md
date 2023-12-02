@@ -6,7 +6,7 @@ languages: 'Animation, Javascript (ES6+), React'
 description: 'Our team had the opportunity to work on a modern campaign for our Nissan client. We utilized several modern tools like ThreeJS, Gatsby, and ReactJS. These tools allowed us to deliver an immersive and impressive experience to users.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Landing Section',

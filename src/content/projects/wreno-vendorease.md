@@ -7,7 +7,7 @@ description: 'Launched VendorEase at Wreno, a swift pivot for contractor complia
 type: 'External'
 status: 'Live'
 isPinned: true
-images:
+media:
   [
     {
       title: 'App Home Screen',

@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+), CSS'
 description: 'I was tasked with rebuilding the Nissan and Infiniti Recalls tools to comply with their new brand guidelines. I took the opportunity to improve the responsiveness, appearance, and codebase.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'The landing screen.',

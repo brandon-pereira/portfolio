@@ -6,7 +6,7 @@ languages: 'CSS'
 description: 'When I was still in school, I loved dabbling with CSS. I would build whole applications interfaces just for fun. One day, I saw someone recreate iOS icons using CSS. I was inspired. '
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Google Chrome icon made with pure CSS',

@@ -9,9 +9,9 @@ interface Props {
 
 const { project } = Astro.props;
 const { data, slug } = project;
-const { title, description, images, color } = data;
+const { title, description, media, color } = data;
 const url = '/projects/' + slug;
-const thumbnail = images?.[0];
+const thumbnail = media?.[0];
 ---
 
 <a

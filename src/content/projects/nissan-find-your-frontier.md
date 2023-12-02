@@ -5,7 +5,7 @@ date: '2021-10-01T00:00:00.000Z'
 description: 'Our team built and launched a very immersive campaign for our Nissan client. The project also leaped forward for my career as a Technology Director.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of the landing screen for the experience',

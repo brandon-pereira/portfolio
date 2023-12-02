@@ -6,7 +6,7 @@ languages: 'NodeJS, MongoDB'
 description: 'I built a chatbot for INFINITI Global. It allows users to learn about their new QX50 vehicle. It uses natural language processing to figure out users intent and is localized to Canadian English and French, as well as American English.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of how the suggestions work. They are based on users input.',

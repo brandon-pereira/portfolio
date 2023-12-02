@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+), MongoDB, NodeJS'
 description: 'A web application for getting random cat pictures. Powered by service workers. It demonstrates offline caching, web push notifications, and progressive enhancement. '
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of the UI',

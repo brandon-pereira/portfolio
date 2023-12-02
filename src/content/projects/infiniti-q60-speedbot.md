@@ -6,7 +6,7 @@ languages: 'NodeJS'
 description: "I built a chatbot for INFINITI USA. It allows you to compare their Q60's 0-60 speed against its competition. It ended up receiving over a thousand users within its first two days of launching."
 type: 'External'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'Example of what happens when you hit random 0-60 time.',

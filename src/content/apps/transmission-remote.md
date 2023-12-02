@@ -4,7 +4,7 @@ appName: 'Transmission Remote'
 link: 'https://github.com/brandon-pereira/transmission-remote/releases'
 icon: '../../assets/apps/transmission-remote/icon.png'
 theme: 'remote'
-images:
+media:
   [
     {
       title: 'Mac UI',

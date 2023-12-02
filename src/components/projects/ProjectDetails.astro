@@ -10,8 +10,8 @@ interface Props {
   content: AstroComponentFactory;
 }
 const { data, slug } = Astro.props.project;
-const { link, color, images, gitUrl, title, languages } = data;
-const thumbnail = images?.[0];
+const { link, color, media, gitUrl, title, languages } = data;
+const thumbnail = media?.[0];
 const Content = Astro.props.content;
 ---
 
@@ -82,9 +82,9 @@ const Content = Astro.props.content;
         {languages?.map(lang => <div class="language">{lang}</div>)}
       </div>
       {
-        images?.length && (
+        media?.length && (
           <div class="image-container">
-            {images?.map(img =>
+            {media?.map(img =>
               img.contentType !== 'video/mp4' ? (
                 <ImageLightbox
                   description={img.title}

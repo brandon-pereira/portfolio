@@ -6,7 +6,7 @@ languages: 'CSS'
 description: 'I developed a stack loading effect using CSS3 animations. This was for an internal project of mine, but I liked it enough to showcase it on its own.'
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Better to see live version',

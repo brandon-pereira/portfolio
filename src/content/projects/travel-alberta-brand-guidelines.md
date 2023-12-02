@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+), CSS'
 description: 'I built the internal brand guidelines website for Travel Alberta. This project had a clean state so I got to choose my own tech stack. I put a lot of effort into making the website load as fast as possible as well as look pixel perfect.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of landing page on large screen size',

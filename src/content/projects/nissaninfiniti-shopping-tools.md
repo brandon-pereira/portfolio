@@ -6,7 +6,7 @@ languages: 'GraphQL, HTML, A11Y, SEO, Javascript (ES6+), NodeJS'
 description: 'We were tasked with rebuilding the Nissan and Infiniti shopping tools applications. This was my first major project with the role of Technology Lead.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Configurator Mobile Experience',

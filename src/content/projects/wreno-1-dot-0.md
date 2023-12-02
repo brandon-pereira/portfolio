@@ -6,7 +6,7 @@ languages: 'CSS, TypeScript, React Native, React, NodeJS, Postgres'
 description: "I spearheaded Wreno's app development, from MVP conception to team expansion, enhancing features, setting the foundation for growth."
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'App Home Screen',

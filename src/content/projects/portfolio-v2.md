@@ -6,7 +6,7 @@ languages: 'HTML, A11Y, SEO, CSS, Javascript (ES6+)'
 description: 'I built this portfolio from scratch to showcase my experience with web technologies. I wanted to build a system which was easily maintainable, responsive and used some fun next-level technologies.'
 type: 'Internal'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'Header Area',

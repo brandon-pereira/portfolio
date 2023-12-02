@@ -6,7 +6,7 @@ languages: 'NodeJS'
 description: 'I built a simple Messenger bot that gives you the Urban Dictionary definition of a word.'
 type: 'Internal'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'Example of how the bot listens and responds',

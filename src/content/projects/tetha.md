@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+), CSS, GraphQL, MongoDB, React'
 description: 'I worked with a local entrepreneur to develop a digital wall calendar. He wanted to be able to have a wall-mounted touch-screen monitor that could display current calendar events from multiple Google accounts.'
 type: 'External'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'Close up of the Calendar Interface',

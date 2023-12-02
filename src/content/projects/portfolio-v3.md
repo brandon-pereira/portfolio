@@ -6,7 +6,7 @@ languages: 'CSS, HTML, A11Y, SEO, Javascript (ES6+), NodeJS'
 description: 'The third version of my portfolio was a complete rewrite. The rewrite was done to drastically improve load times, improve search engine rankings, and redesign a couple sections of the site.'
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'The redesigned header',

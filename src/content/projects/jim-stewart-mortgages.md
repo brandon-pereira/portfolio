@@ -6,7 +6,7 @@ languages: 'CSS, HTML, A11Y, SEO, Javascript (ES6+)'
 description: 'I built a contact form and information website for a local mortgage broker'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of the main form',

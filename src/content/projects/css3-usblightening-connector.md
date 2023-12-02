@@ -6,7 +6,7 @@ languages: 'CSS'
 description: 'I developed an Apple lightning cable and USB connector in pure CSS3.'
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Better to see live version',

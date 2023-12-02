@@ -4,7 +4,7 @@ appName: 'BetterDo.'
 link: 'https://betterdo.app/'
 icon: '../../assets/apps/betterdo/icon.png'
 theme: 'betterdo'
-images:
+media:
   [
     {
       title: 'Example of desktop experience',

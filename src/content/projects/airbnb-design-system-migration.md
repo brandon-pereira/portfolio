@@ -7,7 +7,7 @@ description: 'We won Airbnb as a client and I lead the charge on getting our eng
 type: 'External'
 status: 'Live'
 isPinned: true
-images:
+media:
   [
     {
       title: 'AirBnb Personal Settings Screen',

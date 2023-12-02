@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+)'
 description: 'I built a little splash loading animation while I was bored one rainy afternoon. Uses the prototype methodology and supports reopening and closing.'
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of how the loader looks',

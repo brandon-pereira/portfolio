@@ -3,7 +3,7 @@ id: 'wingscheap'
 appName: 'Wings.cheap'
 icon: '../../assets/apps/wingscheap/icon.png'
 theme: 'wings-cheap'
-images:
+media:
   [
     {
       title: 'Desktop view of landing screen',

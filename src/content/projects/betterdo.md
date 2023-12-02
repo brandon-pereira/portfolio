@@ -6,7 +6,7 @@ languages: 'CSS, HTML, A11Y, SEO, Javascript (ES6+)'
 description: 'BetterDo was my take on a todo application. I was unhappy with the alternatives, so I decided to build my own version.'
 type: 'Internal'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'Example on desktop',

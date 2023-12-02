@@ -6,7 +6,7 @@ languages: 'NodeJS, CSS, HTML, A11Y, SEO, Javascript (ES6+), MongoDB'
 description: 'I challenged myself by building an entire photo booth solution for my wedding. The booth creates a photo strip using photos from our DLSR, prints the result automatically, and uploads them to the web leveraging Tensorflow for Facial Recognition.'
 type: 'Internal'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: ' The Fullscreen Photo Viewer',

@@ -7,7 +7,7 @@ description: "Redesigned my portfolio with Astro framework for speed, SEO, and a
 type: 'Internal'
 status: 'Live'
 isPinned: true
-images:
+media:
   [
     {
       title: 'The redesigned header',

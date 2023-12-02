@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+), MongoDB, NodeJS, Animation, CSS, TypeScript, Reac
 description: "I built a web app for organizing and maintaining to-do lists and tasks.  It features has offline support, shared lists, and push notifications. Give it a try if you're looking to declutter your life."
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of desktop experience',

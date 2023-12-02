@@ -6,7 +6,7 @@ languages: 'CSS, Javascript (ES6+), MongoDB, NodeJS, GraphQL, HTML, A11Y, SEO'
 description: 'TvTracker is an application for tracking your TV Shows. It was built to work great on mobile, desktop, and even from your status bar (Mac).'
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Mobile Android Experience',

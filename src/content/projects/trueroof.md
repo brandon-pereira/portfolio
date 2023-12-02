@@ -6,7 +6,7 @@ languages: 'CSS, TypeScript, Animation, HTML, A11Y, SEO, React'
 description: "Transformed a Chicago roofing company's online presence, creating a user-friendly website and implementing a cost-effective blog with enhanced SEO."
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Screenshot of the Homepage',

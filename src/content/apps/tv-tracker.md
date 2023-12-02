@@ -3,7 +3,7 @@ id: 'tv-tracker'
 appName: 'Tv Tracker'
 icon: '../../assets/apps/tv-tracker/icon.png'
 theme: 'tv-tracker'
-images:
+media:
   [
     {
       title: 'Mobile Android Experience',

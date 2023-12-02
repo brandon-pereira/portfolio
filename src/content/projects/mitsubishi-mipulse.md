@@ -6,7 +6,7 @@ languages: 'GraphQL, Javascript (ES6+), NodeJS, Animation, GraphQL, React'
 description: 'Our company was tasked with building a new global website for Mitsubishi. The goal was to make it run in every market but share single source code. My goal was to focus on performance and making the application render more quickly. '
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of some interactive pieces',

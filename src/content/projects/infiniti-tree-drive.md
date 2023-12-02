@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+), Animation, CSS'
 description: 'I built a reveal page for Infinitis winter sales event. For each test drive, they planted a tree in America.'
 type: 'External'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'An example of the landing screen (after animation).',

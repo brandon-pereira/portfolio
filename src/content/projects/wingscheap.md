@@ -6,7 +6,7 @@ languages: 'NodeJS, MongoDB, Javascript (ES6+), HTML, A11Y, SEO, CSS'
 description: "I built a web app for finding cheap wings near you. It allows you to sort by city, price, distance, or by the best wings. Give it a shot the next time you're looking for a cheap eat!"
 type: 'Internal'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'Mobile view of landing screen',

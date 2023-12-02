@@ -6,7 +6,7 @@ languages: 'NodeJS, React, Postgres, Typescript'
 description: "The sign-up flow was my first contribution to Wreno after joining the company. My role included hiring, gathering business requirements, and designing the database and backend services for storing users' accounts, file uploads, and data."
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of Sign Up Flow Step 1',

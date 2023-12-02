@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+), CSS'
 description: 'I built a quick and simple tool to help calculate the number of milliseconds in a given time (or vice versa).'
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Example of the interface',

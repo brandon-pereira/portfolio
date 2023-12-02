@@ -6,7 +6,7 @@ languages: 'NodeJS, MongoDB'
 description: 'After a successful launch of our first Idris project for North America, the client asked if we could add more functionality and launch it in the European Union. '
 type: 'External'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'Example of the recommend a car flow',

@@ -6,7 +6,7 @@ languages: 'CSS, HTML, A11Y, SEO, Javascript (ES6+), React'
 description: 'We had 4 months to rebuild the Nissan USA and Infiniti USA websites. This was a great opportunity to develop and demonstrate time-management skills, planning, and teamwork.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Packages screen, demonstrating conflict manager.',

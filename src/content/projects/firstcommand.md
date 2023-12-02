@@ -6,7 +6,7 @@ languages: 'CSS, GraphQL, Javascript (ES6+), React'
 description: 'My team and I were tasked to rebuild the FirstCommand website to be more modern. We got a blank slate, so we got to take advantage of the latest technologies.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'FirstCommand desktop experience',

@@ -33,8 +33,7 @@ const projectsCollection = defineCollection({
           return _val?.split(',');
         }, z.array(z.string()).optional())
         .optional(),
-      // TODO: rename to media
-      images: z.tuple([ImageMedia]).rest(MediaItem).optional()
+      media: z.tuple([ImageMedia]).rest(MediaItem).optional()
     });
   }
 });
@@ -48,7 +47,7 @@ const appsCollection = defineCollection({
       link: z.string().url().optional(),
       theme: z.string(),
       unavailable: z.boolean().optional(),
-      images: z
+      media: z
         .array(z.object({ url: image(), title: z.string() }))
         .optional()
         .default([])

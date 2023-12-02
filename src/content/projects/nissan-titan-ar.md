@@ -6,7 +6,7 @@ languages: 'MongoDB, NodeJS'
 description: 'I was tasked to build an interactive augmented reality experience for Nissan USA. Facebook recently announced AR experiences for their Messenger platform, so I was asked to use that as a medium for the experience. '
 type: 'External'
 status: 'Unavailable'
-images:
+media:
   [
     {
       title: 'Preview of how the AR experience works',

@@ -6,7 +6,7 @@ languages: 'CSS, HTML, A11Y, SEO, Javascript (ES6+)'
 description: 'I built a quick and simple tool to calculate the number of bytes in a given string'
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Mobile View',

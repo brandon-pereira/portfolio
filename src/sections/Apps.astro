@@ -50,9 +50,9 @@ const apps = await getCollection('apps');
               <div class="content-column">
                 <h2>{app.data.appName}</h2>
                 <Content />
-                {app.data.images?.length && (
+                {app.data.media?.length && (
                   <div class="image-container">
-                    {app.data.images?.map(img => (
+                    {app.data.media?.map(img => (
                       <ImageLightbox
                         description={img.title}
                         src={img.url}

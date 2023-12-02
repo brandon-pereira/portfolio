@@ -6,7 +6,7 @@ languages: 'CSS, TypeScript, HTML, Performance, A11Y, SEO, React'
 description: 'I lead the engineering efforts for the Wreno rebranding. We used this time to reduce technical debt, improve lighthouse and SEO ratings, and standardize our tech stack.'
 type: 'External'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Re-branded Homepage on Desktop',

@@ -6,7 +6,7 @@ languages: 'Javascript (ES6+), CSS'
 description: 'For our capstone project at SAIT four of us developed a point of sale system for Broken City. We put an emphasis on speed, ease of use, and modern design.'
 type: 'Internal'
 status: 'Live'
-images:
+media:
   [
     {
       title: 'Login Screen',
