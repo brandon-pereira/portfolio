@@ -6,6 +6,7 @@ languages: 'CSS, TypeScript, Animation, HTML, A11Y, SEO, React'
 description: 'We won Airbnb as a client and I lead the charge on getting our engineers into their systems. I gained a ton of experience in client relations as well as working in an extremely large codebase.'
 type: 'External'
 status: 'Live'
+isPinned: true
 images:
   [
     {

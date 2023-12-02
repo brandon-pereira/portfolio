@@ -6,6 +6,7 @@ languages: 'CSS, TypeScript, React, NodeJS, Postgres'
 description: 'Launched VendorEase at Wreno, a swift pivot for contractor compliance and sourcing. I oversaw all technical aspects as the head of engineering. We are seeing rapid growth and positive client feedback.'
 type: 'External'
 status: 'Live'
+isPinned: true
 images:
   [
     {

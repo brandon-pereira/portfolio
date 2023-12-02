@@ -6,6 +6,7 @@ languages: 'CSS, HTML, A11Y, SEO, Javascript (ES6+), NodeJS'
 description: "Redesigned my portfolio with Astro framework for speed, SEO, and aesthetics. Markdown files and dynamic views enhance UX. Astro's static generation and asset optimization shine. Named after our dog Astro, it's a perfect fit."
 type: 'Internal'
 status: 'Live'
+isPinned: true
 images:
   [
     {
