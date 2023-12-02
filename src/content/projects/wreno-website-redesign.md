@@ -30,9 +30,7 @@ color: '#DFFE7F'
 
 In early 2023, Wreno made the strategic decision to pivot into a new market. Previously, we were building a solution to connect contractors with property managers.
 
-<!-- TODO: Add link to vendorease article when ready -->
-
-The task of re-branding the website may seem simple, but it was a project running in parallel to us rebuilding our entire product from scratch (article coming soon!), so we had limited resources for the rebranding. We chose to outsource the rebranding and have our internal team focus on the product rebuild.
+The task of re-branding the website may seem simple, but it was a project running in parallel to us [rebuilding our entire product from scratch](./wreno-vendorease), so we had limited resources for the rebranding. We chose to outsource the rebranding and have our internal team focus on the product rebuild.
 
 I managed hiring a contractor to assist in this development while also building out tickets and a project scope in our ticketing software. As part of this, I also made it a priority to integrate this website into our existing frontend monorepo. This ensured we had a unified codebase for our frontend web engineers to manage, leveraging our existing component library (managed through Storybook and Chromatic) to re-use our existing buttons, inputs, etc., and simultaneously re-skin our product and website.
 
