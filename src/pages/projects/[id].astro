@@ -5,7 +5,7 @@ import ProjectsHeader from '@components/projects/ProjectsHeader.astro';
 import Layout from '@layouts/Layout.astro';
 import { getEntry, getCollection } from 'astro:content';
 const { id } = Astro.params;
-const entry = await getEntry('projects', id as any);
+const entry = await getEntry('projects', id);
 const { Content } = await entry!.render();
 
 export async function getStaticPaths() {
