@@ -1,0 +1,59 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
+import BlogContent from './BlogContent.astro';
+import Typewriter from '@components/Typewriter.astro';
+
+interface Props {
+  blogPost: CollectionEntry<'blog'>;
+  content: AstroComponentFactory;
+}
+const { data } = Astro.props.blogPost;
+const { title } = data;
+const Content = Astro.props.content;
+
+const dateFormatter = new Intl.DateTimeFormat('en-CA', {
+  dateStyle: 'long'
+});
+---
+
+<article>
+  <header>
+    <time datetime={data.datePosted.toISOString()}
+      >{dateFormatter.format(data.datePosted)}</time
+    >
+    <h1>{title}<Typewriter /></h1>
+  </header>
+  <BlogContent>
+    <Content />
+  </BlogContent>
+</article>
+
+<style>
+  article {
+    max-width: var(--max-width);
+    margin: 5rem auto;
+    font-family: var(--font-serif);
+    -webkit-font-smoothing: antialiased;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  header {
+    text-align: center;
+    margin: 5rem 0;
+    -webkit-font-smoothing: unset;
+  }
+  time {
+    font-family: var(--font-sansserif);
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1.2;
+    font-family: var(--font-monospace);
+  }
+</style>

@@ -1,0 +1,24 @@
+<div class="content">
+  <slot />
+</div>
+
+<style>
+  .content :global(.astro-code) {
+    font-size: 1rem;
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+  .content :global(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-monospace);
+  }
+  .content :global(table) {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid var(--color);
+    :global(th, td) {
+      text-align: left;
+      border: 1px solid var(--color);
+      padding: 0.2rem;
+    }
+  }
+</style>

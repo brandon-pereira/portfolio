@@ -54,7 +54,16 @@ const appsCollection = defineCollection({
     })
 });
 
+const blogCollection = defineCollection({
+  schema: () =>
+    z.object({
+      title: z.string(),
+      datePosted: z.string().datetime().pipe(z.coerce.date())
+    })
+});
+
 export const collections = {
   projects: projectsCollection,
-  apps: appsCollection
+  apps: appsCollection,
+  blog: blogCollection
 };
