@@ -2,6 +2,9 @@ type LightboxConfig =
   | {
       description?: string;
       src: string;
+      thumbnail: string;
+      height?: number;
+      width?: number;
       video?: false;
     }
   | {
@@ -69,31 +72,41 @@ class Lightbox {
     const config: LightboxConfig = {
       description: json.description || '',
       src: json.src || '',
-      video: srcElement.tagName === 'VIDEO'
+      video: srcElement.tagName === 'VIDEO',
+      width: json.width,
+      height: json.height,
+      thumbnail: srcElement.src
     };
     return config;
   }
 
-  private async renderFromConfig({ src, description, video }: LightboxConfig) {
+  private async renderFromConfig(_config: LightboxConfig) {
     this.$asset.innerHTML = '';
-    const type = video ? 'video' : 'img';
-    const config = {
-      src,
-      autoplay: true,
-      muted: true
-    } as const;
-    const $target = document.createElement(type);
-    // @ts-expect-error let this slide
-    Object.keys(config).forEach((key: keyof typeof config) =>
-      $target.setAttribute(key, `${config[key]}`)
-    );
-    this.$description.innerHTML = description || '';
-    const listenForLoad = new Promise<void>(resolve => {
-      $target.onload = () => resolve();
-      $target.onloadeddata = () => resolve();
-    });
+    const isVideo = _config.video;
+    let $target: HTMLVideoElement | HTMLImageElement;
+
+    if (isVideo) {
+      $target = document.createElement('video');
+      $target.src = _config.src;
+      $target.autoplay = true;
+      $target.muted = true;
+    } else {
+      $target = document.createElement('img');
+      $target.src = _config.thumbnail;
+      if (_config.width || _config.height) {
+        $target.width = _config.width!;
+        $target.height = _config.height!;
+      }
+    }
+    this.$description.innerHTML = _config.description || '';
     this.$asset.appendChild($target);
-    await Promise.race([listenForLoad, sleep(400)]);
+    // If image, lazy load the high res version
+    if (!isVideo) {
+      preloadImage(_config.src).then(() => {
+        $target.src = _config.src;
+      });
+    }
+
     return $target;
   }
 }
@@ -124,15 +137,23 @@ function animateElementOpen($source: SourceElement, $target: TargetElement) {
         width: `${endRect.width}px`
       });
     });
-    sleep(350).finally(() => {
-      document.body.removeChild(ghost);
-      resolve();
-    });
+    ghost.addEventListener(
+      'transitionend',
+      () => {
+        document.body.removeChild(ghost);
+        resolve();
+      },
+      { once: true }
+    );
   });
 }
 
-function sleep(ms: number) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+function preloadImage(src: string) {
+  return new Promise<void>(resolve => {
+    const img = new Image();
+    img.onload = () => resolve();
+    img.src = src;
+  });
 }
 
 export default Lightbox;

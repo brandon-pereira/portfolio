@@ -28,6 +28,8 @@ const thumb = await getImage({
   alt={alt}
   data-lightbox={JSON.stringify({
     src: full.src,
+    width: full.attributes.width,
+    height: full.attributes.height,
     description: alt
   })}
 />
