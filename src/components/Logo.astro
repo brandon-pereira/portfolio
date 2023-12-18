@@ -21,8 +21,8 @@ const { size, styles, class: className }: Props = Astro.props;
 <div
   class={className}
   style={{
-    aspectRatio: '448.9 / 451.1',
-    width: size ? (typeof size === 'number' ? `${size}px` : size) : '100%',
+    aspectRatio: '448.9 / 451.5',
+    height: size ? (typeof size === 'number' ? `${size}px` : size) : '100%',
     '--outer-front': styles?.outerFront ?? 'unset',
     '--outer-right': styles?.outerRight ?? 'unset',
     '--inner-back': styles?.innerBack ?? 'unset',

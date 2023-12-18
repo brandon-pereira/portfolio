@@ -2,6 +2,8 @@
 import Layout from '@layouts/Layout.astro';
 import BlogPost from '@components/blog/BlogPost.astro';
 import { getEntry, getCollection } from 'astro:content';
+import Header from '@components/Header.astro';
+
 const { id } = Astro.params;
 const entry = await getEntry('blog', id);
 const { Content } = await entry!.render();
@@ -15,5 +17,6 @@ export async function getStaticPaths() {
 ---
 
 <Layout title={entry!.data.title}>
+  <Header />
   <BlogPost blogPost={entry} content={Content} />
 </Layout>
