@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPreview from './BlogPreview.astro';
+
+const articles = await getCollection('blog');
+---
+
+<div class="container">
+  <h2 class="title">Featured Blog Posts</h2>
+  <div class="articles">
+    {articles.map(a => <BlogPreview blogArticle={a} />)}
+  </div>
+</div>
+
+<style>
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem auto;
+  }
+  .articles {
+    display: grid;
+    margin: 0 0 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+</style>
