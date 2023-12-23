@@ -2,7 +2,7 @@ const isDev = import.meta.env.DEV;
 
 if (!isDev) {
   window.dataLayer = window.dataLayer || [];
-  function gtag(...args: any[]) {
+  function gtag(..._args: any[]) {
     window.dataLayer.push(arguments);
   }
   gtag('js', new Date());
