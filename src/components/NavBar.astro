@@ -3,44 +3,52 @@ import Logo from './Logo.astro';
 ---
 
 <header data-sticky-header>
-  <a class="back" href="/"><span>&lt;</span>Back</a>
+  <div class="content">
+    <a class="back" href="/"><span>&lt;</span>Back</a>
 
-  <a href="/" class="logo">
-    <Logo
-      aria-label="GitHub"
-      size={50}
-      styles={{
-        strokeColor: '#fff',
-        strokeWidth: '20px',
-        outerFront: 'transparent',
-        outerRight: 'transparent',
-        innerBack: 'transparent',
-        innerLeft: 'transparent',
-        innerBottom: 'transparent'
-      }}
-    />
-  </a>
-  <div></div>
+    <a href="/" class="logo"> <Logo aria-label="GitHub" size={50} /></a>
+    <nav class="links">
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/blog">Blog</a>
+    </nav>
+  </div>
 </header>
 
 <style>
   header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     height: 80px;
-    background: #288fd9;
+    background: #0b466e;
     transition: background 0.4s;
     backdrop-filter: blur(10px);
     color: #fff;
-    padding: 0 1rem;
     position: sticky;
     left: 0;
     right: 0;
     top: 0;
+    z-index: 1;
     &:global(.sticky) {
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+
+      & .logo {
+        --outer-front: transparent;
+        --outer-right: transparent;
+        --inner-back: transparent;
+        --inner-left: transparent;
+        --inner-bottom: transparent;
+        --stroke-color: #fff;
+        --stroke-width: 12px;
+      }
     }
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    height: 100%;
   }
 
   .logo {
@@ -48,6 +56,15 @@ import Logo from './Logo.astro';
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .links {
+    display: flex;
+    gap: 0.5rem;
+    a {
+      display: inline-block;
+      color: #fff;
+    }
   }
 
   .back {

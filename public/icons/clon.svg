@@ -3,31 +3,37 @@
         #clon path {
             stroke-width: var(--stroke-width, 4px);
             stroke: var(--stroke-color, #000);
+            transition: all 0.8s;
         }
         
         .outer-front {
             fill: #288FD9;
             fill: var(--outer-front, #288FD9);
+            transition: fill 0.8s;
         }
 
         .inner-back {
             fill: #0B4C7A;
             fill: var(--inner-back, #0B4C7A);
+            transition: fill 0.8s;
         }
 
         .inner-left {
             fill: #165888;
             fill: var(--inner-left, #165888);
+            transition: fill 0.8s;
         }
 
         .outer-right {
             fill: #288FD9;
             fill: var(--outer-right, #288FD9);
+            transition: fill 0.8s;
         }
 
         .inner-bottom {
             fill: #166196;
             fill: var(--inner-bottom, #166196);
+            transition: fill 0.8s;
         }
     </style>
     <g id="front-and-top">
