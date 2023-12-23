@@ -80,13 +80,17 @@ import Logo from './Logo.astro';
 <script>
   document.addEventListener('astro:page-load', () => {
     const el = document.querySelector('header[data-sticky-header]');
-    if (!el) return;
-    window.addEventListener('scroll', () => {
+    function calc() {
+      if (!el) return;
       if (window.scrollY > 0) {
         el.classList.add('sticky');
       } else {
         el.classList.remove('sticky');
       }
+    }
+    window.addEventListener('scroll', () => {
+      calc();
     });
+    calc();
   });
 </script>
