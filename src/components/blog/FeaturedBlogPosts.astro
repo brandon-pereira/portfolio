@@ -2,13 +2,13 @@
 import { getCollection } from 'astro:content';
 import BlogPreview from './BlogPreview.astro';
 
-const articles = await getCollection('blog');
+const articles = await getCollection('blogPosts');
 ---
 
 <div class="container">
   <h2 class="title">Featured Blog Posts</h2>
   <div class="articles">
-    {articles.map(a => <BlogPreview blogArticle={a} />)}
+    {articles.map(a => <BlogPreview blogPost={a} />)}
   </div>
 </div>
 

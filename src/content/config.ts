@@ -54,7 +54,7 @@ const appsCollection = defineCollection({
     })
 });
 
-const blogCollection = defineCollection({
+const blogPostCollection = defineCollection({
   schema: () =>
     z.object({
       title: z.string(),
@@ -65,5 +65,5 @@ const blogCollection = defineCollection({
 export const collections = {
   projects: projectsCollection,
   apps: appsCollection,
-  blog: blogCollection
+  blogPosts: blogPostCollection
 };

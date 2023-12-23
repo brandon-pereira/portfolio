@@ -2,11 +2,11 @@
 import type { CollectionEntry } from 'astro:content';
 import Typewriter from '@components/Typewriter.astro';
 interface Props {
-  blogArticle: CollectionEntry<'blog'>;
+  blogPost: CollectionEntry<'blogPosts'>;
 }
 
-const { blogArticle } = Astro.props;
-const { data, slug } = blogArticle;
+const { blogPost } = Astro.props;
+const { data, slug } = blogPost;
 const { title, datePosted } = data;
 const url = '/blog/' + slug;
 

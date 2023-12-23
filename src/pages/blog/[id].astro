@@ -5,11 +5,11 @@ import { getEntry, getCollection } from 'astro:content';
 import Header from '@components/Header.astro';
 
 const { id } = Astro.params;
-const entry = await getEntry('blog', id);
+const entry = await getEntry('blogPosts', id);
 const { Content } = await entry!.render();
 
 export async function getStaticPaths() {
-  const entries = await getCollection('blog');
+  const entries = await getCollection('blogPosts');
   return entries.map(entry => ({
     params: { id: entry.slug }
   }));

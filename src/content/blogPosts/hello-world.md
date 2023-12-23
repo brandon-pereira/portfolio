@@ -1,6 +1,7 @@
 ---
 title: 'Hello World!'
 datePosted: '2023-12-03T00:00:00.000Z'
+thumbnail: ../../assets/blog-articles/jest-sequelize-transactions/0.png
 ---
 
 [go to test](#lorem-ipsum)

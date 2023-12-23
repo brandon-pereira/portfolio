@@ -5,7 +5,7 @@ import BlogContent from './BlogContent.astro';
 import Typewriter from '@components/Typewriter.astro';
 
 interface Props {
-  blogPost: CollectionEntry<'blog'>;
+  blogPost: CollectionEntry<'blogPosts'>;
   content: AstroComponentFactory;
 }
 const { data, slug } = Astro.props.blogPost;
