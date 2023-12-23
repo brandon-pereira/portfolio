@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
+    "build:swap": "astro build --outDir ./dist_swap && rm -r ./dist && mv ./dist_swap ./dist",
     "preview": "astro preview",
     "test": "astro check",
     "get-content": "ts-node -T ./content/import"
