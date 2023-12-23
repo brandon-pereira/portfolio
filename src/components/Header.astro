@@ -60,13 +60,15 @@ import Logo from './Logo.astro';
 </style>
 
 <script>
-  const el = document.querySelector('header[data-sticky-header]');
-  if (!el) return;
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {
-      el.classList.add('sticky');
-    } else {
-      el.classList.remove('sticky');
-    }
+  document.addEventListener('astro:page-load', () => {
+    const el = document.querySelector('header[data-sticky-header]');
+    if (!el) return;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        el.classList.add('sticky');
+      } else {
+        el.classList.remove('sticky');
+      }
+    });
   });
 </script>
