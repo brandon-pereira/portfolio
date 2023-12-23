@@ -1,5 +1,5 @@
 ---
-import ProjectBackButton from '@components/projects/ProjectBackButton.astro';
+import NavBar from '@components/NavBar.astro';
 import ProjectDetails from '@components/projects/ProjectDetails.astro';
 import ProjectsHeader from '@components/projects/ProjectsHeader.astro';
 import Layout from '@layouts/Layout.astro';
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 ---
 
 <Layout title={`Project Details - ${entry?.data.title}`}>
-  <ProjectBackButton />
+  <NavBar />
   <ProjectsHeader />
   <ProjectDetails project={entry!} content={Content} />
 </Layout>

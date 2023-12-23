@@ -1,4 +1,5 @@
 ---
+import NavBar from '@components/NavBar.astro';
 import ProjectsList from '@components/projects/ProjectsList.astro';
 import Layout from '@layouts/Layout.astro';
 import { getSortedProjects } from 'src/utils/projects';
@@ -7,5 +8,6 @@ const projects = await getSortedProjects();
 ---
 
 <Layout title="Projects">
-  <ProjectsList projects={projects} withBackButton />
+  <NavBar />
+  <ProjectsList projects={projects} />
 </Layout>

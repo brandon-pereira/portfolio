@@ -4,14 +4,15 @@ import Logo from './Logo.astro';
 
 <header data-sticky-header>
   <div class="content">
-    <a class="back" href="/"><span>&lt;</span>Back</a>
+    <a class="back" data-back-button href="/"><span>&lt;</span>Back</a>
 
     <a href="/" class="logo"> <Logo aria-label="GitHub" size={50} /></a>
-    <nav class="links">
+    <!-- TODO add this back -->
+    <!-- <nav class="links">
       <a href="/">Home</a>
       <a href="/projects">Projects</a>
       <a href="/blog">Blog</a>
-    </nav>
+    </nav> -->
   </div>
 </header>
 
@@ -26,7 +27,7 @@ import Logo from './Logo.astro';
     left: 0;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     &:global(.sticky) {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
 
