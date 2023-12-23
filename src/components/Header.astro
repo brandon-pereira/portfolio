@@ -2,7 +2,7 @@
 import Logo from './Logo.astro';
 ---
 
-<header>
+<header data-sticky-header>
   <a class="back" href="/"><span>&lt;</span>Back</a>
 
   <a href="/" class="logo">
@@ -11,7 +11,7 @@ import Logo from './Logo.astro';
       size={50}
       styles={{
         strokeColor: '#fff',
-        strokeWidth: '10px',
+        strokeWidth: '20px',
         outerFront: 'transparent',
         outerRight: 'transparent',
         innerBack: 'transparent',
@@ -29,12 +29,18 @@ import Logo from './Logo.astro';
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: #288fd9;
+    transition: background 0.4s;
     backdrop-filter: blur(10px);
     color: #fff;
     padding: 0 1rem;
     position: sticky;
+    left: 0;
+    right: 0;
     top: 0;
+    &:global(.sticky) {
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+    }
   }
 
   .logo {
@@ -52,3 +58,15 @@ import Logo from './Logo.astro';
     font-size: 1.2rem;
   }
 </style>
+
+<script>
+  const el = document.querySelector('header[data-sticky-header]');
+  if (!el) return;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      el.classList.add('sticky');
+    } else {
+      el.classList.remove('sticky');
+    }
+  });
+</script>
