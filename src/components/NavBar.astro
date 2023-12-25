@@ -20,16 +20,20 @@ import Logo from './Logo.astro';
   header {
     height: 80px;
     background: #0b466e;
-    transition: background 0.4s;
+    transition:
+      background 0.4s,
+      box-shadow 1s;
     backdrop-filter: blur(10px);
     color: #fff;
     position: sticky;
     left: 0;
     right: 0;
     top: 0;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.9);
     z-index: 5;
     &:global(.sticky) {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+      box-shadow: none;
 
       & .logo {
         --outer-front: transparent;
