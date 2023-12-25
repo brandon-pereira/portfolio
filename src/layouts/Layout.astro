@@ -48,13 +48,21 @@ const { title } = Astro.props;
         --max-width: min(100vw - 36px, 1200px);
         --background-color: #151515;
         --color: #fff;
-        --link-color: #2ea3ff;
+        --color-primary-800: #041724;
+        --color-primary-700: #0a2e4a;
+        --color-primary-600: #0b466e;
+        --color-primary-500: #1c5378;
+        --color-primary-400: #1e7abc;
+        --color-primary-300: #2ea3ff;
+        --color-primary-200: #5ecbff;
+        --color-primary-100: #a5e0ff;
+        --color-primary-50: #e6f5ff;
       }
       /* @media (prefers-color-scheme: light) {
         :root {
           --background-color: #e6f5ff;
           --color: #000;
-          --link-color: #085188;
+          --color-primary-400: #085188;
         }
       } */
       html {
@@ -70,7 +78,7 @@ const { title } = Astro.props;
       }
 
       a {
-        color: var(--link-color);
+        color: var(--color-primary-400);
       }
     </style>
     <BootstrapLightbox />

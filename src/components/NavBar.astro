@@ -19,7 +19,8 @@ import Logo from './Logo.astro';
 <style>
   header {
     height: 80px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)), #0b466e;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)),
+      var(--color-primary-700);
     transition:
       background 0.4s,
       box-shadow 1s;
@@ -29,7 +30,7 @@ import Logo from './Logo.astro';
     left: 0;
     right: 0;
     top: 0;
-    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.9);
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.3);
     z-index: 5;
     .logo {
       filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.5));
