@@ -94,7 +94,7 @@ import Logo from './Logo.astro';
     const el = document.querySelector('header[data-sticky-header]');
     function calc() {
       if (!el) return;
-      if (window.scrollY > 0) {
+      if (window.scrollY > 70) {
         el.classList.add('sticky');
       } else {
         el.classList.remove('sticky');
