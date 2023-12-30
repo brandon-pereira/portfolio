@@ -1,0 +1,45 @@
+---
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+
+<h2 class="title">
+  {
+    title
+      .split('')
+      .map((letter, i) => <span style={{ '--i': i }}>{letter}</span>)
+  }
+</h2>
+
+<style>
+  @font-palette-values --a {
+    font-family: 'Nabla';
+    base-palette: 2;
+    override-colors:
+      7 #2ea3ff,
+      6 #1e7abc;
+  }
+  @font-palette-values --b {
+    font-family: 'Nabla';
+    base-palette: 1;
+    /* override-colors:
+      7 #2ea3ff,
+      6 #1e7abc; */
+  }
+  .title {
+    font-size: 7rem;
+    text-align: center;
+    margin: 5rem auto;
+    font-family: 'Nabla';
+    line-height: 1.1;
+    font-variation-settings:
+      'EDPT' 0,
+      'EHLT' 12;
+    font-palette: --a;
+    & span:nth-of-type(odd) {
+      font-palette: --b;
+    }
+  }
+</style>
