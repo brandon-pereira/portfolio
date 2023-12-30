@@ -159,25 +159,3 @@ const thumbnail = media?.[0];
     }
   }
 </style>
-
-<script define:vars={{ url }}>
-  document.addEventListener(
-    'astro:after-swap',
-    () => {
-      if (!location.pathname.includes(url)) {
-        return;
-      }
-      const $back = document.querySelector('[data-back-button]');
-      // Add a click event listener to the back button
-      $back?.addEventListener(
-        'click',
-        e => {
-          e.preventDefault();
-          history.back();
-        },
-        false
-      );
-    },
-    { once: true }
-  );
-</script>

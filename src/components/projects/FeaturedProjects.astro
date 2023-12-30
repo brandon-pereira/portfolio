@@ -14,19 +14,19 @@ const nextProjectId = allProjects[6]?.slug;
     nextProjectId
   }}
 >
-document.addEventListener(
-  'astro:after-swap',
-  () => {
-    if (window.location.pathname !== '/projects') {
-      return;
-    }
-    const scrollTo = document.querySelector(
-      `[data-project-tile="${nextProjectId}"]`
-    );
-    if (scrollTo) {
-      scrollTo.scrollIntoView(true, { behavior: 'smooth', block: 'end' });
-    }
-  },
-  { once: true }
-);
+  document.addEventListener(
+    'astro:after-swap',
+    () => {
+      if (window.location.pathname !== '/projects') {
+        return;
+      }
+      const scrollTo = document.querySelector(
+        `[data-project-tile="${nextProjectId}"]`
+      );
+      if (scrollTo) {
+        scrollTo.scrollIntoView(true, { behavior: 'smooth', block: 'end' });
+      }
+    },
+    { once: true }
+  );
 </script>

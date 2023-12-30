@@ -83,5 +83,9 @@ const { title } = Astro.props;
     </style>
     <BootstrapLightbox />
     <GoogleAnalytics />
+    <script>
+      import { injectBackButtonListener } from '../utils/backButtonLogic';
+      injectBackButtonListener();
+    </script>
   </body>
 </html>
