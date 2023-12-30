@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import BlogPreview from './BlogPreview.astro';
 import BlogHeader from './BlogHeader.astro';
+import Button from '@components/Button.astro';
 
 const articles = await getCollection('blogPosts');
 ---
@@ -12,19 +13,27 @@ const articles = await getCollection('blogPosts');
   <div class="articles">
     {articles.map(a => <BlogPreview blogPost={a} />)}
   </div>
-  <a href="/blog">View All Posts</a>
+  <Button class="load-more-button" color="#fff" href="/blog">
+    View All Posts
+  </Button>
 </div>
 
 <style>
   .container {
     max-width: var(--max-width);
-    margin: 0 auto;
+    margin: 1rem auto 5rem;
+    text-align: center;
   }
 
   .articles {
     display: grid;
-    margin: 0 0 5rem;
+    margin: 0 2rem 5rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 4rem;
+  }
+
+  .load-more-button {
+    margin: 0 auto;
+    display: inline-block;
   }
 </style>
