@@ -18,12 +18,16 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
 ---
 
 <article>
-  <header transition:name={`blog-title-${slug}`}>
-    <div class="content">
-      <time datetime={data.datePosted.toISOString()}
+  <header>
+    <div class="title-container">
+      <time
+        datetime={data.datePosted.toISOString()}
+        transition:name={`blog-date-${slug}`}
         >{dateFormatter.format(data.datePosted)}</time
       >
-      <h1>{title}<Typewriter /></h1>
+      <h1 class="title" transition:name={`blog-title-${slug}`}>
+        {title}<Typewriter />
+      </h1>
     </div>
   </header>
   <BlogContent>
@@ -38,10 +42,15 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
   header {
     text-align: center;
     padding: 5rem 0;
-    background: var(--color-primary-600);
+    background: linear-gradient(
+      0.25turn,
+      var(--color-primary-400),
+      var(--color-primary-700)
+    );
   }
-  .content {
+  .title-container {
     max-width: var(--max-width);
+    text-shadow: 1px 1px #000;
     margin: 0 auto;
   }
   time {
@@ -50,10 +59,12 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
     display: inline-block;
     margin-bottom: 1rem;
   }
-  h1 {
+  .title {
     margin: 0;
     font-size: 3rem;
     line-height: 1.2;
     font-family: var(--font-monospace);
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: auto;
   }
 </style>

@@ -15,12 +15,14 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
 });
 ---
 
-<a href={url} class="container" transition:name={`blog-title-${slug}`}>
+<a href={url} class="container">
   <div class="content">
-    <time datetime={datePosted.toISOString()}
+    <time
+      transition:name={`blog-date-${slug}`}
+      datetime={datePosted.toISOString()}
       >{dateFormatter.format(datePosted)}</time
     >
-    <h3 class="title">{title}</h3>
+    <h3 class="title" transition:name={`blog-title-${slug}`}>{title}</h3>
     <Button class="link" color="#fff">Learn more</Button>
   </div>
   <div class="mask"></div>
@@ -35,8 +37,6 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
     color: var(--color);
     text-decoration: none;
     border-radius: 1rem;
-    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.5);
-    background: rgba(255, 255, 255, 0.06);
     text-shadow: 1px 1px #000;
 
     &:before {
