@@ -15,7 +15,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
 });
 ---
 
-<a href={url} class="container">
+<a href={url} class="container" transition:name={`blog-tile-${slug}`}>
   <div class="content">
     <time
       transition:name={`blog-date-${slug}`}
