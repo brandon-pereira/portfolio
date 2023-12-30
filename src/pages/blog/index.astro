@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import BlogPreview from '@components/blog/BlogPreview.astro';
+import Layout from '@layouts/Layout.astro';
+import NavBar from '@components/NavBar.astro';
+import BlogHeader from '@components/blog/BlogHeader.astro';
+
+const articles = await getCollection('blogPosts');
+---
+
+<Layout title="Blog">
+  <NavBar />
+  <div class="container">
+    <BlogHeader title="Blog" />
+    <div class="articles">
+      {articles.map(a => <BlogPreview blogPost={a} />)}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 5rem auto;
+  }
+  .articles {
+    display: grid;
+    margin: 0 0 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+</style>
