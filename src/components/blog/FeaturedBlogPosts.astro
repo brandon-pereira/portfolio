@@ -1,15 +1,18 @@
 ---
 import { getCollection } from 'astro:content';
 import BlogPreview from './BlogPreview.astro';
+import BlogHeader from './BlogHeader.astro';
 
 const articles = await getCollection('blogPosts');
 ---
 
 <div class="container">
-  <h2 class="title">Featured Blog Posts</h2>
+  <BlogHeader title="Featured Blog Posts" />
+
   <div class="articles">
     {articles.map(a => <BlogPreview blogPost={a} />)}
   </div>
+  <a href="/blog">View All Posts</a>
 </div>
 
 <style>
@@ -17,11 +20,7 @@ const articles = await getCollection('blogPosts');
     max-width: var(--max-width);
     margin: 0 auto;
   }
-  .title {
-    font-size: 2rem;
-    text-align: center;
-    margin: 5rem auto;
-  }
+
   .articles {
     display: grid;
     margin: 0 0 5rem;
