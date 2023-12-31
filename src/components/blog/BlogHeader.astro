@@ -29,7 +29,7 @@ const { title } = Astro.props;
       6 #1e7abc; */
   }
   .title {
-    font-size: 7rem;
+    font-size: min(20vw, 4rem);
     text-align: center;
     margin: 5rem auto;
     font-family: 'Nabla';
@@ -40,6 +40,12 @@ const { title } = Astro.props;
     font-palette: --a;
     & span:nth-of-type(odd) {
       font-palette: --b;
+    }
+  }
+
+  @media (--tablet) {
+    .title {
+      font-size: min(10vw, 8rem);
     }
   }
 </style>

@@ -41,7 +41,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
   }
   header {
     text-align: center;
-    padding: 5rem 0;
+    padding: 4rem 0;
     background: linear-gradient(
       0.25turn,
       var(--color-primary-400),
@@ -49,7 +49,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
     );
   }
   .title-container {
-    max-width: var(--max-width);
+    max-width: 900px;
     text-shadow: 1px 1px #000;
     margin: 0 auto;
   }
@@ -61,10 +61,16 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
   }
   .title {
     margin: 0;
-    font-size: 3rem;
+    font-size: 1.7rem;
     line-height: 1.2;
     font-family: var(--font-monospace);
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: auto;
+  }
+
+  @media (--tablet) {
+    .title {
+      font-size: 2rem;
+    }
   }
 </style>
