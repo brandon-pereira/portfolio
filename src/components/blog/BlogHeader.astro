@@ -34,12 +34,24 @@ const { title } = Astro.props;
     margin: 5rem auto;
     font-family: 'Nabla';
     line-height: 1.1;
-    font-variation-settings:
-      'EDPT' 0,
-      'EHLT' 12;
+    font-variation-settings: 'EDPT' 30;
     font-palette: --a;
-    & span:nth-of-type(odd) {
-      font-palette: --b;
+    & span {
+      animation: depth 1s ease-in-out alternate infinite;
+      animation-delay: calc(var(--i) * 0.1s);
+    }
+    & span:nth-of-type(even) {
+      font-palette: --c;
+    }
+  }
+
+  @keyframes depth {
+    0% {
+      transform: translatex(0) translatey(0);
+    }
+    100% {
+      font-variation-settings: 'EDPT' 200;
+      transform: translatex(0.15em) translatey(0.1em);
     }
   }
 
