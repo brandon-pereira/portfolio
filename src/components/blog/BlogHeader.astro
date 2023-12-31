@@ -24,9 +24,6 @@ const { title } = Astro.props;
   @font-palette-values --b {
     font-family: 'Nabla';
     base-palette: 1;
-    /* override-colors:
-      7 #2ea3ff,
-      6 #1e7abc; */
   }
   .title {
     font-size: min(20vw, 4rem);
@@ -37,8 +34,17 @@ const { title } = Astro.props;
     font-variation-settings: 'EDPT' 30;
     font-palette: --a;
     & span {
-      animation: depth 1s ease-in-out alternate infinite;
-      animation-delay: calc(var(--i) * 0.1s);
+      /* Safari on Mac and iOS seem to lag when
+         animating the font-variation setting,
+         but they don't even support animating them.
+         They claim to support 'font-variation-settings'
+         so I need to more broadly detect Safari and 
+         disable the animations.
+         https://stackoverflow.com/a/57903194/7033335 */
+      @supports not (-webkit-backdrop-filter: blur(1px)) {
+        animation: depth 1s ease-in-out alternate infinite;
+        animation-delay: calc(var(--i) * 0.1s);
+      }
     }
     & span:nth-of-type(even) {
       font-palette: --c;
@@ -47,11 +53,10 @@ const { title } = Astro.props;
 
   @keyframes depth {
     0% {
-      transform: translatex(0) translatey(0);
+      font-variation-settings: 'EDPT' 30;
     }
     100% {
       font-variation-settings: 'EDPT' 200;
-      transform: translatex(0.15em) translatey(0.1em);
     }
   }
 
