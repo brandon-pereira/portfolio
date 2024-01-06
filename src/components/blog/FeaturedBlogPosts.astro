@@ -10,25 +10,12 @@ const articles = await getCollection('blogPosts');
 <div class="container">
   <BlogHeader title="Featured Blog Posts" />
 
-  {
-    // temporary until we have more blog posts
-    articles.length === 1 ? (
-      <div class="container">
-        <p>No articles found. Coming Soon! 🚧👷</p>
-      </div>
-    ) : (
-      <>
-        <div class="articles">
-          {articles.map(a => (
-            <BlogPreview blogPost={a} />
-          ))}
-        </div>
-        <Button class="load-more-button" color="#fff" href="/blog">
-          View All Posts
-        </Button>
-      </>
-    )
-  }
+  <div class="articles">
+    {articles.map(a => <BlogPreview blogPost={a} />)}
+  </div>
+  <Button class="load-more-button" color="#fff" href="/blog">
+    View All Posts
+  </Button>
 </div>
 
 <style>
