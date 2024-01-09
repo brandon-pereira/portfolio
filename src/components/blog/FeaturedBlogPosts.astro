@@ -1,17 +1,18 @@
 ---
-import { getCollection } from 'astro:content';
 import BlogPreview from './BlogPreview.astro';
 import BlogHeader from './BlogHeader.astro';
 import Button from '@components/Button.astro';
+import { getSortedBlogPosts } from 'src/utils/blogPosts';
 
-const articles = await getCollection('blogPosts');
+const articles = await getSortedBlogPosts();
+const featuredArticles = articles.slice(0, 3);
 ---
 
 <div class="container">
   <BlogHeader title="Featured Blog Posts" />
 
   <div class="articles">
-    {articles.map(a => <BlogPreview blogPost={a} />)}
+    {featuredArticles.map(a => <BlogPreview blogPost={a} />)}
   </div>
   <Button class="load-more-button" color="#fff" href="/blog">
     View All Posts

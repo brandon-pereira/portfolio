@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
 import BlogPreview from '@components/blog/BlogPreview.astro';
 import Layout from '@layouts/Layout.astro';
 import NavBar from '@components/NavBar.astro';
 import BlogHeader from '@components/blog/BlogHeader.astro';
+import { getSortedBlogPosts } from 'src/utils/blogPosts';
 
-const articles = await getCollection('blogPosts');
+const articles = await getSortedBlogPosts();
 ---
 
 <Layout title="Blog">
