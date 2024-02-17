@@ -1,0 +1,63 @@
+<div></div>
+
+<script>
+  import Character from '../scripts/flappy/Character';
+  import Barricade from '../scripts/flappy/Barricade';
+
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d')!;
+  document.body.appendChild(canvas);
+
+  const barricades = [new Barricade({ ctx })];
+  let gameOver = false;
+  setInterval(() => {
+    barricades.push(new Barricade({ ctx }));
+  }, 5000);
+  const character = new Character({ ctx });
+
+  function draw() {
+    ctx.reset();
+
+    const bounds = document.body.getBoundingClientRect();
+    canvas.width = bounds.width;
+    canvas.height = bounds.height;
+
+    character.render();
+    barricades.forEach(b => {
+      b.render();
+      b.setPosition(([x, y]) => [++x, y]);
+    });
+
+    barricades.forEach(b => {
+      if (b.isIntersecting([character.x, character.y])) {
+        console.log('HIT');
+        gameOver = true;
+      }
+    });
+    requestAnimationFrame(() => {
+      if (!gameOver) {
+        draw();
+      }
+    });
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowDown') {
+      character.setPosition(([x, y]) => [x, (y *= 1.05)]);
+    } else if (e.key === 'ArrowUp') {
+      character.setPosition(([x, y]) => [x, (y *= 0.95)]);
+    }
+  });
+
+  draw();
+</script>
+
+<style>
+  body {
+    overflow: hidden;
+    background: #0d62d8;
+    height: 100vh;
+    width: 100vh;
+    margin: 0;
+  }
+</style>
