@@ -23,6 +23,6 @@ media:
   ]
 ---
 
-**Note:** We recently shut off the wings.cheap app due to server upgrades. You can still view the code on [GitHub](https://github.com/brandon-pereira/tv-tracker).
+**Note:** We recently shut off the TVTracker app due to server upgrades. You can still view the code on [GitHub](https://github.com/brandon-pereira/tv-tracker).
 
 TvTracker is an application for tracking your TV Shows. It was built to work great on mobile, desktop, and even from your status bar (Mac). It has a login system, providing the ability to sync your shows across all devices as well as providing push notifications when your favourite shows air.
