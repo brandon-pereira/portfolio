@@ -5,7 +5,7 @@ datePosted: '2024-02-24T00:00:00.000Z'
 
 Today I will be going over what I believe is an essential task for maintaining a Javascript repository. That task is keeping your dependencies up to date.
 
-**Javascript moves fast.**s
+**Javascript moves fast.**
 
 Every day there are new versions of packages being released.
 
