@@ -8,7 +8,7 @@ interface Props {
 const { blogPost } = Astro.props;
 const { data, slug } = blogPost;
 const { title, datePosted } = data;
-const url = '/blog/' + slug;
+const url = '/blog/' + slug + '/';
 
 const dateFormatter = new Intl.DateTimeFormat('en-CA', {
   dateStyle: 'long'
