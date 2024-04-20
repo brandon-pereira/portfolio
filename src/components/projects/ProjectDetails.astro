@@ -48,7 +48,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
         <Content />
       </div>
       {
-        link && gitUrl && (
+        Boolean(link || gitUrl) && (
           <div class="buttons">
             {link && (
               <Button color={color} href={link} target="_blank">
