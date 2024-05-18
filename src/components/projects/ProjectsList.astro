@@ -5,10 +5,11 @@ import ProjectTile from '@components/projects/ProjectTile.astro';
 import ProjectsHeader from '@components/projects/ProjectsHeader.astro';
 
 interface Props {
+  isAllProjects?: boolean;
   projects: CollectionEntry<'projects'>[];
 }
 
-const { projects } = Astro.props;
+const { projects, isAllProjects } = Astro.props;
 ---
 
 <div class="container" id="projects">
@@ -17,9 +18,15 @@ const { projects } = Astro.props;
     {projects.map(project => <ProjectTile project={project} />)}
   </div>
 
-  <div class="view-more-container">
-    <Button color="#000" href="/projects/" isDarkColor>View More</Button>
-  </div>
+  {
+    !isAllProjects && (
+      <div class="view-more-container">
+        <Button color="#000" href="/projects/" isDarkColor>
+          View More
+        </Button>
+      </div>
+    )
+  }
 </div>
 
 <style>
