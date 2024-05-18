@@ -1,5 +1,6 @@
 ---
 id: 'nissaninfiniti-shopping-tools'
+isPinned: true
 title: 'Nissan/Infiniti Shopping Tools'
 date: '2020-06-03T00:00:00.000Z'
 languages: 'GraphQL, HTML, A11Y, SEO, Javascript (ES6+), NodeJS'

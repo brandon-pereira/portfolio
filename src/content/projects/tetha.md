@@ -5,6 +5,7 @@ date: '2020-10-01T00:00:00.000Z'
 languages: 'Javascript (ES6+), CSS, GraphQL, MongoDB, React'
 description: 'I worked with a local entrepreneur to develop a digital wall calendar. He wanted to be able to have a wall-mounted touch-screen monitor that could display current calendar events from multiple Google accounts.'
 type: 'External'
+isPinned: true
 status: 'Unavailable'
 media:
   [
