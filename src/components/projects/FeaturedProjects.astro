@@ -1,9 +1,10 @@
 ---
 import ProjectsList from './ProjectsList.astro';
-import { getSortedProjects } from '../../utils/projects';
+import { byCreationDate, byPinned, getProjects } from '../../utils/projects';
 
-const allProjects = Array.from(await getSortedProjects());
-const projects = allProjects.slice(0, 6);
+const allProjects = await getProjects();
+const sortedProjects = allProjects.sort(byCreationDate).sort(byPinned);
+const projects = sortedProjects.slice(0, 6);
 const nextProjectId = allProjects[6]?.slug;
 ---
 

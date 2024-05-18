@@ -2,9 +2,9 @@
 import NavBar from '@components/NavBar.astro';
 import ProjectsList from '@components/projects/ProjectsList.astro';
 import Layout from '@layouts/Layout.astro';
-import { getSortedProjects } from 'src/utils/projects';
+import { byCreationDate, getProjects } from 'src/utils/projects';
 
-const projects = await getSortedProjects();
+const projects = (await getProjects()).sort(byCreationDate);
 ---
 
 <Layout title="Projects">
