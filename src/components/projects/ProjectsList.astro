@@ -37,7 +37,9 @@ const { projects, isAllProjects } = Astro.props;
     );
     background-size: 100% 200px;
     background-repeat: no-repeat;
-    overflow: hidden;
+    /* We use overflow: clip here because child tiles use 
+       a scroll driven CSS animation which doesn't support overflow: hidden */
+    overflow: clip;
     position: relative;
     z-index: 1;
     padding: 2rem 0 0;
