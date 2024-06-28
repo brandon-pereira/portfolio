@@ -8,5 +8,11 @@ export default defineConfig({
   markdown: {
     // forces external links to open in a new tab
     rehypePlugins: [[rehypeExternalLinks, { target: '_blank' }]]
+  },
+  output: 'static',
+  redirects: {
+    '/wings-cheap': '/projects/wingscheap',
+    '/tv-tracker': '/projects/tvtracker',
+    '/assets/brandon-pereira-resume.pdf': '/'
   }
 });
