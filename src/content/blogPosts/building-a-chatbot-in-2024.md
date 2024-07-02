@@ -58,7 +58,7 @@ Here's a high-level overview of the architecture:
 
 1. [**OpenAI API**](https://platform.openai.com/docs/overview) - This is the core API that you will use to interact with the OpenAI model.
 2. [**OpenAI Assistants**](https://platform.openai.com/docs/assistants/overview) - This is a wrapper on-top of the model that provides some nice abstractions for things like thread management, context management, and more. It's technically in beta, but I've found it to be very useful.
-3. [**OpenAI Embeddings**](https://platform.openai.com/docs/guides/embeddings) - This is a tool that takes in a piece of text and returns a vector representation of that text. This is useful for things like similarity checks, clustering, and more. See [the RAG section](#rag) for more information.
+3. [**OpenAI Embeddings**](https://platform.openai.com/docs/guides/embeddings) - This is a tool that takes in a piece of text and returns a vector representation of that text. This is useful for things like similarity checks, clustering, and more. See [the RAG section](#retrieval-augmented-generation-rag)) for more information.
 
 Some things I learned about OpenAI / OpenAI Assistants:
 
