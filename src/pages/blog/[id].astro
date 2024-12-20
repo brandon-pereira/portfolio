@@ -18,5 +18,5 @@ export async function getStaticPaths() {
 
 <Layout title={entry!.data.title}>
   <Header />
-  <BlogPost blogPost={entry} content={Content} />
+  <BlogPost blogPost={entry!} content={Content} />
 </Layout>

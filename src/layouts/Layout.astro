@@ -1,7 +1,7 @@
 ---
 import GoogleAnalytics from '@components/Analytics/GoogleAnalytics.astro';
 import BootstrapLightbox from '@components/Lightbox/BootstrapLightbox.astro';
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import clon from '../../public/icons/clon.svg';
 
 export interface Props {
@@ -37,7 +37,7 @@ const { title } = Astro.props;
       content="Portfolio for Brandon Pereira, a front-end web developer from Calgary, AB."
     />
     <link rel="canonical" href={Astro.url} />
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <slot />

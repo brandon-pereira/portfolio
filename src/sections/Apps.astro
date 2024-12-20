@@ -3,7 +3,8 @@ import ImageLightbox from '@components/Lightbox/ImageLightbox.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 
-const apps = await getCollection('apps');
+const rawApps = await getCollection('apps');
+const apps = rawApps.sort((a, b) => a.id.localeCompare(b.id));
 ---
 
 <section data-section="apps" class:list={['container', apps[0]?.data.theme]}>
@@ -126,7 +127,7 @@ const apps = await getCollection('apps');
       /* Hidden for pseudo */
       font-size: 0;
 
-      &:before {
+      &.maintext:before {
         content: 'Apps';
         position: absolute;
         /* makes the text look more centered */
@@ -138,7 +139,7 @@ const apps = await getCollection('apps');
         z-index: 1;
         font-size: calc(var(--main-size) / 3);
       }
-      &:after {
+      &.maintext:after {
         content: '';
         position: absolute;
         top: 0;
@@ -391,7 +392,7 @@ const apps = await getCollection('apps');
       border: none;
       padding: 0.4rem 1rem;
       border-radius: 0 1rem 1rem 0;
-      &:before {
+      &button:before {
         content: '';
         display: block;
         color: #fff;
@@ -406,7 +407,7 @@ const apps = await getCollection('apps');
       }
       &.next {
         border-radius: 1rem 0 0 1rem;
-        &:before {
+        &.next:before {
           left: -0.25rem;
           transform: rotate(45deg);
         }

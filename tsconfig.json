@@ -8,5 +8,7 @@
       "@utils/*": ["./src/utils/*"]
     },
     "typeRoots": ["./types"]
-  }
+  },
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
 }
