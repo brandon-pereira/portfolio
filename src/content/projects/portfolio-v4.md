@@ -26,7 +26,7 @@ media:
     }
   ]
 link: 'https://branclon.com/'
-gitUrl: 'https://github.com/brandon-pereira/portfolio/tree/release/v3'
+gitUrl: 'https://github.com/brandon-pereira/portfolio'
 color: '#4B90C3'
 ---
 
