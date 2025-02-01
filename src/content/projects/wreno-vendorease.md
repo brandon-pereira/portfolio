@@ -1,12 +1,11 @@
 ---
 id: 'wreno-vendorease'
-title: 'Wreno: VendorEase'
+title: 'Wreno: Web App'
 date: '2023-06-01T00:00:00.000Z'
 languages: 'CSS, TypeScript, React, NodeJS, Postgres'
 description: 'Launched VendorEase at Wreno, a swift pivot for contractor compliance and sourcing. I oversaw all technical aspects as the head of engineering. We are seeing rapid growth and positive client feedback.'
 type: 'External'
 status: 'Live'
-isPinned: true
 media:
   [
     {
