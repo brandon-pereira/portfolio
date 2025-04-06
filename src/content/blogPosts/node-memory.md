@@ -1,6 +1,6 @@
 ---
 title: How to Dynamically Set Node.js Heap Limits in Google Cloud Run
-datePosted: '2024-12-20T00:00:00.000Z'
+datePosted: '2025-04-06T07:00:00.000Z'
 ---
 
 When running Node.js apps on [Google Cloud Run](https://cloud.google.com/run?hl=en), it's common to encounter memory-related crashes—especially if your app handles large datasets or high traffic. Fortunately, there's a simple way to increase the memory available to the Node.js heap and squeeze more performance out of your allocated RAM.
