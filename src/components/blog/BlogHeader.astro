@@ -14,13 +14,30 @@ const { title } = Astro.props;
 </h2>
 
 <style>
+  @font-palette-values --color {
+    font-family: 'Honk';
+    base-palette: 3;
+    override-colors:
+      0 #a5e0ff,
+      1 #a5e0ff,
+      2 #1c5378,
+      3 #1e7abc,
+      4 #1c5378,
+      5 #1e7abc,
+      6 #1c5378,
+      7 #1e7abc;
+  }
+
   .title {
     font-size: min(20vw, 4rem);
     text-align: center;
     margin: 3rem auto;
     font-family: 'Honk';
     line-height: 1.1;
-    font-variation-settings: 'SHLN' 50 'MORF' 15;
+    font-palette: --color;
+    font-variation-settings:
+      'MORF' 39,
+      'SHLN' 39;
     & span {
       animation: depth 4s linear alternate infinite;
     }
