@@ -4,7 +4,7 @@ import * as AboutMeMd from './about-me.md';
 import ProfilePicture from 'src/assets/pp.jpg';
 ---
 
-<section>
+<section class="container">
   <div>
     <AboutMeMd.Content />
   </div>
@@ -19,7 +19,7 @@ import ProfilePicture from 'src/assets/pp.jpg';
 </section>
 
 <style>
-  section {
+  .container {
     display: flex;
     max-width: var(--max-width);
     color: var(--color);
@@ -48,12 +48,22 @@ import ProfilePicture from 'src/assets/pp.jpg';
   }
 
   @media (--tablet) {
-    section {
+    .container {
       flex-direction: row;
     }
     .profile-picture {
       width: auto;
       height: 400px;
     }
+  }
+
+  .container :global(h2) {
+    font-size: 1.8rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .container :global(h3) {
+    font-size: 1.4rem;
+    margin: 0 0 1rem 0;
   }
 </style>
