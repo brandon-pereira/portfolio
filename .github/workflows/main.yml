@@ -31,7 +31,6 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           debug: true
           script: |
-            whoami
             cd /home/www/portfolio
             git checkout .
             git pull
