@@ -14,9 +14,9 @@ media:
       contentType: 'image/png'
     },
     {
-      title: 'Example of Vendor Chat',
-      url: '../../assets/projects/wreno-projects/1.png',
-      contentType: 'image/png'
+      title: 'Sizzle Reel of Projects Feature',
+      url: '/projects/videos/wreno-projects/sizzle-reel.mp4',
+      contentType: 'video/mp4'
     },
     {
       title: 'Example of Vendor Matches',
