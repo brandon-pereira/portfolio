@@ -90,6 +90,7 @@ class Lightbox {
       $target.src = _config.src;
       $target.autoplay = true;
       $target.muted = true;
+      $target.loop = true;
     } else {
       $target = document.createElement('img');
       $target.src = _config.thumbnail;
