@@ -10,7 +10,7 @@ isPinned: true
 media:
   [
     {
-      title: 'Example of Sign Up Flow Step 1',
+      title: 'Preview of the OpenAPI Documentation',
       url: '../../assets/projects/wreno-vision/0.png',
       contentType: 'image/png'
     },
@@ -20,7 +20,7 @@ media:
       contentType: 'video/mp4'
     },
     {
-      title: 'Example of Sign Up Flow Step 1',
+      title: 'Technical Architecture Diagram',
       url: '../../assets/projects/wreno-vision/2.png',
       contentType: 'image/png'
     }
