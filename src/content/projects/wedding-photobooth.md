@@ -2,7 +2,7 @@
 id: 'wedding-photobooth'
 title: 'Wedding Photobooth'
 date: '2021-09-03T00:00:00.000Z'
-languages: 'NodeJS, CSS, HTML, A11Y, SEO, Javascript (ES6+), MongoDB'
+languages: 'NodeJS, CSS, HTML, A11Y, SEO, Javascript (ES6+), AI, MongoDB'
 description: 'I challenged myself by building an entire photo booth solution for my wedding. The booth creates a photo strip using photos from our DLSR, prints the result automatically, and uploads them to the web leveraging Tensorflow for Facial Recognition.'
 type: 'Internal'
 status: 'Unavailable'

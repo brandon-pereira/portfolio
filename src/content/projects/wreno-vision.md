@@ -2,7 +2,7 @@
 id: 'wreno-vision'
 title: 'Wreno: AI APIs'
 date: '2025-03-15T00:00:00.000Z'
-languages: 'NodeJS, Postgres, Typescript'
+languages: 'NodeJS, Postgres, Typescript, AI, Redis, Hono, Vitepress, BullMQ'
 description: 'Led development of AI-powered APIs at Wreno for document reading and verification. Built a scalable, type-safe platform that cut manual reviews by 90% and achieved 99.9% uptime across services.'
 type: 'External'
 status: 'Live'

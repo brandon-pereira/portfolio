@@ -2,7 +2,7 @@
 id: 'wreno-bot'
 title: 'Wreno: Wylie Bot'
 date: '2024-06-01T10:00:00.000Z'
-languages: 'NodeJS, TypeScript, React, Postgres, Vector Database, Embeddings, OpenAI, ChatGPT'
+languages: 'NodeJS, TypeScript, React, Postgres, Vector Database, Embeddings, OpenAI, ChatGPT, AI'
 description: "Developed Wylie, an AI bot for property managers, using NodeJS, TypeScript, React, and OpenAI's ChatGPT-4o. Improved response times from 2 minutes to 1-2 seconds with RAG and performance optimizations."
 type: 'External'
 isPinned: true

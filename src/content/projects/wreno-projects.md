@@ -2,7 +2,7 @@
 id: 'wreno-projects'
 title: 'Wreno: Projects'
 date: '2025-01-15T00:00:00.000Z'
-languages: 'NodeJS, React, Postgres, Typescript'
+languages: 'NodeJS, React, Postgres, Typescript, AI, Firebase'
 description: 'Launched Wreno Projects: vendor matching, AI analysis, and chat for property managers. Led full-stack dev across backend, frontend, and real-time integrations.'
 type: 'External'
 status: 'Live'

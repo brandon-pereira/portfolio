@@ -2,7 +2,7 @@
 id: 'portfolio-v4'
 title: 'Portfolio v4'
 date: '2023-10-19T00:00:00.000Z'
-languages: 'CSS, HTML, A11Y, SEO, Javascript (ES6+), NodeJS'
+languages: 'Typescript, Astro, CSS, HTML, A11Y, SEO'
 description: "Redesigned my portfolio with Astro framework for speed, SEO, and aesthetics. Markdown files and dynamic views enhance UX. Astro's static generation and asset optimization shine. Named after our dog Astro, it's a perfect fit."
 type: 'Internal'
 status: 'Live'
