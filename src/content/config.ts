@@ -24,6 +24,10 @@ const projectsCollection = defineCollection({
       gitUrl: z.string().url().optional(),
       link: z.string().url().optional(),
       isPinned: z.boolean().optional(),
+      pinPriority: z
+        .enum(['low', 'medium', 'high'])
+        .optional()
+        .default('medium'),
       languages: z
         .preprocess(val => {
           const _val = val as string;

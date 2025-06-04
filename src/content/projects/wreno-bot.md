@@ -6,6 +6,7 @@ languages: 'NodeJS, TypeScript, React, Postgres, Vector Database, Embeddings, Op
 description: "Developed Wylie, an AI bot for property managers, using NodeJS, TypeScript, React, and OpenAI's ChatGPT-4o. Improved response times from 2 minutes to 1-2 seconds with RAG and performance optimizations."
 type: 'External'
 isPinned: true
+pinPriority: 'low'
 status: 'Live'
 media:
   [
