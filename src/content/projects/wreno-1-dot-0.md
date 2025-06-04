@@ -25,7 +25,7 @@ media:
     }
   ]
 link: 'https://wreno.io/'
-color: '#C9FF01'
+color: '#FEEE7E'
 ---
 
 I was the inaugural technical hire for Wreno, initially brought on as a technical lead. However, it quickly became evident that my skills exceeded the role, leading to my appointment as the Director of Engineering.

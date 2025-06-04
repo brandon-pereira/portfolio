@@ -25,7 +25,7 @@ media:
     }
   ]
 link: 'https://vendorease.wreno.io/'
-color: '#DFFD7E'
+color: '#EAF1CB'
 ---
 
 As the Head of Engineering at Wreno, spearheading the launch of VendorEase was a thrilling endeavor that showcased the agility and innovation inherent in startup life.
