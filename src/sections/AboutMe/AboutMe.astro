@@ -63,8 +63,11 @@ import Button from '@components/Button.astro';
   .pp-container {
     transition: margin-top 0.2s ease-in;
     padding-top: 15%;
-    height: 100px;
+    margin: 2rem 0 -10%;
+    height: 150px;
+    flex-shrink: 0;
     width: 200px;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,6 +93,7 @@ import Button from '@components/Button.astro';
   .container:global(.opening) .pp-container,
   .container:global(.expanded) .pp-container {
     margin-top: -15%;
+    height: auto;
   }
 
   .container:global(.closing) .pp-container {
@@ -104,6 +108,13 @@ import Button from '@components/Button.astro';
   @media (--tablet) {
     .container {
       flex-direction: row;
+    }
+    .pp-container {
+      margin: 0;
+    }
+    .container:global(.opening) .pp-container,
+    .container:global(.expanded) .pp-container {
+      height: unset;
     }
     .container:global(.closing) .pp-image,
     .pp-image {
