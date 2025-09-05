@@ -1,6 +1,7 @@
-## About Me
-
-Greetings! I'm Brandon Pereira, a seasoned full-stack engineer with a strong focus on front-end web development. Over the years, I've honed my skills in a range of technologies including React, React Native, TypeScript, JavaScript, CSS, HTML, and NodeJS.
+---
+title: About Me
+shortDescription: Hi, I’m Brandon Pereira — I am passionate and skilled in developing modern web applications. With proven experience in building production-grade, scalable software from scratch for multiple clients. I excel in team hiring, resourcing, and overseeing application timelines and budgets. As a career developer and leader of teams of up to 15 developers, I have successfully launched multiple large-scale web applications in the past year. I am also active in the development community through volunteering, meetups, and open-source contributions.
+---
 
 ### Professional Journey
 

@@ -2,20 +2,40 @@
 import { Image } from 'astro:assets';
 import * as AboutMeMd from './about-me.md';
 import ProfilePicture from 'src/assets/pp.jpg';
+import Button from '@components/Button.astro';
 ---
 
 <section class="container">
   <div>
-    <AboutMeMd.Content />
+    {AboutMeMd.frontmatter.title && <h2>{AboutMeMd.frontmatter.title}</h2>}
+    {
+      AboutMeMd.frontmatter.shortDescription && (
+        <p>{AboutMeMd.frontmatter.shortDescription}</p>
+      )
+    }
+
+    <details>
+      <summary>
+        <Button color="#fff">
+          <span class="expand">Learn More</span>
+          <span class="collapse">Learn Less</span>
+        </Button>
+      </summary>
+      <div class="content">
+        <AboutMeMd.Content />
+      </div>
+    </details>
   </div>
-  <Image
-    src={ProfilePicture}
-    loading="eager"
-    quality={100}
-    class="profile-picture"
-    height={800}
-    alt="Profile Picture for Brandon Pereira"
-  />
+  <div class="pp-container">
+    <Image
+      src={ProfilePicture}
+      loading="eager"
+      quality={100}
+      class="pp-image"
+      height={800}
+      alt="Profile Picture for Brandon Pereira"
+    />
+  </div>
 </section>
 
 <style>
@@ -24,7 +44,7 @@ import ProfilePicture from 'src/assets/pp.jpg';
     max-width: var(--max-width);
     color: var(--color);
     align-items: center;
-    grid-gap: 3rem;
+    gap: 3rem;
     margin: 3rem auto;
     flex-direction: column;
   }
@@ -37,7 +57,20 @@ import ProfilePicture from 'src/assets/pp.jpg';
       opacity: 1;
     }
   }
-  .profile-picture {
+
+  /* Acts as the overflow manager for the clip-path */
+  .container:global(.closing) .pp-container,
+  .pp-container {
+    transition: margin-top 0.2s ease-in;
+    padding-top: 15%;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Image with a clip path applied */
+  .pp-image {
     animation: aboutMePictureEnterView alternate 1ms both;
     animation-timeline: view();
     animation-range: entry-crossing 100px;
@@ -45,13 +78,35 @@ import ProfilePicture from 'src/assets/pp.jpg';
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 100%;
     height: auto;
+    transition: clip-path 0.5s ease-in;
+    clip-path: circle(30% at 54% 30%);
+  }
+
+  .container:global(.closing) .pp-image {
+    transition-duration: 0.3s;
+    clip-path: circle(30% at 54% 30%) !important;
+  }
+
+  .container:global(.opening) .pp-container,
+  .container:global(.expanded) .pp-container {
+    margin-top: -15%;
+  }
+
+  .container:global(.closing) .pp-container {
+    margin-top: 0;
+  }
+
+  .container:global(.opening) .pp-image,
+  .container:global(.expanded) .pp-image {
+    clip-path: circle(75% at 50% 50%);
   }
 
   @media (--tablet) {
     .container {
       flex-direction: row;
     }
-    .profile-picture {
+    .container:global(.closing) .pp-image,
+    .pp-image {
       width: auto;
       height: 400px;
     }
@@ -66,4 +121,167 @@ import ProfilePicture from 'src/assets/pp.jpg';
     font-size: 1.4rem;
     margin: 0 0 1rem 0;
   }
+
+  .container :global(summary) {
+    list-style: none;
+  }
+
+  .container :global(details[open] summary .expand) {
+    display: none;
+  }
+
+  .container :global(details[open] summary .collapse) {
+    display: block;
+  }
+
+  .container :global(summary .collapse) {
+    display: none;
+  }
+
+  .container :global(details summary::marker) {
+    display: none;
+  }
+
+  .container :global(.content) {
+    padding-top: 1rem;
+  }
 </style>
+
+<script>
+  class Accordion {
+    el: HTMLDetailsElement;
+    summary: HTMLElement;
+    container: HTMLElement;
+    content: HTMLElement;
+    animation: Animation | null;
+    isClosing: boolean;
+    isExpanding: boolean;
+
+    constructor(el: HTMLDetailsElement) {
+      // Store the <details> element
+      this.el = el;
+      // Store the <summary> element
+      this.summary = el.querySelector('summary')!;
+      // Store the <div class="content"> element
+      this.content = el.querySelector('.content')!;
+      // Store the parent container
+      this.container = el.closest('.container')!;
+      // Store the animation object (so we can cancel it if needed)
+      this.animation = null;
+      // Store if the element is closing
+      this.isClosing = false;
+      // Store if the element is expanding
+      this.isExpanding = false;
+      // Detect user clicks on the summary element
+      this.summary.addEventListener('click', e => this.onClick(e));
+    }
+
+    onClick(e: MouseEvent) {
+      // Stop default behaviour from the browser
+      e.preventDefault();
+      // Add an overflow on the <details> to avoid content overflowing
+      this.el.style.overflow = 'hidden';
+      // Check if the element is being closed or is already closed
+      if (this.isClosing || !this.el.open) {
+        this.open();
+        // Check if the element is being openned or is already open
+      } else if (this.isExpanding || this.el.open) {
+        this.shrink();
+      }
+    }
+
+    shrink() {
+      // Set the element as "being closed"
+      this.isClosing = true;
+      this.container.classList.add('closing');
+
+      // Store the current height of the element
+      const startHeight = `${this.el.offsetHeight}px`;
+      // Calculate the height of the summary
+      const endHeight = `${this.summary.offsetHeight}px`;
+
+      // If there is already an animation running
+      if (this.animation) {
+        // Cancel the current animation
+        this.animation.cancel();
+      }
+
+      // Start a WAAPI animation
+      this.animation = this.el.animate(
+        {
+          // Set the keyframes from the startHeight to endHeight
+          height: [startHeight, endHeight]
+        },
+        {
+          duration: 400,
+          easing: 'ease-out'
+        }
+      );
+
+      // When the animation is complete, call onAnimationFinish()
+      this.animation.onfinish = () => this.onAnimationFinish(false);
+      // If the animation is cancelled, isClosing variable is set to false
+      this.animation.oncancel = () => (this.isClosing = false);
+    }
+
+    open() {
+      // Apply a fixed height on the element
+      this.el.style.height = `${this.el.offsetHeight}px`;
+      // Force the [open] attribute on the details element
+      this.el.open = true;
+      // Wait for the next frame to call the expand function
+      window.requestAnimationFrame(() => this.expand());
+    }
+
+    expand() {
+      // Set the element as "being expanding"
+      this.isExpanding = true;
+      this.container.classList.add('opening');
+      // Get the current fixed height of the element
+      const startHeight = `${this.el.offsetHeight}px`;
+      // Calculate the open height of the element (summary height + content height)
+      const endHeight = `${this.summary.offsetHeight + this.content.offsetHeight}px`;
+
+      // If there is already an animation running
+      if (this.animation) {
+        // Cancel the current animation
+        this.animation.cancel();
+      }
+
+      // Start a WAAPI animation
+      this.animation = this.el.animate(
+        {
+          // Set the keyframes from the startHeight to endHeight
+          height: [startHeight, endHeight]
+        },
+        {
+          duration: 400,
+          easing: 'ease-out'
+        }
+      );
+      // When the animation is complete, call onAnimationFinish()
+      this.animation.onfinish = () => this.onAnimationFinish(true);
+      // If the animation is cancelled, isExpanding variable is set to false
+      this.animation.oncancel = () => (this.isExpanding = false);
+    }
+
+    onAnimationFinish(open: boolean) {
+      this.container.classList.remove('opening');
+      this.container.classList.remove('closing');
+      this.container.classList.toggle('expanded', open);
+      // Set the open attribute based on the parameter
+      this.el.open = open;
+      // Clear the stored animation
+      this.animation = null;
+      // Reset isClosing & isExpanding
+      this.isClosing = false;
+      this.isExpanding = false;
+      // Remove the overflow hidden and the fixed height
+      this.el.style.height = this.el.style.overflow = '';
+    }
+  }
+
+  document.querySelectorAll('details').forEach(el => {
+    new Accordion(el);
+  });
+</script>
