@@ -6,49 +6,54 @@ import Button from '@components/Button.astro';
 ---
 
 <section class="container">
-  <div>
-    {AboutMeMd.frontmatter.title && <h2>{AboutMeMd.frontmatter.title}</h2>}
-    {
-      AboutMeMd.frontmatter.shortDescription && (
-        <p>{AboutMeMd.frontmatter.shortDescription}</p>
-      )
-    }
+  <div class="inset">
+    <div>
+      {AboutMeMd.frontmatter.title && <h2>{AboutMeMd.frontmatter.title}</h2>}
+      {
+        AboutMeMd.frontmatter.shortDescription && (
+          <p>{AboutMeMd.frontmatter.shortDescription}</p>
+        )
+      }
 
-    <details>
-      <summary>
-        <Button color="#fff">
-          <span class="expand">Learn More</span>
-          <span class="collapse">Learn Less</span>
-        </Button>
-      </summary>
-      <div class="content">
-        <AboutMeMd.Content />
-      </div>
-    </details>
-  </div>
-  <div class="pp-container">
-    <Image
-      src={ProfilePicture}
-      loading="eager"
-      quality={100}
-      class="pp-image"
-      height={800}
-      alt="Profile Picture for Brandon Pereira"
-    />
+      <details>
+        <summary>
+          <Button color="#fff">
+            <span class="expand">Learn More</span>
+            <span class="collapse">Learn Less</span>
+          </Button>
+        </summary>
+        <div class="content">
+          <AboutMeMd.Content />
+        </div>
+      </details>
+    </div>
+    <div class="pp-container">
+      <Image
+        src={ProfilePicture}
+        loading="eager"
+        quality={100}
+        class="pp-image"
+        height={800}
+        alt="Profile Picture for Brandon Pereira"
+      />
+    </div>
   </div>
 </section>
 
 <style>
   .container {
+    overflow: hidden;
+  }
+
+  .inset {
+    margin: 3rem auto;
     display: flex;
     max-width: var(--max-width);
     color: var(--color);
     align-items: center;
     gap: 3rem;
-    margin: 3rem auto;
     flex-direction: column;
   }
-
   @keyframes aboutMePictureEnterView {
     from {
       opacity: 0;
@@ -106,15 +111,18 @@ import Button from '@components/Button.astro';
   }
 
   @media (--tablet) {
-    .container {
+    .inset {
       flex-direction: row;
     }
     .pp-container {
-      margin: 0;
+      margin: 0 !important;
+      height: 100px;
+      flex-shrink: unset;
+      overflow: visible;
     }
     .container:global(.opening) .pp-container,
     .container:global(.expanded) .pp-container {
-      height: unset;
+      height: 150px;
     }
     .container:global(.closing) .pp-image,
     .pp-image {
