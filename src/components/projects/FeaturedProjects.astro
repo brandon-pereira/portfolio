@@ -5,7 +5,7 @@ import { byCreationDate, byPinned, getProjects } from '../../utils/projects';
 const allProjects = await getProjects();
 const sortedProjects = allProjects.sort(byCreationDate).sort(byPinned);
 const projects = sortedProjects.slice(0, 6);
-const nextProjectId = allProjects[6]?.slug;
+const nextProjectId = allProjects[6]?.id;
 ---
 
 <ProjectsList projects={projects} />

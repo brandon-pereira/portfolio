@@ -3,15 +3,16 @@ import NavBar from '@components/NavBar.astro';
 import ProjectDetails from '@components/projects/ProjectDetails.astro';
 import ProjectsHeader from '@components/projects/ProjectsHeader.astro';
 import Layout from '@layouts/Layout.astro';
+import { render } from 'astro:content';
 import { getEntry, getCollection } from 'astro:content';
 const { id } = Astro.params;
 const entry = await getEntry('projects', id);
-const { Content } = await entry!.render();
+const { Content } = await render(entry!);
 
 export async function getStaticPaths() {
   const entries = await getCollection('projects');
   return entries.map(entry => ({
-    params: { id: entry.slug }
+    params: { id: entry.id }
   }));
 }
 ---

@@ -6,23 +6,23 @@ interface Props {
 }
 
 const { blogPost } = Astro.props;
-const { data, slug } = blogPost;
+const { data, id } = blogPost;
 const { title, datePosted } = data;
-const url = '/blog/' + slug + '/';
+const url = '/blog/' + id + '/';
 
 const dateFormatter = new Intl.DateTimeFormat('en-CA', {
   dateStyle: 'long'
 });
 ---
 
-<a href={url} class="container" transition:name={`blog-tile-${slug}`}>
+<a href={url} class="container" transition:name={`blog-tile-${id}`}>
   <div class="content">
     <time
-      transition:name={`blog-date-${slug}`}
+      transition:name={`blog-date-${id}`}
       datetime={datePosted.toISOString()}
       >{dateFormatter.format(datePosted)}</time
     >
-    <h3 class="title" transition:name={`blog-title-${slug}`}>{title}</h3>
+    <h3 class="title" transition:name={`blog-title-${id}`}>{title}</h3>
     <Button class="link" color="#fff">Learn more</Button>
   </div>
   <div class="mask"></div>

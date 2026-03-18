@@ -8,7 +8,7 @@ interface Props {
   blogPost: CollectionEntry<'blogPosts'>;
   content: AstroComponentFactory;
 }
-const { data, slug } = Astro.props.blogPost;
+const { data, id } = Astro.props.blogPost;
 const { title } = data;
 const Content = Astro.props.content;
 
@@ -22,10 +22,10 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
     <div class="title-container">
       <time
         datetime={data.datePosted.toISOString()}
-        transition:name={`blog-date-${slug}`}
+        transition:name={`blog-date-${id}`}
         >{dateFormatter.format(data.datePosted)}</time
       >
-      <h1 class="title" transition:name={`blog-title-${slug}`}>
+      <h1 class="title" transition:name={`blog-title-${id}`}>
         {title}<Typewriter />
       </h1>
     </div>

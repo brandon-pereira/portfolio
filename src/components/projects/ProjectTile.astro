@@ -8,16 +8,16 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const { data, slug } = project;
+const { data, id } = project;
 const { title, description, media, color } = data;
-const url = '/projects/' + slug + '/';
+const url = '/projects/' + id + '/';
 const thumbnail = media?.[0];
 ---
 
 <a
   class="container"
-  data-project-tile={slug}
-  transition:name={`project-tile-${slug}`}
+  data-project-tile={id}
+  transition:name={`project-tile-${id}`}
   href={url}
 >
   <div class="content">
@@ -29,7 +29,7 @@ const thumbnail = media?.[0];
           quality={100}
           class="project-image"
           alt={`Thumbnail for ${title}`}
-          data-project-image={slug}
+          data-project-image={id}
         />
       ) : (
         <div class="project-image" />

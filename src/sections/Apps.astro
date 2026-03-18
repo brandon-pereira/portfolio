@@ -1,10 +1,18 @@
 ---
 import ImageLightbox from '@components/Lightbox/ImageLightbox.astro';
 import { Image } from 'astro:assets';
+import { render } from 'astro:content';
 import { getCollection } from 'astro:content';
 
 const rawApps = await getCollection('apps');
-const apps = rawApps.sort((a, b) => a.id.localeCompare(b.id));
+const apps = await Promise.all(
+  rawApps
+    .sort((a, b) => a.id.localeCompare(b.id))
+    .map(async app => ({
+      ...app,
+      rendered: await render(app)
+    }))
+);
 ---
 
 <section data-section="apps" class:list={['container', apps[0]?.data.theme]}>
@@ -21,7 +29,7 @@ const apps = rawApps.sort((a, b) => a.id.localeCompare(b.id));
     <div class="apps--slides-container">
       {
         apps.map(async (app, index) => {
-          const { Content } = await app.render();
+          const { Content } = app.rendered;
           return (
             <div
               class:list={[
@@ -202,7 +210,8 @@ const apps = rawApps.sort((a, b) => a.id.localeCompare(b.id));
       inset: 0;
       pointer-events: none;
       overflow: hidden;
-      background-image: linear-gradient(var(--grid-bg-1) 2px, transparent 2px),
+      background-image:
+        linear-gradient(var(--grid-bg-1) 2px, transparent 2px),
         linear-gradient(90deg, var(--grid-bg-1) 2px, transparent 2px),
         linear-gradient(var(--grid-bg-2) 1px, transparent 1px),
         linear-gradient(90deg, var(--grid-bg-2) 1px, transparent 1px);

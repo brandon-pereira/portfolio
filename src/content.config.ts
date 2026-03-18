@@ -1,6 +1,9 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection } from 'astro:content';
+import { z } from 'astro/zod';
+import { glob } from 'astro/loaders';
 
 const projectsCollection = defineCollection({
+  loader: glob({ base: './src/content/projects', pattern: '**/*.{md,mdx}' }),
   schema: ({ image }) => {
     const ImageMedia = z.object({
       url: image(),
@@ -18,7 +21,7 @@ const projectsCollection = defineCollection({
     return z.object({
       id: z.string(),
       title: z.string(),
-      date: z.string().datetime().pipe(z.coerce.date()),
+      date: z.iso.datetime().pipe(z.coerce.date()),
       description: z.string().optional(),
       color: z.string().default('#0067FF'),
       gitUrl: z.string().url().optional(),
@@ -43,6 +46,7 @@ const projectsCollection = defineCollection({
 });
 
 const appsCollection = defineCollection({
+  loader: glob({ base: './src/content/apps', pattern: '**/*.{md,mdx}' }),
   schema: ({ image }) =>
     z.object({
       id: z.string(),
@@ -59,10 +63,11 @@ const appsCollection = defineCollection({
 });
 
 const blogPostCollection = defineCollection({
+  loader: glob({ base: './src/content/blogPosts', pattern: '**/*.{md,mdx}' }),
   schema: () =>
     z.object({
       title: z.string(),
-      datePosted: z.string().datetime().pipe(z.coerce.date())
+      datePosted: z.iso.datetime().pipe(z.coerce.date())
     })
 });
 

@@ -9,7 +9,7 @@ interface Props {
   project: CollectionEntry<'projects'>;
   content: AstroComponentFactory;
 }
-const { data, slug } = Astro.props.project;
+const { data, id } = Astro.props.project;
 const { link, color, media, gitUrl, title, languages, date } = data;
 const thumbnail = media?.[0];
 const Content = Astro.props.content;
@@ -21,8 +21,8 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
 
 <div
   class="container"
-  data-project-details={slug}
-  transition:name={`project-tile-${slug}`}
+  data-project-details={id}
+  transition:name={`project-tile-${id}`}
 >
   <div class="content">
     {
@@ -32,7 +32,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
           width={1200}
           alt={title}
           class="project-image"
-          data-project-image={slug}
+          data-project-image={id}
         />
       ) : (
         <div class="project-image" />
@@ -61,7 +61,7 @@ const dateFormatter = new Intl.DateTimeFormat('en-CA', {
                 href={gitUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                data-project-link={slug}
+                data-project-link={id}
                 class="githubLink"
               >
                 <svg
