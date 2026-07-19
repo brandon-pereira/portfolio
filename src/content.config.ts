@@ -24,8 +24,8 @@ const projectsCollection = defineCollection({
       date: z.iso.datetime().pipe(z.coerce.date()),
       description: z.string().optional(),
       color: z.string().default('#0067FF'),
-      gitUrl: z.string().url().optional(),
-      link: z.string().url().optional(),
+      gitUrl: z.url().optional(),
+      link: z.url().optional(),
       isPinned: z.boolean().optional(),
       pinPriority: z
         .enum(['low', 'medium', 'high'])
@@ -52,7 +52,7 @@ const appsCollection = defineCollection({
       id: z.string(),
       appName: z.string(),
       icon: image(),
-      link: z.string().url().optional(),
+      link: z.url().optional(),
       theme: z.string(),
       unavailable: z.boolean().optional(),
       media: z
