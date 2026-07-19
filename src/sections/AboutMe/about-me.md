@@ -13,6 +13,6 @@ Beyond my professional pursuits, I'm deeply involved in the tech community. You'
 
 ### Personal Insights
 
-On a personal note, I'm happily married to my wife Emma. Together, we share our home with Astro, an aptly named dog inspired by my passion for software development. Our feline friend, Moomies, is a cherished rescue. We call the vibrant city of Calgary, Alberta, our home.
+On a personal note, I'm happily married to my wife Emma. Together, we share our home with Astro, an aptly named dog inspired by my passion for software development. Our feline friend, Moomies, is a cherished rescue.
 
 Beyond the screen, I find joy in woodwork, gaming, hiking, skiing, pedal biking, and exploring personal finance strategies. I believe in a holistic approach to life, where professional growth and personal interests come together seamlessly.
