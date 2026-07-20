@@ -27,6 +27,7 @@ media:
   ]
 link: 'https://clickhouse.com/docs/use-cases/observability/clickstack/notebooks'
 color: '#4EFA7B'
+gitUrl: 'https://github.com/hyperdxio/hyperdx'
 ---
 
 ## Project Overview
