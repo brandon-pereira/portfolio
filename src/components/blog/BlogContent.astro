@@ -9,6 +9,10 @@
     margin: 0 auto;
     padding: 0 1rem;
   }
+  .content :global(img) {
+    max-width: 100%;
+    height: auto;
+  }
   .content :global(.astro-code) {
     font-size: 1rem;
     padding: 2rem;
@@ -21,13 +25,36 @@
     -webkit-font-smoothing: none;
     -moz-osx-font-smoothing: auto;
   }
+  .content :global(blockquote) {
+    margin: 1.5rem 0;
+    padding: 1rem 1.25rem;
+    border-left: 4px solid var(--color-primary-400);
+    background: var(--color-primary-800);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .content :global(blockquote a) {
+    color: inherit;
+    font-weight: 700;
+  }
   .content :global(table) {
     border-collapse: collapse;
     width: 100%;
-    margin: 0 0 2rem;
-    :global(th, td) {
-      text-align: left;
-      padding: 0.2rem;
-    }
+    margin: 1.5rem 0 2rem;
+    font-size: 0.925rem;
+  }
+  .content :global(th) {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    background: var(--color-primary-800);
+    border-bottom: 2px solid var(--color-primary-500);
+    font-weight: 600;
+  }
+  .content :global(td) {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .content :global(tr:nth-child(even)) {
+    background: rgba(255, 255, 255, 0.04);
   }
 </style>
